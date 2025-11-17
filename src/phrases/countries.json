@@ -1,0 +1,157 @@
+{
+    "name":"countries",
+    "phrases":[
+        {
+            "name":"LDC", 
+            "logic_rule": "([LDC_termlist]|[LDC_termlist_trunc]|[LDC_termlist_caps])",
+            "termlists":[
+                {
+                    "termlist_name":"LDC_termlist",
+                    "formatting_rule":"default",
+                    "na":"False",
+                    "case":"False",
+                    "wordlist_en":[
+                        "least developed countr", "least developed nation", "Angola", "Benin", "beninese", "Burkina Faso", "Burkina fasso", "burkin", "Burundi", "Central African Republic", "central african", "Chad", "Comoros", "comoro islands", "iles comores", "Congo", "Djibouti", "Eritrea", "Ethiopia", "Gambia", "Guinea", "Guinea-Bissau", "guinean", "Lesotho", "lesothan", "Liberia", "Madagasca", "Malawi", "Mauritania", "Mozambique", "mozambican", "Niger", "Rwanda", "Sao Tome and Principe", "Senegal", "Sierra Leone", "Somalia", "South Sudan", "Sudan", "sudanese", "Togo", "togolese", "tongan", "Uganda", "Tanzania", "Zambia", "Cambodia", "Kiribati", "Lao People’s democratic republic", "Laos", "Myanmar", "myanma", "Solomon islands", "Timor Leste", "Tuvalu", "Vanuatu", "Afghanistan", "afghan", "Bangladesh", "Bhutan", "Nepal", "Yemen", "Haiti"
+                    ],
+                    "wordlist_no":[
+                        "minst utviklede land", "lavinntektsland", "låginntektsland", "eritreisk", "eritreer","eritrear", "gambisk", "gambier", "Den Sentralafrikanske republikk", "sentralafrikan", "Tsjad", "Komor", "Kongo", "Etiopi", "bissauguinean", "lesothi", "liberisk", "Madagas", "gasser", "mauritanier", "mauritaniar", "mauritanisk", "Mosambik", "Sao Tome og Principe", "saotomes", "Sør-Sudan", "sørsudan", "Kambodsja", "Salomonøyene", "salomon", "Øst-Timor", "østtimores"
+                    ]
+                },
+                {
+                    "termlist_name":"LDC_termlist_trunc",
+                    "formatting_rule":"specific_trunc",
+                    "na":"False",
+                    "case":"False",
+                    "wordlist_en":[
+                        "Mali", "malian"
+                    ],
+                    "wordlist_no":[
+                        "malier", "maliar", "malisk"
+                    ]
+                },
+                {
+                    "termlist_name":"LDC_termlist_caps",
+                    "formatting_rule":"default",
+                    "na":"False",
+                    "case":"True",
+                    "wordlist_en":[
+                        "LEDC", " MUL "
+                    ],
+                    "wordlist_no":[
+                    ]
+                }
+            ]
+        },
+        {
+            "name":"SIDS", 
+            "logic_rule": "([SIDS_termlist]|[SIDS_termlist_caps])",
+            "termlists":[
+                {
+                    "termlist_name":"SIDS_termlist",
+                    "formatting_rule":"default",
+                    "na":"False",
+                    "case":"False",
+                    "wordlist_en":[
+                        "small-island developing nation", "small-island developing stat", "small-island developing countr", "small island developing nation", "small island developing stat", "small island developing countr", "Antigua and Barbuda", "Antigua & Barbuda", "antiguan", "Bahamas", "bahamian", "Bahrain", "Barbados", "barbadian", "Belize", "Cabo Verde", "Cape Verde", "Comoros", "comoro islands", "iles comores", "Cuba", "Dominica", "Micronesia", "Fiji", "Grenada", "Guinea-Bissau", "bissau-guinean", "Guyana", "guyan", "Haiti", "Jamaica", "Kiribati", "Maldives", "maldivian", "Marshall Islands", "Mauritius", "mauritian", "Nauru", "Palau", "Papua New Guinea", "Saint Kitts and Nevis", "st kitts and nevis", "Saint Lucia", "St Lucia", "St. Vincent and the Grenadines", "Saint Vincent and the Grenadines", "Vincent & the Grenadines", "Samoa", "Sao Tome", "Seychelles", "seychellois", "Singapore", "Solomon Islands", "Surinam", "Timor-Leste", "timorese", "Tonga", "Trinidad and Tobago", "Trinidad & Tobago", "trinidadian", "tobagonian", "Tuvalu", "Vanuatu", "Anguilla", "Aruba", "Bermuda", "Cayman Islands", "Northern Mariana", "Cook Islands", "Curacao", "French Polynesia", "Guadeloupe", "Guam", "Martinique", "Montserrat", "New Caledonia", "Niue", "Puerto Rico", "puerto rican", "Sint Maarten", "Turks and Caicos", "Turks & Caicos", "Virgin Islands"
+                    ],
+                    "wordlist_no":[
+                        "små utviklingsøystat","små øystat", "Antigua og Barbuda", "bahaman", "barbader", "barbadar", "barbadisk", "belizisk", "Kapp Verde", "kappverd", "Komor", "Den Dominikanske Republikk", "Mikronesi", "grenadi", "bissauguinean", "jamaikan", "Maldivene", "maldiver", "maldivisk", "maldivar", "Marshalløyene", "Papua Ny-Guinea", "papuan", "Saint Kitts og Nevis", "sankkitt", "Saint Vincent og Grenadine", "sanktvinsent", "seychell", "saotomes", "singapor", "Salomonøy", "salomoner", "salomonsk", "salomonar", "Øst-timor", "østtimores", "Trinidad og Tobago", "trinidader", "trinidadar", "trinidadisk", "tuvaler", "tuvalar", "tuvalsk", "vanuatisk", "bermudisk", "Caymanøyene", "caymansk", "Nord-Marianene", "Cookøyene", "Fransk Polynesia", "polynesisk", "Ny-Caledonia", "kaledon", "martinikan", "Turks- og Caicosøyene", "ny-caledonia", "nykaledon", "puertorikan", "Jomfruøyene"
+                    ]
+                },
+                {
+                    "termlist_name":"SIDS_termlist_caps",
+                    "formatting_rule":"default",
+                    "na":"False",
+                    "case":"True",
+                    "wordlist_en":[
+                        "SIDS"
+                    ],
+                    "wordlist_no":[
+                    ]
+                }
+            ]
+        },
+        {
+            "name":"LDS", 
+            "logic_rule": "([LDS_termlist]|[LDS_termlist_trunc])",
+            "termlists":[
+                {
+                    "termlist_name":"LDS_termlist",
+                    "formatting_rule":"default",
+                    "na":"False",
+                    "case":"False",
+                    "wordlist_en":[
+                        "landlocked developing nation", "landlocked developing stat", "land-locked developing nation", "land-locked developing stat", "Afghanistan", "afghan", "Armenia", "Azerbaijan", "Bhutan", "bhutanese", "Bolivia", "Botswana", "Burkina Faso", "Burundi", "Central African Republic", "Chad", "Eswatini", "eswantian", "Ethiopia", "Kazakhstan", "kazakh", "Kyrgyzstan", "Kyrgyz", "kirghizia", "kirgizstan", "Lao People’s Democratic Republic", "Laos", "Lesotho", "Malawi", "malawian", "Mali", "Mongol", "Nepal", "Niger", "North Macedonia", "Republic of Macedonia", "Paraguay", "Moldova", "Rwanda", "South Sudan", "sudanese", "Swaziland", "Tajikistan", "tadjikistan", "tajikistani", "Turkmenistan", "Uganda", "Uzbekistan", "uzbekistani", "Zambia", "zambian", "Zimbabwe"
+                    ],
+                    "wordlist_no":[           
+                        "kystløse utviklingsland", "armensk", "armener", "armenar", "Aserbajdsjan", "Den Sentralafrikanske republikk", "sentralafrikan", "Tsjad", "Etiopia", "etiopier", "etiopiar", "etiopisk", "Kasakhstan", "Kirgisistan", "kirgiser", "kirgisar", "kirgisisk", "laot", "laotisk", "lesothisk", "Nord-Makedonia", "makedon", "moldover", "rwander", "rwandisk", "Tadsjikistan", "Sør-sudan", "Tadsjikistan", "tadsjiker", "tadsjikar", "tadsjikisk", "turkmener", "turkmenar", "turkmensk", "Usbekistan", "usbeker", "usbekar", "usbekisk", "zambier", "zambiar", "zambisk", "zimbabwisk"
+                    ]
+                },
+                {
+                    "termlist_name":"LDS_termlist_trunc",
+                    "formatting_rule":"default",
+                    "na":"False",
+                    "case":"True",
+                    "wordlist_en":[
+                        "Mali", "malian"
+                    ],
+                    "wordlist_no":[
+                         "malier", "maliar", "malisk"
+                    ]
+                }
+            ]
+        },
+        {
+            "name":"LMIC", 
+            "logic_rule": "([LMIC_termlist]|[LMIC_termlist_trunc]|[LMIC_termlist_caps])",
+            "termlists":[
+                {
+                    "termlist_name":"LMIC_termlist",
+                    "formatting_rule":"default",
+                    "na":"False",
+                    "case":"False",
+                    "wordlist_en":[
+                        "least developed countr", "least developed nation", "developing countr", "developing nation", "developing states", "island developing state", "developing world", "less developed countr", "less developed nation", "under developed countr", "under developed nation", "underdeveloped countr", "underdeveloped nation", "underserved countr", "underserved nation", "deprived countr", "deprived nation", "middle income countr", "middle income nation", "middle-income countr", "middle-income nation", "low income countr", "low income nation", "lower income countr", "lower income nation", "low-income countr", "low-income nation", "lower-income countr", "lower-income nation", "poor countr", "poor nation", "poorer countr", "poorer nation", "third world", "global south", "transitional countr", "emerging economies", "emerging nation", "Angola", "Benin", "Burkina Faso", "Burkina fasso", "burkinese", "burkinabe", "Burundi", "Central African Republic", "central african", "Comoros", "comoro islands", "iles comores", "Congo", "Djibouti", "Eritre", "Ethiopia", "Gambia", "Guinea", "Lesoth", "Liberia", "Madagas", "Malawi", "Mauritan", "Mozambi", "Niger", "Rwanda", "Sao Tome", "Senegal", "Sierra Leone", "Somalia", "Sudan", "Togo", "tongan", "Uganda", "Tanzania", "Zambia", "Cambodia", "Kiribati", "Lao People", "Laos", "myanma", "Solomon islands", "Timor Leste", "timorese", "Tuvalu", "Vanuatu", "afghan", "Bangladesh", "Bhutan", "Nepal", "Yemen", "Haiti",  "Antigua", "Barbuda", "Bahamas", "bahamian", "Bahrain", "Barbados", "barbadian", "Belize", "Cabo Verde", "Cape Verde", "Cuba", "Dominica", "Micronesia", "Fiji", "Grenada", "Guyana", "Haiti", "Jamaica", "Maldiv", "Marshall Islands", "Mauriti", "Nauru", "Palau", "Saint Kitts", "st kitts", "Saint Lucia", "St Lucia", "Vincent and the Grenadines", "the Grenadines", "Samoa", "Sao Tome", "Seychell", "Singapore", "Surinam", "Tonga", "Trinidad", "Tobago", "Anguilla", "Aruba", "Bermuda", "Cayman Islands", "Northern Mariana", "Cook Islands", "Curacao", "French Polynesia", "Guadeloupe", "Guam", "Martinique", "Montserrat", "New Caledonia", "Niue", "Puerto Ric", "Sint Maarten", "Turks and Caicos", "Turks & Caicos", "Virgin Islands", 
+
+                        "Afghan", "Armenia", "Azerbaijan", "Bhutan", "Bolivia", "Botswana", "Burkina Faso", "Burundi", "Chad", "Eswatini", "eswantian", "Kazakhstan", "Kyrgyzstan", "kirghiz", "Mongol", "Nepal", "North Macedonia", "Republic of Macedonia", "Paraguay", "Moldov", "Rwand", "Swazi", "Tajikistan", "tadjikistan", "Turkmenistan", "Uganda", "Uzbekistan", "Zambia", "Zimbabwe", 
+    
+                        "Albania", "Algeria", "Argentin", "Bahrain", "Belarus", "Byelarus", "Belorussia", "Hondura", "dahomey", "Bosnia", "Herzegovina", "Botswan", "Bechuanaland", "Brazil", "Brasil", "Bulgaria", "Upper Volta", "Kampuchea", "Khmer Republic", "Cameroon", "Cameroun", "Ubangi Shari", "Chile", "China", "Chinese", "Colombia", "Costa Rica", "Cote d’Ivoire", "Cote d Ivoire", "Ivory Coast", "Croatia", "Cyprus", "cypriot", "Czech", "Ecuador", "Egypt", "United Arab Republic", "El Salvador", "Estonia", "Gabon", "Ghana", "Gibralta", "Greece", "greek", "Hondura", "Hungary", "hungarian", "India", "Indonesia", "Iran", "Iraq", "Isle of Man", "Jordan", "Kenya", "Korea", "Kosovo", "kosovan", "Latvia", "Lebanon", "lebanese", "Libya", "Lithuania", "Macau", "Macao", "macanese", "malagasy", "Malaysia", "Malay Federation", "Malaya Federation", "Malta", "maltese", "Mexico", "mexican", "Montenegr","Morocco", "moroccan", "Namibia", "Netherlands Antilles", "Nicaragua",  "Oman", "Muscat", "Pakistan", "Panama", "Peru", "Philippine", "Philipine", "Phillipine", "Phillippine", "filipino", "filipina", "Poland", "polish", "Portugal", "portugese", "Romania", "Russia", "Polynesia", "Saudi Arabia", "Serbia", "Slovakia", "Slovak Republic", "Slovenia", "Melanesia", "South Africa", "Sri Lanka", "Dutch Guiana", "netherlands guiana",  "syria", "thai", "tunisia", "ukrain", "uruguay", "venezuela", "vietnam", "west bank", "gaza", "palestin", "Yugoslavia", "Turkey", "turkish", "Georgia"
+                    ],
+                    "wordlist_no":[
+                        "utviklingsland", "u-land", "uland", "underutviklede land", "underutvikla land", "lavinntektsland", "låginntektsland", "underpriviligerte land", "mellominntektsland", "ressurssvake land", "tredje verd", "fattige land", "globale sør", "overgangsøkonomi", "fremvoksende økonomier", "framvoksende økonomier", "framveksande økonomi", "framvoksende land", "fremvoksende land", "framveksande land", "bistandsland", "minst utviklede land", "små utviklingsøystat", "små øystat", "kystløse utviklingsland",
+
+                        "gambisk", "gambier", "gambiar", "Den Sentralafrikanske republikk", "sentralafrikan", "Tsjad", "Komor", "Kongo", "Etiopi", "bissauguinean", "lesothi", "liberisk", "gassisk", "Mosambik", "Sao Tome og Principe", "saotomes", "Kambodsja", "Salomon", "Øst-Timor", "østtimores", 
+
+                        "Kapp Verde", "Den Dominikanske Republikk", "Mikronesi", "Marshalløy", "Vincent og Grenadine", "Nord-Marian", "Cookøy", "Fransk Polynesia", "Ny-Caledonia", "Turks- og Caicosøy", "Jomfruøy",
+
+                        "armensk", "armener", "armenar", "Aserbajdsjan", "Kasakhstan", "Kirgis", "Nord-Makedon", "Tadsjik", "Usbek", "zambisk", "zambier", "zambiar",
+
+                        "Algerie", "Hviterussland", "Kviterussland", "Bosnia-Hercegovina", "Øvre Volta", "Kamerun", "Elfenbenskysten", "Elfenbeinskysten", "Kroat", "Kypros", "kypriot", "Tsjekki", "Arabiske Emirat", "Estland", "estisk", "Hellas", "gresk", "greker", "grekar", "Ungarn", "ungarsk","ungarer", "ungarar", "Irak", "Libanon", "libanes", "Litau", "Marokko", "marokkan", "Nederlandske Antill", "Filippin", "Polen", "polsk", "polakk", "Russland", "russisk", "russer", "russar", "Sør-Afrika", "Vestbredden", "Vestbreidda", "Tyrkia", "tyrkisk", "tyrker", "tyrkar"
+                    ]
+                },
+                {
+                    "termlist_name":"LMIC_termlist_trunc",
+                    "formatting_rule":"specific_trunc",
+                    "na":"False",
+                    "case":"False",
+                    "wordlist_en":[
+                        "kina", "Mali", "malian", "malier", "maliar", "malisk"
+                    ],
+                    "wordlist_no":[
+                    ]
+                },
+                {
+                    "termlist_name":"LMIC_termlist_caps",
+                    "formatting_rule":"default",
+                    "na":"False",
+                    "case":"True",
+                    "wordlist_en":[
+                        "LEDC", " MUL ", "SIDS", "LMIC", "LAMI "
+                    ],
+                    "wordlist_no":[
+                    ]
+                }
+            ]
+        }
+    ]
+}

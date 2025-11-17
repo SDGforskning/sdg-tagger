@@ -1,0 +1,5 @@
+LIST_ALL_SDG_NR = [1, 2]
+
+ADDITIONAL_LANGUAGES = {
+    'no':True
+}

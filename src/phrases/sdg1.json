@@ -1,0 +1,148 @@
+{
+    "name":"sdg1",
+    "number": 1,
+    "generated_datetime":"2025-09-13 09:49:07",
+    "goals":[
+        {
+            "name":"1",
+            "phrases":[
+                {
+                    "number": 1,
+                    "logic_rule": "([termlist1_1])",
+                    "sentence_split": "True",
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist1_1", 
+                            "formatting_rule": "default", 
+                            "na": "False",
+                            "case": "False",
+                            "wordlist_en": [
+                                "extreme poverty", "severe poverty", "deep poverty", "abject poverty", "absolute poverty", "destitution", "global poverty", "international poverty"
+                            ],
+                            "wordlist_no": [
+                                "ekstrem fattigdom", "global fattigdom", "internasjonal fattigdom"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name":"b",
+            "phrases":[
+                {
+                    "number": 1,
+                    "logic_rule": "([termlist1_ba] | [termlist1_ba_trunc]) & [termlist1_bb] | ([termlist1_bc] & ([termlist1_bd] | [termlist1_bd_trunc]))",
+                    "sentence_split": "False",
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist1_ba", 
+                            "formatting_rule": "default", 
+                            "na": "False",
+                            "case": "False",
+                            "wordlist_en": [
+                                "legislat", "program", "strateg", "policy", "policies", "planning", "framework", "initiativ"
+                            ],
+                            "wordlist_no": [
+                                "lovverk", "lovgiv", "politikk", "retningslinje", "utredning", "utgreiing", "rammeverk", "tiltaksplan", "planer", "planar"
+                            ]
+                        },
+                        {
+                            "termlist_name": "termlist1_ba_trunc",
+                            "formatting_rule": "specific", 
+                            "na": "False",
+                            "case": "False",
+                            "wordlist_en": ["law", "laws", "plan", "plans"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist1_bb",
+                            "formatting_rule": "default", 
+                            "na": "False",
+                            "case": "False",
+                            "wordlist_en": ["anti poverty", "anti-poverty", "antipoverty"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist1_bc",
+                            "formatting_rule": "default", 
+                            "na": "False",
+                            "case": "False",
+                            "wordlist_en": ["poverty"],
+                            "wordlist_no": ["fattig"]
+                        },
+                        {
+                            "termlist_name": "termlist1_bd",
+                            "formatting_rule": "default", 
+                            "na": "False",
+                            "case": "False",
+                            "wordlist_en": ["minimi", "reduc", "mitigat", "alleviat", "tackl", "fight", "combat", "ending", "eliminat", "eradicat", "prevent", "out of", "overcom", "escap", "relief"],
+                            "wordlist_no": ["reduser", "bekjemp", "forhind", "nedkjemp", "motarbeid", "forebygg", "førebygg", "førebu", "utrydd", "kvitt", "løft", "ut av " ]
+                        },
+                        {
+                            "termlist_name": "termlist1_bd_trunc",
+                            "formatting_rule": "specific", 
+                            "na": "False",
+                            "case": "False",
+                            "wordlist_en": [],
+                            "wordlist_no": ["mot", "imot", "kamp", "kampen"]
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "mentions": {
+        "logic_rule": "([termlist_sdg_a] | [termlist_sdg_f] | ([termlist_sdg_b] & [termlist_sdg_c]) | ([termlist_sdg_d] & [termlist_sdg_e]))",
+        "termlists" :[
+            {
+                "termlist_name": "termlist_sdg_a",
+                "formatting_rule": "specific", 
+                "na": "False",
+                "case": "False",
+                "wordlist_en": ["SDG 1", "SDGs 1", "SDG1", "sustainable development goal 1"],
+                "wordlist_no": ["SDG 1", "SDG1","bærekraftsmål 1", "berekraftsmål 1"]
+            },
+            {
+                "termlist_name": "termlist_sdg_b",
+                "formatting_rule": "default", 
+                "na": "False",
+                "case": "False",
+                "wordlist_en": ["sustainable development goal"],
+                "wordlist_no": ["bærekraftsmål", "berekraftsmål"]
+            },
+            {
+                "termlist_name": "termlist_sdg_c",
+                "formatting_rule": "specific", 
+                "na": "False",
+                "case": "False",
+                "wordlist_en": ["goal 1"],
+                "wordlist_no": ["mål 1"]
+            },
+            {
+                "termlist_name": "termlist_sdg_d",
+                "formatting_rule": "specific", 
+                "na": "False",
+                "case": "False",
+                "wordlist_en": ["sustainable development goal.*", "SDG", "goal 1"],
+                "wordlist_no": ["SDG", "bærekraftsmål", "berekraftsmål", "mål 1"]
+            },
+            {
+                "termlist_name": "termlist_sdg_e",
+                "formatting_rule": "default", 
+                "na": "False",
+                "case": "False",
+                "wordlist_en": ["poverty"],
+                "wordlist_no": ["fattig"]
+            },
+            {
+                "termlist_name": "termlist_sdg_f",
+                "formatting_rule": "default", 
+                "na": "False",
+                "case": "False",
+                "wordlist_en": ["no poverty"],
+                "wordlist_no": ["utrydde fattigdom"]
+            }
+        ]
+    }
+}
