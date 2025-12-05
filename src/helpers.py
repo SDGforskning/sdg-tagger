@@ -162,6 +162,7 @@ def search_termlist(regex_patterns:str, term_lists:dict[str, list[str]], input_t
 
     if term_lists['case']=='False':
         text = input_text.lower()
+        terms = [term.lower() for term in terms]
     else: text = input_text
 
     if indexed:
