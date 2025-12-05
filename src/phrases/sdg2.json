@@ -31,7 +31,7 @@
                 },
                 {
                     "number": 2,
-                    "logic_rule": "([termlist2_1b] | not [termlist2_1c])",
+                    "logic_rule": "([termlist2_1b] & not [termlist2_1c])",
                     "sentence_split": "False",
                     "termlists": [
                         {
