@@ -1,0 +1,231 @@
+{
+    "name": "sdg1",
+    "number": 1,
+    "generated_datetime": "08-12-2025 13:57:29",
+    "pre-search": [],
+    "goals": [
+        {
+            "name": "1",
+            "phrases": [
+                {
+                    "number": 1,
+                    "logic_rule": "()",
+                    "sentence_split": "",
+                    "termlists": [
+                        {
+                            "termlist_name": "",
+                            "formatting_rule": "",
+                            "na": "",
+                            "case": "",
+                            "wordlist_en": [],
+                            "wordlist_no": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "2",
+            "phrases": [
+                {
+                    "number": 1,
+                    "logic_rule": "()",
+                    "sentence_split": "",
+                    "termlists": [
+                        {
+                            "termlist_name": "",
+                            "formatting_rule": "",
+                            "na": "",
+                            "case": "",
+                            "wordlist_en": [],
+                            "wordlist_no": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "3",
+            "phrases": [
+                {
+                    "number": 1,
+                    "logic_rule": "()",
+                    "sentence_split": "",
+                    "termlists": [
+                        {
+                            "termlist_name": "",
+                            "formatting_rule": "",
+                            "na": "",
+                            "case": "",
+                            "wordlist_en": [],
+                            "wordlist_no": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "4",
+            "phrases": [
+                {
+                    "number": 1,
+                    "logic_rule": "()",
+                    "sentence_split": "",
+                    "termlists": [
+                        {
+                            "termlist_name": "",
+                            "formatting_rule": "",
+                            "na": "",
+                            "case": "",
+                            "wordlist_en": [],
+                            "wordlist_no": []
+                        }
+                    ]
+                },
+                {
+                    "number": 2,
+                    "logic_rule": "()",
+                    "sentence_split": "",
+                    "termlists": [
+                        {
+                            "termlist_name": "",
+                            "formatting_rule": "",
+                            "na": "",
+                            "case": "",
+                            "wordlist_en": [],
+                            "wordlist_no": []
+                        }
+                    ]
+                },
+                {
+                    "number": 3,
+                    "logic_rule": "()",
+                    "sentence_split": "",
+                    "termlists": [
+                        {
+                            "termlist_name": "",
+                            "formatting_rule": "",
+                            "na": "",
+                            "case": "",
+                            "wordlist_en": [],
+                            "wordlist_no": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "5",
+            "phrases": [
+                {
+                    "number": 1,
+                    "logic_rule": "()",
+                    "sentence_split": "",
+                    "termlists": [
+                        {
+                            "termlist_name": "",
+                            "formatting_rule": "",
+                            "na": "",
+                            "case": "",
+                            "wordlist_en": [],
+                            "wordlist_no": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "a",
+            "phrases": [
+                {
+                    "number": 1,
+                    "logic_rule": "()",
+                    "sentence_split": "",
+                    "termlists": [
+                        {
+                            "termlist_name": "",
+                            "formatting_rule": "",
+                            "na": "",
+                            "case": "",
+                            "wordlist_en": [],
+                            "wordlist_no": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "b",
+            "phrases": [
+                {
+                    "number": 1,
+                    "logic_rule": "()",
+                    "sentence_split": "",
+                    "termlists": [
+                        {
+                            "termlist_name": "",
+                            "formatting_rule": "",
+                            "na": "",
+                            "case": "",
+                            "wordlist_en": [],
+                            "wordlist_no": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "mentions": {
+        "logic_rule": "([termlist_sdg_a] | [termlist_sdg_f] | ([termlist_sdg_b] & [termlist_sdg_c]) | ([termlist_sdg_d] & [termlist_sdg_e]))",
+        "termlists" :[
+            {
+                "termlist_name": "termlist_sdg_a",
+                "formatting_rule": "specific", 
+                "na": "False",
+                "case": "False",
+                "wordlist_en": ["SDG 1", "SDGs 1", "SDG1", "sustainable development goal 1"],
+                "wordlist_no": ["SDG 1", "SDG1","bærekraftsmål 1", "berekraftsmål 1"]
+            },
+            {
+                "termlist_name": "termlist_sdg_b",
+                "formatting_rule": "default", 
+                "na": "False",
+                "case": "False",
+                "wordlist_en": ["sustainable development goal"],
+                "wordlist_no": ["bærekraftsmål", "berekraftsmål"]
+            },
+            {
+                "termlist_name": "termlist_sdg_c",
+                "formatting_rule": "specific", 
+                "na": "False",
+                "case": "False",
+                "wordlist_en": ["goal 1"],
+                "wordlist_no": ["mål 1"]
+            },
+            {
+                "termlist_name": "termlist_sdg_d",
+                "formatting_rule": "specific", 
+                "na": "False",
+                "case": "False",
+                "wordlist_en": ["sustainable development goal.*", "SDG", "goal 1"],
+                "wordlist_no": ["SDG", "bærekraftsmål", "berekraftsmål", "mål 1"]
+            },
+            {
+                "termlist_name": "termlist_sdg_e",
+                "formatting_rule": "default", 
+                "na": "False",
+                "case": "False",
+                "wordlist_en": ["poverty"],
+                "wordlist_no": ["fattig"]
+            },
+            {
+                "termlist_name": "termlist_sdg_f",
+                "formatting_rule": "default", 
+                "na": "False",
+                "case": "False",
+                "wordlist_en": ["no poverty"],
+                "wordlist_no": ["utrydde fattigdom"]
+            }
+        ]
+    }
+}
