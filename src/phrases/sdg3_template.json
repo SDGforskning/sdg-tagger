@@ -1,7 +1,7 @@
 {
     "name": "sdg3",
     "number": 3,
-    "generated_datetime": "08-12-2025 13:57:29",
+    "generated_datetime": "09-12-2025 10:07:35",
     "pre-search": [],
     "goals": [
         {
@@ -10,13 +10,13 @@
                 {
                     "number": 1,
                     "logic_rule": "()",
-                    "sentence_split": "",
+                    "sentence_split": false,
                     "termlists": [
                         {
                             "termlist_name": "",
                             "formatting_rule": "",
-                            "na": "",
-                            "case": "",
+                            "na": false,
+                            "case": false,
                             "wordlist_en": [],
                             "wordlist_no": []
                         }
@@ -30,13 +30,13 @@
                 {
                     "number": 1,
                     "logic_rule": "()",
-                    "sentence_split": "",
+                    "sentence_split": false,
                     "termlists": [
                         {
                             "termlist_name": "",
                             "formatting_rule": "",
-                            "na": "",
-                            "case": "",
+                            "na": false,
+                            "case": false,
                             "wordlist_en": [],
                             "wordlist_no": []
                         }
@@ -50,13 +50,13 @@
                 {
                     "number": 1,
                     "logic_rule": "()",
-                    "sentence_split": "",
+                    "sentence_split": false,
                     "termlists": [
                         {
                             "termlist_name": "",
                             "formatting_rule": "",
-                            "na": "",
-                            "case": "",
+                            "na": false,
+                            "case": false,
                             "wordlist_en": [],
                             "wordlist_no": []
                         }
@@ -65,13 +65,13 @@
                 {
                     "number": 2,
                     "logic_rule": "()",
-                    "sentence_split": "",
+                    "sentence_split": false,
                     "termlists": [
                         {
                             "termlist_name": "",
                             "formatting_rule": "",
-                            "na": "",
-                            "case": "",
+                            "na": false,
+                            "case": false,
                             "wordlist_en": [],
                             "wordlist_no": []
                         }
@@ -80,13 +80,13 @@
                 {
                     "number": 3,
                     "logic_rule": "()",
-                    "sentence_split": "",
+                    "sentence_split": false,
                     "termlists": [
                         {
                             "termlist_name": "",
                             "formatting_rule": "",
-                            "na": "",
-                            "case": "",
+                            "na": false,
+                            "case": false,
                             "wordlist_en": [],
                             "wordlist_no": []
                         }
@@ -100,13 +100,13 @@
                 {
                     "number": 1,
                     "logic_rule": "()",
-                    "sentence_split": "",
+                    "sentence_split": false,
                     "termlists": [
                         {
                             "termlist_name": "",
                             "formatting_rule": "",
-                            "na": "",
-                            "case": "",
+                            "na": false,
+                            "case": false,
                             "wordlist_en": [],
                             "wordlist_no": []
                         }
@@ -115,13 +115,13 @@
                 {
                     "number": 2,
                     "logic_rule": "()",
-                    "sentence_split": "",
+                    "sentence_split": false,
                     "termlists": [
                         {
                             "termlist_name": "",
                             "formatting_rule": "",
-                            "na": "",
-                            "case": "",
+                            "na": false,
+                            "case": false,
                             "wordlist_en": [],
                             "wordlist_no": []
                         }
@@ -130,13 +130,13 @@
                 {
                     "number": 3,
                     "logic_rule": "()",
-                    "sentence_split": "",
+                    "sentence_split": false,
                     "termlists": [
                         {
                             "termlist_name": "",
                             "formatting_rule": "",
-                            "na": "",
-                            "case": "",
+                            "na": false,
+                            "case": false,
                             "wordlist_en": [],
                             "wordlist_no": []
                         }
@@ -150,13 +150,13 @@
                 {
                     "number": 1,
                     "logic_rule": "()",
-                    "sentence_split": "",
+                    "sentence_split": false,
                     "termlists": [
                         {
                             "termlist_name": "",
                             "formatting_rule": "",
-                            "na": "",
-                            "case": "",
+                            "na": false,
+                            "case": false,
                             "wordlist_en": [],
                             "wordlist_no": []
                         }
@@ -170,13 +170,13 @@
                 {
                     "number": 1,
                     "logic_rule": "()",
-                    "sentence_split": "",
+                    "sentence_split": false,
                     "termlists": [
                         {
                             "termlist_name": "",
                             "formatting_rule": "",
-                            "na": "",
-                            "case": "",
+                            "na": false,
+                            "case": false,
                             "wordlist_en": [],
                             "wordlist_no": []
                         }
@@ -190,13 +190,13 @@
                 {
                     "number": 1,
                     "logic_rule": "()",
-                    "sentence_split": "",
+                    "sentence_split": false,
                     "termlists": [
                         {
                             "termlist_name": "",
                             "formatting_rule": "",
-                            "na": "",
-                            "case": "",
+                            "na": false,
+                            "case": false,
                             "wordlist_en": [],
                             "wordlist_no": []
                         }
@@ -205,13 +205,13 @@
                 {
                     "number": 2,
                     "logic_rule": "()",
-                    "sentence_split": "",
+                    "sentence_split": false,
                     "termlists": [
                         {
                             "termlist_name": "",
                             "formatting_rule": "",
-                            "na": "",
-                            "case": "",
+                            "na": false,
+                            "case": false,
                             "wordlist_en": [],
                             "wordlist_no": []
                         }
@@ -225,13 +225,13 @@
                 {
                     "number": 1,
                     "logic_rule": "()",
-                    "sentence_split": "",
+                    "sentence_split": false,
                     "termlists": [
                         {
                             "termlist_name": "",
                             "formatting_rule": "",
-                            "na": "",
-                            "case": "",
+                            "na": false,
+                            "case": false,
                             "wordlist_en": [],
                             "wordlist_no": []
                         }
@@ -240,13 +240,13 @@
                 {
                     "number": 2,
                     "logic_rule": "()",
-                    "sentence_split": "",
+                    "sentence_split": false,
                     "termlists": [
                         {
                             "termlist_name": "",
                             "formatting_rule": "",
-                            "na": "",
-                            "case": "",
+                            "na": false,
+                            "case": false,
                             "wordlist_en": [],
                             "wordlist_no": []
                         }
@@ -260,13 +260,13 @@
                 {
                     "number": 1,
                     "logic_rule": "()",
-                    "sentence_split": "",
+                    "sentence_split": false,
                     "termlists": [
                         {
                             "termlist_name": "",
                             "formatting_rule": "",
-                            "na": "",
-                            "case": "",
+                            "na": false,
+                            "case": false,
                             "wordlist_en": [],
                             "wordlist_no": []
                         }
@@ -275,13 +275,13 @@
                 {
                     "number": 2,
                     "logic_rule": "()",
-                    "sentence_split": "",
+                    "sentence_split": false,
                     "termlists": [
                         {
                             "termlist_name": "",
                             "formatting_rule": "",
-                            "na": "",
-                            "case": "",
+                            "na": false,
+                            "case": false,
                             "wordlist_en": [],
                             "wordlist_no": []
                         }
@@ -295,13 +295,13 @@
                 {
                     "number": 1,
                     "logic_rule": "()",
-                    "sentence_split": "",
+                    "sentence_split": false,
                     "termlists": [
                         {
                             "termlist_name": "",
                             "formatting_rule": "",
-                            "na": "",
-                            "case": "",
+                            "na": false,
+                            "case": false,
                             "wordlist_en": [],
                             "wordlist_no": []
                         }
@@ -310,13 +310,13 @@
                 {
                     "number": 2,
                     "logic_rule": "()",
-                    "sentence_split": "",
+                    "sentence_split": false,
                     "termlists": [
                         {
                             "termlist_name": "",
                             "formatting_rule": "",
-                            "na": "",
-                            "case": "",
+                            "na": false,
+                            "case": false,
                             "wordlist_en": [],
                             "wordlist_no": []
                         }
@@ -325,13 +325,13 @@
                 {
                     "number": 3,
                     "logic_rule": "()",
-                    "sentence_split": "",
+                    "sentence_split": false,
                     "termlists": [
                         {
                             "termlist_name": "",
                             "formatting_rule": "",
-                            "na": "",
-                            "case": "",
+                            "na": false,
+                            "case": false,
                             "wordlist_en": [],
                             "wordlist_no": []
                         }
@@ -345,13 +345,13 @@
                 {
                     "number": 1,
                     "logic_rule": "()",
-                    "sentence_split": "",
+                    "sentence_split": false,
                     "termlists": [
                         {
                             "termlist_name": "",
                             "formatting_rule": "",
-                            "na": "",
-                            "case": "",
+                            "na": false,
+                            "case": false,
                             "wordlist_en": [],
                             "wordlist_no": []
                         }
@@ -360,13 +360,13 @@
                 {
                     "number": 2,
                     "logic_rule": "()",
-                    "sentence_split": "",
+                    "sentence_split": false,
                     "termlists": [
                         {
                             "termlist_name": "",
                             "formatting_rule": "",
-                            "na": "",
-                            "case": "",
+                            "na": false,
+                            "case": false,
                             "wordlist_en": [],
                             "wordlist_no": []
                         }
@@ -380,13 +380,13 @@
                 {
                     "number": 1,
                     "logic_rule": "()",
-                    "sentence_split": "",
+                    "sentence_split": false,
                     "termlists": [
                         {
                             "termlist_name": "",
                             "formatting_rule": "",
-                            "na": "",
-                            "case": "",
+                            "na": false,
+                            "case": false,
                             "wordlist_en": [],
                             "wordlist_no": []
                         }
@@ -395,13 +395,13 @@
                 {
                     "number": 2,
                     "logic_rule": "()",
-                    "sentence_split": "",
+                    "sentence_split": false,
                     "termlists": [
                         {
                             "termlist_name": "",
                             "formatting_rule": "",
-                            "na": "",
-                            "case": "",
+                            "na": false,
+                            "case": false,
                             "wordlist_en": [],
                             "wordlist_no": []
                         }
@@ -415,13 +415,13 @@
                 {
                     "number": 1,
                     "logic_rule": "()",
-                    "sentence_split": "",
+                    "sentence_split": false,
                     "termlists": [
                         {
                             "termlist_name": "",
                             "formatting_rule": "",
-                            "na": "",
-                            "case": "",
+                            "na": false,
+                            "case": false,
                             "wordlist_en": [],
                             "wordlist_no": []
                         }
@@ -436,16 +436,16 @@
             {
                 "termlist_name": "",
                 "formatting_rule": "",
-                "na": "",
-                "case": "",
+                "na": false,
+                "case": false,
                 "wordlist_en": [],
                 "wordlist_no": []
             },
             {
                 "termlist_name": "",
                 "formatting_rule": "",
-                "na": "",
-                "case": "",
+                "na": false,
+                "case": false,
                 "wordlist_en": [],
                 "wordlist_no": []
             }

@@ -2,6 +2,7 @@
     "name":"sdg2",
     "number": 2,
     "generated_datetime":"2025-09-13 09:49:07",
+    "pre-search":[],
     "goals":[
         {
             "name":"1",
@@ -9,13 +10,13 @@
                 {
                     "number": 1,
                     "logic_rule": "([termlist2_1a])",
-                    "sentence_split": "True",
+                    "sentence_split": true,
                     "termlists": [
                         {
                             "termlist_name": "termlist2_1a", 
                             "formatting_rule": "default", 
-                            "na": "False",
-                            "case": "False",
+                            "na": false,
+                            "case": false,
                             "wordlist_en": [
                                 "end hunger", "ending hunger", "ends hunger", "world hunger", "hunger and poverty", "poverty and hunger", "child hunger", 
                                 "famine", "undernourish",
@@ -32,13 +33,13 @@
                 {
                     "number": 2,
                     "logic_rule": "([termlist2_1b] & not [termlist2_1c])",
-                    "sentence_split": "False",
+                    "sentence_split": false,
                     "termlists": [
                         {
                             "termlist_name": "termlist2_1b", 
                             "formatting_rule": "default", 
-                            "na": "False",
-                            "case": "False",
+                            "na": false,
+                            "case": false,
                             "wordlist_en": ["right to food", "right to adequate food", "food sovereignty",
                                 "nutrition security", "nutritional security", 
                                 "access to food", "food access", "food safety", "safe food", "food security",
@@ -50,8 +51,8 @@
                         {
                             "termlist_name": "termlist2_1c", 
                             "formatting_rule": "default", 
-                            "na": "False",
-                            "case": "False",
+                            "na": false,
+                            "case": false,
                             "wordlist_en": ["Norwegian Scientific Committee for Food Safety"],
                             "wordlist_no": []
                         }
@@ -60,13 +61,13 @@
                 {
                     "number": 3,
                     "logic_rule": "([termlist2_1d])",
-                    "sentence_split": "False",
+                    "sentence_split": false,
                     "termlists": [
                         {
                             "termlist_name": "termlist2_1d", 
                             "formatting_rule": "default", 
-                            "na": "False",
-                            "case": "False",
+                            "na": false,
+                            "case": false,
                             "wordlist_en": ["food supply"],
                             "wordlist_no": []
                         }
@@ -74,5 +75,18 @@
                 }
             ]
         }
-    ]
+    ],
+    "mentions": {
+        "logic_rule": "()",
+        "termlists" :[
+            {
+                "termlist_name": "",
+                "formatting_rule": "", 
+                "na": false,
+                "case": false,
+                "wordlist_en": [],
+                "wordlist_no": []
+            }
+        ]
+    }
 }

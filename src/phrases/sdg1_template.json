@@ -1,7 +1,7 @@
 {
     "name": "sdg1",
     "number": 1,
-    "generated_datetime": "08-12-2025 13:57:29",
+    "generated_datetime": "09-12-2025 10:07:34",
     "pre-search": [],
     "goals": [
         {
@@ -10,13 +10,13 @@
                 {
                     "number": 1,
                     "logic_rule": "()",
-                    "sentence_split": "",
+                    "sentence_split": false,
                     "termlists": [
                         {
                             "termlist_name": "",
                             "formatting_rule": "",
-                            "na": "",
-                            "case": "",
+                            "na": false,
+                            "case": false,
                             "wordlist_en": [],
                             "wordlist_no": []
                         }
@@ -30,13 +30,13 @@
                 {
                     "number": 1,
                     "logic_rule": "()",
-                    "sentence_split": "",
+                    "sentence_split": false,
                     "termlists": [
                         {
                             "termlist_name": "",
                             "formatting_rule": "",
-                            "na": "",
-                            "case": "",
+                            "na": false,
+                            "case": false,
                             "wordlist_en": [],
                             "wordlist_no": []
                         }
@@ -50,13 +50,13 @@
                 {
                     "number": 1,
                     "logic_rule": "()",
-                    "sentence_split": "",
+                    "sentence_split": false,
                     "termlists": [
                         {
                             "termlist_name": "",
                             "formatting_rule": "",
-                            "na": "",
-                            "case": "",
+                            "na": false,
+                            "case": false,
                             "wordlist_en": [],
                             "wordlist_no": []
                         }
@@ -70,13 +70,13 @@
                 {
                     "number": 1,
                     "logic_rule": "()",
-                    "sentence_split": "",
+                    "sentence_split": false,
                     "termlists": [
                         {
                             "termlist_name": "",
                             "formatting_rule": "",
-                            "na": "",
-                            "case": "",
+                            "na": false,
+                            "case": false,
                             "wordlist_en": [],
                             "wordlist_no": []
                         }
@@ -85,13 +85,13 @@
                 {
                     "number": 2,
                     "logic_rule": "()",
-                    "sentence_split": "",
+                    "sentence_split": false,
                     "termlists": [
                         {
                             "termlist_name": "",
                             "formatting_rule": "",
-                            "na": "",
-                            "case": "",
+                            "na": false,
+                            "case": false,
                             "wordlist_en": [],
                             "wordlist_no": []
                         }
@@ -100,13 +100,13 @@
                 {
                     "number": 3,
                     "logic_rule": "()",
-                    "sentence_split": "",
+                    "sentence_split": false,
                     "termlists": [
                         {
                             "termlist_name": "",
                             "formatting_rule": "",
-                            "na": "",
-                            "case": "",
+                            "na": false,
+                            "case": false,
                             "wordlist_en": [],
                             "wordlist_no": []
                         }
@@ -120,13 +120,13 @@
                 {
                     "number": 1,
                     "logic_rule": "()",
-                    "sentence_split": "",
+                    "sentence_split": false,
                     "termlists": [
                         {
                             "termlist_name": "",
                             "formatting_rule": "",
-                            "na": "",
-                            "case": "",
+                            "na": false,
+                            "case": false,
                             "wordlist_en": [],
                             "wordlist_no": []
                         }
@@ -140,13 +140,13 @@
                 {
                     "number": 1,
                     "logic_rule": "()",
-                    "sentence_split": "",
+                    "sentence_split": false,
                     "termlists": [
                         {
                             "termlist_name": "",
                             "formatting_rule": "",
-                            "na": "",
-                            "case": "",
+                            "na": false,
+                            "case": false,
                             "wordlist_en": [],
                             "wordlist_no": []
                         }
@@ -160,13 +160,13 @@
                 {
                     "number": 1,
                     "logic_rule": "()",
-                    "sentence_split": "",
+                    "sentence_split": false,
                     "termlists": [
                         {
                             "termlist_name": "",
                             "formatting_rule": "",
-                            "na": "",
-                            "case": "",
+                            "na": false,
+                            "case": false,
                             "wordlist_en": [],
                             "wordlist_no": []
                         }
@@ -181,48 +181,48 @@
             {
                 "termlist_name": "termlist_sdg_a",
                 "formatting_rule": "specific", 
-                "na": "False",
-                "case": "False",
+                "na": false,
+                "case": false,
                 "wordlist_en": ["SDG 1", "SDGs 1", "SDG1", "sustainable development goal 1"],
                 "wordlist_no": ["SDG 1", "SDG1","bærekraftsmål 1", "berekraftsmål 1"]
             },
             {
                 "termlist_name": "termlist_sdg_b",
                 "formatting_rule": "default", 
-                "na": "False",
-                "case": "False",
+                "na": false,
+                "case": false,
                 "wordlist_en": ["sustainable development goal"],
                 "wordlist_no": ["bærekraftsmål", "berekraftsmål"]
             },
             {
                 "termlist_name": "termlist_sdg_c",
                 "formatting_rule": "specific", 
-                "na": "False",
-                "case": "False",
+                "na": false,
+                "case": false,
                 "wordlist_en": ["goal 1"],
                 "wordlist_no": ["mål 1"]
             },
             {
                 "termlist_name": "termlist_sdg_d",
                 "formatting_rule": "specific", 
-                "na": "False",
-                "case": "False",
+                "na": false,
+                "case": false,
                 "wordlist_en": ["sustainable development goal.*", "SDG", "goal 1"],
                 "wordlist_no": ["SDG", "bærekraftsmål", "berekraftsmål", "mål 1"]
             },
             {
                 "termlist_name": "termlist_sdg_e",
                 "formatting_rule": "default", 
-                "na": "False",
-                "case": "False",
+                "na": false,
+                "case": false,
                 "wordlist_en": ["poverty"],
                 "wordlist_no": ["fattig"]
             },
             {
                 "termlist_name": "termlist_sdg_f",
                 "formatting_rule": "default", 
-                "na": "False",
-                "case": "False",
+                "na": false,
+                "case": false,
                 "wordlist_en": ["no poverty"],
                 "wordlist_no": ["utrydde fattigdom"]
             }
