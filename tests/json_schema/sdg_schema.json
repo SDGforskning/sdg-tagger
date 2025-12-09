@@ -20,7 +20,8 @@
               "type": "string"
             },
             "logic_rule": {
-              "type": "string"
+              "type": "string",
+              "format": "logic-rule-pattern"
             },
             "sentence_split": {
               "type": "boolean"
@@ -96,7 +97,8 @@
                       "type": "integer"
                     },
                     "logic_rule": {
-                      "type": "string"
+                      "type": "string",
+                      "format": "logic-rule-pattern"
                     },
                     "sentence_split": {
                       "type": "boolean"
@@ -168,7 +170,8 @@
       "type": "object",
       "properties": {
         "logic_rule": {
-          "type": "string"
+          "type": "string",
+          "format": "logic-rule-pattern"
         },
         "termlists": {
           "type": "array",
