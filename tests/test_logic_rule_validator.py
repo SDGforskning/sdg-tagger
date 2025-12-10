@@ -38,7 +38,6 @@ def test_logic_rule_validator_valid(input_valid):
         "(not [x])",           # mangler mellomrom før 'not'
         "([a] |[b])",          # mangler mellomrom før [b]
         "([a]| [b])",          # mangler mellomrom etter |
-        "([A])",               # store bokstaver i []
         "([foo bar])",         # whitespace inne i []
         "([x] && [y])",        # '&&' ikke tillatt
         "([x] | [y]",          # mangler ytre ')'

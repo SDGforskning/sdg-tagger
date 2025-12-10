@@ -6,7 +6,7 @@ import re
 TOKEN_REGEX = re.compile(
     r"""
     (?P<WS>\s+)                 |  # whitespace (nå BEHOLDER vi disse)
-    \[(?P<IDENT>[a-z0-9_]+)\]   |  # [identifier] (små bokstaver, tall, underscore)
+    \[(?P<IDENT>[A-Za-z0-9_]+)\]   |  # [identifier] (små bokstaver, tall, underscore)
     (?P<LPAREN>\()              |  # (
     (?P<RPAREN>\))              |  # )
     (?P<NOT>\bnot\b)            |  # 'not' som eget ord

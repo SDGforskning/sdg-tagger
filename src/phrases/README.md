@@ -23,7 +23,10 @@ The template files `sdgx_template.json` are created to be a starting point when 
 ## Logic rules format <a name="logic-rules"></a>
 - The entire rule must be embraces by one parenthesis ().
 - Only the operators 'not', '&', '|' are permitted. 
-- All references to termlists or to pre-searches MUST be inside square brackets. Only small letters, numbers and underscores are permitted within these brackets. No whitespaces. The text within each backet MUST correspond to the "name" of a termlist, or the "name" of a "pre-search" in the same file.
+- All references to termlists or to pre-searches MUST be inside square brackets. Only letters, numbers and underscores are permitted within these brackets. No whitespaces. The text within each backet MUST correspond to 
+    1. the "name" of a termlist within the same phrase
+    2. the "name" of a "pre-search" in the same file
+    3. the "name" og a phrase in `countries.json`
 - Parentesis can be nested.
 - The operators 'not', '&', '|' must have at least one blank space before and after.
 
