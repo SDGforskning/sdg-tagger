@@ -1,8 +1,8 @@
-"""
-This file contains helper functions for the core functionality of the src. 
+'''
+Helper functions for the core functionality of sdg-tagger. 
 This includes text formatting, file reading etc.
 Used by both countries_search and sdg_search
-"""
+'''
 import re
 import os
 import json
@@ -67,7 +67,7 @@ def get_sdg_phrases(sdg_number: int) -> list[dict]:
     """
     file_path = os.path.join(os.path.dirname(__file__), 'phrases/sdg{}.json'.format(str(sdg_number)))
     data = read_json_to_dict(file_path)
-    return data["goals"]
+    return data['targets']
 
 
 def get_countries_phrases() -> list[dict]:
