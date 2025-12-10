@@ -19,7 +19,7 @@
             ]
         }
     ],
-    "goals": [
+    "targets": [
         {
             "name": "1",
             "phrases": [

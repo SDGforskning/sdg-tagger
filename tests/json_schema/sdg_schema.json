@@ -17,10 +17,10 @@
         "$ref": "#/definitions/phrase"
       }
     },
-    "goals": {
+    "targets": {
       "type": "array",
       "items": {
-        "$ref": "#/definitions/goal"
+        "$ref": "#/definitions/target"
       }
     },
     "mentions": {
@@ -51,7 +51,7 @@
     "name",
     "number",
     "generated_datetime",
-    "goals",
+    "targets",
     "mentions"
   ],
   "additionalProperties": false,
@@ -130,7 +130,7 @@
             "termlists"
           ]
         },
-    "goal": {
+    "target": {
           "type": "object",
           "properties": {
             "name": {
