@@ -11,6 +11,7 @@
                     "number": 1,
                     "logic_rule": "([termlist2_1a])",
                     "sentence_split": true,
+                    "_comment": "This is an example comment",
                     "termlists": [
                         {
                             "termlist_name": "termlist2_1a", 

@@ -187,7 +187,7 @@ def validate_boolean_expression(s: str) -> bool:
     Validerer:
       - Hele strengen er omsluttet av ÉN ytre parentes.
       - Bare operatorene 'not', '&', '|'.
-      - [ident]-navn: [a-z0-9_]+, ingen whitespace inni '[]'.
+      - [ident]-navn: [A-Za-z0-9_]+, ingen whitespace inni '[]'.
       - Parenteser kan nøstes.
       - KRAV: Operatørene 'not', '&', '|' må ha minst ett mellomrom før og etter.
         Eksempler:
@@ -199,31 +199,36 @@ def validate_boolean_expression(s: str) -> bool:
     # Krav: ytre parentes rundt hele uttrykket
     if not (s.startswith('(') and s.endswith(')')):
         return False
+    
+    if s=='()' or s=='':
+        return True
+    
+    if '()' not in s:
+        print('not empty')
+        try:
+            tokens = tokenize(s)
 
-    try:
-        tokens = tokenize(s)
+            # Ekstra sikkerhet for & og |: sjekk whitespace rundt direkte i tokenlisten
+            for idx, tok in enumerate(tokens):
+                if tok.kind in ("AND", "OR", "NOT"):
+                    # Vi håndhever kravet: minst ett WS-token før og etter
+                    # (Selv om parseren også sjekker dette i flyt)
+                    require_space_around_operator(tokens, idx)
 
-        # Ekstra sikkerhet for & og |: sjekk whitespace rundt direkte i tokenlisten
-        for idx, tok in enumerate(tokens):
-            if tok.kind in ("AND", "OR", "NOT"):
-                # Vi håndhever kravet: minst ett WS-token før og etter
-                # (Selv om parseren også sjekker dette i flyt)
-                require_space_around_operator(tokens, idx)
+            parser = Parser(tokens)
 
-        parser = Parser(tokens)
+            # Parse én ytre '( EXPR )' og sørg for slutt
+            if not parser.peek() or parser.peek().kind != 'LPAREN':
+                return False
+            parser.consume('LPAREN')
+            parser.parse_expr()
+            parser.optionally_consume_ws()
+            if not parser.peek() or parser.peek().kind != 'RPAREN':
+                return False
+            parser.consume('RPAREN')
+            parser.optionally_consume_ws()
+            return parser.at_end()
 
-        # Parse én ytre '( EXPR )' og sørg for slutt
-        if not parser.peek() or parser.peek().kind != 'LPAREN':
+        except ValueError:
             return False
-        parser.consume('LPAREN')
-        parser.parse_expr()
-        parser.optionally_consume_ws()
-        if not parser.peek() or parser.peek().kind != 'RPAREN':
-            return False
-        parser.consume('RPAREN')
-        parser.optionally_consume_ws()
-        return parser.at_end()
-
-    except ValueError:
-        return False
-
+    else: return 

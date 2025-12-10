@@ -19,6 +19,7 @@ from test_helpers.logic_rule_validation import validate_boolean_expression
         "( ( [termlist1_ba] | [termlist1_ba_trunc] ) & [termlist1_bb] | ( [termlist1_bc] & ( [termlist1_bd] | [termlist1_bd_trunc] ) ) )",
         "( ( [x] ) )",  # ekstra whitespace/paranteser er ok
         "( not not [x] )",  # dobbel 'not' med mellomrom
+        "()"
     ]
 )
 def test_logic_rule_validator_valid(input_valid):
@@ -47,7 +48,7 @@ def test_logic_rule_validator_valid(input_valid):
         "( not[x] )",          # ikke lov med 'not' uten mellomrom etter
     ]
 )
-def test_logic_rule_validator_valid(input_invalid):
+def test_logic_rule_validator_invalid(input_invalid):
     # Arrange    
     # Act
     result = validate_boolean_expression(input_invalid)

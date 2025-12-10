@@ -17,6 +17,7 @@
                             "formatting_rule": "default", 
                             "na": false,
                             "case": false,
+                            
                             "wordlist_en": [
                                 "extreme poverty", "severe poverty", "deep poverty", "abject poverty", "absolute poverty", "destitution", "global poverty", "international poverty"
                             ],
@@ -33,7 +34,7 @@
             "phrases":[
                 {
                     "number": 1,
-                    "logic_rule": "([termlist1_ba] | [termlist1_ba_trunc]) & [termlist1_bb] | ([termlist1_bc] & ([termlist1_bd] | [termlist1_bd_trunc]))",
+                    "logic_rule": "(([termlist1_ba] | [termlist1_ba_trunc]) & [termlist1_bb] | ([termlist1_bc] & ([termlist1_bd] | [termlist1_bd_trunc])))",
                     "sentence_split": false,
                     "termlists": [
                         {

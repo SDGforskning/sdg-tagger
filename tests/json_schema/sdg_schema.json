@@ -14,157 +14,14 @@
     "pre-search": {
       "type": "array",
       "items": {
-          "type": "object",
-          "properties": {
-            "name": {
-              "type": "string"
-            },
-            "logic_rule": {
-              "type": "string",
-              "format": "logic-rule-pattern"
-            },
-            "sentence_split": {
-              "type": "boolean"
-            },
-            "termlists": {
-              "type": "array",
-              "items": [
-                {
-                  "type": "object",
-                  "properties": {
-                    "termlist_name": {
-                      "type": "string"
-                    },
-                    "formatting_rule": {
-                      "type": "string"
-                    },
-                    "na": {
-                      "type": "boolean"
-                    },
-                    "case": {
-                      "type": "boolean"
-                    },
-                    "wordlist_en": {
-                      "type": "array",
-                      "items": {
-                        "type": "string"
-                      }
-                    },
-                    "wordlist_no": {
-                      "type": "array",
-                      "items": {
-                        "type": "string"
-                      }
-                    }
-                  },
-                  "required": [
-                    "termlist_name",
-                    "formatting_rule",
-                    "na",
-                    "case",
-                    "wordlist_en",
-                    "wordlist_no"
-                  ]
-                }
-              ]
-            }
-          },
-          "required": [
-            "name",
-            "logic_rule",
-            "sentence_split",
-            "termlists"
-          ],
-          "additionalProperties": false
-        }
+        "$ref": "#/definitions/phrase"
+      }
     },
     "goals": {
       "type": "array",
-      "items": [
-        {
-          "type": "object",
-          "properties": {
-            "name": {
-              "type": "string"
-            },
-            "phrases": {
-              "type": "array",
-              "items": [
-                {
-                  "type": "object",
-                  "properties": {
-                    "number": {
-                      "type": "integer"
-                    },
-                    "logic_rule": {
-                      "type": "string",
-                      "format": "logic-rule-pattern"
-                    },
-                    "sentence_split": {
-                      "type": "boolean"
-                    },
-                    "termlists": {
-                      "type": "array",
-                      "items": [
-                        {
-                          "type": "object",
-                          "properties": {
-                            "termlist_name": {
-                              "type": "string"
-                            },
-                            "formatting_rule": {
-                              "type": "string"
-                            },
-                            "na": {
-                              "type": "boolean"
-                            },
-                            "case": {
-                              "type": "boolean"
-                            },
-                            "wordlist_en": {
-                              "type": "array",
-                              "items": {
-                                "type": "string"
-                              }
-                            },
-                            "wordlist_no": {
-                              "type": "array",
-                              "items": {
-                                "type": "string"
-                              }
-                            }
-                          },
-                          "required": [
-                            "termlist_name",
-                            "formatting_rule",
-                            "na",
-                            "case",
-                            "wordlist_en",
-                            "wordlist_no"
-                          ],
-                          "additionalProperties": false
-                        }
-                      ]
-                    }
-                  },
-                  "required": [
-                    "number",
-                    "logic_rule",
-                    "sentence_split",
-                    "termlists"
-                  ],
-                  "additionalProperties": false
-                }
-              ]
-            }
-          },
-          "required": [
-            "name",
-            "phrases"
-          ],
-          "additionalProperties": false
-        }
-      ]
+      "items": {
+        "$ref": "#/definitions/goal"
+      }
     },
     "mentions": {
       "type": "object",
@@ -173,48 +30,14 @@
           "type": "string",
           "format": "logic-rule-pattern"
         },
+        "_comment": {
+          "type": "string"
+        },
         "termlists": {
           "type": "array",
-          "items": [
-            {
-              "type": "object",
-              "properties": {
-                "termlist_name": {
-                  "type": "string"
-                },
-                "formatting_rule": {
-                  "type": "string"
-                },
-                "na": {
-                  "type": "boolean"
-                },
-                "case": {
-                  "type": "boolean"
-                },
-                "wordlist_en": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "wordlist_no": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                }
-              },
-              "required": [
-                "termlist_name",
-                "formatting_rule",
-                "na",
-                "case",
-                "wordlist_en",
-                "wordlist_no"
-              ],
-              "additionalProperties": false
-            }
-          ]
+          "items": {
+            "$ref": "#/definitions/termlist"
+          }
         }
       },
       "required": [
@@ -231,5 +54,100 @@
     "goals",
     "mentions"
   ],
-  "additionalProperties": false
+  "additionalProperties": false,
+  "definitions":{
+    "termlist": {
+        "type": "object",
+        "properties": {
+          "termlist_name": {
+            "type": "string"
+          },
+          "formatting_rule": {
+              "type": "string"
+          },
+          "na": {
+              "type": "boolean"
+          },
+          "case": {
+              "type": "boolean"
+          },
+          "_comment": {
+            "type": "string"
+          },
+          "wordlist_en": {
+              "type": "array",
+              "items": {
+                  "type": "string"
+              }
+          },
+          "wordlist_no": {
+              "type": "array",
+              "items": {
+                  "type": "string"
+              }
+          }
+        },
+        "required": [
+            "termlist_name",
+            "formatting_rule",
+            "na",
+            "case",
+            "wordlist_en",
+            "wordlist_no"
+        ],
+      "additionalProperties": false
+    },
+    "phrase": {
+      "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "number": {
+              "type": "integer"
+            },
+            "_comment": {
+              "type": "string"
+            },
+            "logic_rule": {
+              "type": "string",
+              "format": "logic-rule-pattern"
+            },
+            "sentence_split": {
+              "type": "boolean"
+            },
+            "termlists": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/termlist"
+              }
+            }
+          },
+          "additionalProperties": false,
+          "required": [
+            "logic_rule",
+            "sentence_split",
+            "termlists"
+          ]
+        },
+    "goal": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "phrases": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/phrase"
+              }
+            }
+          },
+          "required": [
+            "name",
+            "phrases"
+          ],
+          "additionalProperties": false
+        }
+  }
 }

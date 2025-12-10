@@ -431,7 +431,7 @@
         }
     ],
     "mentions": {
-        "logic_rule": "",
+        "logic_rule": "()",
         "termlists": [
             {
                 "termlist_name": "",

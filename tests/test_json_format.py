@@ -99,10 +99,8 @@ def test_logic_rule_format(input_filename):
     # Arrange
     custom_format_checker = FormatChecker()
     custom_format_checker.checks("logic-rule-pattern")(validate_boolean_expression)
-    CustomValidator = extend(
-        Draft7Validator,
-        format_checker=custom_format_checker
-    )
+
+    
 
     with open("src/phrases/" + input_filename) as file:
         content = json.load(file)
@@ -112,6 +110,8 @@ def test_logic_rule_format(input_filename):
         json_schema = json.load(file)
     
     # Act
-    result = CustomValidator(json_schema).validate(content)
+    validator = Draft7Validator(json_schema, format_checker=custom_format_checker)
+    result = validator.validate(content)
+
     # Assert
     assert result==None
