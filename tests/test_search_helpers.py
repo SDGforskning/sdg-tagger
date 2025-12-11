@@ -78,6 +78,7 @@ def test_pattern_search_boolean_specific_true(input):
     [
         (["house"], "many houses"),
         (["house"], "courthouses"),
+        (["low-maintenance"], "it has been low maintenance here"),
         (["house", "low-maintenance"], "this is a random sentence"),
     ]
 )
@@ -116,6 +117,7 @@ def test_pattern_search_boolean_specific_trunc_true(input):
         (["house"], "courthouse"),
         (["house"], "courthouses"),
         (["house"], "houses"),
+        (["low-maintenance"], "it has been low maintenance here"),
         (["house", "low-maintenance"], "this is a random sentence"),
     ]
 )
