@@ -3,13 +3,13 @@
     "phrases":[
         {
             "name":"LDC", 
-            "logic_rule": "([LDC_termlist]|[LDC_termlist_trunc]|[LDC_termlist_caps])",
+            "logic_rule": "([LDC_termlist] | [LDC_termlist_trunc] | [LDC_termlist_caps])",
             "termlists":[
                 {
                     "termlist_name":"LDC_termlist",
                     "formatting_rule":"default",
-                    "na":"False",
-                    "case":"False",
+                    "na":false,
+                    "case":false,
                     "wordlist_en":[
                         "least developed countr", "least developed nation", "Angola", "Benin", "beninese", "Burkina Faso", "Burkina fasso", "burkin", "Burundi", "Central African Republic", "central african", "Chad", "Comoros", "comoro islands", "iles comores", "Congo", "Djibouti", "Eritrea", "Ethiopia", "Gambia", "Guinea", "Guinea-Bissau", "guinean", "Lesotho", "lesothan", "Liberia", "Madagasca", "Malawi", "Mauritania", "Mozambique", "mozambican", "Niger", "Rwanda", "Sao Tome and Principe", "Senegal", "Sierra Leone", "Somalia", "South Sudan", "Sudan", "sudanese", "Togo", "togolese", "tongan", "Uganda", "Tanzania", "Zambia", "Cambodia", "Kiribati", "Lao People’s democratic republic", "Laos", "Myanmar", "myanma", "Solomon islands", "Timor Leste", "Tuvalu", "Vanuatu", "Afghanistan", "afghan", "Bangladesh", "Bhutan", "Nepal", "Yemen", "Haiti"
                     ],
@@ -20,8 +20,8 @@
                 {
                     "termlist_name":"LDC_termlist_trunc",
                     "formatting_rule":"specific_trunc",
-                    "na":"False",
-                    "case":"False",
+                    "na":false,
+                    "case":false,
                     "wordlist_en":[
                         "Mali", "malian"
                     ],
@@ -32,8 +32,8 @@
                 {
                     "termlist_name":"LDC_termlist_caps",
                     "formatting_rule":"default",
-                    "na":"False",
-                    "case":"True",
+                    "na":false,
+                    "case":true,
                     "wordlist_en":[
                         "LEDC", " MUL "
                     ],
@@ -44,13 +44,13 @@
         },
         {
             "name":"SIDS", 
-            "logic_rule": "([SIDS_termlist]|[SIDS_termlist_caps])",
+            "logic_rule": "([SIDS_termlist] | [SIDS_termlist_caps])",
             "termlists":[
                 {
                     "termlist_name":"SIDS_termlist",
                     "formatting_rule":"default",
-                    "na":"False",
-                    "case":"False",
+                    "na":false,
+                    "case":false,
                     "wordlist_en":[
                         "small-island developing nation", "small-island developing stat", "small-island developing countr", "small island developing nation", "small island developing stat", "small island developing countr", "Antigua and Barbuda", "Antigua & Barbuda", "antiguan", "Bahamas", "bahamian", "Bahrain", "Barbados", "barbadian", "Belize", "Cabo Verde", "Cape Verde", "Comoros", "comoro islands", "iles comores", "Cuba", "Dominica", "Micronesia", "Fiji", "Grenada", "Guinea-Bissau", "bissau-guinean", "Guyana", "guyan", "Haiti", "Jamaica", "Kiribati", "Maldives", "maldivian", "Marshall Islands", "Mauritius", "mauritian", "Nauru", "Palau", "Papua New Guinea", "Saint Kitts and Nevis", "st kitts and nevis", "Saint Lucia", "St Lucia", "St. Vincent and the Grenadines", "Saint Vincent and the Grenadines", "Vincent & the Grenadines", "Samoa", "Sao Tome", "Seychelles", "seychellois", "Singapore", "Solomon Islands", "Surinam", "Timor-Leste", "timorese", "Tonga", "Trinidad and Tobago", "Trinidad & Tobago", "trinidadian", "tobagonian", "Tuvalu", "Vanuatu", "Anguilla", "Aruba", "Bermuda", "Cayman Islands", "Northern Mariana", "Cook Islands", "Curacao", "French Polynesia", "Guadeloupe", "Guam", "Martinique", "Montserrat", "New Caledonia", "Niue", "Puerto Rico", "puerto rican", "Sint Maarten", "Turks and Caicos", "Turks & Caicos", "Virgin Islands"
                     ],
@@ -61,8 +61,8 @@
                 {
                     "termlist_name":"SIDS_termlist_caps",
                     "formatting_rule":"default",
-                    "na":"False",
-                    "case":"True",
+                    "na":false,
+                    "case":true,
                     "wordlist_en":[
                         "SIDS"
                     ],
@@ -73,13 +73,13 @@
         },
         {
             "name":"LDS", 
-            "logic_rule": "([LDS_termlist]|[LDS_termlist_trunc])",
+            "logic_rule": "([LDS_termlist] | [LDS_termlist_trunc])",
             "termlists":[
                 {
                     "termlist_name":"LDS_termlist",
                     "formatting_rule":"default",
-                    "na":"False",
-                    "case":"False",
+                    "na":false,
+                    "case":false,
                     "wordlist_en":[
                         "landlocked developing nation", "landlocked developing stat", "land-locked developing nation", "land-locked developing stat", "Afghanistan", "afghan", "Armenia", "Azerbaijan", "Bhutan", "bhutanese", "Bolivia", "Botswana", "Burkina Faso", "Burundi", "Central African Republic", "Chad", "Eswatini", "eswantian", "Ethiopia", "Kazakhstan", "kazakh", "Kyrgyzstan", "Kyrgyz", "kirghizia", "kirgizstan", "Lao People’s Democratic Republic", "Laos", "Lesotho", "Malawi", "malawian", "Mali", "Mongol", "Nepal", "Niger", "North Macedonia", "Republic of Macedonia", "Paraguay", "Moldova", "Rwanda", "South Sudan", "sudanese", "Swaziland", "Tajikistan", "tadjikistan", "tajikistani", "Turkmenistan", "Uganda", "Uzbekistan", "uzbekistani", "Zambia", "zambian", "Zimbabwe"
                     ],
@@ -90,8 +90,8 @@
                 {
                     "termlist_name":"LDS_termlist_trunc",
                     "formatting_rule":"default",
-                    "na":"False",
-                    "case":"True",
+                    "na":false,
+                    "case":true,
                     "wordlist_en":[
                         "Mali", "malian"
                     ],
@@ -103,13 +103,13 @@
         },
         {
             "name":"LMIC", 
-            "logic_rule": "([LMIC_termlist]|[LMIC_termlist_trunc]|[LMIC_termlist_caps])",
+            "logic_rule": "([LMIC_termlist] | [LMIC_termlist_trunc] | [LMIC_termlist_caps])",
             "termlists":[
                 {
                     "termlist_name":"LMIC_termlist",
                     "formatting_rule":"default",
-                    "na":"False",
-                    "case":"False",
+                    "na":false,
+                    "case":false,
                     "wordlist_en":[
                         "least developed countr", "least developed nation", "developing countr", "developing nation", "developing states", "island developing state", "developing world", "less developed countr", "less developed nation", "under developed countr", "under developed nation", "underdeveloped countr", "underdeveloped nation", "underserved countr", "underserved nation", "deprived countr", "deprived nation", "middle income countr", "middle income nation", "middle-income countr", "middle-income nation", "low income countr", "low income nation", "lower income countr", "lower income nation", "low-income countr", "low-income nation", "lower-income countr", "lower-income nation", "poor countr", "poor nation", "poorer countr", "poorer nation", "third world", "global south", "transitional countr", "emerging economies", "emerging nation", "Angola", "Benin", "Burkina Faso", "Burkina fasso", "burkinese", "burkinabe", "Burundi", "Central African Republic", "central african", "Comoros", "comoro islands", "iles comores", "Congo", "Djibouti", "Eritre", "Ethiopia", "Gambia", "Guinea", "Lesoth", "Liberia", "Madagas", "Malawi", "Mauritan", "Mozambi", "Niger", "Rwanda", "Sao Tome", "Senegal", "Sierra Leone", "Somalia", "Sudan", "Togo", "tongan", "Uganda", "Tanzania", "Zambia", "Cambodia", "Kiribati", "Lao People", "Laos", "myanma", "Solomon islands", "Timor Leste", "timorese", "Tuvalu", "Vanuatu", "afghan", "Bangladesh", "Bhutan", "Nepal", "Yemen", "Haiti",  "Antigua", "Barbuda", "Bahamas", "bahamian", "Bahrain", "Barbados", "barbadian", "Belize", "Cabo Verde", "Cape Verde", "Cuba", "Dominica", "Micronesia", "Fiji", "Grenada", "Guyana", "Haiti", "Jamaica", "Maldiv", "Marshall Islands", "Mauriti", "Nauru", "Palau", "Saint Kitts", "st kitts", "Saint Lucia", "St Lucia", "Vincent and the Grenadines", "the Grenadines", "Samoa", "Sao Tome", "Seychell", "Singapore", "Surinam", "Tonga", "Trinidad", "Tobago", "Anguilla", "Aruba", "Bermuda", "Cayman Islands", "Northern Mariana", "Cook Islands", "Curacao", "French Polynesia", "Guadeloupe", "Guam", "Martinique", "Montserrat", "New Caledonia", "Niue", "Puerto Ric", "Sint Maarten", "Turks and Caicos", "Turks & Caicos", "Virgin Islands", 
 
@@ -132,8 +132,8 @@
                 {
                     "termlist_name":"LMIC_termlist_trunc",
                     "formatting_rule":"specific_trunc",
-                    "na":"False",
-                    "case":"False",
+                    "na":false,
+                    "case":false,
                     "wordlist_en":[
                         "kina", "Mali", "malian", "malier", "maliar", "malisk"
                     ],
@@ -143,8 +143,8 @@
                 {
                     "termlist_name":"LMIC_termlist_caps",
                     "formatting_rule":"default",
-                    "na":"False",
-                    "case":"True",
+                    "na":false,
+                    "case":true,
                     "wordlist_en":[
                         "LEDC", " MUL ", "SIDS", "LMIC", "LAMI "
                     ],

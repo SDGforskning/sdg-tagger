@@ -9,7 +9,7 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 from test_helpers.logic_rule_validation import validate_boolean_expression
 
-
+###################### Testcases: SDG files JSON format ######################
 @pytest.mark.json_format
 @pytest.mark.parametrize(
     'input_filename', 
@@ -59,6 +59,7 @@ def test_json_format(input_filename):
     assert result==None
 
 
+################# Testcases: Valid logic rule format in the SDG JSON files #################
 @pytest.mark.json_format
 @pytest.mark.logic_rule_format
 @pytest.mark.parametrize(
@@ -100,12 +101,61 @@ def test_logic_rule_format(input_filename):
     custom_format_checker = FormatChecker()
     custom_format_checker.checks("logic-rule-pattern")(validate_boolean_expression)
 
-    
-
     with open("src/phrases/" + input_filename) as file:
         content = json.load(file)
 
     schema = "tests/json_schema/sdg_schema.json"
+    with open(schema) as file:
+        json_schema = json.load(file)
+    
+    # Act
+    validator = Draft7Validator(json_schema, format_checker=custom_format_checker)
+    result = validator.validate(content)
+
+    # Assert
+    assert result==None
+
+
+###################### Testcases: Countries file JSON format ######################
+@pytest.mark.json_format
+@pytest.mark.parametrize(
+    'input_filename', 
+    [
+        "countries.json",
+    ]
+)
+def test_json_format_countries(input_filename):
+    # Arrange
+    with open("src/phrases/" + input_filename) as file:
+        content = json.load(file)
+    schema = "tests/json_schema/country_search_schema.json"
+    with open(schema) as file:
+        json_schema = json.load(file)
+    
+    # Act
+    result = validate(instance=content, schema=json_schema)
+    # Assert
+    assert result==None
+
+
+################# Testcases: Valid logic rule format in the countries JSON file #################
+@pytest.mark.json_format
+@pytest.mark.logic_rule_format
+@pytest.mark.parametrize(
+    'input_filename', 
+    [
+        "countries.json",
+    ]
+)
+def test_logic_rule_format(input_filename):
+    # Arrange
+    custom_format_checker = FormatChecker()
+    custom_format_checker.checks("logic-rule-pattern")(validate_boolean_expression)
+
+    with open("src/phrases/" + input_filename) as file:
+        content = json.load(file)
+
+    schema = "tests/json_schema/country_search_schema.json"
     with open(schema) as file:
         json_schema = json.load(file)
     
