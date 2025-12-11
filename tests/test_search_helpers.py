@@ -118,6 +118,25 @@ def test_pattern_search_boolean_specific_trunc_false(input):
     # Assert
     assert not result
 
+######################### Testcase: STAR icon + SPECIFIC_TRUNC format + TRUE output #########################
+@pytest.mark.regex_pattern
+@pytest.mark.parametrize(
+    'input', 
+    [
+        (["economic resource.*"], "economic resources"),
+        (["economic resource.*"], "economic resource"),
+    ]
+)
+def test_pattern_search_boolean_specific_trunc_true_with_star(input):
+    # Arrange
+    pattern = SPECIFIC_TRUNC
+    # Act
+    result = pattern_search_boolean(pattern, search_terms=input[0], text=input[1])
+    # Assert
+    assert result
+
+
+
 
 ############### Testcase: contains capitol letters and TRUE output, various patterns ###############
 @pytest.mark.regex_pattern
