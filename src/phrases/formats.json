@@ -1,5 +1,5 @@
 {
     "default": "(?:{})",
-    "specific": "(?:{})\b",
-    "specific_trunc": "\b(?:{})\b"
+    "specific": "(?:{})\\b",
+    "specific_trunc": "\\b(?:{})\\b"
 }
