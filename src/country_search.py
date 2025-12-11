@@ -1,8 +1,11 @@
+'''
+Country category searches for sdg-tagger
+'''
 from .helpers import (
     get_countries_phrases, 
     get_string_formats, 
     format_logic_rules,
-    search_termlist
+    search_termlist_bool,
 )
 
 def get_logic_rule_raw(all_phrases:dict, search_name:str) -> str:
@@ -39,7 +42,11 @@ def all_country_searches(input_text:str) -> dict[str:dict[str:bool]]:
         name = search_phrase['name']
 
         for term_lists in search_phrase['termlists']:
-            phrase_results[term_lists['termlist_name']] = search_termlist(regex_patterns, term_lists, input_text)
+            phrase_results[term_lists['termlist_name']] = search_termlist_bool(
+                regex_patterns, 
+                term_lists, 
+                input_text
+                )
         
         all_search_results[name] = phrase_results
     

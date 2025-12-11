@@ -1,15 +1,18 @@
-import re
-
 from .helpers import (
     format_logic_rules, 
     get_string_formats, 
     get_sdg_phrases,
-    search_termlist
+    search_termlist_bool
 )
-from .consts import LIST_ALL_SDG_NR
 
+from .country_search import all_country_searches
 
-def search_terms_in_sdg_target(input_text:str, sdg_goal_phrases: list[dict], regex_patterns: dict, indexed: bool) -> dict:
+def search_phrases_in_sdg_target(
+        input_text: str, 
+        sdg_target_phrases: list[dict], 
+        regex_patterns: dict, 
+        indexed: bool
+    ) -> dict:
     """
 
     Args:
@@ -17,9 +20,9 @@ def search_terms_in_sdg_target(input_text:str, sdg_goal_phrases: list[dict], reg
     Returns:
 
     """
-    conditions = {}
+    target_results = {}
 
-    for phrase in sdg_goal_phrases:
+    for phrase in sdg_target_phrases:
         phrase_results = {}
         number = phrase['number']
 
@@ -29,16 +32,24 @@ def search_terms_in_sdg_target(input_text:str, sdg_goal_phrases: list[dict], reg
             for term_lists in phrase['termlists']:
                 sentence_results = []
                 for sentence in sentences:
-                    sentence_results.append(search_termlist(regex_patterns, term_lists, sentence))
-
+                    sentence_results.append(search_termlist_bool(
+                        regex_patterns=regex_patterns, 
+                        term_lists=term_lists, 
+                        input_text=sentence,
+                    ))
                 phrase_results[term_lists['termlist_name']] = any(sentence_results)
 
-        for term_lists in phrase['termlists']:
-            phrase_results[term_lists['termlist_name']] = search_termlist(regex_patterns, term_lists, input_text, indexed)
+        else:
+            for term_lists in phrase['termlists']:
+                phrase_results[term_lists['termlist_name']] = search_termlist_bool(
+                    regex_patterns=regex_patterns, 
+                    term_lists=term_lists, 
+                    input_text=input_text,
+                )
         
-        conditions[number] = phrase_results
+        target_results[number] = phrase_results
 
-    return conditions
+    return target_results
 
 
 def get_logic_rule_raw(goal_phrases, target_nr):
@@ -48,6 +59,8 @@ def get_logic_rule_raw(goal_phrases, target_nr):
         if phrase["number"] == target_nr:
             return phrase['logic_rule']
 
+def goal_pre_search(input_text):
+    return (None, None)
 
 def search_all_targets_in_goal(sdg_nr: int, input_text:str, analyze_result:bool=False) -> dict[str:bool]| dict[str:dict] :
     """
@@ -59,30 +72,45 @@ def search_all_targets_in_goal(sdg_nr: int, input_text:str, analyze_result:bool=
 
     Returns:
         The results in boolean for each target of the sdg
-        The indexed results for all search terms in each target of the sdg
+        The indexed results for all search terms in each target of the sdg. 
+        NOTE: The indexed result is per termlist, and will also include terms that are matched in a termlist even if the logic rule gives False as a whole
     """
     regex_patterns = get_string_formats()
     sdg_all_targets = get_sdg_phrases(sdg_nr)
 
     results = {}
     indexes = {}
+    results["sdg_number"] = sdg_nr
+
+    _ , countries = all_country_searches(input_text)
+    _ , pre_search = goal_pre_search(input_text)
 
     for target in sdg_all_targets:
-        goal_phrases = target['phrases']
+        target_phrases = target['phrases']
         
-        result_termlist_search = search_terms_in_sdg_target(input_text, goal_phrases, regex_patterns, False)
+        result_termlist_search = search_phrases_in_sdg_target(
+            input_text=input_text, 
+            sdg_target_phrases=target_phrases, 
+            regex_patterns=regex_patterns, 
+            indexed=False
+            )
 
         phrase_results = {}
         for phrase_nr in result_termlist_search.keys():
             phrase = result_termlist_search[phrase_nr]
-            logic_rule_raw = get_logic_rule_raw(goal_phrases, phrase_nr)
-            logic_rule_formatted = format_logic_rules(logic_rule_raw, phrase)
+            logic_rule_raw = get_logic_rule_raw(target_phrases, phrase_nr)
+            logic_rule_formatted = format_logic_rules(
+                logic_rule_raw, 
+                phrase,
+                countries,
+                pre_search
+                )
             phrase_results[phrase_nr] = eval(logic_rule_formatted) 
         
         results[target['name']] = phrase_results
 
         if analyze_result:
-            index_search = search_terms_in_sdg_target(input_text, goal_phrases, regex_patterns, indexed=True)
+            index_search = search_phrases_in_sdg_target(input_text, target_phrases, regex_patterns, indexed=True)
             indexes[target['name']] = index_search
     
     return results, indexes

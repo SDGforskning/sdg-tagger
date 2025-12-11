@@ -23,7 +23,12 @@ def replacer_function(match_object: re.Match, result_termlist_search: dict) -> s
     return result_termlist_search[termlist_name]
 
 
-def format_logic_rules(logic_rule_raw:str, result_termlist_search: dict) -> str:
+def format_logic_rules(
+        logic_rule_raw:str, 
+        result_termlist_search: dict[str: bool], 
+        countries: dict[str: bool] = None, 
+        pre_search: dict[str: bool] = None
+    ) -> str:
     """ Takes the raw logic rules as is written in the json files and converts them to a python-formatable format. 
 
     Args: 
@@ -32,8 +37,18 @@ def format_logic_rules(logic_rule_raw:str, result_termlist_search: dict) -> str:
     Returns:
         Logic rule that is ready to be used in the eval function. 
     """
+    all_logic_results = result_termlist_search
+
+    if countries:
+        for key in countries.keys():
+            all_logic_results[key] = countries[key]
+            
+    if pre_search:
+        for key in pre_search.keys():
+            all_logic_results[key] = pre_search[key]
+
     pattern = r"\[[^\[\]]*\]"
-    logic_rule_formatted = re.sub(pattern, lambda x: str(result_termlist_search[x.group()[1:-1]]), logic_rule_raw)
+    logic_rule_formatted = re.sub(pattern, lambda x: str(all_logic_results[x.group()[1:-1]]), logic_rule_raw)
     logic_rule_formatted = logic_rule_formatted.replace('|',' or ').replace('&',' and ')
     logic_rule_formatted = logic_rule_formatted.replace('  ', ' ')
 
@@ -143,7 +158,11 @@ def pattern_search_indexed(pattern:str, search_terms:list[str], text:str) -> lis
     return matches_with_indices
 
 
-def search_termlist(regex_patterns:str, term_lists:dict[str, list[str]], input_text:str, indexed:bool=False) -> bool|dict:
+def search_termlist_bool(
+        regex_patterns:str, 
+        term_lists:dict[str, list[str]], 
+        input_text:str
+    ) -> bool|dict:
     """
 
     Args:
@@ -151,6 +170,37 @@ def search_termlist(regex_patterns:str, term_lists:dict[str, list[str]], input_t
         term_lists: terms to search for
         text: the text to search in
         indexed: 
+
+    Returns:
+
+    """
+
+    pattern = str(regex_patterns[term_lists['formatting_rule']])
+    terms = term_lists['wordlist_en'] 
+    if any(ADDITIONAL_LANGUAGES.values()):
+        terms += get_additional_language_terms(term_lists)
+
+    if term_lists['case']=='False':
+        text = input_text.lower()
+        terms = [term.lower() for term in terms]
+    else: text = input_text
+
+    return pattern_search_boolean(pattern, terms, text)
+
+
+def search_termlist_indexed(
+        regex_patterns:str, 
+        term_lists:dict[str, list[str]], 
+        countries: dict[str:bool], 
+        pre_search: dict[str:bool],
+        input_text:str
+    ) -> bool|dict:
+    """
+
+    Args:
+        regex_patterns: regex pattern to use when searching
+        term_lists: terms to search for
+        text: the text to search in
 
     Returns:
 
@@ -165,7 +215,4 @@ def search_termlist(regex_patterns:str, term_lists:dict[str, list[str]], input_t
         terms = [term.lower() for term in terms]
     else: text = input_text
 
-    if indexed:
-        return pattern_search_indexed(pattern, terms, text)
-    return pattern_search_boolean(pattern, terms, text)
-
+    return pattern_search_indexed(pattern, terms, text)
