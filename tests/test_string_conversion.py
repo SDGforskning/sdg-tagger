@@ -92,8 +92,8 @@ def test_format_logic_rules_combined_true_false(input, output_text):
     'input_logic_rule, output_text', 
     [
         (
-            "([termlist1_ba] | [termlist1_ba_trunc]) & [termlist1_bb] | ([termlist1_bc] & ([termlist1_bd] | [termlist1_bd_trunc]))", 
-            "(True or True) and True or (True and (True or True))"
+            "([termlist1_ba] & [LDC])", 
+            "(True and True)"
          ),
     ]
 )
@@ -102,10 +102,7 @@ def test_format_logic_rules_countries(input_logic_rule, output_text):
     termlist_results = {
         "termlist1_ba": True,
         "termlist1_ba_trunc": True,
-        "termlist1_bb": True,
-        "termlist1_bc": True,
-        "termlist1_bd": True,
-        "termlist1_bd_trunc": True,
+        "termlist1_bb": True
     }
     country_results = {
         "LDC": True,
@@ -132,11 +129,96 @@ def test_format_logic_rules_countries(input_logic_rule, output_text):
 
 
 ################################## TODO Testcase: missing a referenced termlist result ##################################
+@pytest.mark.format_logic_rules
+def test_format_logic_rules_missing_referenced_termlist():
+    # Arrange
+    logic_rule = "([termlist1_ba] & [LDC])"
+    termlist_results = {
+        "termlist1_ba_trunc": True,
+    }
+    country_results = {
+        "LDC": True,
+        "SIDS": False,
+        "LDS": False,
+        "LMIC": False,
+    }
 
+    # Act
+    with pytest.raises(KeyError):
+        format_logic_rules(
+            logic_rule_raw=logic_rule, 
+            result_termlist_search=termlist_results,
+            countries=country_results
+        )
 
-################################## TODO Testcase: missing a referenced countries result ##################################
+################################## Testcase: missing a referenced countries result ##################################
+@pytest.mark.format_logic_rules
+def test_format_logic_rules_missing_referenced_country():
+    # Arrange
+    logic_rule = "([termlist1_ba_trunc] & [LDS])"
+    termlist_results = {
+        "termlist1_ba_trunc": True,
+    }
+    country_results = {
+        "LDC": True,
+        "SIDS": False,
+    }
 
+    # Act
+    with pytest.raises(KeyError):
+        format_logic_rules(
+            logic_rule_raw=logic_rule, 
+            result_termlist_search=termlist_results,
+            countries=country_results
+        )
 
-################################## TODO Testcase: missing a referenced pre-search result ##################################
+################################## Testcase: missing a referenced pre-search result (entire input missing) ##################################
+@pytest.mark.format_logic_rules
+def test_format_logic_rules_missing_referenced_presearch_dict():
+    # Arrange
+    logic_rule = "([termlist1_ba_trunc] & [marine])"
+    termlist_results = {
+        "termlist1_ba_trunc": True,
+    }
+    country_results = {
+        "LDC": True,
+        "SIDS": False,
+        "LDS": False,
+        "LMIC": False,
+    }
 
+    # Act
+    with pytest.raises(KeyError):
+        format_logic_rules(
+            logic_rule_raw=logic_rule, 
+            result_termlist_search=termlist_results,
+            countries=country_results
+        )
+
+################################## Testcase: missing a referenced pre-search result (only one element missing) ##################################
+@pytest.mark.format_logic_rules
+def test_format_logic_rules_missing_referenced_presearch():
+    # Arrange
+    logic_rule =  "([termlist15_a] & [Terrestial_double_NOT])"
+    termlist_results = {
+        "termlist15_a": True,
+    }
+    country_results = {
+        "LDC": True,
+        "SIDS": False,
+        "LDS": False,
+        "LMIC": False,
+    }
+    pre_search_result = {
+        "Terrestial": True
+    }
+
+    # Act
+    with pytest.raises(KeyError):
+        format_logic_rules(
+            logic_rule_raw=logic_rule, 
+            result_termlist_search=termlist_results,
+            countries=country_results,
+            pre_search=pre_search_result
+        )
 

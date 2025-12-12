@@ -42,13 +42,22 @@ def format_logic_rules(
     if countries:
         for key in countries.keys():
             all_logic_results[key] = countries[key]
-            
+
     if pre_search:
         for key in pre_search.keys():
             all_logic_results[key] = pre_search[key]
 
+    def replacer_function(x):
+        try:
+            boolean_result = str(all_logic_results[x.group()[1:-1]])
+            return boolean_result
+        except KeyError:
+            message = f'''WARNING: The search result for {x.group()[1:-1]} was not found. Make sure the logic rule only reference termlists within the same phrase, pre-searches withing the same file, or coutry searches.'''
+            print(f'\033[1;31m{message}\033[0m')
+            raise
+
     pattern = r"\[[^\[\]]*\]"
-    logic_rule_formatted = re.sub(pattern, lambda x: str(all_logic_results[x.group()[1:-1]]), logic_rule_raw)
+    logic_rule_formatted = re.sub(pattern, lambda x: replacer_function(x), logic_rule_raw)
     logic_rule_formatted = logic_rule_formatted.replace('|',' or ').replace('&',' and ')
     logic_rule_formatted = logic_rule_formatted.replace('  ', ' ')
 
@@ -191,8 +200,6 @@ def search_termlist_bool(
 def search_termlist_indexed(
         regex_patterns:str, 
         term_lists:dict[str, list[str]], 
-        countries: dict[str:bool], 
-        pre_search: dict[str:bool],
         input_text:str
     ) -> bool|dict:
     """
