@@ -5,8 +5,10 @@ from .helpers import (
     search_termlist_bool,
     run_goal_pre_search,
 )
+from .consts import LIST_ALL_SDG_NR
 
 from .country_search import all_country_searches
+
 
 def get_logic_rule_raw(goal_phrases, target_nr):
     """
@@ -15,6 +17,7 @@ def get_logic_rule_raw(goal_phrases, target_nr):
         if phrase["number"] == target_nr:
             return phrase['logic_rule']
         
+
 def search_phrases_in_sdg_target(
         input_text: str, 
         sdg_target_phrases: list[dict], 
@@ -60,7 +63,7 @@ def search_phrases_in_sdg_target(
     return target_results
 
 
-def search_all_targets_in_goal(sdg_nr: int, input_text:str, analyze_result:bool=False) -> dict[str:bool]| dict[str:dict] :
+def search_all_targets_in_goal(sdg_nr: int, input_text:str, analyze_result:bool=False, countries:dict=None) -> dict[str:bool]| dict[str:dict] :
     """
 
     Args:
@@ -79,12 +82,14 @@ def search_all_targets_in_goal(sdg_nr: int, input_text:str, analyze_result:bool=
     results = {}
     indexes = {}
     results["sdg_number"] = sdg_nr
-
-    _ , countries = all_country_searches(input_text)
+    if not countries:
+        _ , countries = all_country_searches(input_text)
+        results["countries"] = countries
     _ , pre_search = run_goal_pre_search(pre_searches, input_text)
 
-    results["countries"] = countries
     results["pre_search"] = pre_search
+
+    target_results = {}
 
     for target in sdg_all_targets:
         target_phrases = target['phrases']
@@ -108,14 +113,36 @@ def search_all_targets_in_goal(sdg_nr: int, input_text:str, analyze_result:bool=
                 )
             phrase_results[phrase_nr] = eval(logic_rule_formatted) 
         
-        results[target['name']] = phrase_results
+        target_results[target['name']] = phrase_results
 
         if analyze_result:
             index_search = search_phrases_in_sdg_target(input_text, target_phrases, regex_patterns, indexed=True)
             indexes[target['name']] = index_search
     
+    results["targets"] = target_results
+    
     return results, indexes
 
+
+def search_all_goals(text:str) -> dict:
+    """ Search all the goals. 
+
+    Args:
+        text: The text to perform the search on
+    
+    Returns:
+        a dictionary with the results for country search and all the SDGs
+    """
+    results = {}
+
+    _ , countries = all_country_searches(text)
+    results["countries"] = countries
+
+    for sdg in LIST_ALL_SDG_NR:
+        sdg_result, _ = search_all_targets_in_goal(sdg, text, countries=countries)
+        results[sdg] = sdg_result
+
+    return results
 
 
 # Replicating the original script that took a dataframe with titles and performed searches for all sdgs for each row
