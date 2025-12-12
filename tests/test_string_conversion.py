@@ -37,8 +37,8 @@ def test_format_logic_rules_all_true(input, output_text):
     'input, output_text', 
     [
         (
-            "([termlist1_ba] | [termlist1_ba_trunc]) & [termlist1_bb] | ([termlist1_bc] & ([termlist1_bd] | [termlist1_bd_trunc]))", 
-            "(False or False) and False or (False and (False or False))"
+            "([termlist1_ba] | [termlist1_ba_trunc]) & [termlist1_bb] | ([termlist1_bc] & not ([termlist1_bd] | [termlist1_bd_trunc]))", 
+            "(False or False) and False or (False and not (False or False))"
          ),
     ]
 )
@@ -102,7 +102,7 @@ def test_format_logic_rules_countries(input_logic_rule, output_text):
     termlist_results = {
         "termlist1_ba": True,
         "termlist1_ba_trunc": True,
-        "termlist1_bb": True
+        "termlist1_bb": True,
     }
     country_results = {
         "LDC": True,
@@ -122,13 +122,78 @@ def test_format_logic_rules_countries(input_logic_rule, output_text):
     assert result == output_text
 
 
-##################################### TODO Testcase: include pre-search #####################################
+##################################### Testcase: include pre-search #####################################
+@pytest.mark.format_logic_rules
+@pytest.mark.parametrize(
+    'input_logic_rule, output_text', 
+    [
+        (
+            "([termlist1_ba] & [marine])", 
+            "(True and True)"
+         ),
+    ]
+)
+def test_format_logic_rules_countries(input_logic_rule, output_text):
+    # Arrange
+    termlist_results = {
+        "termlist1_ba": True,
+        "termlist1_ba_trunc": True,
+        "termlist1_bb": True,
+    }
+    pre_search_result = {
+        "marine": True,
+    }
 
+    # Act
+    result = format_logic_rules(
+        logic_rule_raw=input_logic_rule, 
+        result_termlist_search=termlist_results,
+        pre_search=pre_search_result
+    )
 
-################################## TODO Testcase: include both country- and pre-search ##################################
+    # Assert
+    assert result == output_text
 
+################################## Testcase: include both country- and pre-search ##################################
+@pytest.mark.format_logic_rules
+@pytest.mark.parametrize(
+    'input_logic_rule, output_text', 
+    [
+        (
+            "([termlist1_ba] & [LDC] & [Terrestial])", 
+            "(True and True and True)"
+         ),
+    ]
+)
+def test_format_logic_rules_countries(input_logic_rule, output_text):
+    # Arrange
+    termlist_results = {
+        "termlist1_ba": True,
+        "termlist1_ba_trunc": True,
+        "termlist1_bb": True,
+    }
+    country_results = {
+        "LDC": True,
+        "SIDS": False,
+        "LDS": False,
+        "LMIC": False,
+    }
+    pre_search_result = {
+        "Terrestial": True,
+    }
 
-################################## TODO Testcase: missing a referenced termlist result ##################################
+    # Act
+    result = format_logic_rules(
+        logic_rule_raw=input_logic_rule, 
+        result_termlist_search=termlist_results,
+        countries=country_results,
+        pre_search=pre_search_result
+    )
+
+    # Assert
+    assert result == output_text
+
+################################## Testcase: missing a referenced termlist result ##################################
 @pytest.mark.format_logic_rules
 def test_format_logic_rules_missing_referenced_termlist():
     # Arrange
@@ -210,7 +275,7 @@ def test_format_logic_rules_missing_referenced_presearch():
         "LMIC": False,
     }
     pre_search_result = {
-        "Terrestial": True
+        "Terrestial": True,
     }
 
     # Act
