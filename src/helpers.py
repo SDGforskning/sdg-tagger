@@ -23,6 +23,21 @@ def replacer_function(match_object: re.Match, result_termlist_search: dict) -> s
     return result_termlist_search[termlist_name]
 
 
+def get_logic_rule_raw_countries_and_presearch(all_phrases:dict, search_name:str) -> str:
+    """Looks throug all phrases until it finds the one matching the search_name, then returns the logic rule for that phrase
+
+    Args:
+        all_phrases: Dictionary containing all data for all the phrases
+        search_name: The name of the phrase to find the logic rule for
+
+    Returns:
+        A string with the logic rule for the phrase matching the given search name
+    """
+    for phrase in all_phrases:
+        if phrase['name'] == search_name:
+            return phrase['logic_rule']
+        
+
 def format_logic_rules(
         logic_rule_raw:str, 
         result_termlist_search: dict[str: bool], 
@@ -80,7 +95,7 @@ def read_json_to_dict(file_path: str) -> dict:
     return data
 
 
-def get_sdg_phrases(sdg_number: int) -> list[dict]:
+def get_sdg_phrases(sdg_number: int) -> list[dict] | list[dict]:
     """ Get the search phrases for a specific SDG from the json files
 
     Args:
@@ -91,7 +106,12 @@ def get_sdg_phrases(sdg_number: int) -> list[dict]:
     """
     file_path = os.path.join(os.path.dirname(__file__), 'phrases/sdg{}.json'.format(str(sdg_number)))
     data = read_json_to_dict(file_path)
-    return data['targets']
+    targets = data['targets']
+
+    if 'pre-search' in data:
+        return data['pre-search'], targets
+    else: 
+        return [], targets
 
 
 def get_countries_phrases() -> list[dict]:
@@ -131,6 +151,46 @@ def get_additional_language_terms(term_lists:dict[list[str]]) -> list[str]:
             terms += term_lists[f'wordlist_{language}']
 
     return terms
+
+def search_phrase_bool(search_phrases, input_text):
+    """
+    """
+    regex_patterns = get_string_formats()
+    all_search_results = {}
+
+    for search_phrase in search_phrases:
+        phrase_results = {}
+        name = search_phrase['name']
+
+        for term_lists in search_phrase['termlists']:
+            phrase_results[term_lists['termlist_name']] = search_termlist_bool(
+                regex_patterns, 
+                term_lists, 
+                input_text
+                )
+        
+        all_search_results[name] = phrase_results
+
+    return all_search_results
+
+def get_phrase_boolean_result(all_search_results, search_phrases):
+    boolean_results = {}
+
+    for search in all_search_results.keys():
+        phrase = all_search_results[search]
+        logic_rule_raw = get_logic_rule_raw_countries_and_presearch(search_phrases, search)
+        logic_rule_formatted = format_logic_rules(logic_rule_raw, phrase)
+        boolean_results[search] = eval(logic_rule_formatted) 
+
+    return boolean_results
+    
+
+def run_goal_pre_search(search_phrases: list[dict], input_text:str) -> dict[str, bool]:
+    """    
+    """
+    all_search_results = search_phrase_bool(search_phrases, input_text)
+    boolean_results = get_phrase_boolean_result(all_search_results, search_phrases)
+    return all_search_results, boolean_results
 
 
 def pattern_search_boolean(pattern:str, search_terms:list[str], text:str) -> bool:
