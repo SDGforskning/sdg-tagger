@@ -4,7 +4,7 @@
     "generated_datetime": "09-12-2025 10:07:35",
     "pre-search": [
                 {
-            "name": "Marine",
+            "name": "marine_terms",
             "logic_rule": "()",
             "sentence_split": false,
             "termlists": [

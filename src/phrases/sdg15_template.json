@@ -4,7 +4,7 @@
     "generated_datetime": "09-12-2025 10:07:35",
     "pre-search": [
         {
-            "name": "Terrestial",
+            "name": "terr_terms",
             "logic_rule": "()",
             "sentence_split": false,
             "termlists": [
@@ -19,7 +19,7 @@
             ]
         },
         {
-            "name": "Terrestial_double_NOT",
+            "name": "terrestrial_double_NOT",
             "logic_rule": "()",
             "sentence_split": false,
             "termlists": [

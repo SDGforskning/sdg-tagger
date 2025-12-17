@@ -1,3 +1,5 @@
+import pandas as pd
+
 from .helpers import (
     format_logic_rules, 
     get_string_formats, 
@@ -6,7 +8,6 @@ from .helpers import (
     run_goal_pre_search,
 )
 from .consts import LIST_ALL_SDG_NR
-
 from .country_search import all_country_searches
 
 
@@ -144,8 +145,3 @@ def search_all_goals(text:str) -> dict:
 
     return results
 
-
-# Replicating the original script that took a dataframe with titles and performed searches for all sdgs for each row
-def dataframe_search_all():
-
-    return
