@@ -125,7 +125,7 @@ def search_all_targets_in_goal(sdg_nr: int, input_text:str, analyze_result:bool=
     return results, indexes
 
 
-def search_all_goals(text:str) -> dict:
+def search_all_goals(text:str, sdg_list:list[int]=LIST_ALL_SDG_NR) -> dict:
     """ Search all the goals. 
 
     Args:
@@ -139,7 +139,7 @@ def search_all_goals(text:str) -> dict:
     _ , countries = all_country_searches(text)
     results["countries"] = countries
 
-    for sdg in LIST_ALL_SDG_NR:
+    for sdg in [str(sdg) for sdg in sdg_list if sdg in set(LIST_ALL_SDG_NR)]:
         sdg_result, _ = search_all_targets_in_goal(sdg, text, countries=countries)
         results[sdg] = sdg_result
 
