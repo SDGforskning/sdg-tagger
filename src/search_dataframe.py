@@ -42,11 +42,10 @@ def format_results(result: dict, sdg_list:list[int]) -> list[str]:
         if 'pre_search' in result[sdg_nr]:  
             pre_searches = [val for _,val in result[sdg_nr]['pre_search'].items()]
             sdg_result.extend(pre_searches)
-        sdg_result = [format_df_value(any(val.values()),sdg_nr, key) for key, val in result[sdg_nr]['targets'].items()]
-        sdgs.extend(sdg_result)
+        sdg_result.extend([format_df_value(any(val.values()),sdg_nr, key) for key, val in result[sdg_nr]['targets'].items()])
         if 'mentions' in result[sdg_nr]:  
-            mentions = [val for _,val in result[sdg_nr]['mentions'].items()]
-            sdg_result.extend(mentions)
+            sdg_result.append(result[sdg_nr]['mentions'])
+        sdgs.extend(sdg_result)
 
     return countries + sdgs
 
@@ -59,7 +58,6 @@ def format_item(item:str) -> str:
 
     Returns:
         Formatted string
-
     """
     try:
         if item[0]=='0':
@@ -109,6 +107,8 @@ def get_formatted_column_names_export(sdg_list:list[int]) -> list[str]:
         for target in sdg_all_targets:
             target_formatted = format_item(target['name'])
             columns.append(f'tempsdg{nr_formatted}_{target_formatted}')
+        
+        #TODO column names for mentions! (for sdgs that got it in the json?)
 
     return columns
 

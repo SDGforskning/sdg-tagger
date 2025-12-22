@@ -112,6 +112,8 @@ def get_sdg_phrases(sdg_number: int) -> list[dict] | list[dict]:
         return data['pre-search'], targets
     else: 
         return [], targets
+    
+    #TODO this has to also return mentions! 
 
 
 def get_countries_phrases() -> list[dict]:
