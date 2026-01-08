@@ -23,6 +23,9 @@
         "$ref": "#/definitions/target"
       }
     },
+    "_comment": {
+      "type": "string"
+    },
     "mentions": {
       "type": "object",
       "properties": {
@@ -144,6 +147,9 @@
               "items": {
                 "$ref": "#/definitions/phrase"
               }
+            },
+            "_comment": {
+              "type": "string"
             }
           },
           "required": [
