@@ -20,3 +20,8 @@ Thumbs.db
 # generated when running python files
 __pycache__/
 *.ipynb_checkpoints/
+
+# virtual environment
+.venv/
+venv/
+env/
