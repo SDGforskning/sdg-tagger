@@ -176,7 +176,7 @@ def test_format_results_calls(mocker):
                 }
             },
             [1],
-            [True, False, False, True, 'SDG01_01', np.NaN]
+            [True, False, False, True, 'SDG01_01', np.nan]
         ),
         (
             {"countries": {"LDC": True},
@@ -252,7 +252,7 @@ def test_format_item_digits(input, output_expected):
 @pytest.mark.parametrize(
     'input_text, input_sdgs, output_expected', 
     [
-        ('Some text', [1], pd.Series([True, 'SDG01_01', 'SDG01_b', np.NaN]))
+        ('Some text', [1], pd.Series([True, 'SDG01_01', 'SDG01_b', np.nan]))
     ]
 )
 @patch('src.search_dataframe.search_all_goals')
@@ -260,7 +260,7 @@ def test_format_item_digits(input, output_expected):
 def test_row_search(mock_format_results, mock_search_all_goals, input_text, input_sdgs, output_expected):
     # Arrange
     mock_search_all_goals.return_value = 'SDGx_x'
-    mock_format_results.return_value = [True, 'SDG01_01', 'SDG01_b', np.NaN]
+    mock_format_results.return_value = [True, 'SDG01_01', 'SDG01_b', np.nan]
     # Act
     output = row_search(input_text, input_sdgs)
     print(output)
@@ -296,11 +296,11 @@ def test_row_search_calls_format_results(mocker, input_text, input_sdgs):
     'input_text, input_sdgs', 
     [('Some text', [1])]
 )
-def test_row_search_calls_format_results(mocker, input_text, input_sdgs):
+def test_row_search_with_mocks(mocker, input_text, input_sdgs):
     # Arrange
     mock_search_all_goals = mocker.patch("src.search_dataframe.search_all_goals")
     mock_format_results = mocker.patch("src.search_dataframe.format_results")
-    mock_format_results.return_value = [True, 'SDG01_01', 'SDG01_b', np.NaN]
+    mock_format_results.return_value = [True, 'SDG01_01', 'SDG01_b', np.nan]
     
     # Act
     expected_calls = [call(input_text, input_sdgs)]
