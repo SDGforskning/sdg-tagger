@@ -1,5 +1,7 @@
 Attribution-NonCommercial-ShareAlike 4.0 International
 
+This license applies to the contents of the "searchterms" folder (named "phrases" in earlier versions). 
+
 =======================================================================
 
 Creative Commons Corporation ("Creative Commons") is not a law firm and
