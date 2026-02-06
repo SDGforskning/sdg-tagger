@@ -104,7 +104,7 @@ def get_sdg_phrases(sdg_number: int) -> list[dict] | list[dict]:
     Returns:
         A list with dictionaries containing all the phrases and the logic rule for each of the SDG goals
     """
-    file_path = os.path.join(os.path.dirname(__file__), 'phrases/sdg{}.json'.format(str(sdg_number)))
+    file_path = os.path.join(os.path.dirname(__file__), 'searchterms/sdg{}.json'.format(str(sdg_number)))
     data = read_json_to_dict(file_path)
     targets = data['targets']
 
@@ -122,7 +122,7 @@ def get_countries_phrases() -> list[dict]:
     Returns:
         A list with dictionaries containing all the term lists and the logic rule for each country search set
     """
-    file_path = os.path.join(os.path.dirname(__file__), 'phrases/countries.json')
+    file_path = os.path.join(os.path.dirname(__file__), 'searchterms/countries.json')
     data = read_json_to_dict(file_path)
     return data['phrases']
 
@@ -134,7 +134,7 @@ def get_string_formats() -> dict:
     Returns:
         a dictionary with the name of the patterns as key and the regex patterns as values
     """
-    file_path = os.path.join(os.path.dirname(__file__), 'phrases/formats.json')
+    file_path = os.path.join(os.path.dirname(__file__), 'searchterms/formats.json')
     return read_json_to_dict(file_path)
 
 

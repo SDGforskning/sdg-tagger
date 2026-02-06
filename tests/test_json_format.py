@@ -44,10 +44,10 @@ from test_helpers.logic_rule_validation import validate_boolean_expression
     ]
 )
 def test_json_format(input_filename):
-    if not os.path.isfile("src/phrases/" + input_filename):
+    if not os.path.isfile("src/searchterms/" + input_filename):
         pytest.skip(f"The file {input_filename} does not exist.")
     # Arrange
-    with open("src/phrases/" + input_filename) as file:
+    with open("src/searchterms/" + input_filename) as file:
         content = json.load(file)
     schema = "tests/json_schema/sdg_schema.json"
     with open(schema) as file:
@@ -95,13 +95,13 @@ def test_json_format(input_filename):
     ]
 )
 def test_logic_rule_format(input_filename):
-    if not os.path.isfile("src/phrases/" + input_filename):
+    if not os.path.isfile("src/searchterms/" + input_filename):
         pytest.skip(f"The file {input_filename} does not exist.")
     # Arrange
     custom_format_checker = FormatChecker()
     custom_format_checker.checks("logic-rule-pattern")(validate_boolean_expression)
 
-    with open("src/phrases/" + input_filename) as file:
+    with open("src/searchterms/" + input_filename) as file:
         content = json.load(file)
 
     schema = "tests/json_schema/sdg_schema.json"
@@ -126,7 +126,7 @@ def test_logic_rule_format(input_filename):
 )
 def test_json_format_countries(input_filename):
     # Arrange
-    with open("src/phrases/" + input_filename) as file:
+    with open("src/searchterms/" + input_filename) as file:
         content = json.load(file)
     schema = "tests/json_schema/country_search_schema.json"
     with open(schema) as file:
@@ -152,7 +152,7 @@ def test_logic_rule_format(input_filename):
     custom_format_checker = FormatChecker()
     custom_format_checker.checks("logic-rule-pattern")(validate_boolean_expression)
 
-    with open("src/phrases/" + input_filename) as file:
+    with open("src/searchterms/" + input_filename) as file:
         content = json.load(file)
 
     schema = "tests/json_schema/country_search_schema.json"
