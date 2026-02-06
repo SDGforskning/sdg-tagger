@@ -18,7 +18,7 @@ def format_df_value(value:bool, sdg_nr:str, target:str) -> str:
         the formatted string, or nan id the result was False
     """
     if value==False:
-        return np.NaN
+        return np.nan
     else:
         nr_formatted = f'{int(sdg_nr):02d}'
         return f'SDG{nr_formatted}_{format_item(target)}'
