@@ -1,13 +1,12 @@
 from .helpers import (
     format_logic_rules, 
-    get_string_formats, 
     get_sdg_phrases,
-    search_termlist_bool,
-    search_termlist_indexed,
+    search_termlist, 
     run_goal_pre_search,
 )
 from .consts import LIST_ALL_SDG_NR
 from .country_search import all_country_searches
+
 
 
 def get_logic_rule_raw(goal_phrases, target_nr):
@@ -26,7 +25,6 @@ def get_logic_rule_raw(goal_phrases, target_nr):
 def search_phrases_in_sdg_target(
         input_text: str, 
         sdg_target_phrases: list[dict], 
-        regex_patterns: dict, 
         indexed: bool
     ) -> dict:
     """_summary_
@@ -34,7 +32,6 @@ def search_phrases_in_sdg_target(
     Args:
         input_text: _description_
         sdg_target_phrases: _description_
-        regex_patterns: _description_
         indexed: _description_
 
     Returns:
@@ -49,41 +46,15 @@ def search_phrases_in_sdg_target(
         if phrase['sentence_split']=='True':
             sentences = input_text.split(". ")
 
-            if not indexed:
-                for term_lists in phrase['termlists']:
-                    sentence_results = []
-                    for sentence in sentences:
-                        sentence_results.append(search_termlist_bool(
-                            regex_patterns=regex_patterns, 
-                            term_lists=term_lists, 
-                            input_text=sentence,
-                        ))
-                    phrase_results[term_lists['termlist_name']] = any(sentence_results)
-            else:
-                for term_lists in phrase['termlists']:
-                    sentence_results = []
-                    for sentence in sentences:
-                        sentence_results.append(search_termlist_indexed(
-                            regex_patterns=regex_patterns, 
-                            term_lists=term_lists, 
-                            input_text=sentence,
-                        ))
-                    phrase_results[term_lists['termlist_name']] = any(sentence_results)
+            for term_lists in phrase['termlists']:
+                sentence_results = []
+                for sentence in sentences:
+                    sentence_results.append(search_termlist(term_lists, sentence, indexed))
+                phrase_results[term_lists['termlist_name']] = any(sentence_results)
 
         else:
             for term_lists in phrase['termlists']:
-                if not indexed:
-                    phrase_results[term_lists['termlist_name']] = search_termlist_bool(
-                        regex_patterns=regex_patterns, 
-                        term_lists=term_lists, 
-                        input_text=input_text,
-                    )
-                else:
-                    phrase_results[term_lists['termlist_name']] = search_termlist_indexed(
-                        regex_patterns=regex_patterns, 
-                        term_lists=term_lists, 
-                        input_text=input_text,
-                    )
+                phrase_results[term_lists['termlist_name']] = search_termlist(term_lists, input_text, indexed)
         
         target_results[number] = phrase_results
 
@@ -103,7 +74,6 @@ def search_all_targets_in_goal(sdg_nr: int, input_text:str, analyze_result:bool=
         The indexed results for all search terms in each target of the sdg. 
         NOTE: The indexed result is per termlist, and will also include terms that are matched in a termlist even if the logic rule gives False as a whole
     """
-    regex_patterns = get_string_formats()
     pre_searches, sdg_all_targets = get_sdg_phrases(sdg_nr)
 
     results = {}
@@ -122,9 +92,8 @@ def search_all_targets_in_goal(sdg_nr: int, input_text:str, analyze_result:bool=
         target_phrases = target['phrases']
         
         result_termlist_search = search_phrases_in_sdg_target(
-            input_text=input_text, 
-            sdg_target_phrases=target_phrases, 
-            regex_patterns=regex_patterns, 
+            input_text, 
+            target_phrases, 
             indexed=False
             )
 
@@ -143,7 +112,7 @@ def search_all_targets_in_goal(sdg_nr: int, input_text:str, analyze_result:bool=
         target_results[target['name']] = phrase_results
 
         if analyze_result:
-            index_search = search_phrases_in_sdg_target(input_text, target_phrases, regex_patterns, indexed=True)
+            index_search = search_phrases_in_sdg_target(input_text, target_phrases, indexed=True)
             indexes[target['name']] = index_search
     
     results["targets"] = target_results

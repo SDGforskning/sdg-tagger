@@ -1,9 +1,9 @@
 import pandas as pd
 import numpy as np
 
-from .consts import LIST_ALL_SDG_NR
+from .consts import LIST_ALL_SDG_NR, COUNTRIES
 from .sdg_search import search_all_goals
-from .helpers import get_sdg_phrases, get_countries_phrases
+from .helpers import get_sdg_phrases
 
 
 def format_df_value(value:bool, sdg_nr:str, target:str) -> str:
@@ -96,8 +96,7 @@ def get_formatted_column_names_export(sdg_list:list[int]) -> list[str]:
         A list of column names based on which SDG searches exist in the json files.
     """
     columns = []
-    countries = get_countries_phrases()
-    columns.extend([x['name'] for x in countries])
+    columns.extend([x['name'] for x in COUNTRIES])
 
     for sdg_nr in [sdg for sdg in sdg_list if sdg in set(LIST_ALL_SDG_NR)]:
         pre_searches, sdg_all_targets = get_sdg_phrases(sdg_nr)
