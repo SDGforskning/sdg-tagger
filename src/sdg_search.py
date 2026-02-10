@@ -1,10 +1,9 @@
-import pandas as pd
-
 from .helpers import (
     format_logic_rules, 
     get_string_formats, 
     get_sdg_phrases,
     search_termlist_bool,
+    search_termlist_indexed,
     run_goal_pre_search,
 )
 from .consts import LIST_ALL_SDG_NR
@@ -12,7 +11,12 @@ from .country_search import all_country_searches
 
 
 def get_logic_rule_raw(goal_phrases, target_nr):
-    """
+    """ Get all the logic rules of an SDG for one specific target
+
+    Args:
+
+    Returns: 
+
     """
     for phrase in goal_phrases:
         if phrase["number"] == target_nr:
@@ -25,12 +29,16 @@ def search_phrases_in_sdg_target(
         regex_patterns: dict, 
         indexed: bool
     ) -> dict:
-    """
+    """_summary_
 
     Args:
+        input_text: _description_
+        sdg_target_phrases: _description_
+        regex_patterns: _description_
+        indexed: _description_
 
     Returns:
-
+        dict: _description_
     """
     target_results = {}
 
@@ -41,23 +49,41 @@ def search_phrases_in_sdg_target(
         if phrase['sentence_split']=='True':
             sentences = input_text.split(". ")
 
-            for term_lists in phrase['termlists']:
-                sentence_results = []
-                for sentence in sentences:
-                    sentence_results.append(search_termlist_bool(
-                        regex_patterns=regex_patterns, 
-                        term_lists=term_lists, 
-                        input_text=sentence,
-                    ))
-                phrase_results[term_lists['termlist_name']] = any(sentence_results)
+            if not indexed:
+                for term_lists in phrase['termlists']:
+                    sentence_results = []
+                    for sentence in sentences:
+                        sentence_results.append(search_termlist_bool(
+                            regex_patterns=regex_patterns, 
+                            term_lists=term_lists, 
+                            input_text=sentence,
+                        ))
+                    phrase_results[term_lists['termlist_name']] = any(sentence_results)
+            else:
+                for term_lists in phrase['termlists']:
+                    sentence_results = []
+                    for sentence in sentences:
+                        sentence_results.append(search_termlist_indexed(
+                            regex_patterns=regex_patterns, 
+                            term_lists=term_lists, 
+                            input_text=sentence,
+                        ))
+                    phrase_results[term_lists['termlist_name']] = any(sentence_results)
 
         else:
             for term_lists in phrase['termlists']:
-                phrase_results[term_lists['termlist_name']] = search_termlist_bool(
-                    regex_patterns=regex_patterns, 
-                    term_lists=term_lists, 
-                    input_text=input_text,
-                )
+                if not indexed:
+                    phrase_results[term_lists['termlist_name']] = search_termlist_bool(
+                        regex_patterns=regex_patterns, 
+                        term_lists=term_lists, 
+                        input_text=input_text,
+                    )
+                else:
+                    phrase_results[term_lists['termlist_name']] = search_termlist_indexed(
+                        regex_patterns=regex_patterns, 
+                        term_lists=term_lists, 
+                        input_text=input_text,
+                    )
         
         target_results[number] = phrase_results
 
