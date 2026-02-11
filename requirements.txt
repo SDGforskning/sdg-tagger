@@ -8,3 +8,4 @@ rich==14.3.1
 xlsxwriter
 openpyxl
 Jinja2
+tqdm==4.67.3
