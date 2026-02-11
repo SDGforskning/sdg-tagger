@@ -27,10 +27,13 @@ def get_logic_rule_raw_countries_and_presearch(
             return phrase['logic_rule']
 
 
-def _check_for_missing_matches(pattern: str, logic_rule_raw: str, all_logic_results: dict[str: bool]) -> None:
+def _check_for_missing_matches(
+    pattern: str, logic_rule_raw: str, all_logic_results: dict[str:bool]
+) -> None:
     """Checks if any pattern matches are missing from the list of logic rule results
-    
-    This function is used to make sure that a logic rule only references termlists within the same phrase, pre-searches withing the same file, or country searches. If not it will throw an error, as this is not valid and the search cannot continue
+
+    This function is used to make sure that a logic rule only references termlists within the same phrase, pre-searches withing
+    the same file, or country searches. If not it will throw an error, as this is not valid and the search cannot continue
 
     Args:
         pattern: regex-pattern to locate the names of the termlists in the logic rule
@@ -45,7 +48,8 @@ def _check_for_missing_matches(pattern: str, logic_rule_raw: str, all_logic_resu
     if not set(matches) <= set(all_logic_results):
 
         if len(set(matches) - set(all_logic_results)) > 0:
-            message = f'''WARNING: The logic rule references a seaarch that was not found! Make sure the logic rule only reference termlists within the same phrase, pre-searches withing the same file, or country searches.'''
+            message = f'''WARNING: The logic rule references a seaarch that was not found! Make sure the logic rule only reference 
+            termlists within the same phrase, pre-searches withing the same file, or country searches.'''
             print(f'\033[1;31m{message}\033[0m')
             raise KeyError
 
@@ -56,7 +60,8 @@ def format_logic_rules(
     countries_results: dict[str:bool] = None,
     pre_search_results: dict[str:bool] = None,
 ) -> str:
-    """Takes the raw logic rules as is written in the json files and inserts the results from the phrases searches which converts them to a python-readable format.
+    """Takes the raw logic rules as is written in the json files and inserts the results from the phrases searches which converts 
+    them to a python-readable format.
 
     Args:
         logic_rule_raw: the unformatted logic rule as it is written in the json files
@@ -98,8 +103,8 @@ def format_list_with_pattern(pattern: str, search_terms: list[str]):
     Args:
         pattern: regex pattern to use when searching
         search_terms: terms to search for
-    
-    Returns: 
+
+    Returns:
         formated regex pattern
     """
     return pattern.format('|'.join(search_terms))
@@ -115,7 +120,9 @@ def get_sdg_phrases(sdg_number: int) -> list[dict] | list[dict]:
     Returns:
         A list with dictionaries containing all the phrases and the logic rule for each of the SDG goals
     """
-    file_path_absolute = os.path.join(os.path.dirname(__file__), 'searchterms/sdg{}.json'.format(str(sdg_number)))
+    file_path_absolute = os.path.join(
+        os.path.dirname(__file__), 'searchterms/sdg{}.json'.format(str(sdg_number))
+    )
     with open(file_path_absolute, 'r') as file:
         data = json.load(file)
 
@@ -129,7 +136,9 @@ def get_sdg_phrases(sdg_number: int) -> list[dict] | list[dict]:
 
 
 ####################### Country search and pre-search helpers #######################
-def run_all_termlist_searches_in_phrase_bool(search_phrases: dict, input_text: str) -> dict[str: dict[str: bool]]:
+def run_all_termlist_searches_in_phrase_bool(
+    search_phrases: dict, input_text: str
+) -> dict[str : dict[str:bool]]:
     """Perform a boolean search for all phrases in a dictionary of phrases on a given text
 
     Args:
@@ -159,12 +168,14 @@ def run_all_termlist_searches_in_phrase_bool(search_phrases: dict, input_text: s
 def get_boolean_result_for_phrase(all_search_results, search_phrases) -> dict[str:bool]:
     """Finds the result of a phrases logic rule given all the search results
 
+    Only to be used for pre-search and countries search (since they are not dependent on other searches)
+
     Args:
-        all_search_results: all the boolean results for the searches performed
-        search_phrases: _description_
+        all_search_results: all the boolean results for the searches performed for each phrase
+        search_phrases: dictionary containing all data for all the phrases
 
     Returns:
-        _description_
+        the boolean results for all the searcges
     """
     boolean_results = {}
 
@@ -177,6 +188,7 @@ def get_boolean_result_for_phrase(all_search_results, search_phrases) -> dict[st
         boolean_results[search] = eval(logic_rule_formatted)
 
     return boolean_results
+
 
 ####################### Search helpers #######################
 def get_additional_language_terms(term_lists: dict[list[str]]) -> list[str]:
@@ -209,10 +221,7 @@ def pattern_search_boolean(regex_search: str, text: str) -> bool:
     return bool(re.search(rf'{regex_search}', text))
 
 
-def pattern_search_indexed(
-    regex_search: str, 
-    text: str
-) -> list[dict]:
+def pattern_search_indexed(regex_search: str, text: str) -> list[dict]:
     """Find instances of words from a list in a text, including where in the text the search terms were
 
     Args:
@@ -242,7 +251,7 @@ def search_termlist(
     input_text: str,
     indexed: bool,
 ) -> bool | dict:
-    """ Check if any of a list of words exists in a text. Can also include indexes for where in the text each match is found.
+    """Check if any of a list of words exists in a text. Can also include indexes for where in the text each match is found.
 
     Args:
         term_lists: lists of terms to search for, in a dict with one list for each language
