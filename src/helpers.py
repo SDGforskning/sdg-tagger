@@ -6,7 +6,8 @@ import re
 import os
 import json
 
-from .consts import ADDITIONAL_LANGUAGES, REGEX_PATTERNS, COUNTRIES
+from .consts import ADDITIONAL_LANGUAGES, REGEX_PATTERNS
+
 
 ####################### Format helpers #######################
 def get_logic_rule_raw_countries_and_presearch(
@@ -26,16 +27,18 @@ def get_logic_rule_raw_countries_and_presearch(
             return phrase['logic_rule']
 
 
-def check_for_missing_matches(pattern, logic_rule_raw, all_logic_results):
-    """_summary_
+def _check_for_missing_matches(pattern: str, logic_rule_raw: str, all_logic_results: dict[str: bool]) -> None:
+    """Checks if any pattern matches are missing from the list of logic rule results
+    
+    This function is used to make sure that a logic rule only references termlists within the same phrase, pre-searches withing the same file, or country searches. If not it will throw an error, as this is not valid and the search cannot continue
 
     Args:
-        pattern (_type_): _description_
-        logic_rule_raw (_type_): _description_
-        all_logic_results (_type_): _description_
+        pattern: regex-pattern to locate the names of the termlists in the logic rule
+        logic_rule_raw: the unformatted version of a logic rule
+        all_logic_results: a lookup for all the results of a search, which are the only valid references for a logic rule
 
     Raises:
-        KeyError: _description_
+        KeyError: thrown if the logic rule references a result that does not exist
     """
     matches = re.findall(pattern, logic_rule_raw)
     matches = [x[1:-1] for x in matches]
@@ -50,30 +53,33 @@ def check_for_missing_matches(pattern, logic_rule_raw, all_logic_results):
 def format_logic_rules(
     logic_rule_raw: str,
     result_termlist_search: dict[str:bool],
-    countries: dict[str:bool] = None,
-    pre_search: dict[str:bool] = None,
+    countries_results: dict[str:bool] = None,
+    pre_search_results: dict[str:bool] = None,
 ) -> str:
     """Takes the raw logic rules as is written in the json files and inserts the results from the phrases searches which converts them to a python-readable format.
 
     Args:
         logic_rule_raw: the unformatted logic rule as it is written in the json files
+        result_termlist_search: results from all termlist searches
+        countries_results: results from countries_search (optional)
+        pre_search_results: results from pre-search (optional)
 
     Returns:
-        Logic rule that is ready to be used in the eval function.
+        Logic rule as a string that is ready to be used in the eval function.
     """
     all_logic_results = result_termlist_search
 
-    if countries:
-        for key in countries.keys():
-            all_logic_results[key] = countries[key]
+    if countries_results:
+        for key in countries_results.keys():
+            all_logic_results[key] = countries_results[key]
 
-    if pre_search:
-        for key in pre_search.keys():
-            all_logic_results[key] = pre_search[key]
+    if pre_search_results:
+        for key in pre_search_results.keys():
+            all_logic_results[key] = pre_search_results[key]
 
     pattern = r"\[[^\[\]]*\]"
 
-    check_for_missing_matches(pattern, logic_rule_raw, all_logic_results)
+    _check_for_missing_matches(pattern, logic_rule_raw, all_logic_results)
 
     logic_rule_formatted = re.sub(
         pattern, lambda x: str(all_logic_results[x.group()[1:-1]]), logic_rule_raw
@@ -84,6 +90,19 @@ def format_logic_rules(
     logic_rule_formatted = logic_rule_formatted.replace('  ', ' ')
 
     return logic_rule_formatted
+
+
+def format_list_with_pattern(pattern: str, search_terms: list[str]):
+    """Formats the terms lists into the given reqex pattern
+
+    Args:
+        pattern: regex pattern to use when searching
+        search_terms: terms to search for
+    
+    Returns: 
+        formated regex pattern
+    """
+    return pattern.format('|'.join(search_terms))
 
 
 ####################### File helpers #######################
@@ -109,33 +128,16 @@ def get_sdg_phrases(sdg_number: int) -> list[dict] | list[dict]:
     # TODO this has to also return mentions!
 
 
-####################### Search helpers #######################
-def get_additional_language_terms(term_lists: dict[list[str]]) -> list[str]:
-    """Check which other languages to add and adds terms for those languages.
+####################### Country search and pre-search helpers #######################
+def run_all_termlist_searches_in_phrase_bool(search_phrases: dict, input_text: str) -> dict[str: dict[str: bool]]:
+    """Perform a boolean search for all phrases in a dictionary of phrases on a given text
 
     Args:
-        term_lists: a list of term lists, one for each available language
+        search_phrases: all the searches to perform
+        input_text: the text to search in
 
     Returns:
-        a list of all terms of the additional languages
-    """
-    terms = []
-    for language in ADDITIONAL_LANGUAGES.keys():
-        if ADDITIONAL_LANGUAGES[language] is True:
-            terms += term_lists[f'wordlist_{language}']
-
-    return terms
-
-
-def search_phrase_bool(search_phrases: dict, input_text: str) -> dict[str]:
-    """_summary_
-
-    Args:
-        search_phrases: _description_
-        input_text: _description_
-
-    Returns:
-        _description_
+        the results of all the searches
     """
     all_search_results = {}
 
@@ -154,11 +156,11 @@ def search_phrase_bool(search_phrases: dict, input_text: str) -> dict[str]:
     return all_search_results
 
 
-def get_phrase_boolean_result(all_search_results, search_phrases) -> dict[str:bool]:
-    """_summary_
+def get_boolean_result_for_phrase(all_search_results, search_phrases) -> dict[str:bool]:
+    """Finds the result of a phrases logic rule given all the search results
 
     Args:
-        all_search_results: _description_
+        all_search_results: all the boolean results for the searches performed
         search_phrases: _description_
 
     Returns:
@@ -176,53 +178,51 @@ def get_phrase_boolean_result(all_search_results, search_phrases) -> dict[str:bo
 
     return boolean_results
 
-
-def run_goal_pre_search(search_phrases: list[dict], input_text: str) -> dict[str, bool]:
-    """_summary_
+####################### Search helpers #######################
+def get_additional_language_terms(term_lists: dict[list[str]]) -> list[str]:
+    """Check which other languages to add and adds terms for those languages.
 
     Args:
-        search_phrases: _description_
-        input_text: _description_
+        term_lists: a list of term lists, one for each available language
 
     Returns:
-        _description_
+        a list of all terms of the additional languages
     """
-    all_search_results = search_phrase_bool(search_phrases, input_text)
-    boolean_results = get_phrase_boolean_result(all_search_results, search_phrases)
-    return all_search_results, boolean_results
+    terms = []
+    for language in ADDITIONAL_LANGUAGES.keys():
+        if ADDITIONAL_LANGUAGES[language] is True:
+            terms += term_lists[f'wordlist_{language}']
+
+    return terms
 
 
-def pattern_search_boolean(pattern: str, search_terms: list[str], text: str) -> bool:
-    """Formats the terms lists into the given reqex pattern and outputs the result of the boolean search.
+def pattern_search_boolean(regex_search: str, text: str) -> bool:
+    """search for regex pattern in a text.
 
     Args:
-        pattern: regex pattern to use when searching
-        search_terms: terms to search for
+        regex_search: formated regex pattern
         text: the text to search in
 
     Returns:
         boolean for whether the text contained the search terms
     """
-    pattern_with_terms = pattern.format('|'.join(search_terms))
-    return bool(re.search(rf'{pattern_with_terms}', text))
+    return bool(re.search(rf'{regex_search}', text))
 
 
 def pattern_search_indexed(
-    pattern: str, search_terms: list[str], text: str
+    regex_search: str, 
+    text: str
 ) -> list[dict]:
-    """Finds where in the text the search terms exists so we can use it for evaluation and highlighting later on
+    """Find instances of words from a list in a text, including where in the text the search terms were
 
     Args:
-        pattern:
-        search_terms:
-        text:
+        regex_search: formated regex pattern
+        text: the text to search in
 
     Returns:
         a list of all matches contaiting a dict of the matched text along with its start and end index in the text
-
     """
-    pattern_with_terms = pattern.format('|'.join(search_terms))
-    matches = re.finditer(rf'{pattern_with_terms}', text)
+    matches = re.finditer(rf'{regex_search}', text)
 
     matches_with_indices = []
     for match in matches:
@@ -242,16 +242,15 @@ def search_termlist(
     input_text: str,
     indexed: bool,
 ) -> bool | dict:
-    """
+    """ Check if any of a list of words exists in a text. Can also include indexes for where in the text each match is found.
 
     Args:
-        regex_patterns: regex pattern to use when searching
-        term_lists: terms to search for
+        term_lists: lists of terms to search for, in a dict with one list for each language
         text: the text to search in
-        indexed:
+        indexed: whether to include indexes of the words that are found in the texts
 
     Returns:
-
+        a boolean for the search result if indexed is false, or a dictionary with boolean and a list of indexes if indexed is true
     """
     pattern = str(REGEX_PATTERNS[term_lists['formatting_rule']])
     terms = term_lists['wordlist_en']
@@ -264,7 +263,8 @@ def search_termlist(
     else:
         text = input_text
 
+    regex_term_list = format_list_with_pattern(pattern, terms)
     if indexed:
-        return pattern_search_indexed(pattern, terms, text)
+        return pattern_search_indexed(regex_term_list, text)
     else:
-        return pattern_search_boolean(pattern, terms, text)
+        return pattern_search_boolean(regex_term_list, text)

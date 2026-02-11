@@ -1,5 +1,8 @@
 import pandas as pd
 import numpy as np
+from tqdm.auto import tqdm
+
+tqdm.pandas()
 
 from .consts import LIST_ALL_SDG_NR, COUNTRIES
 from .sdg_search import search_all_goals
@@ -126,7 +129,7 @@ def dataframe_search(df: pd.DataFrame, sdg_list:list[int]=LIST_ALL_SDG_NR, text_
     df_results = df.copy()
     columns = get_formatted_column_names_export(sdg_list)
 
-    df_results[columns] = df_results[text_column].apply(lambda x: row_search(x, sdg_list))
+    df_results[columns] = df_results[text_column].progress_apply(lambda x: row_search(x, sdg_list))
 
     return df_results
 

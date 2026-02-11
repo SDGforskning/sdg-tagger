@@ -115,7 +115,7 @@ def test_format_logic_rules_countries(input_logic_rule, output_text):
     result = format_logic_rules(
         logic_rule_raw=input_logic_rule, 
         result_termlist_search=termlist_results,
-        countries=country_results
+        countries_results=country_results
     )
 
     # Assert
@@ -186,8 +186,8 @@ def test_format_logic_rules_countries(input_logic_rule, output_text):
     result = format_logic_rules(
         logic_rule_raw=input_logic_rule, 
         result_termlist_search=termlist_results,
-        countries=country_results,
-        pre_search=pre_search_result
+        countries_results=country_results,
+        pre_search_results=pre_search_result
     )
 
     # Assert
@@ -213,7 +213,7 @@ def test_format_logic_rules_missing_referenced_termlist():
         format_logic_rules(
             logic_rule_raw=logic_rule, 
             result_termlist_search=termlist_results,
-            countries=country_results
+            countries_results=country_results
         )
 
 ################################## Testcase: missing a referenced countries result ##################################
@@ -234,7 +234,7 @@ def test_format_logic_rules_missing_referenced_country():
         format_logic_rules(
             logic_rule_raw=logic_rule, 
             result_termlist_search=termlist_results,
-            countries=country_results
+            countries_results=country_results
         )
 
 ################################## Testcase: missing a referenced pre-search result (entire input missing) ##################################
@@ -257,7 +257,7 @@ def test_format_logic_rules_missing_referenced_presearch_dict():
         format_logic_rules(
             logic_rule_raw=logic_rule, 
             result_termlist_search=termlist_results,
-            countries=country_results
+            countries_results=country_results
         )
 
 ################################## Testcase: missing a referenced pre-search result (only one element missing) ##################################
@@ -281,9 +281,9 @@ def test_format_logic_rules_missing_referenced_presearch():
     # Act
     with pytest.raises(KeyError):
         format_logic_rules(
-            logic_rule_raw=logic_rule, 
-            result_termlist_search=termlist_results,
-            countries=country_results,
-            pre_search=pre_search_result
+            logic_rule, 
+            termlist_results,
+            country_results,
+            pre_search_result
         )
 

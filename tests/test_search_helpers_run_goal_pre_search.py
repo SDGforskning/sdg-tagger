@@ -4,7 +4,7 @@ import os
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
-from src.helpers import run_goal_pre_search
+from src.sdg_search import run_goal_pre_search
 
 ######################### Testcase: No presearch #########################
 @pytest.mark.pre_search
@@ -17,7 +17,7 @@ from src.helpers import run_goal_pre_search
 def test_run_goal_pre_search_empty(search_phrases, input_text):
     # Arrange
     # Act
-    _, result = run_goal_pre_search(search_phrases, input_text)
+    result = run_goal_pre_search(search_phrases, input_text)
     # Assert
     assert result=={}
 
@@ -46,7 +46,7 @@ def test_run_goal_pre_search_one_true():
     input_text = "This is a title"
     output_expected = {"TEST":False}
     # Act
-    _, result = run_goal_pre_search(search_phrases, input_text)
+    result = run_goal_pre_search(search_phrases, input_text)
     # Assert
     assert result==output_expected
 
@@ -74,6 +74,6 @@ def test_run_goal_pre_search_one_false():
     input_text = "This is a title"
     output_expected = {"TEST":False}
     # Act
-    _, result = run_goal_pre_search(search_phrases, input_text)
+    result = run_goal_pre_search(search_phrases, input_text)
     # Assert
     assert result==output_expected

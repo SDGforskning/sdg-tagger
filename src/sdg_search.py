@@ -2,12 +2,42 @@ from .helpers import (
     format_logic_rules, 
     get_sdg_phrases,
     search_termlist, 
-    run_goal_pre_search,
+    run_all_termlist_searches_in_phrase_bool,
+    get_boolean_result_for_phrase
 )
-from .consts import LIST_ALL_SDG_NR
-from .country_search import all_country_searches
+from .consts import LIST_ALL_SDG_NR, COUNTRIES
 
 
+def run_goal_pre_search(search_phrases: list[dict], input_text: str) -> dict[str, bool]:
+    """Run all the the given search phrases for a presearch on a given text
+
+    Args:
+        search_phrases: _description_
+        input_text: _description_
+
+    Returns:
+        The boolean result for each pre-search
+    """
+    all_search_results = run_all_termlist_searches_in_phrase_bool(search_phrases, input_text)
+    boolean_results = get_boolean_result_for_phrase(all_search_results, search_phrases)
+    return boolean_results
+
+
+def run_all_country_searches(
+    input_text: str,
+) -> dict[str:bool]:
+    """Triggers all country category searches for a given text
+
+    Args:
+        input_text: The text to search in
+
+    Returns:
+        A dictionary with the results for each country category and for each termlist in the country categories
+    """
+    all_search_results = run_all_termlist_searches_in_phrase_bool(COUNTRIES, input_text)
+    boolean_results = get_boolean_result_for_phrase(all_search_results, COUNTRIES)
+
+    return boolean_results
 
 def get_logic_rule_raw(goal_phrases, target_nr):
     """ Get all the logic rules of an SDG for one specific target
@@ -80,9 +110,9 @@ def search_all_targets_in_goal(sdg_nr: int, input_text:str, analyze_result:bool=
     indexes = {}
     results["sdg_number"] = sdg_nr
     if not countries:
-        _ , countries = all_country_searches(input_text)
+        countries = run_all_country_searches(input_text)
         results["countries"] = countries
-    _ , pre_search = run_goal_pre_search(pre_searches, input_text)
+    pre_search = run_goal_pre_search(pre_searches, input_text)
 
     results["pre_search"] = pre_search
 
@@ -131,7 +161,7 @@ def search_all_goals(text:str, sdg_list:list[int]=LIST_ALL_SDG_NR) -> dict:
     """
     results = {}
 
-    _ , countries = all_country_searches(text)
+    countries = run_all_country_searches(text)
     results["countries"] = countries
 
     for sdg in [str(sdg) for sdg in sdg_list if sdg in set(LIST_ALL_SDG_NR)]:
