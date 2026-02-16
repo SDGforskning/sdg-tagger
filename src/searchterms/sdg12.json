@@ -260,30 +260,78 @@
             "phrases": [
                 {
                     "number": 1,
-                    "logic_rule": "()",
+                    "logic_rule": "((([scp]) | (termlist12_scp2_trunc & termlist12_6a)) & (termlist12_6c | termlist12_6c_trunc))",
                     "sentence_split": false,
+                    "_comment": "Here we use the whole scp phrase, and supplement with 6a + scp2",
                     "termlists": [
                         {
-                            "termlist_name": "",
-                            "formatting_rule": "",
+                            "termlist_name": "termlist12_scp2_trunc",
+                            "formatting_rule": "specific_trunc",
                             "na": false,
                             "case": false,
-                            "wordlist_en": [],
+                            "wordlist_en": ["green", "eco", "sustainab.*", "responsib.*", "environmental.*", "ecological.*"],
+                            "wordlist_no": ["grønne.*", "grønn", "øko", "bærekraft.*", "berekraft.*", "ansvarlig.*", "miljø.*"]
+                        },
+                        {
+                            "termlist_name": "termlist12_6a",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["practic", "procedure", "custom", "culture", "praxis", "method", "policy", "policies", "standard", "code of conduct"],
+                            "wordlist_no": ["praksis", "kultur", "metoder", "politikk", "retningslinje"]
+                        },
+                        {
+                            "termlist_name": "termlist12_6c",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "_comment": "'Industri' (NO) has a space after to prevent 'industriasliert' but allow e.g. 'kjemikalieindustri'",
+                            "wordlist_en": ["company", "companies", "organisation", "organization", "corporation", "conglomerate", "business", "corporate",
+                            "producer", "industry", "industries", "industrial sector", "manufacturer", "manufacturing sector", "commercial sector",
+                            "institution"],
+                            "wordlist_no": ["bedrift", "kontor", "organisasjon", "selskap", "konglomerat",
+                            "industrier", "industrien", "industri ", "industrisektor", "produsent", "produksjonssektor", "kommersiell sektor", "kommersielle sektor", 
+                            "institusjon"]
+                        },
+                        {
+                            "termlist_name": "termlist12_6c_trunc",
+                            "formatting_rule": "specific_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["firms", "firm"],
                             "wordlist_no": []
                         }
                     ]
                 },
                 {
                     "number": 2,
-                    "logic_rule": "()",
+                    "logic_rule": "(([termlist12_6d] & ([termlist12_6e | termlist12_6f])) & (termlist12_6c | termlist12_6c_trunc))",
                     "sentence_split": false,
+                    "_comment": "Reuse lists phrasespecific12_6c and phrasedefault12_6c from phrase 1 for companies terms",
                     "termlists": [
                         {
-                            "termlist_name": "",
-                            "formatting_rule": "",
+                            "termlist_name": "termlist12_6d",
+                            "formatting_rule": "default",
                             "na": false,
                             "case": false,
-                            "wordlist_en": [],
+                            "_comment": "'environmental' works ok alone in English, but in Norwegian (miljø) creates some noise.",
+                            "wordlist_en": ["sustainab", "responsib", "environmental"],
+                            "wordlist_no": ["bærekraft", "berekraft", "ansvarlig", "miljøvurder", "miljøprestasjon", "miljøstyring", "miljøsertifiser", "miljøinformasjon"]
+                        },
+                        {
+                            "termlist_name": "termlist12_6e",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["report", "accounting", "publish", "disclos"],
+                            "wordlist_no": ["rapport", "regnskap", "publiser", "avslør", "offentliggjør", "offentleggj"]
+                        },
+                        {
+                            "termlist_name": "termlist12_6f",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["environmental information disclos"],
                             "wordlist_no": []
                         }
                     ]
@@ -295,15 +343,56 @@
             "phrases": [
                 {
                     "number": 1,
-                    "logic_rule": "()",
+                    "logic_rule": "(([termlist12_scp2_trunc] | [termlist12_7b]) & [termlist12_7c])",
                     "sentence_split": false,
                     "termlists": [
                         {
-                            "termlist_name": "",
-                            "formatting_rule": "",
+                            "termlist_name": "termlist12_7a",
+                            "formatting_rule": "default",
                             "na": false,
                             "case": false,
-                            "wordlist_en": [],
+                            "_comment": "Not needed.",
+                            "wordlist_en": ["sustainable public procurement", "circular public procurement", "green public procurement"],
+                            "wordlist_no": ["bærekraftige offentlige anskaffelse", "bærekraftig offentlig anskaffelse", "bærekraftige anskaffelse", "bærekraftig anskaffelse", "bærekraftig fellesavtale", "bærekraftige fellesavtale",
+                            "berekraftige offentlige anskaffelse", "berekraftig offentlig anskaffelse", "berekraftige anskaffelse", "berekraftig anskaffelse", "berekraftig fellesavtale", "berekraftige fellesavtale"]
+                        },
+                        {
+                            "termlist_name": "termlist12_scp2_trunc",
+                            "formatting_rule": "specific_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["green", "eco", "eco-.*", "sustainab.*", "responsib.*", "environmental.*", "ecological.*", "circular"],
+                            "wordlist_no": ["grønne.*", "grønn", "øko", "bærekraft.*", "berekraft.*", "ansvarlig.*", "miljø.*", "sirkulær"]
+                        },
+                        {
+                            "termlist_name": "termlist12_7b",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["fair trade", "human rights",
+                            "lifecycle", "life cycle", 
+                            "employment of minorities", "employment of minority",
+                            "Best value for Money", "Most Economically Advantageous Tender"],
+                            "wordlist_no": ["rettferdig handel", "menneskerettigheter",
+                            "livssyklus", "livsløps",
+                            "likestilt rekruttering", "ansette minoriteter", "ansette etniske minoriteter",
+                            "økonomisk mest fordelaktige"]
+                        },
+                        {
+                            "termlist_name": "termlist12_7c",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["procurement", "aquisition", "purchas", "contract", "tender"],
+                            "wordlist_no": ["anskaffels", "anbud", "innkjøp", "kontrakt", "tilbudet"]
+                        },
+                        {
+                            "termlist_name": "termlist12_7d",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "_comment": "We have not included 7d in the final search as it lost relevant results in a title search. A few less relevant creep in (about e.g. consumer purchasing), but more relevant are lost.",
+                            "wordlist_en": ["national", "countr", "domestic", "government", "administrat", "public", "authorit"],
                             "wordlist_no": []
                         }
                     ]
@@ -315,16 +404,85 @@
             "phrases": [
                 {
                     "number": 1,
-                    "logic_rule": "()",
+                    "logic_rule": "(termlist12_8a | ((termlist12_8b | (termlist12_8c & termlist12_8g)) & (termlist12_8d_trunc | (termlist12_8e & termlist12_8f_trunc))))",
                     "sentence_split": false,
                     "termlists": [
                         {
-                            "termlist_name": "",
-                            "formatting_rule": "",
+                            "termlist_name": "termlist12_8a",
+                            "formatting_rule": "default",
                             "na": false,
                             "case": false,
-                            "wordlist_en": [],
-                            "wordlist_no": []
+                            "wordlist_en": ["education for sustainable", "education in sustainable", "sustainable development educat", "sustainability educat"],
+                            "wordlist_no": ["utdanning for bærekraft", "utdanning for berekraft", "bærekraftig utvikling utdann", "berekraftig utvikling utdann"]
+                        },
+                        {
+                            "termlist_name": "termlist12_8b",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["awareness", "lifelong learn", "life-long learn"],
+                            "wordlist_no": ["oppmerksom", "bevisst", "livslang læring"]
+                        },
+                        {
+                            "termlist_name": "termlist12_8c",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["inform", "knowledge", "aware", "educat", "guide", "instruct", "learn", "educat", "teach"],
+                            "wordlist_no": ["kunnskap", "kjennskap", "kjenne", "veiled", "undervis", "læring", "lære", "utdann", "kompetans", "engasj"]
+                        },
+                        {
+                            "termlist_name": "termlist12_8g",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["consumer", "customer", "resident", "visitor", "guest", "tourist", "employee", "farmer",
+                            "citizen", "children", "teenager", "adolescent", "the elderly", "public", "student", "adult",
+                            "purchas", "buying", "habit",
+                            "consumption", "lifestyle", "life-style"],
+                            "wordlist_no": ["forbruk", "beboer", "bebuar", "besøkende", "besøkande", "gjest", "turist", "ansatt", "bonde",
+                            "borger", "folk", "barna", "barne", "tenåring", "de gamle", "offentlig", "voksne", "voksen", "vaksne", "vaksen",
+                            "kjøp", "vane",
+                            "livstil"]
+                        },
+                        {
+                            "termlist_name": "termlist12_8d_trunc",
+                            "formatting_rule": "specific_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["green", "eco", "eco-.*", "sustainab.*", "environmental.*", "ecological.*", "social responsib", "socially responsib", "circular",
+                            "cleaner production",
+                            "resource efficien.*", "resource use efficiency" , "material efficiency" , "material use efficiency" , "energy efficiency",
+                            "eco-label.*", "ecolabel.*", "environmental label.*",
+                            "ecotouris.*", "eco-touris.*",
+                            "ecobuilding.*", "eco-building.*", "eco-housing", "eco-construct.*", "eco-design", "eco-technolog.*",
+                            "footprint", "cradle-to-cradle", "cradle to cradle",
+                            "recycl", "reuse", "re-use", "reusing", "re-using", "refurbish.*", "re-furbish.*", "remanufactur.*", "re-manufactur.*", "repurpos.*", "re-purpos.*", "compost.*",
+                            "renewable energy"],
+                            "wordlist_no": ["grønne.*", "grønn", "øko", "bærekraft.*", "berekraft.*", "miljø.*", "sosial ansvar.*", "sosialt ansvar.*", "sirkulær.*",
+                            "renere produksjon.*",
+                            "ressurseffektiv.*", "materialeffektiv.*", "effektiv bruk av material", "effektiv bruk av ressurs.*", 
+                            "miljømerk.*", "svanemerk.*",
+                            "økoturism",
+                            "fotspor", "vugge til vugge",
+                            "resirkul", "gjenbruk", "ombruk", "kompost",
+                            "fornybar energi"]
+                        },
+                        {
+                            "termlist_name": "termlist12_8e",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["responsible"],
+                            "wordlist_no": ["ansvarlig", "ansvarleg"]
+                        },
+                        {
+                            "termlist_name": "termlist12_8f_trunc",
+                            "formatting_rule": "specific_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["consumer.*", "consumption", "tourism", "product", "lifestyle.*", "life-style.*", "purchas.*", "waste"],
+                            "wordlist_no": ["forbruk.*", "turist.*", "turism", "produksj.*", "produkt.*", "livstil.*", "kjøp", "avfall"]
                         }
                     ]
                 }
@@ -335,31 +493,93 @@
             "phrases": [
                 {
                     "number": 1,
-                    "logic_rule": "()",
+                    "logic_rule": "(([termlist12_a1] | [termlist12_a1_trunc]) & [scp] & [LMIC])",
                     "sentence_split": false,
+                    "_comment": "Using the scp and country strings already created. Some terms are simplified for a title search - e.g. 'managerial support' -> Support; 'financial resources' -> financ; 'institional capacity' -> capacity",
                     "termlists": [
                         {
-                            "termlist_name": "",
-                            "formatting_rule": "",
+                            "termlist_name": "termlist12_a1",
+                            "formatting_rule": "default",
                             "na": false,
                             "case": false,
-                            "wordlist_en": [],
-                            "wordlist_no": []
+                            "wordlist_en": ["capacity", "support", "resources",
+                            "infrastructure", "facilities", "tools", 
+                            "research", "scientific", "knowledge", "skills", "competenc", "expertise", "R&D", "innovation", "technolog", "cleantech",
+                            "communication", "social network", "information network", "campaign", 
+                            "awareness", "disseminat", "educat", "training",
+                            "cooperation", "collaboration", "partnership", 
+                            "transfer of technolog", "technological transfer", "technology transfer",               
+                            "expenditure", "investing", "investment", "financ", "spending", "funding", "funder", 
+                            "incentive", "subsidy", "subsidies", "subsidis", "subsidiz", 
+                            "development spending", "development aid", "development assistance", "foreign aid", "foreign assistance", "international aid", "international assistance", 
+                            "policy", "policies", "empower", "strateg", "program", "intervention"],
+                            "wordlist_no": ["kapasitet", "hjelp", "bistand", "støtte", "stønad", "ressurs",
+                            "infrastruktur", "fasilitet", "verktøy",
+                            "forskning", "vitenskapelig", "kunnskap", "ferdighet", "kompetans", "ekspertis", "innovasjon", "teknologi",
+                            "kommunikasjon", "sosiale nettverk", "informasjonsnettverk", "kampanje",
+                            "bevisst", "utdanning", "opplær",
+                            "samarbeid", "felles", "partner", 
+                            "teknologioverføring", "overfører teknologi", "overføre teknologi",
+                            "utgift", "invester", "finans", "pengebruk", "kapital",
+                            "insentiv", "subsider", 
+                            "bistand", "utviklingssamarbeid", "utviklingsstøtte", "utviklingsstønad", "utviklingshjelp", "u-hjelp", "samarbeidsfond",
+                            "politikk", "retningslin", "myndiggjør", "strategi", "intervensjon"]
+                        },
+                        {
+                            "termlist_name": "termlist12_a1_trunc",
+                            "formatting_rule": "specific_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["invest", "fund", "funds", "grant", "grants", "tax", "taxes", "fees", "ODA"],
+                            "wordlist_no": ["fond", "bevilgning", "midler", "skatt", "skatter", "FoU"]
                         }
                     ]
                 },
                 {
                     "number": 2,
-                    "logic_rule": "()",
+                    "logic_rule": "(([termlist12_a1] | [termlist12_a1_trunc]) & ([termlist12_a2] | ([termlist12_a3] & [termlist12_a4])) & [LMIC])",
                     "sentence_split": false,
+                    "_comment": "Using the country strings already created, and the capacity string from phrase 1.",
                     "termlists": [
                         {
-                            "termlist_name": "",
-                            "formatting_rule": "",
+                            "termlist_name": "termlist12_a2",
+                            "formatting_rule": "default",
                             "na": false,
                             "case": false,
-                            "wordlist_en": [],
-                            "wordlist_no": []
+                            "wordlist_en": ["energy transition",  
+                            "geothermal heat pump", "ground source heat pump", 
+                            "solar PV", "photovoltaic", "solar cell", "solar-cell", "solar panel", "solar-panel", "solar array", "solar energy collector", "solar farm", "solar plant", "solar park", 
+                            "solar district heating", "solar district cooling", "solar air heating system", "solar space heating system", 
+                            "wind farm", "wind turbine", "wind park", "wind factory", "wind factories", 
+                            "hydropower", "hydroelectric", "hydro-electric", "tidal turbine", "stream turbine", "current turbine", "tidal power", "tidal energy", "marine energy", "wave energy"],
+                            "wordlist_no": ["energiomstilling", 
+                            "geotermisk varmepump", 
+                            "solcelle", "solkraft", "solenergi", "fotovoltaisk", "solfang", "solsaml", "solvarm", "solpark", "solcellepark",
+                            "vindkraftverk", "vindturbin", "vindpark", "vindmøllepark", "havvind", "vindenergi",
+                            "vannkraft", "vasskraft", "hydroelektrisk", "tidevannsturbin", "havstrømturbin", "tidevannskraft", "tidevannsenergi", "bølgeenergi", "marin energi", "havenergi"]
+                        },
+                        {
+                            "termlist_name": "termlist12_a3",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["power", "energy", "electricity"],
+                            "wordlist_no": ["kraft", "energi", "elektrisit"]
+                        },
+                        {
+                            "termlist_name": "termlist12_a4",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["clean", "sustainab", "renewable",
+                            "solar", "thermal energy", "wind",
+                            "geothermal", "hydrothermal", 
+                            "hydrokinetic", "marine", "tidal", "wave energy", "ocean energy",
+                            "bioenergy", "biofuel", "biodiesel"],
+                            "wordlist_no": ["ren energi", "bærekraftig", "berekraftig", "fornybar",
+                            "solcelle", "solkraft", "solenergi", "fotovoltaisk", "solfang", "solsaml", "solvarm", "solpark", "solcellepark",
+                            "geotermisk",
+                            "bioenergi", "biodrivstoff"]
                         }
                     ]
                 }
@@ -370,16 +590,41 @@
             "phrases": [
                 {
                     "number": 1,
-                    "logic_rule": "()",
+                    "logic_rule": "([termlist12_b1] & ([termlist12_b3] | ([termlist12_b2] | [termlist12_scp2_trunc])))",
                     "sentence_split": false,
+                    "_comment": "Simplified to remove the 'effect' terms - not really needed",
                     "termlists": [
                         {
-                            "termlist_name": "",
-                            "formatting_rule": "",
+                            "termlist_name": "termlist12_b1",
+                            "formatting_rule": "default",
                             "na": false,
                             "case": false,
-                            "wordlist_en": [],
-                            "wordlist_no": []
+                            "wordlist_en": ["monitor", "report", "account", "control", "measur", "assess", "evaluat", "survey"],
+                            "wordlist_no": ["overvåk", "rapport", "styring", "forvalt", "måling", "evaluer", "vurder", "undersøke"]
+                        },
+                        {
+                            "termlist_name": "termlist12_scp2_trunc",
+                            "formatting_rule": "specific_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["green", "eco", "eco-.*", "sustainab.*", "responsib.*", "environmental.*", "ecological.*"],
+                            "wordlist_no": ["grønne.*", "grønn", "øko", "bærekraft.*", "berekraft.*", "ansvarlig.*", "miljø.*"]
+                        },
+                        {
+                            "termlist_name": "termlist12_b2",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["tourism", "tourist", "hospitality", "leisure", "air travel", "hotel"],
+                            "wordlist_no": ["turism", "turist", " reise", "fritid", "flyreise", "syden"]
+                        },
+                        {
+                            "termlist_name": "termlist12_b3",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["ecotourism"],
+                            "wordlist_no": ["økoturism"]
                         }
                     ]
                 }
@@ -390,30 +635,64 @@
             "phrases": [
                 {
                     "number": 1,
-                    "logic_rule": "()",
+                    "logic_rule": "([termlist12_c2] & ([termlist12_c3] | [termlist12_c3_trunc]))",
                     "sentence_split": false,
                     "termlists": [
                         {
-                            "termlist_name": "",
-                            "formatting_rule": "",
+                            "termlist_name": "termlist12_c2",
+                            "formatting_rule": "default",
                             "na": false,
                             "case": false,
-                            "wordlist_en": [],
-                            "wordlist_no": []
+                            "wordlist_en": ["subsidi", "subsidy", "fiscal incentive", "price support", "underpricing", "underprice", "under-pricing", "under-price", "under pricing", "under price", 
+                            "below market lending", "below market loan", "below-market",
+                            "credit support", "credit guarantee", "credit restructur", "credit cancel", 
+                            "loan support", "loan guarantee", "loan restructur", "loan cancel", 
+                            "debt support", "debt guarantee", "debt restructur", "debt cancel", 
+                            "market distor", "price distortion",
+                            "government spending", "government funding", "government ownership", "government payment"],
+                            "wordlist_no": ["næringsstøtte", "insentiv", "prisstøtte", "prisstønad", "økonomisk støtte", "økonomisk stønad", "tilskudd", "tilskot", "prissetting",
+                            "kreditt", " lån", "gjeld",
+                            "vridning",
+                            "offentlige utgifter", "statlig eier", "offentlig forvalt", "statlig forvalt", "finansiell støtte", "finansiell stønad", "finansielle ressurs"]
+                        },
+                        {
+                            "termlist_name": "termlist12_c3",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["fossil fuel", "natural gas", "diesel", "gasoline", "kerosene", "petroleum", "energy resource", "conventional energy"],
+                            "wordlist_no": ["fossilt brensel", "fossile brensl", "fossilt brennstoff", "fossile brennstoff", "naturgass", "energiressurs", "konvensjonell energi"]
+                        },
+                        {
+                            "termlist_name": "termlist12_c3_trunc",
+                            "formatting_rule": "specific_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["coal", "oil", "peat"],
+                            "wordlist_no": ["kull", "kol", "olje", "torv"]
                         }
                     ]
                 },
                 {
                     "number": 2,
-                    "logic_rule": "()",
+                    "logic_rule": "([termlist12_c5_trunc] & ([termlist12_c3] | [termlist12_c3_trunc]) & not [termlist12_c6])",
                     "sentence_split": false,
+                    "_comment": "reuse fossil fuels from phrase 1",
                     "termlists": [
                         {
-                            "termlist_name": "",
-                            "formatting_rule": "",
+                            "termlist_name": "termlist12_c5_trunc",
+                            "formatting_rule": "specific_trunc",
                             "na": false,
                             "case": false,
-                            "wordlist_en": [],
+                            "wordlist_en": ["taxation", "tax", "taxes", "tariff.*", "duty", "duties", "fees", "fee"],
+                            "wordlist_no": [".*skatt.*", ".*avgift.*", "gebyr.*"]
+                        },
+                        {
+                            "termlist_name": "termlist12_c6",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["heavy duty", "light duty", "medium duty"],
                             "wordlist_no": []
                         }
                     ]
