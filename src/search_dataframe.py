@@ -102,7 +102,7 @@ def get_formatted_column_names_export(sdg_list:list[int]) -> list[str]:
     columns.extend([x['name'] for x in COUNTRIES])
 
     for sdg_nr in [sdg for sdg in sdg_list if sdg in set(LIST_ALL_SDG_NR)]:
-        pre_searches, sdg_all_targets = get_sdg_phrases(sdg_nr)
+        pre_searches, sdg_all_targets, mentions = get_sdg_phrases(sdg_nr)
         columns.extend([x['name'] for x in pre_searches])
         nr_formatted = f'{sdg_nr:02d}'
 
@@ -110,8 +110,9 @@ def get_formatted_column_names_export(sdg_list:list[int]) -> list[str]:
             target_formatted = format_item(target['name'])
             columns.append(f'tempsdg{nr_formatted}_{target_formatted}')
         
-        #TODO column names for mentions! (for sdgs that got it in the json?)
-
+        if len(mentions)>0:
+            columns.append(f'tempsdg{nr_formatted}_mentions')
+        
     return columns
 
 

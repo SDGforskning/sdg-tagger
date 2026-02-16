@@ -25,6 +25,28 @@ def run_goal_pre_search(search_phrases: list[dict], input_text: str) -> dict[str
     return boolean_results
 
 
+def run_goal_mentions_search(mentions_search: dict, input_text: str) -> bool:
+    """Run the mentions search for an sdg
+
+    Args:
+        mentions_search: a dictionary with the logic rule and the termlists to search
+        input_text: the text to search in
+
+    Returns:
+        A boolean for the mentions search result
+    """
+    termlists_results = {}
+    for term_lists in mentions_search['termlists']:
+        termlists_results[term_lists['termlist_name']] = search_termlist(
+            term_lists, input_text, indexed=False
+        )
+
+    logic_rule_formatted = format_logic_rules(mentions_search['logic_rule'], termlists_results)
+    mentions_result = eval(logic_rule_formatted)
+
+    return mentions_result
+
+
 def run_all_country_searches(
     input_text: str,
 ) -> dict[str:bool]:
@@ -148,7 +170,7 @@ def search_all_targets_in_goal(
         The results in boolean for each target of the sdg
         The indexed results for all search terms in each target of the sdg.
     """
-    pre_searches, sdg_all_targets = get_sdg_phrases(sdg_nr)
+    pre_searches, sdg_all_targets, mentions_search = get_sdg_phrases(sdg_nr)
 
     results = {}
     indexes = {}
@@ -156,9 +178,9 @@ def search_all_targets_in_goal(
     if not countries:
         countries = run_all_country_searches(input_text)
         results["countries"] = countries
-    pre_search = run_goal_pre_search(pre_searches, input_text)
-
-    results["pre_search"] = pre_search
+    
+    pre_search_result = run_goal_pre_search(pre_searches, input_text)
+    results["pre_search"] = pre_search_result
 
     target_results = {}
 
@@ -170,7 +192,7 @@ def search_all_targets_in_goal(
         )
 
         target_results[target['name']] = get_phrase_results(
-            result_termlist_search, target_phrases, countries, pre_search
+            result_termlist_search, target_phrases, countries, pre_search_result
         )
 
         if analyze_result:
@@ -181,8 +203,7 @@ def search_all_targets_in_goal(
 
     results["targets"] = target_results
 
-    # TODO add mentions search here!!
-    # results["mentions"] = run_mentions_search()
+    results["mentions"] = run_goal_mentions_search(mentions_search, input_text)
 
     return results, indexes
 

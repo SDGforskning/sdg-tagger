@@ -111,14 +111,16 @@ def format_list_with_pattern(pattern: str, search_terms: list[str]):
 
 
 ####################### File helpers #######################
-def get_sdg_phrases(sdg_number: int) -> list[dict] | list[dict]:
+def get_sdg_phrases(sdg_number: int) -> tuple[list[dict], list[dict], dict]:
     """Get the search phrases for a specific SDG from the json files
 
     Args:
         sdg_number: the number of the SDG to get the phrases for
 
     Returns:
-        A list with dictionaries containing all the phrases and the logic rule for each of the SDG goals
+        List of the presearches for the sdg, each a dictionary with the phrases' termlists and logic rule
+        A list with dictionaries of all the phrases' termlists and logic rule for each of the SDG targets
+        A dict for the mentrions search, containing a logic rule and termlists
     """
     file_path_absolute = os.path.join(
         os.path.dirname(__file__), 'searchterms/sdg{}.json'.format(str(sdg_number))
@@ -129,10 +131,9 @@ def get_sdg_phrases(sdg_number: int) -> list[dict] | list[dict]:
     targets = data['targets']
 
     if 'pre-search' in data:
-        return data['pre-search'], targets
+        return data['pre-search'], targets, data['mentions']
     else:
-        return [], targets
-    # TODO this has to also return mentions!
+        return [], targets, data['mentions']
 
 
 ####################### Country search and pre-search helpers #######################
@@ -175,16 +176,16 @@ def get_boolean_result_for_phrase(all_search_results, search_phrases) -> dict[st
         search_phrases: dictionary containing all data for all the phrases
 
     Returns:
-        the boolean results for all the searcges
+        the boolean results for all the searches
     """
     boolean_results = {}
 
     for search in all_search_results.keys():
-        phrase = all_search_results[search]
+        phrase_results = all_search_results[search]
         logic_rule_raw = get_logic_rule_raw_countries_and_presearch(
             search_phrases, search
         )
-        logic_rule_formatted = format_logic_rules(logic_rule_raw, phrase)
+        logic_rule_formatted = format_logic_rules(logic_rule_raw, phrase_results)
         boolean_results[search] = eval(logic_rule_formatted)
 
     return boolean_results
