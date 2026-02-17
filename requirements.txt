@@ -9,3 +9,4 @@ xlsxwriter
 openpyxl
 Jinja2
 tqdm==4.67.3
+mock==5.2.0

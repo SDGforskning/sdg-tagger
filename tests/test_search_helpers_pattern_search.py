@@ -4,93 +4,13 @@ import os
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
-from src.helpers import pattern_search_boolean, format_list_with_pattern
+from src.helpers import _pattern_search_boolean
 
 DEFAULT = "(?:{})"
 SPECIFIC = "(?:{})\\b"
 SPECIFIC_TRUNC = "\\b(?:{})\\b"
 NO_LEFT_TRUNC = "\\b(?:{})"
 
-
-######################### Testcase: DEFAULT format #########################
-@pytest.mark.regex_pattern
-@pytest.mark.parametrize(
-    'input_terms, output_text',
-    [
-        (["one"], "(?:one)"),
-        (["one", "two", "three"], "(?:one|two|three)"),
-        (["one two", "three"], "(?:one two|three)"),
-        ([], "(?:)"),
-    ]
-)
-def test_format_list_with_pattern_default(input_terms, output_text):
-    # Arrange
-    pattern = DEFAULT
-    # Act
-    result = format_list_with_pattern(pattern, input_terms)
-    # Assert
-    assert result==output_text
-
-
-######################### Testcase: SPECIFIC format #########################
-@pytest.mark.regex_pattern
-@pytest.mark.parametrize(
-    'input_terms, output_text',
-    [
-        (["one"], "(?:one)\\b"),
-        (["one", "two", "three"], "(?:one|two|three)\\b"),
-        (["one two", "three"], "(?:one two|three)\\b"),
-        ([], "(?:)\\b"),
-    ]
-)
-def test_format_list_with_pattern_specific(input_terms, output_text):
-    # Arrange
-    pattern = SPECIFIC
-    # Act
-    result = format_list_with_pattern(pattern, input_terms)
-    # Assert
-    assert result==output_text
-
-
-######################### Testcase: SPECIFIC_TRUNC format #########################
-@pytest.mark.regex_pattern
-@pytest.mark.parametrize(
-    'input_terms, output_text',
-    [
-        (["one"], "\\b(?:one)\\b"),
-        (["one", "two", "three"], "\\b(?:one|two|three)\\b"),
-        (["one two", "three"], "\\b(?:one two|three)\\b"),
-        ([], "\\b(?:)\\b"),
-    ]
-)
-def test_format_list_with_pattern_specific_trunc(input_terms, output_text):
-    # Arrange
-    pattern = SPECIFIC_TRUNC
-    # Act
-    result = format_list_with_pattern(pattern, input_terms)
-    # Assert
-    assert result==output_text
-
-
-######################### Testcase: NO_LEFT_TRUNC format #########################
-@pytest.mark.regex_pattern
-@pytest.mark.parametrize(
-    'input_terms, output_text',
-    [
-        (["one"], "\\b(?:one)"),
-        (["one", "two", "three"], "\\b(?:one|two|three)"),
-        (["one two", "three"], "\\b(?:one two|three)"),
-        ([], "\\b(?:)"),
-    ]
-)
-def test_format_list_with_pattern_no_left_trunc(input_terms, output_text):
-    # Arrange
-    pattern = NO_LEFT_TRUNC
-    # Act
-    result = format_list_with_pattern(pattern, input_terms)
-    # Assert
-    assert result==output_text
-    
 
 ######################### Testcase: DEFAULT format + TRUE output #########################
 @pytest.mark.regex_pattern
@@ -108,7 +28,7 @@ def test_format_list_with_pattern_no_left_trunc(input_terms, output_text):
 def test_pattern_search_boolean_default_true(input_regex, input_text):
     # Arrange
     # Act
-    result = pattern_search_boolean(input_regex, input_text)
+    result = _pattern_search_boolean(input_regex, input_text)
     # Assert
     assert result
 
@@ -128,7 +48,7 @@ def test_pattern_search_boolean_default_true(input_regex, input_text):
 def test_pattern_search_boolean_default_false(input_regex, input_text):
     # Arrange
     # Act
-    result = pattern_search_boolean(input_regex, input_text)
+    result = _pattern_search_boolean(input_regex, input_text)
     # Assert
     assert not result
 
@@ -145,7 +65,7 @@ def test_pattern_search_boolean_default_false(input_regex, input_text):
 def test_pattern_search_boolean_specific_true(input_regex, input_text):
     # Arrange
     # Act
-    result = pattern_search_boolean(input_regex, input_text)
+    result = _pattern_search_boolean(input_regex, input_text)
     # Assert
     assert result
 
@@ -164,7 +84,7 @@ def test_pattern_search_boolean_specific_true(input_regex, input_text):
 def test_pattern_search_boolean_specific_false(input_regex, input_text):
     # Arrange
     # Act
-    result = pattern_search_boolean(input_regex, input_text)
+    result = _pattern_search_boolean(input_regex, input_text)
     # Assert
     assert not result
 
@@ -181,7 +101,7 @@ def test_pattern_search_boolean_specific_false(input_regex, input_text):
 def test_pattern_search_boolean_specific_trunc_true(input_regex, input_text):
     # Arrange
     # Act
-    result = pattern_search_boolean(input_regex, input_text)
+    result = _pattern_search_boolean(input_regex, input_text)
     # Assert
     assert result
 
@@ -201,7 +121,7 @@ def test_pattern_search_boolean_specific_trunc_true(input_regex, input_text):
 def test_pattern_search_boolean_specific_trunc_false(input_regex, input_text):
     # Arrange
     # Act
-    result = pattern_search_boolean(input_regex, input_text)
+    result = _pattern_search_boolean(input_regex, input_text)
     # Assert
     assert not result
 
@@ -217,7 +137,7 @@ def test_pattern_search_boolean_specific_trunc_false(input_regex, input_text):
 def test_pattern_search_boolean_specific_trunc_true_with_star(input_regex, input_text):
     # Arrange
     # Act
-    result = pattern_search_boolean(input_regex, input_text)
+    result = _pattern_search_boolean(input_regex, input_text)
     # Assert
     assert result
 
@@ -234,7 +154,7 @@ def test_pattern_search_boolean_specific_trunc_true_with_star(input_regex, input
 def test_pattern_search_boolean_specific_trunc_false_with_star(input_regex, input_text):
     # Arrange
     # Act
-    result = pattern_search_boolean(input_regex, input_text)
+    result = _pattern_search_boolean(input_regex, input_text)
     # Assert
     assert not result
 
@@ -252,7 +172,7 @@ def test_pattern_search_boolean_specific_trunc_false_with_star(input_regex, inpu
 def test_pattern_search_boolean_capitol_letters_true(input_regex, input_text):
     # Arrange
     # Act
-    result = pattern_search_boolean(input_regex, input_text)
+    result = _pattern_search_boolean(input_regex, input_text)
     # Assert
     assert result
 
@@ -269,7 +189,7 @@ def test_pattern_search_boolean_capitol_letters_true(input_regex, input_text):
 def test_pattern_search_boolean_capitol_letters_false(input_regex, input_text):
     # Arrange
     # Act
-    result = pattern_search_boolean(input_regex, input_text)
+    result = _pattern_search_boolean(input_regex, input_text)
     # Assert
     assert not result
 
@@ -287,7 +207,7 @@ def test_pattern_search_boolean_capitol_letters_false(input_regex, input_text):
 def test_pattern_search_boolean_norwegian_terms_true(input_regex, input_text):
     # Arrange
     # Act
-    result = pattern_search_boolean(input_regex, input_text)
+    result = _pattern_search_boolean(input_regex, input_text)
     # Assert
     assert result
 
@@ -305,7 +225,7 @@ def test_pattern_search_boolean_norwegian_terms_true(input_regex, input_text):
 def test_pattern_search_boolean_norwegian_terms_false(input_regex, input_text):
     # Arrange
     # Act
-    result = pattern_search_boolean(input_regex, input_text)
+    result = _pattern_search_boolean(input_regex, input_text)
     # Assert
     assert not result
 
