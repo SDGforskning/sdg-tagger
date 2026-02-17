@@ -25,16 +25,33 @@
             "phrases": [
                 {
                     "number": 1,
-                    "logic_rule": "()",
+                    "logic_rule": "(([termlist12_1a] | [termlist12_1b_trunc] | [termlist12_1c_trunc]) & [scp])",
                     "sentence_split": false,
+                    "_comment": "Here in the title search it is simplified, so that `national OR regional...` etc. is not included",
                     "termlists": [
                         {
-                            "termlist_name": "",
-                            "formatting_rule": "",
+                            "termlist_name": "termlist12_1a",
+                            "formatting_rule": "default",
                             "na": false,
                             "case": false,
-                            "wordlist_en": [],
-                            "wordlist_no": []
+                            "wordlist_en": ["10 year framework of program", "10-year framework of program", "10YFP"],
+                            "wordlist_no": ["handlingsprogrammet for bærekraftig forbruk og produksjon"]
+                        },
+                        {
+                            "termlist_name": "termlist12_1b_trunc",
+                            "formatting_rule": "specific_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["polic.*", "govern.*", "action plan.*", "regulat.*", "legal.*", "law", "laws", "legislat.*", "standards", "code of conduct.*", "accounting", "reporting"],
+                            "wordlist_no": ["politikk.*", "handlingsplan.*", "tiltaksplan.*", "regulasj.*", ".*lovverk.*", "lovgiv.*", "utredning.*", "utgreiing", "standarder", "retningslinje.*", "rapportering.*"]
+                        },
+                        {
+                            "termlist_name": "termlist12_1c_trunc",
+                            "formatting_rule": "specific_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["strateg.*", "framework", "program.*", "plan", "plans", "planning", "target.*", "goal.*", "instrument", "instruments", "national standard", "international standard"],
+                            "wordlist_no": ["rammeverk", "planer", "planar", "planlegg.*", "mål", "nasjonal standard", "internasjonal standard"]
                         }
                     ]
                 }
@@ -125,31 +142,86 @@
             "phrases": [
                 {
                     "number": 1,
-                    "logic_rule": "()",
+                    "logic_rule": "(([termlist12_3a] | [termlist12_3a_trunc]) & [termlist12_3b_trunc])",
                     "sentence_split": false,
                     "termlists": [
                         {
-                            "termlist_name": "",
-                            "formatting_rule": "",
+                            "termlist_name": "termlist12_3a",
+                            "formatting_rule": "default",
                             "na": false,
                             "case": false,
-                            "wordlist_en": [],
-                            "wordlist_no": []
+                            "wordlist_en": ["food", "fodder"],
+                            "wordlist_no": ["matvare", "matprodukt", "matsvinn", "matprodu", "bærekraftig fôr", "berekraftig fôr", "dyrefôr", "fiskefôr"]
+                        },
+                        {
+                            "termlist_name": "termlist12_3a_trunc",
+                            "formatting_rule": "specific_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["animal feed", "fish feed"],
+                            "wordlist_no": ["mat", "dyrefor", "fiskefor"]
+                        },
+                        {
+                            "termlist_name": "termlist12_3b_trunc",
+                            "formatting_rule": "specific_trunc",
+                            "na": false,
+                            "case": false,
+                            "_comment": "This works ok without the NOT phrase in a title search",
+                            "wordlist_en": ["loss", "losses", "lost", "waste", "wastage", "spoil.*", "discard.*", "incinerat.*", "perish.*"],
+                            "wordlist_no": ["matsvinn.*", "svinn.*", "tap", "tapt", "avfall", "søppel", "kaste.*", "går til spille", "går til grunne"]
                         }
                     ]
                 },
                 {
                     "number": 2,
-                    "logic_rule": "()",
+                    "logic_rule": "(([termlist12_3c] | [termlist12_3c_trunc]) & [termlist12_3d] & [termlist12_3b_trunc])",
                     "sentence_split": false,
+                    "_comment": "Re-use the 'loss' terms from phrase 1 (phrasespecific12_3b)",
                     "termlists": [
                         {
-                            "termlist_name": "",
-                            "formatting_rule": "",
+                            "termlist_name": "termlist12_3c",
+                            "formatting_rule": "default",
                             "na": false,
                             "case": false,
-                            "wordlist_en": [],
-                            "wordlist_no": []
+                            "wordlist_en": ["cereal", "pulses", "fruit", "berry", "berries", "vegetable", "soybean", "lentil", "chickpea", "legume",
+                            "grain", "wheat", "maize", "livestock", "cattle", "sheep", "poultry", "goat", "chicken", "buffalo",
+                            "dairy waste", "slaughter",
+                            "harvest"],
+                            "wordlist_no": ["grønnsak", "grønsak", "frukt", 
+                            "oppdrettslaks", "oppdrett", "storfe", "fjærkre",
+                            "dyreproduksjon", "meieri", "slakt",
+                            "innhøst", "høsting"]
+                        },
+                        {
+                            "termlist_name": "termlist12_3c_trunc",
+                            "formatting_rule": "specific_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["crop", "crops", "rice", "fisher.*", "pig", "pigs", "duck", "milk"],
+                            "wordlist_no": ["sau", "sauer", "sauedrift", "geit", "geiter", "svin", "svinedrift", "rein", "reindrift", "melk", "fiske.*"]
+                        },
+                        {
+                            "termlist_name": "termlist12_3d",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["production", "processing", " handling", "storage", "transport", "distribution", "market", "packaging", "supply chain", "logistics",
+                            "retail", "food service", "food service", "restaurant", "household", "farm", 
+                            "consumer", "consumption", "consume", 
+                            "harvest", "slaughter"],
+                            "wordlist_no": ["produksjon", "håndter", "innsaml", "samling", "oppbevar", "lagring", "innpakning", "emballasje", "prossess", "innpakning", "emballasje", "emballering", "forsyningskjede", "logistikk",            
+                            "matindustri", "matvare", "dagligvare", "hushold", "gård",
+                            "forbruk",
+                            "innhøst", "høsting", "slakt"]
+                        },
+                        {
+                            "termlist_name": "termlist12_3b_trunc",
+                            "formatting_rule": "specific_trunc",
+                            "na": false,
+                            "case": false,
+                            "_comment": "This works ok without the NOT phrase in a title search",
+                            "wordlist_en": ["loss", "losses", "lost", "waste", "wastage", "spoil.*", "discard.*", "incinerat.*", "perish.*"],
+                            "wordlist_no": ["matsvinn.*", "svinn.*", "tap", "tapt", "avfall", "søppel", "kaste.*", "går til spille", "går til grunne"]
                         }
                     ]
                 }
@@ -160,61 +232,280 @@
             "phrases": [
                 {
                     "number": 1,
-                    "logic_rule": "()",
+                    "logic_rule": "(([termlist12_4d] | ((([termlist12_4a_trunc] & [termlist12_4b_trunc]) | [termlist12_4b]) & ([termlist12_4c] | [termlist12_4c_trunc]))) & ~[termlist12_4not])",
                     "sentence_split": false,
                     "termlists": [
                         {
-                            "termlist_name": "",
-                            "formatting_rule": "",
+                            "termlist_name": "termlist12_4a_trunc",
+                            "formatting_rule": "specific_trunc",
                             "na": false,
                             "case": false,
-                            "wordlist_en": [],
+                            "wordlist_en": [".*sustainab.*", ".*responsib.*", "environmental.*", ".*ecological.*", "eco", "eco-.*", "green", "safe", "unsafe", "safely", "safety"],
+                            "wordlist_no": ["bærekraft.*", "berekraft.*", "ubærekraftig", "ansvarlig.*", "uansvarlig", "grønne.*", "grønn", "øko", "miljø.*", "trygg", "utrygg", "sikker.*"]
+                        },
+                        {
+                            "termlist_name": "termlist12_4b_trunc",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["life cycle.*", "lifecycle.*", "end of life", "end of chain",
+                            "management", "handling", "packaging", "labelling", "storing", "storage", "stored",
+                            "disposal", "dispose", "transport.*", "process.*", "logistics",
+                            "use", "uses", "usage", "using", "utilis.*", "utiliz.*", "production"],
+                            "wordlist_no": ["livssyklus.*", "livløp.*", 
+                            "håndter.*", "innsaml.*", "samling", "innpakning", "emballasje", "emballering", "stempel", "merking", "akkredit.*", "sertifi.*", "oppbevar.*", "lagring", 
+                            "avhend.*", "tømming", "prossess", "forsyningskjede", "logistikk",
+                            "forbruk", "bruk", "produksjon"]
+                        },
+                        {
+                            "termlist_name": "termlist12_4b",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["life cycle analysis", "lifecycle analysis", "cradle to cradle", "cradle-to-cradle"],
+                            "wordlist_no": ["livssyklusanalyser", "livsløpsanalyser", "vugge til vugge"]
+                        },
+                        {
+                            "termlist_name": "termlist12_4c",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["chemical", "polish", "cleaning product", "engine oil", "plastic", "nanomaterial", 
+                            "pesticid", "herbicide", "insecticide", "fungicide",
+                            "solvent", "etching solution", "battery", "batteries", "accumulator",
+                            "medicinal residue", "toxic mould",
+                            "Antimony", "Arsenic", "Beryllium", "Cadmium", "Mercury", "Selenium", "Tellurium", "Thallium", "Zinc", "Jarosite", "Hematite", "Copper", "cupric chloride", "organohalogen", 
+                            "heavy metal", "toxic metal", "acrylamide", "persistent organic pollutant", "POP compounds", 
+                            "aldrin", "chlordane", "dieldrin", "heptachlor", "hexachlorobenzen", "mirex", "organochloride",
+                            "polychlorinated biphenyls", "polychlorinated dibenzo-p-dioxin", "polychlorinated dibenzofuran", "toxaphen", "neonicotinoid"],
+                            "wordlist_no": ["kjemikalie", "rengjøringsprodukt", "rengjøringsmid", "desinfeksjonsmid", "motorolje", "mikroplast", "plastpartik", "plastavfall",
+                            "insektmid", "plantevernmid", "batteri", "giftig", "maling", 
+                            "arsenikk", "kadmium", "kvikksølv", "kobber", "tallium",  
+                            "tungmetall", "persistente organiske miljøgift",
+                            "tinnorganiske", "organiske tinnforbindelse",
+                            "bioakkumuler", "dioksin", "neonikotinoid"]
+                        },
+                        {
+                            "termlist_name": "termlist12_4c_trunc",
+                            "formatting_rule": "specific_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["paint", "paints", "Lead", "DDT", "PCB"],
+                            "wordlist_no": ["bly", "plast", "endrin"]
+                        },
+                        {
+                            "termlist_name": "termlist12_4d",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["Dubai Declaration on International Chemicals Management", "Strategic Approach to International Chemicals Management", "SAICM"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist12_4not",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "_comment": "This is a specific phrase included for the Norwegian searches - there are a number of reports with risk assessments for 'herbicide tolerant' GM crops",
+                            "wordlist_en": ["herbicide tolerant"],
                             "wordlist_no": []
                         }
                     ]
                 },
                 {
                     "number": 2,
-                    "logic_rule": "()",
+                    "logic_rule": "(([termlist12_4f] & ([termlist12_4g] | ([termlist12_4a_trunc] & [termlist12_4e_trunc]))) | [termlist12_4h])",
                     "sentence_split": false,
+                    "_comment": "Reuse 4a from above (sustainable OR responsible etc.)",
                     "termlists": [
                         {
-                            "termlist_name": "",
-                            "formatting_rule": "",
+                            "termlist_name": "termlist12_4e_trunc",
+                            "formatting_rule": "specific_trunc",
                             "na": false,
                             "case": false,
-                            "wordlist_en": [],
-                            "wordlist_no": []
+                            "wordlist_en": ["life cycle.*", "lifecycle.*",
+                            "management", "handling", "packaging", "labelling", "storing", "storage", "stored",
+                            "disposal", "dispose", "transport.*", "process.*", "logistics",
+                            "incinerat.*", "combust.*", "collect.*", "treatment", "processing", "processed", "sorting", "sorted"],
+                            "wordlist_no": ["livssyklus.*", "livløp.*", 
+                            "håndter.*", "innpakning", "emballasje", "emballering", "stempel", "merking", "akkredit.*", "sertifi.*", "oppbevar.*", "lagring", 
+                            "avhend.*", "tømming", "prossess", "forsyningskjede", "logistikk",
+                            "innsaml.*", "samling", "behand.*", "prossess.*", "sorter.*", "forbrenning"]
+                        },
+                        {
+                            "termlist_name": "termlist12_4f",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "_comment": "The space after 'litter ' is intentional to stop 'litteratur' (NO)",
+                            "wordlist_en": ["waste", "garbage", "trash", "litter ", "rubbish", "sewage", "sludge", "street sweepings", "construction debris", "demolition debris"],
+                            "wordlist_no": ["avfall", "søppel", "kloakk", " slam", "byggrester"]
+                        },
+                        {
+                            "termlist_name": "termlist12_4g",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["recycl", "reuse", "re-use", "reusing", "re-using",
+                            "refurbish", "re-furbish", "remanufactur", "re-manufactur", "repurpos", "re-purpos",
+                            "compost", "codigest", "co-digest",
+                            "footprint", "cradle to cradle", "cradle-to-cradle", "end of life", "end of chain", "life cycle analysis", "lifecycle analysis"],
+                            "wordlist_no": ["resirkul", "gjenbruk", "ombruk", 
+                            "kompost",
+                            "forspør", "vugge til vugge", "livssyklusanalyser", "livsløpsanalyser"]
+                        },
+                        {
+                            "termlist_name": "termlist12_4h",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["Basel Convention", "Rotterdam Convention", "Stockholm Convention", "Montreal Protocol", "Minamata Convention", "Bamako Convention"],
+                            "wordlist_no": ["Baselkonvensjonen", "Rotterdamkonvensjonen", "Stockholmkonvensjonen", "Minamatakonvensjonen", "Bamakokonvensjonen",
+                            "Basel-konvensjonen", "Rotterdam-konvensjonen", "Stockholm-konvensjonen", "Minamata-konvensjonen", "Bamako-konvensjonen"]
+                        },
+                        {
+                            "termlist_name": "termlist12_4a_trunc",
+                            "formatting_rule": "specific_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": [".*sustainab.*", ".*responsib.*", "environmental.*", ".*ecological.*", "eco", "eco-.*", "green", "safe", "unsafe", "safely", "safety"],
+                            "wordlist_no": ["bærekraft.*", "berekraft.*", "ubærekraftig", "ansvarlig.*", "uansvarlig", "grønne.*", "grønn", "øko", "miljø.*", "trygg", "utrygg", "sikker.*"]
                         }
                     ]
                 },
                 {
                     "number": 3,
-                    "logic_rule": "()",
+                    "logic_rule": "(([termlist12_4i] | [termlist12_4i_trunc]) & [termlist12_4j] & ([termlist12_4c] | [termlist12_4c_trunc] | [termlist12_4f]))",
                     "sentence_split": false,
+                    "_comment": "Reuse phrasedefault12_4f, phrasedefault12_4c and phrasespecific12_4c from phrases 1 and 2 (wastes and chemicals)",
                     "termlists": [
                         {
-                            "termlist_name": "",
-                            "formatting_rule": "",
+                            "termlist_name": "termlist12_4i",
+                            "formatting_rule": "default",
                             "na": false,
                             "case": false,
-                            "wordlist_en": [],
-                            "wordlist_no": []
+                            "wordlist_en": ["reduc", "minim", "decreas", "stopping", "avoid", "prevent", "combat", "tackl", "resist", "lowering", "lowered", "prohibit", "cleanup", "clean up"],
+                            "wordlist_no": ["reduse", "unngå", "hinder", "hindre", "kjempe", "lavere", "forby", "rengjør", "rydde opp"]
+                        },
+                        {
+                            "termlist_name": "termlist12_4i_trunc",
+                            "formatting_rule": "specific_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["stop", "end", "ends", "ending", "ended", "halt", "halting", "lower"],
+                            "wordlist_no": ["stoppe", "avta", "avtar"]
+                        },
+                        {
+                            "termlist_name": "termlist12_4j",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["releas", "emission", "effluent", "discharge", "pollut", "contaminat"],
+                            "wordlist_no": ["utslipp", "forurens", "forurein", "kontamin"]
+                        },
+                        {
+                            "termlist_name": "termlist12_4f",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["waste", "garbage", "trash", "litter ", "rubbish", "sewage", "sludge", "street sweepings", "construction debris", "demolition debris"],
+                            "wordlist_no": ["avfall", "søppel", "kloakk", " slam", "byggrester"]
+                        },
+                        {
+                            "termlist_name": "termlist12_4c",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["chemical", "polish", "cleaning product", "engine oil", "plastic", "nanomaterial", 
+                            "pesticid", "herbicide", "insecticide", "fungicide",
+                            "solvent", "etching solution", "battery", "batteries", "accumulator",
+                            "medicinal residue", "toxic mould",
+                            "Antimony", "Arsenic", "Beryllium", "Cadmium", "Mercury", "Selenium", "Tellurium", "Thallium", "Zinc", "Jarosite", "Hematite", "Copper", "cupric chloride", "organohalogen", 
+                            "heavy metal", "toxic metal", "acrylamide", "persistent organic pollutant", "POP compounds", 
+                            "aldrin", "chlordane", "dieldrin", "heptachlor", "hexachlorobenzen", "mirex", "organochloride",
+                            "polychlorinated biphenyls", "polychlorinated dibenzo-p-dioxin", "polychlorinated dibenzofuran", "toxaphen", "neonicotinoid"],
+                            "wordlist_no": ["kjemikalie", "rengjøringsprodukt", "rengjøringsmid", "desinfeksjonsmid", "motorolje", "mikroplast", "plastpartik", "plastavfall",
+                            "insektmid", "plantevernmid", "batteri", "giftig", "maling", 
+                            "arsenikk", "kadmium", "kvikksølv", "kobber", "tallium",  
+                            "tungmetall", "persistente organiske miljøgift",
+                            "tinnorganiske", "organiske tinnforbindelse",
+                            "bioakkumuler", "dioksin", "neonikotinoid"]
+                        },
+                        {
+                            "termlist_name": "termlist12_4c_trunc",
+                            "formatting_rule": "specific_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["paint", "paints", "Lead", "DDT", "PCB"],
+                            "wordlist_no": ["bly", "plast", "endrin"]
                         }
                     ]
                 },
                 {
                     "number": 4,
-                    "logic_rule": "()",
+                    "logic_rule": "(([termlist12_4k] | [termlist12_4k_trunc]) & [termlist12_4l] & ([termlist12_4c] | [termlist12_4c_trunc] | [termlist12_4f]))",
                     "sentence_split": false,
+                    "_comment": "Reuse phrasedefault12_4f, phrasedefault12_4c and phrasespecific12_4c from phrases 1 and 2 (wastes and chemicals)",
                     "termlists": [
                         {
-                            "termlist_name": "",
+                            "termlist_name": "termlist12_4k",
                             "formatting_rule": "",
                             "na": false,
                             "case": false,
-                            "wordlist_en": [],
-                            "wordlist_no": []
+                            "wordlist_en": ["reduc", "minim", "decreas", "avoid", "prevent", "combat", "tackl", "resist", "lowering", "lowered", "control", "assess", "evaluat", "monitor"],
+                            "wordlist_no": ["reduse", "unngå", "hinder", "hindre", "kjempe", "lavere", "forby","kontroll", "vurder", "evaluering", "overvåk"]
+                        },
+                        {
+                            "termlist_name": "termlist12_4k_trunc",
+                            "formatting_rule": "specific_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["stop", "stopping", "lower"],
+                            "wordlist_no": ["stoppe"]
+                        },
+                        {
+                            "termlist_name": "termlist12_4l",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["health", "wellbeing", "well-being", "risk", "hazard", "danger", "effect"],
+                            "wordlist_no": ["helse", "risiko", "farlig", "miljøfare", "effekt", "påvirk"]
+                        },
+                        {
+                            "termlist_name": "termlist12_4f",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["waste", "garbage", "trash", "litter ", "rubbish", "sewage", "sludge", "street sweepings", "construction debris", "demolition debris"],
+                            "wordlist_no": ["avfall", "søppel", "kloakk", " slam", "byggrester"]
+                        },
+                        {
+                            "termlist_name": "termlist12_4c",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["chemical", "polish", "cleaning product", "engine oil", "plastic", "nanomaterial", 
+                            "pesticid", "herbicide", "insecticide", "fungicide",
+                            "solvent", "etching solution", "battery", "batteries", "accumulator",
+                            "medicinal residue", "toxic mould",
+                            "Antimony", "Arsenic", "Beryllium", "Cadmium", "Mercury", "Selenium", "Tellurium", "Thallium", "Zinc", "Jarosite", "Hematite", "Copper", "cupric chloride", "organohalogen", 
+                            "heavy metal", "toxic metal", "acrylamide", "persistent organic pollutant", "POP compounds", 
+                            "aldrin", "chlordane", "dieldrin", "heptachlor", "hexachlorobenzen", "mirex", "organochloride",
+                            "polychlorinated biphenyls", "polychlorinated dibenzo-p-dioxin", "polychlorinated dibenzofuran", "toxaphen", "neonicotinoid"],
+                            "wordlist_no": ["kjemikalie", "rengjøringsprodukt", "rengjøringsmid", "desinfeksjonsmid", "motorolje", "mikroplast", "plastpartik", "plastavfall",
+                            "insektmid", "plantevernmid", "batteri", "giftig", "maling", 
+                            "arsenikk", "kadmium", "kvikksølv", "kobber", "tallium",  
+                            "tungmetall", "persistente organiske miljøgift",
+                            "tinnorganiske", "organiske tinnforbindelse",
+                            "bioakkumuler", "dioksin", "neonikotinoid"]
+                        },
+                        {
+                            "termlist_name": "termlist12_4c_trunc",
+                            "formatting_rule": "specific_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["paint", "paints", "Lead", "DDT", "PCB"],
+                            "wordlist_no": ["bly", "plast", "endrin"]
                         }
                     ]
                 }
@@ -225,31 +516,164 @@
             "phrases": [
                 {
                     "number": 1,
-                    "logic_rule": "()",
+                    "logic_rule": "(([termlist12_5a] | [termlist12_5b]) & [termlist12_5d]) | ([termlist12_5e_trunc] & ([termlist12_5b] | ([termlist12_5a] & [termlist12_5c])))",
                     "sentence_split": false,
                     "termlists": [
                         {
-                            "termlist_name": "",
-                            "formatting_rule": "",
+                            "termlist_name": "termlist12_5a",
+                            "formatting_rule": "default",
                             "na": false,
                             "case": false,
-                            "wordlist_en": [],
+                            "_comment": "Waste terms with multiple meanings. The space after 'litter ' is intentional to stop 'litteratur' (NO)",
+                            "wordlist_en": ["waste", "sludge", "garbage", "trash", "litter "],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist12_5b",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "_comment": "Waste terms which are generally to do with physical/chemical waste. Most Norwegian terms are covered by 'avfall' (e.g. spesialavfall, landbruksavfall) and don't needs specifying.",
+                            "wordlist_en": ["agrowaste", "solid waste", "bio-waste", "biowaste",
+                            "ewaste", "e-waste", "electronic waste",
+                            "rubbish", "sewage",  "street sweepings", "construction debris"],
+                            "wordlist_no": ["avfall", "søppel", "kloakk", " slam", "byggrester"]
+                        },
+                        {
+                            "termlist_name": "termlist12_5c",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["household", "domestic", "residential", 
+                            "commerce", "commercial", "trade", "business", "office", 
+                            "institution", "schools", "hospital", "municipal", "urban", "cities",
+                            "industr", "manufacturing", "hotel", "restaurant"],
+                            "wordlist_no": ["hushold", "domestik", "privat",
+                            "kommersiel", "bedrift", "kontor", "byggeplass",
+                            "institusjon", "skole", "sykehus", "sjukehus", "kommunal", "byer"]
+                        },
+                        {
+                            "termlist_name": "termlist12_5d",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["generation", "generated"],
+                            "wordlist_no": ["generer"]
+                        },
+                        {
+                            "termlist_name": "termlist12_5e_trunc",
+                            "formatting_rule": "specific_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["reduc.*" , "minimi.*" , "decreas.*" , "stop" , "end" , "ends" , "ended" , "ending" , "eliminat.*",
+                            "avoid.*" , "prevent.*" , "combat.*" , "tackl.*" , "halt.*" , "resist" , "resisting" , "lowering" , "lower" , "lowered"],
                             "wordlist_no": []
                         }
                     ]
                 },
                 {
                     "number": 2,
-                    "logic_rule": "()",
+                    "logic_rule": "(([termlist12_5f] & [termlist12_5g]) | ([termlist12_5h] & [termlist12_5i]) | [termlist12_5j] | ([termlist12_scp4_trunc] & [termlist12_scp5]) | ([termlist12_scp2_trunc] & ([termlist12_5k] | [termlist12_5l])))",
                     "sentence_split": false,
                     "termlists": [
                         {
-                            "termlist_name": "",
-                            "formatting_rule": "",
+                            "termlist_name": "termlist12_5f",
+                            "formatting_rule": "default",
                             "na": false,
                             "case": false,
-                            "wordlist_en": [],
-                            "wordlist_no": []
+                            "wordlist_en": ["recycl", "reuse", "re-use", "reusing", "re-using",
+                            "refurbish", "re-furbish", "remanufactur", "re-manufactur", "repurpos", "re-purpos",
+                            "compost", "codigest", "co-digest",
+                            "resource efficien", "resource-use efficien", "material efficicen", "material-use efficien",
+                            "life cycle", "lifecycle", "footprint", "cradle to cradle", "cradle-to-cradle",
+                            "cleaner production"],
+                            "wordlist_no": ["resirkul", "gjenbruk", "ombruk",
+                            "kompost",
+                            "ressurseffektiv", "materialeffektiv", "effektiv bruk av material", "effektiv bruk av ressurs",
+                            "livssyklusanalyse", "livsløpsvurdering", "fotspor", "vugge til vugge"]
+                        },
+                        {
+                            "termlist_name": "termlist12_5g",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["sidestream", "side-stream", "byproduct", "by-product",
+                            "waste", "garbage", "trash", "litter", "rubbish", "sewage", "sludge", "street sweepings", "construction debris"],
+                            "wordlist_no": ["sidestrøm", "biprodukt",
+                            "avfall", "søppel", "kloakk", " slam", "byggrester"]
+                        },
+                        {
+                            "termlist_name": "termlist12_5h",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["recycl", "reuse", "re-use", "reusing", "re-using",
+                            "refurbish", "re-furbish", "remanufactur", "re-manufactur", "repurpos", "re-purpos",
+                            "compost", "codigest", "co-digest",
+                            "cradle to cradle", "cradle-to-cradle"],
+                            "wordlist_no": ["resirkul", "gjenbruk", "ombruk",
+                            "kompost",
+                            "vugge til vugge"]
+                        },
+                        {
+                            "termlist_name": "termlist12_5i",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["bioeconom", "bio-econom", 
+                            "produc", "consum", "packaging", 
+                            "resource", "material", "matter", "biomass"],
+                            "wordlist_no": ["bioøkonomi", "produksj", "forbruk",
+                            "innpakning", "emballasje", "emballering", 
+                            "ressurs"]
+                        },
+                        {
+                            "termlist_name": "termlist12_5j",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["circular econom", "circular bioeconom", "circular product", "circular consumption", "zero waste"],
+                            "wordlist_no": ["sirkulær økonomi", "sirkulær bioøkonomi", "sirkulær produk", "sirkulær forbruk", "null avfall", "null svinn"]
+                        },
+                        {
+                            "termlist_name": "termlist12_scp4_trunc",
+                            "formatting_rule": "specific_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["utili.*", "use", "usage", "design.*"],
+                            "wordlist_no": ["bruk.*", "forbruk"]
+                        },
+                        {
+                            "termlist_name": "termlist12_scp5",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["sidestream", "side-stream", "byproduct", "by-product"],
+                            "wordlist_no": ["sidestrøm", "biprodukt"]
+                        },
+                        {
+                            "termlist_name": "termlist12_scp2_trunc",
+                            "formatting_rule": "specific_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["green", "eco", "sustainab.*", "responsib.*", "environmental.*", "ecological.*"],
+                            "wordlist_no": ["grønne.*", "grønn", "øko", "bærekraft.*", "berekraft.*", "ansvarlig.*", "miljø.*"]
+                        },
+                        {
+                            "termlist_name": "termlist12_5k",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["footprint", "lifecycle analys", "lifecycle assess", "material lifecycle", "cradle to cradle", "cradle-to-cradle"],
+                            "wordlist_no": ["livssyklusanalyse", "livsløpsvurdering", "fotspor", "vugge til vugge"]
+                        },
+                        {
+                            "termlist_name": "termlist12_5l",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["recycl", "reuse"],
+                            "wordlist_no": ["resirkul", "gjenbruk"]
                         }
                     ]
                 }
@@ -260,7 +684,7 @@
             "phrases": [
                 {
                     "number": 1,
-                    "logic_rule": "((([scp]) | (termlist12_scp2_trunc & termlist12_6a)) & (termlist12_6c | termlist12_6c_trunc))",
+                    "logic_rule": "((([scp]) | ([termlist12_scp2_trunc] & [termlist12_6a])) & ([termlist12_6c] | [termlist12_6c_trunc]))",
                     "sentence_split": false,
                     "_comment": "Here we use the whole scp phrase, and supplement with 6a + scp2",
                     "termlists": [
@@ -305,7 +729,7 @@
                 },
                 {
                     "number": 2,
-                    "logic_rule": "(([termlist12_6d] & ([termlist12_6e | termlist12_6f])) & (termlist12_6c | termlist12_6c_trunc))",
+                    "logic_rule": "(([termlist12_6d] & ([termlist12_6e | [termlist12_6f])) & ([termlist12_6c] | [termlist12_6c_trunc]))",
                     "sentence_split": false,
                     "_comment": "Reuse lists phrasespecific12_6c and phrasedefault12_6c from phrase 1 for companies terms",
                     "termlists": [
@@ -404,7 +828,7 @@
             "phrases": [
                 {
                     "number": 1,
-                    "logic_rule": "(termlist12_8a | ((termlist12_8b | (termlist12_8c & termlist12_8g)) & (termlist12_8d_trunc | (termlist12_8e & termlist12_8f_trunc))))",
+                    "logic_rule": "([termlist12_8a] | (([termlist12_8b] | ([termlist12_8c] & [termlist12_8g])) & ([termlist12_8d_trunc] | ([termlist12_8e] & [termlist12_8f_trunc]))))",
                     "sentence_split": false,
                     "termlists": [
                         {
