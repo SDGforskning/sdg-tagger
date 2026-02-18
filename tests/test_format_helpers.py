@@ -2,6 +2,7 @@ import pytest
 import sys
 import os 
 import mock
+from unittest.mock import patch
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
@@ -384,7 +385,6 @@ def test_format_logic_rules_correct_replacing_logic(mocker, input_logic_rule, ou
     assert result == output_expected
 ##########################################################################
 
-from unittest.mock import patch
 ################ TESTS FOR prepare_regex_search_termlist ################
 # Testcase: test that it correctly calls _format_list_with_pattern with correct inputs
 @patch('src.format_helpers._format_list_with_pattern')
