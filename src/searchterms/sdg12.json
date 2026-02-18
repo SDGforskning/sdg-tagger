@@ -38,7 +38,7 @@
                     "formatting_rule": "specific_trunc",
                     "na": false,
                     "case": false,
-                    "_comment": "truncated as 'eco' causes noise if not. 'Grønn' (NO) is truncated to avoid 'grønnsak'",
+                    "_comment": "truncated as 'eco' causes noise if not. 'Grønn' (NO) is truncated to avoid 'grønnsak'. Duplicated to separate pre-search.",
                     "wordlist_en": ["green", "eco", "eco-.*", "sustainab.*", "responsib.*", "environmental.*", "ecological.*"],
                     "wordlist_no": ["grønne.*", "grønn", "øko", "bærekraft.*", "berekraft.*", "ansvarlig.*", "miljø.*"]
                 },
@@ -61,6 +61,7 @@
                     "formatting_rule": "specific_trunc",
                     "na": false,
                     "case": false,
+                    "_comment": "Duplicated to separate pre-search.",
                     "wordlist_en": ["utili.*", "use", "usage", "using", "design.*"],
                     "wordlist_no": ["bruk.*", "forbruk"]
                 },
@@ -69,6 +70,7 @@
                     "formatting_rule": "default",
                     "na": false,
                     "case": false,
+                    "_comment": "Duplicated to separate pre-search.",
                     "wordlist_en": ["sidestream", "side-stream", "byproduct", "by-product"],
                     "wordlist_no": ["sidestrøm", "biprodukt"]
                 },
@@ -77,6 +79,7 @@
                     "formatting_rule": "default",
                     "na": false,
                     "case": false,
+                    "_comment": "Duplicated to separate pre-search.",
                     "wordlist_en": ["recycl", "reuse", "re-use", "reusing", "re-using", "refurbish", "re-furbish", "remanufactur", "re-manufactur", "repurpos", "re-purpos",
                                     "compost", "codigest", "co-digest",
                                     "resource efficien", "resource-use efficien", "material efficicen", "material-use efficien", "footprint"],
@@ -89,6 +92,7 @@
                     "formatting_rule": "default",
                     "na": false,
                     "case": false,
+                    "_comment": "Duplicated to separate pre-search.",
                     "wordlist_en": ["bioeconom", "bio-econom", "produc", "consum",
                                     "packaging",
                                     "sidestream", "side-stream", "byproduct", "by-product",
@@ -152,6 +156,98 @@
                                     "jordbruk", "landbruk", "havbruk", "fiskeoppdrett"]
                 }
             ]
+        },
+        {
+            "name": "termlist12_scp2_trunc",
+            "logic_rule": "([termlist12_scp2_trunc])",
+            "sentence_split": false,
+            "termlists": [
+                {
+                    "termlist_name": "termlist12_scp2_trunc",
+                    "formatting_rule": "specific_trunc",
+                    "na": false,
+                    "case": false,
+                    "_comment": "truncated as 'eco' causes noise if not. 'Grønn' (NO) is truncated to avoid 'grønnsak'. Duplicated from scp pre-search",
+                    "wordlist_en": ["green", "eco", "eco-.*", "sustainab.*", "responsib.*", "environmental.*", "ecological.*"],
+                    "wordlist_no": ["grønne.*", "grønn", "øko", "bærekraft.*", "berekraft.*", "ansvarlig.*", "miljø.*"]
+                }
+            ]
+        },
+        {
+            "name": "termlist12_scp4_trunc",
+            "logic_rule": "([termlist12_scp4_trunc])",
+            "sentence_split": false,
+            "termlists": [
+                {
+                    "termlist_name": "termlist12_scp4_trunc",
+                    "formatting_rule": "specific_trunc",
+                    "na": false,
+                    "case": false,
+                    "_comment": "Duplicated from scp pre-search",
+                    "wordlist_en": ["utili.*", "use", "usage", "using", "design.*"],
+                    "wordlist_no": ["bruk.*", "forbruk"]
+                }
+            ]
+        },
+        {
+            "name": "termlist12_scp5",
+            "logic_rule": "([termlist12_scp5])",
+            "sentence_split": false,
+            "termlists": [
+                {
+                    "termlist_name": "termlist12_scp5",
+                    "formatting_rule": "default",
+                    "na": false,
+                    "case": false,
+                    "_comment": "Duplicated from scp pre-search",
+                    "wordlist_en": ["sidestream", "side-stream", "byproduct", "by-product"],
+                    "wordlist_no": ["sidestrøm", "biprodukt"]
+                }
+            ]
+        },
+        {
+            "name": "termlist12_scp6",
+            "logic_rule": "([termlist12_scp6])",
+            "sentence_split": false,
+            "termlists": [
+                {
+                    "termlist_name": "termlist12_scp6",
+                    "formatting_rule": "default",
+                    "na": false,
+                    "case": false,
+                    "_comment": "Duplicated from scp pre-search",
+                    "wordlist_en": ["recycl", "reuse", "re-use", "reusing", "re-using", "refurbish", "re-furbish", "remanufactur", "re-manufactur", "repurpos", "re-purpos",
+                                    "compost", "codigest", "co-digest",
+                                    "resource efficien", "resource-use efficien", "material efficicen", "material-use efficien", "footprint"],
+                    "wordlist_no": ["resirkul", "gjenbruk", "ombruk",
+                                    "kompost",
+                                    "ressurseffektiv", "materialeffektiv", "effektiv bruk av material", "effektiv bruk av ressurs", "fotspor"]
+                }
+            ]
+        },
+        {
+            "name": "termlist12_scp7",
+            "logic_rule": "([termlist12_scp7])",
+            "sentence_split": false,
+            "termlists": [
+                {
+                    "termlist_name": "termlist12_scp7",
+                    "formatting_rule": "default",
+                    "na": false,
+                    "case": false,
+                    "_comment": "Duplicated from scp pre-search",
+                    "wordlist_en": ["bioeconom", "bio-econom", "produc", "consum",
+                                    "packaging",
+                                    "sidestream", "side-stream", "byproduct", "by-product",
+                                    "resource", "material", "matter", "biomass",
+                                    "waste", "garbage", "trash"],
+                    "wordlist_no": ["bioøkonom", "produksj", "produkter", "forbruk",
+                                    "innpakning", "emballasje", "emballering", 
+                                    "sidestrøm", "biprodukt",
+                                    "ressurs",
+                                    "avfall", "søppel", "kloakk", " slam"]
+                }
+            ]
         }
     ],
     "targets": [
@@ -213,6 +309,7 @@
                             "formatting_rule": "specific_trunc",
                             "na": false,
                             "case": false,
+                            "_comment": "Duplicated in 12.2 phrase 2, 3 & 4",
                             "wordlist_en": ["manag.*", "extract.*", "practice.*", "resource use", "usage", "consumption", "consume.*",
                                             "govern.*", "development", "administrat.*", "plan", "planning", "policy", "policies"],
                             "wordlist_no": ["forvalt.*", "høsting", "praksis", "bærekraftig bruk", "berekraftig bruk", "ressursbruk", "bruk av ressurs", "forbruk",
@@ -223,7 +320,7 @@
                             "formatting_rule": "default",
                             "na": false,
                             "case": false,
-                            "_comment": "Terms that already indicate USE of resources (2d) - combined with sustainable/eco etc (2a)",
+                            "_comment": "Terms that already indicate USE of resources (2d) - combined with sustainable/eco etc (2a). Duplicated in 12.2 phrase 2, 3 & 4.",
                             "wordlist_en": ["forestry", "silvicult", "arboritcult", "logging",
                                             "mining",
                                             "fishery", "fisheries", "hunting",
@@ -238,7 +335,7 @@
                             "formatting_rule": "default",
                             "na": false,
                             "case": false,
-                            "_comment": "Terms that are just resources (2e) - combined with sustainable/eco (2a) and management/extraction (2c).",
+                            "_comment": "Terms that are just resources (2e) - combined with sustainable/eco (2a) and management/extraction (2c). Duplicated in 12.2 phrase 2, 3 & 4.",
                             "wordlist_en": ["natural resource", "natural material", "renewable resource", "renewable material", "natural capital", "raw material", 
                                             "forest", "woodland", 
                                             "ocean", "marine", "fresh water", "lake", "river", "coastal", "wildlife", 
@@ -255,6 +352,7 @@
                             "formatting_rule": "specific_trunc",
                             "na": false,
                             "case": false,
+                            "_comment": "Duplicated in 12.2 phrase 2, 3 & 4",
                             "wordlist_en": ["land", "soil", "soils", "metal", "metals", "ore", "ores"],
                             "wordlist_no": ["sjø", "hav", "kyst", "kysten", "jord", ".*malm", "malmer"]
                         },
@@ -287,6 +385,7 @@
                             "formatting_rule": "specific_trunc",
                             "na": false,
                             "case": false,
+                            "_comment": "Duplicated to 12.2 phrase 4",
                             "wordlist_en": ["fossil fuel.*", "coal", "oil", "natural gas", "peat", "diesel", "gasoline", "kerosene", "petroleum", "energy resource.*"],
                             "wordlist_no": ["fossilt brensel.*", "fossile brensl.*", "fossilt brennstoff.*", "fossile brennstoff.*", "kull", "olje", "naturgass", "parafin.*", "energiressurs.*"]
                         },
@@ -295,6 +394,7 @@
                             "formatting_rule": "specific_trunc",
                             "na": false,
                             "case": false,
+                            "_comment": "Duplicated from 12.2 phrase 1",
                             "wordlist_en": ["manag.*", "extract.*", "practice.*", "resource use", "usage", "consumption", "consume.*",
                                             "govern.*", "development", "administrat.*", "plan", "planning", "policy", "policies"],
                             "wordlist_no": ["forvalt.*", "høsting", "praksis", "bærekraftig bruk", "berekraftig bruk", "ressursbruk", "bruk av ressurs", "forbruk",
@@ -305,7 +405,7 @@
                             "formatting_rule": "default",
                             "na": false,
                             "case": false,
-                            "_comment": "Terms that already indicate USE of resources (2d) - combined with sustainable/eco etc (2a)",
+                            "_comment": "Terms that already indicate USE of resources (2d) - combined with sustainable/eco etc (2a). Duplicated from 12.2 phrase 1",
                             "wordlist_en": ["forestry", "silvicult", "arboritcult", "logging",
                                             "mining",
                                             "fishery", "fisheries", "hunting",
@@ -320,7 +420,7 @@
                             "formatting_rule": "default",
                             "na": false,
                             "case": false,
-                            "_comment": "Terms that are just resources (2e) - combined with sustainable/eco (2a) and management/extraction (2c).",
+                            "_comment": "Terms that are just resources (2e) - combined with sustainable/eco (2a) and management/extraction (2c). Duplicated from 12.2 phrase 1",
                             "wordlist_en": ["natural resource", "natural material", "renewable resource", "renewable material", "natural capital", "raw material", 
                                             "forest", "woodland", 
                                             "ocean", "marine", "fresh water", "lake", "river", "coastal", "wildlife", 
@@ -337,6 +437,7 @@
                             "formatting_rule": "specific_trunc",
                             "na": false,
                             "case": false,
+                            "_comment": "Duplicated from 12.2 phrase 1",
                             "wordlist_en": ["land", "soil", "soils", "metal", "metals", "ore", "ores"],
                             "wordlist_no": ["sjø", "hav", "kyst", "kysten", "jord", ".*malm", "malmer"]
                         }
@@ -371,7 +472,7 @@
                             "formatting_rule": "default",
                             "na": false,
                             "case": false,
-                            "_comment": "Terms that already indicate USE of resources (2d) - combined with sustainable/eco etc (2a)",
+                            "_comment": "Terms that already indicate USE of resources (2d) - combined with sustainable/eco etc (2a). Duplicated from 12.2 phrase 1",
                             "wordlist_en": ["forestry", "silvicult", "arboritcult", "logging",
                                             "mining",
                                             "fishery", "fisheries", "hunting",
@@ -386,7 +487,7 @@
                             "formatting_rule": "default",
                             "na": false,
                             "case": false,
-                            "_comment": "Terms that are just resources (2e) - combined with sustainable/eco (2a) and management/extraction (2c).",
+                            "_comment": "Terms that are just resources (2e) - combined with sustainable/eco (2a) and management/extraction (2c). Duplicated from 12.2 phrase 1",
                             "wordlist_en": ["natural resource", "natural material", "renewable resource", "renewable material", "natural capital", "raw material", 
                                             "forest", "woodland", 
                                             "ocean", "marine", "fresh water", "lake", "river", "coastal", "wildlife", 
@@ -403,6 +504,7 @@
                             "formatting_rule": "specific_trunc",
                             "na": false,
                             "case": false,
+                            "_comment": "Duplicated from 12.2 phrase 1",
                             "wordlist_en": ["land", "soil", "soils", "metal", "metals", "ore", "ores"],
                             "wordlist_no": ["sjø", "hav", "kyst", "kysten", "jord", ".*malm", "malmer"]
                         }
@@ -443,7 +545,7 @@
                             "formatting_rule": "default",
                             "na": false,
                             "case": false,
-                            "_comment": "Terms that already indicate USE of resources (2d) - combined with sustainable/eco etc (2a)",
+                            "_comment": "Terms that already indicate USE of resources (2d) - combined with sustainable/eco etc (2a). Duplicated from 12.2 phrase 1",
                             "wordlist_en": ["forestry", "silvicult", "arboritcult", "logging",
                                             "mining",
                                             "fishery", "fisheries", "hunting",
@@ -458,7 +560,7 @@
                             "formatting_rule": "default",
                             "na": false,
                             "case": false,
-                            "_comment": "Terms that are just resources (2e) - combined with sustainable/eco (2a) and management/extraction (2c).",
+                            "_comment": "Terms that are just resources (2e) - combined with sustainable/eco (2a) and management/extraction (2c). Duplicated from 12.2 phrase 1",
                             "wordlist_en": ["natural resource", "natural material", "renewable resource", "renewable material", "natural capital", "raw material", 
                                             "forest", "woodland", 
                                             "ocean", "marine", "fresh water", "lake", "river", "coastal", "wildlife", 
@@ -475,6 +577,7 @@
                             "formatting_rule": "specific_trunc",
                             "na": false,
                             "case": false,
+                            "_comment": "Duplicated from 12.2 phrase 1",
                             "wordlist_en": ["land", "soil", "soils", "metal", "metals", "ore", "ores"],
                             "wordlist_no": ["sjø", "hav", "kyst", "kysten", "jord", ".*malm", "malmer"]
                         },
@@ -483,6 +586,7 @@
                             "formatting_rule": "specific_trunc",
                             "na": false,
                             "case": false,
+                            "_comment": "Duplicated from 12.2 phrase 2",
                             "wordlist_en": ["fossil fuel.*", "coal", "oil", "natural gas", "peat", "diesel", "gasoline", "kerosene", "petroleum", "energy resource.*"],
                             "wordlist_no": ["fossilt brensel.*", "fossile brensl.*", "fossilt brennstoff.*", "fossile brennstoff.*", "kull", "olje", "naturgass", "parafin.*", "energiressurs.*"]
                         }
@@ -574,7 +678,7 @@
                             "formatting_rule": "specific_trunc",
                             "na": false,
                             "case": false,
-                            "_comment": "This works ok without the NOT phrase in a title search",
+                            "_comment": "This works ok without the NOT phrase in a title search. Duplicated to 12.3 phrase 2",
                             "wordlist_en": ["loss", "losses", "lost", "waste", "wastage", "spoil.*", "discard.*", "incinerat.*", "perish.*"],
                             "wordlist_no": ["matsvinn.*", "svinn.*", "tap", "tapt", "avfall", "søppel", "kaste.*", "går til spille", "går til grunne"]
                         }
@@ -627,7 +731,7 @@
                             "formatting_rule": "specific_trunc",
                             "na": false,
                             "case": false,
-                            "_comment": "This works ok without the NOT phrase in a title search",
+                            "_comment": "This works ok without the NOT phrase in a title search. Duplicated from 12.4 phrase 1",
                             "wordlist_en": ["loss", "losses", "lost", "waste", "wastage", "spoil.*", "discard.*", "incinerat.*", "perish.*"],
                             "wordlist_no": ["matsvinn.*", "svinn.*", "tap", "tapt", "avfall", "søppel", "kaste.*", "går til spille", "går til grunne"]
                         }
@@ -648,6 +752,7 @@
                             "formatting_rule": "specific_trunc",
                             "na": false,
                             "case": false,
+                            "_comment": "Duplicated to 12.4 phrase 2",
                             "wordlist_en": [".*sustainab.*", ".*responsib.*", "environmental.*", ".*ecological.*", "eco", "eco-.*", "green", "safe", "unsafe", "safely", "safety"],
                             "wordlist_no": ["bærekraft.*", "berekraft.*", "ubærekraftig", "ansvarlig.*", "uansvarlig", "grønne.*", "grønn", "øko", "miljø.*", "trygg", "utrygg", "sikker.*"]
                         },
@@ -678,6 +783,7 @@
                             "formatting_rule": "default",
                             "na": false,
                             "case": false,
+                            "_comment": "Duplicated to 12.4 phrase 2, 3 & 4",
                             "wordlist_en": ["chemical", "polish", "cleaning product", "engine oil", "plastic", "nanomaterial", 
                                             "pesticid", "herbicide", "insecticide", "fungicide",
                                             "solvent", "etching solution", "battery", "batteries", "accumulator",
@@ -698,6 +804,7 @@
                             "formatting_rule": "specific_trunc",
                             "na": false,
                             "case": false,
+                            "_comment": "Duplicated to 12.4 phrase 2, 3 & 4",
                             "wordlist_en": ["paint", "paints", "Lead", "DDT", "PCB"],
                             "wordlist_no": ["bly", "plast", "endrin"]
                         },
@@ -776,6 +883,7 @@
                             "formatting_rule": "specific_trunc",
                             "na": false,
                             "case": false,
+                            "_comment": "Duplicated from 12.4 phrase 1",
                             "wordlist_en": [".*sustainab.*", ".*responsib.*", "environmental.*", ".*ecological.*", "eco", "eco-.*", "green", "safe", "unsafe", "safely", "safety"],
                             "wordlist_no": ["bærekraft.*", "berekraft.*", "ubærekraftig", "ansvarlig.*", "uansvarlig", "grønne.*", "grønn", "øko", "miljø.*", "trygg", "utrygg", "sikker.*"]
                         }
@@ -824,6 +932,7 @@
                             "formatting_rule": "default",
                             "na": false,
                             "case": false,
+                            "_comment": "Duplicated from 12.4 phrase 1",
                             "wordlist_en": ["chemical", "polish", "cleaning product", "engine oil", "plastic", "nanomaterial", 
                                             "pesticid", "herbicide", "insecticide", "fungicide",
                                             "solvent", "etching solution", "battery", "batteries", "accumulator",
@@ -844,6 +953,7 @@
                             "formatting_rule": "specific_trunc",
                             "na": false,
                             "case": false,
+                            "_comment": "Duplicated from 12.4 phrase 1",
                             "wordlist_en": ["paint", "paints", "Lead", "DDT", "PCB"],
                             "wordlist_no": ["bly", "plast", "endrin"]
                         }
@@ -892,6 +1002,7 @@
                             "formatting_rule": "default",
                             "na": false,
                             "case": false,
+                            "_comment": "Duplicated from 12.4 phrase 1",
                             "wordlist_en": ["chemical", "polish", "cleaning product", "engine oil", "plastic", "nanomaterial", 
                                             "pesticid", "herbicide", "insecticide", "fungicide",
                                             "solvent", "etching solution", "battery", "batteries", "accumulator",
@@ -912,6 +1023,7 @@
                             "formatting_rule": "specific_trunc",
                             "na": false,
                             "case": false,
+                            "_comment": "Duplicated from 12.4 phrase 1",
                             "wordlist_en": ["paint", "paints", "Lead", "DDT", "PCB"],
                             "wordlist_no": ["bly", "plast", "endrin"]
                         }
@@ -1044,30 +1156,6 @@
                             "wordlist_no": ["sirkulær økonomi", "sirkulær bioøkonomi", "sirkulær produk", "sirkulær forbruk", "null avfall", "null svinn"]
                         },
                         {
-                            "termlist_name": "termlist12_scp4_trunc",
-                            "formatting_rule": "specific_trunc",
-                            "na": false,
-                            "case": false,
-                            "wordlist_en": ["utili.*", "use", "usage", "design.*"],
-                            "wordlist_no": ["bruk.*", "forbruk"]
-                        },
-                        {
-                            "termlist_name": "termlist12_scp5",
-                            "formatting_rule": "default",
-                            "na": false,
-                            "case": false,
-                            "wordlist_en": ["sidestream", "side-stream", "byproduct", "by-product"],
-                            "wordlist_no": ["sidestrøm", "biprodukt"]
-                        },
-                        {
-                            "termlist_name": "termlist12_scp2_trunc",
-                            "formatting_rule": "specific_trunc",
-                            "na": false,
-                            "case": false,
-                            "wordlist_en": ["green", "eco", "sustainab.*", "responsib.*", "environmental.*", "ecological.*"],
-                            "wordlist_no": ["grønne.*", "grønn", "øko", "bærekraft.*", "berekraft.*", "ansvarlig.*", "miljø.*"]
-                        },
-                        {
                             "termlist_name": "termlist12_5k",
                             "formatting_rule": "default",
                             "na": false,
@@ -1097,18 +1185,11 @@
                     "_comment": "Here we use the whole scp phrase, and supplement with 6a + scp2",
                     "termlists": [
                         {
-                            "termlist_name": "termlist12_scp2_trunc",
-                            "formatting_rule": "specific_trunc",
-                            "na": false,
-                            "case": false,
-                            "wordlist_en": ["green", "eco", "sustainab.*", "responsib.*", "environmental.*", "ecological.*"],
-                            "wordlist_no": ["grønne.*", "grønn", "øko", "bærekraft.*", "berekraft.*", "ansvarlig.*", "miljø.*"]
-                        },
-                        {
                             "termlist_name": "termlist12_6a",
                             "formatting_rule": "default",
                             "na": false,
                             "case": false,
+                            "_comment": "Dulidated to 12.6 phrase 2",
                             "wordlist_en": ["practic", "procedure", "custom", "culture", "praxis", "method", "policy", "policies", "standard", "code of conduct"],
                             "wordlist_no": ["praksis", "kultur", "metoder", "politikk", "retningslinje"]
                         },
@@ -1117,7 +1198,7 @@
                             "formatting_rule": "default",
                             "na": false,
                             "case": false,
-                            "_comment": "'Industri' (NO) has a space after to prevent 'industriasliert' but allow e.g. 'kjemikalieindustri'",
+                            "_comment": "'Industri' (NO) has a space after to prevent 'industriasliert' but allow e.g. 'kjemikalieindustri'. Duplicated to 12.6 phrase 2",
                             "wordlist_en": ["company", "companies", "organisation", "organization", "corporation", "conglomerate", "business", "corporate",
                                             "producer", "industry", "industries", "industrial sector", "manufacturer", "manufacturing sector", "commercial sector",
                                             "institution"],
@@ -1130,6 +1211,7 @@
                             "formatting_rule": "specific_trunc",
                             "na": false,
                             "case": false,
+                            "_comment": "Duplicated to 12.6 phrase 2",
                             "wordlist_en": ["firms", "firm"],
                             "wordlist_no": []
                         }
@@ -1165,6 +1247,37 @@
                             "case": false,
                             "wordlist_en": ["environmental information disclos"],
                             "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist12_6a",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "_comment": "Duplicated from 12.6 phrase 1",
+                            "wordlist_en": ["practic", "procedure", "custom", "culture", "praxis", "method", "policy", "policies", "standard", "code of conduct"],
+                            "wordlist_no": ["praksis", "kultur", "metoder", "politikk", "retningslinje"]
+                        },
+                        {
+                            "termlist_name": "termlist12_6c",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "_comment": "'Industri' (NO) has a space after to prevent 'industriasliert' but allow e.g. 'kjemikalieindustri'",
+                            "wordlist_en": ["company", "companies", "organisation", "organization", "corporation", "conglomerate", "business", "corporate",
+                                            "producer", "industry", "industries", "industrial sector", "manufacturer", "manufacturing sector", "commercial sector",
+                                            "institution"],
+                            "wordlist_no": ["bedrift", "kontor", "organisasjon", "selskap", "konglomerat",
+                                            "industrier", "industrien", "industri ", "industrisektor", "produsent", "produksjonssektor", "kommersiell sektor", "kommersielle sektor", 
+                                            "institusjon"]
+                        },
+                        {
+                            "termlist_name": "termlist12_6c_trunc",
+                            "formatting_rule": "specific_trunc",
+                            "na": false,
+                            "case": false,
+                            "_comment": "Duplicated from 12.6 phrase 1",
+                            "wordlist_en": ["firms", "firm"],
+                            "wordlist_no": []
                         }
                     ]
                 }
@@ -1187,14 +1300,6 @@
                             "wordlist_en": ["sustainable public procurement", "circular public procurement", "green public procurement"],
                             "wordlist_no": ["bærekraftige offentlige anskaffelse", "bærekraftig offentlig anskaffelse", "bærekraftige anskaffelse", "bærekraftig anskaffelse", "bærekraftig fellesavtale", "bærekraftige fellesavtale",
                                             "berekraftige offentlige anskaffelse", "berekraftig offentlig anskaffelse", "berekraftige anskaffelse", "berekraftig anskaffelse", "berekraftig fellesavtale", "berekraftige fellesavtale"]
-                        },
-                        {
-                            "termlist_name": "termlist12_scp2_trunc",
-                            "formatting_rule": "specific_trunc",
-                            "na": false,
-                            "case": false,
-                            "wordlist_en": ["green", "eco", "eco-.*", "sustainab.*", "responsib.*", "environmental.*", "ecological.*", "circular"],
-                            "wordlist_no": ["grønne.*", "grønn", "øko", "bærekraft.*", "berekraft.*", "ansvarlig.*", "miljø.*", "sirkulær"]
                         },
                         {
                             "termlist_name": "termlist12_7b",
@@ -1334,6 +1439,7 @@
                             "formatting_rule": "default",
                             "na": false,
                             "case": false,
+                            "_comment": "Duplicated to 12.a phrase 2",
                             "wordlist_en": ["capacity", "support", "resources",
                                             "infrastructure", "facilities", "tools", 
                                             "research", "scientific", "knowledge", "skills", "competenc", "expertise", "R&D", "innovation", "technolog", "cleantech",
@@ -1362,6 +1468,7 @@
                             "formatting_rule": "specific_trunc",
                             "na": false,
                             "case": false,
+                            "_comment": "Duplicated to 12.a phrase 2",
                             "wordlist_en": ["invest", "fund", "funds", "grant", "grants", "tax", "taxes", "fees", "ODA"],
                             "wordlist_no": ["fond", "bevilgning", "midler", "skatt", "skatter", "FoU"]
                         }
@@ -1412,6 +1519,44 @@
                                             "solcelle", "solkraft", "solenergi", "fotovoltaisk", "solfang", "solsaml", "solvarm", "solpark", "solcellepark",
                                             "geotermisk",
                                             "bioenergi", "biodrivstoff"]
+                        },
+                        {
+                            "termlist_name": "termlist12_a1",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "_comment": "Duplicated from 12.a phrase 1",
+                            "wordlist_en": ["capacity", "support", "resources",
+                                            "infrastructure", "facilities", "tools", 
+                                            "research", "scientific", "knowledge", "skills", "competenc", "expertise", "R&D", "innovation", "technolog", "cleantech",
+                                            "communication", "social network", "information network", "campaign", 
+                                            "awareness", "disseminat", "educat", "training",
+                                            "cooperation", "collaboration", "partnership", 
+                                            "transfer of technolog", "technological transfer", "technology transfer",               
+                                            "expenditure", "investing", "investment", "financ", "spending", "funding", "funder", 
+                                            "incentive", "subsidy", "subsidies", "subsidis", "subsidiz", 
+                                            "development spending", "development aid", "development assistance", "foreign aid", "foreign assistance", "international aid", "international assistance", 
+                                            "policy", "policies", "empower", "strateg", "program", "intervention"],
+                            "wordlist_no": ["kapasitet", "hjelp", "bistand", "støtte", "stønad", "ressurs",
+                                            "infrastruktur", "fasilitet", "verktøy",
+                                            "forskning", "vitenskapelig", "kunnskap", "ferdighet", "kompetans", "ekspertis", "innovasjon", "teknologi",
+                                            "kommunikasjon", "sosiale nettverk", "informasjonsnettverk", "kampanje",
+                                            "bevisst", "utdanning", "opplær",
+                                            "samarbeid", "felles", "partner", 
+                                            "teknologioverføring", "overfører teknologi", "overføre teknologi",
+                                            "utgift", "invester", "finans", "pengebruk", "kapital",
+                                            "insentiv", "subsider", 
+                                            "bistand", "utviklingssamarbeid", "utviklingsstøtte", "utviklingsstønad", "utviklingshjelp", "u-hjelp", "samarbeidsfond",
+                                            "politikk", "retningslin", "myndiggjør", "strategi", "intervensjon"]
+                        },
+                        {
+                            "termlist_name": "termlist12_a1_trunc",
+                            "formatting_rule": "specific_trunc",
+                            "na": false,
+                            "case": false,
+                            "_comment": "Duplicated from 12.a phrase 1",
+                            "wordlist_en": ["invest", "fund", "funds", "grant", "grants", "tax", "taxes", "fees", "ODA"],
+                            "wordlist_no": ["fond", "bevilgning", "midler", "skatt", "skatter", "FoU"]
                         }
                     ]
                 }
@@ -1433,14 +1578,6 @@
                             "case": false,
                             "wordlist_en": ["monitor", "report", "account", "control", "measur", "assess", "evaluat", "survey"],
                             "wordlist_no": ["overvåk", "rapport", "styring", "forvalt", "måling", "evaluer", "vurder", "undersøke"]
-                        },
-                        {
-                            "termlist_name": "termlist12_scp2_trunc",
-                            "formatting_rule": "specific_trunc",
-                            "na": false,
-                            "case": false,
-                            "wordlist_en": ["green", "eco", "eco-.*", "sustainab.*", "responsib.*", "environmental.*", "ecological.*"],
-                            "wordlist_no": ["grønne.*", "grønn", "øko", "bærekraft.*", "berekraft.*", "ansvarlig.*", "miljø.*"]
                         },
                         {
                             "termlist_name": "termlist12_b2",
@@ -1492,6 +1629,7 @@
                             "formatting_rule": "default",
                             "na": false,
                             "case": false,
+                            "_comment": "duplicated in phrase 2",
                             "wordlist_en": ["fossil fuel", "natural gas", "diesel", "gasoline", "kerosene", "petroleum", "energy resource", "conventional energy"],
                             "wordlist_no": ["fossilt brensel", "fossile brensl", "fossilt brennstoff", "fossile brennstoff", "naturgass", "energiressurs", "konvensjonell energi"]
                         },
@@ -1500,6 +1638,7 @@
                             "formatting_rule": "specific_trunc",
                             "na": false,
                             "case": false,
+                            "_comment": "duplicated in phrase 2",
                             "wordlist_en": ["coal", "oil", "peat"],
                             "wordlist_no": ["kull", "kol", "olje", "torv"]
                         }
@@ -1526,6 +1665,24 @@
                             "case": false,
                             "wordlist_en": ["heavy duty", "light duty", "medium duty"],
                             "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist12_c3",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "_comment": "duplicated from phrase 1",
+                            "wordlist_en": ["fossil fuel", "natural gas", "diesel", "gasoline", "kerosene", "petroleum", "energy resource", "conventional energy"],
+                            "wordlist_no": ["fossilt brensel", "fossile brensl", "fossilt brennstoff", "fossile brennstoff", "naturgass", "energiressurs", "konvensjonell energi"]
+                        },
+                        {
+                            "termlist_name": "termlist12_c3_trunc",
+                            "formatting_rule": "specific_trunc",
+                            "na": false,
+                            "case": false,
+                            "_comment": "duplicated from phrase 1",
+                            "wordlist_en": ["coal", "oil", "peat"],
+                            "wordlist_no": ["kull", "kol", "olje", "torv"]
                         }
                     ]
                 }
