@@ -8,7 +8,7 @@ def _check_for_missing_matches(
 ) -> None:
     """Checks if any pattern matches are missing from the list of logic rule results
 
-    This function is used to make sure that a logic rule only references termlists within the same phrase, pre-searches withing
+    This function is used to make sure that a logic rule only references termlists within the same phrase, pre-searches within
     the same file, or country searches. If not it will throw an error, as this is not valid and the search cannot continue
 
     Args:
@@ -25,12 +25,12 @@ def _check_for_missing_matches(
 
         if len(set(matches) - set(all_logic_results)) > 0:
             message = f'''WARNING: The logic rule references a search that was not found! Make sure the logic rule only reference 
-            termlists within the same phrase, pre-searches withing the same file, or country searches.'''
+            termlists within the same phrase, pre-searches within the same file, or country searches.'''
             print(f'\033[1;31m{message}\033[0m')
             raise KeyError
 
 
-def _format_list_with_pattern(pattern: str, search_terms: list[str]):
+def _format_list_with_pattern(pattern: str, search_terms: list[str]) -> str:
     """Formats the terms lists into the given reqex pattern
 
     Args:
@@ -43,7 +43,7 @@ def _format_list_with_pattern(pattern: str, search_terms: list[str]):
     return pattern.format('|'.join(search_terms))
 
 
-def _get_additional_language_terms(term_list: dict[list[str]]) -> list[str]:
+def _get_additional_language_terms(term_list: dict[str, list[str]]) -> list[str]:
     """Check which other languages to add and adds terms for those languages.
 
     Args:
@@ -66,17 +66,17 @@ def _get_additional_language_terms(term_list: dict[list[str]]) -> list[str]:
 
 def format_logic_rules(
     logic_rule_raw: str,
-    result_termlist_search: dict[str:bool],
-    countries_results: dict[str:bool] = None,
-    pre_search_results: dict[str:bool] = None,
+    result_termlist_search: dict[str, bool],
+    countries_results: dict[str, bool] = None,
+    pre_search_results: dict[str, bool] = None,
 ) -> str:
-    """Takes the raw logic rules as is written in the json files and inserts the results from the phrases searches which converts 
+    """Takes the raw logic rules as is written in the json files and inserts the results from the phrases searches which converts
     them to a python-readable format.
 
     Args:
         logic_rule_raw: the unformatted logic rule as it is written in the json files
         result_termlist_search: results from all termlist searches
-        countries_results: results from countries_search (optional)
+        countries_results: results from countries search (optional)
         pre_search_results: results from pre-search (optional)
 
     Returns:
@@ -111,7 +111,7 @@ def prepare_regex_search_termlist(
     term_lists: dict[str, list[str]],
     input_text: str,
 ) -> tuple[str, str]:
-    """Check if any of a list of words exists in a text. Can also include indexes for where in the text each match is found.
+    """Formats the regex search for a termlist given its formatting rules, and lowers the input text if required in the termlist rules.
 
     Args:
         term_lists: lists of terms and the rules to use when searching
