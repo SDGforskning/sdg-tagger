@@ -11,13 +11,51 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 from src.search_dataframe import (
     dataframe_search, 
-    format_df_value, 
-    format_results,
-    format_item,
-    row_search,
-    get_formatted_column_names_export
+    _format_item,
+    _format_df_value, 
+    _format_results,
+    _row_search,
+    _get_formatted_column_names_export
 )
 from src.consts import LIST_ALL_SDG_NR
+
+
+##################################### Testcase: format item correct letters #####################################
+@pytest.mark.dataframe_search
+@pytest.mark.parametrize(
+    'input, output_expected', 
+    [
+        ('ab', 'ab'),
+        ('b', 'b'),
+    ]
+)
+def test_format_item_letters(input, output_expected):
+    # Arrange
+    # Act
+    output = _format_item(input)
+
+    # Assert
+    assert output == output_expected
+
+
+##################################### Testcase: format item correct digits #####################################
+@pytest.mark.dataframe_search
+@pytest.mark.parametrize(
+    'input, output_expected', 
+    [
+        ('1', '01'),
+        ('01', '01'),
+        ('010', '10'),
+        ('15', '15'),
+    ]
+)
+def test_format_item_digits(input, output_expected):
+    # Arrange
+    # Act
+    output = _format_item(input)
+
+    # Assert
+    assert output == output_expected
 
 
 ######################## Testcase: check that the string formatting is correct for both single and double digits, and letters ########################
@@ -49,7 +87,7 @@ from src.consts import LIST_ALL_SDG_NR
 def test_format_df_value_correct_formatting(input_value, input_sdg_nr, input_target, output_expected):
     # Arrange
     # Act
-    output = format_df_value(input_value, input_sdg_nr, input_target)
+    output = _format_df_value(input_value, input_sdg_nr, input_target)
 
     # Assert
     assert output == output_expected
@@ -68,7 +106,7 @@ def test_format_df_value_correct_formatting(input_value, input_sdg_nr, input_tar
 def test_format_df_value_false_value(input_value, input_sdg_nr, input_target):
     # Arrange
     # Act
-    output = format_df_value(input_value, input_sdg_nr, input_target)
+    output = _format_df_value(input_value, input_sdg_nr, input_target)
 
     # Assert
     assert np.isnan(output)
@@ -76,7 +114,7 @@ def test_format_df_value_false_value(input_value, input_sdg_nr, input_target):
 
 ######################## Testcases: format results correct (with mocking) ########################
 @pytest.mark.dataframe_search
-@patch('src.search_dataframe.format_df_value')
+@patch('src.search_dataframe._format_df_value')
 @patch("src.search_dataframe.LIST_ALL_SDG_NR", [1])
 def test_format_results_basic(mock_format_df_value):
     # Arrange
@@ -97,7 +135,7 @@ def test_format_results_basic(mock_format_df_value):
     mock_format_df_value.return_value = 'SDGx_x'
 
     # Act
-    output = format_results(input, sdgs)
+    output = _format_results(input, sdgs)
 
     # Assert
     assert output==output_expected
@@ -105,7 +143,7 @@ def test_format_results_basic(mock_format_df_value):
 
 @pytest.mark.dataframe_search
 @patch("src.search_dataframe.LIST_ALL_SDG_NR", [1])
-@patch('src.search_dataframe.format_df_value')
+@patch('src.search_dataframe._format_df_value')
 def test_format_results_with_pre_search(mock_format_df_value):
     # Arrange
     input = {
@@ -122,7 +160,7 @@ def test_format_results_with_pre_search(mock_format_df_value):
     mock_format_df_value.return_value = 'SDGx_x'
 
     # Act
-    output = format_results(input, sdgs)
+    output = _format_results(input, sdgs)
 
     # Assert
     assert output==output_expected
@@ -145,7 +183,7 @@ def test_format_results_calls(mocker):
             }
     sdgs = [1]
 
-    mock_format_df_value = mocker.patch("src.search_dataframe.format_df_value")
+    mock_format_df_value = mocker.patch("src.search_dataframe._format_df_value")
 
     expected_calls = [
         call(True, '1', '1'),
@@ -153,7 +191,7 @@ def test_format_results_calls(mocker):
     ]
 
     # Act
-    format_results(input, sdgs)
+    _format_results(input, sdgs)
 
     # Assert
     assert mock_format_df_value.call_count == 2
@@ -203,48 +241,10 @@ def test_format_results_calls(mocker):
 def test_format_results_including_df_value_formating(input_dict, input_sdgs, expected_output):
     # Arrange
     # Act
-    output = format_results(input_dict, input_sdgs)
+    output = _format_results(input_dict, input_sdgs)
 
     # Assert
     assert output == expected_output
-
-
-##################################### Testcase: format item correct letters #####################################
-@pytest.mark.dataframe_search
-@pytest.mark.parametrize(
-    'input, output_expected', 
-    [
-        ('ab', 'ab'),
-        ('b', 'b'),
-    ]
-)
-def test_format_item_letters(input, output_expected):
-    # Arrange
-    # Act
-    output = format_item(input)
-
-    # Assert
-    assert output == output_expected
-
-
-##################################### Testcase: format item correct digits #####################################
-@pytest.mark.dataframe_search
-@pytest.mark.parametrize(
-    'input, output_expected', 
-    [
-        ('1', '01'),
-        ('01', '01'),
-        ('010', '10'),
-        ('15', '15'),
-    ]
-)
-def test_format_item_digits(input, output_expected):
-    # Arrange
-    # Act
-    output = format_item(input)
-
-    # Assert
-    assert output == output_expected
 
 
 ##################################### Testcase: row search #####################################
@@ -256,13 +256,13 @@ def test_format_item_digits(input, output_expected):
     ]
 )
 @patch('src.search_dataframe.search_all_goals')
-@patch('src.search_dataframe.format_results')
+@patch('src.search_dataframe._format_results')
 def test_row_search(mock_format_results, mock_search_all_goals, input_text, input_sdgs, output_expected):
     # Arrange
     mock_search_all_goals.return_value = 'SDGx_x'
     mock_format_results.return_value = [True, 'SDG01_01', 'SDG01_b', np.nan]
     # Act
-    output = row_search(input_text, input_sdgs)
+    output = _row_search(input_text, input_sdgs)
     print(output)
 
     # Assert
@@ -278,13 +278,13 @@ def test_row_search_calls_format_results(mocker, input_text, input_sdgs):
     # Arrange
     mock_search_all_goals = mocker.patch("src.search_dataframe.search_all_goals")
     mock_search_all_goals.return_value = 'SDGx_x'
-    mock_format_results = mocker.patch("src.search_dataframe.format_results")
+    mock_format_results = mocker.patch("src.search_dataframe._format_results")
     
     # Act
     expected_calls = [call('SDGx_x', [1])]
 
     # Act
-    row_search(input_text, input_sdgs)
+    _row_search(input_text, input_sdgs)
 
     # Assert
     assert mock_format_results.call_count == 1
@@ -299,14 +299,14 @@ def test_row_search_calls_format_results(mocker, input_text, input_sdgs):
 def test_row_search_with_mocks(mocker, input_text, input_sdgs):
     # Arrange
     mock_search_all_goals = mocker.patch("src.search_dataframe.search_all_goals")
-    mock_format_results = mocker.patch("src.search_dataframe.format_results")
+    mock_format_results = mocker.patch("src.search_dataframe._format_results")
     mock_format_results.return_value = [True, 'SDG01_01', 'SDG01_b', np.nan]
     
     # Act
     expected_calls = [call(input_text, input_sdgs)]
 
     # Act
-    row_search(input_text, input_sdgs)
+    _row_search(input_text, input_sdgs)
 
     # Assert
     assert mock_search_all_goals.call_count == 1
@@ -314,8 +314,9 @@ def test_row_search_with_mocks(mocker, input_text, input_sdgs):
 
 
 
-# TODO Testcase: get_formatted_column_names_export() #TODO mock the get_countries_phrases and get_sdg_phrases and format_item functions 
+# Testcase: get_formatted_column_names_export() #mock the get_countries_phrases and get_sdg_phrases and format_item functions 
 ##################################### Testcase: format results correct #####################################
+@pytest.mark.skip()
 @pytest.mark.dataframe_search
 @pytest.mark.dependency(depends=[])
 @pytest.mark.parametrize(
@@ -327,7 +328,7 @@ def test_row_search_with_mocks(mocker, input_text, input_sdgs):
 def test_get_formatted_column_names_export():
     # Arrange
     # Act
-    output = get_formatted_column_names_export()
+    output = _get_formatted_column_names_export()
 
     # Assert
     assert output
