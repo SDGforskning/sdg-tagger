@@ -67,8 +67,8 @@ def _get_additional_language_terms(term_list: dict[str, list[str]]) -> list[str]
 def format_logic_rules(
     logic_rule_raw: str,
     result_termlist_search: dict[str, bool],
-    countries_results: dict[str, bool] = None,
-    pre_search_results: dict[str, bool] = None,
+    countries_results: dict[str, bool] = {},
+    pre_search_results: dict[str, bool] = {},
 ) -> str:
     """Takes the raw logic rules as is written in the json files and inserts the results from the phrases searches which converts
     them to a python-readable format.
@@ -92,7 +92,7 @@ def format_logic_rules(
         for key in pre_search_results.keys():
             all_logic_results[key] = pre_search_results[key]
 
-    pattern = r"\[[^\[\]]*\]"
+    pattern = r'\[[^\[\]]*\]'
 
     _check_for_missing_matches(pattern, logic_rule_raw, all_logic_results)
 
