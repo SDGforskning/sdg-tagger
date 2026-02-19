@@ -57,8 +57,8 @@ def _is_logic_rule_true(
     Args:
         termlist_results: all the boolean results for each termlist
         logic_rule_raw: the logic rule to be evaluated
-        countries_results:
-        pre_search_results:
+        countries_results: a dict with bool results for each countries search
+        pre_search_results: a dict with bool results for each presearch (that might be) referenced in the search_phrase
 
     Returns:
         the boolean result for the search
@@ -113,8 +113,8 @@ def search_for_phrase_unindexed(
         termlists: all the term lists used in the logic rule
         input_text: the text to search in
         logic_rule_raw: the logic rule to evaluate on
-        countries_results:
-        pre_search_results: a dict withbool results for each presearch in the p
+        countries_results: a dict with bool results for each countries search
+        pre_search_results: a dict with bool results for each presearch (that might be) referenced in the search_phrase
 
     Returns:
         bool: the result of the search on the input text
