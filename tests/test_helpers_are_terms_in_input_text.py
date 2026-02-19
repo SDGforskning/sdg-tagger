@@ -9,16 +9,16 @@ from src.helpers import _are_terms_in_input_text
 
 termlists = [
     {
-        "termlist_name": "Test1",
-        "wordlist_en": ["ONE", "Two"],
-        "formatting_rule": "DEFAULT",
-        "case": True,
+        'termlist_name': 'Test1',
+        'wordlist_en': ['ONE', 'Two'],
+        'formatting_rule': 'DEFAULT',
+        'case': True,
     },
     {
-        "termlist_name": "Test2",
-        "wordlist_en": ["Three", "FOUR"],
-        "formatting_rule": "DEFAULT",
-        "case": False,
+        'termlist_name': 'Test2',
+        'wordlist_en': ['Three', 'FOUR'],
+        'formatting_rule': 'DEFAULT',
+        'case': False,
     },
 ]
 input_text = 'Text with UPPERCASE'
@@ -37,7 +37,7 @@ def test_are_terms_in_input_text(
     ]
     mocker_pattern_search_boolean.side_effect = [False, False]
 
-    output_excpected = {"Test1": False, "Test2": False}
+    output_excpected = {'Test1': False, 'Test2': False}
 
     # Act
     output = _are_terms_in_input_text(termlists, input_text)

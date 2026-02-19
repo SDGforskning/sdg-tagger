@@ -12,20 +12,20 @@ from src.helpers import format_logic_rules
     'input, output_text', 
     [
         (
-            "([termlist1_ba] | [termlist1_ba_trunc]) & [termlist1_bb] | ([termlist1_bc] & ([termlist1_bd] | [termlist1_bd_trunc]))", 
-            "(True or True) and True or (True and (True or True))"
+            '([termlist1_ba] | [termlist1_ba_trunc]) & [termlist1_bb] | ([termlist1_bc] & ([termlist1_bd] | [termlist1_bd_trunc]))', 
+            '(True or True) and True or (True and (True or True))'
          ),
     ]
 )
 def test_format_logic_rules_all_true(input, output_text):
     # Arrange
     dict = {
-        "termlist1_ba": True,
-        "termlist1_ba_trunc": True,
-        "termlist1_bb": True,
-        "termlist1_bc": True,
-        "termlist1_bd": True,
-        "termlist1_bd_trunc": True,
+        'termlist1_ba': True,
+        'termlist1_ba_trunc': True,
+        'termlist1_bb': True,
+        'termlist1_bc': True,
+        'termlist1_bd': True,
+        'termlist1_bd_trunc': True,
     }
     # Act
     result = format_logic_rules(input, dict)
@@ -37,20 +37,20 @@ def test_format_logic_rules_all_true(input, output_text):
     'input, output_text', 
     [
         (
-            "([termlist1_ba] | [termlist1_ba_trunc]) & [termlist1_bb] | ([termlist1_bc] & not ([termlist1_bd] | [termlist1_bd_trunc]))", 
-            "(False or False) and False or (False and not (False or False))"
+            '([termlist1_ba] | [termlist1_ba_trunc]) & [termlist1_bb] | ([termlist1_bc] & not ([termlist1_bd] | [termlist1_bd_trunc]))', 
+            '(False or False) and False or (False and not (False or False))'
          ),
     ]
 )
 def test_format_logic_rules_all_false(input, output_text):
     # Arrange
     dict = {
-        "termlist1_ba": False,
-        "termlist1_ba_trunc": False,
-        "termlist1_bb": False,
-        "termlist1_bc": False,
-        "termlist1_bd": False,
-        "termlist1_bd_trunc": False,
+        'termlist1_ba': False,
+        'termlist1_ba_trunc': False,
+        'termlist1_bb': False,
+        'termlist1_bc': False,
+        'termlist1_bd': False,
+        'termlist1_bd_trunc': False,
     }
     # Act
     result = format_logic_rules(input, dict)
@@ -63,20 +63,20 @@ def test_format_logic_rules_all_false(input, output_text):
     'input, output_text', 
     [
         (
-            "([termlist1_ba] | [termlist1_ba_trunc]) & [termlist1_bb] | ([termlist1_bc] & ([termlist1_bd] | [termlist1_bd_trunc]))", 
-            "(True or False) and True or (True and (False or True))"
+            '([termlist1_ba] | [termlist1_ba_trunc]) & [termlist1_bb] | ([termlist1_bc] & ([termlist1_bd] | [termlist1_bd_trunc]))', 
+            '(True or False) and True or (True and (False or True))'
          ),
     ]
 )
 def test_format_logic_rules_combined_true_false(input, output_text):
     # Arrange
     dict = {
-        "termlist1_ba": True,
-        "termlist1_ba_trunc": False,
-        "termlist1_bb": True,
-        "termlist1_bc": True,
-        "termlist1_bd": False,
-        "termlist1_bd_trunc": True,
+        'termlist1_ba': True,
+        'termlist1_ba_trunc': False,
+        'termlist1_bb': True,
+        'termlist1_bc': True,
+        'termlist1_bd': False,
+        'termlist1_bd_trunc': True,
     }
     # Act
     result = format_logic_rules(input, dict)
@@ -92,23 +92,23 @@ def test_format_logic_rules_combined_true_false(input, output_text):
     'input_logic_rule, output_text', 
     [
         (
-            "([termlist1_ba] & [LDC])", 
-            "(True and True)"
+            '([termlist1_ba] & [LDC])', 
+            '(True and True)'
          ),
     ]
 )
 def test_format_logic_rules_countries(input_logic_rule, output_text):
     # Arrange
     termlist_results = {
-        "termlist1_ba": True,
-        "termlist1_ba_trunc": True,
-        "termlist1_bb": True,
+        'termlist1_ba': True,
+        'termlist1_ba_trunc': True,
+        'termlist1_bb': True,
     }
     country_results = {
-        "LDC": True,
-        "SIDS": False,
-        "LDS": False,
-        "LMIC": False,
+        'LDC': True,
+        'SIDS': False,
+        'LDS': False,
+        'LMIC': False,
     }
 
     # Act
@@ -128,20 +128,20 @@ def test_format_logic_rules_countries(input_logic_rule, output_text):
     'input_logic_rule, output_text', 
     [
         (
-            "([termlist1_ba] & [marine])", 
-            "(True and True)"
+            '([termlist1_ba] & [marine])', 
+            '(True and True)'
          ),
     ]
 )
 def test_format_logic_rules_countries(input_logic_rule, output_text):
     # Arrange
     termlist_results = {
-        "termlist1_ba": True,
-        "termlist1_ba_trunc": True,
-        "termlist1_bb": True,
+        'termlist1_ba': True,
+        'termlist1_ba_trunc': True,
+        'termlist1_bb': True,
     }
     pre_search_result = {
-        "marine": True,
+        'marine': True,
     }
 
     # Act
@@ -160,26 +160,26 @@ def test_format_logic_rules_countries(input_logic_rule, output_text):
     'input_logic_rule, output_text', 
     [
         (
-            "([termlist1_ba] & [LDC] & [Terrestial])", 
-            "(True and True and True)"
+            '([termlist1_ba] & [LDC] & [Terrestial])', 
+            '(True and True and True)'
          ),
     ]
 )
 def test_format_logic_rules_countries(input_logic_rule, output_text):
     # Arrange
     termlist_results = {
-        "termlist1_ba": True,
-        "termlist1_ba_trunc": True,
-        "termlist1_bb": True,
+        'termlist1_ba': True,
+        'termlist1_ba_trunc': True,
+        'termlist1_bb': True,
     }
     country_results = {
-        "LDC": True,
-        "SIDS": False,
-        "LDS": False,
-        "LMIC": False,
+        'LDC': True,
+        'SIDS': False,
+        'LDS': False,
+        'LMIC': False,
     }
     pre_search_result = {
-        "Terrestial": True,
+        'Terrestial': True,
     }
 
     # Act
@@ -197,15 +197,15 @@ def test_format_logic_rules_countries(input_logic_rule, output_text):
 @pytest.mark.format_logic_rules
 def test_format_logic_rules_missing_referenced_termlist():
     # Arrange
-    logic_rule = "([termlist1_ba] & [LDC])"
+    logic_rule = '([termlist1_ba] & [LDC])'
     termlist_results = {
-        "termlist1_ba_trunc": True,
+        'termlist1_ba_trunc': True,
     }
     country_results = {
-        "LDC": True,
-        "SIDS": False,
-        "LDS": False,
-        "LMIC": False,
+        'LDC': True,
+        'SIDS': False,
+        'LDS': False,
+        'LMIC': False,
     }
 
     # Act
@@ -220,13 +220,13 @@ def test_format_logic_rules_missing_referenced_termlist():
 @pytest.mark.format_logic_rules
 def test_format_logic_rules_missing_referenced_country():
     # Arrange
-    logic_rule = "([termlist1_ba_trunc] & [LDS])"
+    logic_rule = '([termlist1_ba_trunc] & [LDS])'
     termlist_results = {
-        "termlist1_ba_trunc": True,
+        'termlist1_ba_trunc': True,
     }
     country_results = {
-        "LDC": True,
-        "SIDS": False,
+        'LDC': True,
+        'SIDS': False,
     }
 
     # Act
@@ -241,15 +241,15 @@ def test_format_logic_rules_missing_referenced_country():
 @pytest.mark.format_logic_rules
 def test_format_logic_rules_missing_referenced_presearch_dict():
     # Arrange
-    logic_rule = "([termlist1_ba_trunc] & [marine])"
+    logic_rule = '([termlist1_ba_trunc] & [marine])'
     termlist_results = {
-        "termlist1_ba_trunc": True,
+        'termlist1_ba_trunc': True,
     }
     country_results = {
-        "LDC": True,
-        "SIDS": False,
-        "LDS": False,
-        "LMIC": False,
+        'LDC': True,
+        'SIDS': False,
+        'LDS': False,
+        'LMIC': False,
     }
 
     # Act
@@ -264,18 +264,18 @@ def test_format_logic_rules_missing_referenced_presearch_dict():
 @pytest.mark.format_logic_rules
 def test_format_logic_rules_missing_referenced_presearch():
     # Arrange
-    logic_rule =  "([termlist15_a] & [Terrestial_double_NOT])"
+    logic_rule =  '([termlist15_a] & [Terrestial_double_NOT])'
     termlist_results = {
-        "termlist15_a": True,
+        'termlist15_a': True,
     }
     country_results = {
-        "LDC": True,
-        "SIDS": False,
-        "LDS": False,
-        "LMIC": False,
+        'LDC': True,
+        'SIDS': False,
+        'LDS': False,
+        'LMIC': False,
     }
     pre_search_result = {
-        "Terrestial": True,
+        'Terrestial': True,
     }
 
     # Act
