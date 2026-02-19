@@ -115,19 +115,19 @@ def test_format_df_value_false_value(input_value, input_sdg_nr, input_target):
 ######################## Testcases: format results correct (with mocking) ########################
 @pytest.mark.dataframe_search
 @patch('src.search_dataframe._format_df_value')
-@patch("src.search_dataframe.LIST_ALL_SDG_NR", [1])
+@patch('src.search_dataframe.LIST_ALL_SDG_NR', [1])
 def test_format_results_basic(mock_format_df_value):
     # Arrange
     input = {
-                "countries": {"LDC": True, "SIDS": False, "LDS": False, "LMIC": True},
-                "1": {
-                    "sdg_number": "1",
-                    "pre_search": {},
-                    "targets": {
-                        "1": {"1": True},
-                        "b": {"1": True}
+                'countries': {'LDC': True, 'SIDS': False, 'LDS': False, 'LMIC': True},
+                '1': {
+                    'sdg_number': '1',
+                    'pre_search': {},
+                    'targets': {
+                        '1': {'1': True},
+                        'b': {'1': True}
                     },
-                    "mentions": False
+                    'mentions': False
                 }
             }
     sdgs = [1]
@@ -142,17 +142,17 @@ def test_format_results_basic(mock_format_df_value):
     
 
 @pytest.mark.dataframe_search
-@patch("src.search_dataframe.LIST_ALL_SDG_NR", [1])
+@patch('src.search_dataframe.LIST_ALL_SDG_NR', [1])
 @patch('src.search_dataframe._format_df_value')
 def test_format_results_with_pre_search(mock_format_df_value):
     # Arrange
     input = {
-                "countries": {"LDC": True, "SIDS": False, "LDS": False, "LMIC": True},
-                "1": {
-                    "sdg_number": "1",
-                    "pre_search": {"pre": True},
-                    "targets": {"1": {"1": True}},
-                    "mentions": False
+                'countries': {'LDC': True, 'SIDS': False, 'LDS': False, 'LMIC': True},
+                '1': {
+                    'sdg_number': '1',
+                    'pre_search': {'pre': True},
+                    'targets': {'1': {'1': True}},
+                    'mentions': False
                 }
             }
     sdgs = [1]
@@ -168,22 +168,22 @@ def test_format_results_with_pre_search(mock_format_df_value):
 
 ################### Testcase: check that format_df_values was called with correct values ###################
 @pytest.mark.dataframe_search
-@patch("src.search_dataframe.LIST_ALL_SDG_NR", [1])
+@patch('src.search_dataframe.LIST_ALL_SDG_NR', [1])
 def test_format_results_calls(mocker):
     # Arrange
     input = {
-                "countries": {"LDC": True, "SIDS": False, "LDS": False, "LMIC": True},
-                "1": {
-                    "sdg_number": "1",
-                    "targets": {
-                        "1": {"1": True, "2": False, "3": True},
-                        "b": {"1": False, "2": False, "3": False}
+                'countries': {'LDC': True, 'SIDS': False, 'LDS': False, 'LMIC': True},
+                '1': {
+                    'sdg_number': '1',
+                    'targets': {
+                        '1': {'1': True, '2': False, '3': True},
+                        'b': {'1': False, '2': False, '3': False}
                     }
                 }
             }
     sdgs = [1]
 
-    mock_format_df_value = mocker.patch("src.search_dataframe._format_df_value")
+    mock_format_df_value = mocker.patch('src.search_dataframe._format_df_value')
 
     expected_calls = [
         call(True, '1', '1'),
@@ -204,12 +204,12 @@ def test_format_results_calls(mocker):
     'input_dict, input_sdgs, expected_output', 
     [
         (
-            {"countries": {"LDC": True, "SIDS": False, "LDS": False, "LMIC": True},
-                "1": {
-                    "sdg_number": "1",
-                    "targets": {
-                        "1": {"1": True, "2": False, "3": True},
-                        "b": {"1": False, "2": False, "3": False}
+            {'countries': {'LDC': True, 'SIDS': False, 'LDS': False, 'LMIC': True},
+                '1': {
+                    'sdg_number': '1',
+                    'targets': {
+                        '1': {'1': True, '2': False, '3': True},
+                        'b': {'1': False, '2': False, '3': False}
                     }
                 }
             },
@@ -217,18 +217,18 @@ def test_format_results_calls(mocker):
             [True, False, False, True, 'SDG01_01', np.nan]
         ),
         (
-            {"countries": {"LDC": True},
-                "1": {
-                    "sdg_number": "1",
-                    "targets": {
-                        "1": {"1": True},
-                        "b": {"1": False, "2": True, "3": False}
+            {'countries': {'LDC': True},
+                '1': {
+                    'sdg_number': '1',
+                    'targets': {
+                        '1': {'1': True},
+                        'b': {'1': False, '2': True, '3': False}
                     }
                 },
-                "15": {
-                    "sdg_number": "15",
-                    "targets": {
-                        "1": {"1": True}
+                '15': {
+                    'sdg_number': '15',
+                    'targets': {
+                        '1': {'1': True}
                     }
                 }
             },
@@ -237,7 +237,7 @@ def test_format_results_calls(mocker):
         ),
     ]
 )
-@patch("src.search_dataframe.LIST_ALL_SDG_NR", [1, 15])
+@patch('src.search_dataframe.LIST_ALL_SDG_NR', [1, 15])
 def test_format_results_including_df_value_formating(input_dict, input_sdgs, expected_output):
     # Arrange
     # Act
@@ -276,9 +276,9 @@ def test_row_search(mock_format_results, mock_search_all_goals, input_text, inpu
 )
 def test_row_search_calls_format_results(mocker, input_text, input_sdgs):
     # Arrange
-    mock_search_all_goals = mocker.patch("src.search_dataframe.search_all_goals")
+    mock_search_all_goals = mocker.patch('src.search_dataframe.search_all_goals')
     mock_search_all_goals.return_value = 'SDGx_x'
-    mock_format_results = mocker.patch("src.search_dataframe._format_results")
+    mock_format_results = mocker.patch('src.search_dataframe._format_results')
     
     # Act
     expected_calls = [call('SDGx_x', [1])]
@@ -298,8 +298,8 @@ def test_row_search_calls_format_results(mocker, input_text, input_sdgs):
 )
 def test_row_search_with_mocks(mocker, input_text, input_sdgs):
     # Arrange
-    mock_search_all_goals = mocker.patch("src.search_dataframe.search_all_goals")
-    mock_format_results = mocker.patch("src.search_dataframe._format_results")
+    mock_search_all_goals = mocker.patch('src.search_dataframe.search_all_goals')
+    mock_format_results = mocker.patch('src.search_dataframe._format_results')
     mock_format_results.return_value = [True, 'SDG01_01', 'SDG01_b', np.nan]
     
     # Act
@@ -360,7 +360,7 @@ sdg_columns = {
         )
     ]
 )
-@pytest.mark.skip(reason="Should be added once all the SDG json files are complete.")
+@pytest.mark.skip(reason='Should be added once all the SDG json files are complete.')
 def test_dataframe_search(input_data, input_column):
     # Arrange
     input_df = pd.DataFrame(input_data)
