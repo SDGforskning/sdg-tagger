@@ -153,11 +153,11 @@ def run_all_termlist_searches_in_list_of_phrases_bool(
 
         sentence_split = False
         if 'sentence_split' in search_phrase.keys():
-            if search_phrase['sentence_split'] == 'True':
+            if search_phrase['sentence_split'] == True:
                 sentence_split = True
-
+        
         if sentence_split:
-            sentences = input_text.split(". ")
+            sentences = re.split(r'[?!.]', input_text)
             phrase_sentence_results = []
             for sentence in sentences:
                 sentence_result = search_for_phrase_unindexed(
