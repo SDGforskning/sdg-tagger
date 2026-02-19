@@ -19,9 +19,7 @@ def run_goal_mentions_search(mentions_search: dict, input_text: str) -> bool:
         A boolean for the mentions search result
     """
     mentions_result = search_for_phrase_unindexed(
-        mentions_search['termlists'], 
-        input_text, 
-        mentions_search['logic_rule']
+        mentions_search['termlists'], input_text, mentions_search['logic_rule']
     )
 
     return mentions_result
@@ -41,10 +39,10 @@ def run_all_country_searches(
     results = {}
     for country_search in COUNTRIES:
         results[country_search['name']] = search_for_phrase_unindexed(
-                country_search['termlists'], 
-                input_text,
-                country_search['logic_rule'],
-                )
+            country_search['termlists'],
+            input_text,
+            country_search['logic_rule'],
+        )
 
     return results
 
@@ -65,18 +63,18 @@ def run_pre_searches(
     results = {}
     for search in pre_searches:
         results[search['name']] = search_for_phrase_unindexed(
-                search['termlists'], 
-                input_text,
-                search['logic_rule'],
-                )
+            search['termlists'],
+            input_text,
+            search['logic_rule'],
+        )
 
     return results
-        
+
 
 def search_all_targets_in_goal(
     sdg_nr: int,
     input_text: str,
-    countries: dict[str, bool],    
+    countries: dict[str, bool],
 ) -> dict[str, Any]:
     """Perform search on all targets in a goal for a given text
 
@@ -94,11 +92,13 @@ def search_all_targets_in_goal(
     results['sdg_number'] = sdg_nr
 
     pre_searches, sdg_all_targets, mentions_search = get_sdg_phrases(sdg_nr)
-    
+
     pre_search_result = run_pre_searches(pre_searches, input_text)
     results['pre_search'] = pre_search_result
 
-    results['targets'] = run_all_targets_in_goal_search(sdg_all_targets, input_text, countries, pre_search_result)
+    results['targets'] = run_all_targets_in_goal_search(
+        sdg_all_targets, input_text, countries, pre_search_result
+    )
 
     results['mentions'] = run_goal_mentions_search(mentions_search, input_text)
 
@@ -106,9 +106,9 @@ def search_all_targets_in_goal(
 
 
 def search_in_text_for_one_sdg(
-        sdg_nr: int,
-        input_text: str,
-    ) -> dict[str, Any]:
+    sdg_nr: int,
+    input_text: str,
+) -> dict[str, Any]:
     """performs the search for one sdg on one text
 
     Args:
@@ -123,7 +123,9 @@ def search_in_text_for_one_sdg(
     return results
 
 
-def search_all_goals(text: str, sdg_list: list[int] = LIST_ALL_SDG_NR) -> dict[str, dict[str, Any]]:
+def search_all_goals(
+    text: str, sdg_list: list[int] = LIST_ALL_SDG_NR
+) -> dict[str, dict[str, Any]]:
     """Search for all the goals in a text
 
     Args:
@@ -143,4 +145,3 @@ def search_all_goals(text: str, sdg_list: list[int] = LIST_ALL_SDG_NR) -> dict[s
         results[str(sdg)] = sdg_result
 
     return results
-
