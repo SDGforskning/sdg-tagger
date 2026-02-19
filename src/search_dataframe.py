@@ -40,7 +40,7 @@ def _format_df_value(value: bool, sdg_nr: str, target: str) -> str | float:
         target: the target number or character for the return string
 
     Returns
-        the formatted string, or nan if the result was False
+        the formatted string, or np.nan if the result was False
     """
     if value == False:
         return np.nan
