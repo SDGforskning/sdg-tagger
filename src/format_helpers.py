@@ -21,13 +21,11 @@ def _check_for_missing_matches(
     """
     matches = re.findall(pattern, logic_rule_raw)
     matches = [x[1:-1] for x in matches]
-    if not set(matches) <= set(all_logic_results):
-
-        if len(set(matches) - set(all_logic_results)) > 0:
-            message = f'''WARNING: The logic rule references a search that was not found! Make sure the logic rule only reference 
-            termlists within the same phrase, pre-searches within the same file, or country searches.'''
-            print(f'\033[1;31m{message}\033[0m')
-            raise KeyError
+    if not set(matches).issubset(set(all_logic_results)):
+        message = f'''WARNING: The logic rule references a search that was not found! Make sure the logic rule only reference 
+        termlists within the same phrase, pre-searches within the same file, or country searches.'''
+        print(f'\033[1;31m{message}\033[0m')
+        raise KeyError
 
 
 def _format_list_with_pattern(pattern: str, search_terms: list[str]) -> str:
