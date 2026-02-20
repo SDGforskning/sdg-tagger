@@ -1,0 +1,96 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "number": {
+      "type": "integer"
+    },
+    "generated_datetime": {
+      "type": "string"
+    },
+    "phrases": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/phrase"
+      }
+    }
+  },
+  "required": [
+    "name",
+    "phrases"
+  ],
+  "additionalProperties": false,
+  "definitions":{
+    "termlist": {
+        "type": "object",
+        "properties": {
+          "termlist_name": {
+            "type": "string"
+          },
+          "formatting_rule": {
+              "type": "string"
+          },
+          "na": {
+              "type": "boolean"
+          },
+          "case": {
+              "type": "boolean"
+          },
+          "_comment": {
+            "type": "string"
+          },
+          "wordlist_en": {
+              "type": "array",
+              "items": {
+                  "type": "string"
+              }
+          },
+          "wordlist_no": {
+              "type": "array",
+              "items": {
+                  "type": "string"
+              }
+          }
+        },
+        "required": [
+            "termlist_name",
+            "formatting_rule",
+            "na",
+            "case",
+            "wordlist_en",
+            "wordlist_no"
+        ],
+      "additionalProperties": false
+    },
+    "phrase": {
+      "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "_comment": {
+              "type": "string"
+            },
+            "logic_rule": {
+              "type": "string",
+              "format": "logic-rule-pattern"
+            },
+            "termlists": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/termlist"
+              }
+            }
+          },
+          "additionalProperties": false,
+          "required": [
+            "name",
+            "logic_rule",
+            "termlists"
+          ]
+        }
+  }
+}

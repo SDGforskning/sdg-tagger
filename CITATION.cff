@@ -1,0 +1,53 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: SDG tagger
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file. Licence information can be found
+  in the README.md, LICENSE.md and LICENSE_searchterms.md
+  files in the repository. 
+type: software
+authors:
+  - given-names: Caroline S
+    family-names: Armitage
+    email: caroline.s.armitage@gmail.com
+    affiliation: University of Bergen
+    orcid: 'https://orcid.org/0000-0003-2826-5935'
+  - given-names: Tom-Andre
+    family-names: Bergstrøm
+    affiliation: University of Stavanger
+  - given-names: Håkon Magne
+    family-names: Bjerkan
+    affiliation: University of Stavanger
+  - given-names: Leena Pirit
+    family-names: Byholm
+    email: leena.byholm@aalto.fi
+    orcid: 'https://orcid.org/0000-0003-1000-2125'
+    affiliation: Aalto University
+  - given-names: Marit Øye
+    family-names: Gjersdal
+    affiliation: The Research Council of Norway
+  - given-names: Inger
+    family-names: Gåsemyr
+    affiliation: University of Stavanger
+  - given-names: Lise Vik
+    family-names: Haugen
+    affiliation: Western Norway University of Applied Sciences
+    orcid: 'https://orcid.org/0009-0001-4744-4966'
+  - given-names: Eli Heldaas
+    family-names: Seland
+    email: eli.h.seland@uib.no
+    affiliation: University of Bergen
+    orcid: 'https://orcid.org/0000-0001-9666-6197'
+identifiers:
+  - type: url
+    value: 'https://github.com/SDGforskning/sdg-tagger'
+    description: GitHub repository
+repository-code: 'https://github.com/SDGforskning/sdg-strings'
+url: 'https://github.com/SDGforskning'
+keywords:
+  - SDG
+  - SDGs
+  - Sustainable development goals

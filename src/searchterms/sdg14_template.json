@@ -1,0 +1,320 @@
+{
+    "name": "sdg14",
+    "number": 14,
+    "generated_datetime": "09-12-2025 10:07:35",
+    "pre-search": [
+                {
+            "name": "marine_terms",
+            "logic_rule": "()",
+            "sentence_split": false,
+            "termlists": [
+                {
+                    "termlist_name": "",
+                    "formatting_rule": "",
+                    "na": false,
+                    "case": false,
+                    "wordlist_en": [],
+                    "wordlist_no": []
+                }
+            ]
+        }
+    ],
+    "targets": [
+        {
+            "name": "1",
+            "phrases": [
+                {
+                    "number": 1,
+                    "logic_rule": "()",
+                    "sentence_split": false,
+                    "termlists": [
+                        {
+                            "termlist_name": "",
+                            "formatting_rule": "",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": [],
+                            "wordlist_no": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "2",
+            "phrases": [
+                {
+                    "number": 1,
+                    "logic_rule": "()",
+                    "sentence_split": false,
+                    "termlists": [
+                        {
+                            "termlist_name": "",
+                            "formatting_rule": "",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": [],
+                            "wordlist_no": []
+                        }
+                    ]
+                },
+                {
+                    "number": 2,
+                    "logic_rule": "()",
+                    "sentence_split": false,
+                    "termlists": [
+                        {
+                            "termlist_name": "",
+                            "formatting_rule": "",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": [],
+                            "wordlist_no": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "3",
+            "phrases": [
+                {
+                    "number": 1,
+                    "logic_rule": "()",
+                    "sentence_split": false,
+                    "termlists": [
+                        {
+                            "termlist_name": "",
+                            "formatting_rule": "",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": [],
+                            "wordlist_no": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "4",
+            "phrases": [
+                {
+                    "number": 1,
+                    "logic_rule": "()",
+                    "sentence_split": false,
+                    "termlists": [
+                        {
+                            "termlist_name": "",
+                            "formatting_rule": "",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": [],
+                            "wordlist_no": []
+                        }
+                    ]
+                },
+                {
+                    "number": 2,
+                    "logic_rule": "()",
+                    "sentence_split": false,
+                    "termlists": [
+                        {
+                            "termlist_name": "",
+                            "formatting_rule": "",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": [],
+                            "wordlist_no": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "5",
+            "phrases": [
+                {
+                    "number": 1,
+                    "logic_rule": "()",
+                    "sentence_split": false,
+                    "termlists": [
+                        {
+                            "termlist_name": "",
+                            "formatting_rule": "",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": [],
+                            "wordlist_no": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "6",
+            "phrases": [
+                {
+                    "number": 1,
+                    "logic_rule": "()",
+                    "sentence_split": false,
+                    "termlists": [
+                        {
+                            "termlist_name": "",
+                            "formatting_rule": "",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": [],
+                            "wordlist_no": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "7",
+            "phrases": [
+                {
+                    "number": 1,
+                    "logic_rule": "()",
+                    "sentence_split": false,
+                    "termlists": [
+                        {
+                            "termlist_name": "",
+                            "formatting_rule": "",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": [],
+                            "wordlist_no": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "a",
+            "phrases": [
+                {
+                    "number": 1,
+                    "logic_rule": "()",
+                    "sentence_split": false,
+                    "termlists": [
+                        {
+                            "termlist_name": "",
+                            "formatting_rule": "",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": [],
+                            "wordlist_no": []
+                        }
+                    ]
+                },
+                {
+                    "number": 2,
+                    "logic_rule": "()",
+                    "sentence_split": false,
+                    "termlists": [
+                        {
+                            "termlist_name": "",
+                            "formatting_rule": "",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": [],
+                            "wordlist_no": []
+                        }
+                    ]
+                },
+                {
+                    "number": 3,
+                    "logic_rule": "()",
+                    "sentence_split": false,
+                    "termlists": [
+                        {
+                            "termlist_name": "",
+                            "formatting_rule": "",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": [],
+                            "wordlist_no": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "b",
+            "phrases": [
+                {
+                    "number": 1,
+                    "logic_rule": "()",
+                    "sentence_split": false,
+                    "termlists": [
+                        {
+                            "termlist_name": "",
+                            "formatting_rule": "",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": [],
+                            "wordlist_no": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "c",
+            "phrases": [
+                {
+                    "number": 1,
+                    "logic_rule": "()",
+                    "sentence_split": false,
+                    "termlists": [
+                        {
+                            "termlist_name": "",
+                            "formatting_rule": "",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": [],
+                            "wordlist_no": []
+                        }
+                    ]
+                },
+                {
+                    "number": 2,
+                    "logic_rule": "()",
+                    "sentence_split": false,
+                    "termlists": [
+                        {
+                            "termlist_name": "",
+                            "formatting_rule": "",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": [],
+                            "wordlist_no": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "mentions": {
+        "logic_rule": "()",
+        "termlists": [
+            {
+                "termlist_name": "",
+                "formatting_rule": "",
+                "na": false,
+                "case": false,
+                "wordlist_en": [],
+                "wordlist_no": []
+            },
+            {
+                "termlist_name": "",
+                "formatting_rule": "",
+                "na": false,
+                "case": false,
+                "wordlist_en": [],
+                "wordlist_no": []
+            }
+        ]
+    }
+}
