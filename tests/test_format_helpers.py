@@ -37,7 +37,7 @@ def test_check_for_missing_matches_missing_key(input_dict):
     pattern = r'\[[^\[\]]*\]'
     logic_rule_raw = '([Terms1] and ([Terms2] or [Terms3]))'
     # Act
-    with pytest.raises(KeyError):
+    with pytest.raises(KeyError, match='Terms3'):
         _check_for_missing_matches(pattern, logic_rule_raw, input_dict)
 
 
