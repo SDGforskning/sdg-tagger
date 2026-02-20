@@ -3,16 +3,17 @@ import pytest
 import os
 import sys
 from jsonschema import validate, FormatChecker
-from jsonschema.validators import extend, Draft7Validator
+from jsonschema.validators import Draft7Validator
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 from test_helpers.logic_rule_validation import validate_boolean_expression
 
+
 ###################### Testcases: SDG files JSON format ######################
 @pytest.mark.json_format
 @pytest.mark.parametrize(
-    'input_filename', 
+    'input_filename',
     [
         'sdg1.json',
         'sdg2.json',
@@ -30,7 +31,6 @@ from test_helpers.logic_rule_validation import validate_boolean_expression
         'sdg14.json',
         'sdg15.json',
         'sdg16.json',
-
         'sdg1_template.json',
         'sdg2_template.json',
         'sdg3_template.json',
@@ -41,7 +41,7 @@ from test_helpers.logic_rule_validation import validate_boolean_expression
         'sdg13_template.json',
         'sdg14_template.json',
         'sdg15_template.json',
-    ]
+    ],
 )
 def test_json_format(input_filename):
     if not os.path.isfile('src/searchterms/' + input_filename):
@@ -52,18 +52,18 @@ def test_json_format(input_filename):
     schema = 'tests/json_schema/sdg_schema.json'
     with open(schema) as file:
         json_schema = json.load(file)
-    
+
     # Act
     result = validate(instance=content, schema=json_schema)
     # Assert
-    assert result==None
+    assert result == None
 
 
 ################# Testcases: Valid logic rule format in the SDG JSON files #################
 @pytest.mark.json_format
 @pytest.mark.logic_rule_format
 @pytest.mark.parametrize(
-    'input_filename', 
+    'input_filename',
     [
         'sdg1.json',
         'sdg2.json',
@@ -81,7 +81,6 @@ def test_json_format(input_filename):
         'sdg14.json',
         'sdg15.json',
         'sdg16.json',
-
         'sdg1_template.json',
         'sdg2_template.json',
         'sdg3_template.json',
@@ -92,7 +91,7 @@ def test_json_format(input_filename):
         'sdg13_template.json',
         'sdg14_template.json',
         'sdg15_template.json',
-    ]
+    ],
 )
 def test_logic_rule_format(input_filename):
     if not os.path.isfile('src/searchterms/' + input_filename):
@@ -107,22 +106,22 @@ def test_logic_rule_format(input_filename):
     schema = 'tests/json_schema/sdg_schema.json'
     with open(schema) as file:
         json_schema = json.load(file)
-    
+
     # Act
     validator = Draft7Validator(json_schema, format_checker=custom_format_checker)
     result = validator.validate(content)
 
     # Assert
-    assert result==None
+    assert result == None
 
 
 ###################### Testcases: Countries file JSON format ######################
 @pytest.mark.json_format
 @pytest.mark.parametrize(
-    'input_filename', 
+    'input_filename',
     [
         'countries.json',
-    ]
+    ],
 )
 def test_json_format_countries(input_filename):
     # Arrange
@@ -131,23 +130,23 @@ def test_json_format_countries(input_filename):
     schema = 'tests/json_schema/country_search_schema.json'
     with open(schema) as file:
         json_schema = json.load(file)
-    
+
     # Act
     result = validate(instance=content, schema=json_schema)
     # Assert
-    assert result==None
+    assert result == None
 
 
 ################# Testcases: Valid logic rule format in the countries JSON file #################
 @pytest.mark.json_format
 @pytest.mark.logic_rule_format
 @pytest.mark.parametrize(
-    'input_filename', 
+    'input_filename',
     [
         'countries.json',
-    ]
+    ],
 )
-def test_logic_rule_format(input_filename):
+def test_logic_rule_format_countries(input_filename):
     # Arrange
     custom_format_checker = FormatChecker()
     custom_format_checker.checks('logic-rule-pattern')(validate_boolean_expression)
@@ -158,10 +157,10 @@ def test_logic_rule_format(input_filename):
     schema = 'tests/json_schema/country_search_schema.json'
     with open(schema) as file:
         json_schema = json.load(file)
-    
+
     # Act
     validator = Draft7Validator(json_schema, format_checker=custom_format_checker)
     result = validator.validate(content)
 
     # Assert
-    assert result==None
+    assert result == None
