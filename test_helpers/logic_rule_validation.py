@@ -5,13 +5,13 @@ import re
 
 TOKEN_REGEX = re.compile(
     r"""
-    (?P<WS>\s+)                 |  # whitespace (nå BEHOLDER vi disse)
-    \[(?P<IDENT>[A-Za-z0-9_]+)\]   |  # [identifier] (små bokstaver, tall, underscore)
-    (?P<LPAREN>\()              |  # (
-    (?P<RPAREN>\))              |  # )
-    (?P<NOT>\bnot\b)            |  # 'not' som eget ord
-    (?P<AND>&)                  |  # &
-    (?P<OR>\|)                     # |
+    (?P<WS>\s+)                     |  # whitespace (nå BEHOLDER vi disse)
+    \[(?P<IDENT>[A-Za-z0-9_]+)\]    |  # [identifier] (små bokstaver, tall, underscore)
+    (?P<LPAREN>\()                  |  # (
+    (?P<RPAREN>\))                  |  # )
+    (?P<NOT>\bnot\b|\bNOT\b)        |  # 'not' som eget ord
+    (?P<AND>&|\band\b|\bAND\b)      |  # &
+    (?P<OR>\||\bor\b|\bOR\b)        |  # |
     """,
     re.VERBOSE,
 )
@@ -186,7 +186,7 @@ def validate_boolean_expression(s: str) -> bool:
     """
     Validerer:
       - Hele strengen er omsluttet av ÉN ytre parentes.
-      - Bare operatorene 'not', '&', '|'.
+      - Bare operatorene 'not', '&', '|', 'and', 'or'.
       - [ident]-navn: [A-Za-z0-9_]+, ingen whitespace inni '[]'.
       - Parenteser kan nøstes.
       - KRAV: Operatørene 'not', '&', '|' må ha minst ett mellomrom før og etter.
