@@ -1,0 +1,1178 @@
+{
+    "name": "sdg11",
+    "number": 11,
+    "generated_datetime": "09-12-2025 10:07:35",
+    "pre-search": [],
+    "targets": [
+        {
+            "name": "1",
+            "phrases": [
+                {
+                    "number": 1,
+                    "logic_rule": "([termlist11_1a] & [termlist11_1b] & [termlist11_1c])",
+                    "sentence_split": false,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist11_1a",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["access", "obstacle", "barrier", "hinder", "hindrance", "equitab", "non-equit", "legislat", "govern", "strateg", "policy", "policies" , "framework" , "program"],
+                            "wordlist_no": ["tilgang", "hindr", "rettferdig", "lovgiv", "lovgje", "politikk", "politisk", "reguler", "rettningslin", "strateg"]
+                        },
+                        {
+                            "termlist_name": "termlist11_1b",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["adequa", "inadequa", "afford", "low cost", "low-cost", "inexpensive", "unsafe", "safety", "secure", "security", "tenure"],
+                            "wordlist_no": ["adekvat", "tilstrekkel", "høveleg", "dekkende", "dekkande", "billig", "billeg", "rimelig", "rimeleg", "trygg", "sikker"]
+                        },
+                        {
+                            "termlist_name": "termlist11_1c",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["housing", "settlements", "living conditions"],
+                            "wordlist_no": ["bolig", "bustad", "bosetting", "busetjing", "boforhold"]
+                        }
+                    ]
+                },
+                {
+                    "number": 2,
+                    "logic_rule": "([termlist11_1d] & [termlist11_1e] & ([termlist11_1r] | [termlist11_1rtrunc]))",
+                    "sentence_split": false,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist11_1d",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["access", "obstacle", "barrier", "hinder", "hindrance", "equitab", "non-equit", "legislat", "governan", "strateg", "policy", "policies", "framework", "program"],
+                            "wordlist_no": ["tilgang", "hinder", "hindr", "rettferdig", "urettferdig", "lovgiv", "lovgje", "politikk", "politisk", "reguler", "strateg"]
+                        },
+                        {
+                            "termlist_name": "termlist11_1e",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "_comment": "'xxxxskole'(NO) is specified here to avoid in Norwegian university names, e.g. 'Høyskole'",
+                            "wordlist_en": ["basic service", "basic facilities", "essential service",
+                            "drinking water", "sanitation", "basic hygiene", "hygiene service", "toilet", "handwashing", "sewage", "WASH facilities", 
+                            "clean water",
+                            "waste collection", "waste service", "waste facilit", "garbage service", "garbage collection", 
+                            "health service", "health facilit", "basic health", "essential health", "healthcare", "health care", "medical care", "essential medical",
+                            "school service", "school facilit", "basic school", "primary school", "basic education", "education service", "primary education",
+                            "basic communication service", "basic telecommunication service", "basic information service", "basic information infrastructure",
+                            "electricity", "energy service", "modern energy", "clean fuel", "clean energy", "modern energy",
+                            "public open space", "public space", "public green space",
+                            "basic mobility", "urban mobility", "rural mobility", "all-season road", "transport service", "public transport"],
+                            "wordlist_no": ["grunnleggende tjeneste", "grunnleggjande teneste", "greunnleggende fasilitet", 
+                            "drikkevann", "drikkevatn", "grunnleggende hygiene", "grunnleggjande hygiene", "kloakk", "toalett", "vannklosett", "vassklosett", "håndvask", "handvask", "sanitær",
+                            "rent vann", "reint vatn", "reint vann", "innlagt vann", "innlagt vatn", "vanntilgang", "vannforsyning",
+                            "avfallstjeneste", "avfallsteneste", "søppeltømming", "avfallsinnsamling", "bosteneste", "bosinnsamling", "bostømming", "renovasjon",
+                            "helsetjeneste", "helseteneste", "fastlege","helsevesen",
+                            "ungdomsskole", "ungdomsskule", "barneskole", "barneskule", "grunnleggende utdannin", "grunnleggjande utdannin", 
+                            "kommunikasjonstjenester", "kommunikasjonstenester", "kommunikasjonsinfrastruktur", "grunnleggende kommunikasjon",
+                            "energitjeneste", "energiteneste", "energilever", "elektrisitet", "energiforsyning", "kraftforsyning", "moderne energi",
+                            "offentlig rom", "offentlige rom", "offentlege rom", "offentlege rom", "grønt areal", "grønne areal", "grøntområde", "friområde", "friareal", "rekreasjonsområde",
+                            "offentlig transport", "offentlige transport", "offentleg transport", "offentlege transport", "kollektivtransport", "kollevktivtilb", "transport ordning", 
+                            "mobilitet"]
+                        },
+                        {
+                            "termlist_name": "termlist11_1r",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["housing", "settlements", "living conditions",
+                            "cities", "megacit", "urban", "metropolitan", 
+                            "town", "village", "suburb", 
+                            "municipal", "district", "region", "human settlement", "built-up area", "populated area",
+                            "local community", "neighborhood", "neighbourhood"],
+                            "wordlist_no": ["bolig", "bustad", "bosetting", "busetjing", "boforhold",
+                            "byer", "byar", "byen", "bydel", "byområde", "storby", "småby", "landsby", "kystby", "byplan", "byutvik", "bystruktur", "bymiljø", 
+                            "bygd", "grend", "nærområde", "drabant",
+                            "kommun", "fylke", "distrikt", "befolka område", "befolket område", "tettsted", "tettstad",
+                            "samfunn", "lokalsamfunn", "nabolag", 
+                            "oslo", "bergen", "trondheim", "stavanger", "tromsø"]
+                        },
+                        {
+                            "termlist_name": "termlist11_1rtrunc",
+                            "formatting_rule": "specific_trunc",
+                            "na": false,
+                            "case": false,
+                            "_comment": "'city' is prevented truncation due to 'capacity' etc.",
+                            "wordlist_en": ["city"],
+                            "wordlist_no": []
+                        }
+                    ]
+                },
+                {
+                    "number": 3,
+                    "logic_rule": "([termlist11_1s] | [termlist11_1strunk])",
+                    "sentence_split": false,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist11_1s",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["shanty town", "informal settlement"],
+                            "wordlist_no": ["uformell bosetning", "uformelle bosetning", "uformell busetn", "uformelle busetn"]
+                        },
+                        {
+                            "termlist_name": "termlist11_1strunk",
+                            "formatting_rule": "specific_trunc",
+                            "na": false,
+                            "case": false,
+                            "_comment": "truncating 'slum' adds noise",
+                            "wordlist_en": ["slum", "slums"],
+                            "wordlist_no": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "2",
+            "phrases": [
+                {
+                    "number": 1,
+                    "logic_rule": "(([termlist11_2a] | [termlist11_2a_trunc]) & ([termlist11_2b] | [termlist11_2c] | ([termlist11_2b2] & [termlist11_2d])))",
+                    "sentence_split": false,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist11_2a",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["safe", "secure", "hazardous","sustainab", "unsafe", "dangerous","accident","access", "availab", "reliab", "afford", "low cost", "low-cost", "expensive", "cost-effective"],
+                            "wordlist_no": ["sikker", "trygg", "farlig", "farleg", "risiko", "bærekraftig", "berekraftig", "tilgjengelig", "pålitelig", "rimelig", "billig", "kostbar", "kostnadseffektiv"]
+                        },
+                        {
+                            "termlist_name": "termlist11_2a_trunc",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["risk", "risks", "risky"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist11_2b",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "_comment": "'driving' and 'driver' combined as otherwise problematic",
+                            "wordlist_en": ["transport infrastructure", "public transport", "urban mobilit", "traffic", "roadway", "street", "roundabout",
+                            "highway", "motorway", "cycling lane", "cyclist", "cycle path", "bicycle lane", "walkway", "walking path", "sidewalk", "pavement","pedestrian","taxi", "ferry",
+                            "the underground", "railway", "airport", 
+                            "travel", "car safety", "driver safety", "safe driving", "motorcycle", "automobile", "speed limit"],
+                            "wordlist_no": ["transportnettverk", "offentlig transport", "offentleg transport", "kollektivtransport", "transportinfrastruktur", "transportsystem", "trafikk", "rundkjøring","rundkøyring", 
+                            "motorvei", "motorveg", "sykkelsti", "sykkelve", "syklist", "gangve", "fortau", "drosje", "ferge", "hurtigbåt",
+                            "t-bane", "bybane", "jernbane", "flyplass", "kortbane", 
+                            "sikkerhet i bil", "motorsykkel", "sjåfør", "kjøring", "kjøyring", "fartsgrense"]
+                        },
+                        {
+                            "termlist_name": "termlist11_2b2",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "_comment": "terms that need to be combined with city-terms, as they are used in e.g. biomedicine. 'reise' (NO) is moved here because often used in 'reiseliv' (tourism)",
+                            "wordlist_en": ["transport system","transport network", "driver", "vehicl"],
+                            "wordlist_no": ["reise"]
+                        },
+                        {
+                            "termlist_name": "termlist11_2c",
+                            "formatting_rule": "specific_trunc",
+                            "na": false,
+                            "case": false,
+                            "_comment": "terms where truncation is prevented: 'vei' and 'veg', although relevant terms (= way, road) seem to be used nearly always metaphorically ('way to safer workplaces') so suggest removal for practical reasons",
+                            "wordlist_en": ["road", "roads", "car", "cars", "bus", "train", "tube", "journey"],
+                            "wordlist_no": ["veier", "veger", "vegar", "gate", "gater", "buss", "train", "tube", "metro", "tog", "fører", "førere"]
+                        },
+                        {
+                            "termlist_name": "termlist11_2d",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["cities", "megacit", "urban", "metropolitan", 
+                            "town", "village", "suburb", 
+                            "municipal", "district", "region", "human settlement", "built-up area", "populated area",
+                            "community", "neighborhood", "neighbourhood"],
+                            "wordlist_no": ["byer", "byar", "byen", "bydel", "byområde", "storby", "småby", "landsby", "kystby", "byplan", "byutvik", "bystruktur", "bymiljø", 
+                            "bygd", "grend", "nærområde", "drabant",
+                            "kommun", "fylke", "distrikt", "befolka område", "befolket område", "tettsted", "tettstad",
+                            "samfunn", "lokalsamfunn", "nabolag", 
+                            "oslo", "bergen", "trondheim", "stavanger", "tromsø"]
+                        },
+                        {
+                            "termlist_name": "termlist11_2dtrunc",
+                            "formatting_rule": "specific_trunc",
+                            "na": false,
+                            "case": false,
+                            "_comment": "'city' is here due to capaCITY etc.",
+                            "wordlist_en": ["city"],
+                            "wordlist_no": []
+                        }
+                    ]
+                },
+                {
+                    "number": 2,
+                    "logic_rule": "([termlist11_2e] & [termlist11_2f])",
+                    "sentence_split": false,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist11_2e",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["provide", "provision", "improv", "moderni", "reduc", "increas", "expand", "build", "boost", "rais", "extend", "implement", "establish", "develop", "strengthen", "enhanc"],
+                            "wordlist_no": ["tilbyr", "etablere", "forbedr", "styrk", "bedring", "betring", "reduser", "bygg", "utvikl", "oppgrad", "muliggjør"]
+                        },
+                        {
+                            "termlist_name": "termlist11_2f",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["public transport"],
+                            "wordlist_no": ["offentlig transport", "offentleg transport", "kollektivtransport"]
+                        }                    ]
+                }
+            ]
+        },
+        {
+            "name": "3",
+            "phrases": [
+                {
+                    "number": 1,
+                    "logic_rule": "([termlist11_3a] & [termlist11_3b])",
+                    "sentence_split": false,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist11_3a",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["sustainab", "inclusiv", "participatory", "participation"],
+                            "wordlist_no": ["bærekraft", "berekraft", "inkluder", "deltak", "deltag"]
+                        },
+                                            {
+                            "termlist_name": "termlist11_3b",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["urbanisation", "urbanization", "urban development", "human settlement planning", "urban planning"],
+                            "wordlist_no": ["urbanisering", "urban utvikling", "byutvikling", "byplan"]
+                        }]
+                },
+                {
+                    "number": 2,
+                    "logic_rule": "(([termlist11_3c] | [termlist11_3c_trunc]) & ([termlist11_3c] | [termlist11_3c_trunc]) & [termlist11_3e])",
+                    "sentence_split": false,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist11_3c",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["settlement", 
+                            "cities", "megacit", "urban", "metropolitan", 
+                            "town", "village", "suburb", 
+                            "municipal", "district", "region", "human settlement", "built-up area", "populated area",
+                            "neighborhood", "neighbourhood", 
+                            "local communit"],
+                            "wordlist_no": ["byer", "byar", "byen", "bydel", "byområde", "storby", "småby", "kystby", "byplan", "byutvik", "bystruktur", "bymiljø", 
+                            "bygd", "grend", "nærområde", "drabant",
+                            "kommun", "fylke", "distrikt", "befolka område", "befolket område", "tettsted", "tettstad",
+                            "bosetting", "busetting", 
+                            "nabolag", 
+                            "lokal samfunn",
+                            "oslo", "bergen", "trondheim", "stavanger", "tromsø"]
+                        },
+                        {
+                            "termlist_name": "termlist11_3c_trunc",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["city"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist11_3d",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["manag"],
+                            "wordlist_no": ["planleg", "lede", "leiing", "styring", "forvalt"]
+                        },
+                        {
+                            "termlist_name": "termlist11_3d_trunc",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["plan","plans","planning"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist11_3e",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["democra", "taking part", "sustainab", "participatory", "participation", "stakeholder"],
+                            "wordlist_no": ["demokrat", "delta", "bærekraft", "berekraft", "interessent"]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "4",
+            "phrases": [
+                {
+                    "number": 1,
+                    "logic_rule": "([termlist11_4a] & [termlist11_4b])",
+                    "sentence_split": false,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist11_4a",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["manag", "maintain", "conservation", "conserving", "conserve", "preserv", "sustain", "protect", "safeguard"],
+                            "wordlist_no": ["forvalt", "vedlikeh", "bevar", "konserver", "ta vare på", "oppretthold", "oppretthald", "sikre", "beskytte", "verne", "verna", "vern av", "frede", "freda", "fredning", "freding"]
+                        },
+                        {
+                            "termlist_name": "termlist11_4b",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["cultural heritage", "culture heritage", "cultural landscape", "heritage object", "heritage building", "heritage site", "museum",
+                            "archaeological place", "archaeological site", "historical place", "historical building", "historical monument", "historical artefact",
+                            "natural heritage", "nature formation", "geopark", "nature park", "nature reserv", "zoo", "zoological garden", "botanical garden", "aquarium", "aquaria"],
+                            "wordlist_no": ["kulturarv", "kulturlandskap", "kulturminne", "historisk bygning", "historisk sted",
+                            "arkeologisk sted", "arkeologisk stad", "arkelogisk kulturminne", "fornminne", "arkeologisk område", "historisk monument", "historisk gjenstand",
+                            "naturarv", "naturformasjon", "naturpark", "nasjonalpark", "naturreservat", "dyrehage", "zoologisk hage", "botanisk hage", "akvarium", "akvarie"]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "5",
+            "phrases": [
+                {
+                    "number": 1,
+                    "logic_rule": "(([termlist11_5a] | ([termlist11_5b] & [termlist11_5c]) | ([termlist11_5d] & [termlist11_5e]) | ([termlist11_5j] & [termlist11_5k]) | ([termlist11_5f] | [termlist11_5ftrunc])) & (([termlist11_5l] | ([termlist11_5s] & ([termlist11_5t]) | ([termlist11_5m] & ([termlist11_5n] | ([termlist11_5o] | ([termlist11_5q] & [termlist11_5r]))))",
+                    "sentence_split": false,
+                    "_comment": "The NOT-part at the end of WoS string is not included (original termlists 5g and 5j), as probably not needed/useful in title searching",
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist11_5a",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["disaster", "catastrophe"],
+                            "wordlist_no": ["katastrofe", "krise"]
+                        },
+                        {
+                            "termlist_name": "termlist11_5b",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["extreme"],
+                            "wordlist_no": ["ekstrem"]
+                        },
+                        {
+                            "termlist_name": "termlist11_5c",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["climat", "weather", "precipitation", "rain", "snow", "temperatur", "storm", "wind"],
+                            "wordlist_no": ["klima", "vær", "nedbør", "regn", "snø", "vind"]
+                        },
+                        {
+                            "termlist_name": "termlist11_5d",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["natural", "climat","anthropogenic", "environmental", "deforestation", "desertification", "degradation", "pollution", "erosion", "chemical", "heavy metal", "pesticide", "biological", 
+                            "zoonotic", "technological", "radioactive", "nuclear", "cyber", "industrial", "construction", "transportation"],
+                            "wordlist_no": ["naturl", "klima", "antropogen", "miljømessig", "avskoging", "forørkning", "forørking", "forverring", "ødelegging", "øydelegging", "forurensing", "forureining", "erosjon", "avrenning",
+                            "kjemisk", "tungmetall", "plantegift", "plantevernmid", "insekticid", "fungicid", "biologisk", "zoonotisk", "teknologisk", "radioaktiv", "atom", "industriell", "bygge"]
+                        },
+                        {
+                            "termlist_name": "termlist11_5e",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["hazard"],
+                            "wordlist_no": ["fare", "risiko"]
+                        },
+                        {
+                            "termlist_name": "termlist11_5f",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["extreme climat", "extreme weather", "extreme precipitation", "extreme rain", "extreme snow", "extreme temperatur", "extreme storm", "extreme wind", 
+                            "rogue wave", "tsunami", "cyclone", "typhoon", "hurricane", "tornado", 
+                            "drought", "flood", 
+                            "avalanche", "landslide", "land-slide", "land slide", "rockslide", "rock-slide", "rock slide", "rockfall", "surface collapse", "mudflow", "mud-flow", 
+                            "cold spell", "cold wave", "dzud", "blizzard", "snowstorm", 
+                            "heatwave", "heat-wave", 
+                            "earthquake", "volcan", "ash cloud", "ash fall", "tephra", 
+                            "wildfire", "wild-fire", "wild fire", "forest-fire", "forest fire", "forestfire", 
+                            "sea-level rise", "sea-level change", "rising sea-level", 
+                            "armed conflict", "political instability", "civil instability", "politically volatile", 
+                            "unrest", "financial crash", "financial shock", "economic downturn", "economic shock"],
+                            "wordlist_no": ["ekstremvær", "ekstremver", 
+                            "tropisk lavtrykk", "tropisk lågtrykk", "flodbølg", "monsterbølg", "ekstrembølg", 
+                            "orkan",  "tyfon", "syklon", "snøstorm", 
+                            "flom", "flaum", "oversvøm", "ovefløym", "tørke", 
+                            "snøskred", "skred", "snøras", "lavine", "jordskred", "jordras", "sørpeskred", "leirras", "leirskred", "steinras", "steinskred", "synkehull", 
+                            "uvanlig kulde", "uvanlig kaldt", "uvanleg kulde", "uvanleg kaldt", "ekstrem kuld", "ekstremkuld", "kuldebølg", "snøstorm", 
+                            "varmebølg", "hetebølg", "ekstrem varm", "ekstremvarm", "uvanlig varm", "uvanleg varm", 
+                            "jordskjelv", "vulkan", "askenedfall", "oskenedfall", "askesky", "oskesky", 
+                            "skogbrann", "gressbrann", "grasbrann", "lyngbrann", 
+                            "havnivåstigning", "stormflo", 
+                            "politisk ustabilitet", "væpnede konflikter", "væpnet konflikt", "væpna konflikt", "borgerkrig", "borgarkrig", "fremmedkrig", "finanskrise", "finanssjokk", 
+                            "finanskatastrofe", "finanskræsj", "økonomisk nedgang", "økonomisk sjokk", "økonomisk katastrofe"]
+                        },
+                        {
+                            "termlist_name": "termlist11_5ftrunc",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["war", "wars"],
+                            "wordlist_no": ["krig", "ras"]
+                        },
+                        {
+                            "termlist_name": "termlist11_5j",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["volatil", "unstable", "instability", "unrest"],
+                            "wordlist_no": ["flyktig", "ustabil", "instabilitet", "uro"]
+                        },
+                        {
+                            "termlist_name": "termlist11_5k",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["political", "civil"],
+                            "wordlist_no": ["politisk", "sivil"]
+                        },
+                        {
+                            "termlist_name": "termlist11_5l",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["death", "casualt", "survivors", "fatal"],
+                            "wordlist_no": ["død", "daud", "offer", "ofre", "overlevende", "overlevande"]
+                        },
+                        {
+                            "termlist_name": "termlist11_5s",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["affected", "injur", "trauma", "displaced", "missing"],
+                            "wordlist_no": ["berørte", "skadde", "traumatisert", "fordrevne", "fordrivne", "savnede", "savnet", "sakna"]
+                        },
+                        {
+                            "termlist_name": "termlist11_5t",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["people", "person", "civilian", "women", "men", "child"],
+                            "wordlist_no": ["folk", "sivile", "kvinner", "menn", "barn", "born"]
+                        },
+                        {
+                            "termlist_name": "termlist11_5m",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["surviv", "mortalit"],
+                            "wordlist_no": ["overlev", "død"]
+                        },
+                        {
+                            "termlist_name": "termlist11_5n",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["people", "human", "patient", "victim", "civilian", 
+                            "city","cities", "megacit", "urban", "metropolitan", 
+                            "town", "village", "suburb", 
+                            "municipal", "district", "region", "human settlement", "built-up area", "populated area",
+                            "community", "neighborhood", "neighbourhood", 
+                            "public", "poverty", "the poor", "the poorest", "rural poor", "urban poor", "working poor", "destitute", "living in poverty", "the vulnerable", "vulnerable group", 
+                            "vulnerable communit", "marginalised group", "marginalized group", "marginalised communit", "marginalised communit", "disadvantaged group", "disadvantaged communit", 
+                            "slum", "shanty town", "informal settlement", "homeless", "disabled", "disabilities", "disability", "elderly", "elders", "pensioners", "vulnerable seniors", "unemployed",
+                            "women", "woman", "girl", "pregnant", "pregnancy", "maternity", "child", "children", "infant", "babies", "newborn", "toddler", "youth", "sexual minorit", "LGBT", "lesbian", 
+                            "gay", "bisexual", "transgender", "living with HIV", "living with AIDS", "ethnic minorit", "minority group", "refugee", "migrant", "asylum", "indigenous group"],
+                            "wordlist_no": ["folk", "menneske", "pasient", "offer", "sivil", "borger", "borgar", 
+                            "byer", "byar", "byen", "bydel", "byområde", "storby", "småby", "landsby", "kystby", "byplan", "byutvik", "bystruktur", "bymiljø", 
+                            "bygd", "grend", "nærområde", "drabant",
+                            "kommun", "fylke", "distrikt", "befolka område", "befolket område", "tettsted", "tettstad",
+                            "lokalsamfunn", "nabolag", 
+                            "fattig", "lavinntekt", "lav inntekt", "låginntekt", "låg inntekt", "sårbar", "marginalisert", "diskrimin", "uformell bosetting", "uformell busetnad", "uformelle bosettinger", 
+                            "uformelle busetnader", "hjemløs","heimlaus", "uføre", "funksjonshem", "eldre", "de gamle", "dei gamle", "pensjonist", "arbeidsløs","arbeidslaus", "kvinne", "jente", "gravid", 
+                            "barn", "born", "babier", "nyfødt", "nyfødd", "ungdom", "seksuell minoritet", "seksuelle minoritet", "urfolk", "urinnvånarar", "urbefolkning", "urinnvånere", "sápmi", "sami", 
+                            "minoritet", "jøder", "jådar", "kvener", "kvenar", "norskfinn", "skogfinn", "romani", "tatere", "taterar", "asylsøk", "flyktning", "innvandrer", "innvandrar", "transperson", 
+                            "lesbisk", "homofile", "bifile", "lbht", "interkjønn", "leve med aids", "leve med hiv", "lever med aids", "lever med hiv"]
+                        },
+                        {
+                            "termlist_name": "termlist11_5o",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "_comment": "Other terms/norwegian terms already covered in 5n",
+                            "wordlist_en": ["poor", "poorest", "low income", "lower income", "lowest income"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist11_5p",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["household", "people", "children", "communit"],
+                            "wordlist_no": ["husholdning", "hushaldning", "folk", "menneske", "samfunn"]
+                        },
+                        {
+                            "termlist_name": "termlist11_5q",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["person", "people", "adult"],
+                            "wordlist_no": ["folk", "menneske", "voksen", "vaksen"]
+                        },
+                        {
+                            "termlist_name": "termlist11_5r",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["vulnerable", "marginalised", "marginalized", "disadvantaged", "discriminated", "displaced", "patient", "trans", "intersex", "older", "old", "elderly", "retired", "indigenous"],
+                            "wordlist_no": ["sårbar", "marginalisert", "diskrimin", "fordrev", "pasient", "transperson", "lesbisk", "homofile", "bifile", "lbht", "interkjønn", "uføre", "funksjonshem", "eldre", "de gamle", "dei gamle", "urfolk", "urinnvånarar", "urbefolkning", "urinnvånere"]
+                        }
+                    ]
+                },
+                {
+                    "number": 2,
+                    "logic_rule": "(([termlist11_5a] | ([termlist11_5b] & [termlist11_5c]) | ([termlist11_5d] & [termlist11_5e]) | ([termlist11_5j] & [termlist11_5k]) | ([termlist11_5f] | [termlist11_5ftrunc])) & ([termlist11_5l] | [termlist11_5ltrunc])) ",
+                    "sentence_split": false,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist11_5a",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "_comment": "reused (duplicate) from phrase nr 1",
+                            "wordlist_en": ["disaster", "catastrophe"],
+                            "wordlist_no": ["katastrofe", "krise"]
+                        },
+                        {
+                            "termlist_name": "termlist11_5b",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "_comment": "reused (duplicate) from phrase nr 1",
+                            "wordlist_en": ["extreme"],
+                            "wordlist_no": ["ekstrem"]
+                        },
+                        {
+                            "termlist_name": "termlist11_5c",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "_comment": "reused (duplicate) from phrase nr 1",
+                            "wordlist_en": ["climat", "weather", "precipitation", "rain", "snow", "temperatur", "storm", "wind"],
+                            "wordlist_no": ["klima", "vær", "nedbør", "regn", "snø", "vind"]
+                        },
+                        {
+                            "termlist_name": "termlist11_5d",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "_comment": "reused (duplicate) from phrase nr 1",
+                            "wordlist_en": ["natural", "climat","anthropogenic", "environmental", "deforestation", "desertification", "degradation", "pollution", "erosion", "chemical", "heavy metal", "pesticide", "biological", 
+                            "zoonotic", "technological", "radioactive", "nuclear", "cyber", "industrial", "construction", "transportation"],
+                            "wordlist_no": ["naturl", "klima", "antropogen", "miljømessig", "avskoging", "forørkning", "forørking", "forverring", "ødelegging", "øydelegging", "forurensing", "forureining", "erosjon", "avrenning",
+                            "kjemisk", "tungmetall", "plantegift", "plantevernmid", "insekticid", "fungicid", "biologisk", "zoonotisk", "teknologisk", "radioaktiv", "atom", "industriell", "bygge"]
+                        },
+                        {
+                            "termlist_name": "termlist11_5e",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "_comment": "reused (duplicate) from phrase nr 1",
+                            "wordlist_en": ["hazard"],
+                            "wordlist_no": ["fare", "risiko"]
+                        },
+                        {
+                            "termlist_name": "termlist11_5f",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "_comment": "reused (duplicate) from phrase nr 1",
+                            "wordlist_en": ["extreme climat", "extreme weather", "extreme precipitation", "extreme rain", "extreme snow", "extreme temperatur", "extreme storm", "extreme wind", 
+                            "rogue wave", "tsunami", "cyclone", "typhoon", "hurricane", "tornado", 
+                            "drought", "flood", 
+                            "avalanche", "landslide", "land-slide", "land slide", "rockslide", "rock-slide", "rock slide", "rockfall", "surface collapse", "mudflow", "mud-flow", 
+                            "cold spell", "cold wave", "dzud", "blizzard", "snowstorm", 
+                            "heatwave", "heat-wave", 
+                            "earthquake", "volcan", "ash cloud", "ash fall", "tephra", 
+                            "wildfire", "wild-fire", "wild fire", "forest-fire", "forest fire", "forestfire", 
+                            "sea-level rise", "sea-level change", "rising sea-level", 
+                            "armed conflict", "political instability", "civil instability", "politically volatile", 
+                            "unrest", "financial crash", "financial shock", "economic downturn", "economic shock"],
+                            "wordlist_no": ["ekstremvær", "ekstremver", 
+                            "tropisk lavtrykk", "tropisk lågtrykk", "flodbølg", "monsterbølg", "ekstrembølg", 
+                            "orkan",  "tyfon", "syklon", "snøstorm", 
+                            "flom", "flaum", "oversvøm", "ovefløym", "tørke", 
+                            "snøskred", "skred", "snøras", "lavine", "jordskred", "jordras", "sørpeskred", "leirras", "leirskred", "steinras", "steinskred", "synkehull", 
+                            "uvanlig kulde", "uvanlig kaldt", "uvanleg kulde", "uvanleg kaldt", "ekstrem kuld", "ekstremkuld", "kuldebølg", "snøstorm", 
+                            "varmebølg", "hetebølg", "ekstrem varm", "ekstremvarm", "uvanlig varm", "uvanleg varm", 
+                            "jordskjelv", "vulkan", "askenedfall", "oskenedfall", "askesky", "oskesky", 
+                            "skogbrann", "gressbrann", "grasbrann", "lyngbrann", 
+                            "havnivåstigning", "stormflo", 
+                            "politisk ustabilitet", "væpnede konflikter", "væpnet konflikt", "væpna konflikt", "borgerkrig", "borgarkrig", "fremmedkrig", "finanskrise", "finanssjokk", 
+                            "finanskatastrofe", "finanskræsj", "økonomisk nedgang", "økonomisk sjokk", "økonomisk katastrofe"]
+                        },
+                        {
+                            "termlist_name": "termlist11_5ftrunc",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "_comment": "reused (duplicate) from phrase nr 1",
+                            "wordlist_en": ["war", "wars"],
+                            "wordlist_no": ["krig", "ras"]
+                        },
+                        {
+                            "termlist_name": "termlist11_5j",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "_comment": "reused (duplicate) from phrase nr 1",
+                            "wordlist_en": ["volatil", "unstable", "instability", "unrest"],
+                            "wordlist_no": ["flyktig", "ustabil", "instabilitet", "uro"]
+                        },
+                        {
+                            "termlist_name": "termlist11_5k",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "_comment": "reused (duplicate) from phrase nr 1",
+                            "wordlist_en": ["political", "civil"],
+                            "wordlist_no": ["politisk", "sivil"]
+                        },
+                        {
+                            "termlist_name": "termlist11_52l",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["domestic product", "gross global produc"],
+                            "wordlist_no": ["nasjonalprodukt", "bnp"]
+                        },
+                        {
+                            "termlist_name": "termlist11_52ltrunc",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "_comment": "acronyms have truncation prevented to avoid results on gdpr",
+                            "wordlist_en": ["gdp", "gpp", "ggdp"],
+                            "wordlist_no": []
+                        }
+                      ]
+                }
+            ]
+        },
+        {
+            "name": "6",
+            "phrases": [
+                {
+                    "number": 1,
+                    "logic_rule": "([termlist11_6a] & ([termlist11_6b] | [termlist11_6c]))",
+                    "sentence_split": false,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist11_6a",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["environmental impact", "impact on the environment", "impacts on the environment", "footprint", "foot print"],
+                            "wordlist_no": ["miljøpåvirk", "fotavtrykk", "påvirke miljø", "påverke miljø"]
+                        },
+                        {
+                            "termlist_name": "termlist11_6b",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "_comment": "'community' dropped as causes only noise. Added major Norwegian city names, adds no results to phrase 1 but quite a lot to phrase 2",
+                            "wordlist_en": ["cities", "megacit", "metropolitan", 
+                            "town", "village", "suburb", 
+                            "municipal", "district", "region", "human settlement", "built-up area", "populated area",
+                            "local communit", "neighborhood", "neighbourhood"],
+                            "wordlist_no": ["byer", "byar", "byen", "bydel", "byområde", "storby", "småby", "landsby", "kystby", "byplan", "byutvik", "bystruktur", "bymiljø", 
+                            "bygd", "grend", "nærområde", "drabant",
+                            "kommun", "fylke", "distrikt", "befolka område", "befolket område", "tettsted", "tettstad",
+                            "lokalsamfunn", "nabolag", 
+                            "oslo", "bergen", "trondheim", "stavanger", "tromsø"]
+                        },
+                        {
+                            "termlist_name": "termlist11_6c",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["city", "urban.*"],
+                            "wordlist_no": []
+                        }
+                    ]
+                },
+                {
+                    "number": 2,
+                    "logic_rule": "([termlist11_6d] & ([termlist11_6b] | [termlist11_6c]) & [termlist11_6not])",
+                    "sentence_split": false,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist11_6b",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "_comment": "Reused (duplicate) from phrase 1. 'community' dropped as causes only noise. Added major Norwegian city names, adds no results to phrase 1 but quite a lot to phrase 2",
+                            "wordlist_en": ["cities", "megacit", "metropolitan", 
+                            "town", "village", "suburb", 
+                            "municipal", "district", "region", "human settlement", "built-up area", "populated area",
+                            "local communit", "neighborhood", "neighbourhood"],
+                            "wordlist_no": ["byer", "byar", "byen", "bydel", "byområde", "storby", "småby", "landsby", "kystby", "byplan", "byutvik", "bystruktur", "bymiljø", 
+                            "bygd", "grend", "nærområde", "drabant",
+                            "kommun", "fylke", "distrikt", "befolka område", "befolket område", "tettsted", "tettstad",
+                            "lokalsamfunn", "nabolag", 
+                            "oslo", "bergen", "trondheim", "stavanger", "tromsø"]
+                        },
+                        {
+                            "termlist_name": "termlist11_6c",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "_comment": "Reused (duplicate) from phrase 1",
+                            "wordlist_en": ["city", "urban.*"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist11_6d",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["smog", "air pollution", "suspended particles", "particulate matter", "pm2.5", "pm10", "clean air", "air quality",
+                            "luftforure", "luftureining", "svevestøv", "partikler i luft", "ren luft", "rein luft","luftkvalitet"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist11_6not",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["Cosmogenic"],
+                            "wordlist_no": []
+                        }
+                    ]
+                },
+                {
+                    "number": 3,
+                    "logic_rule": "([termlist11_6e] & ([termlist11_6b] | [termlist11_6c]))",
+                    "sentence_split": false,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist11_6b",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "_comment": "Reused (duplicate) from phrase 1. 'community' dropped as causes only noise. Added major Norwegian city names, adds no results to phrase 1 but quite a lot to phrase 2",
+                            "wordlist_en": ["cities", "megacit", "metropolitan", 
+                            "town", "village", "suburb", 
+                            "municipal", "district", "region", "human settlement", "built-up area", "populated area",
+                            "local communit", "neighborhood", "neighbourhood"],
+                            "wordlist_no": ["byer", "byar", "byen", "bydel", "byområde", "storby", "småby", "landsby", "kystby", "byplan", "byutvik", "bystruktur", "bymiljø", 
+                            "bygd", "grend", "nærområde", "drabant",
+                            "kommun", "fylke", "distrikt", "befolka område", "befolket område", "tettsted", "tettstad",
+                            "lokalsamfunn", "nabolag", 
+                            "oslo", "bergen", "trondheim", "stavanger", "tromsø"]
+                        },
+                        {
+                            "termlist_name": "termlist11_6c",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "_comment": "Reused (duplicate) from phrase 1",
+                            "wordlist_en": ["city", "urban.*"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist11_6e",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["solid waste", "bulky waste","houshold waste","domestic waste","commercial waste","industrial waste","MSW",
+                            "EOL waste","end of life waste","end of chain waste","eoc waste","garbage","rubbish", "composting"],
+                            "wordlist_no": ["avfall", "søppel", "boss", "komposter"]
+                        }
+                    ]
+                },
+                {
+                    "number": 4,
+                    "logic_rule": "([termlist11_6f] & [termlist11_6g] & [termlist11_6h])",
+                    "sentence_split": false,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist11_6f",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["environmental impact", "impact on the environment", "impacts on the environment","environmental assess", "footprint","foot print"],
+                            "wordlist_no": ["miljøpåvirk", "fotavtrykk", "påvirke miljø", "påverke miljø", "miljøvurdering"]
+                        },
+                        {
+                            "termlist_name": "termlist11_6g",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["waste", "garbage", "rubbish"],
+                            "wordlist_no": ["avfall", "søppel", "boss"]
+                        },
+                        {
+                            "termlist_name": "termlist11_6h",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["manag", "collect", "reuse", "re-use", "composting", "biological degrad"],
+                            "wordlist_no": ["håndter", "handter", "innsamling", "samle inn", "gjennvin", "gjenbruk", "resirkuler", "renovasjon", "komposter", "forbrenn", "energi", "deponi"]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "7",
+            "phrases": [
+                {
+                    "number": 1,
+                    "logic_rule": "([termlist11_7a] & ([termlist11_7b] | ([termlist11_7c] & [termlist11_7d])))",
+                    "sentence_split": false,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist11_7a",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["safe", "inclus", "access", "unrestrict"],
+                            "wordlist_no": ["trygg", "sikker", "inkluder", "inklus", "tilgang", "adgang", "uhindr", "ubegrens"]
+                        },
+                        {
+                            "termlist_name": "termlist11_7b",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["green space", "recreational area", 
+                            "public area", "public space", "public open space", "public playground", 
+                            "public facilit", "boulevard", "public market",
+                            "library area", "library space", "libraries", "public library", "community cent", "community space", "civic cent",
+                            "public garden", "community garden", "allotment garden", "urban allotment"],
+                            "wordlist_no": ["grønne område", "grøntområde", "parkområde", "friluftsområde", "fritidsområde", 
+                            "offentleg område", "offentlig område", "offentlig sted", "offentleg stad", "offentlig plass", "offentleg plass", "byrom", "fellesrom",
+                            "offentlig fasilit", "offentleg fasilit",
+                            "bibliotekareal", "bibliotekrom", "bibliotekbygg", "offentlig bibliotek", "samfunnshus", "forsamlingshus",
+                            "bypark", "kolonihage", "parsellhage", "hageparsell", "felleshage"]
+                        },
+                        {
+                            "termlist_name": "termlist11_7c",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["park", "parks", "street", "avenue", "square", "beach", "waterfront", "riverbank"],
+                            "wordlist_no": ["gate", "torg", "strand", "vannkant", "elvebredd"]
+                        },
+                        {
+                            "termlist_name": "termlist11_7d",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["cities","city", "megacit", "urban", "metropolitan",
+                            "town", "village", "suburb", 
+                            "municipal", "district", "region", "human settlement", "built-up area", "populated area",
+                            "community", "neighborhood", "neighbourhood"],
+                            "wordlist_no": ["byer", "byar", "byen", "bydel", "byområde", "storby", "småby", "landsby", "kystby", "byplan", "byutvik", "bystruktur", "bymiljø", 
+                            "bygd", "grend", "nærområde", "drabant",
+                            "kommun", "fylke", "distrikt", "befolka område", "befolket område", "tettsted", "tettstad", "offentlig lekeplass", "offentleg leikeplass",
+                            "samfunn", "lokalsamfunn", "nabolag", 
+                            "oslo", "bergen", "trondheim", "stavanger", "tromsø"]
+                        }
+                    ]
+                },
+                {
+                    "number": 2,
+                    "logic_rule": "([termlist11_7e] & ([termlist11_7b] | [termlist11_7c]))",
+                    "sentence_split": false,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist11_7b",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "_comment": "Reused (duplicate) from phrase 1",
+                            "wordlist_en": ["green space", "recreational area", 
+                            "public area", "public space", "public open space", "public playground", 
+                            "public facilit", "boulevard", "public market",
+                            "library area", "library space", "libraries", "public library", "community cent", "community space", "civic cent",
+                            "public garden", "community garden", "allotment garden", "urban allotment"],
+                            "wordlist_no": ["grønne område", "grøntområde", "parkområde", "friluftsområde", "fritidsområde", 
+                            "offentleg område", "offentlig område", "offentlig sted", "offentleg stad", "offentlig plass", "offentleg plass", "byrom", "fellesrom",
+                            "offentlig fasilit", "offentleg fasilit",
+                            "bibliotekareal", "bibliotekrom", "bibliotekbygg", "offentlig bibliotek", "samfunnshus", "forsamlingshus",
+                            "bypark", "kolonihage", "parsellhage", "hageparsell", "felleshage"]
+                        },
+                        {
+                            "termlist_name": "termlist11_7c",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "_comment": "Reused (duplicate) from phrase 1",
+                            "wordlist_en": ["park", "parks", "street", "avenue", "square", "beach", "waterfront", "riverbank"],
+                            "wordlist_no": ["gate", "torg", "strand", "vannkant", "elvebredd"]
+                        },
+                        {
+                            "termlist_name": "termlist11_7e",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "_comment": "'equit' will find 'inequitable', 'justice' will find 'injustice' etc.",
+                            "wordlist_en": ["restrict", "inaccess", "equal access", "inequalit", "equit", "justice", 
+                            "discriminat", "exclud", "harass", "assault", "unsafe"],
+                            "wordlist_no": ["restrik", "utilgjenge", "allmen tilgang", "allmenn adgang", "lik adgang", "lik tilgang", "uhindr", "ubegrens", "ulikhet", "rettferd", 
+                            "diskrimin", "utesteng", "utenforskap", "eksklude", "trakasser", "mobb", "overfall", "angrep", "utrygg"]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "a",
+            "phrases": [
+                {
+                    "number": 1,
+                    "logic_rule": "([termlist11_Aa] & [termlist11_Ab] & ([termlist11_Ac] | [termlist11_Actrunc]))",
+                    "sentence_split": false,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist11_Aa",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["national", "regional"],
+                            "wordlist_no": ["nasjonal", "landsdek"]
+                        },
+                        {
+                            "termlist_name": "termlist11_Ab",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["plan", "strateg", "framework", "program", "policy", "policies", "cooperat"],
+                            "wordlist_no": ["rammeverk", "styring", "politikk", "politisk", "samarbeid", "koopera"]
+                        },
+                        {
+                            "termlist_name": "termlist11_Ac",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "_comment": "City names mostly cause noise here so are not included",
+                            "wordlist_en": ["cities", "megacit", "urban", "metropolitan", 
+                            "town", "village", "suburb", 
+                            "municipal", "district", "settlement", "built-up area", "populated area",
+                            "local community", "neighborhood", "neighbourhood", 
+                            "rural area", "rural development"],
+                            "wordlist_no": ["byer", "byar", "byen", "bydel", "byområde", "storby", "småby", "landsby", "kystby", "byplan", "byutvik", "bystruktur", "bymiljø", 
+                            "bygd", "grend", "nærområde", "drabant",
+                            "kommun", "fylke", "distrikt", "befolka område", "befolket område", "tettsted", "tettstad",
+                            "lokal samfunn", "lokalsamfunn", "nabolag", 
+                            "rural utvikling", "bypolit"]
+                        },
+                        {
+                            "termlist_name": "",
+                            "formatting_rule": "termlist11_Actrunc",
+                            "na": false,
+                            "case": false,
+                            "_comment": "#'city' is here due to capaCITY",
+                            "wordlist_en": [],
+                            "wordlist_no": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "b",
+            "phrases": [
+                {
+                    "number": 1,
+                    "logic_rule": "(([termlist11_Ba] | ([termlist11_Bb] & [termlist11_Bc])) & ([termlist11_Bd] | [termlist11_Bdtrunc]))",
+                    "sentence_split": false,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist11_Ba",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["sendai", "disaster risk reduction", "cancun adapation framework", "readiness and preparatory support programme", "readiness programme"],
+                            "wordlist_no": ["katastrofeforebygging", "cancun-avtal", "cancun avtal", "klimatilpas", "forebyggingstiltak"]
+                        },
+                        {
+                            "termlist_name": "termlist11_Bb",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "_comment": "space after 'plan' to prevent 'plant'",
+                            "wordlist_en": ["plan ", "plans", "planning", "strateg", "program", "policy", "policies", "governance", "framework", "preparedness"],
+                            "wordlist_no": ["rammeverk", "politikk", "politisk", "forvalt", "styring", "ledelse", "leiing", "retningslin", "forebygg", "beredskap"]
+                        },
+                        {
+                            "termlist_name": "termlist11_Bc",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "_comment": "dropped 'risk'/ 'risiko' (NO) - to drop results about chemical risk assessments/risks in health and animals. Used 'risk judgements'. 'klimatilpas'(NO) in termlist Bc is probably redundant, as it is included in Ba",
+                            "wordlist_en": ["disaster", "risk judgement", "climate change", "climatic change", "global warming", "changing climate", "climate action", "climate mitigation"],
+                            "wordlist_no": ["katastrofe", "klimaendring", "global oppvarming", "klimatiltak", "klimatilpas"]
+                        },
+                        {
+                            "termlist_name": "termlist11_Bd",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["settlement", 
+                            "cities", "megacit", "urban", "metropolitan", 
+                            "town", "village", "suburb", 
+                            "municipal", "district", "region", "human settlement", "built-up area", "populated area",
+                            "neighborhood", "neighbourhood", 
+                            "local communit"],
+                            "wordlist_no": ["byer", "byar", "byen", "bydel", "byområde", "storby", "småby", "kystby", "byplan", "byutvik", "bystruktur", "bymiljø", 
+                            "bygd", "grend", "nærområde", "drabant",
+                            "kommun", "fylke", "distrikt", "befolka område", "befolket område", "tettsted", "tettstad",
+                            "bosetting", "busetting", 
+                            "nabolag", 
+                            "lokal samfunn",
+                            "oslo", "bergen", "trondheim", "stavanger", "tromsø"]
+                        },
+                        {
+                            "termlist_name": "termlist11_Bdtrunc",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "_comment": "#'city' is here due to capaCITY",
+                            "wordlist_en": ["city"],
+                            "wordlist_no": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "c",
+            "phrases": [
+                {
+                    "number": 1,
+                    "logic_rule": "([termlist11_Ca] | ([termlist11_Cb] & [termlist11_Cc]) | [termlist11_Cd])",
+                    "sentence_split": false,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist11_Ca",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["sustainable architecture","resilient architecture","Sustainable Building and Construction Initiative","sustainable building","sustainable construction",
+                            "local building material", "local construction material", "locally available building material"],
+                            "wordlist_no": ["bærekraftig arkitektur","berekraftig arkitektur","bærekraftig bygning","berekraftig bygning","bærekraftig konstruksjon", "berekraftig konstruksjon",
+                            "lokale bygningsmatrial","lokale konstruksjonsmaterial"]
+                        },
+                        {
+                            "termlist_name": "termlist11_Cb",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["sustainable", "green", "eco-", "ecofriendly", "environmentally friendly", "resili",
+                            "local material", "locally available", "native", "traditional"],
+                            "wordlist_no": ["bærekraftig", "berekraftig", "grøn", "miljøven", "økoven", "tradisjonel", "lokal"]
+                        },
+                        {
+                            "termlist_name": "termlist11_Cc",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "_comment": "'building' causes issues (capacity building etc.)",
+                            "wordlist_en": ["construction", "buildings", "building material", "building technique", "building method", "building industry", "home building", "building homes"],
+                            "wordlist_no": ["konstruksjon", "bygge", "byggningsbransj", "byggebransj"]
+                        },
+                        {
+                            "termlist_name": "termlist11_Cd_case",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": true,
+                            "wordlist_en": ["SBCI"],
+                            "wordlist_no": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "mentions": {
+        "logic_rule": "([termlist11_1] | [termlist11_6] | ([termlist11_2] & [termlist11_3]) | ([termlist11_4] & [termlist11_5]))",
+        "termlists": [
+            {
+                "termlist_name": "termlist11_1",
+                "formatting_rule": "default",
+                "na": false,
+                "case": false,
+                "wordlist_en": ["SDG 11", "SDGs 11", "SDG11", "sustainable development goal 11"],
+                "wordlist_no": ["bærekraftsmål 11", "berekraftsmål 11"]
+            },
+            {
+                "termlist_name": "termlist11_2",
+                "formatting_rule": "default",
+                "na": false,
+                "case": false,
+                "wordlist_en": ["sustainable development goal"],
+                "wordlist_no": ["bærekraftsmål", "berekraftsmål"]
+            },
+            {
+                "termlist_name": "termlist11_3",
+                "formatting_rule": "default",
+                "na": false,
+                "case": false,
+                "wordlist_en": ["goal 11"],
+                "wordlist_no": ["mål 11"]
+            },
+            {
+                "termlist_name": "termlist11_4",
+                "formatting_rule": "default",
+                "na": false,
+                "case": false,
+                "wordlist_en": ["sustainable development goal", "SDG", "goal 11"],
+                "wordlist_no": ["bærekraftsmål", "berekraftsmål", "mål 11"]
+            },
+            {
+                "termlist_name": "termlist11_5",
+                "formatting_rule": "default",
+                "na": false,
+                "case": false,
+                "wordlist_en": ["cities"],
+                "wordlist_no": ["byer", "byar"]
+            },
+            {
+                "termlist_name": "termlist11_6",
+                "formatting_rule": "default",
+                "na": false,
+                "case": false,
+                "_comment": "Possible search for the short titles of the SDGs, to be used in a title search",
+                "wordlist_en": ["sustainable cities and communities"],
+                "wordlist_no": ["bærekraftige byer og lokalsamfunn"]
+            }
+        ]
+    }
+}
