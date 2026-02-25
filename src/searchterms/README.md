@@ -62,7 +62,7 @@ For converting old SDGs:
 - Each SDG has top matter, where you have _pre-search_ and the _number_ of the SDG, and then come the _targets_. 
 - The _targets_ are split into _phrases_ (which correspond to the phrases in our previous python script), and under each phrase you will find the _number_ of the phrase, the _logic_rule_ it uses, the _sentence_split_ switch, and then the _termlists_.
 - The _termlists_ correspond to the termlists in our previous python script. Each have a _termlist_name_, a _formatting_rule_, a _case_, and an english and norwegian _wordlist_
-- At any of these levels, you can insert a comment, just like the other fields, like so: `"_comment": "This is a comment for this SDG/target/phrase/termlist",`. See SDG1, target 2, phrase 1, termlist 1_2b for an example.
+- At any of these levels, you can insert a comment, just like the other fields, like so: `"_comment": "This is a comment for this SDG/target/phrase/termlist",`. See SDG1, target 2, phrase 1, termlist 1_2b for an example. Comments should be prefaced by the relevant language code if they are language specific, and terms placed within single quotes, e.g. `"_comment": "NO: The term 'art' is truncated...`. 
 - If you need to refer to a country list, see the informatio under _logic_rule_ below.
 
 Example of a phrase with 4 term lists, where one has special truncation rules. **Below it is information about each field**.
