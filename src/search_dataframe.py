@@ -129,6 +129,15 @@ def _get_formatted_column_names_export(sdg_list: list[int]) -> list[str]:
     return columns
 
 
+def _to_string_or_empty(value):
+    if isinstance(value, str):
+        return value
+    elif pd.isna(value):
+        return ''
+    else:
+        return str(value)
+
+
 def dataframe_search(
     df: pd.DataFrame,
     sdg_list: list[int] = LIST_ALL_SDG_NR,
@@ -146,6 +155,7 @@ def dataframe_search(
     """
     df_results = df.copy()
     columns = _get_formatted_column_names_export(sdg_list)
+    df_results[text_column] = df_results[text_column].apply(_to_string_or_empty)
 
     df_results[columns] = df_results[text_column].progress_apply(
         lambda x: _row_search(x, sdg_list)
