@@ -87,8 +87,6 @@ def _are_terms_in_input_text(
     for term_list in termlists:
         if len(term_list['wordlist_en']) == 0:
             termlist_results[term_list['termlist_name']] = False
-            message = f'''WARNING: The english wordlist for {term_list['termlist_name']} is empty.'''
-            print(f'\033[1;31m{message}\033[0m')
         else:
             regex_term_list, formatted_text = prepare_regex_search_termlist(
                 term_list, input_text
