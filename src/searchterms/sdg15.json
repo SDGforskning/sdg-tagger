@@ -1,0 +1,1667 @@
+{
+    "name": "sdg15",
+    "number": 15,
+    "generated_datetime": "09-12-2025 10:07:35",
+    "pre-search": [
+        {
+            "name": "terr_terms",
+            "logic_rule": "([termlist15_terr1] | [termlist15_terr2])",
+            "sentence_split": false,
+            "termlists": [
+                {
+                    "termlist_name": "termlist15_terr1",
+                    "formatting_rule": "default",
+                    "na": false,
+                    "case": false,
+                    "wordlist_en": ["terrestrial",
+                        "forest", "woodland", "taiga", "jungle", "mangrove", 
+                        "peatland", "peat land", "swamp", "wetland", "marsh", "paludal",
+                        "farmland", "agricultural land", "cropland", "pasture", "rangeland",
+                        "shrub", "meadow", "bushland", "heath", "moorland",
+                        "savanna","grassland","prairie",
+                        "dryland", "dry land", "desert", 
+                        "lowland",
+                        "mountain", "highland", "alpine", "tundra", "upland",
+                        "freshwater", "limnic", "inland fish",
+                        "brook", "creek"],
+                    "wordlist_no": ["terrestrisk", "landlevende", "villmarksområd",
+                        "skog", "jungel",
+                        "torv", "torvmos", "torvmyr", "slåttemyr", "myrer", "myrar", "sumper", "sumpar", "våtmark", "våteng", "torvmark",
+                        "dyrket mark", "dyrket jord", "dyrka jord", "dyrka mark", "landbruksmark", "utmark", "innmark", "beite",
+                        "kratt", "busker", "lynghei",
+                        "engmark", "natureng", "kultureng", "engvegeta", "moseeng", "gresseng", "strandeng", "slåttemark", 
+                        "prærie", "tørre område",
+                        "tørrmark", "ørken", "halvtørre områd",
+                        "fjell", "bergtopp", "alpin", 
+                        "ferskvann", "ferskvatn", "innlandsfisk", "innsjø"]
+                },
+                {
+                    "termlist_name": "termlist15_terr2",
+                    "formatting_rule": "specific_trunc",
+                    "na": false,
+                    "case": false,
+                    "wordlist_en": ["soil", "soils", "bog", "bogs", "mire", "mires", "fen", "fens", "bush", "bushes", "plains", "steppe",
+                    "lake", "lakes", "pond", "ponds", "river", "rivers", "stream", "streams"],
+                    "wordlist_no": ["jord", "åker", "myr", "sump", "eng", "enger", "busk", "elv", "elver", "bekk"]
+                }
+            ]
+        },
+        {
+            "name": "terrestrial_double_NOT",
+            "logic_rule": "(([termlist_not1] | [termlist_not2]) & not ([termlist15_terr1] | [termlist15_terr2]))",
+            "sentence_split": false,
+            "termlists": [
+                {
+                    "termlist_name": "termlist_not1",
+                    "formatting_rule": "default",
+                    "na": false,
+                    "case": false,
+                    "_comment" : "'språk' (NO: language) is added here as in Norwegian a lot of the same terms are used for language conservation as nature conservation (e.g. forvaltningsområde). This also concerns 'protection', hence the addition of 'barnevernet' (NO: child protective services).", 
+                    "wordlist_en": ["marin", "coral", "ocean", "seafloor", "deep-sea", "deep sea","kelp", 
+                        "random forest", "internet of thing", "urban ecosystem",
+                        "salivary microbio","gut microbio","skin microbio","oral microbiome","gut flora","skin flora","immunologi","immunology",
+                        "hormon","syndrome","vector","enzyme","infected","infection","infect"],
+                    "wordlist_no": ["korall", "sjøbunn", "sjøbotn", "havbunn", "havbotn", "havdyp", "havdjup", "dyphav", "djuphav", "tareskog", "tare skog",
+                        "språk", "barnevernet"]
+                },
+                {
+                    "termlist_name": "termlist_not2",
+                    "formatting_rule": "specific_trunc",
+                    "na": false,
+                    "case": false,
+                    "_comment" : "'språk' (NO: language) is added here as in Norwegian a lot of the same terms are used for language conservation as nature conservation (e.g. forvaltningsområde). This also concerns 'protection', hence the addition of 'barnevernet' (NO: child protective services).", 
+                    "wordlist_en": ["sea", "IOT"],
+                    "wordlist_no": ["hav", "havet"]
+                },
+                {
+                    "termlist_name": "termlist15_terr1",
+                    "formatting_rule": "default",
+                    "na": false,
+                    "case": false,
+                    "wordlist_en": ["terrestrial",
+                        "forest", "woodland", "taiga", "jungle", "mangrove", 
+                        "peatland", "peat land", "swamp", "wetland", "marsh", "paludal",
+                        "farmland", "agricultural land", "cropland", "pasture", "rangeland",
+                        "shrub", "meadow", "bushland", "heath", "moorland",
+                        "savanna","grassland","prairie",
+                        "dryland", "dry land", "desert", 
+                        "lowland",
+                        "mountain", "highland", "alpine", "tundra", "upland",
+                        "freshwater", "limnic", "inland fish",
+                        "brook", "creek"],
+                    "wordlist_no": ["terrestrisk", "landlevende", "villmarksområd",
+                        "skog", "jungel",
+                        "torv", "torvmos", "torvmyr", "slåttemyr", "myrer", "myrar", "sumper", "sumpar", "våtmark", "våteng", "torvmark",
+                        "dyrket mark", "dyrket jord", "dyrka jord", "dyrka mark", "landbruksmark", "utmark", "innmark", "beite",
+                        "kratt", "busker", "lynghei",
+                        "engmark", "natureng", "kultureng", "engvegeta", "moseeng", "gresseng", "strandeng", "slåttemark", 
+                        "prærie", "tørre område",
+                        "tørrmark", "ørken", "halvtørre områd",
+                        "fjell", "bergtopp", "alpin", 
+                        "ferskvann", "ferskvatn", "innlandsfisk", "innsjø"]
+                },
+                {
+                    "termlist_name": "termlist15_terr2",
+                    "formatting_rule": "specific_trunc",
+                    "na": false,
+                    "case": false,
+                    "wordlist_en": ["soil", "soils", "bog", "bogs", "mire", "mires", "fen", "fens", "bush", "bushes", "plains", "steppe",
+                    "lake", "lakes", "pond", "ponds", "river", "rivers", "stream", "streams"],
+                    "wordlist_no": ["jord", "åker", "myr", "sump", "eng", "enger", "busk", "elv", "elver", "bekk"]
+                }
+            ]
+        },
+        {
+            "name": "animals_plants",
+            "logic_rule": "([termlistanimalsplants1] | [termlistanimalsplants2])",
+            "sentence_split": false,
+            "termlists": [
+                {
+                    "termlist_name": "termlistanimalsplants1",
+                    "formatting_rule": "default",
+                    "na": false,
+                    "case": false,
+                    "wordlist_en": ["species", "plant", "animal", "organism", "flora", "fauna", "wildlife", "insect", "amphibian", "reptil", "bird", "moss", "tree", "grass", "pollinat"],
+                    "wordlist_no": ["rovdyr", "pattedyr", "dyreart", "dyrart", "dyreliv", "insekt", "amfibi", "krypdyr", "fugl", "moser", "mosar", "trær", "pollinat", "polliner"]
+                },
+                {
+                    "termlist_name": "termlistanimalsplants2",
+                    "formatting_rule": "specific_trunc",
+                    "na": false,
+                    "case": false,
+                    "wordlist_en": [],
+                    "wordlist_no": ["art","arter","dyr"]
+                }
+            ]
+        },
+        {
+            "name": "poaching_endangered",
+            "logic_rule": "([termlist15_7a] & ([termlistanimalsplants1] | [termlistanimalsplants2] | [termlist15_7d]))",
+            "sentence_split": true,
+            "_comment": "Used in 15.7 and 15.c",
+            "termlists": [
+                {
+                    "termlist_name": "termlist15_7a",
+                    "formatting_rule": "default",
+                    "na": false,
+                    "case": false,
+                    "wordlist_en": ["poach", "traffick", "smuggl", "illegal"],
+                    "wordlist_no": ["krypskyt", "ulovlig", "ulovleg", "smugl"]
+                },
+                {
+                    "termlist_name": "termlist15_7d",
+                    "formatting_rule": "default",
+                    "na": false,
+                    "case": false,
+                    "wordlist_en": ["rosewood", "kosso", "elephant", "rhino", "ivory", "pangolin", "turtle", "tortoise", "big cat", "tiger", "glass eel"],
+                    "wordlist_no": ["rosewood", "kosso", "elefant", "neshorn", "elfenbein", "elfenben", "skilpadde", "store katt", "glassål"]
+                },
+                {
+                    "termlist_name": "termlistanimalsplants1",
+                    "formatting_rule": "default",
+                    "na": false,
+                    "case": false,
+                    "wordlist_en": ["species", "plant", "animal", "organism", "flora", "fauna", "wildlife", "insect", "amphibian", "reptile", "bird", "moss", "tree", "grass", "pollinat"],
+                    "wordlist_no": ["rovdyr", "pattedyr", "dyreart", "dyrart", "dyreliv", "insekt", "amfibi", "krypdyr", "fugl", "moser", "mosar", "trær", "pollinat", "polliner"]
+                },
+                {
+                    "termlist_name": "termlistanimalsplants2",
+                    "formatting_rule": "specific_trunc",
+                    "na": false,
+                    "case": false,
+                    "wordlist_en": [],
+                    "wordlist_no": ["art","arter","dyr"]
+                }
+            ]
+        },
+        {
+            "name": "CITES",
+            "logic_rule": "([termlist15_7g] | [termlist15_7gcase])",
+            "sentence_split": true,
+            "_comment": "Used in 15.7 and 15.c",
+            "termlists": [
+                {
+                    "termlist_name": "termlist15_7g",
+                    "formatting_rule": "default",
+                    "na": false,
+                    "case": false,
+                    "wordlist_en": ["Trade in Endangered Species of Wild F"],
+                    "wordlist_no": ["internasjonal handel med truede dyr", "handel med truede og sårbare arter", "handel med truede arter"]
+                },
+                {
+                    "termlist_name": "termlist15_7gcase",
+                    "formatting_rule": "specific_trunc",
+                    "na": false,
+                    "case": true,
+                    "wordlist_en": ["CITES"],
+                    "wordlist_no": ["CITES"]
+                }
+            ]
+        }
+    ],
+    "targets": [
+        {
+            "name": "1",
+            "phrases": [
+                {
+                    "number": 1,
+                    "logic_rule": "(([termlist15_1a] | ([termlist15_1b] & [termlist15_1c])) & not [terrestrial_double_NOT])",
+                    "sentence_split": false,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist15_1a",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["protected area","conservation area","conservation zone","Wilderness area","Nature reserve","National park",
+                                "Habitat management area","Species management area","Protected landscape",
+                                "conserved ecosystem","conservation ecosystem", "protected ecosystem","protecting ecosystem", "protect ecosystem"],
+                            "wordlist_no": ["vernområde","bevarte område", "bevaringsområde", "naturreservat","biotopvernområde","biosfæreområde","nasjonalpark",
+                                "landskapsvern","økosystemforvalt","økosystembasert forvalt",
+                                "vernet økosystem","fredningsområde","forvaltningsområde"]
+                        },
+                        {
+                            "termlist_name": "termlist15_1b",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["protect", "preserv", "conserv", "reforest", "re-forest", "rehabilit", "restor"],
+                            "wordlist_no": ["verne", "verna", "vern av", "miljøvern", "bevare", "bevaring", "frede", "freda", "fredning", "gjenoppbygg", "restaurer", "skogplanting", "gjengro"]
+                        },
+                        {
+                            "termlist_name": "termlist15_1c",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["habitat","biotop"],
+                            "wordlist_no": ["leveområd"]
+                        }
+                    ]
+                },
+                {
+                    "number": 2,
+                    "logic_rule": "(([termlist15_1d] & ([termlist15_1e] | [termlist15_1f])) & not [terrestrial_double_NOT])",
+                    "sentence_split": true,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist15_1d",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["protect","preserv","conserv", "reforest", "re-forest", "rehabilit", "restor"],
+                            "wordlist_no": ["verne", "verna", "vern av", "miljøvern", "bevare", "bevaring", "frede", "freda", "fredning", "gjenoppbygg", "restaurer", "skogplanting", "gjengro"]
+                        },
+                        {
+                            "termlist_name": "termlist15_1e",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "_comment": "EN: 'area' is combined, cut away 95 % noisy results. NO: Added 'natur' and 'kulturlandskap'(NO) instead of 'område'(NO) because there were too many results from cultural/human conservation. 'landskap'(NO) alone got a lot of cultural results, so it is combined to specific types.",
+                            "wordlist_en": ["ecosystem", "ecolog", "zone", "environment", "protected area", "protected zone", "protection zone", "conservation area", "conservation zone"],
+                            "wordlist_no": ["økosystem", "kulturlandskap", "landskapsvern", "miljøvern", "miljøparagraf"]
+                        },
+                        {
+                            "termlist_name": "termlist15_1f",
+                            "formatting_rule": "no_left_trunc",
+                            "na": false,
+                            "case": false,
+                            "_comment": "Prevent left truncation (e.g. signatur)",
+                            "wordlist_en": ["nature"],
+                            "wordlist_no": ["natur"]
+                        }
+                    ]
+                },
+                {
+                    "number": 3,
+                    "logic_rule": "(([termlist15_1f] & ([termlist15_1g] | ([termlist15_1h] & ([termlist15_1i] | [animals_plants])))) & not [terrestrial_double_NOT])",
+                    "sentence_split": true,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist15_1f",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["protect","preserv","conserv","restore", "restoring", "restoration", "sustainable"],
+                            "wordlist_no": ["verne", "verna", "vern av", "miljøvern", "bevare", "bevaring", "frede", "freda", "fredning", "gjenoppbygg", "restaurer", "bærekraft", "berekraft"]
+                        },
+                        {
+                            "termlist_name": "termlist15_1g",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["habitat", "nature conservation",
+                                "biodivers","biological diversity","species diversity","functional diversity","genetic diversity","taxonomic diversity",
+                                "key species","keystone species","foundation species","habitat forming species","key resource"],
+                            "wordlist_no": ["leveområd", "naturvern",
+                                "biologisk mangf", "biomangf", "biologiske mangf", "artsmangf", "artsdiversitet", "naturmangf", "genetisk mangf", "genetisk diversitet",
+                                "nøkkelart"]
+                        },
+                        {
+                            "termlist_name": "termlist15_1h",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["diversity", "community", "ecosystem"],
+                            "wordlist_no": ["diversitet", "mangfold", "mangfald", "samfunn", "økosystem"]
+                        },
+                        {
+                            "termlist_name": "termlist15_1i",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["ecolog", "taxonomic"],
+                            "wordlist_no": ["taksonomisk", "økolog"]
+                        }
+                    ]
+                },
+                {
+                    "number": 4,
+                    "logic_rule": "([termlist15_1f] & [termlist15_1h] & [terr_terms])",
+                    "sentence_split": true,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist15_1f",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["protect","preserv","conserv","restore", "restoring", "restoration", "sustainable"],
+                            "wordlist_no": ["verne", "verna", "vern av", "miljøvern", "bevare", "bevaring", "frede", "freda", "fredning", "gjenoppbygg", "restaurer", "bærekraft", "berekraft"]
+                        },
+                        {
+                            "termlist_name": "termlist15_1h",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["diversity", "community", "ecosystem"],
+                            "wordlist_no": ["diversitet", "mangfold", "mangfald", "samfunn", "økosystem"]
+                        }
+                    ]
+                },
+                {
+                    "number": 5,
+                    "logic_rule": "([termlist15_1j] | ([termlist15_1k] & [termlist15_1l]) | (([termlist15_1k] & [termlist15_1n]) & ([termlist15_1o] | [terr_terms])) | (([termlist15_1k] & [termlist15_1n] & [termlist15_1o]) & not [terrestrial_double_NOT]))",
+                    "sentence_split": true,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist15_1j",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["agro-ecological","agro ecological", "key biodiversity area", "important sites for biodiversity", "ecotourism","eco-tourism"],
+                            "wordlist_no": ["nøkkelhabitat","nøkkelbiotop", "økoturis", "øko-turis"]
+                        },
+                        {
+                            "termlist_name": "termlist15_1k",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["sustainabl", "responsibl", "environmental", "ecological", "ecosystem approach", "ecosystem-based", "long-term"],
+                            "wordlist_no": ["bærekraft", "berekraft", "ansvarlig", "ansvarleg", "miljø", "økologisk", "økosystemtilnærm", "økosystembasert", "langsiktig"]
+                        },
+                        {
+                            "termlist_name": "termlist15_1l",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "_comment": "Fishing terms in Norwegian are limited to freshwater since there is so much marine research. Salmon and trout included as partially freshwater.",
+                            "wordlist_en": ["grazing", "forestry", "fishing", "fisher", "hunter", "hunting", "trapping"],
+                            "wordlist_no": ["beite", "skogbruk", "ferskvannsfisk", "innlandsfisk", "ferskvannskreps", "laks", "ørret", "auret", "jakt", "fangst"]
+                        },
+                        {
+                            "termlist_name": "termlist15_1n",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "_comment":"'ved' (NO: firewood) is difficult in Norwegian because it is often combined with other words (can't stop truncation), and it is a preposition.", 
+                            "wordlist_en": ["manag", "sustainable us", "responsible us", "usage", "development", "ecosystem approach",
+                                "govern", "administr", "planning", "policies", "policy", "strateg",
+                                "recreation", "tourism", "tourist", "fuel wood", "fire wood", "firewood"],
+                            "wordlist_no": ["forvalt", "bærekraftig bruk", "ansvarlig bruk", "økosystemtilnærm", "økosystembasert forvaltning",
+                                "planlegg", "styring", "ledelse", "leiing", "politikk", 
+                                "fritid", "tursti", "turist", "turism", "fyringsved", "bjørkeved"]
+                        },
+                        {
+                            "termlist_name": "termlist15_1o",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["ecosystem service","natural resource","groundwater",
+                                "biodiversit","biological diversity",
+                                "fishing", "hunting", "trapping"],
+                            "wordlist_no": ["økosystemtjenest", "ferskvann", "ferskvatn",
+                                "biologisk diversitet", "biologisk mangf", "biologiske mangf", "biomangf", "artsmangf",
+                                "ferskvannsfiske", "innlandsfiske", "laksefiske", "ørretfiske", "auretfiske", "jakt", "fangst"]
+                        }
+                    ]
+                },
+                {
+                    "number": 6,
+                    "logic_rule": "(([termlist15_1s] | [termlist15_1t_case] | ([termlist15_1u] & ([termlist15_1v] | [animals_plants]))) & not [terrestrial_double_NOT])",
+                    "sentence_split": false,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist15_1s",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["Convention on Biological Diversity", "biodiversity convention",
+                                "Convention to Combat Desertification",
+                                "Convention on International Trade in Endangered Species of Wild Fauna and Flora",
+                                "Nagoya protocol","Plant Genetic Resources for Food and Agriculture","International Seed Treaty","Plant Treaty",
+                                "Convention on Wetlands of International Importance", "Ramsar convention",
+                                "Bonn convention", "Convention on the Conservation of Migratory Species of Wild Animals"],
+                            "wordlist_no": [ "Konvensjon om biologisk mangfold", "Konvensjonen om biologisk mangfold", "biodiversitetskonvensjon",
+                                "Naturmangfoldloven", "lov om vern av naturens mangfold",
+                                "Konvensjonen om internasjonal handel med truede dyr", "handel med truede og sårbare arter",
+                                "Nagoya protokol","Den internasjonale plantetraktaten",
+                                "Ramsarkonvensjon", "Ramsar-konvensjon", "Våtmarkskonvensjonen",
+                                "Bonnkonvensjon", "Bonn-konvensjon", "konvensjonen om bevaring av trekkende ville dyr"]
+                        },
+                        {
+                            "termlist_name": "termlist15_1t_case",
+                            "formatting_rule": "specific_trunc",
+                            "na": false,
+                            "case": true,
+                            "wordlist_en": ["UNCCD", "ITPGRFA"],
+                            "wordlist_no": ["UNCCD", "ITPGRFA"]
+                        },
+                        {
+                            "termlist_name": "termlist15_1u",
+                            "formatting_rule": "specific_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["Framework Convention on Climate Change", "UNFCCC", "CBD", "world heritage convention", "European landscape convention", "CITES"],
+                            "wordlist_no": ["Klimakonvensjon.*", "rammekonvensjon om klimaendring.*", "verdensarvkonvensjon.*", "landskapskonvensjon.*", "CITES"]
+                        },
+                        {
+                            "termlist_name": "termlist15_1v",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["ecosystem", "habitat", "environment", "biotop", "ecolog", "biodivers", "biological diversit"],
+                            "wordlist_no": ["økosystem", "leveområd", "miljø", "økolog", "artsmangf", "biologisk diversit", "biologisk mangf", "biomangf"]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "2",
+            "_comment": "NO: Norsk Skogseierforbund (https://skog.no) and Landbruksdirektoratet (https://www.landbruksdirektoratet.no/nb/skogbruk/skogskjotsel) websites were used to help with translation of forestry terms.", 
+            "phrases": [
+                {
+                    "number": 1,
+                    "logic_rule": "([termlist15_2a] | [termlist15_2acaps] | ([termlist15_2b] & ([termlist15_2c] | [termlist15_2ctrunc]) & [termlist15_2d]))",
+                    "sentence_split": true,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist15_2a",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["sustainable forest","sustainable woodland","sustainable silvicultur","sustainable arboricultur",
+                                "protected forest", "reserved forest", 
+                                "strategic plan for forest", "global forest goals"],
+                            "wordlist_no": ["bærekraftfig skog", "bærekraftig silvikultur", "berekraftig skog", "berekraftig silvikult",
+                                "vernet skog", "vern av skog", "bevarte skog", "bevart skog", "freda skog", "skogvern", "verneområder i skog",
+                                "strategiske plan for skog"]
+                        },
+                        {
+                            "termlist_name": "termlist15_2acaps",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": true,
+                            "wordlist_en": ["UNSPF", "GFG"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist15_2b",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["sustainab", "responsibl", "environmental", "ecological"],
+                            "wordlist_no": ["bærekraftig", "berekraftig", "ansvarlig", "ansvarleg","miljøbevisst", "miljøvennlig","miljøvennleg", "økologisk"]
+                        },
+                        {
+                            "termlist_name": "termlist15_2c",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["manag", "govern", "development", "administ", "planning", "policy", "policies", "strateg", "approach",
+                                "practice", "method", "forestry",
+                                "cutting", "logging", "felling", "clearing", "lopping", "limbing", "thinning", "creaming", "pruning", "rotation",
+                                "planting tree", "tree planting", "drainage", 
+                                "forest area change", "above ground biomass",
+                                "protected area", "term management plan",
+                                "forest under certification", "certified forest area"],
+                            "wordlist_no": ["forvalt", "styring", "ledelse", "leiing", "utvikling", "planlegg", "politikk", "retningslin", "tilnærming",
+                                "praksis", "metode", "skogskjøtsel", "skogpleie", "skogsvirke",
+                                "tynning", "gjødsling", "hogst", "hogge", "stelle",
+                                "planting", "foryngelse", "gjengro", "attgro", "restaurer", "drenering",
+                                "skogområde", "skogvolum", "skogdek", "skogbevokste områd", "skogbevokst områd","skogareal",
+                                "miljøvern", "bevaret", "bevaring", "fredet", "fredning", "frivillig vern",
+                                "miljøsertifi"]
+                        },
+                        {
+                            "termlist_name": "termlist15_2ctrunc",
+                            "formatting_rule": "specific_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["use", "usage", "using", "cut"],
+                            "wordlist_no": ["bruk.*", "skogbruk.*"]
+                        },
+                        {
+                            "termlist_name": "termlist15_2d",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["forest", "woodland", "silvicultur", "arboricultu"],
+                            "wordlist_no": ["skog", "silvikultur"]
+                        }
+                    ]
+                },
+                {
+                    "number": 2,
+                    "logic_rule": "([termlist15_2e] | [termlist15_2hcase] | (([termlist15_2f] | [termlist15_2ftrunc]) & ([termlist15_2g] | [termlist15_2gtrunc])))",
+                    "sentence_split": true,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist15_2e",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["deforest", "de-forest"],
+                            "wordlist_no": ["avskog", "skogforringelse", "skogtap"]
+                        },
+                        {
+                            "termlist_name": "termlist15_2f",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["forests", "woodland", "silvicultur", "arboricultu"],
+                            "wordlist_no": ["skoger", "silvikultur"]
+                        },
+                        {
+                            "termlist_name": "termlist15_2ftrunc",
+                            "formatting_rule": "specific",
+                            "na": false,
+                            "case": false,
+                            "_comment": "NO: Here we don't allow right truncation because 'skog' (NO) finds 'skogsfugl' etc. Left truncation still allows 'rainforest' etc.", 
+                            "wordlist_en": ["forest"],
+                            "wordlist_no": ["skog"]
+                        },
+                        {
+                            "termlist_name": "termlist15_2g",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["losses", "degradation", "decreas", "reduc", "mitigat", "disappear"],
+                            "wordlist_no": ["fortapt", "forring", "reduksj", "nedgang", "mindre", "forsvinn", "forsvunn", "naturtap"]
+                        },
+                        {
+                            "termlist_name": "termlist15_2gtrunc",
+                            "formatting_rule": "specific_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["loss", "lost"],
+                            "wordlist_no": ["tap", "tapt"]
+                        },
+                        {
+                            "termlist_name": "termlist15_2hcase",
+                            "formatting_rule": "specific_trunc",
+                            "na": false,
+                            "case": true,
+                            "wordlist_en": ["REDD"],
+                            "wordlist_no": []
+                        }
+                    ]
+                },
+                {
+                    "number": 3,
+                    "logic_rule": "([termlist15_2i] | ([termlist15_2l] & [termlist15_2m]) | ([termlist15_2k] & ([termlist15_2j] & [termlist15_2jtrunc])))",
+                    "sentence_split": true,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist15_2i",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["afforest", "reforest", "re-forest"],
+                            "wordlist_no": ["skogplanting", "planting av skog"]
+                        },
+                        {
+                            "termlist_name": "termlist15_2l",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["forest cover", "forest area", "forested area"],
+                            "wordlist_no": ["skogområde", "skogvolum", "skogdek", "skogbevokste områd", "skogbevokst områd","skogareal"]
+                        },
+                        {
+                            "termlist_name": "termlist15_2m",
+                            "formatting_rule": "no_left_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["increas", "expand", "expansion", "restor", "rehabilit"],
+                            "wordlist_no": ["øk", "auk", "høyere", "høgre", "høgare", "større", "utvid.*"]
+                        },
+                        {
+                            "termlist_name": "termlist15_2j",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["forests", "woodland"],
+                            "wordlist_no": ["skoger", "skogar"]
+                        },
+                        {
+                            "termlist_name": "termlist15_2jtrunc",
+                            "formatting_rule": "specific",
+                            "na": false,
+                            "case": false,
+                            "_comment": "NO: Here we don't allow right truncation because 'skog' (NO) finds 'skogsfugl' etc. Left truncation still allows 'rainforest' etc.", 
+                            "wordlist_en": ["forest"],
+                            "wordlist_no": ["skog"]
+                        },
+                        {
+                            "termlist_name": "termlist15_2k",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["restor", "rehabilit", "increase cover"],
+                            "wordlist_no": ["restaur", "gjengro", "attgro", "gjenopprett", "gjenreis", "nyplanting"]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "3",
+            "_comment": "NO: The Store Norske Leksikon was used to help translate terms (https://snl.no/%C3%B8rkenspredning).",
+            "phrases": [
+                {
+                    "number": 1,
+                    "logic_rule": "([termlist15_3a] | [termlist15_3acaps] | ([termlist15_3b] & [termlist15_3c]))",
+                    "sentence_split": true,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist15_3a",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["desertific", "convention to combat desertification"],
+                            "wordlist_no": ["ørkenspredning", "ørkenspreiing", "forørkning", "konvensjon for bekjempelse av ørkenspredning", "forørkningskonvensjon"]
+                        },
+                        {
+                            "termlist_name": "termlist15_3acaps",
+                            "formatting_rule": "specific_trunc",
+                            "na": false,
+                            "case": true,
+                            "wordlist_en": ["UNCCD"],
+                            "wordlist_no": ["UNCCD"]
+                        },
+                        {
+                            "termlist_name": "termlist15_3b",
+                            "formatting_rule": "no_left_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["increas", "expand", "expansion"],
+                            "wordlist_no": ["økning", "auk", "utvid", "spredning", "spreiing"]
+                        },
+                        {
+                            "termlist_name": "termlist15_3c",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["desert", "drylands", "dryland area"],
+                            "wordlist_no": ["ørken", "halvtørr"]
+                        }
+                    ]
+                },
+                {
+                    "number": 2,
+                    "logic_rule": "([termlist15_3d] & ([termlist15_3e] | ([termlist15_3f] & [termlist15_3g])))",
+                    "sentence_split": true,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist15_3d",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["desertific", "drought", "flood", "drylands", "dryland area"],
+                            "wordlist_no": ["ørkenspredning", "ørkenspreiing", "halvtørre område", "tørrland"]
+                        },
+                        {
+                            "termlist_name": "termlist15_3e",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["soil structure" , "soil fertility", "soil health", "soil quality", "land quality"],
+                            "wordlist_no": ["jordskjelett", "jordstruktur", "fruktbar jord", "jordhelse", "jordkvalitet", "kvalitetsjord"]
+                        },
+                        {
+                            "termlist_name": "termlist15_3f",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["land", "soil"],
+                            "wordlist_no": ["jord", "dyrket mark", "dyrkamark", "kultivert mark"]
+                        },
+                        {
+                            "termlist_name": "termlist15_3g",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["quality", "fertility", "degrad", "erosion", "eroded"],
+                            "wordlist_no": ["kvalitet", "fruktbar", "forring", "erosjon", "jordtap"]
+                        }
+                    ]
+                },
+                {
+                    "number": 3,
+                    "logic_rule": "([termlist15_3h] | (([termlist15_3i] | [termlist15_3itrunc]) & [termlist15_3j]) | (([termlist15_3k] | [termlist15_3ktrunc]) & [termlist15_3l] & ([termlist15_3m] | [termlist15_3mtrunc])))",
+                    "sentence_split": true,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist15_3h",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "_comment": "NO: Translations of these (e.g.'uttørking') are combined with soil terms in 3j.",
+                            "wordlist_en": ["aridificat", "soil pollution", "soil loss"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist15_3i",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["topsoil"],
+                            "wordlist_no": ["dyrket mark", "dyrkamark", "dyrka mark", "dyrkamark",  "kultivert mark"]
+                        },
+                        {
+                            "termlist_name": "termlist15_3itrunc",
+                            "formatting_rule": "specific_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["land", "soil", "soils"],
+                            "wordlist_no": ["jord", "jordbruk", "jordtap", "mark"]
+                        },
+                        {
+                            "termlist_name": "termlist15_3j",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["quality", "degrad", "erosion", "eroded", "salinisat", "alkalinisat", "acidificat", "contaminat", "pollution", "biodiversity loss"],
+                            "wordlist_no": ["kvalitet", "forring", "uttørking", "erosjon", "jordtap", "salinering", "forsalting", "forsuring", "forurein", "forurensing"]
+                        },
+                        {
+                            "termlist_name": "termlist15_3k",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["declin","decreas","reduc","degrad","lower","loss"],
+                            "wordlist_no": ["nedgang", "mindre", "forring", "lavere", "lægre", "lågare"]
+                        },
+                        {
+                            "termlist_name": "termlist15_3ktrunc",
+                            "formatting_rule": "specific_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": [],
+                            "wordlist_no": ["tap", "tapt", "tapte"]
+                        },
+                        {
+                            "termlist_name": "termlist15_3l",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["biodiversity","soil","vegetation","groundwater"],
+                            "wordlist_no": ["biodiversitet", "biologisk diversitet", "biologisk mangf", "biomangf", "jord", "vegetasjon", "grunnvann", "grunnvatn"]
+                        },
+                        {
+                            "termlist_name": "termlist15_3m",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["desert", "drylands", "dryland area", "sub-humid", "sub humid", "semi-arid", "semiarid"],
+                            "wordlist_no": ["ørken", "halvtørr", "tørrland"]
+                        },
+                        {
+                            "termlist_name": "termlist15_3mtrunc",
+                            "formatting_rule": "specific_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["arid"],
+                            "wordlist_no": []
+                        }
+                    ]
+                },
+                {
+                    "number": 4,
+                    "logic_rule": "([termlist15_3n] & [termlist15_3o] & [termlist15_3p])",
+                    "sentence_split": true,
+                    "_comment": "Note, 'land degredation' is already covered by phrase 3, and 'LDN' only brings noise here, so it is not included (low-dose naltrexone).",
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist15_3n",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["protect", "conserv", "preserv", "restor", "rehabilit", "promot", "improv", "enhanc", "strengthen", "maintain"],
+                            "wordlist_no": ["verne", "verna", "vern av", "miljøvern", "bevare", "bevaring", "frede", "freda", "fredning", "gjenoppbygg", "restaure",
+                                "forbedr", "sterke", "vedlikehold", "forvalt"]
+                        },
+                        {
+                            "termlist_name": "termlist15_3o",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "_comment":" NO: 'jord' is added in phrases here as the terms it is combined with (AND) are a lot more general than in the other phrases - causes issues with e.g. 'Jordan' or 'fjord' or 'gjorde'", 
+                            "wordlist_en": ["soil"],
+                            "wordlist_no": ["dyrkbar jord", "dyrka jord", "dyrkajord", "dyrket jord", "matjord", "jordmass", "jordvern", "dyrket mark", "dyrkamark", "dyrka mark", "kultivert mark"]
+                        },
+                        {
+                            "termlist_name": "termlist15_3p",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["fertility", "productivity", "stucture", "health", "protect", "conserv", "preserv", "restor", "rehabilit"],
+                            "wordlist_no": ["fruktbar", "fertilitet", "produktivitet", "helse", "verne", "verna", "vern av", "miljøvern", "bevare", "bevaring", "frede", "freda", "fredning", "gjenoppbygg", "restaure"]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "4",
+            "phrases": [
+                {
+                    "number": 1,
+                    "logic_rule": "([termlist15_4a] & (([termlist15_4b] & [termlist15_4c]) | [termlist15_4d] | [termlist15_4dcase]))",
+                    "sentence_split": true,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist15_4a",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["mountain", "alpine", "highland", "montane"],
+                            "wordlist_no": ["fjell", "alpin", "vidde", "vidda"]
+                        },
+                        {
+                            "termlist_name": "termlist15_4b",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["manag", "conserv", "protect", "restor", "rehabilit",
+                                "increas","strengthen","improv","enhanc","better","higher","upgrad","advance","develop","ensure","maintain","preserv","sustain",
+                                "decreas","reduc","restrict","degrad","lower","declin","deterior",
+                                "coping","cope","adapt","resilien",
+                                "assess","examin","evaluat","measur","monitor",
+                                "govern", "administra", "planning", "policy", "policies", "strateg", "approach",
+                                "sustainable"],
+                            "wordlist_no": ["styring", "forvalt", "vernet", "verna", "verne", "vern av", "miljøvern", "bevare", "bevaring", "frede", "freda", "fredning", "gjenoppbygg", "restaur",
+                                "øker", "styrk", "forbedr", "bedring", "betring", "oppgrad", "viderefør", "sikre", "vedlikehold", "vedlikehald", "oppretthold", "opprethald",
+                                "reduser", "nedgang", "avgrens", "forring", "nedsatt", "nedsett", 
+                                "tåle", "tilpass", "resilien",
+                                "overvåk", "vurder", "evaluer", "måle", "monitor",
+                                "styring", "ledels", "leiing", "planlegg", "politikk",
+                                "bærekraft", "berekraft"]
+                        },
+                        {
+                            "termlist_name": "termlist15_4c",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["ecosystem", "habitat",
+                                "diversity", "key species","keystone species","foundation species","habitat forming species","habitat-forming species","key resource",
+                                "cover",
+                                "ecological", "environmental"],
+                            "wordlist_no": ["økosystem", "miljø", "leveområd", 
+                                "mangfold", "mangfald", "diversitet", "nøkkelart", "flaggskipsart", "paraplyart", "nøkkelressurs",
+                                "dekning", "dekke",
+                                "økologi", "miljø"]
+                        },
+                        {
+                            "termlist_name": "termlist15_4d",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["Protected area","Wilderness area", "nature conservation",
+                                "Nature reserve","National park","Natural monument","Natural feature","Protected landscape",
+                                "Habitat management area", "Species management area",
+                                "key biodiversity area", "important sites for biodiversity",
+                                "Mountain Partnership", "Mountain Green Cover Index",
+                                "Convention on Biological Diversity", 
+                                "Convention on International Trade in Endangered Species of Wild Fauna and Flora"],
+                            "wordlist_no": ["vernområde", "verneområde", "naturvern",
+                                "naturreservat", "biotopvernområde", "nasjonalpark", "bevarte område", "bevaringsområde",
+                                "områdevern", "økosystembasert forvalt", "økosystembasert styring", "forvaltningsplan", "bærekraftig forvalt", "berekraftig forvalt","arealforvaltning", 
+                                "artsforvaltning", "naturmangfoldloven", "lov om vern av naturens mangfold",
+                                "Konvensjonen om biologisk mangfold", "Konvensjon om biologisk mangfold", "biodiversitetskonvensjon", 
+                                "Konvensjonen om internasjonal handel med truede dyr", "naturmangfoldloven"]
+                        },
+                        {
+                            "termlist_name": "termlist15_4dcase",
+                            "formatting_rule": "specific_trunc",
+                            "na": false,
+                            "case": true,
+                            "wordlist_en": ["KBA", "KBAs", "CBD", "CITES"],
+                            "wordlist_no": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "5",
+            "_comment":"NO: The Norwegian Red List (Artsdatabanken) webpages were used for Norwegian terms (https://artsdatabanken.no/lister/rodlisteforarter/2021/)",
+            "phrases": [
+                {
+                    "number": 1,
+                    "logic_rule": "(([termlist15_5a] | [termlist15_5atrunc]) & ([termlist15_5b] | ([termlist15_5c] & ([termlist15_5d] | [animals_plants]))))",
+                    "sentence_split": true,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist15_5a",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["degrad", "declin", "loss", "lost", "destruct", "disappear", "fragment"],
+                            "wordlist_no": ["forring", "nedgang", "taper", "tapt", "miste", "ødelegg", "ødelag", "øydelegg", "øydelag", "forsvinn"]
+                        },
+                        {
+                            "termlist_name": "termlist15_5atrunc",
+                            "formatting_rule": "specific_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": [],
+                            "wordlist_no": ["tap", "tape"]
+                        },
+                        {
+                            "termlist_name": "termlist15_5b",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["ecosystem","biotope","habitat"],
+                            "wordlist_no": ["økosystem", "biotop", "leveområd"]
+                        },
+                        {
+                            "termlist_name": "termlist15_5c",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["communit"],
+                            "wordlist_no": ["samfunn"]
+                        },
+                        {
+                            "termlist_name": "termlist15_5d",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["ecolog"],
+                            "wordlist_no": ["økologi"]
+                        }
+                    ]
+                },
+                {
+                    "number": 2,
+                    "logic_rule": "(([termlist15_5a] | [termlist15_5atrunc]) & ([termlist15_5e] | [termlist15_5etrunc]) & [terr_terms])",
+                    "sentence_split": true,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist15_5a",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["degrad", "declin", "loss", "lost", "destruct", "disappear", "fragment"],
+                            "wordlist_no": ["forring", "nedgang", "taper", "tapt", "miste", "ødelegg", "ødelag", "øydelegg", "øydelag", "forsvinn"]
+                        },
+                        {
+                            "termlist_name": "termlist15_5atrunc",
+                            "formatting_rule": "specific_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": [],
+                            "wordlist_no": ["tap", "tape"]
+                        },
+                        {
+                            "termlist_name": "termlist15_5e",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["diversity", "species"],
+                            "wordlist_no": ["diversitet", "mangfold", "mangfald"]
+                        },
+                        {
+                            "termlist_name": "termlist15_5etrunc",
+                            "formatting_rule": "specific_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": [],
+                            "wordlist_no": ["art","arter"]
+                        }
+                    ]
+                },
+                {
+                    "number": 3,
+                    "logic_rule": "([termlist15_5f] & ([termlist15_5g] | [termlist15_5gcase] | ([termlist15_5h] & [animals_plants])) & not [terrestrial_double_NOT])",
+                    "sentence_split": true,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist15_5f",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["manag", "conserv", "protect", "restor", "rehabilit", "preserv",
+                                "increas","strengthen","improv","enhanc","better","higher","upgrad","advance","develop","ensure","maintain","preserv","sustain",
+                                "decreas","reduc","restrict","degrad","lower","declin","deterior"," loss",
+                                "coping","cope","adapt","resilien",
+                                "assess","examin","evaluat","measur","monitor"],
+                            "wordlist_no": ["styring", "forvalt", "verne", "verna", "vern av", "miljøvern", "bevare", "betring", "bevaring", "frede", "freda", "fredning", "gjenoppbygg", "restaur",
+                                "øker", "styrk", "forbedr", "bedring", "oppgrad", "viderefør", "sikre", "vedlikehold", "vedlikehald", "oppretthold", "opprethald",
+                                "reduser", "nedgang", "avgrens", "forring", "nedsatt", "nedsett", "tap av",
+                                "tåle", "tilpas", "resilien",
+                                "overvåk", "overvak", "vurder", "evaluer", "måle", "monitor"]
+                        },
+                        {
+                            "termlist_name": "termlist15_5g",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "_comment":"NO: 'trua art' (NO) etc are included as phrases here because both terms are easily creating noise with automatic truncation. EN: English combinations are covered in h+i below.",
+                            "wordlist_en": ["biodiversity","species diversity", "red list", "International Union for Conservation of Nature"],
+                            "wordlist_no": ["artsmangf", "artsdiversitet", "biomangf", "biologisk mangf", "biologiske mangf", "naturmangf",
+                                "artsforvaltning", "naturmangfoldloven", "lov om vern av naturens mangfold",
+                                "rødlist", "rød list", "raudlist", "raud list",
+                                "trua art", "trued art", "truede art"]
+                        },
+                        {
+                            "termlist_name": "termlist15_5gcase",
+                            "formatting_rule": "specific_trunc",
+                            "na": false,
+                            "case": true,
+                            "wordlist_en": ["KBA", "KBAs", "CBD", "RLI", "IUCN"],
+                            "wordlist_no": ["IUCN"]
+                        },
+                        {
+                            "termlist_name": "termlist15_5h",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["threatened","near extinct", "near-extinct","at risk","endanger","vulnerable","protected","red list","red-list", "diversity"],
+                            "wordlist_no": ["truet", "truga", "utryddingstru", "utrydjingstruga", "utsatte", "utsette", "sårbar", "vernet", "verna", "fredet", "freda", "rødlist", "rød list", "raudlist", "raud list", "diversitet", "mangfold", "mangfald"]
+                        }
+                    ]
+                },
+                {
+                    "number": 4,
+                    "logic_rule": "((([termlist15_5l] | [termlist15_5ltrunc]) & [termlist15_5j] & [animals_plants]) & not [terrestrial_double_NOT])",
+                    "sentence_split": true,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist15_5j",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["threatened","near extinct", "near-extinct","at risk","endanger","vulnerable","protected","red list","red-list"],
+                            "wordlist_no": ["truet", "truga", "trua", "trued", "utryddingstru", "utrydjingstruga", "utsatte", "utsette", "sårbar", "vernet", "verna", "fredet", "freda", "rødlist", "rød list", "raudlist", "raud list"]
+                        },
+                        {
+                            "termlist_name": "termlist15_5l",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["extinction", "loss", "going extinct"],
+                            "wordlist_no": ["utrydd", "utrydj", "tapt", "miste", "mista"]
+                        },
+                        {
+                            "termlist_name": "termlist15_5ltrunc",
+                            "formatting_rule": "specific_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": [],
+                            "wordlist_no": ["tap", "tape"]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "6",
+            "phrases": [
+                {
+                    "number": 1,
+                    "logic_rule": "(((([termlist15_6a] | [termlist15_6atrunc]) & [termlist15_6b] & ([termlist15_6c] | [animals_plants])) & not [terrestrial_double_NOT]) | (([termlist15_6a] | [termlist15_6atrunc]) & [termlist15_6b] & [terr_terms]))",
+                    "sentence_split": true,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist15_6a",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["share", "sharing", "fairness", "equitab", "equal", "access", "right", "ownership", "appropriati", "biopira", "biocoloni", "using", "utiliz", "utilis", "use of"],
+                            "wordlist_no": ["deling", "tilgang", "rett", "rettferd", "eierskap", "eigarskap", "bruk av", "bruker", "utnytte"]
+                        },
+                        {
+                            "termlist_name": "termlist15_6atrunc",
+                            "formatting_rule": "specific_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["fair"],
+                            "wordlist_no": ["deler", "dele"]
+                        },
+                        {
+                            "termlist_name": "termlist15_6b",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["genetic resource", "gene resource", "bioresource", "biological resource",
+                                "traditional knowledge", "indigenous knowledge", "autochthonous knowledge", "local knowledge"],
+                            "wordlist_no": ["genetiske ressurs", "genressurs", "plantegenetiske ressurs", "dyrgenetiske ressurs", "dyregenetiske ressurs", "bioressurs", "biologiske ressurs",
+                                "tradisjonelle kunnskap", "tradisjonell kunnskap", "urfolkskunnskap"]
+                        },
+                        {
+                            "termlist_name": "termlist15_6c",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["ecosystem", "biotop", "diversity"],
+                            "wordlist_no": ["økosystem", "diversit", "mangfold", "mangfald", "dyrgenetiske", "dyrgenetiske"]
+                        }
+                    ]
+                },
+                {
+                    "number": 2,
+                    "logic_rule": "([termlist15_6f] | ([termlist15_6b] & [termlist15_6d] & ([termlist15_6c] | [animals_plants] | [terr_terms])) | ([termlist15_6b] & ([termlist15_6e] | [termlist15_6ecase]) & [terr_terms]))",
+                    "sentence_split": false,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist15_6b",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["genetic resource", "gene resource", "bioresource", "biological resource",
+                                "traditional knowledge", "indigenous knowledge", "autochthonous knowledge", "local knowledge"],
+                            "wordlist_no": ["genetiske ressurs", "genressurs", "plantegenetiske ressurs", "dyrgenetiske ressurs", "dyregenetiske ressurs", "bioressurs", "biologiske ressurs",
+                                "tradisjonelle kunnskap", "tradisjonell kunnskap", "urfolkskunnskap"]
+                        },
+                        {
+                            "termlist_name": "termlist15_6c",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["ecosystem", "biotop", "diversity"],
+                            "wordlist_no": ["økosystem", "diversit", "mangfold", "mangfald", "dyrgenetiske", "dyrgenetiske"]
+                        },
+                        {
+                            "termlist_name": "termlist15_6d",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["benefit", "results", "transfer", "technolog", "participat", "product", "monetary", "royalties", "compensat", "bioprospect"],
+                            "wordlist_no": ["fordel", "gevinst", "resultat", "overfør", "teknologi", "deltak", "finansiel", "kompensasj", "godtgjørelse", "godtgjer", "bioprospekt"]
+                        },
+                        {
+                            "termlist_name": "termlist15_6e",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["Nagoya", "Convention on biological diversity", "benefit sharing", "benefit-sharing", "Plant Genetic Resources for Food and Agriculture"],
+                            "wordlist_no": ["Nagoya", "Konvensjonen om biologisk mangfold", "biodiversitetskonvensjon", "Den internasjonale plantetraktaten"]
+                        },
+                        {
+                            "termlist_name": "termlist15_6ecase",
+                            "formatting_rule": "specific_trunc",
+                            "na": false,
+                            "case": true,
+                            "wordlist_en": ["CBD","ABS","PGRFA"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist15_6f",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["Access and benefit sharing", "Access and benefit-sharing",  "Bonn guideline"],
+                            "wordlist_no": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "7",
+            "phrases": [
+                {
+                    "number": 1,
+                    "logic_rule": "([poaching_endangered] & not [terrestrial_double_NOT])",
+                    "sentence_split": true,
+                    "_comment": "termlist7b was not used in this version, check it works ok",
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist15_7b",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["protected", "endanger", "threat", "extinct", "at risk", "vulnerable", "red list", "red-list"],
+                            "wordlist_no": ["truet", "truga", "utryddingstru", "utrydjingstruga", "utsatte", "utsette", "sårbar", "vernet", "verna", "fredet", "freda", "rødlist", "rød list", "raudlist", "raud list"]
+                        }
+                    ]
+                },
+                {
+                    "number": 2,
+                    "logic_rule": "([termlist15_7e] & [termlist15_7f] & ([termlist15_7d] | [animals_plants]))",
+                    "sentence_split": true,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist15_7e",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["illegal", "illicit", "criminal", "crime"],
+                            "wordlist_no": ["ulovlig", "ulovleg", "krim"]
+                        },
+                        {
+                            "termlist_name": "termlist15_7f",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["product" , "manufact" , "merchandise" , "artifact" , "fabricat" , "handicraft" , "handiwork",
+                                "market" , "supply" , "supplier" , "supplied" , "demand" , "trade" , "trading" , "import", "export", "purchas" , "livelihood",
+                                "ivory"],
+                            "wordlist_no": ["produkt", "varer", "produser", "gjenstand", "lager", "håndverk", "handverk",
+                                "marked", "marknad", "etterspørsel", "tilbud", "tilbod", "handel", "kjøp", "salg", "eksport", "levebrød", "inntektskilde", "inntektskjelde",
+                                "elfenbein", "elfenben"]
+                        },
+                        {
+                            "termlist_name": "termlist15_7d",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["rosewood", "kosso", "elephant", "rhino", "ivory", "pangolin", "turtle", "tortoise", "big cat", "tiger", "glass eel"],
+                            "wordlist_no": ["rosewood", "kosso", "elefant", "neshorn", "elfenbein", "elfenben", "skilpadde", "store katt", "glassål"]
+                        }
+                    ]
+                },
+                {
+                    "number": 3,
+                    "logic_rule": "([CITES] & not [terrestrial_double_NOT])",
+                    "sentence_split": false,
+                    "termlists": []
+                }
+            ]
+        },
+        {
+            "name": "8",
+            "_comment": "Includes an additional term list (termlist15_8d) specific for using these strings for Norwegian research. It contains Latin and Norwegian names for terrestrial and limnic species deemed 'very high risk' in the Norwegian black list of introduced species (2018, newest version; https://www.artsdatabanken.no/fremmedartslista2018). Note that this may result in bias if used for other countries. NO: A NINA report was used to help with Norwegian terminology: Blaalid, R., Often, A., Magnussen, K., Olsen, S. L. & Westergaard, K. B. 2017. Fremmede skadelige karplanter - Bekjempelsesmetodikk og spredningshindrende tiltak. NINA Rapport 1432. 87 s. http://hdl.handle.net/11250/2469573",
+            "phrases": [
+                {
+                    "number": 1,
+                    "logic_rule": "((([termlist15_8a] | [termlist15_8atrunc]) & (([termlist15_8b] & ([termlist15_8c] | [animals_plants])) | [termlist15_8d])) & not [terrestrial_double_NOT])",
+                    "sentence_split": true,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist15_8a",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["introduc", "spread", "expansion", "dispers", "range increas",
+                                "impact" , "effect" , "affect" , "consequen",
+                                "competition", "predation", "hybridisation", "hybridization", 
+                                "disease", "parasitism",
+                                "trampling", "rooting",
+                                "loss", "degrad",
+                                "ecosystem service", "biodiversity", 
+                                "reduc","decreas","tackle","control","eradicat","remov"],
+                            "wordlist_no": ["introduser", "rømme", "forvill", "utvide", "spredning", "sprei", "spre seg", "sprer seg", "spredd seg", "utbre",
+                                "påvirk", "effekt", "impakt", "konsekvens",
+                                "konkurrans", "predasjon", "hybridiser",
+                                "sykdom", "sjukdom", "parasit",
+                                "forring",
+                                "økosystemtjeneste", "økosystemtenest", "biodiversitet", "biologisk mangf", "biologiske mangf", "artsmangf", "biomangf",
+                                "reduser", "tiltak", "kontroll", "utrydd", "fjerne", "bekjemp", "spredningshindr", "spreiingshindr", "forebygg", "førebygg"]
+                        },
+                        {
+                            "termlist_name": "termlist15_8atrunc",
+                            "formatting_rule": "specific_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": [],
+                            "wordlist_no": ["tap", "tapt"]
+                        },
+                        {
+                            "termlist_name": "termlist15_8b",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["invasive","alien","exotic","nonnative","non-native","nonindigenous","non-indigenous"],
+                            "wordlist_no": ["fremmed"]
+                        },
+                        {
+                            "termlist_name": "termlist15_8c",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["rodent"],
+                            "wordlist_no": ["gnager", "fremmedart"]
+                        },
+                        {
+                            "termlist_name": "termlist15_8d",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["Pelophylax ridibundus" , "Pelophylax lessonae" , "Pelophylax esculentus" , "Esox lucius" , "Neogobius melanostomus" , "Phoxinus phoxinus" , "Scardinius erythrophthalmus" , "Branta canadensis" , "Barbarea vulgaris" , "Bunias orientalis" , "Elodea canadensis" , "Elodea nuttallii" , "Lactuca serriola" , "Lupinus nootkatensis" , "Symphytum officinale" , "Reynoutria ×bohemica" , "Vincetoxicum rossicum" , "Epilobium ciliatum ciliatum" , "Epilobium ciliatum glandulosum" , "Aruncus dioicus" , "Lamiastrum galeobdolon argentatum" , "Lamiastrum galeobdolon galeobdolon" , "Lysimachia punctata" , "Pastinaca sativa hortensis" , "Amelanchier spicata" , "Berberis thunbergii" , "Cotoneaster bullatus" , "Cotoneaster dielsianus" , "Cotoneaster horizontalis" , "Lonicera caerulea" , "Lysimachia nummularia" , "Rosa rugosa" , "Arctium tomentosum" , "Lupinus polyphyllus" , "Rorippa ×armoracioides" , "Salix viminalis" , "Bromopsis inermis" , "Cerastium tomentosum" , "Cotoneaster lucidus" , "Heracleum mantegazzianum" , "Heracleum persicum" , "Laburnum anagyroides" , "Melilotus albus" , "Petasites japonicus giganteus" , "Petasites hybridus" , "Phedimus spurius" , "Primula elatior elatior" , "Reynoutria sachalinensis" , "Sambucus racemosa" , "Senecio viscosus" , "Sorbaria sorbifolia" , "Swida sericea" , "Vinca minor" , "Taxus xmedia" , "Senecio inaequidens" , "Melilotus officinalis" , "Odontites vulgaris" , "Solidago canadensis" , "Festuca rubra commutata" , "Cotoneaster divaricatus" , "Berteroa incana" , "Pinus mugo uncinata" , "Cytisus scoparius" , "Impatiens glandulifera" , "Impatiens parviflora" , "Myrrhis odorata" , "Phedimus hybridus" , "Populus balsamifera" , "Reynoutria japonica" , "Sorbus mougeotii" , "Spiraea xbillardii" , "Spiraea xrosalba" , "Spiraea xrubella" , "Tsuga heterophylla" , "Alchemilla mollis" , "Pinus contorta" , "Picea sitchensis" , "Picea xlutzii" , "Acer pseudoplatanus" , "Laburnum alpinum" , "Pinus mugo" , "Campylopus introflexus" , "Neovison vison" , "Lepus europaeus" , "Nyctereutes procyonoides" , "Sciurus carolinensis" , "Castor canadensis" , "Echinococcus multilocularis" , "Gyrodactylus salaris" , "Angiostrongylus vasorum" , "Anguillicoloides crassus" , "Bursaphelenchus xylophilus" , "Meloidogyne hapla" , "Meloidogyne minor" , "Aphanomyces astaci" , "Batrachochytrium dendrobatidis" , "Batrachochytrium salamandrivorans" , "Hymenoscyphus fraxineus" , "Phytophthora ramorum" , "Phytophthora austrocedri" , "Agrilus planipennis" , "Anoplophora glabripennis" , "Harmonia axyridis" , "Ips amitinus" , "Arion vulgaris" , "Dreissena bugensis" , "Dreissena polymorpha" , "Potamopyrgus antipodarum" , "Opilio canestrinii" , "Eriocheir sinensis" , "Daphnia parvula" , "Pacifastacus leniusculus" , "Aedes japonicus" , "Bombus terrestris"],
+                            "wordlist_no": ["Pelophylax ridibundus" , "Pelophylax lessonae" , "Pelophylax esculentus" , "Esox lucius" , "Neogobius melanostomus" , "Phoxinus phoxinus" , "Scardinius erythrophthalmus" , "Branta canadensis" , "Barbarea vulgaris" , "Bunias orientalis" , "Elodea canadensis" , "Elodea nuttallii" , "Lactuca serriola" , "Lupinus nootkatensis" , "Symphytum officinale" , "Reynoutria ×bohemica" , "Vincetoxicum rossicum" , "Epilobium ciliatum ciliatum" , "Epilobium ciliatum glandulosum" , "Aruncus dioicus" , "Lamiastrum galeobdolon argentatum" , "Lamiastrum galeobdolon galeobdolon" , "Lysimachia punctata" , "Pastinaca sativa hortensis" , "Amelanchier spicata" , "Berberis thunbergii" , "Cotoneaster bullatus" , "Cotoneaster dielsianus" , "Cotoneaster horizontalis" , "Lonicera caerulea" , "Lysimachia nummularia" , "Rosa rugosa" , "Arctium tomentosum" , "Lupinus polyphyllus" , "Rorippa ×armoracioides" , "Salix viminalis" , "Bromopsis inermis" , "Cerastium tomentosum" , "Cotoneaster lucidus" , "Heracleum mantegazzianum" , "Heracleum persicum" , "Laburnum anagyroides" , "Melilotus albus" , "Petasites japonicus giganteus" , "Petasites hybridus" , "Phedimus spurius" , "Primula elatior elatior" , "Reynoutria sachalinensis" , "Sambucus racemosa" , "Senecio viscosus" , "Sorbaria sorbifolia" , "Swida sericea" , "Vinca minor" , "Taxus xmedia" , "Senecio inaequidens" , "Melilotus officinalis" , "Odontites vulgaris" , "Solidago canadensis" , "Festuca rubra commutata" , "Cotoneaster divaricatus" , "Berteroa incana" , "Pinus mugo uncinata" , "Cytisus scoparius" , "Impatiens glandulifera" , "Impatiens parviflora" , "Myrrhis odorata" , "Phedimus hybridus" , "Populus balsamifera" , "Reynoutria japonica" , "Sorbus mougeotii" , "Spiraea xbillardii" , "Spiraea xrosalba" , "Spiraea xrubella" , "Tsuga heterophylla" , "Alchemilla mollis" , "Pinus contorta" , "Picea sitchensis" , "Picea xlutzii" , "Acer pseudoplatanus" , "Laburnum alpinum" , "Pinus mugo" , "Campylopus introflexus" , "Neovison vison" , "Lepus europaeus" , "Nyctereutes procyonoides" , "Sciurus carolinensis" , "Castor canadensis" , "Echinococcus multilocularis" , "Gyrodactylus salaris" , "Angiostrongylus vasorum" , "Anguillicoloides crassus" , "Bursaphelenchus xylophilus" , "Meloidogyne hapla" , "Meloidogyne minor" , "Aphanomyces astaci" , "Batrachochytrium dendrobatidis" , "Batrachochytrium salamandrivorans" , "Hymenoscyphus fraxineus" , "Phytophthora ramorum" , "Phytophthora austrocedri" , "Agrilus planipennis" , "Anoplophora glabripennis" , "Harmonia axyridis" , "Ips amitinus" , "Arion vulgaris" , "Dreissena bugensis" , "Dreissena polymorpha" , "Potamopyrgus antipodarum" , "Opilio canestrinii" , "Eriocheir sinensis" , "Daphnia parvula" , "Pacifastacus leniusculus" , "Aedes japonicus" , "Bombus terrestris", 
+                            "latterfrosk" , "kontinental damfrosk" , "hybridfrosk" , "gjedde" , "svartmunnet kutling" , "ørekyt" , "sørv" , "kanadagås" , "vinterkarse" , "russekål" , "vasspest" , "smal vasspest" , "taggsalat" , "sandlupin" , "valurt" , "hybridslirekne" , "russesvalerot" , "ugrasmjølke" , "alaskamjølke" , "skogskjegg" , "sølvtvetann" , "parkgulltvetann" , "fagerfredløs" , "hagepastinakk" , "blåhegg" , "høstberberis" , "bulkemispel" , "dielsmispel" , "krypmispel" , "blåleddved" , "krypfredløs" , "rynkerose" , "ullborre" , "hagelupin" , "hybridkulekarse" , "kurvpil" , "bladfaks" , "filtarve" , "blankmispel" , "kjempebjørnekjeks" , "tromsøpalme" , "gullregn" , "hvitsteinkløver" , "japanpestrot" , "legepestrot" , "gravbergknapp" , "lundnøkleblom" , "kjempeslirekne" , "rødhyll" , "klistersvineblom" , "rognspirea" , "alaskakornell" , "gravmyrt" , "hybridbarlind" , "boersvineblom" , "legesteinkløver" , "engrødtopp" , "kanadagullris" , "veirødsvingel" , "sprikemispel" , "hvitdodre" , "bergfuru" , "gyvel" , "kjempespringfrø" , "mongolspringfrø" , "spansk kjørvel" , "sibirbergknapp" , "balsampoppel" , "parkslirekne" , "alpeasal" , "klasespirea" , "purpurspirea" , "bleikspirea" , "vestamerikansk hemlokk" , "praktmarikåpe" , "vrifuru" , "sitkagran" , "lutzgran" , "platanlønn" , "alpegullregn" , "alpefuru" , "ribbesåtemose" , "mink " , "sørhare" , "mårhund" , "riebannjáŋkkár" , "furuvednematode" , "askeskuddbeger" , "greindreper" , "asiatisk askepraktbille" , "harlekinmarihøne" , "brunskogsnegl" , "sebramusling" , "vandrepollsnegl" , "gulrotvevkjerring" , "kinaullhåndskrabbe" , "signalkreps" , "mørk jordhumle"]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "9",
+            "phrases": [
+                {
+                    "number": 1,
+                    "logic_rule": "(([termlist15_9d] | [termlist15_9dcase] | ((([termlist15_9a] | [termlist15_9atrunc] | ([termlist15_9b] & ([termlist15_9c] | [animals_plants]))) & ([termlist15_9e] & ([termlist15_9f] | [termlist15_9ftrunc]))) & not [terrestrial_double_NOT])) | ([termlist15_9b] & ([termlist15_9e] & ([termlist15_9f] | [termlist15_9ftrunc])) & [terr_terms]))",
+                    "sentence_split": true,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist15_9d",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["national biodiversity strategy", "national biodiversity action plan"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist15_9dcase",
+                            "formatting_rule": "specific_trunc",
+                            "na": false,
+                            "case": true,
+                            "wordlist_en": ["NBSAP", "NBSAPs"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist15_9a",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["biodiversit", "biological diversity", "species diversity",
+                                "habitats", "biotop", "nature conserv"],
+                            "wordlist_no": ["biologisk diversitet", "biomangf", "artsmangf", "biologisk mangf", "biologiske mangf", "naturmangf",
+                                "økosystem", "leveområd", "naturvern"]
+                        },
+                        {
+                            "termlist_name": "termlist15_9atrunc",
+                            "formatting_rule": "specific_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["cbd", "habitat"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist15_9b",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["community", "environment", "ecosystem", "diversit", "habitat"],
+                            "wordlist_no": ["samfunn", "miljø", "mangfold", "mangfald"]
+                        },
+                        {
+                            "termlist_name": "termlist15_9c",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["taxonom"],
+                            "wordlist_no": ["taksonom"]
+                        },
+                        {
+                            "termlist_name": "termlist15_9e",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["national", "local", "government", "regional", "sector", "municipal", "federal", "urban", "settlement", "multilevel", "multi-level",
+                                "poverty reduction", "reduce poverty", "anti-poverty", "anti poverty"],
+                            "wordlist_no": ["nasjonal", "regjering", "kommun", "lokal", "fylke", "sektor", "byer", "byområd", "byråd",
+                                "fattigdom"]
+                        },
+                        {
+                            "termlist_name": "termlist15_9f",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["target", "goal", "program", "strateg", "policy", "policies", "framework", "governance", 
+                                "action plan", "development", "accounting", "report"],
+                            "wordlist_no": ["handlingsplan", "planlegg", "politikk", "retningslin", "rammeverk", "styring", "ledelse", "leiing", "forvaltning", 
+                                "utvikling", "rapport"]
+                        },
+                        {
+                            "termlist_name": "termlist15_9ftrunc",
+                            "formatting_rule": "specific_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["plan", "planning", "plans"],
+                            "wordlist_no": ["mål"]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "a",
+            "phrases": [
+                {
+                    "number": 1,
+                    "logic_rule": "((([termlist15_aa] | (([termlist15_ab] | [termlist15_abtrunc]) & [termlist15_ac]) & ([termlist15_ad] | ([termlist15_ae] & ([termlist15_af] | [animals_plants])) | ([termlist15_ae] & [terr_terms]))) & ([termlist15_ag] | [termlist15_agcase])) & not [terrestrial_double_NOT])",
+                    "sentence_split": true,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist15_aa",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["protect", "preserv", "conserv", "promot", "improv", "restor", "rehabilit",
+                                "enhanc", "strengthen", "maintain", "preserv", "support"],
+                            "wordlist_no": ["verne", "verna", "vern av", "miljøvern", "bevare", "bevaring", "frede", "freda", "fredning", "gjenoppbygg", "restaurer", 
+                                "forbedr", "betre", "betring", "styrke", "vedlikeh", "støtte", "stønad"]
+                        },
+                        {
+                            "termlist_name": "termlist15_ab",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["manag","use","using","govern","development","administrat","planning"],
+                            "wordlist_no": ["forvalt", "bruk av", "styr", "ledelse", "leiing", "utvikl", "planlegg"]
+                        },
+                        {
+                            "termlist_name": "termlist15_abtrunc",
+                            "formatting_rule": "specific_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["use","using", "plan"],
+                            "wordlist_no": ["bruk", "plan"]
+                        },
+                        {
+                            "termlist_name": "termlist15_ac",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["sustainabl", "responsib", "environmental", "ecological", "ecosystem"],
+                            "wordlist_no": ["bærekraft", "berekraft", "ansvarl", "miljø", "økologisk", "økosystem"]
+                        },
+                        {
+                            "termlist_name": "termlist15_ad",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["biodiversit", "biological diversity", "species diversity",
+                                "habitat","biotop","nature conservation",
+                                "ecosystem service", "ecosystem restor", "rio marker"],
+                            "wordlist_no": ["biologisk diversitet", "biomangf", "artsmangf", "biologisk mangf", "biologiske mangf",
+                                "økosystem", "leveområd", "naturvern"]
+                        },
+                        {
+                            "termlist_name": "termlist15_ae",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "_comment": "'Ecosystem' was 50-50 noise, so was moved here to be combined with species, plant etc (termlist15_af and animals_plants).",
+                            "wordlist_en": ["community", "environment", "ecosystem", "diversit"],
+                            "wordlist_no": ["samfunn", "miljø", "mangfold"]
+                        },
+                        {
+                            "termlist_name": "termlist15_af",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["ecolog"],
+                            "wordlist_no": ["økologi"]
+                        },
+                        {
+                            "termlist_name": "termlist15_ag",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["investing", "invest in", "investment", "investor", "financ", "spending", "funding", "grant", "funds",
+                                "incentive", "taxes", "fees", "subsidy", "subsidi",
+                                "cooperation fund", "development fund", "development assistance", "international aid", "international assistance", "foreign aid", "foreign assistance", 
+                                "global environmental facility", "Biodiversity finance intitiative", 
+                                "partnership for action on green economy", 
+                                "poverty-environment action for sustainable", "poverty environment action for sustainable",
+                                "green commodities program"],
+                            "wordlist_no": ["finansiel", "midlar", "økonomiske ressurs",
+                                "insentiv", "skatt", "subsidier", "subsidiar", "tilskudd", "tilskot",
+                                "samarbeidsfond", "utviklingsstøtte", "utviklingsstønad", "bistand", "utviklingshjelp", "u-hjelp"]
+                        },
+                        {
+                            "termlist_name": "termlist15_agcase",
+                            "formatting_rule": "specific_trunc",
+                            "na": false,
+                            "case": true,
+                            "wordlist_en": ["GEF", "BIOFIN", "PAGE", "PEA", "ODA"],
+                            "wordlist_no": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "b",
+            "phrases": [
+                {
+                    "number": 1,
+                    "logic_rule": "(([termlist15_ba] | [termlist15_bacase]) & [termlist15_bb] & not [termlist15_bNOT])",
+                    "sentence_split": true,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist15_ba",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["investing", "investment", "investor", "invest in", "financ", "spending", "funding", "grant", "funds",
+                                "incentive", "taxes", "fees", "subsidy", "subsidi", "payment",
+                                "cooperation fund", "development fund", "development assistance", "international aid", "international assistance", "foreign aid", "foreign assistance"],
+                            "wordlist_no": ["finansiel", "midlar", "økonomiske ressurs", "økonomiske midler",
+                                "insentiv", "skatt", "subsidier", "subsidiar", "tilskudd", "tilskot", "utbetal",
+                                "samarbeidsfond", "utviklingsstøtte", "utviklingsstønad", "bistand", "utviklingshjelp", "u-hjelp"]
+                        },
+                        {
+                            "termlist_name": "termlist15_bacase",
+                            "formatting_rule": "specific_trunc",
+                            "na": false,
+                            "case": true,
+                            "wordlist_en": ["ODA"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist15_bb",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["forest", "woodland", "silvicultur", "arboricultu"],
+                            "wordlist_no": ["skog", "silvikultur"]
+                        },
+                        {
+                            "termlist_name": "termlist15_bNOT",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["kelp forest"],
+                            "wordlist_no": ["tareskog"]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "c",
+            "phrases": [
+                {
+                    "number": 1,
+                    "logic_rule": "(([poaching_endangered] & ([termlist15_cc] | [CITES])) & not [terrestrial_double_NOT])",
+                    "sentence_split": true,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist15_cc",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["capacity",
+                                "cooperation","collaboration","support","international agreement",
+                                "polic", "empower", "investing", "investment",
+                                "knowledge transfer", "awareness", "knowledge", "information", "dissemination",
+                                "educat", 
+                                "Landscapes for People, Food and Nature partnership",
+                                "anti-poach", "patrol", "detection"],
+                            "wordlist_no": ["kapasitet", 
+                                "samarbeid", "nettverk", "støtte", "stønad",
+                                "politikk", "retningslin", "myndiggjør", "bistand", "ressurs",
+                                "kunnskapsoverfør", "kjenner til", "kunnskap", "informasjon", "formidl",
+                                "utdann",
+                                "anti-krypskyt", "avslør", "kontroll"]
+                        }
+                    ]
+                },
+                {
+                    "number": 2,
+                    "logic_rule": "((([CITES] | [poaching_endangered]) & ([termlist15_ce] | [termlist15_cg])) & not [terrestrial_double_NOT])",
+                    "sentence_split": true,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist15_ce",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["livelihood", "employment", "local communit", "local people", "indigenous communit", "indigenous people", "rural communit", "rural people", "native communit", "native people"],
+                            "wordlist_no": ["levebrød", "jobb", "tilsatt", "ansatt", "arbeid", "lokale samfunn", "lokalsamfunn", "urfolk", "urbefolkning", "bygd"]
+                        },
+                        {
+                            "termlist_name": "termlist15_cf",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "_comment": "Not used right now.",
+                            "wordlist_en": ["sustainab", "ecological", "legal", "alternativ", "eco-friendly", "environmentally friendly"],
+                            "wordlist_no": ["bærekraft", "berekraft", "økologi", "lovlig", "lovleg", "miljøven", "økoven"]
+                        },
+                        {
+                            "termlist_name": "termlist15_cg",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["fishing", "fisher", "hunting", "hunter", "touris", "agroforest", "agricult", "income"],
+                            "wordlist_no": ["fiske", "jakt", "turism", "landbruk", "jordbruk", "inntekt"]
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "mentions": {
+        "logic_rule": "([termlist_sdg_a] | ([termlist_sdg_b] & [termlist_sdg_c]) | ([termlist_sdg_d] & [termlist_sdg_f]))",
+        "termlists": [
+            {
+                "termlist_name": "termlist_sdg_a",
+                "formatting_rule": "default",
+                "na": false,
+                "case": false,
+                "wordlist_en": ["SDG 15", "SDGs 15", "SDG15", "sustainable development goal 15"],
+                "wordlist_no": ["bærekraftsmål 15", "berekraftsmål 15"]
+            },
+            {
+                "termlist_name": "termlist_sdg_b",
+                "formatting_rule": "default",
+                "na": false,
+                "case": false,
+                "wordlist_en": ["sustainable development goal"],
+                "wordlist_no": ["bærekraftsmål", "berekraftsmål"]
+            },
+            {
+                "termlist_name": "termlist_sdg_c",
+                "formatting_rule": "default",
+                "na": false,
+                "case": false,
+                "wordlist_en": ["goal 15"],
+                "wordlist_no": ["mål 15"]
+            },
+            {
+                "termlist_name": "termlist_sdg_d",
+                "formatting_rule": "default",
+                "na": false,
+                "case": false,
+                "wordlist_en": ["sustainable development goal", "SDG", "goal 15"],
+                "wordlist_no": ["bærekraftsmål", "berekraftsmål", "mål 15"]
+            },
+            {
+                "termlist_name": "termlist_sdg_f",
+                "formatting_rule": "default",
+                "na": false,
+                "case": false,
+                "wordlist_en": ["life on land"],
+                "wordlist_no": ["livet på land"]
+            }
+        ]
+    }
+}

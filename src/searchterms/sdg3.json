@@ -1,0 +1,1445 @@
+{
+    "name": "sdg3",
+    "number": 3,
+    "generated_datetime": "09-12-2025 10:07:35",
+    "pre-search": [],
+    "_comment":"To help with sourcing Norwegian terms, we used webpages about SDG targets from the UN Association of Norway (https://www.fn.no/om-fn/fns-baerekraftsmaal/god-helse-og-livskvalitet) and 'Realfagstermer', a controlled vocabulary for scientific terms from the University of Oslo and University of Bergen (https://app.uio.no/ub/emnesok/realfagstermer/search).", 
+    "targets": [
+        {
+            "name": "1",
+            "phrases": [
+                {
+                    "number": 1,
+                    "logic_rule": "([termlist3_1c] | (([termlist3_1a] | [termlist3_1atrunk]) & [termlist3_1b]))",
+                    "sentence_split": true,
+                    "_comment": "This string is hard to create in a way that cleanly separates out results about mortality for children/babies, which should be in 3.2. 'birth' in particular seems to be an issue and is removed from this string; it is included in 3.2, and here as 'childbirth'",
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist3_1a",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["pregnan","post partum","postpartum","peripartum","obstetric",
+                                "premature deliver","preterm deliver","preterm labor","preterm labour","childbirth",
+                                "maternal","mothers"],
+                            "wordlist_no": ["gravid", "svangerskap", "obstetrikk", "mødre"]
+                        },
+                        {
+                            "termlist_name": "termlist3_1atrunk",
+                            "formatting_rule": "specific_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": [],
+                            "wordlist_no": ["mor"]
+                        },
+                        {
+                            "termlist_name": "termlist3_1b",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["mortality","death"],
+                            "wordlist_no": ["mortalitet", "død"]
+                        },
+                        {
+                            "termlist_name": "termlist3_1c",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": [],
+                            "wordlist_no": ["mødredødelighet"]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "2",
+            "_comment": "Phrases 1 and 2 from WOS are combined here.",
+            "phrases": [
+                {
+                    "number": 1,
+                    "logic_rule": "([termlist3_2a] & [termlist3_2b])",
+                    "sentence_split": true,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist3_2a",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["child","infant","toddler","under-five",
+                                "baby","babies","newborn","neonatal","neonate","birth",
+                                "perinatal","prenatal","antenatal"],
+                            "wordlist_no": ["barn", "under 5 år", "under fem år",
+                                "nyfød", "spedbarn", "føds", "for tidlig født"]
+                        },
+                        {
+                            "termlist_name": "termlist3_2b",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["mortality","death","stillbirth","still-birth", "surviv"],
+                            "wordlist_no": ["mortalitet", "død", "overleve"]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "3",
+            "phrases": [
+                {
+                    "number": 1,
+                    "logic_rule": "(([termlist3_3a] & [termlist3_3b]) & not ([termlist3_3c] & not [termlist3_3d]))",
+                    "sentence_split": true,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist3_3a",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["communicable disease", "communicable illness"],
+                            "wordlist_no": ["overførbar sykdom", "overførbare sykdommer", "smittsom sykdom", "smittsomme sykdommer", "smittsam sjukdom", "smittsame sjukdommar"]
+                        },
+                        {
+                            "termlist_name": "termlist3_3b",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["prevent","combat","fight","tackl","reduc","alleviat","mitigat",
+                                "eradicat","eliminat","end","ended","ending",
+                                "treat","cure","vaccin","control",
+                                "epidemic","pandemic","outbreak","spread","transmission","occurrence","incidence","prevalence","risk","rate",
+                                "medicine","drug","intervention","therap"],
+                            "wordlist_no": ["hindr", "forebygg", "førebygg", "kjemp", "takl", "reduser", "reduksjon", "lett", "mink",
+                                "utrydd", "eliminer", "stopp", "stogg",
+                                "behandl", "kurer", "vaksine", "kontroll",
+                                "epidemi", "pandemi", "utbrudd", "utbrot", "spre", "smitte", "overføring", "forekom", "førekom", "tilfelle", "utbre", "risik",
+                                "medisin", "legemid", "intervensjon", "terap"]
+                        },
+                        {
+                            "termlist_name": "termlist3_3c",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["non-communicable disease", "non-communicable illness", "noncommunicable disease", "noncommunicable illness"],
+                            "wordlist_no": ["ikke smittsom sykdom", "ikke-smittsom sykdom", "ikke-smittsomme sykdom", "ikkje-smittsam sjukdom", "ikkje smittsame sjukdom"]
+                        },
+                        {
+                            "termlist_name": "termlist3_3d",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["infectious disease", "tropical illness",
+                                "non communicable and communicable","communicable and non communicable","non-communicable and communicable","communicable and non-communicable", "noncommunicable and communicable","communicable and noncommunicable"],
+                            "wordlist_no": ["overførbar", "tropisk sykdom", "tropiske sykdom", "tropesykdom", "tropisk sjukdom", "tropiske sjukdom", "tropesjukdom", 
+                                "ikke-smittsom og smittsom", "ikke-smittsomme og smittsomme", "smittsom og ikke-smittsom", "smittsomme og ikke-smittsomme","ikkje-smittsam og smittsam", "ikkje-smittsame og smittsame", "smittsam og ikkje-smittsam", "smittsame og ikkje-smittsame"]
+                        }
+                    ]
+                },
+                {
+                    "number": 2,
+                    "logic_rule": "((([termlist3_3e] & [termlist3_3f]) | [termlist3_3g] | [termlist3_3i]) & [termlist3_3j])",
+                    "sentence_split": true,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist3_3e",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["water borne", "waterborne", "water-borne", "water-related", "diorrhea", "diarrhea", 
+                                "contagious", "transmissible","infectious"],
+                            "wordlist_no": ["vannbår", "vassbår", "vassbor", "vannrelatert", "diare", 
+                                "smittsom", "smittsam", "smitte", "overførbar"]
+                        },
+                        {
+                            "termlist_name": "termlist3_3f",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["disease", "infection", "epidemic", "illness"],
+                            "wordlist_no": ["sykdom", "sjukdom", "infeksjon", "epidemi"]
+                        },
+                        {
+                            "termlist_name": "termlist3_3g",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "_comment": "'pest' (NO, = plague EN) is difficult to include as 'pest + control' is noisy.",
+                            "wordlist_en": ["hepatitis", "acquired immune deficiency syndrome", "acquired immuno-deficiency syndrome", "acquired immunodeficiency syndrome", "Human Immunodeficiency Virus", "prevent aids",
+                                "tuberculosis", "malaria", "cholera", "meningitis", "influenza", "avian influenza", "h5n1", "rubella", "diphteria", "japanese encephalitis", "measles", "mumps", "tetanus",
+                                "pertussis", "polio", "yellow fever", "sexually transmitted disease", "sexually transmitted infection", "syphilis", 
+                                "lower respiratory infection", "respiratory tract infection",
+                                "coronavirus", "covid", "sars-cov", "middle east respiratory syndrome", "severe acute respiratory syndrome",
+                                "crimean-congo haemorrhagic fever", "viral haemorrhagic fever", "ebola", "plague", "rift valley fever", "zika virus",
+                                "amebiasis", "cryptosporidiosis", "cryptosporidium infection", "giardiasis", "giardia infection", "shigellosis", "cronobacter infection",
+                                "acanthamoeba", "balamuthia", "naegleria", "sappinia", "typhoid", 
+                                "neglected tropical disease", "buruli ulcer", "chagas", "dengue", "chikungunya", "dracunculiasis", "guinea-worm disease", "echinococcosis", "foodborne trematodiases",
+                                "human african trypanosomiasis", "sleeping sickness", "leishmaniasis", "leprosy", "lymphatic filariasis", "mycetom", "chromoblastomycosis", "deep mycoses",
+                                "onchocerciasis", "river blindness", "rabies", "scabies", "schistosomiasis", "soil-transmitted helminthiasis", "hookworm", "roundworm", "whipworm", "ascaris lumbricoides",
+                                "trichuris trichiura", "necator americanus", "ancylostoma duodenale", "snakebite envenoming", "taeniasis", "cysticercosis", "trachoma", "yaws",
+                                "trichuris", "necator", "ancylostoma"],
+                            "wordlist_no": ["hepatitt", "ervervet immunsvikt syndrom-virus", "humant immunsviktvirus", "hindre aids",
+                                "tuberkulose", "kolera", "meningitt", "influensa", "røde hunder", "difteri", "japansk encefalitt", "meslinger", "kusma", "stivkrampe",
+                                "kikhoste", "gulfeber", "seksuelt overførbar", "syfilis", 
+                                "luftveisinfeksjon", 
+                                "koronavirus", 
+                                "krimfeber", "rift valley-feber", "zikavirus",
+                                "amøbiasis", "kryptosporidiose", "giardiainfeksjon", "shigellose", "enterobakterieinfeksjon", "tyfoidfeber",         
+                                "neglisjert tropesykdom", "neglisjerte tropesjukdom", "neglisjert tropesjukdom", "negliserte tropesjukdom", "burulisår", "ekinokkokose", "trematodeinfeksjon",
+                                "afrikansk trypanosomiasis", "lepra", "lymfatisk filariasis", "mykose", "kromomykose",
+                                "onkocerkose", "skabb", "helmintiasis", "jordoverført helminthiasis", "hakeorm", "rundorm", "guineaorm", 
+                                "taeniainfeksjon", "cysticerkose", "trakom", "frambøsi"]
+                        },
+                        {
+                            "termlist_name": "termlist3_3i",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": true,
+                            "wordlist_en": ["HIV", "AIDS", "MERS", "SARS"],
+                            "wordlist_no": ["HIV", "AIDS", "MERS", "SARS"]
+                        },
+                        {
+                            "termlist_name": "termlist3_3j",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["prevent", "combat", "fight", "tackl", "reduc", "alleviat", "mitigat", "eradicat", "eliminat", 
+                                "treat", "cure", "curing", "vaccinate", "control", "contain"],
+                            "wordlist_no": ["hindr", "forebygg", "førebygg", "nedkjemp", "takl", "overvinn", "lette", "utrydde", "elimin", 
+                                "stopp", "stogg", "behandl", "kurer", "vaksiner", "kontroll"]
+                        }
+                    ]
+                },
+                {
+                    "number": 3,
+                    "logic_rule": "(((([termlist3_3e] & [termlist3_3f]) | [termlist3_3k] | [termlist3_3k_caps]) & [termlist3_3l]) | (([termlist3_3m] | [termlist3_3m_caps]) & (([termlist3_3j] & [termlist3_3n]) | [termlist3_3o])))",
+                    "sentence_split": true,
+                    "_comment": "This search is split into two parts: the first with communicable diseases generally, the second about covid. This is because there is a lot of non-medical research about covid which is outside the target, so it needs to be more specific in search terms" ,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist3_3e",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["water borne", "waterborne", "water-borne", "water-related", "diorrhea", "diarrhea", 
+                                "contagious", "transmissible", "infectious"],
+                            "wordlist_no": ["vannbår", "vassbår", "vassbor", "vannrelatert", "diare", 
+                                "smittsom", "smittsam", "smitte", "overførbar"]
+                        },
+                        {
+                            "termlist_name": "termlist3_3f",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["disease", "infection", "epidemic", "illness"],
+                            "wordlist_no": ["sykdom", "sjukdom", "infeksjon", "epidemi"]
+                        },
+                        {
+                            "termlist_name": "termlist3_3k",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["hepatitis", "acquired immune deficiency syndrome", "acquired immuno-deficiency syndrome", "acquired immunodeficiency syndrome", "Human Immunodeficiency Virus", "prevent aids",
+                                "tuberculosis", "malaria", "cholera", "meningitis", "influenza", "avian influenza", "h5n1", "rubella", "diphteria", "japanese encephalitis", "measles", "mumps", "tetanus",
+                                "pertussis", "polio", "yellow fever", "sexually transmitted disease", "sexually transmitted infection", "syphilis", 
+                                "lower respiratory infection", "respiratory tract infection",
+                                "middle east respiratory syndrome", 
+                                "crimean-congo haemorrhagic fever", "viral haemorrhagic fever", "ebola", "plague", "rift valley fever", "zika virus",
+                                "amebiasis", "cryptosporidiosis", "cryptosporidium infection", "giardiasis", "giardia infection", "shigellosis", "cronobacter infection",
+                                "acanthamoeba", "balamuthia", "naegleria", "sappinia", "typhoid", 
+                                "neglected tropical disease", "buruli ulcer", "chagas", "dengue", "chikungunya", "dracunculiasis", "guinea-worm disease", "echinococcosis", "foodborne trematodiases",
+                                "human african trypanosomiasis", "sleeping sickness", "leishmaniasis", "leprosy", "lymphatic filariasis", "mycetom", "chromoblastomycosis", "deep mycoses",
+                                "onchocerciasis", "river blindness", "rabies", "scabies", "schistosomiasis", "soil-transmitted helminthiasis", "hookworm", "roundworm", "whipworm", "ascaris lumbricoides",
+                                "trichuris trichiura", "necator americanus", "ancylostoma duodenale", "snakebite envenoming", "taeniasis", "cysticercosis", "trachoma", "yaws",
+                                "trichuris", "necator", "ancylostoma"],
+                            "wordlist_no": ["hepatitt", "ervervet immunsvikt syndrom-virus", "humant immunsviktvirus", "hindre aids",
+                                "tuberkulose", "kolera", "meningitt", "influensa", "røde hunder", "difteri", "japansk encefalitt", "meslinger", "kusma", "stivkrampe",
+                                "kikhoste", "gulfeber", "seksuelt overførbar", "syfilis", 
+                                "luftveisinfeksjon", 
+                                "krimfeber", "rift valley-feber", "zikavirus",
+                                "amøbiasis", "kryptosporidiose", "giardiainfeksjon", "shigellose", "enterobakterieinfeksjon", "tyfoidfeber",         
+                                "neglisjert tropesykdom", "neglisjerte tropesjukdom", "neglisjert tropesjukdom", "negliserte tropesjukdom", "burulisår", "ekinokkokose", "trematodeinfeksjon",
+                                "afrikansk trypanosomiasis", "lepra", "lymfatisk filariasis", "mykose", "kromomykose",
+                                "onkocerkose", "skabb", "helmintiasis", "jordoverført helminthiasis", "hakeorm", "rundorm", "guineaorm", 
+                                "taeniainfeksjon", "cysticerkose", "trakom", "frambøsi"]
+                        },
+                        {
+                            "termlist_name": "termlist3_3k_caps",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": true,
+                            "wordlist_en": ["HIV", "AIDS", "MERS"],
+                            "wordlist_no": ["HIV", "AIDS", "MERS"]
+                        },
+                        {
+                            "termlist_name": "termlist3_3l",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["epidemi", "pandemi", "outbreak", 
+                                "spread", "transmission", "occurrence", "incidence", "prevalence", "risk", "rate",
+                                "medicine", "vaccin", "cure", "treatment", "drug", "intervention", "therap",
+                                "antimalaria", "antiviral", "antibioti", "antiparasitic", "antihelminthic"],
+                            "wordlist_no": ["utbrudd", "utbrot", "spredning", "spreiing", "smitte", "overføring", "forekomst", "førekomst", "hendelse", "hending", "utbredelse", "utbreiing", "risik",
+                                "medisin", "vaksin", "behandl", "legemiddel", "medikament", "intervensjon", "terap", "antihelminti"]
+                        },
+                        {
+                            "termlist_name": "termlist3_3m",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["coronavirus", "covid", "sars-cov", "severe acute respiratory syndrome"],
+                            "wordlist_no": ["koronavirus", "covid", "sars-cov"]
+                        },
+                        {
+                            "termlist_name": "termlist3_3m_caps",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": true,
+                            "wordlist_en": ["SARS"],
+                            "wordlist_no": ["SARS"]
+                        },
+                        {
+                            "termlist_name": "termlist3_3j",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["prevent", "combat", "fight", "tackl", "reduc", "alleviat", "mitigat", "eradicat", "eliminat", 
+                                "treat", "cure", "curing", "vaccinate", "control", "contain"],
+                            "wordlist_no": ["hindr", "forebygg", "førebygg", "nedkjemp", "takl", "overvinn", "lette", "utrydde", "elimin", 
+                                "stopp", "stogg", "behandl", "kurer", "vaksiner", "kontroll"]
+                        },
+                        {
+                            "termlist_name": "termlist3_3n",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["epidemi", "pandemi", "outbreak"],
+                            "wordlist_no": ["utbrudd", "utbrot"]
+                        },
+                        {
+                            "termlist_name": "termlist3_3o",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["pandemic response", "epidemic response", "outbreak response",
+                                "spread", "transmission", "occurrence", "incidence", "prevalence", "risk", " rate",
+                                "medicine", "vaccin", "cure", "treatment", "drug", "intervention", "therap",
+                                "antimalaria", "antiviral", "antibioti", "antiparasitic", "antihelminthic"],
+                            "wordlist_no": ["utbrudd", "utbrot", 
+                                "spredning", "spreiing", "smitte", "overføring", "forekomst", "førekomst", "hendelse", "hending", "utbredelse", "utbreiing", "risik",
+                                "medisin", "vaksin", "behandl", "legemiddel", "medikament", "intervensjon", "terap", "antihelminti"]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "4",
+            "phrases": [
+                {
+                    "number": 1,
+                    "logic_rule": "([termlist3_4h] & (([termlist3_4a] & [termlist3_4b]) | [termlist3_4c] | ([termlist3_4d] & [termlist3_4e]) | ([termlist3_4f] & [termlist3_4g])))",
+                    "sentence_split": true,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist3_4a",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["non communicable", "noncommunicable", "non-communicable", "non transmissible", "nontransmissible", "non-transmissible", 
+                                "non infectious", "noninfectious", "non-infectious", "auto immun", "autoimmun", "auto-immun"],
+                            "wordlist_no": ["ikke-smittsom", "ikkje-smittsam", "ikke smittsom", "ikkje smittsam", "autoimmun", "auto-immun"]
+                        },
+                        {
+                            "termlist_name": "termlist3_4b",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["disease", "illness"],
+                            "wordlist_no": ["sykdom", "sjukdom"]
+                        },
+                        {
+                            "termlist_name": "termlist3_4c",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["cardiovascular disease", "heart disease", "heart attack", "stroke", "diabetes",
+                                "chronic respiratory disease", "asthma", "emphysema", "chronic obstructive pulmonary disease",
+                                "COPD", "chronic obstructive airway disease", "chronic bronchitis", 
+                                "cancer", "sarcoma", "carcinoma", "blastoma", "myeloma", "lymphoma", "leukaemia", "leukemia",
+                                "mesothelioma", "melanom", "kidney disease", "alzheimer", "dementia", "cirrhosis"],
+                            "wordlist_no": ["kardiovaskulær sykdom", "kardiovaskulære sykdom", "kardiovaskulær sjukdom", "kardiovaskulære sjukdom",
+                                "hjertesykdom", "hjartesjukdom", "hjerteinfarkt", "hjarteinfarkt", "hjerteanfall", "hjarteanfall", "hjerteattakk", "hjarteattakk", "slag",
+                                "kronisk luftvei", "astma", "emfysem", "kronisk obstruktiv lungesykdom", "kronisk obstruktiv lungesjukdom", "kols", "kronisk bronkitt",
+                                "kreft", "sarkom", "karsinom", "blastom", "lymfom", "leukemi",
+                                "mesoteliom", "nyresykdom", "nyresjukdom", "demens"]
+                        },
+                        {
+                            "termlist_name": "termlist3_4d",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["chronic"],
+                            "wordlist_no": ["kronisk"]
+                        },
+                        {
+                            "termlist_name": "termlist3_4e",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["lung"],
+                            "wordlist_no": ["pulmonar"]
+                        },
+                        {
+                            "termlist_name": "termlist3_4f",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["malignant", "incurable", "malign"],
+                            "wordlist_no": ["ondart", "vondarta", "uhelbredelig"]
+                        },
+                        {
+                            "termlist_name": "termlist3_4g",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["neoplasm", "tumour", "tumor"],
+                            "wordlist_no": ["tumor", "svulst"]
+                        },
+                        {
+                            "termlist_name": "termlist3_4h",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["mortalit", "death", "surviv"],
+                            "wordlist_no": ["mortalit", "dødelighet", "overlev"]
+                        }
+                    ]
+                },
+                {
+                    "number": 2,
+                    "logic_rule": "([termlist3_4h] & [termlist3_4i])",
+                    "sentence_split": true,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist3_4h",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["mental health disorder", "mental illness", "suicid", "depression", "depressive disorder", "bipolar affective disorder", "schizophrenia", "psychosis", "psychoses"],
+                            "wordlist_no": ["psykisk lidelse", "psykisk liding", "psykisk syk", "psykisk sjuk", "selvmord", "sjølmord", "sjølvmord", "depresjon", "depressiv lid", "bipolar lid", "schizofreni", "psykose"]
+                        },
+                        {
+                            "termlist_name": "termlist3_4i",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["prevent", "combat", "fight", "reduc", "alleviat", "eradicat", "eliminat", "tackl", "treat", "cure",
+                                "epidemi", "occurrence", "incidence", "prevalence", "risk", "rate",
+                                "medicine", "vaccin", "drug", "treatment", "intervention", "therap",
+                                "outreach", "services", "support", "counseling", "counselling"],
+                            "wordlist_no": ["hindr", "forebygg", "førebygg", "kjemp", "reduser", "reduksjon", "utrydd", "eliminer", "takl", "behandl", "kurer", 
+                                "forekom", "førekom", "hendelse", "hending", "tilfelle", "utbre", "risik",
+                                "medisin", "vaksin", "legemid", "medikament", "behandling", "intervensjon", "terap",
+                                "støtte", "stønad", "tjeneste", "teneste", "rådgiv", "rådgjev"]
+                        }
+                    ]
+                },
+                {
+                    "number": 3,
+                    "logic_rule": "([termlist3_4j] & ([termlist3_4k] | ([termlist3_4l] & [termlist3_4m])))",
+                    "sentence_split": true,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist3_4j",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["mental health", "well being", "wellbeing", "well-being", "health promotion"],
+                            "wordlist_no": ["mental helse", "velvære", "god helse", "helsefremmend"]
+                        },
+                        {
+                            "termlist_name": "termlist3_4k",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["promot", "strengthen", "improv", "enhanc", "medicine", "vaccin", "drug", "cure", "treatment", "intervention", 
+                                "therap", "outreach", "services", "support", "counselling", "counseling"],
+                            "wordlist_no": ["fremme", "fremje", "styrke", "bedre", "betre", "øke", "auke", "medisin", "vaksine", "medikament", "legemid", "kurer", "behandl", "intervensjon",
+                                "terap", "tjeneste", "teneste", "støtte", "stønad", "rådgi", "rådgje"]
+                        },
+                        {
+                            "termlist_name": "termlist3_4l",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["reduc", "decreas"],
+                            "wordlist_no": ["reduser", "mink"]
+                        },
+                        {
+                            "termlist_name": "termlist3_4m",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["problem"],
+                            "wordlist_no": ["problem"]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "5",
+            "phrases": [
+                {
+                    "number": 1,
+                    "logic_rule": "(([phrasedefault3_5a] | [phrasedefault3_5a_trunc] | ([phrasedefault3_5b] & ([phrasedefault3_5c] | ([phrasedefault3_5d] & [phrasedefault3_5e])))) & ([phrasedefault3_5f] | [phrasedefault3_5g]))",
+                    "sentence_split": false,
+                    "termlists": [
+                        {
+                            "termlist_name": "phrasedefault3_5a",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["binge drinking", "binge drinker", "alcohol", "excessive drinking", "problematic drinking", "problem drinking", "substance use", "illicit drugs", "people who inject drugs", "PWID", "opiod epidemic"],
+                            "wordlist_no": ["alkohol", "periodedrank", "periodedrikk", "narkotikamisbruk", "stoffmisbruk", "opioidepidemi"]
+                        },
+                        {
+                            "termlist_name": "phrasedefault3_5a_trunc",
+                            "formatting_rule": "specific_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": [],
+                            "wordlist_no": ["fyll"]
+                        },
+                        {
+                            "termlist_name": "phrasedefault3_5b",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["drug", "narcotic", "substance", "alcohol", "amphetamine", "metamphetamine", "MDMA", "ecstacy", "cocaine", "inhalant", "amyl nitrate", "marijuana", "cannabis", "opioid", "opiat", "heroin", "morphine", "phencyclidine", "LSD", "psilocybin", "dimethyltriptamin", "khat", "tobacco"],
+                            "wordlist_no": ["rusmid", "narkotik", "stoff", "alkohol", "amfetamin", "metamfetamin", "kokain", "inhalasjon", "inhalering", "amylnitrat",  "marihuana", "hasj", "morfin", "fensyklidin", "tobakk"]
+                        },
+                        {
+                            "termlist_name": "phrasedefault3_5c",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["abuse", "misuse", "overdose", "dependence", "addict"],
+                            "wordlist_no": ["overdose", "misbruk", "avheng"]
+                        },
+                        {
+                            "termlist_name": "phrasedefault3_5d",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["use", "usage", "consumption"],
+                            "wordlist_no": ["bruk", "forbruk"]
+                        },
+                        {
+                            "termlist_name": "phrasedefault3_5e",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["harmful", "problematic", "excessive", "disorder"],
+                            "wordlist_no": ["skadelig", "skadeleg", "problematisk", "overdreven", "overdriven", "lidelse", "liding"]
+                        },
+                        {
+                            "termlist_name": "phrasedefault3_5f",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["prevent", "combat", "tackl", "fight against", "reduc", "decrease", "minimi", "limit", "alleviat", "mitigat", "eradicat", "eliminat", "stop", "treat", "control"],
+                            "wordlist_no": ["hindr", "forebygg", "førebygg", "takl", "kjemp", "reduser", "reduksjon", "grens", "utrydd", "eliminer", "kontroll"]
+                        },
+                        {
+                            "termlist_name": "phrasedefault3_5g",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["medicine", "cure", "treatment", "intervention", "therapy", "therapies", "outreach", "services", "support", "rehabilitat", "aftercare", "counseling", "counselling"],
+                            "wordlist_no": ["medisin", "kurer", "behandl", "intervensjon", "terapi", "tjeneste", "teneste", "støtte", "stønad", "rehabiliter", "rådgi", "rådgje"]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "6",
+            "_comment": "In the Web of science search, 'air traffic' and 'boat traffic' were excluded using NOT, but that does not seem necessary in this search. A few results with metaphorical use of terms like 'road' and 'death' are hard to avoid.",
+            "phrases": [
+                {
+                    "number": 1,
+                    "logic_rule": "(([termlist3_6a] | [termlist3_6a_trunc] | ([termlist3_6b_trunc] & ([termlist3_6c] | [termlist3_6c_case]))) & ([termlist3_6c_case] | [termlist3_6d]) & ([termlist3_6c] | [termlist3_6c_case] | ([termlist3_6d] & [termlist3_6e])))",
+                    "sentence_split": true,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist3_6a",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["traffic", "roadway", "street", "roundabout", "highway", "motorway", 
+                                "cycling lane", "cycle path", "bicycle lane", "walkway", "walking path", "sidewalk", "pavement", "bicycles", "motorcycles", "motorbike", "automobile", "lorry", "lorries", "truck", "pedestrian", "cyclist", 
+                                "driving fatalit"],
+                            "wordlist_no": ["trafikk", "rundkjøring", "rundkøyring", "motorvei", "motorveg", 
+                                "sykkelsti", "sykkelve", "gangve", "fortau", "sykkel", "sykler", "syklar", "motorsykkel", "motorsykler", "motorsyklar", "buss", "fotgjenger", "syklist", "syklende", "syklande", 
+                                "trafikkdød", "trafikkulykke", "trafikkulukke", "bilulykke", "bilulukke"]
+                        },
+                        {
+                            "termlist_name": "termlist3_6a_trunc",
+                            "formatting_rule": "specific_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["bus", "buses", "HGV", "HGVs", "SUV", "SUVs", "road", "roads"],
+                            "wordlist_no": ["vei", "veier", "veg", "veger", "vegar", "gående", "gåande"]
+                        },
+                        {
+                            "termlist_name": "termlist3_6b_trunc",
+                            "formatting_rule": "specific_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["vehicle.*", "driver.*", "driving", "car", "cars"],
+                            "wordlist_no": ["kjøretøy.*", "køyretøy.*", ".*fører", ".*førar", ".*sjåfør.*", "kjøring", "køyring", "bil", "biler", "bilar"]
+                        },
+                        {
+                            "termlist_name": "termlist3_6c",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["accident", "crash", "collision", "incident"],
+                            "wordlist_no": ["ulykke", "ulukke", "kræsj", "kollisjon", "traffikhend"]
+                        },
+                        {
+                            "termlist_name": "termlist3_6c_case",
+                            "formatting_rule": "specific_trunc",
+                            "na": false,
+                            "case": true,
+                            "wordlist_en": ["RTI", "RTIs"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist3_6d",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["mortalit", "death", "fatal", "deadly", "morbidity", "injury", "injuries", "injured", "road trauma"],
+                            "wordlist_no": ["mortalit","dødelig", "dødeleg", "døyeleg", "død", "skade", "skadd"]
+                        },
+                        {
+                            "termlist_name": "termlist3_6e",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["driver", "road", "cycling", "cyclist", "bicycle", "pedestrian", "vehicle"],
+                            "wordlist_no": ["fører", "førar", "sjåfør", "vei", "veier", "veg", "veger", "vegar", 
+                            "sykler", "syklar", "syklist", "syklende", "syklande", "sykkel", "fotgjenger", "fotgjengar", "gående", "gåande", "kjøretøy", "køyretøy"]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "7",
+            "phrases": [
+                {
+                    "number": 1,
+                    "logic_rule": "(([termlist3_7a] | ([termlist3_7b] & [termlist3_7c])) & [termlist3_7d])",
+                    "sentence_split": true,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist3_7a",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["reproductive health", "sexual health", "family planning", "planned pregnanc", "contracept", "abortion"],
+                            "wordlist_no": ["reproduksjonshelse", "reproduktiv helse", "seksuell helse", "familieplanlegging", "planlagt graviditet", "prevensjon", "abort"]
+                        },
+                        {
+                            "termlist_name": "termlist3_7b",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["reproduct", "sex"],
+                            "wordlist_no": ["reproduk", "sex", "seksuel"]
+                        },
+                        {
+                            "termlist_name": "termlist3_7c",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["education", "inform", "health literacy"],
+                            "wordlist_no": ["utdann", "opplær", "opplys", "kompetanse"]
+                        },
+                        {
+                            "termlist_name": "termlist3_7d",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["health equity", "equality in health", "health for all", "health promotion",
+                                "access", "right", "coverage", "afford", "low cost", "free of charge", "free service", "subsidi",
+                                "barrier", "obstacle", "impediment", "unaffordab", "expensive"],
+                            "wordlist_no": ["rettferdig helse", "helsefrem",
+                                "tilgang", "adgang", "åtgang", "rett", "dekning", "rimelig", "rimeleg", "billig", "billeg", "gratis", "hindr", "hinder", "dyr", "kostbar"]
+                        }
+                    ]
+                },
+                {
+                    "number": 2,
+                    "logic_rule": "(([termlist3_7e] | ([termlist3_7f] & [termlist3_7g])) & [termlist3_7h] & ([termlist3_7i] | [LMIC]))",
+                    "sentence_split": true,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist3_7e",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["reproductive health", "sexual health", "family planning", "planned pregnanc", "contracept", "abortion"],
+                            "wordlist_no": ["reproduksjonshelse", "reproduktiv helse", "seksuell helse", "familieplanlegging", "planlagt graviditet", "prevensjon", "abort"]
+                        },
+                        {
+                            "termlist_name": "termlist3_7f",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["reproduct", "sex"],
+                            "wordlist_no": ["reproduk", "sex", "seksuel"]
+                        },
+                        {
+                            "termlist_name": "termlist3_7g",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["education", "inform", "health literacy"],
+                            "wordlist_no": ["utdann", "opplær", "opplys", "kompetanse"]
+                        },
+                        {
+                            "termlist_name": "termlist3_7h",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["policy", "policies", "initiativ", "framework", "program", "plan"],
+                            "wordlist_no": ["strateg", "politikk", "retningslin", "rammeverk", "planlegg"]
+                        },
+                        {
+                            "termlist_name": "termlist3_7i",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["national", "state", "federal"],
+                            "wordlist_no": ["nasjonal", "stat"]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "8",
+            "phrases": [
+                {
+                    "number": 1,
+                    "logic_rule": "([phrasedefault3_8a])",
+                    "sentence_split": false,
+                    "termlists": [
+                        {
+                            "termlist_name": "phrasedefault3_8a",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["universal health coverage", "universal healthcare", "universal health care",
+                                "health services for all", "healthcare for all"],
+                            "wordlist_no": ["universell helsedekning", 
+                                "allmenn dekning av helsetenester", "allmenn dekning av helsetjenester", "allmenn tilgang til helsetjenester",
+                                "allmenn tilgang til helsetenester", "allment tilgjengelige helsetjenester", "allment tilgjengelege helsetenester",
+                                "helsetjenester for alle", "helsetenester for alle"]
+                        }
+                    ]
+                },
+                {
+                    "number": 2,
+                    "logic_rule": "(([termlist3_8b] | ([termlist3_8c] & [termlist3_8d])) & [termlist3_8e])",
+                    "sentence_split": true,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist3_8b",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["health care", "healthcare", "health service", "medical service", "medical care", "health coverage", 
+                                "family planning", "reproductive health", "sexual health",
+                                "vaccin", "immunisation", "immunization", "treatment access", "access to treatment"],
+                            "wordlist_no": ["helsehjelp", "helsetjeneste", "helseteneste", "omsorgstjeneste", "omsorgsteneste", "helsedekning", 
+                                "familieplanlegging", "reproduksjonshelse", "reproduktiv helse", 
+                                "seksuell helse", "vaksin", "immunisering", "tilgang til behandling"]
+                        },
+                        {
+                            "termlist_name": "termlist3_8c",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["essential", "basic", "life saving", "necessary", "emergency"],
+                            "wordlist_no": ["essensiel", "nødvendig", "grunnlegg", "livred", "nødvendig", "naudsynt", "nødstilfelle", "naudstilfelle"]
+                        },
+                        {
+                            "termlist_name": "termlist3_8d",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["medicine", "medication", "treatment", "therap"],
+                            "wordlist_no": ["medisin", "behandl", "terap"]
+                        },
+                        {
+                            "termlist_name": "termlist3_8e",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["health equity", "equity in health", "health care equity", "equity in healthcare", "health for all", "vaccine equity", 
+                                "access", "barrier", "obstacle", 
+                                "afford", "low cost", "inexpensive", "free service", "free of charge", "voucher", 
+                                "high price", "costly", "debt", "financial risk", "financial burden", "financial hardship", 
+                                "household expenditure", "medical expenditure", "medical expenses", "medical bill", "medical cost", "out of pocket", "microinsurance",
+                                "quality medicines", "quality care", "quality of care", "quality health care"],
+                            "wordlist_no": ["rettferdig helse", "rettferdig vaksine", 
+                                "tilgang", "adgang", "åtgang", "hindr", "hinder", 
+                                "rimelig", "rimeleg", "billig", "billeg", "gratis", 
+                                "høy pris", "høg pris", "kostbar", "økonomisk risiko", "økonomisk byrde", "økonomisk besvær", "økonomisk vansk", "økonomiske vansk", "husholdningsutgift", "hushaldningsutgift", "medisinsk utgift", "medisinske utgift", "helseutgift", "legeregning", "legerekning", "sykehusregning", "sjukehusrekning", "behandlingsutgift", "mikroforsikring"]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "9",
+            "phrases": [
+                {
+                    "number": 1,
+                    "logic_rule": "(([phrasedefault3_9a] | [phrasedefault3_9b] | ([phrasedefault3_9c] & [phrasedefault3_9d]) | [phrasedefault3_9e] | ([phrasedefault3_9f] & [phrasedefault3_9g]) | [phrasedefault3_9h] | ([phrasedefault3_9i] & [phrasedefault3_9j]) | [phrasedefault3_9k] | ([phrasedefault3_9l] & [phrasedefault3_9m])) & [phrasedefault3_9n])",
+                    "sentence_split": true,
+                    "termlists": [
+                        {
+                            "termlist_name": "phrasedefault3_9a",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["air pollution", "particular matter", "particulate matter", "ozon"],
+                            "wordlist_no": ["luftforurensing", "luftforurensning", "luftforureining", "partik"]
+                        },
+                        {
+                            "termlist_name": "phrasedefault3_9b",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": true,
+                            "wordlist_en": ["PM2.5", "PM10"],
+                            "wordlist_no": ["PM2,5", "PM10"]
+                        },
+                        {
+                            "termlist_name": "phrasedefault3_9c",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["nitrogen dioxide", "sulfur dioxide", "sulphur dioxide", "carbon monoxide", "volatile organic compounds"],
+                            "wordlist_no": ["nitrogendioksid", "svoveldioksid", "karbonmonoksid", "flyktig organisk forbindelse", "flyktige organiske forbindelse"]
+                        },
+                        {
+                            "termlist_name": "phrasedefault3_9d",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["pollution", "poisoning"],
+                            "wordlist_no": ["forurensing", "forurensning", "forureining", "forgift"]
+                        },
+                        {
+                            "termlist_name": "phrasedefault3_9e",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["smoke pollution", "secondhand smok", "second hand smok", "involuntarily smoking", "passive smoking"],
+                            "wordlist_no": ["røykforurensning", "røykforurensing", "røykforureining", "passiv røyk"]
+                        },
+                        {
+                            "termlist_name": "phrasedefault3_9f",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["drinking water", "potable water", "water source"],
+                            "wordlist_no": ["drikkevann", "drikkevatn", "drikkevass", "vannkilde", "vasskjelde"]
+                        },
+                        {
+                            "termlist_name": "phrasedefault3_9g",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["unsafe", "safe", "contaminated", "contamination", "pollut", "clean"],
+                            "wordlist_no": ["tryg", "forurens", "forurein", "ren", "rein"]
+                        },
+                        {
+                            "termlist_name": "phrasedefault3_9h",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["poor hygiene", "good hygiene", "hand hygiene", "personal hygiene", "hygiene practice", "hygiene intervention", 
+                                "handwashing", "poor sanitation",
+                                "adequate sanitation", "good sanitation", "sanitation facilities", "water sanitation and hygiene"],
+                            "wordlist_no": ["hygien", "håndvask", "handvask", "sanitær"]
+                        },
+                        {
+                            "termlist_name": "phrasedefault3_9i",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["food"],
+                            "wordlist_no": ["mat", "føde"]
+                        },
+                        {
+                            "termlist_name": "phrasedefault3_9j",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["unsafe", "contaminated", "contamination", "sanitation"],
+                            "wordlist_no": ["utryg", "forurens", "forurein", "sanitet", "sanitær"]
+                        },
+                        {
+                            "termlist_name": "phrasedefault3_9k",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["food poisoning", "food poisoned", "foodborne pathogen"],
+                            "wordlist_no": ["matforgift", "matbår"]
+                        },
+                        {
+                            "termlist_name": "phrasedefault3_9l",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["poisoning", "poisoned"],
+                            "wordlist_no": ["forgift"]
+                        },
+                        {
+                            "termlist_name": "phrasedefault3_9m",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["unintentional", "accidental"],
+                            "wordlist_no": ["ikke-intendert", "uintendert", "tilfeldig"]
+                        },
+                        {
+                            "termlist_name": "phrasedefault3_9n",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["mortality", "death", "illness", "disease", "morbidity", "poisoning", "poisoned"],
+                            "wordlist_no": ["død", "dau", "sykdom", "sjukdom", "forgift"]
+                        }
+                    ]
+                },
+                {
+                    "number": 2,
+                    "logic_rule": "([termlist3_9o] & [termlist3_9p])",
+                    "sentence_split": true,
+                    "_comment": "In this search it proved hard to exclude noise eg. from articles concerning animals. We could not use 'human' terms to delimit the search as we did in Web of Science, as this excluded too many relevant hits. Sometimes articles which have animal names in the title, are ultimately concerned with issues relating to human conditions, therefore they shoud be included. It is also hard to specify species to include/exclude, as we cannot know or predict which may be used in what context.",
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist3_9o",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["hazardous chemical", "hazardous material", "hazardous substance", "hazardous waste", "pollution", 
+                                "soil contamination", "contamination of soils", "water contamination","contamination of water", 
+                                "arsenic", "asbestos", "benzen", "cadmium", "dioxin", "mercury", "fluoride", "pesticide", 
+                                "lead poison", "lead toxicity", "lead-mediated toxicity", "lead-induced toxicity", "lead exposure", "lead carcinogen", "blood lead", 
+                                "radioactive waste", "persistent organic pollutant", "sanitation"],
+                            "wordlist_no": ["farlige kjemikalier", "farlege kjemikaliar", "farlige materialer", "farlege materialar", "farlige stoff", "farlege stoff", "farlig avfall", "farleg avfall", 
+                                "forurensing", "forurensning", "forureining", "forurenset grunn", "forureina grunn", 
+                                "arsenikk", "asbest", "kadmium", "dioksin", "kvikksølv", "fluor", "pesticid", "plantevernmiddel",
+                                "blyforgift", "blyeksponering", 
+                                "radioaktivt avfall", "miljøgift"]
+                        },
+                        {
+                            "termlist_name": "termlist3_9p",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["mortality", "death", "illness", "disease", "morbidity", "toxicity", "poisoning", "poisoned", "fluorosis"],
+                            "wordlist_no": ["dødelighet", "dødelegheit", "død", "daud", "sykdom", "sjukdom", "toksisitet", "forgift", "fluorose"]
+                        },
+                        {
+                            "termlist_name": "termlist3_9q",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "_comment": "NOT CURRENTLY USED.",
+                            "wordlist_en": ["human", "humanity", "people", "person", "child", "under fives", "infant", "toddler", "babies", "teenager", "adolescent", 
+                                "girls", "boys", "elderly", "adult", "women", 
+                                "woman", "rural", "urban", "cities", "town", "village", "countr", "nation", "developed state", "developing state",
+                                "patient", "hospital", "premature death", "premature mortality", "neglected tropical disease", "diarrhoea", "diarrhea"],
+                                "wordlist_no": ["menneske", "folk", "person", "barn", "unge", "spedbarn", "baby", "nyfød", "tenåring", "ungdom", "jente", "eldre", "voksen", "vaksen", "voksne", "vaksne", "kvinne",
+                                "land", "nasjon", "pasient", "sykehus", "sjukehus", "prematur", "neglisjerte tropesykdommer", "neglisjerte tropesjukdom", "diare"]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "a",
+            "phrases": [
+                {
+                    "number": 1,
+                    "logic_rule": "([termlist3_a1] | [termlist3_a2])",
+                    "sentence_split": false,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist3_a1",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["framework convention on tobacco control"],
+                            "wordlist_no": ["tobakkskonvensjon", "konvensjon om forebygging av tobakksskad"]
+                        },
+                        {
+                            "termlist_name": "termlist3_a2",
+                            "formatting_rule": "specific_trunc",
+                            "na": false,
+                            "case": true,
+                            "wordlist_en": ["FCTC"],
+                            "wordlist_no": []
+                        }
+                    ]
+                },
+                {
+                    "number": 2,
+                    "logic_rule": "(([termlist3_a3] & [termlist3_a4]) | [termlist3_a5])",
+                    "sentence_split": true,
+                    "_comment": "When searching only titles, the approach used in the Web of Science search proved too restrictive. Many articles talk about smoke cessation etc. without mentioning 'tobacco', therefore we have built the search without 'tobacco' as a necessary term, even though this leads to some noise.",
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist3_a3",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["tobacco", "smoking", "cigarette"],
+                            "wordlist_no": ["tobakk", "røyking", "sigarett"]
+                        },
+                        {
+                            "termlist_name": "termlist3_a4",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["reduc", "control", "ban", "prohibit", 
+                                "legislation", "policy", "policies", "regulat", "law", "strateg", 
+                                "intervention", "tax", "health warning",
+                                "smoking cessation", "quitting", "services", "cessation service", "cessation program", "alternativ"],
+                            "wordlist_no": ["reduser", "reduksjon", "kontroll", 
+                                "forby", "forbud", "forbod", "lovgivning", "lovgiving", "politikk", "retningslin", "reguler", "lov", "strategi", 
+                                "intervensjon", "inngrip", "skatt", "helseadvarsel", "helseåtvaring", 
+                                "røykeslutt", "røykestopp", "slutt", "stopp", "tjeneste", "teneste"]
+                        },
+                        {
+                            "termlist_name": "termlist3_a5",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["reduce tobacco", "reduce smoking", "stop smoking", "stopping smoking", "decrease tobacco", "reduce dependence on tobacco"],
+                            "wordlist_no": []
+                        }
+                    ]
+                },
+                {
+                    "number": 3,
+                    "logic_rule": "([termlist3_a7] & [termlist3_a8])",
+                    "sentence_split": false,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist3_a7",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["tobacco farm", "tobacco production", "tobacco growing", "tobacco grower"],
+                            "wordlist_no": ["tobakksproduksjon", "produksjon av tobakk", "tobakksdyrk", "dyrking av tobakk", "tobakksbonde", "tobakksbønder"]
+                        },
+                        {
+                            "termlist_name": "termlist3_a8",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["alternativ", "diversif", "alternative crop", "crop substitution", "alternative livelihood", "sustainable livelihood"],
+                            "wordlist_no": ["divers", "alternativt jordbruk", "alternativ avling", "alternativt levebrød", "alternative inntektsk", "bærekraftig levebrød", "berekraftig levebrød"]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "b",
+            "phrases": [
+                {
+                    "number": 1,
+                    "logic_rule": "([termlist3_b2] & ([LMIC] | [termlist3_b3]))",
+                    "sentence_split": true,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist3_b1",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "_comment": "NOT CURRENTLY USED.",
+                            "wordlist_en": ["develop", "research", "r&d", "r & d"],
+                            "wordlist_no": ["utvikl", "forskning", "FOU"]
+                        },
+                        {
+                            "termlist_name": "termlist3_b2",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "_comment": "We tried having 'new' and 'medicine'(++) in two separate term lists combined by AND, but it was noisy, hence use of phrases in termlist b2.",
+                            "wordlist_en": ["new medicine", "novel medicin", "new medicatio", "novel medication", "new therap", "novel therap",
+                                "new vaccin", "novel vaccin", "vaccine development",
+                                "new drug", "novel drug", "drug development", "drug discovery", "new cure", "novel cure", "new treatment", "novel treatment"],
+                            "wordlist_no": ["ny medisin", "nye medisin", "nytt medikament", "nye medikament", "ny terap", "nye terapie",
+                                "ny vaksine", "nye vaksine", "vaksineutvikling", "utvikling av vaksin", 
+                                "nytt legemiddel", "nye legemid", "ny behandling"]
+                        },
+                        {
+                            "termlist_name": "termlist3_b3",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["neglected tropical disease", 
+                                "african trypanosomiasis", "aids", "hiv", "appendicitis", "buruli ulcer", "chagas", "chikungunya", "dengue", "diarrheal disease", "diphteria", "dracunculiasis", "ebola", 
+                                "guinea-worm disease", "echinococcosis", "foodborne trematodiases", "hemolytic disease", "hepatitis B", "human african trypanosomiasis", "sleeping sickness", "leishmaniasis", "leprosy", 
+                                "lower respiratory infection", "respiratory tract infection", "lymphatic filariasis","malaria", 
+                                "maternal hemorrage", "maternal sepsis", "measles", "mycetom", "chromoblastomycosis", "deep mycoses", "neonatal encephalopathy", "neural tube defect",
+                                "onchocerciasis", "river blindness", "pertussis", "rabies", "rheumatic heart disease", "scabies", "schistosomiasis", "sickle cell", 
+                                "soil-transmitted helminthiasis", "hookworm", "roundworm", "whipworm", "ascaris lumbricoides",
+                                "trichuris trichiura", "necator americanus", "ancylostoma duodenale", "snakebite envenoming", "taeniasis", "cysticercosis", "tetanus", "trachoma", 
+                                "trichuriasis", "tuberculosis", "typhiod fever", "yaws", "yellow fever"],
+                            "wordlist_no": ["neglisjert tropesykdom", "neglisjerte tropesykdom", "neglisjert tropesjukdom", "neglisjerte tropesjukdom", 
+                                "afrikansk trypanosomiasis", "apendisitt", "blindtarmbetennelse", "burulisår", "diare", "difteri", "ekinokkokose", "trematodeinfeksjon",
+                                "hemolytisk", "hepatitt B", "lepra", "luftveisinfeksjon", "lymfatisk filariasis", "meslinger", "mykose", "kromomykose",
+                                "onkocerkose", "kikhoste", "skabb", "sigdcelle", 
+                                "helmintiasis", "jordoverført helminthiasis", "hakeorm", "rundorm", "guineaorm", "trichuris", "necator", "ancylostoma", 
+                                "taeniainfeksjon", "cysticerkose", "trakom", "tuberkulose", "tyfoid", "frambøsi", "gulfeber",
+                                "virus", "epidemi", "pandemi", "infectious", "communicable",
+                                "smittsom", "overførbar"]
+                        }
+                    ]
+                },
+                {
+                    "number": 2,
+                    "logic_rule": "([termlist3_b9] | ([termlist3_b4] & [termlist3_b5]) | (([termlist3_b5] | ([termlist3_b6] & [termlist3_b7])) & [termlist3_b8]))",
+                    "sentence_split": true,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist3_b4",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["doha declaration", "compulsory licens", "patent", "intellectual property", "TRIPS agreement"],
+                            "wordlist_no": ["doha-erklæring", "tvangslisens", "immaterielle rett", "intellektuell eiendom", "TRIPS-avtal"]
+                        },
+                        {
+                            "termlist_name": "termlist3_b5",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["pharmaceuticals", "medicine", "vaccine", "immunisation", "immunization", "essential drug", "medication", "treatment access", "access to therapy"],
+                            "wordlist_no": ["legemid", "medisin", "medikament", "vaksine", "immunisering", "essensiell medisin", "livsnødvendig medisin", "behandlingstilgang", "tilgang til behandling", "adgang til behandling", "åtgang til behandling"]
+                        },
+                        {
+                            "termlist_name": "termlist3_b6",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["essential", "life saving", "life-saving", "emergency", "health", "medical"],
+                            "wordlist_no": ["essensiel", "livred", "livsviktig", "krise", "akutt", "helse", "medisinsk"]
+                        },
+                        {
+                            "termlist_name": "termlist3_b7",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["treatment", "therapy"],
+                            "wordlist_no": ["behandling", "terapi"]
+                        },
+                        {
+                            "termlist_name": "termlist3_b8",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["access", "affordab", "low cost", "low-cost", "inexpensive", "free of charge", "expensive"],
+                            "wordlist_no": ["tilgang", "adgang", "åtgang", "rimelig", "rimeleg", "billig", "billeg", "gratis"]
+                        },
+                        {
+                            "termlist_name": "termlist3_b9",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["vaccine equity", "vaccine inequit"],
+                            "wordlist_no": ["vaksinefordeling", "fordeling av vaksiner"]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "c",
+            "phrases": [
+                {
+                    "number": 1,
+                    "logic_rule": "(([termlist3_c1] | ([termlist3_c2] & [termlist3_c3])) & (([termlist3_c4] & [termlist3_c5]) | [termlist3_c6]))",
+                    "sentence_split": true,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist3_c1",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["recruitment", "professional development", "retention", "capacity building", "capacity development", 
+                                "train more", "recruit more", "increase trained", "increase the number of", 
+                                "human capital flight", "brain drain", "emigration", "turnover", "intention to leave"],
+                            "wordlist_no": ["rekruttering", "fagutvikl", "faglig utvikl", "fagleg utvikl", "bevaring", "kapasitetsbygging", "kapasitetsutvikling", 
+                                "trene fle", "rekruttere fle", "øke trente", "auke trente", "øke antallet", "øke tallet", "auke talet", 
+                                "hjerneflukt", "emigrasjon", "utskifting", "gjennom"]
+                        },
+                        {
+                            "termlist_name": "termlist3_c2",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["increase", "improv", "enhanc"],
+                            "wordlist_no": ["øk", "auk", "bedr", "betr", "styrk", "utvid"]
+                        },
+                        {
+                            "termlist_name": "termlist3_c3",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["training", "education"],
+                            "wordlist_no": ["trening", "opplæring", "utdanning"]
+                        },
+                        {
+                            "termlist_name": "termlist3_c4",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["health", "medical"],
+                            "wordlist_no": ["helse", "medisinsk"]
+                        },
+                        {
+                            "termlist_name": "termlist3_c5",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["workforce", "professional", "worker", "personnel", "practitioner", "human resources", "student"],
+                            "wordlist_no": ["arbeidsstyrke", "profesjonell", "arbeider", "arbeidar", "personell", "personale", "utøver", "utøvar", "menneskelige ressurs", "menneskelege ressurs", "student"]
+                        },
+                        {
+                            "termlist_name": "termlist3_c6",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["nurse", "doctor", "physician", "anesthetist", "audiologist", "dental staff", "dentist", 
+                                "doula", "emergency medical dispatcher", "health educator",
+                                "health facility administrator", "infection control practitioner", "medical chaperone", "medical laboratory personnel", "nutritionist",
+                                "therapist", "optometrist", "pharmacist", "allergist", "anesthesiolog", "cardiolog", "dermatolog", "endocrinolog", "gastroenterolog", "general practic",
+                                "geriatrician", "gynecologist", "hospitalist", "nephrolog", "neurolog", "oncolog", "ophtalmolog", "otolaryngolog", "midwives", "pathologist", "pediatric",
+                                "physiatrist", "pulmonolog", "radiolog", "rheumatolog", "surgeon", "urolog"],
+                            "wordlist_no": ["sykepleier", "sjukepleiar", "doktor", "lege", "anestesiolog", "anestesilege", "audiograf", "tannlege", 
+                                "AMK-operatør", "smittevern", "laboratorieperson",
+                                "ernæringsfysiolog", "terapeut", "farmasøyt", "allergolog", "kardiolog", "endokrinolog", "allmennlege", "geriatrik", "gynekolog", "nevrolog", "onkolog", 
+                                "oftalmolog", "jordmor", "jordmødre", "patolog", "pediater", "kirurg"]
+                        }
+                    ]
+                },
+                {
+                    "number": 2,
+                    "logic_rule": "(([termlist3_c8] | [termlist3_c8_caps] | ([termlist3_c9] & [termlist3_c10])) & [termlist3_c11] & [LMIC])",
+                    "sentence_split": true,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist3_c8",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["financing", "investment", "investing", "fund", "health spending", "health care spending", "health budget", 
+                                "public spending", "government spending",
+                                "financial assist", "economic assist", "financial support", "financial resources", 
+                                "subsidy", "subsidies", "subsidis", "subsidiz", "cooperation fund", "development spending"],
+                            "wordlist_no": ["finansie", "fond", "helseutgift", "helsebudsjett", "offentlige utgifter", "offentlege utgifter", 
+                                "finansiell assistanse", "økonomisk assistanse", "finansiell støtte", "finansiell stønad", "finansielle ressurs", 
+                                "subsidi", "offentlig utviklings", "offentleg utviklings", "offisiell utviklings", "samarbeidsfond"]
+                        },
+                        {
+                            "termlist_name": "termlist3_c8_caps",
+                            "formatting_rule": "specific_trunc",
+                            "na": false,
+                            "case": true,
+                            "wordlist_en": ["ODA", "invest", "Invest"],
+                            "wordlist_no": ["ODA", "invest", "Invest"]
+                        },
+                        {
+                            "termlist_name": "termlist3_c9",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["international", "development", "foreign"],
+                            "wordlist_no": ["internasjonal", "utvikling", "utenlands", "utanlands"]
+                        },
+                        {
+                            "termlist_name": "termlist3_c10",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["aid", "assistance", "finance", "grant"],
+                            "wordlist_no": ["hjelp", "støtte", "stønad", "bistand", "assistanse", "finansie"]
+                        },
+                        {
+                            "termlist_name": "termlist3_c11",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["health sector", "health financing", "health budget", "health spending", 
+                                "health service", "healthcare", "health care", "medical care", 
+                                "medical research", "health research", "health R&D", "medical R&D"],
+                            "wordlist_no": ["helsesektor", "helsefinansiering", "helsebudjett", "helseøkonomi", "helseutgift", 
+                                "helsetjeneste", "helseteneste", "omsorgstjeneste", "omsorgsteneste", 
+                                "medisinsk forskning", "medisinsk forsking", "helseforskning", "helseforsking"]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "d",
+            "phrases": [
+                {
+                    "number": 1,
+                    "logic_rule": "(([termlist3_d1] | [termlist3_d1_trunc] | ([termlist3_d4] & [termlist3_d5])) & [termlist3_d2])",
+                    "sentence_split": true,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist3_d1",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["national health risk", "global health risk", "public health risk", 
+                                "pandemic preparedness", "pandemic polic", "epidemic", "outbreak", "medical disaster", "health emergenc", 
+                                "radiation emergenc", "radiation event", "chemical event", "chemical emergenc", "zoonotic event", "zoonotic emergenc", 
+                                "food safety", "foodborne event", "biosecurity event", "biosecurity emergenc",
+                                "antimicrobial resistan", "antibiotic resistan", "resistance to antibiotics", "antifungal resistan"],
+                            "wordlist_no": ["helserisiko", "epidemisk", "epidemier", "epidemien", "utbrudd", "utbrot", 
+                                "medisinsk katastrofe", 
+                                "strålingsulykke", "kjemikalieulykke", 
+                                "zoonotisk", "matsikkerhe", "matbåren", "biosikkerhe", 
+                                "antimikrobiell resistens", "antibiotikaresistens", "antimykotisk"]
+                        },
+                        {
+                            "termlist_name": "termlist3_d1_trunc",
+                            "formatting_rule": "specific_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": [],
+                            "wordlist_no": ["epidemi"]
+                        },
+                        {
+                            "termlist_name": "termlist3_d2",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["capacity", "early warning", "early detection", "surveillance", "monitoring system", 
+                                "laboratory reporting", "laboratory infrastructure", "laboratory quality", "laboratory system",
+                                "preparing", "prepare", "disaster planning", "national health emergency framework", "emergency risk assessment", "risk reduction", "risk management", "risk communication",
+                                "emergency management", "emergency response", "personnel deployment", "security authorities", 
+                                "vaccination program", "vaccination framework", "immunisation program", "immunization program", 
+                                "legislation", "polic", "financing", "international health regulation", "national focal point", "national action plan"],
+                            "wordlist_no": ["kapasitet", "tidligvarsling", "tidlig varsling", "tidlegvarsling", "tidleg varsling", "tidlig oppdag", "tidleg oppdag", "overvåk", "overvaking", 
+                                "laboratorie",
+                                "forberedt", "førebudd", "katastrofeplan", "kriseplan", "nasjonal helseberedskapsplan", "risikovurdering", "risikoreduksjon", "risikohåndtering", "risikokommunikasjon",
+                                "krisehåndtering", "kriserespons", "sikkerhetsmyndighet", "tryggingsorgan", 
+                                "vaksinasjonsprogram", "vaksinasjonsrammeverk", "immuniseringsprogram",
+                                "lovgivning", "lovgiving", "politikk", "retningslin", "finansiering", "internasjonalt helsereglement", "internasjonale helsereglement", "nasjonal handlingsplan"]
+                        },
+                        {
+                            "termlist_name": "termlist3_d3",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "_comment": "For a title search, it was not necessary to exlude the terms in termslist 3_d3 with a NOT search.",
+                            "wordlist_en": ["blight", "plant pathogen", "plant disease"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist3_d4",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["pandemi"],
+                            "wordlist_no": ["pandemi"]
+                        },
+                        {
+                            "termlist_name": "termlist3_d5",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["influenza", "health", "hospital", "clinic", "ward", "care", "nurs", "pharmac", "medic", "vaccin"],
+                            "wordlist_no": ["influensa", "helse", "sykehus", "sjukehus", "avdeling", "klinikk", "omsorg", "farmas", "medisin", "vaksin"]
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "mentions": {
+        "logic_rule": "([termlist3_1] | ([termlist3_2] & [termlist3_3]) | ([termlist3_4] & [termlist3_5]) | [termlist3_6])",
+        "sentence_split": true,
+        "termlists": [
+            {
+                "termlist_name": "termlist3_1",
+                "formatting_rule": "default",
+                "na": false,
+                "case": false,
+                "wordlist_en": ["SDG 3", "SDGs 3", "SDG3", "sustainable development goal 3"],
+                "wordlist_no": ["bærekraftsmål 3", "berekraftsmål 3"]
+            },
+            {
+                "termlist_name": "termlist3_2",
+                "formatting_rule": "default",
+                "na": false,
+                "case": false,
+                "wordlist_en": ["sustainable development goal"],
+                "wordlist_no": ["bærekraftsmål", "berekraftsmål"]
+            },
+            {
+                "termlist_name": "termlist3_3",
+                "formatting_rule": "default",
+                "na": false,
+                "case": false,
+                "wordlist_en": ["goal 3"],
+                "wordlist_no": ["mål 3"]
+            },
+            {
+                "termlist_name": "termlist3_4",
+                "formatting_rule": "default",
+                "na": false,
+                "case": false,
+                "wordlist_en": ["sustainable development goal", "SDG", "goal 3"],
+                "wordlist_no": ["bærekraftsmål", "berekraftsmål", "mål 3"]
+            },
+            {
+                "termlist_name": "termlist3_5",
+                "formatting_rule": "default",
+                "na": false,
+                "case": false,
+                "wordlist_en": ["health"],
+                "wordlist_no": ["helse"]
+            },
+            {
+                "termlist_name": "termlist3_6",
+                "formatting_rule": "default",
+                "na": false,
+                "case": false,
+                "wordlist_en": ["good health and well-being"],
+                "wordlist_no": ["good health and well-being"]
+            }
+        ]
+    }
+}
