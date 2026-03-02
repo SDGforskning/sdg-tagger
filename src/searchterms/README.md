@@ -35,8 +35,11 @@ For converting old SDGs:
 
 ## General rules to remember <a name="rules"></a>
 - Always work on your own branch
-- Run the **run_pytest** file before trying to use the searches in demo or before "finishing" an SDG, to help identify technical problems that need fixing in the SDGXX.json files
-- You can edit demo as you wish for your own use, but do not save it/push changes to the main branch
+- Run the **run_pytest** file before trying to use the searches in **demo** or before "finishing" an SDG, to help identify technical problems that need fixing in the SDGXX.json files
+- You can edit **demo** as you wish for your own use, but do not push changes github. To do this make sure that demo and run-pytest are not staged when committing, e.g.
+  
+  <img width="280" height="170" alt="image" src="https://github.com/user-attachments/assets/d0b553ba-17d8-4d34-ae21-da3c51628e8a" />
+
 
 ## Workflow for editing and testing an SDGX.json file <a name="workflow"></a>
 1. Check you are on your branch (it is easiest to create a new branch online from the web version of the repository - ask which branch you should use as the source, it is likely _not_ "main" (default)). Then change to your new branch in VScode by clicking on the branch name (a tiny label in the bottom left corner), and choosing your new branch from the "remote" section of the list. As long as your branch name is in the bottom left corner, you are on your branch. 
