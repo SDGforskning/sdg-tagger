@@ -63,6 +63,7 @@ For converting old SDGs:
 
 
 ## Building a search in a SDGX.json file - properties and fields <a name="building"></a>
+
 ### General structure
 - Each SDG has top matter, where you have _pre-search_ and the _number_ of the SDG, and then come the _targets_. 
 - The _targets_ are split into _phrases_ (which correspond to the phrases in our previous python script), and under each phrase you will find the _number_ of the phrase, the _logic_rule_ it uses, the _sentence_split_ switch, and then the _termlists_.
@@ -119,12 +120,12 @@ The logic_rule is how the termlists are combined in a boolean search. Refer to t
 ```
 
 - The entire rule must be embraces by one parenthesis ().
-- Only the operators '& not' (NOT), '&' (AND), '|' (OR) are permitted. 
+- Only the operators `& not` (NOT), `&` (AND), `|` (OR) are permitted. 
 - All references to termlists or to pre-searches MUST be inside square brackets. Only letters, numbers and underscores are permitted within these brackets. No whitespaces. The text within each bracket MUST correspond to 
-    1. the name of a termlist **within the same phrase**
-    2. the name of a pre-search in the same file
+    1. the name of a termlist **within the same phrase**, (note: if you need to use a termlist from another phrase, see: [pre_search](#presearch)), or
+    2. the name of a pre-search in the same file, or
     3. the name of a phrase in `countries.json` (e.g. [LMIC])
-- The operators '& not', '&', '|' must have at least one blank space before and after.
+- The operators `& not`, `&` and `|` must have at least one blank space before and after.
 
 Examples of invalid logic rules: 
 ```
@@ -150,8 +151,10 @@ For example, in SDG1.1, this is set to false - there is only one term list, so i
 
 Note: We may come across mixed cases: for example, we want to find results about access to banking in LMICs. Here it might have been optimal to have a solution where we could search for "access" and "banking" within the same sentence, but allow that the LMIC comes in another sentence - however, right now, we do not have this functionality. See https://github.com/SDGforskning/sdg-tagger/issues/18
 
-#### pre_search
-If you want to reuse a termlist accross phrases, or in many targets - consider adding it as a _pre_search_. This can be referred to in all _logic_rules_. Example - see SDG 2. Note: There are not many SDGs where we need this, potentially only SDG 2, SDG 14 and SDG 15 (?)
+#### pre_search<a name="presearch"></a>
+If you want to reuse a termlist across phrases, or in many targets - consider adding it as a _pre_search_. This can be referred to in all _logic_rules_ within that SDG. Example - see SDG 2.
+
+Our "rule": Make a pre-search if a termlist is used in more than two phrases (i.e. has to be copied more than twice). If a term-list is only used in two phrases, copy it. **When re-using a termlist or when making a pre-search, add a comment listing the targets and phrases where it is used.**
 
 
 ## Functions for testing in demo.ipynb<a name="testing"></a>
