@@ -44,7 +44,7 @@ For converting old SDGs:
 ## Workflow for editing and testing an SDGX.json file <a name="workflow"></a>
 1. Check you are on your branch (it is easiest to create a new branch online from the web version of the repository - ask which branch you should use as the source, it is likely _not_ "main" (default)). Then change to your new branch in VScode by clicking on the branch name (a tiny label in the bottom left corner), and choosing your new branch from the "remote" section of the list. As long as your branch name is in the bottom left corner, you are on your branch. 
 
-    <img width="295" height="131" alt="bilde" src="https://github.com/user-attachments/assets/80f85927-c9d7-4d88-a144-974815341b1b" />
+    <img width="200" height="90" alt="bilde" src="https://github.com/user-attachments/assets/80f85927-c9d7-4d88-a144-974815341b1b" />
 
 2. Create a copy of the "template" file for your SDG (ctrl+c then ctrl+v). Rename it to `sdgx.json`, where 'x' is the number of the SDG. You will edit the new file (sdgx.json) you have just created by copying (not the original template). All the template files have the correct number of goals for that SDG, and the same number of phrases (but you will need to add more termlists, each phrase only has one in the template).
 3. Edit the file. If converting an old SDG, use this file to copy from https://github.com/SDGforskning/sdg-strings/blob/main/SDGs_query_topic_python.md. For instructions on the json fields, see [Building a search in a SDGX.json file - properties and fields](#building)
@@ -58,7 +58,9 @@ For converting old SDGs:
 - You can temporarily paste a "logic_rule" into a python script cell to view bracket matching (good for complicated rules)
 7. Test your search using the functions in **demo.ipynb**. Here additional errors may also become issues when trying to run a search, such as missing brackets in the SDG.json files, and if so these need to be fixed as before. For how these tests work, see [Functions in demo for testing](#testing)
 8. Go back to step 3 if you wish to edit anything, and repeat 3-7 as necessary.
-9. Once finished and happy with your SDG, open a pull request
+9. Once finished and happy with your SDG, open a pull request. You can also open a _draft pull request_ as soon as you have made any changes on your branch - the advantage of this is that you can use the pull request to document any substantial changes you make. 
+<img width="1000" height="180" alt="image" src="https://github.com/user-attachments/assets/e2360184-1eda-47cc-bb82-abaf89c1704e" />
+
 
 ## Building a search in a SDGX.json file - properties and fields <a name="building"></a>
 ### General structure
