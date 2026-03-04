@@ -6,6 +6,7 @@
     "pre-search": [
         {
             "name": "marine_terms",
+            "_comment": "Used in many targets",
             "logic_rule": "([termlist14_marine1] | [termlist14_marine2] | [termlist14_marine3])",
             "sentence_split": false,
             "termlists": [
@@ -17,21 +18,20 @@
                     "wordlist_en": ["marine", "mariculture", "barents sea", "norwegian sea",
                         "seabed", "seafloor", "seamount", "hydrothermal vent", "cold seep", "continental shelf", "continental shelves", "continental slope", 
                         "subtidal", "intertidal", "deep sea", "bathyal", "abyssal",
-                        "rocky shore", "beach", "salt marsh", "mud flat", "mudflat", "tidal flat",
-                        "estuar", "fjord", 
+                        "rocky shore", "beach", "salt marsh", "mud flat", "mudflat", "tidal flat", "estuar", "fjord", 
                         "sea ice",
-                        "sea life", "sealife", "mangrove", "kelp bed", "kelp forest", "seagrass", "seaweed", "macroalga", 
-                        "sponge ground", "organic fall", "reef", 
+                        "sea life", "sealife", "mangrove", "kelp bed", "kelp forest", "seagrass", "seaweed", "macroalga", "sponge ground", "organic fall", "coral", 
+                        "whale", "dolphin", "echinoderm", "starfish", "sea urchin", "sea cucumber", "brittle star", "Asteroidea", "Ophiuroidea", "Echinoidea", "Holothuroidea", "Crinoidea",
                         "coastal communit", "coastal zone management",
                         "offshore"],
                     "wordlist_no": ["sjøområd", "havområd", "havbruk", "havforsuring", "Skagerrak", 
                         "sjøbunn", "sjøbotn", "havbunn", "havbotn", "sjøfjell", "hydrotermisk skorstein", "hydrotermiske skorstein", "hydrotermisk ventil", "midhavsrygg", "kontinentalskråning", "kontinentalhylle",
                         "submarin", "fjære", "fjøre", "tidevann", "tidevatn", "havdyp", "havdjup", "dyphav", "djuphav", 
-                        "sandstrand", "strandeng", "saltmarsk", "saltvannssump",
-                        "havis", "sjødyr", "sjøgress", "sjøgras", "korall", 
-                        "kystsamfunn", "kystson",
-                        "utaskjærs",
-                        "skipsfart"]
+                        "sandstrand", "strandeng", "saltmarsk", "saltvannssump", "elvemunn",
+                        "havis", 
+                        "sjødyr", "mangrove", "tareskog", "sjøgress", "sjøgras", "korall",
+                        "kystsamfunn", "kystson", 
+                        "utaskjærs", "skipsfart"]
                 },
                 {
                     "termlist_name": "termlist14_marine2",
@@ -39,8 +39,8 @@
                     "na": false,
                     "case": false,
                     "_comment": "'marin'(NO), 'tang' (NO), 'tare'(NO) are added here instead of untruncated in termlist_marine1 because it is part of other words (e.g. marinate)",
-                    "wordlist_en": ["ocean", "oceans", "oceanogra.*", "seas"],
-                    "wordlist_no": ["marin", "oseanografi.*", "hav", "havet", "verdenshav", "sjø", "sjøen", "tang", "tare"]
+                    "wordlist_en": ["ocean", "oceans", "oceanogra.*", "seas", "reef", "reefs"],
+                    "wordlist_no": ["marin", "oseanografi.*", "hav", "havet", "verdenshav", "sjø", "sjøen", "tang", "tare", "hval"]
                 },
                 {
                     "termlist_name": "termlist14_marine3",
@@ -82,17 +82,17 @@
                             "case": false,
                             "_comment": "NO: After testing, 'avfall' is ok to use alone, thus the specific terms are removed 'farlig avfall', 'kjemikalieavfall', 'radioaktivt avfall', 'plastavfall','gruveavfall'.",
                             "wordlist_en": ["pollut", 
-                                "sewage","sewer", "eutrophicat","excess nutrient","excessive nutrient","effluent","runoff","waste","discharge",
-                                "littering","garbage patch","debris",
-                                "microplastic","micro plastic","micro-plastic","nanoplastic","nano plastic","plastic waste","plastic particles",
+                                "sewage","sewer", "eutrophicat","excess nutrient","excessive nutrient","effluent","runoff","waste",
+                                "littering","garbage",
+                                "microplastic","micro plastic","micro-plastic","nanoplastic","nano plastic","plastic waste","plastic particles", "plastic litter",
                                 "heavy metal","toxic metal","mercury","arsenic","cadmium","chromium","copper","nickel",
-                                "organotin","tributyltin","TBT","mining","mine tailing",
-                                "contaminant","bioaccumula","bioconcentrat","ecotox","toxic chemical",
-                                "endocrine disrupting chemical", "persistent organic pollutant","pesticid","herbicide",
-                                "polychlorinated biphenyl","hexachlorocyclohexane","hexachlorobenzene","hexachlorobutadiene",
+                                "organotin","tributyltin","mining","mine tailing",
+                                "contaminant","bioaccumula","bioconcentrat","ecotox","toxic chemical","forever chemical",
+                                "endocrine disrupting chemical", "endocrine disruptor", "persistent organic pollutant", "pesticid","herbicide",
+                                "paraben", "polychlorinated biphenyl","hexachlorocyclohexane","hexachlorobenzene","hexachlorobutadiene",
                                 "pentachlorobenzene","pentachlorophenol","pentachloroanisole","hexabromocyclododecane",
-                                "polybrominated diphenyl ether","perflurochemicals","PFAS","endosulfan", "polycyclic aromatic hydrocarbon",
-                                "oil spill", "crude oil"],
+                                "polybrominated diphenyl ether","perflurochemicals","endosulfan", "polycyclic aromatic hydrocarbon",
+                                "oil spill", "crude oil", "oil leak", "subsea spill"],
                             "wordlist_no": ["forurens", "forurein",
                                 "utslipp", "kloakk", "eutrofier", "overgjødsling", "overflatevann", "overflatevatn", "avrenning", "næringssalt",
                                 "søppel", "avfall",
@@ -101,6 +101,9 @@
                                 "tinnorganiske", "organiske tinnforbindelse", "pesticid",
                                 "bioakkumuler", "miljøtoksikologi",
                                 "miljøgift", "hormonforstyr", "insektmiddel", "insektmidler", "plantevernmid",
+                                "paraben", "polychlorinated biphenyl","hexachlorocyclohexane","hexachlorobenzene","hexachlorobutadiene",
+                                "pentachlorobenzene","pentachlorophenol","pentachloroanisole","hexabromocyclododecane",
+                                "polybrominated diphenyl ether","perflurochemicals", "endosulfan", "polycyclic aromatic hydrocarbon",
                                 "oljesøl", "oljeutslipp"]
                         },
                         {
@@ -108,15 +111,15 @@
                             "formatting_rule": "default",
                             "na": false,
                             "case": true,
-                            "wordlist_en": ["PCB","DDT","PAH"],
-                            "wordlist_no": []
+                            "wordlist_en": ["PCB","DDT","PAH", "TBT", "PFAS"],
+                            "wordlist_no": ["PCB","DDT","PAH", "TBT", "PFAS"]
                         },
                         {
                             "termlist_name": "termlist14_1c",
                             "formatting_rule": "specific_trunc",
                             "na": false,
                             "case": false,
-                            "wordlist_en": ["litter"],
+                            "wordlist_en": ["litter", "trash"],
                             "wordlist_no": ["bly", "arsen", "krom", "tinn", "plast"]
                         },
                         {
@@ -124,7 +127,8 @@
                             "formatting_rule": "specific_trunc",
                             "na": false,
                             "case": false,
-                            "wordlist_en": ["oil", "lead"],
+                            "_comment":"EN: 'lead' is included here rather than 1c because of the verb 'to lead'",
+                            "wordlist_en": ["oil", "lead", "chemical.*"],
                             "wordlist_no": ["olje", "kjemikal.*"]
                         },
                         {
@@ -132,7 +136,7 @@
                             "formatting_rule": "default",
                             "na": false,
                             "case": false,
-                            "wordlist_en": ["contamina"],
+                            "wordlist_en": ["contamina", "discharge", "toxici"],
                             "wordlist_no": ["toksis"]
                         },
                         {
