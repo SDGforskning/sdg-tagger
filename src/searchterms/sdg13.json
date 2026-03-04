@@ -387,7 +387,7 @@
                         },
                         {
                             "termlist_name": "termlist13_3i",
-                            "formatting_rule": "",
+                            "formatting_rule": "default",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["motivational climate", "organisational climate", "organizaional climate", "learning climate", "education climate", "emotional climate", "family climate"],
@@ -406,7 +406,7 @@
                     "sentence_split": false,
                     "termlists": [
                         {
-                            "termlist_name": "termlist13a_1",
+                            "termlist_name": "termlist13_a1",
                             "formatting_rule": "default",
                             "na": false,
                             "case": false,
@@ -608,7 +608,7 @@
                                             "tilpasningsfinans", "tilpassingsfinans", "lavkarbon", "lågkarbon", "LDCF", "SCCF"]
                         },
                         {
-                            "termlist_name": "termlist13a_14",
+                            "termlist_name": "termlist13_a14",
                             "formatting_rule": "default",
                             "na": false,
                             "case": false,
@@ -624,7 +624,7 @@
             "phrases": [
                 {
                     "number": 1,
-                    "logic_rule": "(((([termlist13_b1] & [termlist13_b2]) | [termlist13_b3]) | (([termlist13_b4] | ([termlist13_b5] & [termlist13_b6])) & ([termlist13_b7] & [termlist13_b8]))) & ([LDIC] | [SIDS]))",
+                    "logic_rule": "(((([termlist13_b1] & [termlist13_b2]) | [termlist13_b3]) | (([termlist13_b4] | ([termlist13_b5] & [termlist13_b6])) & ([termlist13_b7] & [termlist13_b8]))) & ([LDC] | [SIDS]))",
                     "sentence_split": false,
                     "termlists": [
                         {

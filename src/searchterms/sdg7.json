@@ -70,7 +70,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist7_1f",
-                            "formatting_rule": "specific trunc",
+                            "formatting_rule": "specific_trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["kerosene", "solid fuel.*", "coal"],
@@ -79,7 +79,7 @@
                         },
                         {
                             "termlist_name": "termlist7_1f2",
-                            "formatting_rule": "specific trunc",
+                            "formatting_rule": "specific_trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["kerosene", "solid fuel.*"],
@@ -320,7 +320,7 @@
                 },
                 {
                     "number": 2,
-                    "logic_rule": "(([termlist_7_2e] | [termlist7_2f]) & ([termlist7_2g] | ([termlist7_2h] & [termlist7_2i]) | [termlist7_2j] | ([termlist7_2k] & [termlist7_2l] ) | ([termlist7_2m] & [termlist7_2n]) | [termlist7_2o] | ([termlist7_2p] & [termlist7_2q]) | [termlist7_2r] | ([termlist7_2s] & [termlist7_2t]) | ([termlist7_2u] & [termlist7_2v]) | ([termlist7_2w] & [termlist7_2x])))",
+                    "logic_rule": "(([termlist7_2e] | [termlist7_2f]) & ([termlist7_2g] | ([termlist7_2h] & [termlist7_2i]) | [termlist7_2j] | ([termlist7_2k] & [termlist7_2l] ) | ([termlist7_2m] & [termlist7_2n]) | [termlist7_2o] | ([termlist7_2p] & [termlist7_2q]) | [termlist7_2r] | ([termlist7_2s] & [termlist7_2t]) | ([termlist7_2u] & [termlist7_2v]) | ([termlist7_2w] & [termlist7_2x])))",
                     "sentence_split": true,
                     "termlists": [
                         {
@@ -348,7 +348,7 @@
                         },
                         {
                             "termlist_name": "termlist7_2f",
-                            "formatting_rule": "specific trunc",
+                            "formatting_rule": "specific_trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["invest"],
@@ -364,7 +364,7 @@
                         },
                         {
                             "termlist_name": "termlist7_2h",
-                            "formatting_rule": "specific trunc",
+                            "formatting_rule": "specific_trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["electricity", "power", "energy"],
@@ -518,8 +518,8 @@
                             "wordlist_no": ["fossilt brensel", "fossile brensl", "fossilt brennstoff", "fossile brennstoff", "naturgass", "grått hydrogen", "konvensjonell energi"]
                         },
                         {
-                            "termlist_name": "termlistt7_2z",
-                            "formatting_rule": "specific trunc",
+                            "termlist_name": "termlist7_2z",
+                            "formatting_rule": "specific_trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["coal", "oil"],
@@ -543,7 +543,7 @@
                         },
                         {
                             "termlist_name": "termlist7_2z3",
-                            "formatting_rule": "specific trunc",
+                            "formatting_rule": "specific_trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["use", "usage"],
@@ -759,7 +759,7 @@
                         },
                         {
                             "termlist_name": "termlist7_a1caps",
-                            "formatting_rule": "specific trunc",
+                            "formatting_rule": "specific_trunc",
                             "na": false,
                             "case": true,
                             "wordlist_en": ["ODA"],
@@ -782,7 +782,7 @@
                             "wordlist_no": ["samarbeid", "felles", "nettverk", "partner", "hjelp", "bistand", "støtte", "stønad", "finans", "økonomi", "ressurs", "kapital"]
                         },
                         {
-                            "termlist_name": "termlsit7_a4",
+                            "termlist_name": "termlist7_a4",
                             "formatting_rule": "default",
                             "na": false,
                             "case": false,
@@ -864,7 +864,7 @@
                         },
                         {
                             "termlist_name": "termlist7_a1caps",
-                            "formatting_rule": "specific trunc",
+                            "formatting_rule": "specific_trunc",
                             "na": false,
                             "case": true,
                             "wordlist_en": ["ODA"],
