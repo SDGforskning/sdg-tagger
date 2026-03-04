@@ -16,7 +16,7 @@ Suggested tools - clone the repository to VScode and work there.
 2. Install Git for Windows
 3. Under "source control" (on the left, symbol that looks like a branch with three circles; see picture) select "Clone repository" (= creates a local copy, which is synchronized with this repository online)
 
-    <img width="183" height="146" alt="bilde" src="https://github.com/user-attachments/assets/9127c90d-a43e-4b31-9ce0-e978a3e2e0b0" />
+    <img width="150" height="120" alt="bilde" src="https://github.com/user-attachments/assets/9127c90d-a43e-4b31-9ce0-e978a3e2e0b0" />
 
 4. You will be prompted to log in to github, sign in using github - do this and "authorize"
 5. If it works, all our repositories should appear in VScode - select _sdg-tagger_
@@ -58,8 +58,10 @@ For converting old SDGs:
 - You can temporarily paste a "logic_rule" into a python script cell to view bracket matching (good for complicated rules)
 7. Test your search using the functions in **demo.ipynb**. Here additional errors may also become issues when trying to run a search, such as missing brackets in the SDG.json files, and if so these need to be fixed as before. For how these tests work, see [Functions in demo for testing](#testing)
 8. Go back to step 3 if you wish to edit anything, and repeat 3-7 as necessary.
-9. Once finished and happy with your SDG, open a pull request. You can also open a _draft pull request_ as soon as you have made any changes on your branch - the advantage of this is that you can use the pull request to document any substantial changes you make. 
-<img width="1000" height="180" alt="image" src="https://github.com/user-attachments/assets/e2360184-1eda-47cc-bb82-abaf89c1704e" />
+9. Once finished and happy with your SDG, open a pull request. You can also open a _draft pull request_ **as soon as** you have made any changes on your branch - the advantage of this is that you can use the pull request to document any substantial changes you make. When opening the pull request, change the default option (main) so that you compare it with the source branch:
+<img width="800" height="150" alt="image" src="https://github.com/user-attachments/assets/e2360184-1eda-47cc-bb82-abaf89c1704e" />
+<img width="400" height="50" alt="image" src="https://github.com/user-attachments/assets/10eb21b9-5d52-4446-99f4-42a3fe4de186" />
+
 
 
 ## Building a search in a SDGX.json file - properties and fields <a name="building"></a>
