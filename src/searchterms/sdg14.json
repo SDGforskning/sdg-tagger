@@ -72,11 +72,11 @@
             "phrases": [
                 {
                     "number": 1,
-                    "logic_rule": "((([termlist14_1a] | [termlist14_1b_case] | [termlist14_1c] | ([termlist14_1d] & [termlist14_1e])) & not [termlist14_1not]) & [marine])",
+                    "logic_rule": "((([termlist14_1a] | [termlist14_1b_case] | [termlist14_1c] | ([termlist14_1d] & [termlist14_1e])) & not [termlist14_1not]) & [marine_terms])",
                     "sentence_split": false,
                     "termlists": [
                         {
-                            "termlist_name": "termlist14_1a ",
+                            "termlist_name": "termlist14_1a",
                             "formatting_rule": "default",
                             "na": false,
                             "case": false,
@@ -339,13 +339,13 @@
             "phrases": [
                 {
                     "number": 1,
-                    "logic_rule": "([termlist14_4a] | ([termlist14_4b] & [termlist14_4c]) | ([termlist14_4d] & [termlist14_4e]) | ([termlist14_4f] | [termlist14_4g]))",
+                    "logic_rule": "([termlist14_4a] | ([termlist14_4b] & [termlist14_4c]) | ([termlist14_4d] & [termlist14_4e]) | ([termlist14_4f] & [termlist14_4g]))",
                     "sentence_split": true,
                     "_comment": "phrase 1/2 in wos",
                     "termlists": [
                         {
                             "termlist_name": "termlist14_4a",
-                            "formatting_rule": "",
+                            "formatting_rule": "default",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["overfish", "bycatch", "by-catch", "IUU fish", 
@@ -600,7 +600,7 @@
             "phrases": [
                 {
                     "number": 1,
-                    "logic_rule": "(([termlist14_7a] | [termlist14_7acaps]) & [LMCSIDS] & [marine_terms])",
+                    "logic_rule": "(([termlist14_7a] | [termlist14_7acaps]) & ([LDC] | [SIDS]) & [marine_terms])",
                     "sentence_split": true,
                     "termlists": [
                         {
