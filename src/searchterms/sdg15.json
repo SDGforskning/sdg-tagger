@@ -5,6 +5,7 @@
     "pre-search": [
         {
             "name": "terr_terms",
+            "_comment": "Used in many targets",
             "logic_rule": "([termlist15_terr1] | [termlist15_terr2])",
             "sentence_split": false,
             "termlists": [
@@ -48,6 +49,7 @@
         },
         {
             "name": "terrestrial_double_NOT",
+            "_comment": "Used in many targets",
             "logic_rule": "(([termlist_not1] | [termlist_not2]) & not ([termlist15_terr1] | [termlist15_terr2]))",
             "sentence_split": false,
             "termlists": [
@@ -113,6 +115,7 @@
         },
         {
             "name": "animals_plants",
+            "_comment": "Used in many targets (15.1, 4, 5, 6, 7, 8, 9, a, b)",
             "logic_rule": "([termlistanimalsplants1] | [termlistanimalsplants2])",
             "sentence_split": false,
             "termlists": [
@@ -136,9 +139,9 @@
         },
         {
             "name": "poaching_endangered",
+            "_comment": "Used in 15.7 and 15.c",
             "logic_rule": "([termlist15_7a] & ([termlistanimalsplants1] | [termlistanimalsplants2] | [termlist15_7d]))",
             "sentence_split": true,
-            "_comment": "Used in 15.7 and 15.c",
             "termlists": [
                 {
                     "termlist_name": "termlist15_7a",
@@ -153,6 +156,7 @@
                     "formatting_rule": "default",
                     "na": false,
                     "case": false,
+                    "_comment": "Used in 15.7 phrase 2 also",
                     "wordlist_en": ["rosewood", "kosso", "elephant", "rhino", "ivory", "pangolin", "turtle", "tortoise", "big cat", "tiger", "glass eel"],
                     "wordlist_no": ["rosewood", "kosso", "elefant", "neshorn", "elfenbein", "elfenben", "skilpadde", "store katt", "glassål"]
                 },
@@ -240,7 +244,7 @@
                 },
                 {
                     "number": 2,
-                    "logic_rule": "(([termlist15_1d] & ([termlist15_1e] | [termlist15_1f])) & not [terrestrial_double_NOT])",
+                    "logic_rule": "(([termlist15_1d] & ([termlist15_1e] | [termlist15_1etrunc])) & not [terrestrial_double_NOT])",
                     "sentence_split": true,
                     "termlists": [
                         {
@@ -261,7 +265,7 @@
                             "wordlist_no": ["økosystem", "kulturlandskap", "landskapsvern", "miljøvern", "miljøparagraf"]
                         },
                         {
-                            "termlist_name": "termlist15_1f",
+                            "termlist_name": "termlist15_1etrunc",
                             "formatting_rule": "no_left_trunc",
                             "na": false,
                             "case": false,
@@ -281,6 +285,7 @@
                             "formatting_rule": "default",
                             "na": false,
                             "case": false,
+                            "_comment": "Used also in phrase 4",
                             "wordlist_en": ["protect","preserv","conserv","restore", "restoring", "restoration", "sustainable"],
                             "wordlist_no": ["verne", "verna", "vern av", "miljøvern", "bevare", "bevaring", "frede", "freda", "fredning", "gjenoppbygg", "restaurer", "bærekraft", "berekraft"]
                         },
@@ -324,6 +329,7 @@
                             "formatting_rule": "default",
                             "na": false,
                             "case": false,
+                            "_comment": "Used also in phrase 3",
                             "wordlist_en": ["protect","preserv","conserv","restore", "restoring", "restoration", "sustainable"],
                             "wordlist_no": ["verne", "verna", "vern av", "miljøvern", "bevare", "bevaring", "frede", "freda", "fredning", "gjenoppbygg", "restaurer", "bærekraft", "berekraft"]
                         },
@@ -927,6 +933,7 @@
                             "formatting_rule": "default",
                             "na": false,
                             "case": false,
+                            "_comment": "Used also in phrase 2",
                             "wordlist_en": ["degrad", "declin", "loss", "lost", "destruct", "disappear", "fragment"],
                             "wordlist_no": ["forring", "nedgang", "taper", "tapt", "miste", "ødelegg", "ødelag", "øydelegg", "øydelag", "forsvinn"]
                         },
@@ -935,6 +942,7 @@
                             "formatting_rule": "specific_trunc",
                             "na": false,
                             "case": false,
+                            "_comment": "Used also in phrase 2",
                             "wordlist_en": [],
                             "wordlist_no": ["tap", "tape"]
                         },
@@ -974,6 +982,7 @@
                             "formatting_rule": "default",
                             "na": false,
                             "case": false,
+                            "_comment": "Used also in phrase 1",
                             "wordlist_en": ["degrad", "declin", "loss", "lost", "destruct", "disappear", "fragment"],
                             "wordlist_no": ["forring", "nedgang", "taper", "tapt", "miste", "ødelegg", "ødelag", "øydelegg", "øydelag", "forsvinn"]
                         },
@@ -983,6 +992,7 @@
                             "na": false,
                             "case": false,
                             "wordlist_en": [],
+                            "_comment": "Used also in phrase 1",
                             "wordlist_no": ["tap", "tape"]
                         },
                         {
@@ -1116,6 +1126,7 @@
                             "formatting_rule": "default",
                             "na": false,
                             "case": false,
+                            "_comment": "Used also in phrase 2",
                             "wordlist_en": ["genetic resource", "gene resource", "bioresource", "biological resource",
                                 "traditional knowledge", "indigenous knowledge", "autochthonous knowledge", "local knowledge"],
                             "wordlist_no": ["genetiske ressurs", "genressurs", "plantegenetiske ressurs", "dyrgenetiske ressurs", "dyregenetiske ressurs", "bioressurs", "biologiske ressurs",
@@ -1239,6 +1250,7 @@
                             "formatting_rule": "default",
                             "na": false,
                             "case": false,
+                            "_comment": "Used in presearch 'poaching_endangered' also",
                             "wordlist_en": ["rosewood", "kosso", "elephant", "rhino", "ivory", "pangolin", "turtle", "tortoise", "big cat", "tiger", "glass eel"],
                             "wordlist_no": ["rosewood", "kosso", "elefant", "neshorn", "elfenbein", "elfenben", "skilpadde", "store katt", "glassål"]
                         }
