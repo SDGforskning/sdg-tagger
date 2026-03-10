@@ -312,7 +312,7 @@
                         },
                         {
                             "termlist_name": "termlist14_3atrunc",
-                            "formatting_rule": "specific_trunc",
+                            "formatting_rule": "no_left_trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": [],
@@ -460,7 +460,7 @@
                         },
                         {
                             "termlist_name": "termlist14_4kltrunc",
-                            "formatting_rule": "specific_trunc",
+                            "formatting_rule": "no_left_trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["fish", "shellfish", "overfish", 
@@ -518,7 +518,7 @@
                         },
                         {
                             "termlist_name": "termlist14_5acaps",
-                            "formatting_rule": "specific_trunc",
+                            "formatting_rule": "no_left_trunc",
                             "na": false,
                             "case": true,
                             "wordlist_en": ["MPA","LSMPA","NMTR"],
