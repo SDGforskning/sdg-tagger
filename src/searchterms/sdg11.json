@@ -18,7 +18,7 @@
                             "na": false,
                             "case": false,
                             "wordlist_en": ["access", "obstacle", "barrier", "hinder", "hindrance", "equitab", "non-equit", "legislat", "govern", "strateg", "policy", "policies" , "framework" , "program"],
-                            "wordlist_no": ["tilgang", "hindr", "rettferdig", "lovgiv", "lovgje", "politikk", "politisk", "reguler", "rettningslin", "strateg"]
+                            "wordlist_no": ["tilgang", "barrier", "hinder", "hindr", "rettferdig", "lovgiv", "lovgje", "strateg", "policy", "politikk", "politisk", "reguler", "rettningslin", "rammeverk", "program"]
                         },
                         {
                             "termlist_name": "termlist11_1b",
@@ -49,7 +49,7 @@
                             "na": false,
                             "case": false,
                             "wordlist_en": ["access", "obstacle", "barrier", "hinder", "hindrance", "equitab", "non-equit", "legislat", "governan", "strateg", "policy", "policies", "framework", "program"],
-                            "wordlist_no": ["tilgang", "hinder", "hindr", "rettferdig", "urettferdig", "lovgiv", "lovgje", "politikk", "politisk", "reguler", "strateg"]
+                            "wordlist_no": ["tilgang", "barrier", "hinder", "hindr", "rettferdig", "lovgiv", "lovgje", "strateg", "policy", "politikk", "politisk", "reguler", "rettningslin", "rammeverk", "program"]
                         },
                         {
                             "termlist_name": "termlist11_1e",
@@ -90,9 +90,9 @@
                             "municipal", "district", "region", "human settlement", "built-up area", "populated area",
                             "local community", "neighborhood", "neighbourhood"],
                             "wordlist_no": ["bolig", "bustad", "bosetting", "busetjing", "boforhold",
-                            "byer", "byar", "byen", "bydel", "byområde", "storby", "småby", "landsby", "kystby", "byplan", "byutvik", "bystruktur", "bymiljø", 
+                            "byer", "byar", "byen", "urban", "bydel", "byområde", "storby", "småby", "landsby", "kystby", "byplan", "byutvik", "bystruktur", "bymiljø", 
                             "bygd", "grend", "nærområde", "drabant",
-                            "kommun", "fylke", "distrikt", "befolka område", "befolket område", "tettsted", "tettstad",
+                            "kommun", "fylke", "region", "distrikt", "befolka område", "befolket område", "tettsted", "tettstad",
                             "samfunn", "lokalsamfunn", "nabolag", 
                             "oslo", "bergen", "trondheim", "stavanger", "tromsø"]
                         },
@@ -127,7 +127,7 @@
                             "case": false,
                             "_comment": "truncating 'slum' adds noise",
                             "wordlist_en": ["slum", "slums"],
-                            "wordlist_no": []
+                            "wordlist_no": ["slum", "slummen", "slummer", "slummene", "slumområde"]
                         }
                     ]
                 }
@@ -164,11 +164,11 @@
                             "case": false,
                             "_comment": "'driving' and 'driver' combined as otherwise problematic",
                             "wordlist_en": ["transport infrastructure", "public transport", "urban mobilit", "traffic", "roadway", "street", "roundabout",
-                            "highway", "motorway", "cycling lane", "cyclist", "cycle path", "bicycle lane", "walkway", "walking path", "sidewalk", "pavement","pedestrian","taxi", "ferry",
+                            "highway", "motorway", "cycling lane", "cyclist", "cycle path", "bicycle lane", "walkway", "walking path", "sidewalk", "pavement", "pedestrian", "taxi", "ferry",
                             "the underground", "railway", "airport", 
                             "travel", "car safety", "driver safety", "safe driving", "motorcycle", "automobile", "speed limit"],
-                            "wordlist_no": ["transportnettverk", "offentlig transport", "offentleg transport", "kollektivtransport", "transportinfrastruktur", "transportsystem", "trafikk", "rundkjøring","rundkøyring", 
-                            "motorvei", "motorveg", "sykkelsti", "sykkelve", "syklist", "gangve", "fortau", "drosje", "ferge", "hurtigbåt",
+                            "wordlist_no": ["transportnettverk", "offentlig transport", "offentleg transport", "urban mobilit", "kollektivtransport", "transportinfrastruktur", "transportsystem", "trafikk", "rundkjøring","rundkøyring", 
+                            "motorvei", "motorveg", "sykkelsti", "sykkelve", "syklist", "gangve", "fortau", "taxi", "drosje", "ferge", "hurtigbåt",
                             "t-bane", "bybane", "jernbane", "flyplass", "kortbane", 
                             "sikkerhet i bil", "motorsykkel", "sjåfør", "kjøring", "kjøyring", "fartsgrense"]
                         },
@@ -199,9 +199,9 @@
                             "town", "village", "suburb", 
                             "municipal", "district", "region", "human settlement", "built-up area", "populated area",
                             "community", "neighborhood", "neighbourhood"],
-                            "wordlist_no": ["byer", "byar", "byen", "bydel", "byområde", "storby", "småby", "landsby", "kystby", "byplan", "byutvik", "bystruktur", "bymiljø", 
+                            "wordlist_no": ["byer", "byar", "byen", "urban", "bydel", "byområde", "storby", "småby", "landsby", "kystby", "byplan", "byutvik", "bystruktur", "bymiljø", 
                             "bygd", "grend", "nærområde", "drabant",
-                            "kommun", "fylke", "distrikt", "befolka område", "befolket område", "tettsted", "tettstad",
+                            "kommun", "fylke", "region", "distrikt", "befolka område", "befolket område", "tettsted", "tettstad",
                             "samfunn", "lokalsamfunn", "nabolag", 
                             "oslo", "bergen", "trondheim", "stavanger", "tromsø"]
                         },
@@ -227,7 +227,7 @@
                             "na": false,
                             "case": false,
                             "wordlist_en": ["provide", "provision", "improv", "moderni", "reduc", "increas", "expand", "build", "boost", "rais", "extend", "implement", "establish", "develop", "strengthen", "enhanc"],
-                            "wordlist_no": ["tilbyr", "etablere", "forbedr", "styrk", "bedring", "betring", "reduser", "bygg", "utvikl", "oppgrad", "muliggjør"]
+                            "wordlist_no": ["tilbyr", "etablere", "forbedr", "styrk", "bedring", "betring", "moderni", "reduser", "implement", "bygg", "utvikl", "oppgrad", "muliggjør"]
                         },
                         {
                             "termlist_name": "termlist11_2f",
@@ -262,7 +262,7 @@
                             "na": false,
                             "case": false,
                             "wordlist_en": ["urbanisation", "urbanization", "urban development", "human settlement planning", "urban planning"],
-                            "wordlist_no": ["urbanisering", "urban utvikling", "byutvikling", "byplan"]
+                            "wordlist_no": ["urbanisering", "urban utvikling", "byutvikling", "byplan", "urban plan"]
                         }]
                 },
                 {
@@ -281,12 +281,12 @@
                             "municipal", "district", "region", "human settlement", "built-up area", "populated area",
                             "neighborhood", "neighbourhood", 
                             "local communit"],
-                            "wordlist_no": ["byer", "byar", "byen", "bydel", "byområde", "storby", "småby", "kystby", "byplan", "byutvik", "bystruktur", "bymiljø", 
+                            "wordlist_no": ["byer", "byar", "byen", "urban", "bydel", "byområde", "storby", "småby", "kystby", "byplan", "byutvik", "bystruktur", "bymiljø", 
                             "bygd", "grend", "nærområde", "drabant",
-                            "kommun", "fylke", "distrikt", "befolka område", "befolket område", "tettsted", "tettstad",
+                            "kommun", "fylke", "region", "distrikt", "befolka område", "befolket område", "tettsted", "tettstad",
                             "bosetting", "busetting", 
                             "nabolag", 
-                            "lokal samfunn",
+                            "lokalsamfunn",
                             "oslo", "bergen", "trondheim", "stavanger", "tromsø"]
                         },
                         {
@@ -310,8 +310,8 @@
                             "formatting_rule": "default",
                             "na": false,
                             "case": false,
-                            "wordlist_en": ["plan","plans","planning"],
-                            "wordlist_no": []
+                            "wordlist_en": ["plan", "plans", "planning"],
+                            "wordlist_no": ["plan", "planer", "planar"]
                         },
                         {
                             "termlist_name": "termlist11_3e",
@@ -349,9 +349,9 @@
                             "wordlist_en": ["cultural heritage", "culture heritage", "cultural landscape", "heritage object", "heritage building", "heritage site", "museum",
                             "archaeological place", "archaeological site", "historical place", "historical building", "historical monument", "historical artefact",
                             "natural heritage", "nature formation", "geopark", "nature park", "nature reserv", "zoo", "zoological garden", "botanical garden", "aquarium", "aquaria"],
-                            "wordlist_no": ["kulturarv", "kulturlandskap", "kulturminne", "historisk bygning", "historisk sted",
+                            "wordlist_no": ["kulturarv", "kulturlandskap", "kulturminne", "historisk bygning", "historisk sted", "museum",
                             "arkeologisk sted", "arkeologisk stad", "arkelogisk kulturminne", "fornminne", "arkeologisk område", "historisk monument", "historisk gjenstand",
-                            "naturarv", "naturformasjon", "naturpark", "nasjonalpark", "naturreservat", "dyrehage", "zoologisk hage", "botanisk hage", "akvarium", "akvarie"]
+                            "naturarv", "naturformasjon", "geopark", "naturpark", "nasjonalpark", "naturreservat", "dyrehage", "zoologisk hage", "botanisk hage", "akvarium", "akvarie"]
                         }
                     ]
                 }
@@ -362,7 +362,7 @@
             "phrases": [
                 {
                     "number": 1,
-                    "logic_rule": "(([termlist11_5a] | ([termlist11_5b] & [termlist11_5c]) | ([termlist11_5d] & [termlist11_5e]) | ([termlist11_5j] & [termlist11_5k]) | ([termlist11_5f] | [termlist11_5ftrunc])) & (([termlist11_5l] | ([termlist11_5s] & ([termlist11_5t]) | ([termlist11_5m] & ([termlist11_5n] | ([termlist11_5o] | ([termlist11_5q] & [termlist11_5r]))))",
+                    "logic_rule": "(([termlist11_5a] | ([termlist11_5b] & [termlist11_5c]) | ([termlist11_5d] & [termlist11_5e]) | ([termlist11_5j] & [termlist11_5k]) | ([termlist11_5f] | [termlist11_5ftrunc])) & (([termlist11_5l] | ([termlist11_5s] & ([termlist11_5t]) | ([termlist11_5m] & (([termlist11_5n] | ([termlist11_5o] & [termlist11_5p]) | ([termlist11_5q] & [termlist11_5r]))))))))",
                     "sentence_split": false,
                     "_comment": "The NOT-part at the end of WoS string is not included (original termlists 5g and 5j), as probably not needed/useful in title searching",
                     "termlists": [
@@ -388,7 +388,7 @@
                             "na": false,
                             "case": false,
                             "wordlist_en": ["climat", "weather", "precipitation", "rain", "snow", "temperatur", "storm", "wind"],
-                            "wordlist_no": ["klima", "vær", "nedbør", "regn", "snø", "vind"]
+                            "wordlist_no": ["klima", "vær", "nedbør", "regn", "snø", "temperatur", "storm", "vind"]
                         },
                         {
                             "termlist_name": "termlist11_5d",
@@ -426,7 +426,7 @@
                             "unrest", "financial crash", "financial shock", "economic downturn", "economic shock"],
                             "wordlist_no": ["ekstremvær", "ekstremver", 
                             "tropisk lavtrykk", "tropisk lågtrykk", "flodbølg", "monsterbølg", "ekstrembølg", 
-                            "orkan",  "tyfon", "syklon", "snøstorm", 
+                            "orkan",  "tyfon", "syklon", "snøstorm", "tornado",
                             "flom", "flaum", "oversvøm", "ovefløym", "tørke", 
                             "snøskred", "skred", "snøras", "lavine", "jordskred", "jordras", "sørpeskred", "leirras", "leirskred", "steinras", "steinskred", "synkehull", 
                             "uvanlig kulde", "uvanlig kaldt", "uvanleg kulde", "uvanleg kaldt", "ekstrem kuld", "ekstremkuld", "kuldebølg", "snøstorm", 
@@ -467,7 +467,7 @@
                             "na": false,
                             "case": false,
                             "wordlist_en": ["death", "casualt", "survivors", "fatal"],
-                            "wordlist_no": ["død", "daud", "offer", "ofre", "overlevende", "overlevande"]
+                            "wordlist_no": ["død", "daud", "offer", "ofre", "overlevende", "overlevande", "fatal"]
                         },
                         {
                             "termlist_name": "termlist11_5s",
@@ -483,7 +483,7 @@
                             "na": false,
                             "case": false,
                             "wordlist_en": ["people", "person", "civilian", "women", "men", "child"],
-                            "wordlist_no": ["folk", "sivile", "kvinner", "menn", "barn", "born"]
+                            "wordlist_no": ["folk", "person", "sivile", "kvinner", "menn", "barn", "born"]
                         },
                         {
                             "termlist_name": "termlist11_5m",
@@ -491,7 +491,7 @@
                             "na": false,
                             "case": false,
                             "wordlist_en": ["surviv", "mortalit"],
-                            "wordlist_no": ["overlev", "død"]
+                            "wordlist_no": ["overlev", "død", "mortalit"]
                         },
                         {
                             "termlist_name": "termlist11_5n",
