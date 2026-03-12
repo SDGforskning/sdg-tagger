@@ -60,6 +60,7 @@ For converting old SDGs:
 8. Go back to step 3 if you wish to edit anything, and repeat 3-7 as necessary. You can open a _draft pull request_ at this stage (once you have made the first change on your branch) - and use the pull request to document any substantial changes you make, or changes that will need to be also changed in WOS (see example here: https://github.com/SDGforskning/sdg-tagger/pull/45). When opening the pull request, change the default option (main) so that you compare it with the source branch:
 <img width="800" height="150" alt="image" src="https://github.com/user-attachments/assets/e2360184-1eda-47cc-bb82-abaf89c1704e" />
 <img width="400" height="50" alt="image" src="https://github.com/user-attachments/assets/10eb21b9-5d52-4446-99f4-42a3fe4de186" />
+
 9. Once finished and happy with your SDG, you can request a review on your pull request.
 
 
