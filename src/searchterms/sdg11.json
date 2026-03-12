@@ -664,7 +664,7 @@
                             "wordlist_no": ["politisk", "sivil"]
                         },
                         {
-                            "termlist_name": "termlist11_52l",
+                            "termlist_name": "termlist11_5l",
                             "formatting_rule": "default",
                             "na": false,
                             "case": false,
@@ -672,7 +672,7 @@
                             "wordlist_no": ["nasjonalprodukt", "bnp"]
                         },
                         {
-                            "termlist_name": "termlist11_52ltrunc",
+                            "termlist_name": "termlist11_5ltrunc",
                             "formatting_rule": "default",
                             "na": false,
                             "case": false,
@@ -993,8 +993,8 @@
                             "rural utvikling", "bypolit"]
                         },
                         {
-                            "termlist_name": "",
-                            "formatting_rule": "termlist11_Actrunc",
+                            "termlist_name": "termlist11_Actrunc",
+                            "formatting_rule": "default",
                             "na": false,
                             "case": false,
                             "_comment": "'city' is here due to capaCITY",
@@ -1076,7 +1076,7 @@
             "phrases": [
                 {
                     "number": 1,
-                    "logic_rule": "([termlist11_Ca] | ([termlist11_Cb] & [termlist11_Cc]) | [termlist11_Cd])",
+                    "logic_rule": "([termlist11_Ca] | ([termlist11_Cb] & [termlist11_Cc]) | [termlist11_Cd_case])",
                     "sentence_split": false,
                     "termlists": [
                         {
