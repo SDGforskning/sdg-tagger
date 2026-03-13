@@ -149,7 +149,7 @@
                     "wordlist_no": ["forspor",
                                     "produksj", "forbruk",
                                     "marked", "detaljhandel", "faghandel", "dagligvare",
-                                    "håndter", "innsaml", "samling", "oppbevar", "lagring", "innpakning", "emballasje", "emballering", "forsyningskjede", "logistikk",
+                                    " handling", "håndter", "innsaml", "samling", "oppbevar", "lagring", "innpakning", "emballasje", "emballering", "forsyningskjede", "logistikk",
                                     "anskaffels", "anbud", "innkjøp", "investering",
                                     "ressurseffektiv", "materialeffektiv", "effektiv bruk av material", "effektiv bruk av ressurs", 
                                     "matsystem", "matproduksjon", "matforbruk", "matsikkerhet",
@@ -354,7 +354,7 @@
                             "case": false,
                             "_comment": "Duplicated in 12.2 phrase 2, 3 & 4",
                             "wordlist_en": ["land", "soil", "soils", "metal", "metals", "ore", "ores"],
-                            "wordlist_no": ["sjø", "hav", "kyst", "kysten", "jord", ".*malm", "malmer"]
+                            "wordlist_no": ["land", "sjø", "hav", "kyst", "kysten", "jord", ".*malm", "malmer"]
                         },
                         {
                             "termlist_name": "termlist12_2f",
@@ -387,7 +387,7 @@
                             "case": false,
                             "_comment": "Duplicated to 12.2 phrase 4",
                             "wordlist_en": ["fossil fuel.*", "coal", "oil", "natural gas", "peat", "diesel", "gasoline", "kerosene", "petroleum", "energy resource.*"],
-                            "wordlist_no": ["fossilt brensel.*", "fossile brensl.*", "fossilt brennstoff.*", "fossile brennstoff.*", "kull", "olje", "naturgass", "parafin.*", "energiressurs.*"]
+                            "wordlist_no": ["fossilt brensel.*", "fossile brensl.*", "fossilt brennstoff.*", "diesel", "fossile brennstoff.*", "kull", "olje", "naturgass", "parafin.*", "energiressurs.*"]
                         },
                         {
                             "termlist_name": "termlist12_2c_trunc",
@@ -439,13 +439,13 @@
                             "case": false,
                             "_comment": "Duplicated from 12.2 phrase 1",
                             "wordlist_en": ["land", "soil", "soils", "metal", "metals", "ore", "ores"],
-                            "wordlist_no": ["sjø", "hav", "kyst", "kysten", "jord", ".*malm", "malmer"]
+                            "wordlist_no": ["land", "sjø", "hav", "kyst", "kysten", "jord", ".*malm", "malmer"]
                         }
                     ]
                 },
                 {
                     "number": 3,
-                    "logic_rule": "([termlist12_2i] | ([termlist12_scp6] & [termlist12_scp7]) | (([termlist12_2d] | [termlist12_2e_trunc] | [termlist12_2e]) & [scp] | [termlist12_2j])))",
+                    "logic_rule": "(([termlist12_2i] | ([termlist12_scp6] & [termlist12_scp7]) | (([termlist12_2d] | [termlist12_2e_trunc] | [termlist12_2e]) & [scp] | [termlist12_2j])))",
                     "sentence_split": false,
                     "_comment": "Here we reuse the parts/all of the scp string, even though it is slightly wider than the original WoS combination string. In addition, there are two other new elements added:  'efficient use' (in WOS = ('saving' OR 'save$' OR 'conserv*' OR 'efficien*') NEAR/5 ('use' OR 'using' OR 'usage' OR 'utili*' OR 'consumption')). circular economy (stands alone without having to mention natural resources in WOS). And combine it with the natural resources strings in phrase 1",
                     "termlists": [
@@ -506,7 +506,7 @@
                             "case": false,
                             "_comment": "Duplicated from 12.2 phrase 1",
                             "wordlist_en": ["land", "soil", "soils", "metal", "metals", "ore", "ores"],
-                            "wordlist_no": ["sjø", "hav", "kyst", "kysten", "jord", ".*malm", "malmer"]
+                            "wordlist_no": ["land", "sjø", "hav", "kyst", "kysten", "jord", ".*malm", "malmer"]
                         }
                     ]
                 },
@@ -579,7 +579,7 @@
                             "case": false,
                             "_comment": "Duplicated from 12.2 phrase 1",
                             "wordlist_en": ["land", "soil", "soils", "metal", "metals", "ore", "ores"],
-                            "wordlist_no": ["sjø", "hav", "kyst", "kysten", "jord", ".*malm", "malmer"]
+                            "wordlist_no": ["land", "sjø", "hav", "kyst", "kysten", "jord", ".*malm", "malmer"]
                         },
                         {
                             "termlist_name": "termlist12_2h_trunc",
@@ -588,7 +588,7 @@
                             "case": false,
                             "_comment": "Duplicated from 12.2 phrase 2",
                             "wordlist_en": ["fossil fuel.*", "coal", "oil", "natural gas", "peat", "diesel", "gasoline", "kerosene", "petroleum", "energy resource.*"],
-                            "wordlist_no": ["fossilt brensel.*", "fossile brensl.*", "fossilt brennstoff.*", "fossile brennstoff.*", "kull", "olje", "naturgass", "parafin.*", "energiressurs.*"]
+                            "wordlist_no": ["fossilt brensel.*", "fossile brensl.*", "fossilt brennstoff.*", "diesel", "fossile brennstoff.*", "kull", "olje", "naturgass", "parafin.*", "energiressurs.*"]
                         }
                     ]
                 },
@@ -744,7 +744,7 @@
             "phrases": [
                 {
                     "number": 1,
-                    "logic_rule": "(([termlist12_4d] | ((([termlist12_4a_trunc] & [termlist12_4b_trunc]) | [termlist12_4b]) & ([termlist12_4c] | [termlist12_4c_trunc]))) & ~[termlist12_4not])",
+                    "logic_rule": "(([termlist12_4d] | ((([termlist12_4a_trunc] & [termlist12_4b_trunc]) | [termlist12_4b]) & ([termlist12_4c] | [termlist12_4c_trunc]))) & not [termlist12_4not])",
                     "sentence_split": false,
                     "termlists": [
                         {
@@ -967,11 +967,12 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist12_4k",
-                            "formatting_rule": "",
+                            "formatting_rule": "default",
                             "na": false,
                             "case": false,
+                            "_comment": "inkludert 'minim' fra EN liste. Må dobbeltsjekkes at det ikke gir irrelevante treff",
                             "wordlist_en": ["reduc", "minim", "decreas", "avoid", "prevent", "combat", "tackl", "resist", "lowering", "lowered", "control", "assess", "evaluat", "monitor"],
-                            "wordlist_no": ["reduse", "unngå", "hinder", "hindre", "kjempe", "lavere", "forby","kontroll", "vurder", "evaluering", "overvåk"]
+                            "wordlist_no": ["reduse", "minim", "unngå", "hinder", "hindre", "kjempe", "lavere", "forby","kontroll", "vurder", "evaluering", "overvåk"]
                         },
                         {
                             "termlist_name": "termlist12_4k_trunc",
@@ -1036,7 +1037,7 @@
             "phrases": [
                 {
                     "number": 1,
-                    "logic_rule": "(([termlist12_5a] | [termlist12_5b]) & [termlist12_5d]) | ([termlist12_5e_trunc] & ([termlist12_5b] | ([termlist12_5a] & [termlist12_5c])))",
+                    "logic_rule": "((([termlist12_5a] | [termlist12_5b]) & [termlist12_5d]) | ([termlist12_5e_trunc] & ([termlist12_5b] | ([termlist12_5a] & [termlist12_5c]))))",
                     "sentence_split": false,
                     "termlists": [
                         {
@@ -1219,7 +1220,7 @@
                 },
                 {
                     "number": 2,
-                    "logic_rule": "(([termlist12_6d] & ([termlist12_6e | [termlist12_6f])) & ([termlist12_6c] | [termlist12_6c_trunc]))",
+                    "logic_rule": "(([termlist12_6d] & ([termlist12_6e] | [termlist12_6f])) & ([termlist12_6c] | [termlist12_6c_trunc]))",
                     "sentence_split": false,
                     "_comment": "Reuse lists phrasespecific12_6c and phrasedefault12_6c from phrase 1 for companies terms",
                     "termlists": [
@@ -1365,8 +1366,9 @@
                             "formatting_rule": "default",
                             "na": false,
                             "case": false,
+                            "_comment": "Inkludert 'inform' fra EN liste. Må dobbeltsjekkes at det ikke gir irrelevante treff",
                             "wordlist_en": ["inform", "knowledge", "aware", "educat", "guide", "instruct", "learn", "educat", "teach"],
-                            "wordlist_no": ["kunnskap", "kjennskap", "kjenne", "veiled", "undervis", "læring", "lære", "utdann", "kompetans", "engasj"]
+                            "wordlist_no": ["inform", "kunnskap", "kjennskap", "kjenne", "veiled", "undervis", "læring", "lære", "utdann", "kompetans", "engasj"]
                         },
                         {
                             "termlist_name": "termlist12_8g",
@@ -1378,7 +1380,7 @@
                                             "purchas", "buying", "habit",
                                             "consumption", "lifestyle", "life-style"],
                             "wordlist_no": ["forbruk", "beboer", "bebuar", "besøkende", "besøkande", "gjest", "turist", "ansatt", "bonde",
-                                            "borger", "folk", "barna", "barne", "tenåring", "de gamle", "offentlig", "voksne", "voksen", "vaksne", "vaksen",
+                                            "borger", "folk", "barna", "barne", "tenåring", "de gamle", "offentlig", "student", "voksne", "voksen", "vaksne", "vaksen",
                                             "kjøp", "vane",
                                             "livstil"]
                         },
@@ -1631,7 +1633,7 @@
                             "case": false,
                             "_comment": "duplicated in phrase 2",
                             "wordlist_en": ["fossil fuel", "natural gas", "diesel", "gasoline", "kerosene", "petroleum", "energy resource", "conventional energy"],
-                            "wordlist_no": ["fossilt brensel", "fossile brensl", "fossilt brennstoff", "fossile brennstoff", "naturgass", "energiressurs", "konvensjonell energi"]
+                            "wordlist_no": ["fossilt brensel", "fossile brensl", "diesel", "fossilt brennstoff", "fossile brennstoff", "naturgass", "energiressurs", "konvensjonell energi"]
                         },
                         {
                             "termlist_name": "termlist12_c3_trunc",
@@ -1673,7 +1675,7 @@
                             "case": false,
                             "_comment": "duplicated from phrase 1",
                             "wordlist_en": ["fossil fuel", "natural gas", "diesel", "gasoline", "kerosene", "petroleum", "energy resource", "conventional energy"],
-                            "wordlist_no": ["fossilt brensel", "fossile brensl", "fossilt brennstoff", "fossile brennstoff", "naturgass", "energiressurs", "konvensjonell energi"]
+                            "wordlist_no": ["fossilt brensel", "fossile brensl", "diesel", "fossilt brennstoff", "fossile brennstoff", "naturgass", "energiressurs", "konvensjonell energi"]
                         },
                         {
                             "termlist_name": "termlist12_c3_trunc",
@@ -1694,7 +1696,7 @@
         "termlists": [
             {
                 "termlist_name": "termlist12_1",
-                "formatting_rule": "",
+                "formatting_rule": "default",
                 "na": false,
                 "case": false,
                 "wordlist_en": ["SDG 12", "SDGs 12", "SDG12", "sustainable development goal 12"],
@@ -1702,7 +1704,7 @@
             },
             {
                 "termlist_name": "termlist12_2",
-                "formatting_rule": "",
+                "formatting_rule": "default",
                 "na": false,
                 "case": false,
                 "wordlist_en": ["sustainable development goal"],
@@ -1710,7 +1712,7 @@
             },
             {
                 "termlist_name": "termlist12_3",
-                "formatting_rule": "",
+                "formatting_rule": "default",
                 "na": false,
                 "case": false,
                 "wordlist_en": ["goal 12"],
@@ -1718,7 +1720,7 @@
             },
             {
                 "termlist_name": "termlist12_4",
-                "formatting_rule": "",
+                "formatting_rule": "default",
                 "na": false,
                 "case": false,
                 "wordlist_en": ["sustainable development goal", "SDG", "goal 12"],
@@ -1726,7 +1728,7 @@
             },
             {
                 "termlist_name": "termlist12_5",
-                "formatting_rule": "",
+                "formatting_rule": "default",
                 "na": false,
                 "case": false,
                 "_comment": "Possible search for the short titles of the SDGs, to be used in a title search",

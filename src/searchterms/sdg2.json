@@ -163,7 +163,7 @@
                             "na": false,
                             "case": false,
                             "wordlist_en": ["child", "infant", "under five", "under-five", "babies", "baby", "toddler", "girl", "boy"],
-                            "wordlist_no": ["barn", "jenter", "gutter", "gutar"]
+                            "wordlist_no": ["barn", "jenter", "baby", "gutter", "gutar"]
                         },
                         {
                             "termlist_name": "termlist2_2not",
@@ -209,7 +209,7 @@
                                 "older person", "old person", "old people", "elderly", "older adult",
                                 "women", "mother", "pregnan",
                                 "school feeding", "free school meal", "food stamp program", "nutrition assistance", "food assistance"],
-                            "wordlist_no": [ "barn", "jenter", "gutter", "gutar",
+                            "wordlist_no": [ "barn", "jenter", "baby", "babyer", "gutter", "gutar",
                                 "gammel person", "eldre", "de gamle",
                                 "kvinne", "gravid",
                                 "gratis skolemat", "gratis skolemåltid"]
@@ -390,7 +390,7 @@
                                 "katastrof", "krise", 
                                 "ekstremvær", "ekstremver", 
                                 "tropisk lavtrykk", "tropisk lågtrykk", "flodbølg", "monsterbølg", "ekstrembølg", 
-                                "orkan",  "tyfon", "syklon", "snøstorm", 
+                                "orkan",  "tyfon", "syklon", "snøstorm", "tornado",
                                 "flom", "flaum", "oversvøm", "ovefløym", "tørke", 
                                 "snøskred", "skred", "snøras", "lavine", "jordskred", "jordras", "sørpeskred", "leirras", "leirskred", "steinras", "steinskred", "synkehull", 
                                 "uvanlig kulde", "uvanlig kaldt", "uvanleg kulde", "uvanleg kaldt", "ekstrem kuld", "ekstremkuld", "kuldebølg", "snøstorm", 
@@ -464,7 +464,7 @@
                                 "biodiversit", "species diversity", "ecosystem", "pollinator"],
                             "wordlist_no": ["jordvern", "jordfunksjon", "jordforbedring", "jordforbetring", "jordforvaltning", "jordkvalitet", "jordas kvalitet",
                                 "biologisk mangfold", "biologiske mangfold", "biologisk mangfald", "biomangfold", "biomangfald", "artsmangfold", "artsmangfald",
-                                "naturmangfold", "naturmangfald", "økosystem"]
+                                "biodiversit", "naturmangfold", "naturmangfald", "økosystem"]
                         }
                     ]
                 },
