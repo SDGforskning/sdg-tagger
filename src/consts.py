@@ -7,7 +7,7 @@ FORMATS_FILE_PATH = 'searchterms/formats.json'
 def _read_file(file_path: str) -> dict:
     """Opens a json file and returns the content as a dictionary"""
     file_path_absolute = os.path.join(os.path.dirname(__file__), file_path)
-    with open(file_path_absolute, 'r') as file:
+    with open(file_path_absolute, 'r', encoding='utf-8') as file:
         data = json.load(file)
 
     return data
