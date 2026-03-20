@@ -21,8 +21,8 @@
                         "rocky shore", "beach", "salt marsh", "mud flat", "mudflat", "tidal flat", "estuar", "fjord", 
                         "sea ice",
                         "sea life", "sealife", "mangrove", "kelp bed", "kelp forest", "seagrass", "seaweed", "macroalga", "sponge ground", "organic fall", "coral", 
-                        "whale", "dolphin", "echinoderm", "starfish", "sea urchin", "sea cucumber", "brittle star", "Asteroidea", "Ophiuroidea", "Echinoidea", "Holothuroidea", "Crinoidea",
-                        "coastal communit", "coastal zone management",
+                        "whale", "dolphin", "echinoderm", "starfish", "sea urchin", "sea cucumber", "brittle star", "Asteroidea", "Ophiuroid", "Echinoid", "Holothuroid", "Crinoid",
+                        "coastal communit", "coastal zone",
                         "offshore"],
                     "wordlist_no": ["sjøområd", "havområd", "havbruk", "havforsuring", "Skagerrak", 
                         "sjøbunn", "sjøbotn", "havbunn", "havbotn", "sjøfjell", "hydrotermisk skorstein", "hydrotermiske skorstein", "hydrotermisk ventil", "midhavsrygg", "kontinentalskråning", "kontinentalhylle",
@@ -84,7 +84,7 @@
                             "wordlist_en": ["pollut", 
                                 "sewage","sewer", "eutrophicat","excess nutrient","excessive nutrient","effluent","runoff","waste",
                                 "littering","garbage",
-                                "microplastic","micro plastic","micro-plastic","nanoplastic","nano plastic","plastic waste","plastic particles", "plastic litter",
+                                "microplastic","micro plastic","micro-plastic","nanoplastic","nano plastic","plastic waste","plastic particles", "plastic litter", "plastic debris", "marine plastic",
                                 "heavy metal","toxic metal","mercury","arsenic","cadmium","chromium","copper","nickel",
                                 "organotin","tributyltin","mining","mine tailing",
                                 "contaminant","bioaccumula","bioconcentrat","ecotox","toxic chemical","forever chemical",
@@ -111,15 +111,15 @@
                             "formatting_rule": "default",
                             "na": false,
                             "case": true,
-                            "wordlist_en": ["PCB","DDT","PAH", "TBT", "PFAS"],
-                            "wordlist_no": ["PCB","DDT","PAH", "TBT", "PFAS"]
+                            "wordlist_en": ["PCB", "PCBs", "DDT","PAH", "PAHs", "TBT", "PFAS"],
+                            "wordlist_no": ["PCB", "PCBs", "DDT","PAH", "PAHs", "TBT", "PFAS"]
                         },
                         {
                             "termlist_name": "termlist14_1c",
                             "formatting_rule": "specific_trunc",
                             "na": false,
                             "case": false,
-                            "wordlist_en": ["litter", "trash"],
+                            "wordlist_en": ["litter", "trash", ".*plastics"],
                             "wordlist_no": ["bly", "arsen", "krom", "tinn", "plast"]
                         },
                         {
@@ -208,7 +208,7 @@
                             "formatting_rule": "default",
                             "na": false,
                             "case": false,
-                            "wordlist_en": ["area", "zone", "habitat","ecosystem"],
+                            "wordlist_en": ["area", "zone", "habitat", "ecosystem"],
                             "wordlist_no": ["område", "sone", "miljø", "leveområd", "økosystem"]
                         },
                         {
@@ -232,7 +232,7 @@
                             "formatting_rule": "default",
                             "na": false,
                             "case": false,
-                            "wordlist_en": ["manag", "conserv", "protect", "restor", "rehabilita", "resilien"],
+                            "wordlist_en": ["manag", "conserv", "preserv", "protect", "restor", "rehabilita", "resilien"],
                             "wordlist_no": ["forvalt", "verne", "verna", "vern av", "miljøvern","bevare", "bevaring", "frede", "freda", "fredning", "beskytt", "gjenoppbygg", "restaurer", "rehabilit", "resilien", "bærekraftig bruk", "berekraftig bruk"]
                         },
                         {
@@ -240,8 +240,8 @@
                             "formatting_rule": "default",
                             "na": false,
                             "case": false,
-                            "wordlist_en": ["habitat","ecosystem","ecological communit",
-                                "mangrove", "kelp", "seagrass", "seaweed", "macroalga", "sponge ground", "reef", "coral", 
+                            "wordlist_en": ["habitat","ecosystem","environment","ecological communit",
+                                "ocean", "marine", "mangrove", "kelp", "seagrass", "seaweed", "macroalga", "sponge ground", "reef", "coral", 
                                 "salt marsh", "mud flat", "mudflat", "tidal flat",
                                 "estuar", "fjord", "coastal dune", "coastal wetland", "coastal water", 
                                 "deep sea", "seafloor", "hydrothermal vent",
@@ -254,7 +254,7 @@
                                 "Lima convention","Nairobi convention","Noumea convention","Barcelona convention","World heritage convention","European landscape convention",
                                 "International coral reef initiative"],
                             "wordlist_no": ["leveområd", "miljø", "økosystem", "samfunn",
-                                "mangrove", "sjøgress", "makroalge", "stortare", "sukkertare", "fingertare", "tareskog", "drivtang", "grisetang", "sagtang", "korall", "saltmarsker", "sandstrand", "strandeng",
+                                "marine", "mangrove", "sjøgress", "makroalge", "stortare", "sukkertare", "fingertare", "tareskog", "drivtang", "grisetang", "sagtang", "korall", "saltmarsker", "sandstrand", "strandeng",
                                 "elvemunn", "dyphav", "havbunn", "sjøbunn", "sjøfjell", "hydrotermisk skorstein", "hydrotermiske skorstein", "hydrotermisk ventil", "midhavsrygg", "kontinentalskråning", "kontinentalhylle",
                                 "vannkvalitet", "resiliens",
                                 "mangfold", "mangfald", "diversitet", "vippepunkt", "nøkkelart", "flaggskipsart", "paraplyart", 
@@ -267,8 +267,8 @@
                             "formatting_rule": "specific_trunc",
                             "na": false,
                             "case": false,
-                            "wordlist_en": [],
-                            "wordlist_no": ["tare.*", "tang", "tangart.*"]
+                            "wordlist_en": ["seas"],
+                            "wordlist_no": ["marin", "marint", "havet", "hav", "tare.*", "tang", "tangart.*"]
                         },
                         {
                             "termlist_name": "termlist14_2hcase",
@@ -287,7 +287,7 @@
             "phrases": [
                 {
                     "number": 1,
-                    "logic_rule": "(([termlist14_3a] | [termlist14_3atrunc]) & ([termlist14_3b] | [termlist14_3ccase]) & [marine_terms])",
+                    "logic_rule": "(([termlist14_3a] | [termlist14_3atrunc] | [termlist14_3d]) & ([termlist14_3b] | [termlist14_3ccase]) & [marine_terms])",
                     "sentence_split": true,
                     "_comment": "Note that 'havforsuring' (NO; ocean acidification) is included in the marine terms, so it should not be a problem to find works using this term even when combined with marine terms.",
                     "termlists": [
@@ -298,16 +298,16 @@
                             "case": false,
                             "wordlist_en": ["impact", "effect", "affect", "respons", "consequence",
                                 "results in", "changes", "alters", "altering", "changing",
-                                "sensitiv", "vulnerab", "threat",
+                                "sensitiv", "vulnerab", "threat", "danger",
                                 "resilien", "coping", "toleran",
-                                "calcif", "carbonate", "aragonit", "calcite", 
-                                "extinct", "adapt", "competiti", "recruit", "surviv", "reproduc",
+                                "calcif", "carbonate", "aragonit", "calcite", "shell", "coral", "dissol", "degradat",
+                                "extinct", "adapt", "competiti", "recruit", "surviv", "reproduc", "growth", "settlement", "mortality", "disease",
                                 "monitor"],
                             "wordlist_no": ["påvirk", "impakt", "konsekvens", "effekt",
                                 "resultat", "endring", 
                                 "sårbar", "truet", "truer", "stress", "tåle", 
-                                "forkalk", "karbonsyre", "karbonat", "kalsit", "skjell", "aragonit", 
-                                "utrydd", "tilpass", "konkurr", "rekrutter", "overleve", "formering", "reproduksjon",
+                                "forkalk", "karbonsyre", "karbonat", "kalsit", "aragonit", "skjell", "korall", "oppløs",
+                                "utrydd", "tilpass", "konkurr", "rekrutter", "overleve", "formering", "reproduksjon", "vekst", "dødlighet", "sykdom",
                                 "overvåk", "overvak"]
                         },
                         {
@@ -316,7 +316,15 @@
                             "na": false,
                             "case": false,
                             "wordlist_en": [],
-                            "wordlist_no": ["trua", "trued"]
+                            "wordlist_no": ["trua", "trued", "fare"]
+                        },
+                        {
+                            "termlist_name": "termlist14_3d",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["protect","conserve","conservation","conserves","conserving", "address", "tackle", "prevent"],
+                            "wordlist_no": ["vernet", "verne", "verna", "vern av", "bevare", "bevaring", "frede", "freda", "fredning", "beskytt"]
                         },
                         {
                             "termlist_name": "termlist14_3b",
@@ -352,10 +360,8 @@
                             "formatting_rule": "default",
                             "na": false,
                             "case": false,
-                            "wordlist_en": ["overfish", "bycatch", "by-catch", "IUU fish", 
-                                "ghost fishing", "ghost net", "ALDFG", "poison fishing"],
-                            "wordlist_no": ["overfisk", "ulovlig fisk", "ulovlige fisk", "ulovleg fisk", "ulovlege fisk", "tjuvfiske", "bifangst", "UUU fiske", "UUU-fiske",
-                                "spøkelsesfiske", "tapte garn"]
+                            "wordlist_en": ["overfish", "bycatch", "by-catch", "IUU fish", "ghost fishing", "ghost net", "ALDFG", "poison fishing"],
+                            "wordlist_no": ["overfisk", "ulovlig fisk", "ulovlige fisk", "ulovleg fisk", "ulovlege fisk", "tjuvfiske", "bifangst", "UUU fiske","UUU-fiske", "spøkelsesfiske", "tapte garn", "fiskerilovgivningen"]
                         },
                         {
                             "termlist_name": "termlist14_4b",
@@ -404,8 +410,8 @@
                             "formatting_rule": "default",
                             "na": false,
                             "case": false,
-                            "wordlist_en": ["fishing", "fisher", "shellfish", "trawl"],
-                            "wordlist_no": ["fiske", "skalldyr"]
+                            "wordlist_en": ["fishing", "fisher", "fish stock", "shellfish", "trawl"],
+                            "wordlist_no": ["fiske", "torskebestand", "laksebestand", "makrellbestand", "skalldyr"]
                         }
                     ]
                 },
@@ -501,7 +507,7 @@
             "phrases": [
                 {
                     "number": 1,
-                    "logic_rule": "(([termlist14_5a] | [termlist14_5acaps] | ([termlist14_5b] & [termlist14_5c])) & [marine_terms] & not [termlist14_5not])",
+                    "logic_rule": "((([termlist14_5a] | [termlist14_5acaps] | ([termlist14_5b] & [termlist14_5c])) & [marine_terms]) & not [termlist14_5not])",
                     "sentence_split": true,
                     "termlists": [
                         {
@@ -557,7 +563,7 @@
             "phrases": [
                 {
                     "number": 1,
-                    "logic_rule": "(([termlist14_6a] | [termlist14_6acaps]) & [termlist14_6b])",
+                    "logic_rule": "((([termlist14_6a] | [termlist14_6acaps]) & [termlist14_6b]) & not [termlist14_6not])",
                     "sentence_split": true,
                     "termlists": [
                         {
@@ -591,7 +597,6 @@
                             "formatting_rule": "default",
                             "na": false,
                             "case": false,
-                            "_comment": "CURRENTLY NOT IN USE.",
                             "wordlist_en": ["larval subsid", "recruitment subsid"],
                             "wordlist_no": []
                         }
@@ -605,7 +610,7 @@
                 {
                     "number": 1,
                     "logic_rule": "(([termlist14_7a] | [termlist14_7acaps]) & ([LDC] | [SIDS]) & [marine_terms])",
-                    "sentence_split": true,
+                    "sentence_split": false,
                     "termlists": [
                         {
                             "termlist_name": "termlist14_7a",
@@ -614,13 +619,13 @@
                             "case": false,
                             "wordlist_en": ["econom","wealth",
                                 "exploit","goods and services","ecosystem service",
-                                "marine resource", "biological resource", "genetic resource",
-                                "livelihood","job","income","profit","trade","trading","market",
+                                "marine resource", "marine benefit", "biological resource", "genetic resource", "mineral resource", 
+                                "livelihood","job","income","profit","trade","trading","market","willingness to pay",
                                 "monetary","moneti","investor",
                                 "blue growth","blue bond"],
                             "wordlist_no": ["økonomi", "rikdom",
                                 "utnytt", "varer", "tjenester", "naturgoder",
-                                "marine ressurs", "biologiske ressurs", "biologisk ressurs", "genetiske ressurs", "genetisk ressurs",
+                                "marine ressurs", "biologiske ressurs", "biologisk ressurs", "genetiske ressurs", "genetisk ressurs", "mineraler",
                                 "levebrød", "jobb", "arbeid", "inntekt", "profit", "handel", "marked", "markad",
                                 "penger", "investor",
                                 "blå vekst", "blåvekst"]
@@ -765,7 +770,7 @@
                             "na": false,
                             "case": false,
                             "wordlist_en": ["observation","observator","monitoring","equipment"],
-                            "wordlist_no": ["observasjon", "overvåk", "overvak", "monitorer ", "utstyr"]
+                            "wordlist_no": ["observasjon", "overvåk", "overvak", "monitorer", "utstyr"]
                         },
                         {
                             "termlist_name": "termlist14_ah",
@@ -883,7 +888,7 @@
                 {
                     "number": 1,
                     "logic_rule": "(([termlist14_ba] | [termlist14_bb]) & ([termlist14_bc] & [termlist14_bd]))",
-                    "sentence_split": true,
+                    "sentence_split": false,
                     "termlists": [
                         {
                             "termlist_name": "termlist14_ba",
@@ -900,6 +905,7 @@
                                 "felles", "eierskap",
                                 "konflikt", "tvist", "konkurrans",
                                 "kriminel", "stjel",
+                                "blue injustice", "blue justice", "distributional justice",
                                 "styring", "ledelse", "leiing", "politikk", "retningslinj", "rammverk", "strateg", "planlegging", "regulativ", "lovgiv", "forskrift"]
                         },
                         {
@@ -915,8 +921,8 @@
                             "formatting_rule": "default",
                             "na": false,
                             "case": false,
-                            "wordlist_en": ["fishing", "fisher", "fish market", "shellfish", "marine resource", "marine harvest"],
-                            "wordlist_no": ["fiske", "skalldyr", "marine ressurs", "havbruk"]
+                            "wordlist_en": ["fishing", "fisher", "fish stock", "fish market", "shellfish", "marine resource", "marine harvest"],
+                            "wordlist_no": ["fiske", "torskebestand", "laksebestand", "makrellbestand", "skalldyr", "marine ressurs", "havbruk"]
                         },
                         {
                             "termlist_name": "termlist14_bd",
@@ -925,7 +931,7 @@
                             "case": false,
                             "_comment": "Some terms here are from a Norwegian perspective (Sami, Sapmi).",
                             "wordlist_en": ["traditional fishing","small-scale", "artisan", "subsistence", "indigenous", "sami", "sapmi"],
-                            "wordlist_no": ["tradisjonel", "småskala", "subsistens", "levebrød", "urfolk", "urbefolk", "samene"]
+                            "wordlist_no": ["tradisjonel", "småskala", "subsistens", "levebrød", "urfolk", "urbefolk", "samene", "sami", "sapmi"]
                         }
                     ]
                 }
@@ -1060,15 +1066,15 @@
                                 "herbivore management area","ecosystem approach",
                                 "protected area", "marine reserve","ocean reserve","marine park","marine sancturary",
                                 "nature reserve","conservation zone","particularly sensitive sea area",
-                                "biodivers", "biological diversity",
+                                "biodivers", "biological diversity", "marine resource", "ocean resource","fishing", "fish stock", "mineral resource", "minerals",
                                 "blue growth","blue econom"],
                             "wordlist_no": ["forvalt", "vernet", "miljøvern", "bevart", "bevaring", "fredet", "fredning", "gjenoppbygg", "restaurer", "bærekraft",
                                 "økosystembasert forvaltning", "økosystembasert styring", "forvaltningsplaner",
                                 "samfunnsforvalt", "bærekraftig forvalt", "berekraftig forvalt", "arealforvaltning",
                                 "integrert kystsone", "kystplanlegging", "kystsoneforvaltning",
-                                "marint vernområde","marine vernområde","marine verneområde","marine reservat",
+                                "marint vernområde","marine vernområde","marine verneområde","marine reservat", "mineraler",
                                 "naturreservat", "biotopvernområde", "nasjonalpark", "bevarte område",
-                                "biologisk diversit","biologisk mangfold",
+                                "biologisk diversit","biologisk mangfold", "marine ressurs", "fiske", 
                                 "blåvekst", "blå vekst", "blå økonomi"]
                         },
                         {
