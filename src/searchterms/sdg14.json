@@ -606,6 +606,7 @@
         },
         {
             "name": "7",
+            "_comment": "termlist14_7b is currently not used, as it seems to narrow the results too much. May need to be reevaluated. Currently - enough to mention marine resources and LDCs/SIDS",
             "phrases": [
                 {
                     "number": 1,
@@ -651,7 +652,7 @@
                                 "locally managed marine area",
                                 "protected area", "marine reserve", "ocean reserve", "nature reserve", "marine park", 
                                 "conservation zone", "particularly sensitive sea area",
-                                "regional fisheries management",
+                                "fisheries management",
                                 "port state measures agreement",
                                 "fish stocks agreement","Management of Straddling Fish Stocks","Management of Highly Migratory Fish Stocks",
                                 "code of conduct for responsible fisheries", "Nairobi convention"],
@@ -662,9 +663,9 @@
                                 "marint vernområde","marine vernområde","marine verneområde","marine reservat",
                                 "naturreservat", "biotopvernområde", "nasjonalpark", 
                                 "bevarte område", "bevaringsområde", "fredet område", "vernet område", "marine vernområde", "marine verneområde",
-                                "regionale fiskeriforvaltningsorganisasjon", "internasjonalt fiskerisamarbeid",
+                                "internasjonalt fiskerisamarbeid",
                                 "havnestatstiltak for å forebygge, forhindre og eliminere ulovlig, urapportert og uregulert fiske", 
-                                "forvaltning av grensestrekksbestand", "forvaltning av vandrende fiskebestander", 
+                                "forvaltning av grensestrekksbestand", "forvaltning av vandrende fiskebestand", 
                                 "Nairobi-konvensjonen",
                                 "fiskeriforvalt", "fiskeriplanlegg", "likevektsfangst"
                             ]
