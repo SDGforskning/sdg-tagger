@@ -80,8 +80,9 @@
                     "formatting_rule": "default",
                     "na": false,
                     "case": false,
+                    "_comment": "'forest' is changed for rain forest, boreal etc. to help avoid random forest, kelp forest",
                     "wordlist_en": ["terrestrial",
-                        "forest", "woodland", "taiga", "jungle", "mangrove", 
+                        "boreal forest", "ancient forest", "rainforest", "deciduous forest", "coniferous forest", "world's forests", "woodland", "taiga", "jungle", "mangrove", 
                         "peatland", "peat land", "swamp", "wetland", "marsh", "paludal",
                         "farmland", "agricultural land", "cropland", "pasture", "rangeland",
                         "shrub", "meadow", "bushland", "heath", "moorland",
@@ -92,7 +93,7 @@
                         "freshwater", "limnic", "inland fish",
                         "brook", "creek"],
                     "wordlist_no": ["terrestrisk", "landlevende", "villmarksområd",
-                        "skog", "jungel", "mangrove", 
+                        "boreal skog", "urskog", "regnskog", "barskog", "løvskog", "jungel", "mangrove", 
                         "torv", "torvmos", "torvmyr", "slåttemyr", "myrer", "myrar", "sumper", "sumpar", "våtmark", "våteng", "torvmark",
                         "dyrket mark", "dyrket jord", "dyrka jord", "dyrka mark", "landbruksmark", "utmark", "innmark", "beite", 
                         "kratt", "busker", "lynghei",
@@ -110,22 +111,6 @@
                     "wordlist_en": ["soil", "soils", "bog", "bogs", "mire", "mires", "fen", "fens", "bush", "bushes", "plains", "steppe",
                     "lake", "lakes", "pond", "ponds", "river", "rivers", "stream", "streams"],
                     "wordlist_no": ["jord", "åker", "myr", "sump", "eng", "enger", "busk", "elv", "elver", "bekk"]
-                }
-            ]
-        },
-        {
-            "name": "protect_conserve",
-            "_comment": "Used in 15.1 (also partially repeated, but not identical in 15.3 phrase 4 and 15.a)",
-            "logic_rule": "([protect_conserve1])",
-            "sentence_split": false,
-            "termlists": [
-                {
-                    "termlist_name": "protect_conserve1",
-                    "formatting_rule": "default",
-                    "na": false,
-                    "case": false,
-                    "wordlist_en": ["protect", "preserv", "conserv", "restor", "reforest", "re-forest", "sustainabl"],
-                    "wordlist_no": ["verne", "verna", "vern av", "miljøvern", "bevare", "bevaring", "frede", "freda", "fredning", "gjenoppbygg", "restaure", "skogplanting", "gjengro", "bærekraft", "berekraft"]
                 }
             ]
         },
@@ -157,7 +142,7 @@
             "name": "diversity_ecosystems",
             "_comment": "Used in 15.1, 15.9 and 15.a",
             "logic_rule": "([diversity_ecosystems1] & ([diversity_ecosystems2] | [termlistanimalsplants1] | [termlistanimalsplants2] | [termlist15_terr1] | [termlist15_terr2]))",
-            "sentence_split": false,
+            "sentence_split": true,
             "termlists": [
                 {
                     "termlist_name": "diversity_ecosystems1",
@@ -165,7 +150,7 @@
                     "na": false,
                     "case": false,
                     "_comment": "Used also in 15.1 phrase 4",
-                    "wordlist_en": ["diversit", "ecosystem", "community", "environment", "habitat"],
+                    "wordlist_en": ["diversit", "richness", "ecosystem", "community", "environment", "habitat"],
                     "wordlist_no": ["diversit", "mangfold", "mangfald", "økosystem", "samfunn", "miljø", "habitat"]
                 },
                 {
@@ -303,7 +288,7 @@
                 {
                     "number": 1,
                     "logic_rule": "(([termlist15_1a] | ([protect_conserve] & [termlist15_1c])) & not [terrestrial_double_NOT])",
-                    "sentence_split": false,
+                    "sentence_split": true,
                     "termlists": [
                         {
                             "termlist_name": "termlist15_1a",
@@ -316,6 +301,15 @@
                             "wordlist_no": ["vernområde","bevarte område", "bevaringsområde", "naturreservat","biotopvernområde","biosfæreområde","nasjonalpark",
                                 "landskapsvern","økosystemforvalt","økosystembasert forvalt",
                                 "vernet økosystem","fredningsområde","forvaltningsområde"]
+                        },
+                        {
+                            "termlist_name": "protect_conserve",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "_comment": "Used in multiple phrases in 15.1 (also partially repeated, but not identical in 15.3 phrase 4 and 15.a)",
+                            "wordlist_en": ["protect", "preserv", "conserv", "restor", "reforest", "re-forest", "sustainabl"],
+                            "wordlist_no": ["verne", "verna", "vern av", "miljøvern", "bevare", "bevaring", "frede", "freda", "fredning", "gjenoppbygg", "restaure", "skogplanting", "gjengro", "bærekraft", "berekraft"]
                         },
                         {
                             "termlist_name": "termlist15_1c",
@@ -332,6 +326,15 @@
                     "logic_rule": "(([protect_conserve] & ([termlist15_1e] | [termlist15_1etrunc])) & not [terrestrial_double_NOT])",
                     "sentence_split": true,
                     "termlists": [
+                        {
+                            "termlist_name": "protect_conserve",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "_comment": "Used in multiple phrases in 15.1 (also partially repeated, but not identical in 15.3 phrase 4 and 15.a)",
+                            "wordlist_en": ["protect", "preserv", "conserv", "restor", "reforest", "re-forest", "sustainabl"],
+                            "wordlist_no": ["verne", "verna", "vern av", "miljøvern", "bevare", "bevaring", "frede", "freda", "fredning", "gjenoppbygg", "restaure", "skogplanting", "gjengro", "bærekraft", "berekraft"]
+                        },
                         {
                             "termlist_name": "termlist15_1e",
                             "formatting_rule": "default",
@@ -358,6 +361,15 @@
                     "sentence_split": true,
                     "termlists": [
                         {
+                            "termlist_name": "protect_conserve",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "_comment": "Used in multiple phrases in 15.1 (also partially repeated, but not identical in 15.3 phrase 4 and 15.a)",
+                            "wordlist_en": ["protect", "preserv", "conserv", "restor", "reforest", "re-forest", "sustainabl"],
+                            "wordlist_no": ["verne", "verna", "vern av", "miljøvern", "bevare", "bevaring", "frede", "freda", "fredning", "gjenoppbygg", "restaure", "skogplanting", "gjengro", "bærekraft", "berekraft"]
+                        },
+                        {
                             "termlist_name": "termlist15_1g",
                             "formatting_rule": "default",
                             "na": false,
@@ -373,9 +385,18 @@
                 },
                 {
                     "number": 4,
-                    "logic_rule": "([protect_conserve] & [termlist15_1h] & [terr_terms])",
+                    "logic_rule": "(([protect_conserve] & [termlist15_1h] & [terr_terms]) & not [terrestrial_double_NOT])",
                     "sentence_split": true,
                     "termlists": [
+                        {
+                            "termlist_name": "protect_conserve",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "_comment": "Used in multiple phrases in 15.1 (also partially repeated, but not identical in 15.3 phrase 4 and 15.a)",
+                            "wordlist_en": ["protect", "preserv", "conserv", "restor", "reforest", "re-forest", "sustainabl"],
+                            "wordlist_no": ["verne", "verna", "vern av", "miljøvern", "bevare", "bevaring", "frede", "freda", "fredning", "gjenoppbygg", "restaure", "skogplanting", "gjengro", "bærekraft", "berekraft"]
+                        },
                         {
                             "termlist_name": "termlist15_1h",
                             "formatting_rule": "default",
@@ -389,7 +410,7 @@
                 },
                 {
                     "number": 5,
-                    "logic_rule": "([termlist15_1j] | ([termlist15_1k] & [termlist15_1l]) | (([termlist15_1k] & [termlist15_1n]) & ([termlist15_1o] | [terr_terms])) | (([termlist15_1k] & [termlist15_1n] & [termlist15_1o]) & not [terrestrial_double_NOT]))",
+                    "logic_rule": "([termlist15_1j] | ([termlist15_1k] & [termlist15_1l]) | ((([termlist15_1k] & [termlist15_1n]) & ([termlist15_1o] | [terr_terms])) & not [terrestrial_double_NOT]) | (([termlist15_1k] & [termlist15_1n] & [termlist15_1o]) & not [terrestrial_double_NOT]))",
                     "sentence_split": true,
                     "termlists": [
                         {
@@ -413,8 +434,8 @@
                             "formatting_rule": "default",
                             "na": false,
                             "case": false,
-                            "_comment": "NO: Fishing terms in Norwegian are limited to freshwater since there is so much marine research. Salmon and trout included as partially freshwater.",
-                            "wordlist_en": ["grazing", "forestry", "fishing", "fisher", "hunter", "hunting", "trapping"],
+                            "_comment": "Fishing terms are limited to freshwater. NO: Salmon and trout included as partially freshwater and important species there.",
+                            "wordlist_en": ["grazing", "forestry", "freshwater fish", "inland fish", "lake fish", "river fish", "hunter", "hunting", "trapping"],
                             "wordlist_no": ["beite", "skogbruk", "ferskvannsfisk", "innlandsfisk", "ferskvannskreps", "laks", "ørret", "auret", "jakt", "fangst"]
                         },
                         {
@@ -436,8 +457,8 @@
                             "na": false,
                             "case": false,
                             "wordlist_en": ["ecosystem service","natural resource","groundwater",
-                                "biodiversit","biological diversity",
-                                "fishing", "hunting", "trapping"],
+                                "biodiversit","biological diversity", "species richness",
+                                "freshwater fish", "inland fish", "lake fish", "river fish", "hunting", "trapping"],
                             "wordlist_no": ["økosystemtjenest", "ferskvann", "ferskvatn",
                                 "biologisk diversitet", "biologisk mangf", "biologiske mangf", "biomangf", "artsmangf",
                                 "ferskvannsfiske", "innlandsfiske", "laksefiske", "ørretfiske", "auretfiske", "jakt", "fangst"]
@@ -518,7 +539,7 @@
                         },
                         {
                             "termlist_name": "termlist15_2acaps",
-                            "formatting_rule": "default",
+                            "formatting_rule": "specific",
                             "na": false,
                             "case": true,
                             "wordlist_en": ["UNSPF", "GFG"],
@@ -573,7 +594,7 @@
                 },
                 {
                     "number": 2,
-                    "logic_rule": "([termlist15_2e] | [termlist15_2hcase] | (([termlist15_2f] | [termlist15_2ftrunc]) & ([termlist15_2g] | [termlist15_2gtrunc])))",
+                    "logic_rule": "([termlist15_2e] | [termlist15_2hcase] | ((([termlist15_2f] | [termlist15_2ftrunc]) & ([termlist15_2g] | [termlist15_2gtrunc])) & not [terrestrial_double_NOT]))",
                     "sentence_split": true,
                     "termlists": [
                         {
@@ -629,7 +650,7 @@
                 },
                 {
                     "number": 3,
-                    "logic_rule": "([termlist15_2i] | ([termlist15_2l] & [termlist15_2m]) | ([termlist15_2k] & ([termlist15_2j] & [termlist15_2jtrunc])))",
+                    "logic_rule": "([termlist15_2i] | ([termlist15_2l] & [termlist15_2m]) | (([termlist15_2k] & ([termlist15_2j] | [termlist15_2jtrunc])) & not [terrestrial_double_NOT]))",
                     "sentence_split": true,
                     "termlists": [
                         {
