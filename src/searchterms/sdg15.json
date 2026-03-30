@@ -23,7 +23,7 @@
                         "dryland", "dry land", "desert", 
                         "lowland",
                         "mountain", "highland", "alpine", "tundra", "upland",
-                        "freshwater", "limnic", "inland fish",
+                        "freshwater", "limnic", "inland fish", "river fish", "lake fish",
                         "brook", "creek"],
                     "wordlist_no": ["terrestrisk", "landlevende", "villmarksområd",
                         "skog", "jungel", "mangrove", 
@@ -90,7 +90,7 @@
                         "dryland", "dry land", "desert", 
                         "lowland",
                         "mountain", "highland", "alpine", "tundra", "upland",
-                        "freshwater", "limnic", "inland fish",
+                        "freshwater", "limnic", "inland fish", "river fish", "lake fish",
                         "brook", "creek"],
                     "wordlist_no": ["terrestrisk", "landlevende", "villmarksområd",
                         "boreal skog", "urskog", "regnskog", "barskog", "løvskog", "jungel", "mangrove", 
@@ -125,8 +125,8 @@
                     "formatting_rule": "default",
                     "na": false,
                     "case": false,
-                    "wordlist_en": ["species", "plant", "animal", "organism", "flora", "fauna", "wildlife", "insect", "amphibian", "reptil", "bird", "moss", "tree", "grass", "pollinat"],
-                    "wordlist_no": ["rovdyr", "pattedyr", "dyreart", "dyrart", "dyreliv", "insekt", "amfibi", "krypdyr", "fugl", "moser", "mosar", "trær", "pollinat", "polliner"]
+                    "wordlist_en": ["species", "plant", "animal", "organism", "flora", "fauna", "wildlife", "insect", "amphibian", "reptil", "bird", "moss", "liverwort", "hornwort", "lichen", "bryophyte", "tree", "grass", "pollinat"],
+                    "wordlist_no": ["rovdyr", "pattedyr", "dyreart", "dyrart", "dyreliv", "insekt", "amfibi", "krypdyr", "fugl", "moser", "mosar", "bryofytt", "trær", "pollinat", "polliner"]
                 },
                 {
                     "termlist_name": "termlistanimalsplants2",
@@ -166,8 +166,8 @@
                     "formatting_rule": "default",
                     "na": false,
                     "case": false,
-                    "wordlist_en": ["species", "plant", "animal", "organism", "flora", "fauna", "wildlife", "insect", "amphibian", "reptil", "bird", "moss", "tree", "grass", "pollinat"],
-                    "wordlist_no": ["rovdyr", "pattedyr", "dyreart", "dyrart", "dyreliv", "insekt", "amfibi", "krypdyr", "fugl", "moser", "mosar", "trær", "pollinat", "polliner"]
+                    "wordlist_en": ["species", "plant", "animal", "organism", "flora", "fauna", "wildlife", "insect", "amphibian", "reptil", "bird", "moss", "liverwort", "hornwort", "lichen", "bryophyte", "tree", "grass", "pollinat"],
+                    "wordlist_no": ["rovdyr", "pattedyr", "dyreart", "dyrart", "dyreliv", "insekt", "amfibi", "krypdyr", "fugl", "moser", "mosar", "bryofytt", "trær", "pollinat", "polliner"]
                 },
                 {
                     "termlist_name": "termlistanimalsplants2",
@@ -191,7 +191,7 @@
                         "dryland", "dry land", "desert", 
                         "lowland",
                         "mountain", "highland", "alpine", "tundra", "upland",
-                        "freshwater", "limnic", "inland fish",
+                        "freshwater", "limnic", "inland fish", "river fish", "lake fish",
                         "brook", "creek"],
                     "wordlist_no": ["terrestrisk", "landlevende", "villmarksområd",
                         "skog", "jungel", "mangrove", 
@@ -243,8 +243,8 @@
                     "formatting_rule": "default",
                     "na": false,
                     "case": false,
-                    "wordlist_en": ["species", "plant", "animal", "organism", "flora", "fauna", "wildlife", "insect", "amphibian", "reptile", "bird", "moss", "tree", "grass", "pollinat"],
-                    "wordlist_no": ["rovdyr", "pattedyr", "dyreart", "dyrart", "dyreliv", "insekt", "amfibi", "krypdyr", "fugl", "moser", "mosar", "trær", "pollinat", "polliner"]
+                    "wordlist_en": ["species", "plant", "animal", "organism", "flora", "fauna", "wildlife", "insect", "amphibian", "reptil", "bird", "moss", "liverwort", "hornwort", "lichen", "bryophyte", "tree", "grass", "pollinat"],
+                    "wordlist_no": ["rovdyr", "pattedyr", "dyreart", "dyrart", "dyreliv", "insekt", "amfibi", "krypdyr", "fugl", "moser", "mosar", "bryofytt", "trær", "pollinat", "polliner"]
                 },
                 {
                     "termlist_name": "termlistanimalsplants2",
