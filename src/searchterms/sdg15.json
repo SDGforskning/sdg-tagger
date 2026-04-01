@@ -134,7 +134,7 @@
                     "na": false,
                     "case": false,
                     "wordlist_en": [],
-                    "wordlist_no": ["art","arter","dyr"]
+                    "wordlist_no": ["art","arter","dyr", "vilt"]
                 }
             ]
         },
@@ -175,7 +175,7 @@
                     "na": false,
                     "case": false,
                     "wordlist_en": [],
-                    "wordlist_no": ["art","arter","dyr"]
+                    "wordlist_no": ["art","arter","dyr", "vilt"]
                 },
                 {
                     "termlist_name": "termlist15_terr1",
@@ -252,7 +252,7 @@
                     "na": false,
                     "case": false,
                     "wordlist_en": [],
-                    "wordlist_no": ["art","arter","dyr"]
+                    "wordlist_no": ["art","arter","dyr", "vilt"]
                 }
             ]
         },
@@ -268,7 +268,7 @@
                     "na": false,
                     "case": false,
                     "wordlist_en": ["Trade in Endangered Species of Wild F"],
-                    "wordlist_no": ["internasjonal handel med truede dyr", "handel med truede og sårbare arter", "handel med truede arter"]
+                    "wordlist_no": ["internasjonal handel med truede dyr", "handel med truede og sårbare arter", "handel med truede arter", "handel med truede dyreart"]
                 },
                 {
                     "termlist_name": "termlist15_7gcase",
@@ -921,7 +921,7 @@
                             "formatting_rule": "default",
                             "na": false,
                             "case": false,
-                            "wordlist_en": ["mountain", "alpine", "highland", "montane"],
+                            "wordlist_en": ["mountain", "alpine", "highland", "montane", "high elevation ecosystem", "high altitude ecosystem", "high-elevation ecosystem", "high-altitude ecosystem"],
                             "wordlist_no": ["fjell", "alpin", "vidde", "vidda"]
                         },
                         {
@@ -950,7 +950,7 @@
                             "na": false,
                             "case": false,
                             "wordlist_en": ["ecosystem", "habitat",
-                                "diversity", "key species","keystone species","foundation species","habitat forming species","habitat-forming species","key resource",
+                                "diversity", "richness", "key species","keystone species","foundation species","habitat forming species","habitat-forming species","key resource",
                                 "cover",
                                 "ecological", "environmental"],
                             "wordlist_no": ["økosystem", "miljø", "leveområd", 
@@ -1180,7 +1180,7 @@
                             "formatting_rule": "default",
                             "na": false,
                             "case": false,
-                            "wordlist_en": ["share", "sharing", "fairness", "equitab", "equal", "access", "right", "ownership", "appropriati", "biopira", "biocoloni", "using", "utiliz", "utilis", "use of"],
+                            "wordlist_en": ["share", "sharing", "fairness", "equitab", "equal", "access", "right", "ownership", "appropriati", "biopira", "biocoloni", "using", "utiliz", "utilis", "use of", "use and conservation of"],
                             "wordlist_no": ["deling", "tilgang", "rett", "rettferd", "eierskap", "eigarskap", "bruk av", "bruker", "utnytte"]
                         },
                         {
@@ -1328,9 +1328,19 @@
                 },
                 {
                     "number": 3,
-                    "logic_rule": "([CITES] & not [terrestrial_double_NOT])",
+                    "logic_rule": "(([CITES] | [termlist15_7g]) & not [terrestrial_double_NOT])",
                     "sentence_split": false,
-                    "termlists": []
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist15_7g",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "_comment": "Wildlife crime can be more than just poaching and illegal trade/possesion, but is often used to mean these, and so is included",
+                            "wordlist_en": ["wildlife crime"],
+                            "wordlist_no": ["faunakriminalitet", "florakriminalitet", "fuglekriminalitet"]
+                        }
+                    ]
                 }
             ]
         },
@@ -1377,7 +1387,7 @@
                             "formatting_rule": "default",
                             "na": false,
                             "case": false,
-                            "wordlist_en": ["invasive","alien","exotic","nonnative","non-native","nonindigenous","non-indigenous"],
+                            "wordlist_en": ["invasive","alien","exotic","nonnative","non-native","non native","nonindigenous","non-indigenous","non indigenous"],
                             "wordlist_no": ["fremmed"]
                         },
                         {
@@ -1407,15 +1417,15 @@
                 {
                     "number": 1,
                     "logic_rule": "([termlist15_9d] | [termlist15_9dcase] | ((([termlist15_9a] | [termlist15_9atrunc] | [diversity_ecosystems]) & ([termlist15_9e] & ([termlist15_9f] | [termlist15_9ftrunc]))) & not [terrestrial_double_NOT]))",
-                    "sentence_split": true,
+                    "sentence_split": false,
                     "termlists": [
                         {
                             "termlist_name": "termlist15_9d",
                             "formatting_rule": "default",
                             "na": false,
                             "case": false,
-                            "wordlist_en": ["national biodiversity strategy", "national biodiversity action plan"],
-                            "wordlist_no": []
+                            "wordlist_en": ["national biodiversity strateg", "national biodiversity action plan", "biodiversity policy and action plan"],
+                            "wordlist_no": ["handlingsplan for natur"]
                         },
                         {
                             "termlist_name": "termlist15_9dcase",
@@ -1458,9 +1468,9 @@
                             "formatting_rule": "default",
                             "na": false,
                             "case": false,
-                            "wordlist_en": ["target", "goal", "program", "strateg", "policy", "policies", "framework", "governance", 
+                            "wordlist_en": ["target", "goal", "program", "strateg", "policy", "policies", "framework", "governance", "governing", 
                                 "action plan", "development", "accounting", "report"],
-                            "wordlist_no": ["handlingsplan", "planlegg", "politikk", "retningslin", "rammeverk", "styring", "ledelse", "leiing", "forvaltning", 
+                            "wordlist_no": ["handlingsplan", "planlegg", "reguleringsplan", "politikk", "retningslin", "rammeverk", "styring", "ledelse", "leiing", "forvaltning", 
                                 "utvikling", "rapport"]
                         },
                         {
@@ -1468,7 +1478,7 @@
                             "formatting_rule": "specific_trunc",
                             "na": false,
                             "case": false,
-                            "wordlist_en": ["plan", "planning", "plans"],
+                            "wordlist_en": ["plan", "planning", "plans", "govern"],
                             "wordlist_no": ["mål"]
                         }
                     ]
@@ -1480,7 +1490,8 @@
             "phrases": [
                 {
                     "number": 1,
-                    "logic_rule": "(((([termlist15_aa] | (([termlist15_ab] | [termlist15_abtrunc]) & [termlist15_ac])) & ([termlist15_ad] | [diversity_ecosystems])) & ([termlist15_ag] | [termlist15_agcase])) & not [terrestrial_double_NOT])",
+                    "logic_rule": "((([termlist15_aa] | ([termlist15_ab] | [termlist15_abtrunc])) & ([termlist15_ad] | [diversity_ecosystems]) & ([termlist15_ag] | [termlist15_agcase])) & not [terrestrial_double_NOT])",
+                    "_comment": "Tested taking out termlist15_ac, currently not used: was previously (([termlist15_ab] | [termlist15_abtrunc]) & [termlist15_ac])",
                     "sentence_split": true,
                     "termlists": [
                         {
@@ -1623,10 +1634,10 @@
                             "wordlist_en": ["capacity",
                                 "cooperation","collaboration","support","international agreement",
                                 "polic", "empower", "investing", "investment",
-                                "knowledge transfer", "awareness", "knowledge", "information", "dissemination",
+                                "knowledge transfer", "awareness", "knowledge", "information", "dissemination", "outreach program",
                                 "educat", 
                                 "Landscapes for People, Food and Nature partnership",
-                                "anti-poach", "patrol", "detection"],
+                                "anti-poach", "report poach", "patrol", "detection"],
                             "wordlist_no": ["kapasitet", 
                                 "samarbeid", "nettverk", "støtte", "stønad",
                                 "politikk", "retningslin", "myndiggjør", "bistand", "ressurs",
@@ -1638,9 +1649,17 @@
                 },
                 {
                     "number": 2,
-                    "logic_rule": "((([CITES] | [poaching_endangered]) & ([termlist15_ce] | [termlist15_cg])) & not [terrestrial_double_NOT])",
+                    "logic_rule": "((([CITES] | [poaching_endangered] | [termlist15_ca]) & ([termlist15_ce] | [termlist15_cg])) & not [terrestrial_double_NOT])",
                     "sentence_split": true,
                     "termlists": [
+                        {
+                            "termlist_name": "termlist15_ca",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["poaching", "poacher"],
+                            "wordlist_no": ["kryskyt", "ulovlig jakt", "ulovlig fiske", "ulovlig skyt"]
+                        },
                         {
                             "termlist_name": "termlist15_ce",
                             "formatting_rule": "default",
@@ -1663,8 +1682,8 @@
                             "formatting_rule": "default",
                             "na": false,
                             "case": false,
-                            "wordlist_en": ["fishing", "fisher", "hunting", "hunter", "touris", "agroforest", "agricult", "income"],
-                            "wordlist_no": ["fiske", "jakt", "turism", "landbruk", "jordbruk", "inntekt"]
+                            "wordlist_en": ["fishing", "fisher", "hunting", "hunter", "touris", "agroforest", "agricult", "farmer", "farming", "income"],
+                            "wordlist_no": ["fiske", "jakt", "turism", "landbruk", "jordbruk", "bonde", "inntekt"]
                         }
                     ]
                 }
