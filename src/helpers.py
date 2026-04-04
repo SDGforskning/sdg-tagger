@@ -21,7 +21,7 @@ def get_sdg_phrases(sdg_number: int) -> tuple[list[dict], list[dict], dict]:
     file_path_absolute = os.path.join(
         os.path.dirname(__file__), 'searchterms/sdg{}.json'.format(str(sdg_number))
     )
-    with open(file_path_absolute, 'r') as file:
+    with open(file_path_absolute, 'r', encoding='utf-8') as file:
         data = json.load(file)
 
     targets = data['targets']
