@@ -75,6 +75,7 @@ def search_all_targets_in_goal(
     sdg_nr: int,
     input_text: str,
     countries: dict[str, bool],
+    target: str = '',
 ) -> dict[str, Any]:
     """Perform search on all targets in a goal for a given text
 
@@ -96,11 +97,19 @@ def search_all_targets_in_goal(
     pre_search_result = run_pre_searches(pre_searches, input_text)
     results['pre_search'] = pre_search_result
 
+    if target.strip():
+        for t in sdg_all_targets:
+            if t['name'] == target.strip():
+                targets_to_search = [t]
+    else:
+        targets_to_search = sdg_all_targets
+
     results['targets'] = run_all_targets_in_goal_search(
-        sdg_all_targets, input_text, countries, pre_search_result
+        targets_to_search, input_text, countries, pre_search_result
     )
 
-    results['mentions'] = run_goal_mentions_search(mentions_search, input_text)
+    if not target.strip():
+        results['mentions'] = run_goal_mentions_search(mentions_search, input_text)
 
     return results
 
@@ -145,3 +154,33 @@ def search_all_goals(
         results[str(sdg)] = sdg_result
 
     return results
+
+
+def search_target(
+    text: str, sdg_nr: int, target: str, countries_results: dict[str: bool] = False
+) -> dict[str, dict[str, Any]]:
+    """Search for all the goals in a text
+
+    Args:
+        text: the text to perform the search on
+        sdg_list: list of sdgs to search for, defaults to the const list of all SDGs
+        target:
+        countries_results: 
+
+    Returns:
+        the results for country search and the SDG search results
+    """
+    results: dict[str, Any] = {}
+
+    if not countries_results: 
+        countries = run_all_country_searches(text)
+    else: 
+        countries = countries_results
+    
+    results['countries'] = countries
+
+    sdg_result = search_all_targets_in_goal(sdg_nr, text, countries=countries, target=target)
+    results[str(sdg_nr)] = sdg_result
+
+    return results
+

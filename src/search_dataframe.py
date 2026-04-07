@@ -6,7 +6,7 @@ from typing import Any
 tqdm.pandas()
 
 from .consts import LIST_ALL_SDG_NR, COUNTRIES
-from .sdg_search import search_all_goals
+from .sdg_search import search_all_goals, search_target
 from .helpers import get_sdg_phrases
 
 
@@ -64,7 +64,7 @@ def _format_results(
     countries = [val for _, val in result['countries'].items()]
     sdgs = []
 
-    for sdg_nr in [sdg for sdg in sdg_list if int(sdg) in set(LIST_ALL_SDG_NR)]:
+    for sdg_nr in sdg_list:
         sdg_result = []
         sdg_termlist_results = result[str(sdg_nr)]
 
@@ -97,8 +97,24 @@ def _row_search(text: str, sdg_list: list[int]) -> pd.Series:
     Returns:
         The results of the SDG search as a Pandas series
     """
+    sdg_list = [sdg for sdg in sdg_list if int(sdg) in set(LIST_ALL_SDG_NR)]
     results_raw = search_all_goals(text, sdg_list)
     results_formatted = _format_results(results_raw, sdg_list)
+    return pd.Series(results_formatted)
+
+
+def _row_search_one_target(text: str, sdg_nr: int, target: str, countries: dict[str: bool] = False) -> pd.Series:
+    """Performs search for all sdgs for a given text and returns is as a pandas series (aka a row in a pandas dataframe)
+
+    Args:
+        text: the text to be labelled
+        sdg_list: A list of SDGs to do the search on
+
+    Returns:
+        The results of the SDG search as a Pandas series
+    """
+    results_raw = search_target(text, sdg_nr, target, countries)
+    results_formatted = _format_results(results_raw, [sdg_nr])
     return pd.Series(results_formatted)
 
 
@@ -125,6 +141,31 @@ def _get_formatted_column_names_export(sdg_list: list[int]) -> list[str]:
 
         if len(mentions) > 0:
             columns.append(f'tempsdg{nr_formatted}_mentions')
+
+    return columns
+
+
+def _get_formatted_column_names_one_target(sdg_nr: int, target_to_search: str) -> list[str]:
+    """Based on which presearches and country searches are implemented, get a list of column names to populate with the search results. 
+
+    Args:
+        sdg: the SDG to get formated column name for
+        target: the target to get formated column name for
+
+    Returns:
+        A list of column names based on the searches that exist in the json files.
+    """
+    columns = []
+    columns.extend([x['name'] for x in COUNTRIES])
+
+    pre_searches, sdg_all_targets, _ = get_sdg_phrases(sdg_nr)
+    columns.extend([x['name'] for x in pre_searches])
+    nr_formatted = f'{sdg_nr:02d}'
+
+    for target in sdg_all_targets:
+        if target['name'] == target_to_search:
+            target_formatted = _format_item(target['name'])
+            columns.append(f'tempsdg{nr_formatted}_{target_formatted}')
 
     return columns
 
@@ -159,6 +200,35 @@ def dataframe_search(
 
     df_results[columns] = df_results[text_column].progress_apply(
         lambda x: _row_search(x, sdg_list)
+    )
+
+    return df_results
+
+
+def dataframe_search_target(
+    df: pd.DataFrame, 
+    sdg_nr: int, 
+    target: str, 
+    text_column: str,
+    countries: dict[str:bool] = False
+):
+    """
+
+    Args:
+        df: 
+        sdg_nr: 
+        target: 
+        text_column: 
+
+    Returns:
+        a dataframe with the results of the sdg target search and the countries and pre-searches
+    """
+    df_results = df.copy()
+    columns = _get_formatted_column_names_one_target(sdg_nr, target)
+    df_results[text_column] = df_results[text_column].apply(_to_string_or_empty)
+    
+    df_results[columns] = df_results[text_column].progress_apply(
+        lambda x: _row_search_one_target(x, sdg_nr, target, countries)
     )
 
     return df_results
