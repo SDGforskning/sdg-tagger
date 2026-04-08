@@ -108,7 +108,9 @@ def _row_search_one_target(text: str, sdg_nr: int, target: str, countries: dict[
 
     Args:
         text: the text to be labelled
-        sdg_list: A list of SDGs to do the search on
+        sdg_nr: the SDG to do the search on
+        target: the target to search for
+        countries: Results of countries search. False by default (optional)
 
     Returns:
         The results of the SDG search as a Pandas series
@@ -170,7 +172,15 @@ def _get_formatted_column_names_one_target(sdg_nr: int, target_to_search: str) -
     return columns
 
 
-def _to_string_or_empty(value):
+def _to_string_or_empty(value) -> str:
+    """Checks whether a value is a string or nan, and converts it to a string. 
+
+    Args:
+        value: either a string or a nan value
+
+    Returns:
+        A string representation of the value. An empty string if the input was nan.
+    """
     if isinstance(value, str):
         return value
     elif pd.isna(value):
@@ -183,7 +193,7 @@ def dataframe_search(
     df: pd.DataFrame,
     sdg_list: list[int] = LIST_ALL_SDG_NR,
     text_column: str = 'result_title',
-):
+) -> pd.DataFrame:
     """Replicating the original script that took a dataframe with titles and performed searches for all sdgs for each row
 
     Args:
@@ -211,14 +221,14 @@ def dataframe_search_target(
     target: str, 
     text_column: str,
     countries: dict[str:bool] = False
-):
-    """
+) -> pd.DataFrame:
+    """Takes a dataframe and searches for a sdg target on a text column. Adds the result as a column and returns the dataframe. 
 
     Args:
-        df: 
-        sdg_nr: 
-        target: 
-        text_column: 
+        df: a dataframe containing texts to perform SDG search on
+        sdg_nr: the SDG to perform the search on
+        target: the target to search for
+        text_column: the name of the column in the df containing the text to tag. Default is 'result_title'
 
     Returns:
         a dataframe with the results of the sdg target search and the countries and pre-searches

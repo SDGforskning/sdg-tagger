@@ -84,7 +84,8 @@ def search_all_targets_in_goal(
     Args:
         sdg_nr: The number of sdg to perform a search for
         input_text: The text to perform the search on
-        countries: result of country searches (optional)
+        countries: result of country searches
+        target: the target to search for (optional)
 
     Returns:
         The results in boolean for each target of the sdg
@@ -164,8 +165,8 @@ def search_target(
     Args:
         text: the text to perform the search on
         sdg_list: list of sdgs to search for, defaults to the const list of all SDGs
-        target:
-        countries_results: 
+        target: the target to search for
+        countries_results: result from countries search if you want to avoid running it here. (optional) False by default.
 
     Returns:
         the results for country search and the SDG search results
