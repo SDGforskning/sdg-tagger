@@ -179,15 +179,15 @@
                                 "trichuris trichiura", "necator americanus", "ancylostoma duodenale", "snakebite envenoming", "taeniasis", "cysticercosis", "trachoma", "yaws",
                                 "trichuris", "necator", "ancylostoma"],
                             "wordlist_no": ["hepatitt", "ervervet immunsvikt syndrom-virus", "humant immunsviktvirus", "hindre aids",
-                                "tuberkulose", "kolera", "meningitt", "influensa", "røde hunder", "difteri", "japansk encefalitt", "meslinger", "kusma", "stivkrampe",
-                                "kikhoste", "gulfeber", "seksuelt overførbar", "syfilis", 
+                                "tuberkulose", "malaria", "kolera", "meningitt", "influensa", "fugleinfluensa", "h5n1", "røde hunder", "difteri", "japansk encefalitt", "meslinger", "kusma", "stivkrampe",
+                                "kikhoste", "polio", "gulfeber", "seksuelt overførbar", "syfilis", 
                                 "luftveisinfeksjon", 
-                                "koronavirus", 
-                                "krimfeber", "rift valley-feber", "zikavirus",
+                                "coronavirus", "koronavirus", "covid", 
+                                "krimfeber", "ebola", "pest", "rift valley-feber", "zikavirus",
                                 "amøbiasis", "kryptosporidiose", "giardiainfeksjon", "shigellose", "enterobakterieinfeksjon", "tyfoidfeber",         
-                                "neglisjert tropesykdom", "neglisjerte tropesjukdom", "neglisjert tropesjukdom", "negliserte tropesjukdom", "burulisår", "ekinokkokose", "trematodeinfeksjon",
+                                "neglisjert tropesykdom", "neglisjerte tropesjukdom", "neglisjert tropesjukdom", "negliserte tropesjukdom", "burulisår", "dengue", "ekinokkokose", "trematodeinfeksjon",
                                 "afrikansk trypanosomiasis", "lepra", "lymfatisk filariasis", "mykose", "kromomykose",
-                                "onkocerkose", "skabb", "helmintiasis", "jordoverført helminthiasis", "hakeorm", "rundorm", "guineaorm", 
+                                "onkocerkose", "rabies", "skabb", "helmintiasis", "jordoverført helminthiasis", "hakeorm", "rundorm", "guineaorm", 
                                 "taeniainfeksjon", "cysticerkose", "trakom", "frambøsi"]
                         },
                         {
@@ -253,14 +253,14 @@
                                 "trichuris trichiura", "necator americanus", "ancylostoma duodenale", "snakebite envenoming", "taeniasis", "cysticercosis", "trachoma", "yaws",
                                 "trichuris", "necator", "ancylostoma"],
                             "wordlist_no": ["hepatitt", "ervervet immunsvikt syndrom-virus", "humant immunsviktvirus", "hindre aids",
-                                "tuberkulose", "kolera", "meningitt", "influensa", "røde hunder", "difteri", "japansk encefalitt", "meslinger", "kusma", "stivkrampe",
-                                "kikhoste", "gulfeber", "seksuelt overførbar", "syfilis", 
+                                "tuberkulose", "malaria", "kolera", "meningitt", "influensa", "fugleinfluensa", "h5n1", "røde hunder", "difteri", "japansk encefalitt", "meslinger", "kusma", "stivkrampe",
+                                "kikhoste", "polio", "gulfeber", "seksuelt overførbar", "syfilis", 
                                 "luftveisinfeksjon", 
-                                "krimfeber", "rift valley-feber", "zikavirus",
+                                "ebola", "krimfeber", "rift valley-feber", "zikavirus",
                                 "amøbiasis", "kryptosporidiose", "giardiainfeksjon", "shigellose", "enterobakterieinfeksjon", "tyfoidfeber",         
-                                "neglisjert tropesykdom", "neglisjerte tropesjukdom", "neglisjert tropesjukdom", "negliserte tropesjukdom", "burulisår", "ekinokkokose", "trematodeinfeksjon",
+                                "neglisjert tropesykdom", "neglisjerte tropesjukdom", "neglisjert tropesjukdom", "negliserte tropesjukdom", "burulisår", "dengue", "ekinokkokose", "trematodeinfeksjon",
                                 "afrikansk trypanosomiasis", "lepra", "lymfatisk filariasis", "mykose", "kromomykose",
-                                "onkocerkose", "skabb", "helmintiasis", "jordoverført helminthiasis", "hakeorm", "rundorm", "guineaorm", 
+                                "onkocerkose", "rabies", "skabb", "helmintiasis", "jordoverført helminthiasis", "hakeorm", "rundorm", "guineaorm", 
                                 "taeniainfeksjon", "cysticerkose", "trakom", "frambøsi"]
                         },
                         {
@@ -280,8 +280,9 @@
                                 "spread", "transmission", "occurrence", "incidence", "prevalence", "risk", "rate",
                                 "medicine", "vaccin", "cure", "treatment", "drug", "intervention", "therap",
                                 "antimalaria", "antiviral", "antibioti", "antiparasitic", "antihelminthic"],
-                            "wordlist_no": ["utbrudd", "utbrot", "spredning", "spreiing", "smitte", "overføring", "forekomst", "førekomst", "hendelse", "hending", "utbredelse", "utbreiing", "risik",
-                                "medisin", "vaksin", "behandl", "legemiddel", "medikament", "intervensjon", "terap", "antihelminti"]
+                            "wordlist_no": ["epidemi", "pandemi", "utbrudd", "utbrot", "spredning", "spreiing", "smitte", "overføring", "forekomst", "førekomst", "hendelse", "hending", "utbredelse", "utbreiing", "risik",
+                                "medisin", "vaksin", "behandl", "legemiddel", "medikament", "intervensjon", "terap", 
+                                "antimalaria", "antiviral", "antibioti", "antiparasiti", "antihelminti"]
                         },
                         {
                             "termlist_name": "termlist3_3m",
@@ -315,7 +316,7 @@
                             "na": false,
                             "case": false,
                             "wordlist_en": ["epidemi", "pandemi", "outbreak"],
-                            "wordlist_no": ["utbrudd", "utbrot"]
+                            "wordlist_no": ["epidemi", "pandemi", "utbrudd", "utbrot"]
                         },
                         {
                             "termlist_name": "termlist3_3o",
@@ -328,7 +329,8 @@
                                 "antimalaria", "antiviral", "antibioti", "antiparasitic", "antihelminthic"],
                             "wordlist_no": ["utbrudd", "utbrot", 
                                 "spredning", "spreiing", "smitte", "overføring", "forekomst", "førekomst", "hendelse", "hending", "utbredelse", "utbreiing", "risik",
-                                "medisin", "vaksin", "behandl", "legemiddel", "medikament", "intervensjon", "terap", "antihelminti"]
+                                "medisin", "vaksin", "behandl", "legemiddel", "medikament", "intervensjon", "terap", 
+                                "antimalaria", "antiviral", "antibioti", "antiparasiti", "antihelminti"]
                         }
                     ]
                 }
@@ -373,7 +375,7 @@
                                 "hjertesykdom", "hjartesjukdom", "hjerteinfarkt", "hjarteinfarkt", "hjerteanfall", "hjarteanfall", "hjerteattakk", "hjarteattakk", "slag",
                                 "kronisk luftvei", "astma", "emfysem", "kronisk obstruktiv lungesykdom", "kronisk obstruktiv lungesjukdom", "kols", "kronisk bronkitt",
                                 "kreft", "sarkom", "karsinom", "blastom", "lymfom", "leukemi",
-                                "mesoteliom", "nyresykdom", "nyresjukdom", "demens"]
+                                "mesoteliom", "melanom", "alzheimer", "nyresykdom", "nyresjukdom", "demens"]
                         },
                         {
                             "termlist_name": "termlist3_4d",
@@ -389,7 +391,7 @@
                             "na": false,
                             "case": false,
                             "wordlist_en": ["lung"],
-                            "wordlist_no": ["pulmonar"]
+                            "wordlist_no": ["lung", "pulmonar"]
                         },
                         {
                             "termlist_name": "termlist3_4f",
@@ -428,7 +430,7 @@
                             "na": false,
                             "case": false,
                             "wordlist_en": ["mental health disorder", "mental illness", "suicid", "depression", "depressive disorder", "bipolar affective disorder", "schizophrenia", "psychosis", "psychoses"],
-                            "wordlist_no": ["psykisk lidelse", "psykisk liding", "psykisk syk", "psykisk sjuk", "selvmord", "sjølmord", "sjølvmord", "depresjon", "depressiv lid", "bipolar lid", "schizofreni", "psykose"]
+                            "wordlist_no": ["psykisk lidelse", "psykisk liding", "psykisk syk", "psykisk sjuk", "suicid", "selvmord", "sjølmord", "sjølvmord", "depresjon", "depressiv lid", "bipolar lid", "schizofreni", "psykose"]
                         },
                         {
                             "termlist_name": "termlist3_4i",
@@ -519,7 +521,7 @@
                             "na": false,
                             "case": false,
                             "wordlist_en": ["drug", "narcotic", "substance", "alcohol", "amphetamine", "metamphetamine", "MDMA", "ecstacy", "cocaine", "inhalant", "amyl nitrate", "marijuana", "cannabis", "opioid", "opiat", "heroin", "morphine", "phencyclidine", "LSD", "psilocybin", "dimethyltriptamin", "khat", "tobacco"],
-                            "wordlist_no": ["rusmid", "narkotik", "stoff", "alkohol", "amfetamin", "metamfetamin", "kokain", "inhalasjon", "inhalering", "amylnitrat",  "marihuana", "hasj", "morfin", "fensyklidin", "tobakk"]
+                            "wordlist_no": ["rusmid", "narkotik", "stoff", "alkohol", "amfetamin", "metamfetamin", "MDMA", "ecstacy", "kokain", "inhalasjon", "inhalering", "amylnitrat",  "marihuana", "cannabis", "hasj", "opioid", "opiat", "heroin", "morfin", "fensyklidin", "LSD", "psilocybin", "dimetyltryptamin", "khat", "tobakk"]
                         },
                         {
                             "termlist_name": "phrasedefault3_5c",
@@ -551,7 +553,7 @@
                             "na": false,
                             "case": false,
                             "wordlist_en": ["prevent", "combat", "tackl", "fight against", "reduc", "decrease", "minimi", "limit", "alleviat", "mitigat", "eradicat", "eliminat", "stop", "treat", "control"],
-                            "wordlist_no": ["hindr", "forebygg", "førebygg", "takl", "kjemp", "reduser", "reduksjon", "grens", "utrydd", "eliminer", "kontroll"]
+                            "wordlist_no": ["hindr", "forebygg", "førebygg", "takl", "kjemp", "reduser", "reduksjon", "grens", "utrydd", "eliminer", "stopp", "kontroll"]
                         },
                         {
                             "termlist_name": "phrasedefault3_5g",
