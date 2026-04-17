@@ -50,7 +50,7 @@
                         },
                         {
                             "termlist_name": "termlist4_1_1e",
-                            "formatting_rule": "specific_trunc",
+                            "formatting_rule": "no_left_trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": [],
@@ -69,7 +69,7 @@
                             "na": false,
                             "case": false,
                             "wordlist_en": ["dropout", "drop-out", "drop out", "dropping out", "early school-leaving"],
-                            "wordlist_no": ["droppe ut", "dropper ut", "frafall", "fråfall", "falle ut"]
+                            "wordlist_no": ["dropout", "drop-out", "drop out", "droppe ut", "dropper ut", "frafall", "fråfall", "falle ut"]
                         },
                         {
                             "termlist_name": "termlist4_1_2b",
@@ -101,7 +101,7 @@
                         },
                         {
                             "termlist_name": "termlist4_1_2e",
-                            "formatting_rule": "specific_trunc",
+                            "formatting_rule": "no_left_trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["quit"],
@@ -109,7 +109,7 @@
                         },
                         {
                             "termlist_name": "termlist4_1_2f",
-                            "formatting_rule": "specific_trunc",
+                            "formatting_rule": "no_left_trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": [],
@@ -148,13 +148,13 @@
                             "case": false,
                             "wordlist_en": ["enter"],
                             "_comment": "Turns off truncation to avoid 'STUDENTER (NO)'.",
-                            "wordlist_no": ["enter"]
+                            "wordlist_no": []
                         }
                     ]
                 },
                 {
                     "number": 4,
-                    "logic_rule": "((([termlist4_1_4a] & ([termlist4_1_4b] | [termlist4_1_4f])) | [termlist4_1_4c]) & ([termlist4_1_4d] | [termlist4_1_4f]) & [termlist4_1_4e])",
+                    "logic_rule": "(((([termlist4_1_4a] & ([termlist4_1_4b] | [termlist4_1_4f])) | [termlist4_1_4c]) & ([termlist4_1_4d] | [termlist4_1_4f])) & [termlist4_1_4e])",
                     "sentence_split": true,
                     "termlists": [
                         {
@@ -163,7 +163,7 @@
                             "na": false,
                             "case": false,
                             "wordlist_en": ["basic", "fundamental", "minim", "core", "elementary"],
-                            "wordlist_no": ["basis", "kjerne", "elementær", "grunnlegg"]
+                            "wordlist_no": ["basic", "fundamental", "minim", "basis", "kjerne", "elementær", "grunnlegg"]
                         },
                         {
                             "termlist_name": "termlist4_1_4b",
@@ -201,7 +201,7 @@
                         },
                         {
                             "termlist_name": "termlist4_1_4f",
-                            "formatting_rule": "specific_trunc",
+                            "formatting_rule": "no_left_trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["read"],
@@ -366,7 +366,7 @@
                             "na": false,
                             "case": false,
                             "wordlist_en": ["universit", "college"],
-                            "wordlist_no": ["høgskule", "høgskole", "høyskole"]
+                            "wordlist_no": ["høgskule", "høgskole", "høyskole", "universitet"]
                         },
                         {
                             "termlist_name": "termlist4_3_1e",
@@ -397,8 +397,8 @@
                             "formatting_rule": "default",
                             "na": false,
                             "case": false,
-                            "wordlist_en": ["open access", "åpen tilgang", "open tilgang", "equals", "accession", "library"],
-                            "wordlist_no": ["bibliotek", "hospital", "sykehus", "sjukehus"],
+                            "wordlist_en": ["open access", "equals", "accession", "library", "hospital"],
+                            "wordlist_no": ["bibliotek", "hospital", "sykehus", "sjukehus", "åpen tilgang", "open tilgang", "open access"],
                             "_comment": "Noisy phrases, removed with NOT."
                         }
                     ]
@@ -465,7 +465,7 @@
                 },
                 {
                     "number": 2,
-                    "logic_rule": "(([termlist4_4_2a] | [termlist4_4_2acaps]) & [termlist4_4_2b])",
+                    "logic_rule": "(([termlist4_4_2a] | [termlist4_4_2acaps]) & ([termlist4_4_2b] | [termlist4_4_2c]))",
                     "sentence_split": true,
                     "termlists": [
                         {
@@ -489,11 +489,18 @@
                             "formatting_rule": "default",
                             "na": false,
                             "case": false,
-                            "wordlist_en": ["skill", " abilit", "employability", "competenc", "litera", "continuing education", "lifelong learning", "life long learning", "adult learning", 
+                            "wordlist_en": ["skill", "employability", "competenc", "litera", "continuing education", "lifelong learning", "life long learning", "adult learning", 
                             "adult education", "training program", "vocational training", "new skills"],
                             "wordlist_no": ["ferdigh", "kompetanse", "evne", "dugleik", "dyktighe", "kyndig", "videreutdanning", "vidareutdanning", "livslang læring", 
-                            "voksenopplæring", "vaksenopplæring", "opplæringsprogram", "yrkesopplæring"],
-                            "_comment": "'ability' is used with a space before to avoid many works about 'disability' which are not to do with training/skills."
+                            "voksenopplæring", "vaksenopplæring", "opplæringsprogram", "yrkesopplæring"]
+                        },
+                        {
+                            "termlist_name": "termlist4_4_2c",
+                            "formatting_rule": "no_left_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["abilit"],
+                            "wordlist_no": []
                         }
                     ]
                 },
@@ -535,7 +542,7 @@
                             "wordlist_en": ["learn and adapt"],
                             "wordlist_no": []
                         },
-                        {
+                        {       
                             "termlist_name": "termlist4_4_3e",
                             "formatting_rule": "default",
                             "na": false,
@@ -597,7 +604,7 @@
                             "na": false,
                             "case": false,
                             "wordlist_en": ["team", "group"],
-                            "wordlist_no": ["gruppe"]
+                            "wordlist_no": ["gruppe", "team"]
                         },
                         {
                             "termlist_name": "termlist4_4_3m",
@@ -840,7 +847,7 @@
                             "na": false,
                             "case": false,
                             "wordlist_en": ["person", "people", "adult", "child", "student", "youth", "adolescent"],
-                            "wordlist_no": ["menneske", "vaksne", "voksne", "elev", "ung", "tenåring", "barn", "born"]
+                            "wordlist_no": ["menneske", "vaksne", "voksne", "elev", " student", "ung", "tenåring", "barn", "born"]
                         },
                         {
                             "termlist_name": "termlist4_5_3e",
@@ -953,7 +960,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist4_6_2",
-                            "formatting_rule": "specific_trunc",
+                            "formatting_rule": "no_left_trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["illiterate child", "illiterate people", "illiterate user", "analfabet", "analphabet", "innumeracy", "innumerate"],
@@ -1027,7 +1034,7 @@
                             "formatting_rule": "default",
                             "na": false,
                             "case": false,
-                            "wordlist_en": [],
+                            "wordlist_en": ["student"],
                             "wordlist_no": ["student", "elev"]
                         },
                         {
@@ -1039,7 +1046,7 @@
                             "human right", "gender equality", "peace", "non-violen", "cultural divers", "toleran"],
                             "wordlist_no": ["bærekraftig utvikling", "berekraftig utvikling", "berekraftig livsstil", "bærekraftig livsstil", 
                             "global borg", "globalt borg", "menneskerett", "likestilling", "ikkje-vald", "ikke-vold", "ikkevold", "ikkjevald", 
-                            "kulturelt mangfold", "kulturelt mangfald"]
+                            "kulturelt mangfold", "kulturelt mangfald", "toleran"]
                         },
                         {
                             "termlist_name": "termlist4_7_1f",
@@ -1069,7 +1076,7 @@
                         },
                         {
                             "termlist_name": "termlist4_7_1i",
-                            "formatting_rule": "specific_trunc",
+                            "formatting_rule": "no_left_trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": [],
@@ -1134,7 +1141,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist4_7_3a",
-                            "formatting_rule": "specific_trunc",
+                            "formatting_rule": "no_left_trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["culture", "cultural"],
@@ -1238,7 +1245,7 @@
                             "na": false,
                             "case": false,
                             "wordlist_en": ["student", "universit", "higher education", "teacher education"],
-                            "wordlist_no": ["høyere utdanning", "høgare utdanning", "lærerutdanning", "lærarutdanning"]
+                            "wordlist_no": ["høyere utdanning", "høgare utdanning", "lærerutdanning", "lærarutdanning", "student", "universitet"]
                         }
                     ]
                 },
@@ -1285,7 +1292,7 @@
             "phrases": [
                 {
                     "number": 1,
-                    "logic_rule": "(([termlist4_ba] | ([termlist4_bbuntrunc] | [termlist4_bc]) & [termlist4_bd]) & [LMIC])",
+                    "logic_rule": "(([termlist4_ba] | (([termlist4_bbuntrunc] | [termlist4_bc]) & [termlist4_bd])) & [LMIC])",
                     "sentence_split": true,
                     "termlists": [
                         {
