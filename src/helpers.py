@@ -85,15 +85,14 @@ def _are_terms_in_input_text(
     """
     termlist_results = {}
     for term_list in termlists:
-        if len(term_list['wordlist_en']) == 0:
-            termlist_results[term_list['termlist_name']] = False
-        else:
-            regex_term_list, formatted_text = prepare_regex_search_termlist(
-                term_list, input_text
-            )
+        regex_term_list, formatted_text = prepare_regex_search_termlist(
+            term_list, input_text
+        )
+        if regex_term_list:
             termlist_results[term_list['termlist_name']] = _pattern_search_boolean(
                 regex_term_list, formatted_text
             )
+        else: termlist_results[term_list['termlist_name']] = False
 
     return termlist_results
 
