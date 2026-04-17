@@ -39,7 +39,7 @@
                 },
                 {
                     "termlist_name": "termlist2_4a_nolefttrunc",
-                    "formatting_rule": "specific_trunc",
+                    "formatting_rule": "no_left_trunc",
                     "na": false,
                     "case": false,
                     "wordlist_en": ["crop", "crops"],
@@ -623,7 +623,7 @@
             "phrases": [
                 {
                     "number": 1,
-                    "logic_rule": "([LMIC] & ([termlist2_aa] | (([termlist2_ab] | [termlist2_ab_trunc]) & [termlist2_ac])))",
+                    "logic_rule": "([LMIC] & ([termlist2_aa] | (([termlist2_ab] | [termlist2_ab_trunc] | [termlist2_ab_norighttrunc]) & [termlist2_ac])))",
                     "sentence_split": false,
                     "termlists": [
                         {
@@ -640,7 +640,7 @@
                             "na": false,
                             "case": false,
                             "wordlist_en": ["government expenditure", "government spending", "public expenditure", "public spending",
-                                "investment", "investing", "invest ", "finance", "financing", "fund", "grant", "financial resource",
+                                "investment", "investing", "finance", "financing", "fund", "grant", "financial resource",
                                 "cooperation fund", "co-operation fund", "development spending", 
                                 "international cooperation", "international co-operation", "international collaboration", "international network", "international partnership", "international aid", "international assistance",
                                 "international development", "development cooperation", "development co-operation", "development collaboration", "development network", "development partnership", "development aid", "development assistance",
@@ -649,6 +649,14 @@
                                 "finansiel", "midlar", "økonomiske ressurs",
                                 "samarbeidsfond", "utviklingsstøtte", "utviklingsstønad", "bistand", "utviklingshjelp", "u-hjelp",
                                 "utviklingssamarbeid", "internasjonalt samarbeid", "internasjonale samarbeid"]
+                        },
+                        {
+                            "termlist_name": "termlist2_ab_norighttrunc",
+                            "formatting_rule": "specific",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["invest"],
+                            "wordlist_no": []
                         },
                         {
                             "termlist_name": "termlist2_ab_trunc",
@@ -716,7 +724,7 @@
                         },
                         {
                             "termlist_name": "termlist2_bc_nolefttrunc",
-                            "formatting_rule": "specific_trunc",
+                            "formatting_rule": "no_left_trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["crop", "crops"],
@@ -756,7 +764,7 @@
                         },
                         {
                             "termlist_name": "termlist2_ca_nolefttrunc",
-                            "formatting_rule": "specific_trunc",
+                            "formatting_rule": "no_left_trunc",
                             "na": false,
                             "case": false,
                             "_comment": "using 'svine'(NO) here, because we expect it to talk about svineprodukt",

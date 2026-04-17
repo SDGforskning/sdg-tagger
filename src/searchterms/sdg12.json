@@ -5,7 +5,7 @@
     "pre-search": [
         {
             "name": "scp",
-            "logic_rule": "([termlist12_scp1] | ([termlist12_scp2_trunc] & [termlist12_scp3]) | ([termlist12_scp4_trunc] & [termlist12_scp5]) | ([termlist12_scp6] & [termlist12_scp7]) | ([termlist12_scp8_trunc] & ([termlist12_scp11] | ([termlist12_scp9] & [termlist12_scp10]))))",
+            "logic_rule": "([termlist12_scp1] | ([termlist12_scp2_trunc] & [termlist12_scp3]) | ([termlist12_scp4_trunc] & [termlist12_scp5]) | ([termlist12_scp6] & ([termlist12_scp7] | [termlist12_scp7_nolefttrunc])) | ([termlist12_scp8_trunc] & (([termlist12_scp11] | [termlist12_scp11_nolefttrunc]) | (([termlist12_scp9] | [termlist12_scp9_nolefttrunc]) & [termlist12_scp10]))))",
             "sentence_split": false,
             "termlists": [
                 {
@@ -18,7 +18,7 @@
                                     "green building", "green housing", "green construct", "green design", "green technolog",
                                     "sustainable building", "sustainable housing", "sustainable construct", "sustainable design", "sustainable technolog",
                                     "Sustainable Building and Construction Initiative", "SCBI",
-                                    "sustainable lifestyle" , "sustainable life style" , "green lifestyle" , "eco-lifestyle" , "environmental lifestyle",
+                                    "sustainable lifestyle", "sustainable life style", "green lifestyle", "eco-lifestyle", "environmental lifestyle",
                                     "ecolabel", "eco-label", 
                                     "ecotourism", "eco-tourism",
                                     "responsible consump", "cleaner production",
@@ -102,7 +102,16 @@
                                     "innpakning", "emballasje", "emballering", 
                                     "sidestrøm", "biprodukt",
                                     "ressurs",
-                                    "avfall", "søppel", "kloakk", " slam"]
+                                    "avfall", "søppel", "kloakk"]
+                },
+                {
+                    "termlist_name": "termlist12_scp7_nolefttrunc",
+                    "formatting_rule": "no_left_trunc",
+                    "na": false,
+                    "case": false,
+                    "_comment": "Duplicated to separate pre-search.",
+                    "wordlist_en": [],
+                    "wordlist_no": ["slam"]
                 },
                 {
                     "termlist_name": "termlist12_scp8_trunc",
@@ -118,7 +127,15 @@
                     "na": false,
                     "case": false,
                     "wordlist_en": ["waste", "garbage", "trash", "rubbish", "litter", "sewage", "sludge"],
-                    "wordlist_no": ["avfall", "søppel", "kloakk", " slam"]
+                    "wordlist_no": ["avfall", "søppel", "kloakk"]
+                },
+                {
+                    "termlist_name": "termlist12_scp9_nolefttrunc",
+                    "formatting_rule": "no_left_trunc",
+                    "na": false,
+                    "case": false,
+                    "wordlist_en": [],
+                    "wordlist_no": ["slam"]
                 },
                 {
                     "termlist_name": "termlist12_scp10",
@@ -141,7 +158,7 @@
                     "wordlist_en": ["footprint",
                                     "produc", "consum",
                                     "retail", "trade", "market",
-                                    " handling", "storage", "transport", "distribution network", "packaging", "supply chain", "logistics",
+                                    "storage", "transport", "distribution network", "packaging", "supply chain", "logistics",
                                     "procurement", "aquisition", "purchas", "investment",
                                     "resource efficien", "resource-use efficien", "material efficicen", "material-use efficien",
                                     "food system", "food production", "food consumption", "food security",
@@ -149,11 +166,20 @@
                     "wordlist_no": ["forspor",
                                     "produksj", "forbruk",
                                     "marked", "detaljhandel", "faghandel", "dagligvare",
-                                    " handling", "håndter", "innsaml", "samling", "oppbevar", "lagring", "innpakning", "emballasje", "emballering", "forsyningskjede", "logistikk",
+                                    "håndter", "innsaml", "samling", "oppbevar", "lagring", "innpakning", "emballasje", "emballering", "forsyningskjede", "logistikk",
                                     "anskaffels", "anbud", "innkjøp", "investering",
                                     "ressurseffektiv", "materialeffektiv", "effektiv bruk av material", "effektiv bruk av ressurs", 
                                     "matsystem", "matproduksjon", "matforbruk", "matsikkerhet",
                                     "jordbruk", "landbruk", "havbruk", "fiskeoppdrett"]
+                },
+                {
+                    "termlist_name": "termlist12_scp11_nolefttrunc",
+                    "formatting_rule": "no_left_trunc",
+                    "na": false,
+                    "case": false,
+                    "_comment": "The space in front of 'handling' (EN/NO) is necessary to prevent 'behandling' in Norwegian. Not needed in other languages potentially.",
+                    "wordlist_en": ["handling"],
+                    "wordlist_no": ["handling"]
                 }
             ]
         },
@@ -168,8 +194,8 @@
                     "na": false,
                     "case": false,
                     "_comment": "truncated as 'eco' causes noise if not. 'Grønn' (NO) is truncated to avoid 'grønnsak'. Duplicated from scp pre-search",
-                    "wordlist_en": ["green", "eco", "eco-.*", "sustainab.*", "responsib.*", "environmental.*", "ecological.*"],
-                    "wordlist_no": ["grønne.*", "grønn", "øko", "bærekraft.*", "berekraft.*", "ansvarlig.*", "miljø.*"]
+                    "wordlist_en": ["green", "eco", "eco-.*", "sustainab.*", "responsib.*", "environmental.*", "ecological.*", "circular"],
+                    "wordlist_no": ["grønne.*", "grønn", "øko", "bærekraft.*", "berekraft.*", "ansvarlig.*", "miljø.*", "sirkulær"]
                 }
             ]
         },
@@ -226,6 +252,22 @@
             ]
         },
         {
+            "name": "termlist12_scp7_nolefttrunc",
+            "logic_rule": "([termlist12_scp7_nolefttrunc])",
+            "sentence_split": false,
+            "termlists": [
+                {
+                    "termlist_name": "termlist12_scp7_nolefttrunc",
+                    "formatting_rule": "no_left_trunc",
+                    "na": false,
+                    "case": false,
+                    "_comment": "Duplicated to separate pre-search.",
+                    "wordlist_en": [],
+                    "wordlist_no": ["slam"]
+                }
+            ]
+        },
+        {
             "name": "termlist12_scp7",
             "logic_rule": "([termlist12_scp7])",
             "sentence_split": false,
@@ -245,7 +287,7 @@
                                     "innpakning", "emballasje", "emballering", 
                                     "sidestrøm", "biprodukt",
                                     "ressurs",
-                                    "avfall", "søppel", "kloakk", " slam"]
+                                    "avfall", "søppel", "kloakk"]
                 }
             ]
         }
@@ -445,7 +487,7 @@
                 },
                 {
                     "number": 3,
-                    "logic_rule": "(([termlist12_2i] | ([termlist12_scp6] & [termlist12_scp7]) | (([termlist12_2d] | [termlist12_2e_trunc] | [termlist12_2e]) & [scp] | [termlist12_2j])))",
+                    "logic_rule": "([termlist12_2i] | ([termlist12_scp6] & ([termlist12_scp7] | [termlist12_scp7_nolefttrunc])) | (([termlist12_2d] | [termlist12_2e_trunc] | [termlist12_2e]) & ([scp] | [termlist12_2j])))",
                     "sentence_split": false,
                     "_comment": "Here we reuse the parts/all of the scp string, even though it is slightly wider than the original WoS combination string. In addition, there are two other new elements added:  'efficient use' (in WOS = ('saving' OR 'save$' OR 'conserv*' OR 'efficien*') NEAR/5 ('use' OR 'using' OR 'usage' OR 'utili*' OR 'consumption')). circular economy (stands alone without having to mention natural resources in WOS). And combine it with the natural resources strings in phrase 1",
                     "termlists": [
@@ -594,7 +636,7 @@
                 },
                 {
                     "number": 5,
-                    "logic_rule": "([termlist12_2n] | ([termlist12_2m] & [termlist12_2o]))",
+                    "logic_rule": "([termlist12_2n] | (([termlist12_2m] | [termlist12_2m_trunc] | [termlist12_2m_nolefttrunc] | [termlist12_2m_norighttrunc]) & [termlist12_2o]))",
                     "sentence_split": false,
                     "termlists": [
                         {
@@ -607,16 +649,43 @@
                                             "agricultur", "farm", "smallhold", "small-hold", "permacultur", "cropping", "orchard", "arable land",
                                             "pasture", "pastoral", "agroforest", "agro-forest", "silvopastur", "silvopastoral",
                                             "aquacultur", "maricultur", "fisher", "fish farm", "herding",
-                                            "crop", "grain", "vegetable", "fruit", "cereal", " rice", "wheat", "maize", "pulses", "legume",
+                                            "crop", "grain", "vegetable", "fruit", "cereal", "wheat", "maize", "pulses", "legume",
                                             "livestock", "fish", "salmon", "cattle", "sheep", "poultry", "pigs", "goats", "chicken", "buffalo", "ducks", "reindeer",
-                                            "fodder", "animal feed ", "fish feed "],
+                                            "fodder"],
                             "wordlist_no": ["matproduksjon", "matprodusent",
                                             "gård", "gard", "landbruk", "jordbruk", "gårdsbruk", "gardsbruk", "småbruk", "familiebruk", "dyrket mark", "dyrkamark",
                                             "dyrka mark", "kultivert mark",
                                             "beite", "dyreproduksjon", "meieri",
                                             "fiskeoppdrett", "lakseoppdrett", "havbruk",
-                                            "grønnsak", "grønsak", "belgfrukt", "frukt", "fiske", "laks", " sau ", "sauedrift", "sauehold", "storfe", " svin", "fjærkre", " rein",
-                                            "bærekraftig fôr", "berekraftig fôr", "dyrefôr", "dyrefor ", "fiskefôr", "fiskefor "]
+                                            "grønnsak", "grønsak", "belgfrukt", "frukt", "fiske", "laks", "sauedrift", "sauehold", "storfe", "fjærkre",
+                                            "bærekraftig fôr", "berekraftig fôr", "dyrefôr", "fiskefôr"]
+                        },
+                        {
+                            "termlist_name": "termlist12_2m_trunc",
+                            "formatting_rule": "specific",
+                            "na": false,
+                            "case": false,
+                            "_comment": "Space before ' rice' to avoid 'price', similarly 'sau/svin' (NO) and after 'xxxfor' (NO, to avoid 'forbund' etc.). Note that 'agricultur' will also cover e.g. 'ecoagriculture'",
+                            "wordlist_en": [],
+                            "wordlist_no": ["sau"]
+                        },
+                        {
+                            "termlist_name": "termlist12_2m_norighttrunc",
+                            "formatting_rule": "specific",
+                            "na": false,
+                            "case": false,
+                            "_comment": "Space before ' rice' to avoid 'price', similarly 'sau/svin' (NO) and after 'xxxfor' (NO, to avoid 'forbund' etc.). Note that 'agricultur' will also cover e.g. 'ecoagriculture'",
+                            "wordlist_en": ["animal feed", "fish feed"],
+                            "wordlist_no": ["dyrefor", "fiskefor"]
+                        },
+                        {
+                            "termlist_name": "termlist12_2m_nolefttrunc",
+                            "formatting_rule": "no_left_trunc",
+                            "na": false,
+                            "case": false,
+                            "_comment": "Space before ' rice' to avoid 'price', similarly 'sau/svin' (NO) and after 'xxxfor' (NO, to avoid 'forbund' etc.). Note that 'agricultur' will also cover e.g. 'ecoagriculture'",
+                            "wordlist_en": ["rice"],
+                            "wordlist_no": ["svin", "rein"]
                         },
                         {
                             "termlist_name": "termlist12_2n",
@@ -686,7 +755,7 @@
                 },
                 {
                     "number": 2,
-                    "logic_rule": "(([termlist12_3c] | [termlist12_3c_trunc]) & [termlist12_3d] & [termlist12_3b_trunc])",
+                    "logic_rule": "(([termlist12_3c] | [termlist12_3c_trunc]) & ([termlist12_3d] | [termlist12_3d_nolefttrunc]) & [termlist12_3b_trunc])",
                     "sentence_split": false,
                     "_comment": "Re-use the 'loss' terms from phrase 1 (phrasespecific12_3b)",
                     "termlists": [
@@ -717,7 +786,7 @@
                             "formatting_rule": "default",
                             "na": false,
                             "case": false,
-                            "wordlist_en": ["production", "processing", " handling", "storage", "transport", "distribution", "market", "packaging", "supply chain", "logistics",
+                            "wordlist_en": ["production", "processing", "storage", "transport", "distribution", "market", "packaging", "supply chain", "logistics",
                                             "retail", "food service", "food service", "restaurant", "household", "farm", 
                                             "consumer", "consumption", "consume", 
                                             "harvest", "slaughter"],
@@ -725,6 +794,14 @@
                                             "matindustri", "matvare", "dagligvare", "hushold", "gård",
                                             "forbruk",
                                             "innhøst", "høsting", "slakt"]
+                        },
+                        {
+                            "termlist_name": "termlist12_3d_nolefttrunc",
+                            "formatting_rule": "no_left_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["handling"],
+                            "wordlist_no": []
                         },
                         {
                             "termlist_name": "termlist12_3b_trunc",
@@ -829,7 +906,7 @@
                 },
                 {
                     "number": 2,
-                    "logic_rule": "(([termlist12_4f] & ([termlist12_4g] | ([termlist12_4a_trunc] & [termlist12_4e_trunc]))) | [termlist12_4h])",
+                    "logic_rule": "((([termlist12_4f] | [termlist12_4f_nolefttrunc] | [termlist12_4f_norighttrunc]) & ([termlist12_4g] | ([termlist12_4a_trunc] & [termlist12_4e_trunc]))) | [termlist12_4h])",
                     "sentence_split": false,
                     "_comment": "Reuse 4a from above (sustainable OR responsible etc.)",
                     "termlists": [
@@ -853,8 +930,26 @@
                             "na": false,
                             "case": false,
                             "_comment": "The space after 'litter ' is intentional to stop 'litteratur' (NO)",
-                            "wordlist_en": ["waste", "garbage", "trash", "litter ", "rubbish", "sewage", "sludge", "street sweepings", "construction debris", "demolition debris"],
-                            "wordlist_no": ["avfall", "søppel", "kloakk", " slam", "byggrester"]
+                            "wordlist_en": ["waste", "garbage", "trash", "rubbish", "sewage", "sludge", "street sweepings", "construction debris", "demolition debris"],
+                            "wordlist_no": ["avfall", "søppel", "kloakk", "byggrester"]
+                        },
+                        {
+                            "termlist_name": "termlist12_4f_nolefttrunc",
+                            "formatting_rule": "no_left_trunc",
+                            "na": false,
+                            "case": false,
+                            "_comment": "The space after 'litter ' is intentional to stop 'litteratur' (NO)",
+                            "wordlist_en": [],
+                            "wordlist_no": ["slam"]
+                        },
+                        {
+                            "termlist_name": "termlist12_4f_norighttrunc",
+                            "formatting_rule": "specific",
+                            "na": false,
+                            "case": false,
+                            "_comment": "The space after 'litter ' is intentional to stop 'litteratur' (NO)",
+                            "wordlist_en": ["litter"],
+                            "wordlist_no": []
                         },
                         {
                             "termlist_name": "termlist12_4g",
@@ -891,7 +986,7 @@
                 },
                 {
                     "number": 3,
-                    "logic_rule": "(([termlist12_4i] | [termlist12_4i_trunc]) & [termlist12_4j] & ([termlist12_4c] | [termlist12_4c_trunc] | [termlist12_4f]))",
+                    "logic_rule": "(([termlist12_4i] | [termlist12_4i_trunc]) & [termlist12_4j] & ([termlist12_4c] | [termlist12_4c_trunc] | ([termlist12_4f] | [termlist12_4f_nolefttrunc] | [termlist12_4f_norighttrunc])))",
                     "sentence_split": false,
                     "_comment": "Reuse phrasedefault12_4f, phrasedefault12_4c and phrasespecific12_4c from phrases 1 and 2 (wastes and chemicals)",
                     "termlists": [
@@ -924,8 +1019,27 @@
                             "formatting_rule": "default",
                             "na": false,
                             "case": false,
-                            "wordlist_en": ["waste", "garbage", "trash", "litter ", "rubbish", "sewage", "sludge", "street sweepings", "construction debris", "demolition debris"],
-                            "wordlist_no": ["avfall", "søppel", "kloakk", " slam", "byggrester"]
+                            "_comment": "The space after 'litter ' is intentional to stop 'litteratur' (NO)",
+                            "wordlist_en": ["waste", "garbage", "trash", "rubbish", "sewage", "sludge", "street sweepings", "construction debris", "demolition debris"],
+                            "wordlist_no": ["avfall", "søppel", "kloakk", "byggrester"]
+                        },
+                        {
+                            "termlist_name": "termlist12_4f_nolefttrunc",
+                            "formatting_rule": "no_left_trunc",
+                            "na": false,
+                            "case": false,
+                            "_comment": "The space after 'litter ' is intentional to stop 'litteratur' (NO)",
+                            "wordlist_en": [],
+                            "wordlist_no": ["slam"]
+                        },
+                        {
+                            "termlist_name": "termlist12_4f_norighttrunc",
+                            "formatting_rule": "specific",
+                            "na": false,
+                            "case": false,
+                            "_comment": "The space after 'litter ' is intentional to stop 'litteratur' (NO)",
+                            "wordlist_en": ["litter"],
+                            "wordlist_no": []
                         },
                         {
                             "termlist_name": "termlist12_4c",
@@ -961,7 +1075,7 @@
                 },
                 {
                     "number": 4,
-                    "logic_rule": "(([termlist12_4k] | [termlist12_4k_trunc]) & [termlist12_4l] & ([termlist12_4c] | [termlist12_4c_trunc] | [termlist12_4f]))",
+                    "logic_rule": "(([termlist12_4k] | [termlist12_4k_trunc]) & [termlist12_4l] & ([termlist12_4c] | [termlist12_4c_trunc] | ([termlist12_4f] | [termlist12_4f_nolefttrunc] | [termlist12_4f_norighttrunc])))",
                     "sentence_split": false,
                     "_comment": "Reuse phrasedefault12_4f, phrasedefault12_4c and phrasespecific12_4c from phrases 1 and 2 (wastes and chemicals)",
                     "termlists": [
@@ -995,8 +1109,27 @@
                             "formatting_rule": "default",
                             "na": false,
                             "case": false,
-                            "wordlist_en": ["waste", "garbage", "trash", "litter ", "rubbish", "sewage", "sludge", "street sweepings", "construction debris", "demolition debris"],
-                            "wordlist_no": ["avfall", "søppel", "kloakk", " slam", "byggrester"]
+                            "_comment": "The space after 'litter ' is intentional to stop 'litteratur' (NO)",
+                            "wordlist_en": ["waste", "garbage", "trash", "rubbish", "sewage", "sludge", "street sweepings", "construction debris", "demolition debris"],
+                            "wordlist_no": ["avfall", "søppel", "kloakk", "byggrester"]
+                        },
+                        {
+                            "termlist_name": "termlist12_4f_nolefttrunc",
+                            "formatting_rule": "no_left_trunc",
+                            "na": false,
+                            "case": false,
+                            "_comment": "The space after 'litter ' is intentional to stop 'litteratur' (NO)",
+                            "wordlist_en": [],
+                            "wordlist_no": ["slam"]
+                        },
+                        {
+                            "termlist_name": "termlist12_4f_norighttrunc",
+                            "formatting_rule": "specific",
+                            "na": false,
+                            "case": false,
+                            "_comment": "The space after 'litter ' is intentional to stop 'litteratur' (NO)",
+                            "wordlist_en": ["litter"],
+                            "wordlist_no": []
                         },
                         {
                             "termlist_name": "termlist12_4c",
@@ -1037,7 +1170,7 @@
             "phrases": [
                 {
                     "number": 1,
-                    "logic_rule": "((([termlist12_5a] | [termlist12_5b]) & [termlist12_5d]) | ([termlist12_5e_trunc] & ([termlist12_5b] | ([termlist12_5a] & [termlist12_5c]))))",
+                    "logic_rule": "((([termlist12_5a] | ([termlist12_5b] | [termlist12_5b_nolefttrunc])) & [termlist12_5d]) | ([termlist12_5e_trunc] & ([termlist12_5b] | ([termlist12_5a] & [termlist12_5c]))))",
                     "sentence_split": false,
                     "termlists": [
                         {
@@ -1058,7 +1191,16 @@
                             "wordlist_en": ["agrowaste", "solid waste", "bio-waste", "biowaste",
                                             "ewaste", "e-waste", "electronic waste",
                                             "rubbish", "sewage",  "street sweepings", "construction debris"],
-                            "wordlist_no": ["avfall", "søppel", "kloakk", " slam", "byggrester"]
+                            "wordlist_no": ["avfall", "søppel", "kloakk", "byggrester"]
+                        },
+                        {
+                            "termlist_name": "termlist12_5b_nolefttrunc",
+                            "formatting_rule": "no_left_trunc",
+                            "na": false,
+                            "case": false,
+                            "_comment": "Waste terms which are generally to do with physical/chemical waste. Most Norwegian terms are covered by 'avfall' (e.g. spesialavfall, landbruksavfall) and don't needs specifying.",
+                            "wordlist_en": [],
+                            "wordlist_no": ["slam"]
                         },
                         {
                             "termlist_name": "termlist12_5c",
@@ -1086,15 +1228,15 @@
                             "formatting_rule": "specific_trunc",
                             "na": false,
                             "case": false,
-                            "wordlist_en": ["reduc.*" , "minimi.*" , "decreas.*" , "stop" , "end" , "ends" , "ended" , "ending" , "eliminat.*",
-                                            "avoid.*" , "prevent.*" , "combat.*" , "tackl.*" , "halt.*" , "resist" , "resisting" , "lowering" , "lower" , "lowered"],
+                            "wordlist_en": ["reduc.*", "minimi.*", "decreas.*", "stop", "end", "ends", "ended", "ending", "eliminat.*",
+                                            "avoid.*", "prevent.*", "combat.*", "tackl.*", "halt.*", "resist", "resisting", "lowering", "lower", "lowered"],
                             "wordlist_no": []
                         }
                     ]
                 },
                 {
                     "number": 2,
-                    "logic_rule": "(([termlist12_5f] & [termlist12_5g]) | ([termlist12_5h] & [termlist12_5i]) | [termlist12_5j] | ([termlist12_scp4_trunc] & [termlist12_scp5]) | ([termlist12_scp2_trunc] & ([termlist12_5k] | [termlist12_5l])))",
+                    "logic_rule": "(([termlist12_5f] & ([termlist12_5g] | [termlist12_5g_nolefttrunc])) | ([termlist12_5h] & [termlist12_5i]) | [termlist12_5j] | ([termlist12_scp4_trunc] & [termlist12_scp5]) | ([termlist12_scp2_trunc] & ([termlist12_5k] | [termlist12_5l])))",
                     "sentence_split": false,
                     "termlists": [
                         {
@@ -1121,7 +1263,15 @@
                             "wordlist_en": ["sidestream", "side-stream", "byproduct", "by-product",
                                             "waste", "garbage", "trash", "litter", "rubbish", "sewage", "sludge", "street sweepings", "construction debris"],
                             "wordlist_no": ["sidestrøm", "biprodukt",
-                                            "avfall", "søppel", "kloakk", " slam", "byggrester"]
+                                            "avfall", "søppel", "kloakk", "byggrester"]
+                        },
+                        {
+                            "termlist_name": "termlist12_5g_nolefttrunc",
+                            "formatting_rule": "no_left_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": [],
+                            "wordlist_no": ["slam"]
                         },
                         {
                             "termlist_name": "termlist12_5h",
@@ -1181,7 +1331,7 @@
             "phrases": [
                 {
                     "number": 1,
-                    "logic_rule": "((([scp]) | ([termlist12_scp2_trunc] & [termlist12_6a])) & ([termlist12_6c] | [termlist12_6c_trunc]))",
+                    "logic_rule": "((([scp]) | ([termlist12_scp2_trunc] & [termlist12_6a])) & ([termlist12_6c] | [termlist12_6c_trunc] | [termlist12_6c_norighttrunc]))",
                     "sentence_split": false,
                     "_comment": "Here we use the whole scp phrase, and supplement with 6a + scp2",
                     "termlists": [
@@ -1204,8 +1354,17 @@
                                             "producer", "industry", "industries", "industrial sector", "manufacturer", "manufacturing sector", "commercial sector",
                                             "institution"],
                             "wordlist_no": ["bedrift", "kontor", "organisasjon", "selskap", "konglomerat",
-                                            "industrier", "industrien", "industri ", "industrisektor", "produsent", "produksjonssektor", "kommersiell sektor", "kommersielle sektor", 
+                                            "industrier", "industrien", "industrisektor", "produsent", "produksjonssektor", "kommersiell sektor", "kommersielle sektor", 
                                             "institusjon"]
+                        },
+                        {
+                            "termlist_name": "termlist12_6c_norighttrunc",
+                            "formatting_rule": "specific",
+                            "na": false,
+                            "case": false,
+                            "_comment": "'Industri' (NO) has a space after to prevent 'industriasliert' but allow e.g. 'kjemikalieindustri'. Duplicated to 12.6 phrase 2",
+                            "wordlist_en": [],
+                            "wordlist_no": ["industri"]
                         },
                         {
                             "termlist_name": "termlist12_6c_trunc",
@@ -1220,7 +1379,7 @@
                 },
                 {
                     "number": 2,
-                    "logic_rule": "(([termlist12_6d] & ([termlist12_6e] | [termlist12_6f])) & ([termlist12_6c] | [termlist12_6c_trunc]))",
+                    "logic_rule": "((([termlist12_6d] & [termlist12_6e]) | [termlist12_6f]) & ([termlist12_6c] | [termlist12_6c_trunc] | [termlist12_6c_norighttrunc]))",
                     "sentence_split": false,
                     "_comment": "Reuse lists phrasespecific12_6c and phrasedefault12_6c from phrase 1 for companies terms",
                     "termlists": [
@@ -1263,13 +1422,22 @@
                             "formatting_rule": "default",
                             "na": false,
                             "case": false,
-                            "_comment": "'Industri' (NO) has a space after to prevent 'industriasliert' but allow e.g. 'kjemikalieindustri'",
+                            "_comment": "'Industri' (NO) has a space after to prevent 'industriasliert' but allow e.g. 'kjemikalieindustri'. Duplicated to 12.6 phrase 2",
                             "wordlist_en": ["company", "companies", "organisation", "organization", "corporation", "conglomerate", "business", "corporate",
                                             "producer", "industry", "industries", "industrial sector", "manufacturer", "manufacturing sector", "commercial sector",
                                             "institution"],
                             "wordlist_no": ["bedrift", "kontor", "organisasjon", "selskap", "konglomerat",
-                                            "industrier", "industrien", "industri ", "industrisektor", "produsent", "produksjonssektor", "kommersiell sektor", "kommersielle sektor", 
+                                            "industrier", "industrien", "industrisektor", "produsent", "produksjonssektor", "kommersiell sektor", "kommersielle sektor", 
                                             "institusjon"]
+                        },
+                        {
+                            "termlist_name": "termlist12_6c_norighttrunc",
+                            "formatting_rule": "specific",
+                            "na": false,
+                            "case": false,
+                            "_comment": "'Industri' (NO) has a space after to prevent 'industriasliert' but allow e.g. 'kjemikalieindustri'. Duplicated to 12.6 phrase 2",
+                            "wordlist_en": [],
+                            "wordlist_no": ["industri"]
                         },
                         {
                             "termlist_name": "termlist12_6c_trunc",
@@ -1391,7 +1559,7 @@
                             "case": false,
                             "wordlist_en": ["green", "eco", "eco-.*", "sustainab.*", "environmental.*", "ecological.*", "social responsib", "socially responsib", "circular",
                                             "cleaner production",
-                                            "resource efficien.*", "resource use efficiency" , "material efficiency" , "material use efficiency" , "energy efficiency",
+                                            "resource efficien.*", "resource use efficiency", "material efficiency", "material use efficiency", "energy efficiency",
                                             "eco-label.*", "ecolabel.*", "environmental label.*",
                                             "ecotouris.*", "eco-touris.*",
                                             "ecobuilding.*", "eco-building.*", "eco-housing", "eco-construct.*", "eco-design", "eco-technolog.*",
@@ -1569,7 +1737,7 @@
             "phrases": [
                 {
                     "number": 1,
-                    "logic_rule": "([termlist12_b1] & ([termlist12_b3] | ([termlist12_b2] | [termlist12_scp2_trunc])))",
+                    "logic_rule": "([termlist12_b1] & ([termlist12_b3] | ([termlist12_scp2_trunc] & ([termlist12_b2] | [termlist12_b2_nolefttrunc]))))",
                     "sentence_split": false,
                     "_comment": "Simplified to remove the 'effect' terms - not really needed",
                     "termlists": [
@@ -1587,7 +1755,15 @@
                             "na": false,
                             "case": false,
                             "wordlist_en": ["tourism", "tourist", "hospitality", "leisure", "air travel", "hotel"],
-                            "wordlist_no": ["turism", "turist", " reise", "fritid", "flyreise", "syden"]
+                            "wordlist_no": ["turism", "turist", "fritid", "flyreise", "syden"]
+                        },
+                        {
+                            "termlist_name": "termlist12_b2_nolefttrunc",
+                            "formatting_rule": "no_left_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": [],
+                            "wordlist_no": ["reise"]
                         },
                         {
                             "termlist_name": "termlist12_b3",
@@ -1606,7 +1782,7 @@
             "phrases": [
                 {
                     "number": 1,
-                    "logic_rule": "([termlist12_c2] & ([termlist12_c3] | [termlist12_c3_trunc]))",
+                    "logic_rule": "(([termlist12_c2] | [termlist12_c2_nolefttrunc]) & ([termlist12_c3] | [termlist12_c3_trunc]))",
                     "sentence_split": false,
                     "termlists": [
                         {
@@ -1622,9 +1798,17 @@
                                             "market distor", "price distortion",
                                             "government spending", "government funding", "government ownership", "government payment"],
                             "wordlist_no": ["næringsstøtte", "insentiv", "prisstøtte", "prisstønad", "økonomisk støtte", "økonomisk stønad", "tilskudd", "tilskot", "prissetting",
-                                            "kreditt", " lån", "gjeld",
+                                            "kreditt", "gjeld",
                                             "vridning",
                                             "offentlige utgifter", "statlig eier", "offentlig forvalt", "statlig forvalt", "finansiell støtte", "finansiell stønad", "finansielle ressurs"]
+                        },
+                        {
+                            "termlist_name": "termlist12_c2_nolefttrunc",
+                            "formatting_rule": "no_left_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": [],
+                            "wordlist_no": ["lån"]
                         },
                         {
                             "termlist_name": "termlist12_c3",
