@@ -15,7 +15,7 @@ def _read_file(file_path: str) -> dict:
 COUNTRIES = _read_file(COUNTRIES_FILE_PATH)['phrases']
 REGEX_PATTERNS = _read_file(FORMATS_FILE_PATH)
 
-LIST_ALL_SDG_NR = [1, 2]
+LIST_ALL_SDG_NR = [1, 2, 3, 4, 7, 11, 12, 13, 14, 15]
 ADDITIONAL_LANGUAGES = {
     'no':True
 }
