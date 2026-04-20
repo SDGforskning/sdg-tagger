@@ -225,7 +225,7 @@
                 {
                     "number": 2,
                     "logic_rule": "([termlist13_2j] & [termlist13_2k] & [termlist13_2l] & [termlist13_2m])",
-                    "sentence_split": false,
+                    "sentence_split": true,
                     "termlists": [
                         {
                             "termlist_name": "termlist13_2j",
@@ -266,7 +266,7 @@
                 {
                     "number": 3,
                     "logic_rule": "(([termlist13_2n] | [termlist13_2o]) & ([termlist13_2p] & [termlist13_2q]))",
-                    "sentence_split": false,
+                    "sentence_split": true,
                     "termlists": [
                         {
                             "termlist_name": "termlist13_2n",
@@ -315,7 +315,7 @@
                 {
                     "number": 1,
                     "logic_rule": "((([termlist13_3a] & ([termlist13_3b] | ([termlist13_3c] & [termlist13_3d]))) | ([termlist13_3a] & [termlist13_3e]) | ([termlist13_3f] & [termlist13_3g]) | ([termlist13_3a] & [termlist13_3f] & [termlist13_3h])) & not [termlist13_3i])",
-                    "sentence_split": false,
+                    "sentence_split": true,
                     "termlists": [
                         {
                             "termlist_name": "termlist13_3a",

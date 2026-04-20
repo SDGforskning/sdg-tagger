@@ -9,8 +9,8 @@
             "phrases": [
                 {
                     "number": 1,
-                    "logic_rule": "((([termlist7_1a] & [termlist7_1b]) | [termlist7_1c]) & [termlist7_1d])",
-                    "sentence_split": false,
+                    "logic_rule": "((([termlist7_1a] & [termlist7_1b]) | ([termlist7_1c] & [termlist7_1c2])) & [termlist7_1d])",
+                    "sentence_split": true,
                     "termlists": [
                         {
                             "termlist_name": "termlist7_1a",
@@ -30,12 +30,19 @@
                         },
                         {
                             "termlist_name": "termlist7_1c",
+                            "formatting_rule": "specific_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["clean", "cleaner", "modern"],
+                            "wordlist_no": ["ren", "rein", "rent", "renere", "reint", "reinere", "reinare", "rentbrennende", "reintbrennende", "reintbrennande"]
+                        },
+                        {
+                            "termlist_name": "termlist7_1c2",
                             "formatting_rule": "default",
                             "na": false,
                             "case": false,
-                            "wordlist_en": ["clean fuel", "clean energy", "clean electricity", "clean cooking", "clean stove", "clean lighting", "clean lamp", "clean heating",
-                                            "modern fuel", "modern stove", "modern lighting", "modern lamps", "modern heating"],
-                            "wordlist_no": [ "rent brennstoff", "reint brennstoff", "rentbrennende", "reintbrennande", "ren energi", "rein energi", "ren strøm", "rein straum", "ren elektrisitet", "rein elektrisitet"]
+                            "wordlist_en": ["fuel", "energy", "electricity", "cooking", "stove", "lighting", "lamp", "heating"],
+                            "wordlist_no": ["brennstoff", "energi", "energi", "strøm", "straum", "elektrisitet"]
                         },
                         {
                             "termlist_name": "termlist7_1d",
@@ -58,7 +65,7 @@
                             "formatting_rule": "default",
                             "na": false,
                             "case": false,
-                            "wordlist_en": ["solar cook", "solar box cook", "improved cookstove", "improved stove", "modern cookstove", "modern stove"],
+                            "wordlist_en": ["solar cook", "solar box cook", "improved cookstove", "improved stove", "modern cookstove", "modern stove", "stove exchange"],
                             "wordlist_no": ["solkok", "solovn", "solcelleovn", "solfyr", "solgrill"]
                         }
                     ]
@@ -66,7 +73,7 @@
                 {
                     "number": 3,
                     "logic_rule": "(([termlist7_1f] & [termlist7_1g]) | ([termlist7_1f2] & [termlist7_1g2]))",
-                    "sentence_split": false,
+                    "sentence_split": true,
                     "termlists": [
                         {
                             "termlist_name": "termlist7_1f",
@@ -123,7 +130,7 @@
                 {
                     "number": 5,
                     "logic_rule": "(([termlist7_1i2] | ([termlist7_1x] & ([termlist7_1xt] | ([termlist7_1xtr] & [termlist7_1j]))) | (([termlist7_1xtra] | ([termlist7_1x] & [termlist7_1xtras])) & ([LMIC] | [termlist7_1k]))))",
-                    "sentence_split": false,
+                    "sentence_split": true,
                     "termlists": [
                         {
                             "termlist_name": "termlist7_1i",
@@ -204,7 +211,7 @@
                 {
                     "number": 6,
                     "logic_rule": "([termlist7_1l] & ([termlist7_1m] | ([termlist7_1n] & [termlist7_1o]) | [termlist7_1p] | ([termlist7_1q] & [termlist7_1r]) | [termlist7_1s]))",
-                    "sentence_split": false,
+                    "sentence_split": true,
                     "termlists": [
                         {
                             "termlist_name": "termlist7_1l",
@@ -507,7 +514,7 @@
                 {
                     "number": 3,
                     "logic_rule": "(((([termlist7_2y] | [termlist7_2z]) & (([termlist7_2z1] & [termlist7_2z3]) | [termlist7_2z2])) | (([termlist7_2z5] | [termlist7_2z]) & [termlist7_2z4])) & not [termlist7_2z6])",
-                    "sentence_split": false,
+                    "sentence_split": true,
                     "termlists": [
                         {
                             "termlist_name": "termlist7_2y",
@@ -587,8 +594,8 @@
             "phrases": [
                 {
                     "number": 1,
-                    "logic_rule": "([termlist7_3a])",
-                    "sentence_split": false,
+                    "logic_rule": "([termlist7_3a] & [termlist7_3b])",
+                    "sentence_split": true,
                     "termlists": [
                         {
                             "termlist_name": "termlist7_3a",
@@ -597,17 +604,25 @@
                             "case": false,
                             "wordlist_en": ["energy intensity"],
                             "wordlist_no": ["energiintensitet"],
-                            "_comment": "As energy intensity is such a specialized term, we found it sufficient to search for it alone in the title search."                            
+                            "_comment": "As energy intensity is such a specialized term, we found it sufficient to search for it alone in the title search. CHANGED as we now search abstracts too"                             
+                        },
+                        {
+                            "termlist_name": "termlist7_3b",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["energy consum", "energy-saving", "sustainab", "energy efficien", "GDP", "econom", "industrial", "industry", "manufactur", "carbon emission", "co2 emission", "footprint"],
+                            "wordlist_no": ["energiforbruk", "energispar", "bærekraft", "berekraft", "energieffektiv", "BNP", "økonomi", "industri", "produksjon", "karbonutslipp", "co2-utslipp", "karbonutslepp", "co2-utslepp", "avtrykk"]                         
                         }
                     ]
                 },
                 {
                     "number": 2,
-                    "logic_rule": "([termlist7_3b] & [termlist7_3d])",
-                    "sentence_split": false,
+                    "logic_rule": "([termlist7_3c] & [termlist7_3d] & [termlist7_3e])",
+                    "sentence_split": true,
                     "termlists": [
                         {
-                            "termlist_name": "termlist7_3b",
+                            "termlist_name": "termlist7_3c",
                             "formatting_rule": "default",
                             "na": false,
                             "case": false,
@@ -615,16 +630,16 @@
                             "wordlist_no": ["energiforbruk"]
                         },
                         {
-                            "termlist_name": "termlist7_3c",
+                            "termlist_name": "termlist7_3d",
                             "formatting_rule": "default",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["decoupl", "de coupl"],
                             "wordlist_no": ["kobl", "kopl"],
-                            "_comment": "In this phrase, searching with the same phrases and limitations as in Web of Science was quite restrictive. We therefore chose to simplify the search and accept a combination of energy consum and econom or GDP in the title as sufficient to be included(without decoupling)"
+                            "_comment": "Original comment: In this phrase, searching with the same phrases and limitations as in Web of Science was quite restrictive. We therefore chose to simplify the search and accept a combination of energy consum and econom or GDP in the title as sufficient to be included(without decoupling). CHANGED now that we also search abstracts."
                         },
                         {
-                            "termlist_name": "termlist7_3d",
+                            "termlist_name": "termlist7_3e",
                             "formatting_rule": "default",
                             "na": false,
                             "case": false,
@@ -635,13 +650,13 @@
                 },
                 {
                     "number": 3,
-                    "logic_rule": "(([termlist7_3e] & [termlist7_3f]) | ([termlist7_3g] & [termlist7_3h]) | ([termlist7_3i] & [termlist7_3j]))",
-                    "_comment": "We have two searches in the original file. logic_rule is for title and abstract search, this is for title search only: ([termlist7_3standalone] | ([termlist7_3e] & [termlist7_3f]) | ([termlist7_3g] & [termlist7_3h]))",
-                    "sentence_split": false,
+                    "logic_rule": "(([termlist7_3f] & [termlist7_3g]) | ([termlist7_3h] & [termlist7_3i]) | ([termlist7_3j] & [termlist7_3k]))",
+                    "_comment": "We have two searches in the original file. logic_rule is for title and abstract search, this is for title search only: ([termlist7_3standalone] | ([termlist7_3f] & [termlist7_3g]) | ([termlist7_3h] & [termlist7_3i]))",
+                    "sentence_split": true,
                     "termlists": [
                         {
                             "_comment": "A direct translation of the Web of Science search into Norwegian language gave barely any results. We therefore allowed a few terms for energy efficiency and energy saving in Norwegian to stand alone in order to capture some more relevant titles. This was not done in english because it is poor precision.",
-                            "termlist_name": "termlist7_3e",
+                            "termlist_name": "termlist7_3f",
                             "formatting_rule": "default",
                             "na": false,
                             "case": false,
@@ -649,7 +664,7 @@
                             "wordlist_no": ["energieffektiv", "effektiv energibruk", "energisparing", "energiøkonomisering", "energitap", "energirasjonering", "strømrasjonering"]
                         },
                         {
-                            "termlist_name": "termlist7_3f",
+                            "termlist_name": "termlist7_3g",
                             "formatting_rule": "default",
                             "na": false,
                             "case": false,
@@ -664,7 +679,7 @@
                                             "kjøretøy", "køyretøy", "biler", "bilar", "tog", "fly", "skip", "frakt", "last", "telekomm", "datasent", "datanett", "trådløs", "trådlaus"]
                         },
                         {
-                            "termlist_name": "termlist7_3g",
+                            "termlist_name": "termlist7_3h",
                             "formatting_rule": "default",
                             "na": false,
                             "case": false,
@@ -672,7 +687,7 @@
                             "wordlist_no": ["energieffektiv", "energirasjonering", "strømrasjonering", "energisparing", "energiøkonomiser", "enøk"]
                         },
                         {
-                            "termlist_name": "termlist7_3h",
+                            "termlist_name": "termlist7_3i",
                             "formatting_rule": "default",
                             "na": false,
                             "case": false,
@@ -680,7 +695,7 @@
                             "wordlist_no": ["politikk", "retningslin", "rammeverk", "lovgiv", "ledelse", "leiing", "intervensjon", "inngripen", "insentiv"]
                         },
                         {
-                            "termlist_name": "termlist7_3i",
+                            "termlist_name": "termlist7_3j",
                             "formatting_rule": "default",
                             "na": false,
                             "case": false,
@@ -688,7 +703,7 @@
                             "wordlist_no": ["energieffektiv"]
                         },
                         {
-                            "termlist_name": "termlist7_3j",
+                            "termlist_name": "termlist7_3k",
                             "formatting_rule": "default",
                             "na": false,
                             "case": false,
@@ -709,33 +724,33 @@
                 },
                 {
                     "number": 4,
-                    "logic_rule": "([termlist7_3k] | ([termlist7_3l] & [termlist7_3m]))",
-                    "_comment": "We have simplified the search as we are only searching titles, and left out specific energy terms. All that is required now is terms for energy efficien combined with sufficien, or the title to contain energy suffici*",
+                    "logic_rule": "([termlist7_3l] | ([termlist7_3m] | [termlist7_3n]))",
+                    "_comment": "We have simplified the search as we are only searching titles, and left out specific energy terms. All that is required now is terms for energy efficien combined with sufficien, or the title to contain energy suffici* - NB energy terms taken in now that we also search abstracts", 
                     "sentence_split": false,
                     "termlists": [
-                        {
-                            "termlist_name": "termlist7_3k",
-                            "formatting_rule": "default",
-                            "na": false,
-                            "case": false,
-                            "wordlist_en": ["energy suffici"],
-                            "wordlist_no": []
-                        },
                         {
                             "termlist_name": "termlist7_3l",
                             "formatting_rule": "default",
                             "na": false,
                             "case": false,
-                            "wordlist_en": ["sufficien", "suffisien"],
-                            "wordlist_no": ["tilstrekkelig"]
+                            "wordlist_en": ["energy suffici"],
+                            "wordlist_no": ["selvforsyn", "sjølforsyn", "sjølvforsyn"]
                         },
                         {
                             "termlist_name": "termlist7_3m",
                             "formatting_rule": "default",
                             "na": false,
                             "case": false,
-                            "wordlist_en": ["energy efficien"],
-                            "wordlist_no": ["energieffektiv"]
+                            "wordlist_en": ["electric", "energy generat", "energy service", "energy sector", "energy system", "power system", "energy security", "renewable energy"],
+                            "wordlist_no": ["elektris", "energiskap", "energitjeneste", "energiteneste", "energisektor", "energisystem", "kraftsystem", "energisikkerhet", "fornybar energi"]
+                        },
+                        {
+                            "termlist_name": "termlist7_3n",
+                            "formatting_rule": "specific_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["electric"],
+                            "wordlist_no": ["strøm", "straum", "energi", "kraft"]
                         }
                     ]
                 }
@@ -763,7 +778,7 @@
                             "na": false,
                             "case": true,
                             "wordlist_en": ["ODA"],
-                            "wordlist_no": []
+                            "wordlist_no": ["ODA"]
                         },
                         {
                             "termlist_name": "termlist7_a2",
@@ -844,7 +859,8 @@
                             "case": false,
                             "wordlist_en": ["clean energy", "green energy", "decarboni", "low carbon", "energy efficien", "renewable", "solar", 
                                             "wind", "geothermal", "hydroelectric", "hydro electric", "hydro power", "marine energy", "tidal energy", "wave energy"],
-                            "wordlist_no": ["ren energi", "grønn energi", "avkarboniser", "lavkarbon", "lågkarbon", "energieffektiv", "fornybar", "solcelle", "solkraft", "solenergi", "solcelle", "solkraft", "solenergi", 
+                            "wordlist_no": ["ren energi", "rein energi", "grønn energi", "grøn energi", "avkarboniser", "lavkarbon", "lågkarbon", "energieffektiv", "fornybar", 
+                                            "solcelle", "solkraft", "solenergi", "solcelle", "solkraft", "solenergi", 
                                             "vind", "geotermisk", "hydroelektrisk", "vannkraft", "vasskraft", "havenergi", "tidevannsenergi", "tidvass", "bølgeenergi"]
                         }
                     ]
@@ -955,7 +971,7 @@
                             "case": false,
                             "wordlist_en": ["modern", "clean", "sustainable", "renewable", "solar", "wind", "geothermal", "hydroelectric", "hydro electric", "hydropower", 
                                             "marine", "tidal", "wave energy"],
-                            "wordlist_no": ["moderne", "rein", "bærekraftig", "berekraftig", "fornybar", "sol", "vind", "geotermisk", "hydroelektrisk", "vannkraft", "vasskraft", 
+                            "wordlist_no": ["moderne", "ren", "rein", "bærekraftig", "berekraftig", "fornybar", "sol", "vind", "geotermisk", "hydroelektrisk", "vannkraft", "vasskraft", 
                                             "hav", "tidevann", "tidvass", "bølgeenergi"]
                         }
                     ]
