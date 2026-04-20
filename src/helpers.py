@@ -21,7 +21,7 @@ def get_sdg_phrases(sdg_number: int) -> tuple[list[dict], list[dict], dict]:
     file_path_absolute = os.path.join(
         os.path.dirname(__file__), 'searchterms/sdg{}.json'.format(str(sdg_number))
     )
-    with open(file_path_absolute, 'r') as file:
+    with open(file_path_absolute, 'r', encoding = 'utf-8') as file:
         data = json.load(file)
 
     targets = data['targets']
@@ -85,15 +85,14 @@ def _are_terms_in_input_text(
     """
     termlist_results = {}
     for term_list in termlists:
-        if len(term_list['wordlist_en']) == 0:
-            termlist_results[term_list['termlist_name']] = False
-        else:
-            regex_term_list, formatted_text = prepare_regex_search_termlist(
-                term_list, input_text
-            )
+        regex_term_list, formatted_text = prepare_regex_search_termlist(
+            term_list, input_text
+        )
+        if regex_term_list:
             termlist_results[term_list['termlist_name']] = _pattern_search_boolean(
                 regex_term_list, formatted_text
             )
+        else: termlist_results[term_list['termlist_name']] = False
 
     return termlist_results
 

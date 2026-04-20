@@ -130,5 +130,9 @@ def prepare_regex_search_termlist(
     else:
         text = input_text
 
-    regex_term_list = _format_list_with_pattern(pattern, terms)
-    return regex_term_list, text
+    if len(terms)>0:
+        regex_term_list = _format_list_with_pattern(pattern, terms)
+        return regex_term_list, text
+    
+    else:
+        return ''. text
