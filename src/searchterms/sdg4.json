@@ -1,0 +1,1479 @@
+{
+    "name": "sdg4",
+    "number": 4,
+    "generated_datetime": "09-12-2025 10:07:35",
+    "pre-search": [],
+    "targets": [
+        {
+            "name": "1",
+            "phrases": [
+                {
+                    "number": 1,
+                    "logic_rule": "([termlist4_1_1a] & ([termlist4_1_1b] | [termlist4_1_1e] | ([termlist4_1_1c] & [termlist4_1_1d])))",
+                    "sentence_split": true,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist4_1_1a",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["complet", "school completion", "finish", "graduat"],
+                            "wordlist_no": ["fullfør", "gjennomføring"]
+                        },
+                        {
+                            "termlist_name": "termlist4_1_1b",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["primary school", "elementary school", 
+                            "primary educat", "middle school", "secondary school", "secondary education"],
+                            "wordlist_no": ["barnesk", "grunnskulen", "grunnskolen", "grunnutdann", "grunnopplæring", 
+                            "ungdomssk", "vidaregåande skule", "videregående skole", "vidaregåande opplæring", 
+                            "videregående opplæring", "yrkesskule", "yrkesopplæring"]
+                        },
+                        {
+                            "termlist_name": "termlist4_1_1c",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["school", "education"],
+                            "wordlist_no": ["skole", "skule", "utdann"]
+                        },
+                        {
+                            "termlist_name": "termlist4_1_1d",
+                            "formatting_rule": "specific",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["boys", "girls", "kids", "child", "children"],
+                            "wordlist_no": ["gut", "gutar", "gutter", "jente", "jenter", 
+                            "barn", "born", "unge", "ungdom", "ungdommer", "ungdomar"]
+                        },
+                        {
+                            "termlist_name": "termlist4_1_1e",
+                            "formatting_rule": "no_left_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": [],
+                            "wordlist_no": ["skole", "skule"]
+                        }
+                    ]
+                },
+                {
+                    "number": 2,
+                    "logic_rule": "(([termlist4_1_2a] | [termlist4_1_2e]) & ([termlist4_1_2b] | [termlist4_1_2f] | ([termlist4_1_2c] & [termlist4_1_2d])))",
+                    "sentence_split": true,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist4_1_2a",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["dropout", "drop-out", "drop out", "dropping out", "early school-leaving"],
+                            "wordlist_no": ["dropout", "drop-out", "drop out", "droppe ut", "dropper ut", "frafall", "fråfall", "falle ut"]
+                        },
+                        {
+                            "termlist_name": "termlist4_1_2b",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["primary school", "elementary school", "primary educat", 
+                            "middle school", "secondary school", "secondary education"],
+                            "wordlist_no": ["barnesk", "grunnskulen", "grunnskolen", "grunnutdann", 
+                            "grunnopplæring", "ungdomssk", "vidaregåande skule", "videregående skole", 
+                            "vidaregåande opplæring", "videregående opplæring", "yrkesskule", "yrkesopplæring"]
+                        },
+                        {
+                            "termlist_name": "termlist4_1_2c",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["school", "education"],
+                            "wordlist_no": ["skole", "utdann"]
+                        },
+                        {
+                            "termlist_name": "termlist4_1_2d",
+                            "formatting_rule": "specific",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["boys", "girls", "kids", "child", "children"],
+                            "wordlist_no": ["gut", "gutar", "gutter", "jente", "jenter", 
+                            "barn", "born", "unge", "ungdom", "ungdommer", "ungdomar"]
+                        },
+                        {
+                            "termlist_name": "termlist4_1_2e",
+                            "formatting_rule": "no_left_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["quit"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist4_1_2f",
+                            "formatting_rule": "no_left_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": [],
+                            "wordlist_no": ["skole", "skule"]
+                        }
+                    ]
+                },
+                {
+                    "number": 3,
+                    "logic_rule": "(([termlist4_1_3a] | [termlist4_1_3c]) & [termlist4_1_3b])",
+                    "sentence_split": true,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist4_1_3a",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["access", "entry", "enroll", "admission", "admit"],
+                            "wordlist_no": ["tilgang", "adgang", "tillating", "tillatelse", "løyve", "høve"]
+                        },
+                        {
+                            "termlist_name": "termlist4_1_3b",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["primary school", "elementary school", "primary educat", 
+                            "middle school", "secondary school", "secondary education"],
+                            "wordlist_no": ["barnesk", "grunnskule", "grunnskole", "grunnutdann", "grunnopplæring", 
+                            "ungdomssk", "vidaregåande skule", "videregående skole", "vidaregåande opplæring", 
+                            "videregående opplæring", "yrkesskule", "yrkesopplæring"]
+                        },
+                        {
+                            "termlist_name": "termlist4_1_3c",
+                            "formatting_rule": "specific_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["enter"],
+                            "_comment": "Turns off truncation to avoid 'STUDENTER (NO)'.",
+                            "wordlist_no": []
+                        }
+                    ]
+                },
+                {
+                    "number": 4,
+                    "logic_rule": "(((([termlist4_1_4a] & ([termlist4_1_4b] | [termlist4_1_4f])) | [termlist4_1_4c]) & ([termlist4_1_4d] | [termlist4_1_4f])) & [termlist4_1_4e])",
+                    "sentence_split": true,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist4_1_4a",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["basic", "fundamental", "minim", "core", "elementary"],
+                            "wordlist_no": ["basic", "fundamental", "minim", "basis", "kjerne", "elementær", "grunnlegg"]
+                        },
+                        {
+                            "termlist_name": "termlist4_1_4b",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["proficienc", "skill", "comprehen", "literac", "mathematic", 
+                            "math", "maths", "numera"],
+                            "wordlist_no": ["ferdigh", "dyktigh", "kyndigh", "dugleik", "forstå"]
+                        },
+                        {
+                            "termlist_name": "termlist4_1_4c",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": [],
+                            "wordlist_no": ["basisferdighe", "basiskompetanse", "kjerneferdighe", "kjernekompetanse"]
+                        },
+                        {
+                            "termlist_name": "termlist4_1_4d",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["reading", "mathematic", "math", "maths", "numera"],
+                            "wordlist_no": ["regneferdigh", "rekneferdigh", "talforstå", 
+                            "tallforstå", "talferdigh", "tallferdigh", "matematikk", "rekning", "regning"]
+                        },
+                        {
+                            "termlist_name": "termlist4_1_4e",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["school", "student", "boys", "girls", "kids", "child"],
+                            "wordlist_no": ["skole", "skule", "gut", "jente", "born", "barn", "elever", "elevar"]
+                        },
+                        {
+                            "termlist_name": "termlist4_1_4f",
+                            "formatting_rule": "no_left_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["read"],
+                            "wordlist_no": ["les"]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "2",
+            "phrases": [
+                {
+                    "number": 1,
+                    "logic_rule": "(([termlist4_2_1a]) & ([termlist4_2_1b] | ([termlist4_2_1c] & [termlist4_2_1d])) | [termlist4_2_1e])",
+                    "sentence_split": true,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist4_2_1a",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["access", "obstacle", "barrier", "hinder", "hindrance", "equit"],
+                            "wordlist_no": ["tilgang", "adgang", "tilgjenge", "barrier", "hindring", "hinder", "hindre"]
+                        },
+                        {
+                            "termlist_name": "termlist4_2_1b",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["early childhood care", "kindergarten", "pre-kindergarten", "nurser", 
+                            "pre-primary education", "pre school education", "preschool education", "pre-school education", "ECEC"],
+                            "wordlist_no": ["førsk", "barnehage", "tidlig utvikling", "tidleg utvikling"]
+                        },
+                    {
+                            "termlist_name": "termlist4_2_1c",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["early childhood", "under five", "under-five"],
+                            "wordlist_no": []
+                        },
+                    {
+                            "termlist_name": "termlist4_2_1d",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["education"],
+                            "wordlist_no": []
+                        },
+                    {
+                            "termlist_name": "termlist4_2_1e",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": [],
+                            "wordlist_no": ["barnehagedekning", "barnehageplass", "tilbud om barnehage", "tilbod om barnehage", 
+                            "barnehageopptak", "opptak i barnehage", "opptak til barnehage"]
+                        }
+                    ]
+                },
+                {
+                    "number": 2,
+                    "logic_rule": "(([termlist4_2_2a]) | (([termlist4_2_2b] | [termlist4_2_2g]) & [termlist4_2_2c]) | ([termlist4_2_2d] & [termlist4_2_2e] & [termlist4_2_2f]) & not [termlist4_2_2h])",
+                    "sentence_split": true,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist4_2_2a",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["school ready", "school-ready", "school readiness", "school-readiness"],
+                            "wordlist_no": ["skolemoden", "skulemoden", "skulemogen"]
+                        },
+                        {
+                            "termlist_name": "termlist4_2_2b",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["ready", "readiness", "prepared", "transition"],
+                            "wordlist_no": ["moden", "mogen", "forberedt", "førebudd", "overgang"]
+                        },
+                        {
+                            "termlist_name": "termlist4_2_2c",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["primary education", "primary school", "elementary school", "first grade", "1st grade"],
+                            "wordlist_no": ["første klass", "fyrste klass", "6-åring", "seksåring", "fyrsteklass", "førsteklass", "skole", "skule", "barnehage"]
+                        },
+                        {
+                            "termlist_name": "termlist4_2_2d",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["development"],
+                            "wordlist_no": ["utvikling"]
+                        },
+                        {
+                            "termlist_name": "termlist4_2_2e",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["child", "under-five", "early childhood"],
+                            "wordlist_no": ["barn", "tidlig barndom", "tidleg barndom"]
+                        },
+                        {
+                            "termlist_name": "termlist4_2_2f",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["school entry", "start school", "start school"],
+                            "wordlist_no": ["skolestart", "skulestart"]
+                        },
+                        {
+                            "termlist_name": "termlist4_2_2g",
+                            "formatting_rule": "specific_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": [],
+                            "wordlist_no": ["klar", "klare", "klår", "klåre"]
+                        },
+                        {
+                            "termlist_name": "termlist4_2_2h",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": [],
+                            "wordlist_no": ["ungdomssk", "videregående", "vidaregåande", "høgskule", "høgskole", "universitet", "voksen", "vaksen", "arbeid", "jobb", "yrke"]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "3",
+            "phrases": [
+                {
+                    "number": 1,
+                    "logic_rule": "(([termlist4_3_1a] & ([termlist4_3_1c] | ([termlist4_3_1d] & [termlist4_3_1e]) | ([termlist4_3_1f] & [termlist4_3_1g]))) & not [termlist4_3_1h])",
+                    "sentence_split": true,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist4_3_1a",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["access", "inclusion", "inclusiv", "equit", "equal", "afford", "barrier", "obstacle", "discriminat"],
+                            "wordlist_no": ["tilgang", "tilgjenge", "adgang", "inkluder", "rettferdig", "rettvis", "ikkje råd", "ikke råd", "barrier", "hindring", "hinder", "diskrimin", "utesteng"]
+                        },
+                        {
+                            "termlist_name": "termlist4_3_1c",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["higher education"],
+                            "wordlist_no": ["høgare utdann", "høyere utdann", "universitetsutdann", "fagskul", "fagskol"]
+                        },
+                        {
+                            "termlist_name": "termlist4_3_1d",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["universit", "college"],
+                            "wordlist_no": ["høgskule", "høgskole", "høyskole", "universitet"]
+                        },
+                        {
+                            "termlist_name": "termlist4_3_1e",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["admission", "enrol", "access"],
+                            "wordlist_no": ["adgang", "tilgang", "tilgjenge", "immatrikuler", "opptak"]
+                        },
+                        {
+                            "termlist_name": "termlist4_3_1f",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["technic", "vocation", "tertiar", "university", "postsecondary", "post secondary"],
+                            "wordlist_no": ["teknisk", "tertiær", "fagskole", "fagskul", "yrkesfaglig", "yrkesfagleg", "yrkesutdann", "yrkesopplæring", "universitet"]
+                        },
+                        {
+                            "termlist_name": "termlist4_3_1g",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["education", "training", "school", "learning"],
+                            "wordlist_no": ["utdann", "skole", "skule", "læring"]
+                        },
+                        {
+                            "termlist_name": "termlist4_3_1h",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["open access", "equals", "accession", "library", "hospital"],
+                            "wordlist_no": ["bibliotek", "hospital", "sykehus", "sjukehus", "åpen tilgang", "open tilgang", "open access"],
+                            "_comment": "Noisy phrases, removed with NOT."
+                        }
+                    ]
+                },
+                {
+                    "number": 2,
+                    "logic_rule": "([termlist4_3_3a] & [termlist4_3_3b])",
+                    "sentence_split": true,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist4_3_3a",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["inclusive", "inclusion"],
+                            "wordlist_no": ["inkluder"]
+                        },
+                        {
+                            "termlist_name": "termlist4_3_3b",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["higher education"],
+                            "wordlist_no": ["høgare utdann", "høyere utdann", "universitetsutdann", "høgskuleutdann", "høgskoleutdann", "tertiærutdann"]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "4",
+            "phrases": [
+                {
+                    "number": 1,
+                    "logic_rule": "(([termlist4_4_1a] & [termlist4_4_1b]) | [termlist4_4_1c])",
+                    "sentence_split": true,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist4_4_1a",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["skill", "abilit", "competenc", "literac"],
+                            "wordlist_no": ["ferdigh", "kompetanse", "dugleik", "dyktighe"],
+                            "_comment": "'skill' covers 'upskill' and 'reskill' etc."
+                        },
+                        {
+                            "termlist_name": "termlist4_4_1b",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["employability", "employment", "decent job", "decent work", "entrepreneurship"],
+                            "wordlist_no": ["ansettelse", "sysselset", "tilset", "anstendig arbeid", "anstendig jobb", "jobb", "entreprenørskap"]
+                        },
+                        {
+                            "termlist_name": "termlist4_4_1c",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["entrepreneurship education", "entrepreneur education", "entrepreneurial education"],
+                            "wordlist_no": []
+                        }
+                    ]
+                },
+                {
+                    "number": 2,
+                    "logic_rule": "(([termlist4_4_2a] | [termlist4_4_2acaps]) & ([termlist4_4_2b] | [termlist4_4_2c]))",
+                    "sentence_split": true,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist4_4_2a",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["unemploy", "underemploy", "out of work", "not in work"],
+                            "wordlist_no": ["arbeidsledig", "langtidsledig", "arbeidslau", "arbeidslø", "utan arbeid", "uten arbeid", "utan jobb", "uten jobb", "ikkje i arbeid", "ikke i arbeid"]
+                        },
+                        {
+                            "termlist_name": "termlist4_4_2acaps",
+                            "formatting_rule": "specific_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["NEET", "NEETs"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist4_4_2b",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["skill", "employability", "competenc", "litera", "continuing education", "lifelong learning", "life long learning", "adult learning", 
+                            "adult education", "training program", "vocational training", "new skills"],
+                            "wordlist_no": ["ferdigh", "kompetanse", "evne", "dugleik", "dyktighe", "kyndig", "videreutdanning", "vidareutdanning", "livslang læring", 
+                            "voksenopplæring", "vaksenopplæring", "opplæringsprogram", "yrkesopplæring"]
+                        },
+                        {
+                            "termlist_name": "termlist4_4_2c",
+                            "formatting_rule": "no_left_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["abilit"],
+                            "wordlist_no": []
+                        }
+                    ]
+                },
+                {
+                    "number": 3,
+                    "logic_rule": "(([termlist4_4_3a] | ([termlist4_4_3b] & [termlist4_4_3c]) | [termlist4_4_3d] | ([termlist4_4_3e] | [termlist4_4_3f]) | [termlist4_4_3g] | [termlist4_4_3h] | ([termlist4_4_3i] & [termlist4_4_3j]) | ([termlist4_4_3k] & [termlist4_4_3l]) | [termlist4_4_3m] | ([termlist4_4_3n] & [termlist4_4_3f]) | ([termlist4_4_3o] & [termlist4_4_3p]) | ([termlist4_4_3q] & [termlist4_4_3r])) & [termlist4_4_3s])",
+                    "sentence_split": true,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist4_4_3a",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["read", "writ", "comput", "literacy", "numeracy"],
+                            "wordlist_no": ["lese", "skrive", "digital kompetanse", "digitale ferdigh", "tallferdighe", "talferdigh", "talforst", "tallforst", "regneferdigh", "rekneferdigh", 
+                            "reknedugleik", "basisferdigh", "grunnleggende ferdigh", "grunnleggjande ferdigh"]
+                        },
+                        {
+                            "termlist_name": "termlist4_4_3b",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["basic technolog", "specialized", "specialised"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist4_4_3c",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["skills", "knowledge"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist4_4_3d",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["learn and adapt"],
+                            "wordlist_no": []
+                        },
+                        {       
+                            "termlist_name": "termlist4_4_3e",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["listen", "communicat"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist4_4_3f",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["skills", "effective"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist4_4_3g",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": [],
+                            "wordlist_no": ["kommunikasjonsferdigh", "lytteferdigh", "lederferdigh", "leiarferdigh", "lederkompetanse", "leiarkompetanse", "jobbkompetanse"]
+                        },
+                        {
+                            "termlist_name": "termlist4_4_3h",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["think creatively", "creative thinking", "solve problem", "problem-solv"],
+                            "wordlist_no": ["problemlø"]
+                        },
+                        {
+                            "termlist_name": "termlist4_4_3i",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["interact"],
+                            "wordlist_no": ["samhandl", "samarbeid"]
+                        },
+                        {
+                            "termlist_name": "termlist4_4_3j",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["co-work", "colleague"],
+                            "wordlist_no": ["kollega"]
+                        },
+                        {
+                            "termlist_name": "termlist4_4_3k",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["work"],
+                            "wordlist_no": ["arbeid", "jobb"]
+                        },
+                        {
+                            "termlist_name": "termlist4_4_3l",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["team", "group"],
+                            "wordlist_no": ["gruppe", "team"]
+                        },
+                        {
+                            "termlist_name": "termlist4_4_3m",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["education", "professional development", "adult education", "adult learning", "lifelong learning", "life long learning", "employee development", "new skills"],
+                            "wordlist_no": ["utdanning", "voksenopplæring", "vaksenopplæring", "livslang læring"]
+                        },
+                        {
+                            "termlist_name": "termlist4_4_3n",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["leader"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist4_4_3o",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["follow"],
+                            "wordlist_no": ["følge", "følgje", "motta", "ta imot"]
+                        },
+                        {
+                            "termlist_name": "termlist4_4_3p",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["supervi"],
+                            "wordlist_no": ["veiled", "rettlei", "veglei"]
+                        },
+                        {
+                            "termlist_name": "termlist4_4_3q",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["transfer"],
+                            "wordlist_no": ["overførbar"]
+                        },
+                        {
+                            "termlist_name": "termlist4_4_3r",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["skills"],
+                            "wordlist_no": ["ferdigh"]
+                        },
+                        {
+                            "termlist_name": "termlist4_4_3s",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["employability", "employable"],
+                            "wordlist_no": ["ansettbar", "arbeidsevne", "syssels"]
+                        }
+                    ]
+                },
+                {
+                    "number": 4,
+                    "logic_rule": "((([termlist4_4_4a] & [termlist4_4_4b]) | [termlist4_4_4c]) & [termlist4_4_4d])",
+                    "sentence_split": true,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist4_4_4a",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["information and communication technology", "ICT", "vocational", "technical", "technolog", "comput", "data", "digital", "information"],
+                            "wordlist_no": ["informasjonsteknologi", "IKT", "fagsk", "teknisk", "teknologi"]
+                        },
+                        {
+                            "termlist_name": "termlist4_4_4b",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["skill", "competen", "literac"],
+                            "wordlist_no": ["ferdigh", "kompetanse", "evne", "dugleik", "dyktigh"]
+                        },
+                        {
+                            "termlist_name": "termlist4_4_4c",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": [],
+                            "wordlist_no": ["it-kompetanse", "it-ferdigh", "ikt-kompetanse", "ikt-ferdigh", "datakompetanse", "dataferdigh", "teknologikompetanse", "teknologiferdigh"]
+                        },
+                        {
+                            "termlist_name": "termlist4_4_4d",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["employ", "job", "decent work"],
+                            "wordlist_no": ["ansett", "sysselset", "tilset", "anstendig arbeid", "anstendig jobb", "jobbrelevan", "arbeidsrelevan", "yrkesrelevan"]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "5",
+            "phrases": [
+                {
+                    "number": 1,
+                    "logic_rule": "((([termlist4_5_1a] & [termlist4_5_1b]) | [termlist4_5_1c]) & [termlist4_5_1d])",
+                    "sentence_split": true,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist4_5_1a",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["gender", "girl", "woman", "women", "female", "boy", "male"],
+                            "wordlist_no": ["kjønn", "jente", "kvinne", "gut"]
+                        },
+                         {
+                            "termlist_name": "termlist4_5_1b",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["equit", "equal", "balanc"],
+                            "wordlist_no": ["rettferd", "rettvis", "jevnbyrdig", "likheit", "likhet", "likskap", "ulikskap", "skilnad", "balans"]
+                        },
+                         {
+                            "termlist_name": "termlist4_5_1c",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": [],
+                            "wordlist_no": ["likestilling"]
+                        },
+                         {
+                            "termlist_name": "termlist4_5_1d",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["school", "educat", "vocational training", "student"],
+                            "wordlist_no": ["skole", "skule", "utdann", "undervisning", "undervising", "opplæring", "yrkesfag"]
+                        }
+                    ]
+                },
+                {
+                    "number": 2,
+                    "logic_rule": "(([termlist4_5_2c] | ([termlist4_5_2a] & ([termlist4_5_2b] | ([termlist4_5_2f] & [termlist4_5_2g])) & [termlist4_5_2d])) & not [termlist4_5_2e])",
+                    "sentence_split": true,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist4_5_2a",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["gender", "girl", "woman", "women", "female", "boy", "male"],
+                            "wordlist_no": ["kjønn", "jente", "kvinne", "gut"]
+                        },
+                        {
+                            "termlist_name": "termlist4_5_2b",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["non-equit", "non-equal", "inequal", "unequal", "unbalanc", "imbalanc", "disparit", "discriminat", "obstacle", "barrier", "hindrance", "hinder", "bias", "parity", "gap"],
+                            "wordlist_no": ["ulikhet", "ulikheit", "urett", "ubalans", "misforhold", "forskjell", "skilnad", "diskriminer", "hinder", "hindre", "barrier"]
+                        },
+                        {
+                            "termlist_name": "termlist4_5_2c",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["gender gap", "gender parity"],
+                            "wordlist_no": ["kjønnsdiskriminering", "kjønnsforskjell", "kjønnsskilnad"]
+                        },
+                        {
+                            "termlist_name": "termlist4_5_2d",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["school", "educat", "vocational training", "student"],
+                            "wordlist_no": ["skole", "skule", "utdann", "undervisning", "undervising", "opplæring", "yrkesfag"]
+                        },
+                        {
+                            "termlist_name": "termlist4_5_2e",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["mortality", "health", "wealth"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist4_5_2f",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["difference", "discrepan"],
+                            "wordlist_no": ["forskjell", "ulik", "skilnad"]
+                        },
+                        {
+                            "termlist_name": "termlist4_5_2g",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["complet", "result", "perform", "success", "achieve", "access", "enter", "entry", "enroll", "admission", "admit", "graduation", "graduating", "attend"],
+                            "wordlist_no": ["fullfør", "gjennomfør", "resultat", "suksess", "oppnå", "adgang", "opptak", "tilgang"]
+                        }
+                    ]
+                },
+                {
+                    "number": 3,
+                    "logic_rule": "((([termlist4_5_3a] | [termlist4_5_3b]) & [termlist4_5_3c]) & (([termlist4_5_3d] & [termlist4_5_3e]) | [termlist4_5_3f] | [termlist4_5_3h]) | (([termlist4_5_3a] | [termlist4_5_3b]) & [termlist4_5_3g]))",
+                    "sentence_split": true,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist4_5_3a",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["access", "admission", "admit", "attend", "entry", "enrol", "inclusion", "inclusiv", "non-discriminat", "equitab",
+                            "education for all", "Rights of Persons with Disabilities", "CRPD"],
+                            "wordlist_no": ["tilgang", "tilgjenge", "adkomst", "adgang", "opptak", "inkluder", "rettferd", "rettvis",
+                            "utdanning for alle", "rettigheter til personer med nedsatt funksjonsevne", "rettar til menneske med nedsett funksjonsevne"]
+                        },
+                        {
+                            "termlist_name": "termlist4_5_3b",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["discriminat", "non-discriminat", "inequit", "unequit", "disparit", "barrier", "obstacle", "exclusion", "excluding"],
+                            "wordlist_no": ["diskriminer", "urettvis", "urettferd", "barrier", "hinder", "hindr", "eksklu"]
+                        },
+                        {
+                            "termlist_name": "termlist4_5_3c",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["school", "educat", "vocational training"],
+                            "wordlist_no": ["skole", "skule", "utdann", "undervis", "opplæring", "yrkesfagl"]
+                        },
+                        {
+                            "termlist_name": "termlist4_5_3d",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["person", "people", "adult", "child", "student", "youth", "adolescent"],
+                            "wordlist_no": ["menneske", "vaksne", "voksne", "elev", " student", "ung", "tenåring", "barn", "born"]
+                        },
+                        {
+                            "termlist_name": "termlist4_5_3e",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["disabled", "disabilit", "unemployed", "older", "elderly", "poor", "poverty", "disadvantaged", "vulnerab", "displaced", "marginali", "developing countr",
+                            "specific learning disabilit", "SLD", "other health impairment", "autism spectrum disorder", "ASD", "emotional disturbance", "speech impairment", "language impairment", 
+                            "visual impairment", "blindness", "deafness", "hearing impairment", "deaf-blindness", "orthopedic impairment", "intellectual disabilit", "traumatic brain injur", "multiple disabilit"],
+                            "wordlist_no": ["uføre", "funksjonshem", "arbeidsl", "utan arbeid", "uten arbeid", "fattig", "lavinntekt", "låginntekt", "lav inntekt", "låg inntekt", "sårbar", "diskriminert",
+                            "marginalisert", "utviklingsland", "u-land", "lærevansk", "særskilte behov", "autismespekter", "emosjonelle forstyrr", "talevansk", "språkvansk", "synsvansk", "blind", "døv", "hørsel",
+                            "ortopediske vansk", "intellektuelle vansk", "traumatisk hjerneskade"],
+                            "_comment": "Norwegian terms for OLDER are not included as they cause noise."
+                        },
+                        {
+                            "termlist_name": "termlist4_5_3f",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["disab", "disadvantage", "vulnerab", "indigenous", "the poor", "refugee", "asylum", "displaced", "migrant", 
+                            "low income", "minorit", "marginal", "slum", "rural", "special educational needs", "LGBT", "lesbian", "gay", "bisexual", "transgender"],
+                            "wordlist_no": ["uføre", "funksjonshem", "sårbar", "hjemløs", "heimlaus", "urfolk", "urbefolkning", "urinnvån", "minoritet", "sápmi", "sami", "minoritet", 
+                            "jøder", "jødar", "kvener", "kvenar", "norskfinn", "skogfinn", "romani", "tatere", "taterar", "asylsøk", "flyktning", "innvandr", "fattig", "lavinntekt", 
+                            "låg inntekt", "låginntekt", "lav inntekt", "transperson", "lesbisk", "homofile", "homoseksuell", "bifil", "lbht", "interkjønn", "innfød"]
+                        },
+                        {
+                            "termlist_name": "termlist4_5_3g",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["special educat", "special needs educat", "inclusive education", "aided education"],
+                            "wordlist_no": ["tilrettelagt undervisning", "spesialundervisning", "tilpasset opplæring", "tilpassa opplæring", "inkluderende opplæring", "inkluderande opplæring"]
+                        },
+                        {
+                            "termlist_name": "termlist4_5_3h",
+                            "formatting_rule": "specific_trunc",
+                            "na": false,
+                            "case": true,
+                            "wordlist_en": ["SEN"],
+                            "wordlist_no": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "6",
+            "phrases": [
+                {
+                    "number": 1,
+                    "logic_rule": "(([termlist4_6_1f] | (([termlist4_6_1a] | [termlist4_6_1b]) & ([termlist4_6_1c] | [termlist4_6_1d]))) & not [termlist4_6_1e])",
+                    "sentence_split": true,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist4_6_1a",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["proficienc", "skill", "comprehension", "comprehend", "literac"],
+                            "wordlist_no": ["ferdigh", "dyktighe", "kyndighe", "kompetanse", "evne", "dugleik", "forstå", "nivå", "grunnlegg"]
+                        },
+                         {
+                            "termlist_name": "termlist4_6_1b",
+                            "formatting_rule": "specific_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["ability", "abilities", "level"],
+                            "wordlist_no": []
+                        },
+                         {
+                            "termlist_name": "termlist4_6_1c",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["reading", "literate", "mathematic", "maths", "mathematics", "numera"],
+                            "wordlist_no": ["leseferdigh", "leseforstå", "lesekompetanse", "lesedugleik", "rekne", "rekna", "regneferdigh", "rekneferdigh", 
+                            "reknedugleik", "talforstå", "tallforstå", "talferdigh", "tallferdigh", "matematikk"]
+                        },
+                         {
+                            "termlist_name": "termlist4_6_1d",
+                            "formatting_rule": "specific_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["read"],
+                            "wordlist_no": ["lese", "lesa", "lesing", "rekning", "regning"]
+                        },
+                         {
+                            "termlist_name": "termlist4_6_1e",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["teacher", "readability", "readiness", "spread", "information literacy"],
+                            "wordlist_no": ["lærer", "lærar", "student", "skille", "mikropolitisk"],
+                            "_comment": "Noisy terms, removed with NOT"
+                        },
+                         {
+                            "termlist_name": "termlist4_6_1f",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["core literacy", "functional literacy", "basic literacy"],
+                            "wordlist_no": []
+                        }
+                    ]
+                },
+                {
+                    "number": 2,
+                    "logic_rule": "([termlist4_6_2] | ([termlist4_6_2a] & ([termlist4_6_2b] | [termlist4_6_2c])))",
+                    "sentence_split": true,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist4_6_2",
+                            "formatting_rule": "no_left_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["illiterate child", "illiterate people", "illiterate user", "analfabet", "analphabet", "innumeracy", "innumerate"],
+                            "wordlist_no": [ "analfabet", "lesekyn", "lesekunnig", "talkyn", "tallkyn", "talkunn", "talforståing", "tallforståelse"]
+                        },
+                        {
+                            "termlist_name": "termlist4_6_2a",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["illitera"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist4_6_2b",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["reading", "literate", "mathematic", "maths", "mathematics", "numera"],
+                            "wordlist_no": ["leseferdigh", "leseforstå", "lesekompetanse", "lesedugleik", "rekne", "rekna", "regneferdigh", "rekneferdigh", 
+                            "reknedugleik", "talforstå", "tallforstå", "talferdigh", "tallferdigh", "matematikk"]
+                        },
+                        {
+                            "termlist_name": "termlist4_6_2c",
+                            "formatting_rule": "specific_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["read"],
+                            "wordlist_no": ["lese", "lesa", "lesing", "rekning", "regning"]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "7",
+            "phrases": [
+                {
+                    "number": 1,
+                    "logic_rule": "(([termlist4_7_1a] | ([termlist4_7_1b] & [termlist4_7_1d]) | ([termlist4_7_1c] & [termlist4_7_1d])) & (([termlist4_7_1e] | [termlist4_7_1i] | ([termlist4_7_1f] & [termlist4_7_1g]) | [termlist4_7_1h])))",
+                    "sentence_split": true,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist4_7_1a",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["educat", "curricul", "student assess", "teaching", "teacher education", 
+                            "teacher training", "online learning", "professional learning"],
+                            "wordlist_no": ["utdann", "opplæring", "pensum", "studieplan", "emneplan", "fagplan", "studentvurdering", 
+                            "elevvurdering", "undervisning", "undervising", "nettbasert læring", "online læring", "profesjonslæring"]
+                        },
+                        {
+                            "termlist_name": "termlist4_7_1b",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["learn"],
+                            "wordlist_no": ["læring"]
+                        },
+                        {
+                            "termlist_name": "termlist4_7_1c",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": [],
+                            "wordlist_no": ["vurdering"]
+                        },
+                        {
+                            "termlist_name": "termlist4_7_1d",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["student"],
+                            "wordlist_no": ["student", "elev"]
+                        },
+                        {
+                            "termlist_name": "termlist4_7_1e",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["sustainable development", "sustainable lifestyle", "global citizen", "glocal", 
+                            "human right", "gender equality", "peace", "non-violen", "cultural divers", "toleran"],
+                            "wordlist_no": ["bærekraftig utvikling", "berekraftig utvikling", "berekraftig livsstil", "bærekraftig livsstil", 
+                            "global borg", "globalt borg", "menneskerett", "likestilling", "ikkje-vald", "ikke-vold", "ikkevold", "ikkjevald", 
+                            "kulturelt mangfold", "kulturelt mangfald", "toleran"]
+                        },
+                        {
+                            "termlist_name": "termlist4_7_1f",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["sustainability"],
+                            "wordlist_no": ["bærekraft", "berekraft"]
+                        },
+                        {
+                            "termlist_name": "termlist4_7_1g",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["interdisciplinar", "transdisciplinar", "crossdisciplinar", "cultural", "economic", "ecological", 
+                            "participation", "agency", "responsibility", "ethic", "wicked problem", "complexity", "capacity for change", "transition"],
+                            "wordlist_no": ["tverrfagl", "tverrvit", "kulturell", "økonomisk", "økologisk", "deltak", "handling", "ansvar", "etisk", 
+                            "kompleks", "uløselig problem", "uløyseleg problem", "endring", "overgang"]
+                        },
+                        {
+                            "termlist_name": "termlist4_7_1h",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["Global Citizenship Education"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist4_7_1i",
+                            "formatting_rule": "no_left_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": [],
+                            "wordlist_no": ["fred"]
+                        }
+                    ]
+                },
+                {
+                    "number": 2,
+                    "logic_rule": "([termlist4_7_2a] | ([termlist4_7_2b] & ([termlist4_7_2c] | [termlist4_7_2cspec]) & [termlist4_7_2d]))",
+                    "sentence_split": true,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist4_7_2a",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["education for sustainab", "education in sustainab", "education on sustainab", 
+                            "sustainable development education", "sustainability education"],
+                            "wordlist_no": ["utdanning for bærekraft", "utdanning for berekraft", "utdanning for en bærekraft", 
+                            "utdanning for ei berekraft", "opplæring for bærekraft", "opplæring for berekraft", "opplæring for en bærekraft", "opplæring for ei berekraft"]
+                        },
+                        {
+                            "termlist_name": "termlist4_7_2b",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["whole school", "teaching"],
+                            "wordlist_no": ["heilhetlig", "heilskapleg", "helhetlig", "helskole", "heilskule",
+                            "undervisning", "undervising", "utdanning", "opplæring"]
+                        },
+                        {
+                            "termlist_name": "termlist4_7_2c",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["sustainab"],
+                            "wordlist_no": ["berekraft", "bærekraft"]
+                        },
+                        {
+                            "termlist_name": "termlist4_7_2cspec",
+                            "formatting_rule": "specific_trunc",
+                            "na": false,
+                            "case": true,
+                            "wordlist_en": ["ESD"],
+                            "wordlist_no": ["UBU"]
+                        },
+                        {
+                            "termlist_name": "termlist4_7_2d",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["educat"],
+                            "wordlist_no": ["utdann", "opplæring"]
+                        }
+                    ]
+                },
+                {
+                    "number": 3,
+                    "logic_rule": "(([termlist4_7_3a] & [termlist4_7_3b]) & not [termlist4_7_3c])",
+                    "sentence_split": true,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist4_7_3a",
+                            "formatting_rule": "no_left_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["culture", "cultural"],
+                            "wordlist_no": ["kultur"]
+                        },
+                        {
+                            "termlist_name": "termlist4_7_3b",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["sustainable development"],
+                            "wordlist_no": ["bærekraft", "berekraft"]
+                        },
+                        {
+                            "termlist_name": "termlist4_7_3c",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": [],
+                            "wordlist_no": ["kulturøkonomi", "kulturskole", "kulturskule"]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "a",
+            "phrases": [
+                {
+                    "number": 1,
+                    "logic_rule": "(([termlist4_a_1a] & ([termlist4_a_1b] | ([termlist4_a_1c] & [termlist4_a_1d]))) & not [termlist4_a_1e])",
+                    "sentence_split": true,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist4_a_1a",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["school", "education facilit"],
+                            "wordlist_no": ["skole", "skule", "opplæring"]
+                        },
+                        {
+                            "termlist_name": "termlist4_a_1b",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["safe", "secure", "non-violen", "inclusive"],
+                            "wordlist_no": ["sikker", "sikre", "trygg", "barneven", "borneven", "ikke-vold", "ikkje-vald", "inkluder"]
+                        },
+                        {
+                            "termlist_name": "termlist4_a_1c",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["sensitiv"],
+                            "wordlist_no": ["følsom", "hensyn", "omsyn"]
+                        },
+                        {
+                            "termlist_name": "termlist4_a_1d",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["child", "disability", "gender"],
+                            "wordlist_no": ["barn", "born", "funksjonshem", "funksjonsevne", "kjønn"]
+                        },
+                        {
+                            "termlist_name": "termlist4_a_1e",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["taste sensitivity"],
+                            "wordlist_no": ["smak"]
+                        }
+                    ]
+                },
+                {
+                    "number": 2,
+                    "logic_rule": "(([termlist4_a_2a] & [termlist4_a_2b]) & not [termlist4_a_2c])",
+                    "sentence_split": false,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist4_a_2a",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["learning environment", "indoor environmental quality", "air quality"],
+                            "wordlist_no": ["læringsmiljø", "inneklima"]
+                        },
+                        {
+                            "termlist_name": "termlist4_a_2b",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["primary school", "elementary school", "primary educat", "middle school", 
+                            "secondary school", "secondary educat", "school", "education", "learner", "classroom"],
+                            "wordlist_no": ["skole", "skule", "utdann", "opplæring", "lærling", "klasserom"]
+                        },
+                        {
+                            "termlist_name": "termlist4_a_2c",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["student", "universit", "higher education", "teacher education"],
+                            "wordlist_no": ["høyere utdanning", "høgare utdanning", "lærerutdanning", "lærarutdanning", "student", "universitet"]
+                        }
+                    ]
+                },
+                {
+                    "number": 3,
+                    "logic_rule": "(([termlist4_a_3a] & [termlist4_a_3b]) & not [termlist4_a_3c])",
+                    "sentence_split": true,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist4_a_3a",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["school", "education"],
+                            "wordlist_no": ["skole", "skule", "opplæring", "utdanning"]
+                        },
+                        {
+                            "termlist_name": "termlist4_a_3b",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["basic services", "basic facilities", "basic infrastructure", "electricity", 
+                            "electrical supply", "modern energy", "internet facilities", "computer facilities", 
+                            "ICT facilit", "adapted infrastructure", "adapted material", "universal design", 
+                            "drinking water", "sanitation", "handwash", "hand wash", "WASH facilities", "toilet"],
+                            "wordlist_no": ["grunnleggende tjenester", "grunnleggjande tenester", "elektrisitet", "fasilitet", 
+                            "infrastruktur", "universell design", "universell utforming", "drikkeva", "sanitær", "håndvask", 
+                            "handvask", "vaskemuligh", "vaskemog", "toalett"]
+                        },
+                        {
+                            "termlist_name": "termlist4_a_3c",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["higher education"],
+                            "wordlist_no": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "b",
+            "phrases": [
+                {
+                    "number": 1,
+                    "logic_rule": "(([termlist4_ba] | (([termlist4_bbuntrunc] | [termlist4_bc]) & [termlist4_bd])) & [LMIC])",
+                    "sentence_split": true,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist4_ba",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["scholarships", "scholarship program", "fellowship", "exchange program", 
+                            "student exchange", "student mobility", "study abroad", "overseas stud"],
+                            "wordlist_no": ["stipend", "økonomisk støtte", "utveksling", "legat"]
+                        },
+                        {
+                            "termlist_name": "termlist4_bbuntrunc",
+                            "formatting_rule": "specific_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["grant", "grants"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist4_bc",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["sponsor"],
+                            "wordlist_no": ["sponsor"]
+                        },
+                        {
+                            "termlist_name": "termlist4_bd",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["education", "student", "trainee", "mobility"],
+                            "wordlist_no": ["utdanning"]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "c",
+            "phrases": [
+                {
+                    "number": 1,
+                    "logic_rule": "(([termlist4_c_1a] | ([termlist4_c_1b] & [termlist4_c_1c])) & not [termlist4_c_1d])",
+                    "sentence_split": true,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist4_c_1a",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["teacher supply", "supply of teacher", "teacher coverage", "teacher recruit", "recruitment of teacher", "recruiting of teacher", 
+                            "lack of teacher", "teacher turnover", "teacher shortage", "teacher retention", "teacher attrition"],
+                            "wordlist_no": ["lærerdekning", "lærardekning", "lærerrekruttering", "lærarrekruttering", "rekruttering av lær", "lærermangel", "lærarmangel", 
+                            "lærarturnover", "lærerturnover", "turnover av lær", "lærerslitasje", "lærarslitasje"]
+                        },
+                        {
+                            "termlist_name": "termlist4_c_1b",
+                            "formatting_rule": "specific_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": [],
+                            "wordlist_no": ["avgang", "slitasje", "mangel", "rekruttering"]
+                        },
+                        {
+                            "termlist_name": "termlist4_c_1c",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": [],
+                            "wordlist_no": ["lærer", "lærar"]
+                        },
+                        {
+                            "termlist_name": "termlist4_c_1d",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": [],
+                            "wordlist_no": ["barnehage"]
+                        }
+                    ]
+                },
+                {
+                    "number": 2,
+                    "logic_rule": "(([termlist4_c_2a] | ([termlist4_c_2b] & [termlist4_c_2c])) & [LMIC])",
+                    "sentence_split": true,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist4_c_2a",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["teacher training", "teacher education", "education of teacher", "teacher qualification", "qualified teacher", "teacher student"],
+                            "wordlist_no": ["lærarutdann", "lærerutdann", "utdanning av lærarar", "utdanning av lærere", "lærarstudent", "lærerstudent", 
+                            "kvalifiserte lær", "lærarkompetanse", "lærerkompetanse", "lærerkvalifikasjon", "lærarkvalifikasjon"]
+                        },
+                        {
+                            "termlist_name": "termlist4_c_2b",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["teacher"],
+                            "wordlist_no": ["lærer", "lærar"]
+                        },
+                        {
+                            "termlist_name": "termlist4_c_2c",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["qualification", "qualified", "training"],
+                            "wordlist_no": ["kvalifikasjon", "kvalifiser", "kompetanse"]
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "mentions": {
+        "logic_rule": "([termlist_sdg4_a] | ([termlist_sdg4_b] & [termlist_sdg4_c]) | ([termlist_sdg4_d] & [termlist_sdg4_e]) | ([termlist_sdg4_e] & [termlist_sdg4_f]) | [termlist_sdg4_g])",
+        "termlists": [
+            {
+                "termlist_name": "termlist_sdg4_a",
+                "formatting_rule": "default",
+                "na": false,
+                "case": false,
+                "wordlist_en": ["SDG 4", "SDGs 4", "SDG4", "sustainable development goal 4"],
+                "wordlist_no": ["bærekraftsmål 4", "berekraftsmål 4", "berekraftmål 4"]
+            },
+            {
+                "termlist_name": "termlist_sdg4_b",
+                "formatting_rule": "default",
+                "na": false,
+                "case": false,
+                "wordlist_en": ["sustainable development goal"],
+                "wordlist_no": ["bærekraftsmål", "berekraftsmål", "berekraftmål"]
+            },
+            {
+                "termlist_name": "termlist_sdg4_c",
+                "formatting_rule": "default",
+                "na": false,
+                "case": false,
+                "wordlist_en": ["goal 4"],
+                "wordlist_no": ["mål 4"]
+            },
+            {
+                "termlist_name": "termlist_sdg4_d",
+                "formatting_rule": "default",
+                "na": false,
+                "case": false,
+                "wordlist_en": ["education"],
+                "wordlist_no": ["utdann", "opplæring", "undervisning", "undervising"]
+            },
+            {
+                "termlist_name": "termlist_sdg4_e",
+                "formatting_rule": "default",
+                "na": false,
+                "case": false,
+                "wordlist_en": ["sustainable development goal", "SDG", "goal 4"],
+                "wordlist_no": ["bærekraftsmål", "berekraftsmål", "berekraftmål", "mål 4"]
+            },
+            {
+                "termlist_name": "termlist_sdg4_f",
+                "formatting_rule": "default",
+                "na": false,
+                "case": false,
+                "wordlist_en": ["learning", "teaching", "teacher", "early childhood", "child development", 
+                 "education for sustainable", "global citizenship education", "transdisciplinary education", 
+                 "inclusive education", "formal education", "primary education", "secondary education", "tertiary education", 
+                 "higher education", "right to education", "access to education",  "education for all",  "education sector"],
+                "wordlist_no": ["utdann", "opplæring", "skolegang", "skulegang", "tidleg barndom", "tidlig barndom", 
+                 "barns utvikling", "borns utvikling"]
+            },
+            {
+                "termlist_name": "termlist_sdg4_g",
+                "formatting_rule": "default",
+                "na": false,
+                "case": false,
+                "wordlist_en": ["quality education"],
+                "wordlist_no": ["god utdanning"]
+            }
+        ]
+    }
+}

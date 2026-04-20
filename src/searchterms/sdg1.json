@@ -1,0 +1,539 @@
+{
+    "name": "sdg1",
+    "number": 1,
+    "generated_datetime": "09-12-2025 10:07:34",
+    "pre-search": [],
+    "targets": [
+        {
+            "name": "1",
+            "phrases": [
+                {
+                    "number": 1,
+                    "logic_rule": "([termlist1_1])",
+                    "sentence_split": false,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist1_1",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["extreme poverty", "severe poverty", "deep poverty", "abject poverty", "absolute poverty", "destitution", "global poverty", "international poverty"],
+                            "wordlist_no": ["ekstrem fattigdom", "global fattigdom", "internasjonal fattigdom"]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "2",
+            "phrases": [
+                {
+                    "number": 1,
+                    "logic_rule": "([termlist1_2a] | ([termlist1_2b] & [termlist1_2c]) | [termlist_2d])",
+                    "sentence_split": true,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist1_2a",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["anti-poverty", "antipoverty", "out of poverty", "poverty", "rural poor", "urban poor", "working poor"],
+                            "wordlist_no": ["fattigdom"]
+                        },
+                        {
+                            "termlist_name": "termlist1_2b",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "_comment": "Only Norwegian used here and combined with 2c. In English, _low income_ is combined like _poor_ (in 2d) - if not, there are too many irreleavnt results about low income countries", 
+                            "wordlist_en": [],
+                            "wordlist_no": ["låginntekt", "låg inntekt","fattig"]
+                        },
+                        {
+                            "termlist_name": "termlist1_2c",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": [],
+                            "wordlist_no": ["hushold", "hushald", "folk", "samfunn", "barn", "born", "famili"]
+                        },
+                        {
+                            "termlist_name": "termlist_2d",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "_comment": "Testing revealed that _poor_ AND _people_ terms mostly found medical results (e.g. _children of mothers with poor iodine intake_), therefore _poor_ is combined in phrases. This is only an issue in English.",
+                            "wordlist_en": ["poor household", "poor people", "poor communit", "poor child", "poor famil", "poor relief", "low income household", "low-income household","low income people", "low-income people","low income communit", "low-income communit","low income famil", "low-income famil"],
+                            "wordlist_no": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "3",
+            "phrases": [
+                {
+                    "number": 1,
+                    "logic_rule": "([termlist1_3a] | [termlist1_3b])",
+                    "sentence_split": true,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist1_3a",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["welfare system", "welfare service", "social security", "social service", "social assistance", "social floor", "social safety net", "safety net program",
+                            "social protection", "social benefits" , "social insurance", "social care service",
+                            "basic income" , "income security" , "guaranteed income" , "living allowance" , "housing assistance",
+                            "cash benefit" , "cash transfer", "cash plus program",
+                            "school feeding" , "free school meal" , "food stamp program" , "nutrition assistance program" , "food assistance program" , "WIC program" , "WIC benefits",
+                            "labour market polic" , "labor market polic" , "labour market intervention" , "labor market intervention", "labour market program" , "labor market program" , "public works program",
+                            "unemployment benefit" , "unemployment compensation" , "unemployment insurance" , "unemployment allowance" , 
+                            "disability benefit" , "disability allowance" , "disability pension" , "disability tax credit" , "disability insurance", 
+                            "health care benefit" , "sickness benefit" , "sick benefit" , "sick pay" , "paid sick leave" , "paid medical leave" , "sickness allowance",
+                            "maternity pay" , "maternity insurance" , "maternity benefit" , "maternity allowance" , "paid maternity leave" , 
+                            "parental benefit" , "paid parental leave" , "paid family leave" , "family leave tax credit" , "parental leave tax credit",
+                            "child benefit" , "child tax credit" , "child allowance",
+                            "pension insurance" , "pension plan" , "pension benefit" , "public pension" , "state pension"],
+                            "wordlist_no": ["velferdssystem", "velferdstjeneste", "velferdsteneste", "velferdsgode", "velferdsordning", "velferdsmodell", "velferdspolitikk", 
+                            "folketrygd", "trygdeordning", "sikkerhetsnett", "trygderett", 
+                            "sosialpolitiske ordning", "sosialhjelp",
+                            "gratis skolemat", "gratis skolemåltid",
+                            "arbeidsledighetstrygd", "arbeidsløysetrygd", "alderspensjon", "uførepensjon", "sykepenger", "sjukepengar", "frikort",
+                            "barnetrygd", "foreldrepermisjon", "svangerskapspermisjon", "foreldrefradrag", "foreldrefrådrag", "foreldrepenger", "fedrekvote", "mødrekvote"]
+                        },
+                        {
+                            "termlist_name": "termlist1_3b",
+                            "formatting_rule": "no_left_trunc",
+                            "na": false,
+                            "case": true,
+                            "wordlist_en": [],
+                            "wordlist_no": ["NAV"]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "4",
+            "phrases": [
+                {
+                    "number": 1,
+                    "logic_rule": "([termlist1_4a] | ([termlist1_4b] & [termlist1_4c]))",
+                    "sentence_split": true,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist1_4a",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["financial inclusion", "unbanked",
+                            "microfinanc", "micro-financ", "microinsurance", "micro-insurance", "microcredit", "micro-credit", "microloan", "micro-loan"],
+                            "wordlist_no": ["mikrofinans", "mikrokreditt", "mikroinnskudd", "mikroforsikring"]
+                        },
+                        {
+                            "termlist_name": "termlist1_4b",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "_comment":"_equity_ etc. will cover _inequity_ due to automatic truncation",
+                            "wordlist_en": ["access" , "equitab" , "equity" , "equality" , "equal", 
+                            "ownership" , "control" , "right" , "empower" , "inclusion",
+                            "affordab" , "pro poor" , "pro-poor", "inexpensive" , "free of charge" , "free service",
+                            "inaccessib" , "barrier" , "obstacle" , "unequal" , "inequalit" , "inequitab" , "exclusion", 
+                            "unaffordab" , "expensive"],
+                            "wordlist_no": ["tilgang", "tilgjenge", "likestilling", "likhet", "likheit", "rettferd", "rettvis",
+                            "kontroll", "rettighet", "rettigheit", "inkludering", "inkluderende", "inkluderande", "ekskludering", "barrier", "marginalis", "myndiggjør", "myndiggjer",
+                            "dyre", "ikke råd", "ikkje råd"]
+                        },
+                        {
+                            "termlist_name": "termlist1_4c",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "_comment":"_Saving_ (=_sparing_ NO) are not used here as they mostly add noise from _energy saving_, _cost saving_ or _nerve-sparing_ (medical). _seed banks_ are also an issue",
+                            "wordlist_en": ["a bank" , "bank account" , "banking" , "bank services", "financial service", "monetary service", "economic service",
+                            "digital finance", "mobile money", "electronic payment", "digital payment", "fintech",
+                            "credit", "savings account", "insurance", "payment service", "transfer service", "transfer fund",
+                            "financial resource", "monetary resource", "economic resource", "financial asset", "economic asset", "financial opportunit"],
+                            "wordlist_no": ["bankkonto", "bankkunde", "sparebank", "banktjenester", "finansielle tjenester", "banktenester", "finansielle tenester",
+                            "kreditt", "lån", "sparekonto", "forsikring", "betalingsløsning", "betalingsløysing", "betalingstjeneste", "betalingsteneste", "digitale penger", "digitale pengar", "nettbank", "mobilbank",
+                            "finansielle ressurs", "økonomiske ressurs"]
+                        }
+                    ]
+                },
+                {
+                    "number": 2,
+                    "logic_rule": "(([termlist1_4f] | ([termlist1_4d] & [termlist1_4e])) & not [termlist1_4g])",
+                    "sentence_split": true,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist1_4d",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "_comment": "We removed _inkludering_(NO) because the results were about using farms in inclusive education", 
+                            "wordlist_en": ["access" , "equitab" , "equity" , "equality" , "equal", 
+                            "ownership" , "control" , "right" , "empower" , "inclusion", "sharing",
+                            "affordab" , "pro poor" , "pro-poor", 
+                            "inaccessib" , "barrier" , "obstacle" , "unequal" , "inequalit" , "inequitab" , "exclusion",
+                            "unaffordab" , "expensive", "insecurity",
+                            "land rental", "income security", "secure livelihood"],
+                            "wordlist_no": ["tilgang", "tilgjenge", "likestilling", "ulikhet", "rettferd", "rettvis", 
+                            "eierskap", "eigarskap", "kontroll", "rettighet", "rettigheit", "ekskludering", "barrier", "marginali", "myndiggjør", "myndiggjer",
+                            "dyre", "ikke råd", "ikkje råd", "sikkerhet", "sikkerheit", "usikker",
+                            "eiendomsrett", "eigedomsrett", "landrett", "landfattig", "jobbtrygghe", "arvesystem"]
+                        },
+                        {
+                            "termlist_name": "termlist1_4e",
+                            "formatting_rule": "specific_trunc",
+                            "na": false,
+                            "case": false,
+                            "_comment": "Here we are preventing truncation because _arv_(NO) is problematic. We also had to remove the term _land_ and _income_ and specify them in phrases (e.g. _income inequality_) under 4f. This was because there were many results about e.g. health outcomes of a disease in a low-income country.", 
+                            "wordlist_en": ["economic resource.*", "natural resources",
+                            "employment", "decent work", "paid work", "labour market", "incomes", "livelihood", "livelihoods", "wealth", "inheritance", 
+                            "farmland.*", "land resources", "farm", "farms", "tenure", "property", "home ownership"],
+                            "wordlist_no": ["finansielle ressurs.*", "økonomiske ressurs.*", "naturressurs.*",
+                            "lønnet arbeid", "løna arbeid", "anstendig arbeid.*", "arbeidsmark.*", "inntekt", "lønn", "levebrød", "underhold", "underhald", "rikdom", "arv", "arving", "utkomme", "utkome", 
+                            "gård", "småbruk", "familiegård", "gårdsbruk", "gardsbruk", "dyrket mark", "dyrka mark", "dyrkamark", "kultivert mark", "landsressurs.*", 
+                            "eiendom.*", "eigedom.*", "forpakting"]
+                        },
+                        {
+                            "termlist_name": "termlist1_4f",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["land rights", "rights to land", "right to land", "access to land", "land grab", "tenure security", "secure tenure", "income inequality"],
+                            "wordlist_no": ["rettigheter til land", "rettigheiter til land", "rett til land", "jordleie", "jordleige", "leie av jord", "leige av jord", "tomtefeste",
+                            "bygsling", "tomterett", "servitutt"]
+                        },
+                        {
+                            "termlist_name": "termlist1_4g",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["intellectual property right", "wind farm", "quality control", "parasite control", "worm control", "pest control"],
+                            "wordlist_no": []
+                        }
+                    ]
+                },
+                {
+                    "number": 3,
+                    "logic_rule": "(([termlist1_4h] & [termlist1_4i]) & not [termlist1_4jnot])",
+                    "sentence_split": true,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist1_4h",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["access" , "equitab" , "equity" , "equality" , "equal", "empower" , "inclusion", 
+                            "ownership", "right",
+                            "affordab" , "pro poor" , "pro-poor", "inexpensive", "unaffordab" , "expensive", "low cost", "free of charge", "free service",
+                            "inaccessib" , "barrier", "inequalit", "inequitab", "exclusion"],
+                            "wordlist_no": ["tilgang", "tilgjenge", "likestilling", "ulikhet", "rettferd", "rettvis", "myndiggjør", "myndiggjer",
+                            "eierskap", "eigarskap", "rettighet", "rettigheit",
+                            "ikke råd", "ikkje råd",
+                            "ekskludering", "barrier"]
+                        },
+                        {
+                            "termlist_name": "termlist1_4i",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "_comment":"skole(NO) is limited to specific basic levels here to avoid its use in Norwegian university names, e.g. _Høyskole_", 
+                            "wordlist_en": ["basic service", "basic facilities", "essential service",
+                            "drinking water", "sanitation", "basic hygiene", "hygiene service", "toilet", "handwashing", "sewage", "WASH facilities", 
+                            "clean water",
+                            "waste collection", "waste service", "waste facilit", "garbage service", "garbage collection", 
+                            "health service", "health facilit", "basic health", "essential health", "healthcare", "health care", "medical care", "essential medical",
+                            "school service", "school facilit", "basic school", "primary school", "basic education", "education service", "primary education",
+                            "basic communication service", "basic telecommunication service", "basic information service", "basic information infrastructure",
+                            "electricity", "energy service", "modern energy", "clean fuel", "clean energy", "modern energy",
+                            "public open space", "public space", "public green space",
+                            "basic mobility", "urban mobility", "rural mobility", "all-season road", "transport service", "public transport"],
+                            "wordlist_no": ["grunnleggende tjeneste", "grunnleggjande teneste", "grunnleggende fasilitet", 
+                            "drikkevann", "drikkevatn", "grunnleggende hygiene", "grunnleggjande hygiene", "kloakk", "toalett", "vannklosett", "vassklosett", "håndvask", "handvask", "sanitær",
+                            "rent vann", "reint vatn", "reint vann", "innlagt vann", "innlagt vatn", "vanntilgang", "vannforsyning",
+                            "avfallstjeneste", "avfallsteneste", "søppeltømming", "avfallsinnsamling", "bosteneste", "bosinnsamling", "bostømming", "renovasjon",
+                            "helsetjeneste", "helseteneste", "fastlege", "helsevesen",
+                            "ungdomsskole", "ungdomsskule", "barneskole", "barneskule", "grunnleggende utdannin", "grunnleggjande utdannin", 
+                            "kommunikasjonstjenester", "kommunikasjonstenester", "kommunikasjonsinfrastruktur", "grunnleggende kommunikasjon",
+                            "energitjeneste", "energiteneste", "energilever", "elektrisitet", "energiforsyning", "kraftforsyning", "moderne energi",
+                            "offentlig rom", "offentlige rom", "offentleg rom", "offentlege rom", "grønt areal", "grønne areal", "grøntområde", "friområde", "friareal", "rekreasjonsområde",
+                            "offentlig transport", "offentlige transport", "offentleg transport", "offentlege transport", "kollektivtransport", "kollevktivtilb", "transportordning", 
+                            "mobilitet"]
+                        },
+                        {
+                            "termlist_name": "termlist1_4jnot",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "_comment": "Terms from ICT that are used a lot in healthcare (i.e. technical access and security) that we want to remove.", 
+                            "wordlist_en": ["authenticated access", "access control"],
+                            "wordlist_no": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "5",
+            "phrases": [
+                {
+                    "number": 1,
+                    "logic_rule": "(([termlist1_5a] & ([termlist1_5b] | [termlist1_5c])) & ([termlist1_5d] | [LDC] | [SIDS]))",
+                    "sentence_split": true,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist1_5a",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["sendai", "protect", "safeguard", "safety", "safety net", "social protection", "social floor", "social security",
+                            "coping", "cope", "adapt", "resilien", "mitigat", "prepared", "protection", "early warning", "impact", "vulnerab", "exposure",
+                            "planning", "disaster plan", "strateg", "disaster reduc", "risk reduc", "relief", "manag", "program", "programme", "policy", "policies", 
+                            "medical response", "medical respond", "emergency respon"],
+                            "wordlist_no": ["beskytte", "verne", "sikkerhet", "sikkerheit", "sosialpolitiske ordning", "sosialhjelp",
+                            "tåle", "tilpass", "forbered", "beredskap", "varsling", "varsel", "sårbar", "eksponer", "påvirkning", "påverknad",
+                            "handlingsplan", "planer", "planar", "planlegging", "strategi", "katastrofeplanlegging", "krisehandtering", "krisehåndtering", "risikoreduksjon", "strategi", "politikk", "retningslinj",
+                            "nødhjelp", "naudhjelp", "feltsykehus", "feltsjukehus"]
+                        },
+                        {
+                            "termlist_name": "termlist1_5b",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["disaster", "catastrophe", "hazard",
+                            "extreme climat", "extreme weather", "extreme precipitation", "extreme rain", "extreme snow", "extreme temperatur", "extreme storm", "extreme wind", 
+                            "rogue wave", "tsunami", "cyclone", "typhoon", "hurricane", "tornado", 
+                            "drought", "flood", 
+                            "avalanche", "landslide", "land-slide", "land slide", "rockslide", "rock-slide", "rock slide", "rockfall", "surface collapse", "mudflow", "mud-flow", 
+                            "cold spell", "cold wave", "dzud", "blizzard", "snowstorm", 
+                            "heatwave", "heat-wave", 
+                            "earthquake", "volcan", "ash cloud", "ash fall", "tephra", 
+                            "wildfire", "wild-fire", "wild fire", "forest-fire", "forest fire", "forestfire", 
+                            "sea-level rise", "sea-level change", "rising sea-level", 
+                            "outbreak", "pandemic", "epidemic", 
+                            "armed conflict", "political instability", "civil instability", "politically volatile", 
+                            "unrest", "financial crash", "financial shock", "economic downturn", "economic shock"],
+                            "wordlist_no": ["katastrof", "krise", 
+                            "ekstremvær", "ekstremver", 
+                            "tropisk lavtrykk", "tropisk lågtrykk", "flodbølg", "monsterbølg", "ekstrembølg", 
+                            "orkan",  "tyfon", "syklon", "snøstorm", 
+                            "flom", "flaum", "oversvøm", "overfløym", "tørke", 
+                            "snøskred", "skred", "snøras", "lavine", "jordskred", "jordras", "sørpeskred", "leirras", "leirskred", "steinras", "steinskred", "synkehull", "søkkehol", "søkkjehol",
+                            "uvanlig kulde", "uvanlig kaldt", "uvanleg kulde", "uvanleg kaldt", "ekstrem kuld", "ekstremkuld", "kuldebølg", "snøstorm", 
+                            "varmebølg", "hetebølg", "ekstrem varm", "ekstremvarm", "uvanlig varm", "uvanleg varm", 
+                            "jordskjelv", "vulkan", "askenedfall", "oskenedfall", "askesky", "oskesky", 
+                            "skogbrann", "gressbrann", "grasbrann", "lyngbrann", 
+                            "havnivåstigning", "stormflo", 
+                            "pandemi", "epidemi", "utbrudd", "utbrot",
+                            "politisk ustabilitet", "væpnede konflikter", "væpnet konflikt", "væpna konflikt", "borgerkrig", "borgarkrig", "fremmedkrig", "finanskrise", "finanssjokk", 
+                            "finanskræsj", "økonomisk nedgang", "økonomisk sjokk"]
+                        },
+                        {
+                            "termlist_name": "termlist1_5c",
+                            "formatting_rule": "specific_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["war", "wars"],
+                            "wordlist_no": ["krig", "ras"]
+                        },
+                        {
+                            "termlist_name": "termlist1_5d",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["poverty", "rural poor", "urban poor", "working poor", "destitute", "low income", "low-income", "poor households", "poorest households", "poor communit", "poorest communit", 
+                            "social capital",
+                            "disadvantaged", "marginalis", "marginalized", "vulnerable", "discriminated",
+                            "slum", "shanty town", "informal settlement", "homeless",
+                            "patient", "disabled", "disabilities", "disability",
+                            "older people", "old people", "retired people", "elderly", "elders", "pensioner", 
+                            "unemployed",
+                            "women", "woman", "girl", "pregnan", "maternity", "child", "baby", "babies", "newborn", "toddler", "youth", "infant",
+                            "indigenous", "minorities", "minority", "refugee", "asylum", "immigrant",
+                            "trans people", "transgender", "lgbt", "lesbian", "gay", "bisexual", "intersex",
+                            "least developed countr", "least developed nation", "developing countr", "developing nation", "developing states", "island developing state", "developing world", 
+                            "less developed countr", "less developed nation", 
+                            "under developed countr", "under developed nation", "underdeveloped countr", "underdeveloped nation",
+                            "underserved countr", "underserved nation", "deprived countr", "deprived nation",
+                            "middle income countr", "middle income nation", "middle-income countr", "middle-income nation", 
+                            "low income countr", "low income nation", "lower income countr", "lower income nation", "low-income countr", "low-income nation", "lower-income countr", "lower-income nation", 
+                            "poor countr", "poor nation", "poorer countr", "poorer nation", 
+                            "third world", "global south", "transitional countr", "emerging economies", "emerging nation"],
+                            "wordlist_no": ["fattig", "lavinntekt", "lav inntekt", "låginntekt", "låg inntekt",
+                            "sårbar", "diskrimin",
+                            "hjemløs","heimlaus", "slum", 
+                            "pasient", "uføre", "funksjonshem",
+                            "eldre", "de gamle", "dei gamle",
+                            "arbeidsløs","arbeidslaus",
+                            "kvinne", "jente", "gravid", "barn", "born", "babier", "baby", "nyfødt","nyfødd",
+                            "urfolk", "urinnvånarar", "urbefolkning", "urinnvånere", "sápmi", "sami", "minoritet", "jøder", "jødar", "kvener", "kvenar", "norskfinn", "skogfinn", "romani", "tatere", "taterar", "asylsøk", "flyktning", "innvandrer", "innvandrar",
+                            "transperson", "lesbisk", "homofile", "bifile", "lbht", "interkjønn",
+                            "utviklingsland", "u-land", "uland", "underutviklede land", "underutvikla land", "lavinntektsland", "låginntektsland",
+                            "underpriviligerte land", "mellominntektsland", "ressurssvake land", "tredje verd", "fattige land", 
+                            "globale sør", "overgangsøkonomi", "fremvoksende økonomier", "framvoksende økonomier", "framveksande økonomi",
+                            "framvoksende land", "fremvoksende land", "framveksande land", "bistandsland", "minst utviklede land", "minst utvikla land", "små utviklingsøystat", "små øystat",
+                            "kystløse utviklingsland"]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "a",
+            "phrases": [
+                {
+                    "number": 1,
+                    "logic_rule": "(([termlist1_aaalt] | ([termlist1_aaalt2] & [termlist1_ab])) & [LMIC])",
+                    "sentence_split": true,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist1_aaalt",
+                            "formatting_rule": "specific_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["oda", "development spending", "development assistance"],
+                            "wordlist_no": ["bistand.*",  "utviklingssamarbeid.*", "utviklingsstøtte", "utviklingsstønad", "utviklingshjelp", "u-hjelp", "oda"]
+                        },
+                        {
+                            "termlist_name": "termlist1_aaalt2",
+                            "formatting_rule": "specific_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["fdi", "aid", "assistance", "funding", "grant", "invest", "investment.*", "investing", "financial support", "financing", "resources", "capital flow.*",
+                            "cooperation", "co-operation", "collaboration.*", "network.*", "partnership.*"],
+                            "wordlist_no": ["midlar", "økonomiske ressurs.*", "finansiel.*", "ressurs.*", "investering", "nødhjelp", "naudhjelp", "kapitalstrøm",              
+                            "samarbeidsfond.*", "samarbeid.*", "nettverk.*", "partnerskap.*", "partnarskap.*"]
+                        },
+                        {
+                            "termlist_name": "termlist1_ab",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["poverty", "pro-poor", "antipoverty"],
+                            "wordlist_no": ["fattig"]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "b",
+            "phrases": [
+                {
+                    "number": 1,
+                    "logic_rule": "(([termlist1_ba] | [termlist1_ba_trunc]) & ([termlist1_bb] | ([termlist1_bc] & ([termlist1_bd] | [termlist1_bd_trunc]))))",
+                    "sentence_split": true,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist1_ba",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["legislat", "program", "strateg", "policy", "policies", "planning", "framework", "initiativ"],
+                            "wordlist_no": ["lovverk", "lovgiv", "strateg", "politikk", "retningslinje", "utredning", "utgreiing", "rammeverk", "tiltaksplan", "planer", "planar"]
+                        },
+                        {
+                            "termlist_name": "termlist1_ba_trunc",
+                            "formatting_rule": "specific",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["law", "laws", "plan", "plans"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist1_bb",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["anti poverty", "anti-poverty", "antipoverty"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist1_bc",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["poverty"],
+                            "wordlist_no": ["fattig"]
+                        },
+                        {
+                            "termlist_name": "termlist1_bd",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["minimi", "reduc", "mitigat", "alleviat", "tackl", "fight", "combat", "ending", "eliminat", "eradicat", "prevent", "out of", "overcom", "escap", "relief"],
+                            "wordlist_no": ["minim", "reduser", "bekjemp", "forhind", "nedkjemp", "motarbeid", "forebygg", "førebygg", "førebu", "utrydd", "kvitt", "løft", "ut av "]
+                        },
+                        {
+                            "termlist_name": "termlist1_bd_trunc",
+                            "formatting_rule": "specific",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": [],
+                            "wordlist_no": ["mot", "imot", "kamp", "kampen"]
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "mentions": {
+        "logic_rule": "([termlist_sdg_a] | [termlist_sdg_f] | ([termlist_sdg_b] & [termlist_sdg_c]) | ([termlist_sdg_d] & [termlist_sdg_e]))",
+        "sentence_split": true,
+        "termlists" :[
+            {
+                "termlist_name": "termlist_sdg_a",
+                "formatting_rule": "specific", 
+                "na": false,
+                "case": false,
+                "wordlist_en": ["SDG 1", "SDGs 1", "SDG1", "sustainable development goal 1"],
+                "wordlist_no": ["SDG 1", "SDG1","bærekraftsmål 1", "berekraftsmål 1"]
+            },
+            {
+                "termlist_name": "termlist_sdg_b",
+                "formatting_rule": "default", 
+                "na": false,
+                "case": false,
+                "wordlist_en": ["sustainable development goal"],
+                "wordlist_no": ["bærekraftsmål", "berekraftsmål"]
+            },
+            {
+                "termlist_name": "termlist_sdg_c",
+                "formatting_rule": "specific", 
+                "na": false,
+                "case": false,
+                "wordlist_en": ["goal 1"],
+                "wordlist_no": ["mål 1"]
+            },
+            {
+                "termlist_name": "termlist_sdg_d",
+                "formatting_rule": "specific", 
+                "na": false,
+                "case": false,
+                "wordlist_en": ["sustainable development goal.*", "SDG", "goal 1"],
+                "wordlist_no": ["SDG", "bærekraftsmål", "berekraftsmål", "mål 1"]
+            },
+            {
+                "termlist_name": "termlist_sdg_e",
+                "formatting_rule": "default", 
+                "na": false,
+                "case": false,
+                "wordlist_en": ["poverty"],
+                "wordlist_no": ["fattig"]
+            },
+            {
+                "termlist_name": "termlist_sdg_f",
+                "formatting_rule": "default", 
+                "na": false,
+                "case": false,
+                "wordlist_en": ["no poverty"],
+                "wordlist_no": ["utrydde fattigdom"]
+            }
+        ]
+    }
+}

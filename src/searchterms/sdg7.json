@@ -1,0 +1,1086 @@
+{
+    "name": "sdg7",
+    "number": 7,
+    "generated_datetime": "09-12-2025 10:07:35",
+    "pre-search": [],
+    "targets": [
+        {
+            "name": "1",
+            "phrases": [
+                {
+                    "number": 1,
+                    "logic_rule": "((([termlist7_1a] & [termlist7_1b]) | ([termlist7_1c] & [termlist7_1c2])) & [termlist7_1d])",
+                    "sentence_split": true,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist7_1a",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["energy transition"],
+                            "wordlist_no": ["energiomlegging", "energiomstilling"]
+                        },
+                        {
+                            "termlist_name": "termlist7_1b",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["household", "cooking", "stove", "lighting", "lamps", "heating"],
+                            "wordlist_no": ["hushold", "hushald", "matlaging", "komfyr", "ovn", "lys", "lampe", "oppvarming"]
+                        },
+                        {
+                            "termlist_name": "termlist7_1c",
+                            "formatting_rule": "specific_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["clean", "cleaner", "modern"],
+                            "wordlist_no": ["ren", "rein", "rent", "renere", "reint", "reinere", "reinare", "rentbrennende", "reintbrennende", "reintbrennande"]
+                        },
+                        {
+                            "termlist_name": "termlist7_1c2",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["fuel", "energy", "electricity", "cooking", "stove", "lighting", "lamp", "heating"],
+                            "wordlist_no": ["brennstoff", "energi", "energi", "strøm", "straum", "elektrisitet"]
+                        },
+                        {
+                            "termlist_name": "termlist7_1d",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["household", "homes", "house", "housing", "residential", "dwelling", "domestic", "slum", "village", "women"],
+                            "wordlist_no": ["hushold", "hushald", "hjem", "heim", "hus", "bolig", "bustad", "slum", "landsby", "kvinne"]
+                        }
+
+                    ]
+                },
+                {
+                    "number": 2,
+                    "logic_rule": "([termlist7_1e])",
+                    "sentence_split": false,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist7_1e",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["solar cook", "solar box cook", "improved cookstove", "improved stove", "modern cookstove", "modern stove", "stove exchange"],
+                            "wordlist_no": ["solkok", "solovn", "solcelleovn", "solfyr", "solgrill"]
+                        }
+                    ]
+                },
+                {
+                    "number": 3,
+                    "logic_rule": "(([termlist7_1f] & [termlist7_1g]) | ([termlist7_1f2] & [termlist7_1g2]))",
+                    "sentence_split": true,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist7_1f",
+                            "formatting_rule": "specific_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["kerosene", "solid fuel.*", "coal"],
+                            "wordlist_no": ["parafin.*", "fast bren.*", "koks"],
+                            "_comment": "There is no Norwegian translation of the search term coal as it only returns noise, not really a common fuel in Norway"
+                        },
+                        {
+                            "termlist_name": "termlist7_1f2",
+                            "formatting_rule": "specific_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["kerosene", "solid fuel.*"],
+                            "wordlist_no": ["parafin.*", "fast bren.*", "koks"]
+                        },
+                        {
+                            "termlist_name": "termlist7_1g",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["household", "home", "hous", "residential", "dwelling", "domestic use", "slum", "residential heating", "central heating", "winter heating",
+                                            "cooking", "stove", "lighting", "lamps"],
+                            "wordlist_no": ["hushold", "hushald", "hjem", "heim", "hus", "bolig", "bustad", "slum",
+                                            "oppvarming", "varme", "fyre", "fyring", "matlaging", "ovn", "lys", "belysning", "ljos", "lampe"]
+                        },
+                        {
+                            "termlist_name": "termlist7_1g2",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["heating"],
+                            "wordlist_no": []
+                        }
+                    ]
+                },
+                {
+                    "number": 4,
+                    "logic_rule": "([termlist7_1h])",
+                    "sentence_split": false,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist7_1h",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["energy poverty", "energy vulnerability", "fuel poverty", "energy democracy", "energy justice", "energy inequit", "energy security", "energy insecur"],
+                            "wordlist_no": ["energifattigdom", "energisårbarhet", "energidemokrati", "energirettferdighet", "energisikkerhet"]
+                        }
+                    ]
+                },
+                {
+                    "number": 5,
+                    "logic_rule": "(([termlist7_1i2] | ([termlist7_1x] & ([termlist7_1xt] | ([termlist7_1xtr] & [termlist7_1j]))) | (([termlist7_1xtra] | ([termlist7_1x] & [termlist7_1xtras])) & ([LMIC] | [termlist7_1k]))))",
+                    "sentence_split": true,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist7_1i",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["electricity", "energy", "power", "universal electrification", "rural electrification", "national electrification", "electrification", "grid extension", "grid extensions",
+                                            "access to energy", "provision of energy", "energy provision", "provision of electricity", "electricity provision", "electricity supply", "electrical supply", "power supply"],
+                            "wordlist_no": ["elektrisitet", "strøm", "straum", "energi", "kraft", "elektrifisering", "elektrisering", "mikronett", "øydrift", "tilgang til energi", "tilgang på energi", "energitilgang",
+                                            "tilgang til elektrisitet", "tilgang på elektrisitet", "tilgang til strøm", "tilgang til straum", "tilgang på strøm", "tilgang på straum"]
+                        },
+                        {
+                            "termlist_name": "termlist7_1j",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["household", "home", "house", "housing", "residential", "dwelling", "domestic use", "slum", "village","sustainable", "green", "clean","modern"],
+                            "wordlist_no": ["hushold", "hushald", "hjem", "heim", "hus", "bolig", "bustad", "slum", "landsby","bærekraftig", "berekraftig", "grøn", "ren", "rein", "moderne"]
+                        },
+                        {
+                            "termlist_name": "termlist7_1k",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["rural", "remote region", "remote area", "remote communit"],
+                            "wordlist_no": ["landlig", "landsby"]
+                        },
+                        {
+                            "termlist_name": "termlist7_1i2",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["universal electrification", "rural electrification", "national electrification"],
+                            "wordlist_no": ["elektrifisering"]
+                        },
+                        {
+                            "termlist_name": "termlist7_1x",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["access", "provision"],
+                            "wordlist_no": ["tilgang", "tilbud", "tilbod"]
+                        },
+                        {
+                            "termlist_name": "termlist7_1xt",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["energy services", "energy supply"],
+                            "wordlist_no": ["energitjeneste", "energiteneste", "energiforsyning", "strømforsyning", "straumforsyning", "kraftforsyning"]
+                        },
+                        {
+                            "termlist_name": "termlist7_1xtr",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["electric", "energy", "power"],
+                            "wordlist_no": ["elektris", "energi", "kraft"]
+                        },
+                        {
+                            "termlist_name": "termlist7_1xtra",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["electrification", "grid extension"],
+                            "wordlist_no": ["elektrifiser"]
+                        },
+                        {
+                            "termlist_name": "termlist7_1xtras",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["energy", "electricity", "electrical supply", "power supply"],
+                            "wordlist_no": ["elektris", "energi", "strømforsyning", "straumforsyning", "kraftforsyning"]
+                        }
+                    ]
+                },
+                {
+                    "number": 6,
+                    "logic_rule": "([termlist7_1l] & ([termlist7_1m] | ([termlist7_1n] & [termlist7_1o]) | [termlist7_1p] | ([termlist7_1q] & [termlist7_1r]) | [termlist7_1s]))",
+                    "sentence_split": true,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist7_1l",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["stable", "stability", "reliable", "reliability", "secur", "resilient", "resilience", "affordable", "affordability", "inexpensive", "low cost", "cheap",
+                                            "unstable", "instability", "unreliable", "unreliability", "unaffordable", "costly", "energy cost", "expensive"],
+                            "wordlist_no": ["stabil", "pålitelig", "påliteleg", "sikker", "robust", "rimelig", "rimeleg", "billig", "ustabil", "upålitelig", "upåliteleg", "kostbar", "dyr"]
+                        },
+                        {
+                            "termlist_name": "termlist7_1m",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["energy services", "electric supply"],
+                            "wordlist_no": ["energitjeneste", "energiteneste", "energiforsyning", "strømforsyning", "straumforsyning", "kraftforsyning"]
+                        },
+                        {
+                            "termlist_name": "termlist7_1n",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["energy", "power", "electricity"],
+                            "wordlist_no": ["energi", "strøm", "straum", "kraft", "elektrisitet"]
+                        },
+                        {
+                            "termlist_name": "termlist7_1o",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["household", "home", "house", "housing", "residential", "dwelling", "domestic use", "slum", "village", "sustainable"],
+                            "wordlist_no": ["hushold", "hushald", "hjem", "heim", "hus", "bolig", "bustad", "slum", "landsby", "bærekraftig", "berekraftig",
+                                            "forsyningssikkerhet", "forsyningssikkerheit"]
+                        },
+                        {
+                            "termlist_name": "termlist7_1p",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["microgrid", "micro grid", "minigrid", "mini grid", "off grid solution", "off-grid system"],
+                            "wordlist_no": ["mikronett", "øydrift"]
+                        },
+                        {
+                            "termlist_name": "termlist7_1q",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["energy", "electricity"],
+                            "wordlist_no": ["energi", "elektrisitet", "strøm", "straum", "kraft"]
+                        },
+                        {
+                            "termlist_name": "termlist7_1r",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["infrastructure", "off grid", "decentralised", "decentralized", "cooperative"],
+                            "wordlist_no": ["infrastruktur", "desentralisert", "kooperativ"]
+                        },
+                        {
+                            "termlist_name": "termlist7_1s",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["community energy", "community renewable energy"],
+                            "wordlist_no": ["energisamfunn"]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "2",
+            "phrases": [
+                {
+                    "number": 1,
+                    "logic_rule": "(([termlist7_2a] & [termlist7_2b]) | ([termlist7_2c] & [termlist7_2d]))",
+                    "sentence_split": false,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist7_2a",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["renewable"],
+                            "wordlist_no": ["fornybar"]
+                        },
+                        {
+                            "termlist_name": "termlist7_2b",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["energy transition", "sector transformation", "energy transformation"],
+                            "wordlist_no": ["omstilling", "endring", "transform"]
+                        },
+                        {
+                            "termlist_name": "termlist7_2c",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["renewable energy"],
+                            "wordlist_no": ["fornybar energi"]
+                        },
+                        {
+                            "termlist_name": "termlist7_2d",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["substitut", "uptake"],
+                            "wordlist_no": ["erstat", "overgang"]
+                        }
+                    ]
+                },
+                {
+                    "number": 2,
+                    "logic_rule": "(([termlist7_2e] | [termlist7_2f]) & ([termlist7_2g] | ([termlist7_2h] & [termlist7_2i]) | [termlist7_2j] | ([termlist7_2k] & [termlist7_2l] ) | ([termlist7_2m] & [termlist7_2n]) | [termlist7_2o] | ([termlist7_2p] & [termlist7_2q]) | [termlist7_2r] | ([termlist7_2s] & [termlist7_2t]) | ([termlist7_2u] & [termlist7_2v]) | ([termlist7_2w] & [termlist7_2x])))",
+                    "sentence_split": true,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist7_2e",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["relian", "primary use", "primary usage", "primary source", "adopt", "implementation", "uptake", "contribution", "proportion", "share", "expansion", "feasibility", 
+                                            "attractiveness", "incentive", "initiative", "affordab", "inexpensive", "low cost", "economic viability", "cost-effectiveness", 
+                                             "cost-advantage", "investment", "investing", "investor", "subsidies", "subsidisation", "subsidization", "financing", "funding", 
+                                             "commercialisation", "commercialization", "energy service", "energy sector", "generation", "capacity", "global energy", 
+                                            "global electricity", "energy mix", "market share", "barrier", "obstacle", "implement", "incentivi", "energy transition", 
+                                            "renewable transition", "transition to", "energy certificat", "green certificat", "policy", "policies", "legislation", "kyoto protocol",
+                                            "strateg", "energy management", "energy planning", "subsidise", "subsidize", "green bond", "climate bond", "feed-in tariff", "upscale", "scale-up", 
+                                            "commercial development", "development commercially", "roll out", "rollout", "sustainable development", "sustainable energy development"],
+                            "wordlist_no": ["avhengig", "primær bruk", "primærbruk", "primær kilde", "primær kjelde", "primærkilde", "primærkjelde", "ta i bruk", "implementer", "oppfat", 
+                                            "bidra", "utvid", "gjennomfør", "attraktiv", "insentiv", "initiativ", "rimelig", "rimeleg", "billig", "billeg", "lav kost", "låg kost", 
+                                            "kostnadseffektiv", "invester", "subsidie", "finansiering", "kommersialisering", "energitjeneste", "energiteneste", "energisektor", "produksjon",
+                                            "kapasitet", "global energi", "global elektrisitet", "energimiks", "markedsandel", "marknadsdel", 
+                                            "barriere", "hinder", "hindring", "energiomstilling", "omstilling til fornybar", "overgang", "fornybar", 
+                                            "elsertifi", "grønn sertifi", "grøn sertifi", "politikk", "retningslin", "lovgiv", "lovgjev", "kyotoprotokollen", "kyotoavtalen", 
+                                            "energiledelse", "energileiing", "energiplanlegging", "invester", "grønne obligasjon", "grøne obligasjon", "klimaobligasjon",
+                                            "innmatingstariff", "oppskaler", "kommersiell utvikling", "lanser", "rulle ut", "utrulling", 
+                                            "bærekraftig utvikling", "berekraftig utvikling", "bærekraftig energiutvikling", "berekraftig energiutvikling"]
+                        },
+                        {
+                            "termlist_name": "termlist7_2f",
+                            "formatting_rule": "specific_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["invest"],
+                            "wordlist_no": ["andel", "andeler", "del"]
+                        },
+                        {
+                            "termlist_name": "termlist7_2g",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["non conventional energy"],
+                            "wordlist_no": ["alternativ energi"]
+                        },
+                        {
+                            "termlist_name": "termlist7_2h",
+                            "formatting_rule": "specific_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["electricity", "power", "energy"],
+                            "wordlist_no": ["elektrisitet", "kraft", "strøm", "straum", "energi"]
+                        },
+                        {
+                            "termlist_name": "termlist7_2i",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["renewable", "sustainable", "green", "hydrothermal", "geothermal", "hydroelectric", "hydropower", "hydro", "hydrokinetic"],
+                            "wordlist_no": ["fornybar", "bærekraftig", "berekraftig", "grøn", "hydroterm", "varmekraft", "geoterm", "hydroelektris", "vannkraft", "vasskraft", "hydrokinetisk"]
+                        },
+                        {
+                            "termlist_name": "termlist7_2j",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["geothermal heat pump", "ground source heat pump", "solar cell", "solar-cell", "solar panel", "solar-panel", "solar power", "solar array", "solar PV", 
+                            "photovoltaic", "solar energy collector", "solar farm", "solar plant", "solar park", "solar district heating", "solar district cooling", 
+                            "solar air heating system", "solar space heating system"],
+                            "wordlist_no": ["varmepumpe", "solcelle", "solkraft", "solenergi", "fotovoltaisk", "solfang", "solsaml", "solvarm", "solpark", "solcellepark"]
+                        },
+                        {
+                            "termlist_name": "termlist7_2k",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["solar thermal"],
+                            "wordlist_no": ["sol", "solvarme"]
+                        },
+                        {
+                            "termlist_name": "termlist7_2l",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["power", "technolog", "collector", "district"],
+                            "wordlist_no": ["kraft", "teknologi", "saml", "distrikt"]
+                        },
+                        {
+                            "termlist_name": "termlist7_2m",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["solar thermal energy"],
+                            "wordlist_no": ["solenergi", "solvarm"]
+                        },
+                        {
+                            "termlist_name": "termlist7_2n",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["power", "electric", "water heating", "industrial process heat"],
+                            "wordlist_no": ["kraft", "elektris", "vann", "vass", "spillvarme"]
+                        },
+                        {
+                            "termlist_name": "termlist7_2o",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["wind farm", "wind turbine", "wind park", "wind factory", "wind factories", "wind energy",
+                                            "tidal turbine", "stream turbine", "current turbine", "tidal power", "tidal energy", "marine energy"],
+                            "wordlist_no": ["vindkraftverk", "vindturbin", "vindpark", "vindmøllepark", "havvind", "vindenergi",
+                                            "tidevannsturbin", "havstrømturbin", "tidevannskraft", "tidevannsenergi", "marin energi", "havenergi"]
+                        },
+                        {
+                            "termlist_name": "termlist7_2p",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["wave energy"],
+                            "wordlist_no": ["bølgeenergi", "bølgjeenergi", "bølgekraft", "bølgjekraft"]
+                        },
+                        {
+                            "termlist_name": "termlist7_2q",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["converter", "renewable", "power", "generat", "energy harvesting"],
+                            "wordlist_no": ["omdann", "omform", "konverter", "fornybar", "kraft", "energi"]
+                        },
+                        {
+                            "termlist_name": "termlist7_2r",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["biofuel", "bioenergy", "biodiesel"],
+                            "wordlist_no": ["biodrivstoff", "bioenergi"]
+                        },
+                        {
+                            "termlist_name": "termlist7_2s",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["biomass", "wind", "solar", "ammonia"],
+                            "wordlist_no": ["vind", "sol"]
+                        },
+                        {
+                            "termlist_name": "termlist7_2t",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["electric", "energy", "power system"],
+                            "wordlist_no": ["elektrisk", "energi", "kraftsystem"]
+                        },
+                        {
+                            "termlist_name": "termlist7_2u",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["hydrogen"],
+                            "wordlist_no": ["hydrogen"]
+                        },
+                        {
+                            "termlist_name": "termlist7_2v",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["renewable", "green"],
+                            "wordlist_no": ["fornybar", "bærekraft", "berekraft", "grøn"]
+                        },
+                        {
+                            "termlist_name": "termlist7_2w",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["fuel cell", "battery", "batteries", "lithium ion", "energy storage", "smart grid", "smart-grid"],
+                            "wordlist_no": ["brenselcelle", "brenselscelle", "brenslecelle", "batteri", "litium-ion", "energilagring", "smartgrid", "smartnett"]
+                        },
+                        {
+                            "termlist_name": "termlist7_2x",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["renewab", "sustainab"],
+                            "wordlist_no": ["fornybar", "bærekraft", "berekraft"]
+                        }
+                    ]
+                },
+                {
+                    "number": 3,
+                    "logic_rule": "(((([termlist7_2y] | [termlist7_2z]) & (([termlist7_2z1] & [termlist7_2z3]) | [termlist7_2z2])) | (([termlist7_2z5] | [termlist7_2z]) & [termlist7_2z4])) & not [termlist7_2z6])",
+                    "sentence_split": true,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist7_2y",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["fossil fuel", "natural gas", "grey hydrogen", "conventional energy"],
+                            "wordlist_no": ["fossilt brensel", "fossile brensl", "fossilt brennstoff", "fossile brennstoff", "naturgass", "grått hydrogen", "konvensjonell energi"]
+                        },
+                        {
+                            "termlist_name": "termlist7_2z",
+                            "formatting_rule": "specific_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["coal", "oil"],
+                            "wordlist_no": ["kull", "kol", "olje", "råolje", "petroleum"]
+                        },
+                        {
+                            "termlist_name": "termlist7_2z1",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["reduc", "decreas", "improv", "support", "encourag", "intervention", "policy", "policies", "legislation", "incentiv"],
+                            "wordlist_no": ["reduser", "reduksjon", "mink", "bedre", "betr", "støtte", "stønad", "oppmuntr", "oppmod", "intervensjon", "inngrip", "politikk", "retningslin", "lovgiv", "insentiv"]
+                        },
+                        {
+                            "termlist_name": "termlist7_2z2",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["reliance", "consumption", "transition", "substitut", "primary source"],
+                            "wordlist_no": ["avhengig", "forbruk", "overgang", "erstat", "primærkilde"]
+                        },
+                        {
+                            "termlist_name": "termlist7_2z3",
+                            "formatting_rule": "specific_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["use", "usage"],
+                            "wordlist_no": ["bruk"]
+                        },
+                        {
+                            "termlist_name": "termlist7_2z4",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["phase out", "phasing out", "energy transition", "energy strateg", "energy management", "energy planning", "energy policy",
+                                            "energy services", "energy sector", "energy supply", "energy supplies", "energy generation", "global share", "global electricity", "energy mix",
+                                            "coal consumption", "fossil fuel consumption", "consumption of fossil fuel", "primary source"],
+                            "wordlist_no": ["utfas", "fase ut", "energistrategi", "energiledelse", "energileiing", "energiplan", "energipolitikk", "energitjeneste", "energiteneste",
+                                            "global andel", "global elektrisitet", "energimiks", "forbruk", "primær kilde", "primær kjelde", "primærkilde", "primærkjelde"]
+                        },
+                        {
+                            "termlist_name": "termlist7_2z5",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["fossil fuel", "natural gas", "grey hydrogen", "conventional energy", "petroleum"],
+                            "wordlist_no": ["fossilt brensel", "fossile brensl", "fossilt brennstoff", "fossile brennstoff", "naturgass", "grått hydrogen", "konvensjonell energi"]
+                        },
+                        {
+                            "termlist_name": "termlist7_2z6",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["palm oil", "oil palm", "olive oil", "coconut oil", "vegetable oil", "eucalyptus oil", "cooking oil", "fish oil", "liver oil",
+                                            "nutrition", "cholesterol", "obes", "human consum", "cylinder oil", "lubricat", "lube oil", "engine oil"],
+                            "wordlist_no": [],
+                            "_comment": "Not an issue in Norwegian as olje is normally used as part of another word (e.g. olivenolje)"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "3",
+            "phrases": [
+                {
+                    "number": 1,
+                    "logic_rule": "([termlist7_3a] & [termlist7_3b])",
+                    "sentence_split": true,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist7_3a",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["energy intensity"],
+                            "wordlist_no": ["energiintensitet"],
+                            "_comment": "As energy intensity is such a specialized term, we found it sufficient to search for it alone in the title search. CHANGED as we now search abstracts too"                             
+                        },
+                        {
+                            "termlist_name": "termlist7_3b",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["energy consum", "energy-saving", "sustainab", "energy efficien", "GDP", "econom", "industrial", "industry", "manufactur", "carbon emission", "co2 emission", "footprint"],
+                            "wordlist_no": ["energiforbruk", "energispar", "bærekraft", "berekraft", "energieffektiv", "BNP", "økonomi", "industri", "produksjon", "karbonutslipp", "co2-utslipp", "karbonutslepp", "co2-utslepp", "avtrykk"]                         
+                        }
+                    ]
+                },
+                {
+                    "number": 2,
+                    "logic_rule": "([termlist7_3c] & [termlist7_3d] & [termlist7_3e])",
+                    "sentence_split": true,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist7_3c",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["energy consum"],
+                            "wordlist_no": ["energiforbruk"]
+                        },
+                        {
+                            "termlist_name": "termlist7_3d",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["decoupl", "de coupl"],
+                            "wordlist_no": ["kobl", "kopl"],
+                            "_comment": "Original comment: In this phrase, searching with the same phrases and limitations as in Web of Science was quite restrictive. We therefore chose to simplify the search and accept a combination of energy consum and econom or GDP in the title as sufficient to be included(without decoupling). CHANGED now that we also search abstracts."
+                        },
+                        {
+                            "termlist_name": "termlist7_3e",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["econom", "GDP"],
+                            "wordlist_no": ["økonomi", "BNP"]
+                        }
+                    ]
+                },
+                {
+                    "number": 3,
+                    "logic_rule": "(([termlist7_3f] & [termlist7_3g]) | ([termlist7_3h] & [termlist7_3i]) | ([termlist7_3j] & [termlist7_3k]))",
+                    "_comment": "We have two searches in the original file. logic_rule is for title and abstract search, this is for title search only: ([termlist7_3standalone] | ([termlist7_3f] & [termlist7_3g]) | ([termlist7_3h] & [termlist7_3i]))",
+                    "sentence_split": true,
+                    "termlists": [
+                        {
+                            "_comment": "A direct translation of the Web of Science search into Norwegian language gave barely any results. We therefore allowed a few terms for energy efficiency and energy saving in Norwegian to stand alone in order to capture some more relevant titles. This was not done in english because it is poor precision.",
+                            "termlist_name": "termlist7_3f",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["energy efficien", "energy utilisation efficiency", "energy utilization efficiency", "energy saving", "energy loss", "energy conservation"],
+                            "wordlist_no": ["energieffektiv", "effektiv energibruk", "energisparing", "energiøkonomisering", "energitap", "energirasjonering", "strømrasjonering"]
+                        },
+                        {
+                            "termlist_name": "termlist7_3g",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["housing", "houses", "homes", "household", "domestic", "residential", "building", "cities", "service sector", "office", "retail", "food services", "restaurant", 
+                                            "hotel", "warehouses", "lighting", "lamps", "cooking", "appliances", "white goods", "plug-in device", "smart", "space cooler", "air condition", "space heat", 
+                                            "room heating", "district heating", "heat pump", "HVAC", "industry", "industrial", "manufacturing", "technolog", "transport", 
+                                            "vehicles", "cars", "train", "airplane", "aeroplane", "ship", "freight", 
+                                            "telecomm", "data centre", "data center", "data network", "server", "wireless"],
+                            "wordlist_no": ["hus", "hjem", "heim", "hushold", "hushald", "bolig", "bustad", "bygning", "by", "tjenesteytende næring", "tjenesteytande næring", "tertiærnæring", 
+                                            "kontor", "salg", "detaljhandel", "varehus", "kjøpesent", "lys", "ljos", "belysning", "lampe", "matlaging", "apparat", "maskin", "hvitevare", 
+                                            "smart", "kjøler", "klimaanlegg", "oppvarm", "varmepumpe", "VVS", "industri", "produksjon", "teknologi",
+                                            "kjøretøy", "køyretøy", "biler", "bilar", "tog", "fly", "skip", "frakt", "last", "telekomm", "datasent", "datanett", "trådløs", "trådlaus"]
+                        },
+                        {
+                            "termlist_name": "termlist7_3h",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["energy efficien", "energy conservation"],
+                            "wordlist_no": ["energieffektiv", "energirasjonering", "strømrasjonering", "energisparing", "energiøkonomiser", "enøk"]
+                        },
+                        {
+                            "termlist_name": "termlist7_3i",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["policy", "policies", "framework", "legislation", "management", "plan", "initiativ", "intervention", "incentive", "invest"],
+                            "wordlist_no": ["politikk", "retningslin", "rammeverk", "lovgiv", "ledelse", "leiing", "intervensjon", "inngripen", "insentiv"]
+                        },
+                        {
+                            "termlist_name": "termlist7_3j",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["energy efficien"],
+                            "wordlist_no": ["energieffektiv"]
+                        },
+                        {
+                            "termlist_name": "termlist7_3k",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["green bond", "climate bond", "energy certificat", "green certificat", "energy sustainability", "minimum energy performance", "energy labelling", "energy standard", 
+                                            "energy efficiency standard", "sustainable development"],
+                            "wordlist_no": ["grønne obligasjon", "grøne obligasjon", "klimaobligasjon", "energisertifi", "grøn sertifi", "grønt sertifi", "grønne sertifi", "energimerk", 
+                                            "energistandard", "energieffektivitetsstandard", "bærekraftig utvikling", "berekraftig utvikling"]
+                        },
+                        {
+                            "termlist_name": "termlist7_3standalone",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["energy efficien", "energy utilisation efficiency", "energy utilization efficiency", "energy saving", "energy conservation"],
+                            "wordlist_no": ["energieffektiv", "effektiv energibruk", "energispar", "energiøkonomiser", "energirasjonering", "strømrasjonering"]
+                        }
+                    ]
+                },
+                {
+                    "number": 4,
+                    "logic_rule": "([termlist7_3l] | ([termlist7_3m] | [termlist7_3n]))",
+                    "_comment": "We have simplified the search as we are only searching titles, and left out specific energy terms. All that is required now is terms for energy efficien combined with sufficien, or the title to contain energy suffici* - NB energy terms taken in now that we also search abstracts", 
+                    "sentence_split": false,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist7_3l",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["energy suffici"],
+                            "wordlist_no": ["selvforsyn", "sjølforsyn", "sjølvforsyn"]
+                        },
+                        {
+                            "termlist_name": "termlist7_3m",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["electric", "energy generat", "energy service", "energy sector", "energy system", "power system", "energy security", "renewable energy"],
+                            "wordlist_no": ["elektris", "energiskap", "energitjeneste", "energiteneste", "energisektor", "energisystem", "kraftsystem", "energisikkerhet", "fornybar energi"]
+                        },
+                        {
+                            "termlist_name": "termlist7_3n",
+                            "formatting_rule": "specific_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["electric"],
+                            "wordlist_no": ["strøm", "straum", "energi", "kraft"]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "a",
+            "phrases": [
+                {
+                    "number": 1,
+                    "logic_rule": "(([termlist7_a1] | [termlist7_a1caps] | ([termlist7_a2] & [termlist7_a3]) | ([termlist7_a4] & [termlist7_a5]) | [termlist7_a6] | ([termlist7_a7] & [termlist7_a8])) & ([termlist7_a9] | ([termlist7_a10] & [termlist7_a11])))",
+                    "sentence_split": false,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist7_a1",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["development spending", "cooperation fund"],
+                            "wordlist_no": ["bistand", "utviklingshjelp", "u-hjelp", "samarbeidsfond"]
+                        },
+                        {
+                            "termlist_name": "termlist7_a1caps",
+                            "formatting_rule": "specific_trunc",
+                            "na": false,
+                            "case": true,
+                            "wordlist_en": ["ODA"],
+                            "wordlist_no": ["ODA"]
+                        },
+                        {
+                            "termlist_name": "termlist7_a2",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["international", "development", "foreign"],
+                            "wordlist_no": ["internasjonal", "utvikling", "utland", "utenlandsk", "utanlands", "utalands"]
+                        },
+                        {
+                            "termlist_name": "termlist7_a3",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["cooperat", "co-operat", "collaborat", "network", "partnership", "aid", "assistance", "fund", "grant", "financing", "financial resources", "capital flow"],
+                            "wordlist_no": ["samarbeid", "felles", "nettverk", "partner", "hjelp", "bistand", "støtte", "stønad", "finans", "økonomi", "ressurs", "kapital"]
+                        },
+                        {
+                            "termlist_name": "termlist7_a4",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["knowledge", "technolog", "technical", "research", "scientific", "R&D"],
+                            "wordlist_no": ["kunnskap", "teknolog", "teknisk", "forskning", "forsking", "vitenskapelig", "vitskapeleg", "FOU"]
+                        },
+                        {
+                            "termlist_name": "termlist7_a5",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["access", "capacity", "transfer", "sharing", "share", "cooperat", "co-operat", "collaborat", "partnership"],
+                            "wordlist_no": ["tilgang", "kapasitet", "overfør", "deling", "dele", "samarbeid", "koopera", "partner"]
+                        },
+                        {
+                            "termlist_name": "termlist7_a6",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["invest", "financing", "funding", "financial resources", "economic support", "economic assistance", "green bond", "climate bond"],
+                            "wordlist_no": ["invester", "finans", "økonomi", "støtte", "stønad", "grønne obligasjon", "grøne obligasjon", "klimaobligasjon"]
+                        },
+                        {
+                            "termlist_name": "termlist7_a7",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["financial", "monetary"],
+                            "wordlist_no": ["finansiell", "monetær", "penge"]
+                        },
+                        {
+                            "termlist_name": "termlist7_a8",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["support", "assist"],
+                            "wordlist_no": ["støtte", "stønad"]
+                        },
+                        {
+                            "termlist_name": "termlist7_a9",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["energy research", "energy efficiency research", "energy transition", "energy technolog"],
+                            "wordlist_no": ["energiforskning", "energiforsking", "energiomstilling", "energiteknologi"]
+                        },
+                        {
+                            "termlist_name": "termlist7_a10",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["technolog", "innovation", "R&D"],
+                            "wordlist_no": ["teknologi", "innovasjon", "FOU"]
+                        },
+                        {
+                            "termlist_name": "termlist7_a11",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["clean energy", "green energy", "decarboni", "low carbon", "energy efficien", "renewable", "solar", 
+                                            "wind", "geothermal", "hydroelectric", "hydro electric", "hydro power", "marine energy", "tidal energy", "wave energy"],
+                            "wordlist_no": ["ren energi", "rein energi", "grønn energi", "grøn energi", "avkarboniser", "lavkarbon", "lågkarbon", "energieffektiv", "fornybar", 
+                                            "solcelle", "solkraft", "solenergi", "solcelle", "solkraft", "solenergi", 
+                                            "vind", "geotermisk", "hydroelektrisk", "vannkraft", "vasskraft", "havenergi", "tidevannsenergi", "tidvass", "bølgeenergi"]
+                        }
+                    ]
+                },
+                {
+                    "number": 2,
+                    "logic_rule": "(([termlist7_a12] | [termlist7_a1caps] | ([termlist7_a13] & [termlist7_a14]) | [termlist7_a15] | ([termlist7_a16] & [termlist7_a17])) & ([termlist7_a18] | ([termlist7_a19] & [termlist7_a20]) | ([termlist7_a21] & [termlist7_a22])))",
+                    "sentence_split": false,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist7_a12",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["development spending", "cooperation fund"],
+                            "wordlist_no": ["offisiell utviklingsbistand", "offentlig utviklingsbistand", "bistand", "utviklingshjelp", "u-hjelp", "samarbeidsfond"]
+                        },
+                        {
+                            "termlist_name": "termlist7_a1caps",
+                            "formatting_rule": "specific_trunc",
+                            "na": false,
+                            "case": true,
+                            "wordlist_en": ["ODA"],
+                            "wordlist_no": ["ODA"]
+                        },
+                        {
+                            "termlist_name": "termlist7_a13",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["international", "development", "foreign"],
+                            "wordlist_no": ["internasjonal", "utvikling", "utland", "utaland", "utanland", "utenlandsk"]
+                        },
+                        {
+                            "termlist_name": "termlist7_a14",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["cooperat", "co-operat", "collaborat", "network", "partnership", "aid", "assistance", "fund", "grant", "financing", 
+                                            "financial resources", "capital flow"],
+                            "wordlist_no": ["samarbeid", "felles", "nettverk", "partnerskap", "hjelp", "bistand", "støtte", "stønad", "finansier", "økonomisk ressurs", 
+                                            "økonomiske ressurs", "finansiell ressurs", "finansielle ressurs", "kapitalflyt", "kapitalstr"]
+                        },
+                        {
+                            "termlist_name": "termlist7_a15",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["invest", "financing", "funding", "financial resources", "economic support", "economic assistance", "green bond", "climate bond"],
+                            "wordlist_no": ["invester", "finansier", "finansiell ressurs", "finansielle ressurs", "økonomisk støtte", "økonomisk stønad", "grønne obligasjon", "grøne obligasjon", "klimaobligasjon"]
+                        },
+                        {
+                            "termlist_name": "termlist7_a16",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["financial", "monetary"],
+                            "wordlist_no": ["finansiell", "monetær", "penge"]
+                        },
+                        {
+                            "termlist_name": "termlist7_a17",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["support", "assist"],
+                            "wordlist_no": ["støtte", "stønad", "assistanse"]
+                        },
+                        {
+                            "termlist_name": "termlist7_a18",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["clean energy", "energy service", "energy sector", "electrical infrastructure", "electricity supply", "power supply", "community energy", 
+                                            "community renewable energy", "electrical grid", "power grid", "grid extension", "microgrid", "micro grid", "micro-grid", 
+                                            "minigrid", "mini grid", "mini-grid", "smartgrid", "smart grid", "smart-grid", "energy storage system", "energy transition"],
+                            "wordlist_no": ["ren energi", "rein energi", "energitjeneste", "energiteneste", "energisektor", "energiinfrastruktur", "elektrisk infrastruktur", "energiforsyning",
+                                            "strømforsyning", "straumforsyning", "kraftforsyning", "små kraftverk", "minikraftverk", "mikrokraftverk", 
+                                            "energisamfunn", "mikronett", "øydrift", "smartnett", "energilagring", "energiomstilling"]
+                        },
+                        {
+                            "termlist_name": "termlist7_a19",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["energy", "electricity"],
+                            "wordlist_no": ["energi", "elektrisitet", "strøm", "straum", "kraft"]
+                        },
+                        {
+                            "termlist_name": "termlist7_a20",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["infrastructure", "technology", "off grid", "offgrid", "off-grid", "decentralised", "decentralized", "cooperative"],
+                            "wordlist_no": ["infrastruktur", "teknologi", "mikronett", "desentral", "kooperativ"]
+                        },
+                        {
+                            "termlist_name": "termlist7_a21",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["power station", "power generation", "energy generation", "generator"],
+                            "wordlist_no": ["kraftstasjon", "kraftverk", "kraftproduksjon", "strømproduksjon", "straumproduksjon"]
+                        },
+                        {
+                            "termlist_name": "termlist7_a22",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["modern", "clean", "sustainable", "renewable", "solar", "wind", "geothermal", "hydroelectric", "hydro electric", "hydropower", 
+                                            "marine", "tidal", "wave energy"],
+                            "wordlist_no": ["moderne", "ren", "rein", "bærekraftig", "berekraftig", "fornybar", "sol", "vind", "geotermisk", "hydroelektrisk", "vannkraft", "vasskraft", 
+                                            "hav", "tidevann", "tidvass", "bølgeenergi"]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "b",
+            "phrases": [
+                {
+                    "number": 1,
+                    "logic_rule": "((([termlist7_b1] & [termlist7_b2]) | ([termlist7_b3] & [termlist7_b4])) & ([LMIC]))",
+                    "sentence_split": false,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist7_b1",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["energy service", "energy sector", "electrical infrastructure", 
+                                            "electricity supply", "power supply", "energy", "electricity"],
+                            "wordlist_no": [ "energitjeneste", "energiteneste", "energisektor", "elektrisk infrastruktur", "energiinfrastruktur", "elektrisitetsforsyning", 
+                                             "strømforsyning", "straumforsyning", "kraftforsyning", "energi", "elektrisitet"]
+                        },
+                        {
+                            "termlist_name": "termlist7_b2",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["infrastructure", "technolog", "off grid", "offgrid", "off-grid", "decentralised", "decentralized", "community", "cooperative", "co-operative",
+                                            "electrical grid", "power grid", "grid extension", 
+                                            "microgrid", "micro-grid", "micro grid", "minigrid", "mini-grid", "mini grid", "smartgrid", "smart grid", "smart-grid", "energy storage system"],
+                            "wordlist_no": ["infrastruktur", "teknologi", "mikronett", "desentral", "samfunn", "kooperativ", "strømnett", "straumnett", "kraftnett", "elnett", "små kraftverk", "minikraftverk",
+                                            "mikrokraftverk", "øydrift", "smartnett", "energilagring"]
+                        },
+                        {
+                            "termlist_name": "termlist7_b3",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["power station", "power generation", "energy generation", "generator"],
+                            "wordlist_no": ["kraftstasjon", "kraftverk", "kraftprod", "strømprod", "straumprod"]
+                        },
+                        {
+                            "termlist_name": "termlist7_b4",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["modern", "clean", "sustainable", "renewable", "decarboni", "low carbon", "solar", "wind", "geothermal", 
+                                            "hydroelectric", "hydro electric", "hydropower", "marine", "tidal", "wave energy"],
+                            "wordlist_no": ["moderne", "bærekraftig", "berekraftig", "fornybar", "dekarboniser", "lavkarbon", "lågkarbon", "sol", "vind", "geotermisk", 
+                                            "hydroelektrisk", "vannkraft", "vasskraft", "hav", "tidevann", "tidvass", "bølgeenergi"]
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "mentions": {
+        "logic_rule": "([termlist7_1] | ([termlist7_2] & [termlist7_3]) | ([termlist7_4] & [termlist7_5]) | [termlist7_6])",
+        "termlists": [
+            {
+                "termlist_name": "termlist7_1",
+                "formatting_rule": "default",
+                "na": false,
+                "case": false,
+                "wordlist_en": ["SDG 7", "SDGs 7", "SDG7", "sustainable development goal 7"],
+                "wordlist_no": ["SDG 7", "SDG7", "bærekraftsmål 7", "berekraftsmål 7"]
+            },
+            {
+                "termlist_name": "termlist7_2",
+                "formatting_rule": "default",
+                "na": false,
+                "case": false,
+                "wordlist_en": ["sustainable development goal"],
+                "wordlist_no": ["bærekraftsmål", "berekraftsmål"]
+            },
+            {
+                "termlist_name": "termlist7_3",
+                "formatting_rule": "default",
+                "na": false,
+                "case": false,
+                "wordlist_en": ["goal 7"],
+                "wordlist_no": ["mål 7"]
+            },
+            {
+                "termlist_name": "termlist7_4",
+                "formatting_rule": "default",
+                "na": false,
+                "case": false,
+                "wordlist_en": ["sustainable development goal", "SDG", "goal 7"],
+                "wordlist_no": ["bærekraftsmål", "berekraftsmål", "SDG", "mål 7"]
+            },
+            {
+                "termlist_name": "termlist7_5",
+                "formatting_rule": "default",
+                "na": false,
+                "case": false,
+                "wordlist_en": ["energy"],
+                "wordlist_no": ["energi"]
+            },
+            {
+                "termlist_name": "termlist7_6",
+                "formatting_rule": "default",
+                "na": false,
+                "case": false,
+                "wordlist_en": ["affordable and clean energy"],
+                "wordlist_no": ["ren energi til alle", "rein energi til alle"]
+            }
+        ]
+    }
+}

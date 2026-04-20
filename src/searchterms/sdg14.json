@@ -1,0 +1,1147 @@
+{
+    "name": "sdg14",
+    "number": 14,
+    "generated_datetime": "09-12-2025 10:07:35",
+    "_comment": "Webpages about SDG targets from the UN Association of Norway were used to get target translations and to help with Norwegian terms (https://www.fn.no/om-fn/fns-baerekraftsmaal/livet-i-havet). We have also used 'Realfagstermer', a controlled vocabulary for English and Norwegian scientific terms from the University of Oslo and University of Bergen - https://app.uio.no/ub/emnesok/realfagstermer/search. A website with Norwegian and English names for international environmental agreements from the Norwegian Environment Agency was used to help translate international agreement/convention names (https://www.miljodirektoratet.no/regelverk/konvensjoner/; accessed 24/01/23)",
+    "pre-search": [
+        {
+            "name": "marine_terms",
+            "_comment": "Used in many targets",
+            "logic_rule": "([termlist14_marine1] | [termlist14_marine2] | [termlist14_marine3])",
+            "sentence_split": false,
+            "termlists": [
+                {
+                    "termlist_name": "termlist14_marine1",
+                    "formatting_rule": "default",
+                    "na": false,
+                    "case": false,
+                    "wordlist_en": ["marine", "mariculture", "barents sea", "norwegian sea",
+                        "seabed", "seafloor", "seamount", "hydrothermal vent", "cold seep", "continental shelf", "continental shelves", "continental slope", 
+                        "subtidal", "intertidal", "deep sea", "bathyal", "abyssal",
+                        "rocky shore", "beach", "salt marsh", "mud flat", "mudflat", "tidal flat", "estuar", "fjord", 
+                        "sea ice",
+                        "sea life", "sealife", "mangrove", "kelp bed", "kelp forest", "seagrass", "seaweed", "macroalga", "sponge ground", "organic fall", "coral", 
+                        "whale", "dolphin", "echinoderm", "starfish", "sea urchin", "sea cucumber", "brittle star", "Asteroidea", "Ophiuroid", "Echinoid", "Holothuroid", "Crinoid",
+                        "coastal communit", "coastal zone",
+                        "offshore"],
+                    "wordlist_no": ["sjøområd", "havområd", "havbruk", "havforsuring", "Skagerrak", 
+                        "sjøbunn", "sjøbotn", "havbunn", "havbotn", "sjøfjell", "hydrotermisk skorstein", "hydrotermiske skorstein", "hydrotermisk ventil", "midhavsrygg", "kontinentalskråning", "kontinentalhylle",
+                        "submarin", "fjære", "fjøre", "tidevann", "tidevatn", "havdyp", "havdjup", "dyphav", "djuphav", 
+                        "sandstrand", "strandeng", "saltmarsk", "saltvannssump", "elvemunn",
+                        "havis", 
+                        "sjødyr", "mangrove", "tareskog", "sjøgress", "sjøgras", "korall",
+                        "kystsamfunn", "kystson", 
+                        "utaskjærs", "skipsfart"]
+                },
+                {
+                    "termlist_name": "termlist14_marine2",
+                    "formatting_rule": "specific_trunc",
+                    "na": false,
+                    "case": false,
+                    "_comment": "'marin'(NO), 'tang' (NO), 'tare'(NO) are added here instead of untruncated in termlist_marine1 because it is part of other words (e.g. marinate)",
+                    "wordlist_en": ["ocean", "oceans", "oceanogra.*", "seas", "reef", "reefs"],
+                    "wordlist_no": ["marin", "oseanografi.*", "hav", "havet", "verdenshav", "sjø", "sjøen", "tang", "tare", "hval"]
+                },
+                {
+                    "termlist_name": "termlist14_marine3",
+                    "formatting_rule": "specific_trunc",
+                    "na": false,
+                    "case": false,
+                    "wordlist_en": ["sea", "seas", "coast", "coastal", "tidal"],
+                    "wordlist_no": ["sjø.*", "kyst.*", "tideva.*"]
+                },
+                {
+                    "termlist_name": "termlist14_marine4",
+                    "formatting_rule": "default",
+                    "na": false,
+                    "case": false,
+                    "_comment": "CURRENTLY NOT IN USE.",
+                    "wordlist_en": ["habitat", "ecosystem", "dune", "wetland", "marsh", "bay", "lagoon", "gulf", "water", "current", "pelagi",
+                        "fish", "shrimp", "shellfish", "aquacultur",
+                        "harbour", "harbor", "port", "maritim", "ship"],
+                    "wordlist_no": ["leveområd", "økosystem", "våtmark", "sumpmark", "viker", "bukter", "strøm",
+                        "fisk", "akvakultur", 
+                        "havn", "båt", "elvemunn"]
+                }
+            ]
+        }
+    ],
+    "targets": [
+        {
+            "name": "1",
+            "phrases": [
+                {
+                    "number": 1,
+                    "logic_rule": "((([termlist14_1a] | [termlist14_1b_case] | [termlist14_1c] | ([termlist14_1d] & [termlist14_1e])) & not [termlist14_1not]) & [marine_terms])",
+                    "sentence_split": false,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist14_1a",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "_comment": "NO: After testing, 'avfall' is ok to use alone, thus the specific terms are removed 'farlig avfall', 'kjemikalieavfall', 'radioaktivt avfall', 'plastavfall','gruveavfall'.",
+                            "wordlist_en": ["pollut", 
+                                "sewage","sewer", "eutrophicat","excess nutrient","excessive nutrient","effluent","runoff","waste",
+                                "littering","garbage",
+                                "microplastic","micro plastic","micro-plastic","nanoplastic","nano plastic","plastic waste","plastic particles", "plastic litter", "plastic debris", "marine plastic",
+                                "heavy metal","toxic metal","mercury","arsenic","cadmium","chromium","copper","nickel",
+                                "organotin","tributyltin","mining","mine tailing",
+                                "contaminant","bioaccumula","bioconcentrat","ecotox","toxic chemical","forever chemical",
+                                "endocrine disrupting chemical", "endocrine disruptor", "persistent organic pollutant", "pesticid","herbicide",
+                                "paraben", "polychlorinated biphenyl","hexachlorocyclohexane","hexachlorobenzene","hexachlorobutadiene",
+                                "pentachlorobenzene","pentachlorophenol","pentachloroanisole","hexabromocyclododecane",
+                                "polybrominated diphenyl ether","perflurochemicals","endosulfan", "polycyclic aromatic hydrocarbon",
+                                "oil spill", "crude oil", "oil leak", "subsea spill"],
+                            "wordlist_no": ["forurens", "forurein",
+                                "utslipp", "kloakk", "eutrofier", "overgjødsling", "overflatevann", "overflatevatn", "avrenning", "næringssalt",
+                                "søppel", "avfall",
+                                "mikroplast", "plastpartik", 
+                                "tungmetall", "kvikksølv", "kadmium", "kobber", "nikkel", "arsenikk",
+                                "tinnorganiske", "organiske tinnforbindelse", "pesticid",
+                                "bioakkumuler", "miljøtoksikologi",
+                                "miljøgift", "hormonforstyr", "insektmiddel", "insektmidler", "plantevernmid",
+                                "paraben", "polychlorinated biphenyl","hexachlorocyclohexane","hexachlorobenzene","hexachlorobutadiene",
+                                "pentachlorobenzene","pentachlorophenol","pentachloroanisole","hexabromocyclododecane",
+                                "polybrominated diphenyl ether","perflurochemicals", "endosulfan", "polycyclic aromatic hydrocarbon",
+                                "oljesøl", "oljeutslipp"]
+                        },
+                        {
+                            "termlist_name": "termlist14_1b_case",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": true,
+                            "wordlist_en": ["PCB", "PCBs", "DDT","PAH", "PAHs", "TBT", "PFAS"],
+                            "wordlist_no": ["PCB", "PCBs", "DDT","PAH", "PAHs", "TBT", "PFAS"]
+                        },
+                        {
+                            "termlist_name": "termlist14_1c",
+                            "formatting_rule": "specific_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["litter", "trash", ".*plastics"],
+                            "wordlist_no": ["bly", "arsen", "krom", "tinn", "plast"]
+                        },
+                        {
+                            "termlist_name": "termlist14_1d",
+                            "formatting_rule": "specific_trunc",
+                            "na": false,
+                            "case": false,
+                            "_comment":"EN: 'lead' is included here rather than 1c because of the verb 'to lead'",
+                            "wordlist_en": ["oil", "lead", "chemical.*"],
+                            "wordlist_no": ["olje", "kjemikal.*"]
+                        },
+                        {
+                            "termlist_name": "termlist14_1e",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["contamina", "discharge", "toxici"],
+                            "wordlist_no": ["toksis"]
+                        },
+                        {
+                            "termlist_name": "termlist14_1not",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["PM2.5","PM10","leaf litter"],
+                            "wordlist_no": ["PM2.5","PM10"]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "2",
+            "phrases": [
+                {
+                    "number": 1,
+                    "logic_rule": "([termlist14_2a] | ([termlist_14_2acase] & not [termlist14_2not]) | (([termlist14_2b] | ([termlist14_2c] & [termlist14_2d])) & [marine_terms]))",
+                    "sentence_split": true,
+                    "_comment": "The first two termlists are marine-specific terms; the others need combining with the marine pre-search",
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist14_2a",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["marine reserve", "ocean reserve", "marine sanctuar", "marine park", "particularly sensitive sea area","marine conservation",
+                                "marine spatial planning", "coastal zone management","integrated coastal zone planning","coastal resources management",
+                                "locally managed marine area"],
+                            "wordlist_no": ["marint vernområde","marine vernområde","marine verneområde","marine reservat","marint vern",
+                                "integrert kystsone", "kystplanlegging", "kystsoneforvaltning"]
+                        },
+                        {
+                            "termlist_name": "termlist_14_2acase",
+                            "formatting_rule": "specific_trunc",
+                            "na": false,
+                            "case": true,
+                            "wordlist_en": ["LMMA.*", "NTMR", "ICZM", "LSMPA.*", "MPA", "MPAs"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist14_2b",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["nature reserve", 
+                                "spatial management", "community based management","resilience based management",
+                                "herbivore management area", 
+                                "ecosystem-based", "area-based manag", "area-based approach",
+                                "sustainable management", "sustainable governance",
+                                "no-take area", "no-take zone", "no-take reserve"],
+                            "wordlist_no": ["naturreservat", "biotopvernområde", "nasjonalpark", "bevarte område", "bevart område", "bevaringsområde",
+                                "økosystembasert forvaltning", "økosystemtilnærming", "økosystembasert styring", "forvaltningsplaner",
+                                "samfunnsforvalt", "bærekraftig forvalt", "berekraftig forvalt", "arealforvalt", "bærekraftig ledelse", "berekraftig leiing",
+                                "fiskeforbud", "fiskevernsone"]
+                        },
+                        {
+                            "termlist_name": "termlist14_2c",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["protect","conserve","conservation","conserves","conserving"],
+                            "wordlist_no": ["vernet", "verne", "verna", "vern av", "bevare", "bevaring", "frede", "freda", "fredning", "beskytt"]
+                        },
+                        {
+                            "termlist_name": "termlist14_2d",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["area", "zone", "habitat", "ecosystem"],
+                            "wordlist_no": ["område", "sone", "miljø", "leveområd", "økosystem"]
+                        },
+                        {
+                            "termlist_name": "termlist14_2not",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": true,
+                            "_comment": "MPA can cause an issue if you run a search in titles - but not using it loses relevant results. In abstracts/longer texts it sometimes works better to drop MPA as they normally use the full term somewhere ('protected areas')",
+                            "wordlist_en": ["Marine Predator Algorithm", "Marine predator algorithm", "marine predator algorithm", "MPa"],
+                            "wordlist_no": ["MPa"]
+                        }
+                    ]
+                },
+                {
+                    "number": 2,
+                    "logic_rule": "(([termlist14_2hcase] | ([termlist14_2e] & ([termlist14_2f] | [termlist14_2f_trunc]))) & [marine_terms])",
+                    "sentence_split": true,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist14_2e",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["manag", "conserv", "preserv", "protect", "restor", "rehabilita", "resilien"],
+                            "wordlist_no": ["forvalt", "verne", "verna", "vern av", "miljøvern","bevare", "bevaring", "frede", "freda", "fredning", "beskytt", "gjenoppbygg", "restaurer", "rehabilit", "resilien", "bærekraftig bruk", "berekraftig bruk"]
+                        },
+                        {
+                            "termlist_name": "termlist14_2f",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["habitat","ecosystem","environment","ecological communit",
+                                "ocean", "marine", "mangrove", "kelp", "seagrass", "seaweed", "macroalga", "sponge ground", "reef", "coral", 
+                                "salt marsh", "mud flat", "mudflat", "tidal flat",
+                                "estuar", "fjord", "coastal dune", "coastal wetland", "coastal water", 
+                                "deep sea", "seafloor", "hydrothermal vent",
+                                "environmental function", "environmental quality", "environmental stabil", "environmental resilience",
+                                "ocean health", "ocean function", "ocean resilience",
+                                "water quality",
+                                "diversity", "tipping point", "extinction", "key species", "foundation species", "keystone species", "habitat-forming",
+                                "productivity", "food production", "fish stock", "fishery", "fisheries", "aquaculture",
+                                "habitats directive","Conservation of Antarctic Marine Living Resources", 
+                                "Lima convention","Nairobi convention","Noumea convention","Barcelona convention","World heritage convention","European landscape convention",
+                                "International coral reef initiative"],
+                            "wordlist_no": ["leveområd", "miljø", "økosystem", "samfunn",
+                                "marine", "mangrove", "sjøgress", "makroalge", "stortare", "sukkertare", "fingertare", "tareskog", "drivtang", "grisetang", "sagtang", "korall", "saltmarsker", "sandstrand", "strandeng",
+                                "elvemunn", "dyphav", "havbunn", "sjøbunn", "sjøfjell", "hydrotermisk skorstein", "hydrotermiske skorstein", "hydrotermisk ventil", "midhavsrygg", "kontinentalskråning", "kontinentalhylle",
+                                "vannkvalitet", "resiliens",
+                                "mangfold", "mangfald", "diversitet", "vippepunkt", "nøkkelart", "flaggskipsart", "paraplyart", 
+                                "produktivitet", "mat produksjon", "fiskebestand", "fiskeri", "havbruk", "akvakultur",
+                                "habitatdirektiv", "Lima-konvensjonen","Nairobi-konvensjonen","Noumea-konvensjonen","Barcelona-konvensjonen","verdensarvkonvensjonen","Landskapskonvensjonen",
+                                "naturmangfoldloven", "områdevern", "artsforvaltning"]
+                        },
+                        {
+                            "termlist_name": "termlist14_2f_trunc",
+                            "formatting_rule": "specific_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["seas"],
+                            "wordlist_no": ["marin", "marint", "havet", "hav", "tare.*", "tang", "tangart.*"]
+                        },
+                        {
+                            "termlist_name": "termlist14_2hcase",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": true,
+                            "wordlist_en": ["BBNJ", "CBD", "HELCOM", "OSPAR", "UNEP", "CCAMLR"],
+                            "wordlist_no": ["BBNJ", "CBD", "HELCOM", "OSPAR", "UNEP", "CCAMLR"]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "3",
+            "phrases": [
+                {
+                    "number": 1,
+                    "logic_rule": "(([termlist14_3a] | [termlist14_3atrunc] | [termlist14_3d]) & ([termlist14_3b] | [termlist14_3ccase]) & [marine_terms])",
+                    "sentence_split": true,
+                    "_comment": "Note that 'havforsuring' (NO; ocean acidification) is included in the marine terms, so it should not be a problem to find works using this term even when combined with marine terms.",
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist14_3a",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["impact", "effect", "affect", "respons", "consequence",
+                                "results in", "changes", "alters", "altering", "changing",
+                                "sensitiv", "vulnerab", "threat", "danger",
+                                "resilien", "coping", "toleran",
+                                "calcif", "carbonate", "aragonit", "calcite", "shell", "coral", "dissol", "degradat",
+                                "extinct", "adapt", "competiti", "recruit", "surviv", "reproduc", "growth", "settlement", "mortality", "disease",
+                                "monitor"],
+                            "wordlist_no": ["påvirk", "impakt", "konsekvens", "effekt",
+                                "resultat", "endring", 
+                                "sårbar", "truet", "truer", "stress", "tåle", 
+                                "forkalk", "karbonsyre", "karbonat", "kalsit", "aragonit", "skjell", "korall", "oppløs",
+                                "utrydd", "tilpass", "konkurr", "rekrutter", "overleve", "formering", "reproduksjon", "vekst", "dødlighet", "sykdom",
+                                "overvåk", "overvak"]
+                        },
+                        {
+                            "termlist_name": "termlist14_3atrunc",
+                            "formatting_rule": "no_left_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": [],
+                            "wordlist_no": ["trua", "trued", "fare"]
+                        },
+                        {
+                            "termlist_name": "termlist14_3d",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["protect","conserve","conservation","conserves","conserving", "address", "tackle", "prevent"],
+                            "wordlist_no": ["vernet", "verne", "verna", "vern av", "bevare", "bevaring", "frede", "freda", "fredning", "beskytt"]
+                        },
+                        {
+                            "termlist_name": "termlist14_3b",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["acidi", "ocean ph", "seawater ph", "low ph", "declining ph", "decreasing ph", "decreased ph", "effect of ph", "effects of ph"],
+                            "wordlist_no": ["forsur", "nedgangen i pH", "nedgang i ph", "lav ph", "lavere ph", "lågere ph", "surere hav", "surare hav", "surt hav"]
+                        },
+                        {
+                            "termlist_name": "termlist14_3ccase",
+                            "formatting_rule": "specific_trunc",
+                            "na": false,
+                            "case": true,
+                            "wordlist_en": ["OA"],
+                            "wordlist_no": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "4",
+            "phrases": [
+                {
+                    "number": 1,
+                    "logic_rule": "([termlist14_4a] | ([termlist14_4b] & [termlist14_4c]) | ([termlist14_4d] & [termlist14_4e]) | ([termlist14_4f] & [termlist14_4g]))",
+                    "sentence_split": true,
+                    "_comment": "phrase 1/2 in wos",
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist14_4a",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["overfish", "bycatch", "by-catch", "IUU fish", "ghost fishing", "ghost net", "ALDFG", "poison fishing"],
+                            "wordlist_no": ["overfisk", "ulovlig fisk", "ulovlige fisk", "ulovleg fisk", "ulovlege fisk", "tjuvfiske", "bifangst", "UUU fiske","UUU-fiske", "spøkelsesfiske", "tapte garn", "fiskerilovgivningen"]
+                        },
+                        {
+                            "termlist_name": "termlist14_4b",
+                            "formatting_rule": "specific_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["gear", "net", "nets"],
+                            "wordlist_no": ["fiskeredskap.*", "fiskegarn", "havteine.*", "fisketeine.*", "torskebur", "teina"]
+                        },
+                        {
+                            "termlist_name": "termlist14_4c",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["abandoned", "lost", "discarded"],
+                            "wordlist_no": ["tapt", "mistet"]
+                        },
+                        {
+                            "termlist_name": "termlist14_4d",
+                            "formatting_rule": "specific_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["trawl.*"],
+                            "wordlist_no": ["trål", "bunntrål.*", "trålfiske.*"]
+                        },
+                        {
+                            "termlist_name": "termlist14_4e",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["degrad", "damag", "harm"],
+                            "wordlist_no": ["skade", "ødelag", "ødeleg"]
+                        },
+                        {
+                            "termlist_name": "termlist14_4f",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["overharvest", "overexploit", "overcapacit", "collaps", "closure",
+                                "illegal", "unreport", "unregulat", "corrupt", "destruct", "blast", "dynamite", "cyanid"],
+                            "wordlist_no": ["overbeskat", "kollaps", "stenge", "stenging",
+                                 "ulovlig", "ulovleg", "urapport", "uregulert", "korrupsj", "ødelegg", "ødelagt", "forring", "dynamitt", "cyanid", "eksplosiv", "tapt redskap", "tapte redskap"]
+                        },
+                        {
+                            "termlist_name": "termlist14_4g",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["fishing", "fisher", "fish stock", "shellfish", "trawl"],
+                            "wordlist_no": ["fiske", "torskebestand", "laksebestand", "makrellbestand", "skalldyr"]
+                        }
+                    ]
+                },
+                {
+                    "number": 2,
+                    "logic_rule": "(([termlist14_4h] | [termlist14_4icase] | [termlist14_4jtrunc]) & ([termlist14_4kltrunc] | [termlist14_4ktrunc] | ([termlist14_4l] & [termlist14_4m])))",
+                    "sentence_split": true,
+                    "_comment": "NO: Fish species taken from The Norwegian Directorate of Fisheries https://www.fiskeridir.no/Yrkesfiske/Tall-og-analyse/Fangst-og-kvoter/Fangst/Fangst-fordelt-paa-art",
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist14_4h",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["manag", "planning", "governance", 
+                                "restor", "stock recovery","rehabilit",
+                                "sustainab", "ecosystem approach",
+                                "maximum sustainable yield", 
+                                "marine stewardship council", 
+                                "regional fisheries management", 
+                                "convention on the law of the sea", "fish stocks agreement", "code of conduct for responsible fisheries", "port state measures agreement",
+                                "Management of Straddling Fish Stocks", "Management of Highly Migratory Fish Stocks", "north atlantic salmon conservation organization",
+                                "deep-sea fisheries guidelines", "Management of Deep-sea Fisheries in the High Seas", 
+                                "common fisheries policy", 
+                                "legislation", "instrument", "strateg", "policy", "policies", "framework", "agreement", "treaty", "treaties"],
+                            "wordlist_no": ["forvalt", "planlegg", "styring", "ledelse", "leiing",
+                                "gjenoppbygg", "restaurer",
+                                "bærekraftig", "berekraftig", "økosystemtilnærming","økosystembasert forvaltning",
+                                "likevektsfangst",
+                                "havrettskonvensjon", "Havrettstraktaten",
+                                "avtalen om fiske på det åpne hav", "avtalen om havnestatstiltak",
+                                "den nordatlantiske laksevernorganisasjonen",
+                                "regulering av fisket etter dyphavsarter",
+                                "felles fiskeripolitik",
+                                "politikk", "lovverk", "regelverk", "regler", "rettningslin", "utredning", "utgreiing", "rammeverk", "avtale", "forskrift"]
+                        },
+                        {
+                            "termlist_name": "termlist14_4icase",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": true,
+                            "wordlist_en": ["EBFM", "MSY", "RFMO", "UNCLOS", "CCRF", "UNFSA"],
+                            "wordlist_no": ["EBFM", "MSY", "RFMO", "UNCLOS", "CCRF", "UNFSA"]
+                        },
+                        {
+                            "termlist_name": "termlist14_4jtrunc",
+                            "formatting_rule": "specific_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["law", "plan", "plans"],
+                            "wordlist_no": ["lov", "plan", "planer"]
+                        },
+                        {
+                            "termlist_name": "termlist14_4kltrunc",
+                            "formatting_rule": "no_left_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["fish", "shellfish", "overfish", 
+                                "herring", "saithe", "haddock", "mackrel", "capelin", "blue whiting"],
+                            "wordlist_no": ["fiske", "skalldyr", "overfisk",
+                                "torsk", "skrei", "kysttorsk", "seifisk", "sildefiske", "hyse", "makrell", "loddefisk", "kolmule"]
+                        },
+                        {
+                            "termlist_name": "termlist14_4ktrunc",
+                            "formatting_rule": "specific_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["cod"],
+                            "wordlist_no": ["sei", "lodde", "sild"]
+                        },
+                        {
+                            "termlist_name": "termlist14_4l",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["catch"],
+                            "wordlist_no": ["fangst"]
+                        },
+                        {
+                            "termlist_name": "termlist14_4m",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["entitlement", "limit", "tolerance"],
+                            "wordlist_no": ["begrens", "kvote"]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "5",
+            "phrases": [
+                {
+                    "number": 1,
+                    "logic_rule": "((([termlist14_5a] | [termlist14_5acaps] | ([termlist14_5b] & [termlist14_5c])) & [marine_terms]) & not [termlist14_5not])",
+                    "sentence_split": true,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist14_5a",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["marine reserve", "ocean reserve", "nature reserve", "marine sanctuar", "marine park", "particularly sensitive sea area", "marine conservation",
+                                "nature reserve","national park",
+                                "no-take area", "no-take zone", "no-take reserve"],
+                            "wordlist_no": ["vernområde","vernområde", "vernet økosystem", "marine reservat", "marint vern",
+                                "naturreservat", "nasjonalpark", "biotopvernområde", "biosfæreområde", "bevarte område", "bevaringsområde","fredningsområde","nasjonalpark",
+                                "fiskeforbud", "fiskevernsone"]
+                        },
+                        {
+                            "termlist_name": "termlist14_5acaps",
+                            "formatting_rule": "no_left_trunc",
+                            "na": false,
+                            "case": true,
+                            "wordlist_en": ["MPA","LSMPA","NMTR"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist14_5b",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["protect","conserved","conservation","conserves","conserving"],
+                            "wordlist_no": ["verne", "verna", "vern av","bevare","bevaring","frede","freda","fredning", "beskytt"]
+                        },
+                        {
+                            "termlist_name": "termlist14_5c",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["area", "zone", "habitat", "ecosystem"],
+                            "wordlist_no": ["område", "sone", "habitat", "leveområd", "miljø", "økosystem"]
+                        },
+                        {
+                            "termlist_name": "termlist14_5not",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": [],
+                            "wordlist_no": ["landskapsvernområde"]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "6",
+            "phrases": [
+                {
+                    "number": 1,
+                    "logic_rule": "((([termlist14_6a] | [termlist14_6acaps]) & [termlist14_6b]) & not [termlist14_6not])",
+                    "sentence_split": true,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist14_6a",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["subsidy", "subsidies", "subsidiz", "subsidis", 
+                                "development assistance", "development aid", "development intervention", "foreign aid", "doha development agenda", "hong kong ministerial", "world trade organi"],
+                            "wordlist_no": ["subsidier", 
+                                "statsstøtte", "offentlig støtte", "utviklingsstøtte", "bistand", "Doha-runden", "ministermøtet i Hongkong", "Verdens handelsorganisasjon"]
+                        },
+                        {
+                            "termlist_name": "termlist14_6acaps",
+                            "formatting_rule": "specific_trunc",
+                            "na": false,
+                            "case": true,
+                            "wordlist_en": ["ODA", "WTO"],
+                            "wordlist_no": ["ODA", "WTO"]
+                        },
+                        {
+                            "termlist_name": "termlist14_6b",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["fishing", "fisher", "shellfish", "trawl"],
+                            "wordlist_no": ["fiske", "skalldyr"]
+                        },
+                        {
+                            "termlist_name": "termlist14_6not",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["larval subsid", "recruitment subsid"],
+                            "wordlist_no": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "7",
+            "_comment": "termlist14_7b is currently not used, as it seems to narrow the results too much. May need to be reevaluated. Currently - enough to mention marine resources and LDCs/SIDS",
+            "phrases": [
+                {
+                    "number": 1,
+                    "logic_rule": "(([termlist14_7a] | [termlist14_7acaps]) & ([LDC] | [SIDS]) & [marine_terms])",
+                    "sentence_split": false,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist14_7a",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["econom","wealth",
+                                "exploit","goods and services","ecosystem service",
+                                "marine resource", "marine benefit", "biological resource", "genetic resource", "mineral resource", 
+                                "livelihood","job","income","profit","trade","trading","market","willingness to pay",
+                                "monetary","moneti","investor",
+                                "blue growth","blue bond"],
+                            "wordlist_no": ["økonomi", "rikdom",
+                                "utnytt", "varer", "tjenester", "naturgoder",
+                                "marine ressurs", "biologiske ressurs", "biologisk ressurs", "genetiske ressurs", "genetisk ressurs", "mineraler",
+                                "levebrød", "jobb", "arbeid", "inntekt", "profit", "handel", "marked", "markad",
+                                "penger", "investor",
+                                "blå vekst", "blåvekst"]
+                        },
+                        {
+                            "termlist_name": "termlist14_7acaps",
+                            "formatting_rule": "specific_trunc",
+                            "na": false,
+                            "case": true,
+                            "wordlist_en": ["GDP"],
+                            "wordlist_no": ["BNP"]
+                        },
+                        {
+                            "termlist_name": "termlist14_7b",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["sustainab", "marine conservation",
+                                "marine spatial planning",  
+                                "ecosystem-based", "ecosystem-based fisheries", "area-based manag", "area-based approach",     
+                                "spatial management", "community based management","resilience based management", 
+                                "coastal zone management","integrated coastal zone planning","coastal resources management",   
+                                "locally managed marine area",
+                                "protected area", "marine reserve", "ocean reserve", "nature reserve", "marine park", 
+                                "conservation zone", "particularly sensitive sea area",
+                                "fisheries management",
+                                "port state measures agreement",
+                                "fish stocks agreement","Management of Straddling Fish Stocks","Management of Highly Migratory Fish Stocks",
+                                "code of conduct for responsible fisheries", "Nairobi convention"],
+                            "wordlist_no": ["bærekraft","berekraft", "marint vern",
+                                "økosystem tilnærming", "økosystembasert forvaltning", "økosystembasert styring", "forvaltningsplaner",
+                                "integrert kystsone", "kystplanlegging", "kystsoneforvalt",
+                                "samfunnsforvalt", "bærekraftig forvalt", "berekraftig forvalt", "arealforvalt",
+                                "marint vernområde","marine vernområde","marine verneområde","marine reservat",
+                                "naturreservat", "biotopvernområde", "nasjonalpark", 
+                                "bevarte område", "bevaringsområde", "fredet område", "vernet område", "marine vernområde", "marine verneområde",
+                                "internasjonalt fiskerisamarbeid",
+                                "havnestatstiltak for å forebygge, forhindre og eliminere ulovlig, urapportert og uregulert fiske", 
+                                "forvaltning av grensestrekksbestand", "forvaltning av vandrende fiskebestand", 
+                                "Nairobi-konvensjonen",
+                                "fiskeriforvalt", "fiskeriplanlegg", "likevektsfangst"
+                            ]
+                        },
+                        {
+                            "termlist_name": "termlist14_7bcaps",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": true,
+                            "wordlist_en": ["LMMA","ICZM","MPA","RFMO","CCRF","UNFSA"],
+                            "wordlist_no": ["LMMA","ICZM","MPA","RFMO","CCRF","UNFSA"]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "a",
+            "phrases": [
+                {
+                    "number": 1,
+                    "logic_rule": "([termlist14_aa] & [marine_terms])",
+                    "sentence_split": false,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist14_aa",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["transfer of marine technolog", "marine technology transfer", "technology transfer"],
+                            "wordlist_no": ["teknologioverføring", "overføring av marin teknologi", "overføre marin teknologi", "overføre teknologi"]
+                        }
+                    ]
+                },
+                {
+                    "number": 2,
+                    "logic_rule": "(([termlist14_ab] | [termlist14_ac] | ([termlist14_ad] & [termlist14_ae])) & ([termlist14_af] | ([termlist14_ag] & [termlist14_ah]) | ([termlist14_ai] & [termlist14_aj])) & [marine_terms] & not [termlist14_anot])",
+                    "sentence_split": true,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist14_ab",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["establish","build","develop","implement","propos","design","provide","provision",
+                                "increas","improv","strengthen","enhanc","upgrad","accelerat","prioriti","promot","enabl",
+                                "cooperat","co-operat","collaborat","network","partnership",
+                                "open data","data sharing","open science",
+                                "technology transfer", "knowledge transfer", "technical transfer",
+                                "invest", "fund", "financ", "grant", "support", "assist",
+                                "international network",
+                                "policy","policies","initiativ","framework","governance","strateg","program","agenda",
+                                "innovation"],
+                            "wordlist_no": ["etablere","bygg","utvikl","tilbyr","promot","design",
+                                "forbedr","styrk","bedring", "betring","oppgrad","muliggjør",
+                                "samarbeid","nettverk","partnerskap",
+                                "åpne data","datadeling","åpen tilgang","åpen vitenskap","åpen forskning",
+                                "teknologioverføring","kunnskapsoverfør", "tekniskoverfør",
+                                "finansiering", "forskningsmidler", "støtte", "assist",
+                                "internasjonalt nettverk","internasjonale nettverk",
+                                "politikk", "retningslinj", "rammeverk", "styring", "ledelse", "leiing", "strateg","program","agenda",
+                                "innovasjon"]
+                        },
+                        {
+                            "termlist_name": "termlist14_ac",
+                            "formatting_rule": "specific_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["plan","planned","planning","aid","ODA"],
+                            "wordlist_no": ["øke", "øker", "midler"]
+                        },
+                        {
+                            "termlist_name": "termlist14_ad",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["knowledge","technolog","technical","research","scientific","R&D"],
+                            "wordlist_no": ["kunnskap", "teknologi", "teknisk", "forskning", "vitenskap", "innovasjon"]
+                        },
+                        {
+                            "termlist_name": "termlist14_ae",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["sharing","shared","share","cooperat","co-operat","collaborat","partnership","network"],
+                            "wordlist_no": ["deling", "samarbeid", "partnerskap", "nettverk"]
+                        },
+                        {
+                            "termlist_name": "termlist14_af",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["research", "science", "scientific", "biotech", "ocean technolog",
+                                "data infrastructure","data network","big data","smart ocean","modelling technique",
+                                "biomonitoring","remote sensing equipment","tide gauge"],
+                            "wordlist_no": ["forskning", "vitenskap", "bioteknol", "havteknolog", "marin teknolog",
+                                "data infrastruktur", "datanettverk", "stordata", "smart hav", "modellering",
+                                "miljøovervåk", "miljøovervak", "fjernmålingsutstyr"]
+                        },
+                        {
+                            "termlist_name": "termlist14_ag",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["observation","observator","monitoring","equipment"],
+                            "wordlist_no": ["observasjon", "overvåk", "overvak", "monitorer", "utstyr"]
+                        },
+                        {
+                            "termlist_name": "termlist14_ah",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["ocean","marine","biolog","ecological","ecological","environmental","network","facilit","system"],
+                            "wordlist_no": ["hav", "sjø", "marin", "økologi", "miljø", "nettverk", "fasilitet", "system"]
+                        },
+                        {
+                            "termlist_name": "termlist14_ai",
+                            "formatting_rule": "specific_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["taxonom.*", "genetic", "species", "diversity", "technolog.*", "technical"],
+                            "wordlist_no": ["taksonom.*", "genetisk", "art", "arter", "teknolog.*", "teknisk"]
+                        },
+                        {
+                            "termlist_name": "termlist14_aj",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["knowledge","capacity","advisor","capabilit","training","expertise","skills","compentenc",
+                                "infrastructure","facilities","research vessel","vehicle","laborator","equipment","herbari","museum collection",
+                                "software"," data","register","reference librar","inventory","inventories","information system",
+                                "guideline",
+                                "investment","funding","GERD","expenditure",
+                                "network","sharing","joint research","joint effort","collaborat","international cooperation"],
+                            "wordlist_no": ["kunnskap", "kapasitet", "rådgi", " evne", "opplær", "ekspert", "ferdighet", "kompetanse",
+                                "infrastruktur", "fasilitet", "forskningsskip", "forskningsfartøy", "utstyr", "museum samling",
+                                "programvare", "forskningsdata", "inventar", "datasystem", 
+                                "retningslinj",
+                                "midler", "pengebruk", "utgift",
+                                "nettverk", "deling", "samarbeid"]
+                        },
+                        {
+                            "termlist_name": "termlist14_anot",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "_comment": "NO: There are a lot of reports about torp sandefjord which show up due to 'Fjord'- manually removed them here (Norway only)",
+                            "wordlist_en": [],
+                            "wordlist_no": ["torp sandefjord"]
+                        }
+
+                    ]
+                },
+                {
+                    "number": 3,
+                    "logic_rule": "(([termlist14_ak] | ([termlist14_am] & [termlist14_an])) & [LMIC] & [marine_terms])",
+                    "sentence_split": true,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist14_ak",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["blue growth","blue econom","marine economy"],
+                            "wordlist_no": ["blå vekst", "blåvekst", "blå økonomi", "marin økonomi"]
+                        },
+                        {
+                            "termlist_name": "termlist14_al",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "_comment": "CURRENTLY NOT IN USE.",
+                            "wordlist_en": ["sustainab"],
+                            "wordlist_no": ["bærekraft", "berekraft"]
+                        },
+                        {
+                            "termlist_name": "termlist14_am",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["bioresource","biological resource","genetic resource","living marine resources",
+                                "biodivers","biological diversity","BBNJ","species diversity","genetic diversity","genomic diversity","taxonomic diversity"],
+                            "wordlist_no": ["bioressurs", "biologiske ressurs", "genressurs", "genetiske ressurs", "levende marine ressurs",
+                                "biologisk diversit", "biologisk mangf", "artsmangf", "genetisk mangf", "taksonomisk mang", "naturmangf"]
+                        },
+                        {
+                            "termlist_name": "termlist14_an",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["bioprospect","biopiracy","Nagoya","biotech","marine natural product","bioactive",
+                                "bio-econom","bioeconom","blue growth","blue econom","blue bond","marine economy",
+                                "benefit","sustainable development","development intervention","human development","social development","economic development",
+                                "tourism","tourist","sightsee",
+                                "fisher","fishing","aquaculture","mariculture","fish farm","harvest","aquarium trade",
+                                "exploit","goods and services","ecosystem service",
+                                "social ecological","socialecological","socioecological","socio economic","socioeconomic",
+                                "econom","GDP","wealth","monetary","moneti","investor",
+                                "livelihood","job","income","profit",
+                                "trade","trading","market",
+                                "sustainable use", "use sustainab", "using sustainab", "sustainable usage"],
+                            "wordlist_no": ["biopirat", "bioteknolog", "Nagoya", "marine naturstoffer", "bioaktiv",
+                                "bioøkonom", "blå vekst", "blå økonomi", "blå aksjer", "marin økonomi",
+                                "fordel", "gevinst", "bærekraftig utvik", "berekraftig utvik", "bistand", "menneskelig utvikling", "økonomisk utvikling", "levekårsutvikling", "sosial utvikling",
+                                "turism", "turist", 
+                                "fiske", "akvakultur", "havbruk", "akvarie",
+                                "utnytt", "varer og tjeneste", "økosystem tjenest", "naturgoder",
+                                "sosio-økologisk", "sosioøkologi", "sosioøkonomisk", "sosio-økonomisk",
+                                "økonomi", "BNP", "rikdom", "penger", "investor",
+                                "levebrød", "arbeid", "inntekt", "avkastn", "profitt",
+                                "handel", "marked",
+                                "bærekraftig bruk", "berekraftig bruk",  "selvbærende", "sjølvberande", "miljøvennlig", "miljøvennleg", "miljøvenleg", "miljøbevisst"]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "b",
+            "phrases": [
+                {
+                    "number": 1,
+                    "logic_rule": "(([termlist14_ba] | [termlist14_bb]) & ([termlist14_bc] & [termlist14_bd]))",
+                    "sentence_split": false,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist14_ba",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["access", "right",
+                                "commons", "common property", "common fishing", "ownership", "inheritance",
+                                "conflict", "dispute", "contested", "competition",
+                                "inequit", "marginali", "criminal", "appropriat",
+                                "blue injustice", "blue justice", "distributional justice",
+                                "governance", "planning" , "legislation" , "policy" , "policies" , "framework" , "strateg" , "legislat" , "regulations"],
+                            "wordlist_no": ["tilgang", "rett",
+                                "felles", "eierskap",
+                                "konflikt", "tvist", "konkurrans",
+                                "kriminel", "stjel",
+                                "blue injustice", "blue justice", "distributional justice",
+                                "styring", "ledelse", "leiing", "politikk", "retningslinj", "rammverk", "strateg", "planlegging", "regulativ", "lovgiv", "forskrift"]
+                        },
+                        {
+                            "termlist_name": "termlist14_bb",
+                            "formatting_rule": "specific_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["law", "laws"],
+                            "wordlist_no": ["lov", "lovverk", "arv"]
+                        },
+                        {
+                            "termlist_name": "termlist14_bc",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["fishing", "fisher", "fish stock", "fish market", "shellfish", "marine resource", "marine harvest"],
+                            "wordlist_no": ["fiske", "torskebestand", "laksebestand", "makrellbestand", "skalldyr", "marine ressurs", "havbruk"]
+                        },
+                        {
+                            "termlist_name": "termlist14_bd",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "_comment": "Some terms here are from a Norwegian perspective (Sami, Sapmi).",
+                            "wordlist_en": ["traditional fishing","small-scale", "artisan", "subsistence", "indigenous", "sami", "sapmi"],
+                            "wordlist_no": ["tradisjonel", "småskala", "subsistens", "levebrød", "urfolk", "urbefolk", "samene", "sami", "sapmi"]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "c",
+            "phrases": [
+                {
+                    "number": 1,
+                    "logic_rule": "([termlist14_ca] | [termlist14_ca_case] | ([termlist14_cb] & [marine_terms]))",
+                    "sentence_split": false,
+                    "_comment": "NO: A website with Norwegian and English names for international environmental agreements from the Norwegian Environment Agency was used to help translate agreement names (https://www.miljodirektoratet.no/regelverk/konvensjoner/; accessed 24/01/23).",
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist14_ca",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["law of the sea",
+                                "diversity beyond national jurisdiction", "high seas treaty", "international seabed authority",
+                                "common fisheries policy",
+                                "marine stewardship council",
+                                "regional fisheries management organi",
+                                "fish stocks agreement",
+                                "code of conduct for responsible fisheries",
+                                "port state measures agreement",
+                                "Management of Straddling Fish Stocks","Management of Highly Migratory Fish Stocks",
+                                "deep-sea fisheries guidelines","Management of Deep-sea Fisheries in the High Seas",
+                                "North Atlantic Salmon conservation Organization",
+                                "marine spatial planning directive",
+                                "Regional seas programme",
+                                "Marine strategy framework directive",
+                                "OSPAR convention","Convention for Protection of the Marine Environment of the North-East Atlantic",
+                                "Barcelona convention",
+                                "Global Programme of Action for the Protection of the Marine Environment",
+                                "prevention of pollution from ships",
+                                "Conservation of Antarctic Living Marine Resources", "Agreement on the Conservation of Polar Bears"],
+                            "wordlist_no": ["havrettskonvensjon","Havrettstraktat", "havtraktat",
+                                "avtalen om verdenshavene", "global havavtale", "havbunnsmyndighet",
+                                "felles fiskeripolitik",
+                                "avtalen om fiske på det åpne hav",
+                                "avtalen om havnestatstiltak",
+                                "avtalen om fiske på vandrende bestander",
+                                "regulering av fisket etter dyphavsarter",
+                                "Den nordatlantiske laksevernorganisasjonen",
+                                "havstrategidirektiv", 
+                                "OSPAR-konvensjonen", "Konvensjonen om beskyttelse av det marine miljø i det nordøstlige Atlanterhav",
+                                "Barcelona-konvensjonen",
+                                "Konvensjonen for bevaring av det marine miljø", "Oslo-Paris-konvensjonen", 
+                                "Isbjørnavtalen"]
+                        },
+                        {
+                            "termlist_name": "termlist14_ca_case",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": true,
+                            "wordlist_en": ["UNCLOS","ABNJ","BBNJ","RFMO","CCRF","UNFSA","MSFD","MARPOL"],
+                            "wordlist_no": ["UNCLOS","ABNJ","BBNJ","RFMO","CCRF","UNFSA","MSFD","MARPOL"]
+                        },
+                        {
+                            "termlist_name": "termlist14_cb",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "_comment": "Relevant, but not marine-specific legislation.",
+                            "wordlist_en": ["the future we want",
+                                "habitats directive","convention on biological diversity",
+                                "Convention on International Trade in Endangered Species",
+                                "World Heritage Convention",
+                                "Water framework directive",
+                                "Bern convention", "Convention on the Conservation of European Wildlife and Natural Habitats",
+                                "Bonn convention","Convention on the Conservation of Migratory Species of Wild Animals",
+                                "stockholm convention"],
+                            "wordlist_no": ["habitatdirektiv", "Konvensjon om biologisk mangfold", "Konvensjonen om biologisk mangfold", "biodiversitetskonvensjon",
+                                "Konvensjonen om internasjonal handel med truede dyr","internasjonal handel med truede og sårbare arter",
+                                "verdensarvkonvensjonen",
+                                "Vannrammedirektiv",
+                                "Bernkonvensjonen", "Bern-konvensjon", "Konvensjonen om vern av ville europeiske planter og dyr",
+                                "Bonnkonvensjonen", "Bonn-konvensjon", "konvensjonen om bevaring av trekkende ville dyr",
+                                "Stockholmkonvensjonen", "Stockholm-konvensjon"]
+                        }
+                    ]
+                },
+                {
+                    "number": 2,
+                    "logic_rule": "(([termlist14_cc] | [termlist14_cccaps]) & ([termlist14_cd] | [termlist14_ce]) & ([termlist14_cf] | [termlist14_cfcaps]) & [marine_terms])",
+                    "sentence_split": true,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist14_cc",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["international", "beyond national jurisdiction", "high seas", "europ", "pacific", "asia", "africa", "latin america", "south america", "arctic"],
+                            "wordlist_no": ["internasjonal", "områder utenfor nasjonal jurisdiksjon", "europ", "stillehavet", "asia", "afrika", "sør-amerika", "arktisk"]
+                        },
+                        {
+                            "termlist_name": "termlist14_cccaps",
+                            "formatting_rule": "specific_trunc",
+                            "na": false,
+                            "case": true,
+                            "wordlist_en": ["UN", "ABNJ"],
+                            "wordlist_no": ["FN", "ABNJ"]
+                        },
+                        {
+                            "termlist_name": "termlist14_cd",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["governance","policy","policies","regulat","legal","legislat","agreement","treaty","treaties","framework","instrument"],
+                            "wordlist_no": ["styring", "ledelse", "leiing", "politikk", "avtale", "retningslin", "rammeverk", "styring", "planlegging", "regulativ", "lovgivning", "rett", "juridisk", "lovverk", "forskrift"]
+                        },
+                        {
+                            "termlist_name": "termlist14_ce",
+                            "formatting_rule": "specific_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["law", "laws"],
+                            "wordlist_no": ["lov"]
+                        },
+                        {
+                            "termlist_name": "termlist14_cf",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["conservation","sustainab","ecosystem restoration",
+                                "ecosystem based management","area based management","resilience based management",
+                                "coastal zone management","integrated coastal zone planning","coastal resources management",
+                                "community based management","locally managed marine area$",
+                                "marine spatial planning","spatial management",
+                                "herbivore management area","ecosystem approach",
+                                "protected area", "marine reserve","ocean reserve","marine park","marine sancturary",
+                                "nature reserve","conservation zone","particularly sensitive sea area",
+                                "biodivers", "biological diversity", "marine resource", "ocean resource","fishing", "fish stock", "mineral resource", "minerals", "deep sea mining", "deep-sea mining",
+                                "blue growth","blue econom"],
+                            "wordlist_no": ["forvalt", "vernet", "miljøvern", "bevart", "bevaring", "fredet", "fredning", "gjenoppbygg", "restaurer", "bærekraft",
+                                "økosystembasert forvaltning", "økosystembasert styring", "forvaltningsplaner",
+                                "samfunnsforvalt", "bærekraftig forvalt", "berekraftig forvalt", "arealforvaltning",
+                                "integrert kystsone", "kystplanlegging", "kystsoneforvaltning",
+                                "marint vernområde","marine vernområde","marine verneområde","marine reservat", "mineraler", "dyphavsgruv", "gruvedrift på havbunnen",
+                                "naturreservat", "biotopvernområde", "nasjonalpark", "bevarte område",
+                                "biologisk diversit","biologisk mangfold", "marine ressurs", "fiske", 
+                                "blåvekst", "blå vekst", "blå økonomi"]
+                        },
+                        {
+                            "termlist_name": "termlist14_cfcaps",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": true,
+                            "wordlist_en": ["MSP", "ICZM", "LMMA", "MPA", "LSMPA"],
+                            "wordlist_no": ["MSP", "ICZM", "LMMA", "MPA", "LSMPA"]
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "mentions": {
+        "logic_rule": "([termlist_sdg_a] | ([termlist_sdg_b] & ([termlist_sdg_c] | [termlist_sdg_f])) | ([termlist_sdg_d] & [termlist_sdg_e]))",
+        "termlists": [
+            {
+                "termlist_name": "termlist_sdg_a",
+                "formatting_rule": "default",
+                "na": false,
+                "case": false,
+                "wordlist_en": ["SDG 14", "SDGs 14", "SDG14", "sustainable development goal 14"],
+                "wordlist_no": ["bærekraftsmål 14", "berekraftsmål 14"]
+            },
+            {
+                "termlist_name": "termlist_sdg_b",
+                "formatting_rule": "default",
+                "na": false,
+                "case": false,
+                "wordlist_en": ["sustainable development goal"],
+                "wordlist_no": ["bærekraftsmål", "berekraftsmål"]
+            },
+            {
+                "termlist_name": "termlist_sdg_c",
+                "formatting_rule": "default",
+                "na": false,
+                "case": false,
+                "wordlist_en": ["goal 14"],
+                "wordlist_no": ["mål 14"]
+            },
+            {
+                "termlist_name": "termlist_sdg_d",
+                "formatting_rule": "default",
+                "na": false,
+                "case": false,
+                "wordlist_en": ["sustainable development goal", "SDG", "goal 14"],
+                "wordlist_no": ["bærekraftsmål", "berekraftsmål", "mål 14"]
+            },
+            {
+                "termlist_name": "termlist_sdg_e",
+                "formatting_rule": "specific_trunc",
+                "na": false,
+                "case": false,
+                "wordlist_en": ["ocean.*", "marine", "sea", "seas", "fisher.*"],
+                "wordlist_no": ["hav", "havet", "sjø", "marin", "fisker.*"]
+            },
+            {
+                "termlist_name": "termlist_sdg_f",
+                "formatting_rule": "default",
+                "na": false,
+                "case": false,
+                "wordlist_en": ["life below water"],
+                "wordlist_no": ["livet i havet", "Liv under vatn"]
+            }
+        ]
+    }
+}

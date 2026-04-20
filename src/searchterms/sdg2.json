@@ -1,0 +1,865 @@
+{
+    "name": "sdg2",
+    "number": 2,
+    "generated_datetime": "09-12-2025 10:07:34",
+    "pre-search": [
+        {
+            "name": "farming",
+            "logic_rule": "([termlist2_4a] | [termlist2_4anorighttrunc] | [termlist2_4a_nolefttrunc] | [termlist2_4a_trunc])",
+            "sentence_split": false,
+            "termlists": [
+                {
+                    "termlist_name": "termlist2_4a",
+                    "formatting_rule": "default",
+                    "na": false,
+                    "case": false,
+                    "wordlist_en": ["food-produc", "food produc", "grower", "agrifood", "agri-food", "agro-food", "agro food",
+                        "agricultur", "farm", "smallhold", "small-hold", "permacultur", "cropping", "cropland", "orchard", "arable land",
+                        "pasture", "pastoral", "agroforest", "agro-forest", "silvopastur", "silvopastoral",
+                        "aquacultur", "maricultur", "fisher", "fish farm", "herding",
+                        "grain", "vegetable", "fruit", "cereal", "wheat", "maize", "pulses", "legume",
+                        "livestock", "fish", "salmon", "cattle", "sheep", "poultry", "pigs", "goats", "chicken", "buffalo", "ducks", "reindeer",
+                        "fodder"],
+                    "wordlist_no": ["matproduksjon", "matprodusent",
+                        "gård", "gard", "landbruk", "jordbruk", "gårdsbruk", "gardsbruk", "småbruk", "familiebruk", 
+                        "dyrket mark", "dyrkamark", "dyrka mark", "kultivert mark",
+                        "beite", "dyreproduksjon", "meieri",
+                        "fiskeoppdrett", "lakseoppdrett", "havbruk", "akvakultur",
+                        "grønnsak", "grønsak", "belgfrukt", "frukt", "fiske", "laks", "sauedrift", "sauehold", "storfe", "fjærkre",
+                        "berekraftig fôr", "dyrefôr", "fiskefôr",
+                        "eplesort", "epler", "epledyrk"]
+                },
+                {
+                    "termlist_name": "termlist2_4anorighttrunc",
+                    "formatting_rule": "specific",
+                    "na": false,
+                    "case": false,
+                    "wordlist_en": ["animal feed", "fish feed"],
+                    "wordlist_no": ["bærekraftig for", "dyrefor", "fiskefor"]
+                },
+                {
+                    "termlist_name": "termlist2_4a_nolefttrunc",
+                    "formatting_rule": "no_left_trunc",
+                    "na": false,
+                    "case": false,
+                    "wordlist_en": ["crop", "crops"],
+                    "wordlist_no": ["rein"]
+                },
+                {
+                    "termlist_name": "termlist2_4a_trunc",
+                    "formatting_rule": "specific_trunc",
+                    "na": false,
+                    "case": false,
+                    "wordlist_en": ["rice"],
+                    "wordlist_no": ["svin", "sau", "sauer"]
+                }
+            ]
+        }
+    ],
+    "targets": [
+        {
+            "name": "1",
+            "phrases": [
+                {
+                    "number": 1,
+                    "logic_rule": "([termlist2_1a])",
+                    "sentence_split": false,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist2_1a",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["end hunger", "ending hunger", "ends hunger", "world hunger", "hunger and poverty", "poverty and hunger", "child hunger", 
+                                "famine", "undernourish",
+                                "food insecurity", "nutritional insecurity"],
+                            "wordlist_no": ["utrydde sult", "utrydde svolt", "utrydje svolt", "utrydda svolt", "utrydja svolt", "bekjempe sult", "bekjempe svolt", "sultne barn", "barn sult", "barnesult",
+                                "sult og fattigdom", "fattigdom og sult", "svolt og fattigdom", "fattigdom og svolt", "global sult", "global svolt", 
+                                "hungersnød", "hungersnaud", "matusikkerhet", "matmangel"]
+                        }
+                    ]
+                },
+                {
+                    "number": 2,
+                    "logic_rule": "([termlist2_1b] & not [termlist2_1c])",
+                    "sentence_split": false,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist2_1b",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["right to food", "right to adequate food", "food sovereignty",
+                                "nutrition security", "nutritional security", 
+                                "access to food", "food access", "food safety", "safe food", "food security",
+                                "school feeding", "free school meal", "food stamp program", "nutrition assistance", "food assistance"],
+                            "wordlist_no": ["tilgang til mat", "matforsyning",
+                                "nok mat",  "tilstrekkelig mat", "trygg mat", "mattrygghet", "sunn mat", "sunne mat", "matsikkerhet",
+                                "gratis skolemat", "gratis skolemåltid"]
+                        },
+                        {
+                            "termlist_name": "termlist2_1c",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "_comment": "This term list is specific for Norway and can be dropped for works from other countries. VKM reports are mostly very specialised, for example risk assessments of certain substances. Therefore removed for now, but this could be discussed. Note that this does not remove all VKM reports, but does exclude those with 'opinion of the Norwegian Scientific Committee for Food Safety...' in the title",
+                            "wordlist_en": ["Norwegian Scientific Committee for Food Safety"],
+                            "wordlist_no": []
+                        }
+                    ]
+                },
+                {
+                    "number": 3,
+                    "logic_rule": "([termlist2_1d])",
+                    "sentence_split": false,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist2_1d",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "_comment": "Note that this can result in some noise from biological works (e.g. food supply in a certain habitat), but it mostly gets relevant results in our dataset",
+                            "wordlist_en": ["food supply"],
+                            "wordlist_no": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "2",
+            "phrases": [
+                {
+                    "number": 1,
+                    "logic_rule": "(([termlist2_2a] | ([termlist2_2b] & [termlist2_2c])) & not [termlist2_2not])",
+                    "sentence_split": true,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist2_2a",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["malnutrition", "malnourish", "kwashiorkor", "marasmus", "anaemia", "anemia", 
+                                "nutritional deficien", "inadequate nutrition", "nutritional inadequa", "dietary deficien", "dietary inadequa", 
+                                "vitamin deficien", "inadequate vitamin", "micronutrient deficien", "inadequate micronutrient", 
+                                "iron deficien", "inadequate iron", "inadequate iodine", "iodine deficien", 
+                                "obese", "obesity", "overweight"],
+                            "wordlist_no": ["feilernæring", "underernær", "ernæringsproblem", "jernmangel", "anemi",
+                                "ernæringsmangel", "kostholdsmangel", 
+                                "vitamin mangel", "vitaminmangel", "avitaminosis",
+                                "overvekt", "fedme"]
+                        },
+                        {
+                            "termlist_name": "termlist2_2b",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["stunting", "stunted", "wasting", "underweight"],
+                            "wordlist_no": ["veksthemm", "avmagring", "undervekt"]
+                        },
+                        {
+                            "termlist_name": "termlist2_2c",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["child", "infant", "under five", "under-five", "babies", "baby", "toddler", "girl", "boy"],
+                            "wordlist_no": ["barn", "jenter", "baby", "gutter", "gutar"]
+                        },
+                        {
+                            "termlist_name": "termlist2_2not",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "_comment": "Norwegian specific term list for a NOT search - removed as much Norwegian research on these topics, that is not relevant to human health",
+                            "wordlist_en": ["salmon anaemia", "salmon anemia"],
+                            "wordlist_no": ["lakseanemi"]
+                        }
+                    ]
+                },
+                {
+                    "number": 2,
+                    "logic_rule": "(([termlist2_2d] | ([termlist2_2e] & [termlist2_2f])) & not [termlist2_2g])",
+                    "sentence_split": true,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist2_2d",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["nutrition security", "nutritional security", "nutritional quality", "nutrition sensitive agriculture", 
+                                "nutritional quality", "dietary quality",
+                                "safe nutrition", "access to nutrition", "reliable nutrition"],
+                            "wordlist_no": ["næringssikkerhet", "næringskvalitet", "tilgang til næring", "trygg næring"]
+                        },
+                        {
+                            "termlist_name": "termlist2_2e",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["nutrition", "folate", "micronutrient"],
+                            "wordlist_no": ["ernæring", "næringsstoff", "næringsrik", "folsyre", "folacin", "folat", "mikronæring"]
+                        },
+                        {
+                            "termlist_name": "termlist2_2f",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "_comment":"We use 'eldre' (NO) but not 'gamle' (NO) alone because the latter is more likely to be used for non-humans (buildings etc.)",
+                            "wordlist_en": ["child", "infant", "under five", "under-five", "babies", "baby", "toddler", "girl", "boy", "perinatal", "prenatal",
+                                "older person", "old person", "old people", "elderly", "older adult",
+                                "women", "mother", "pregnan",
+                                "school feeding", "free school meal", "food stamp program", "nutrition assistance", "food assistance"],
+                            "wordlist_no": [ "barn", "jenter", "baby", "babyer", "gutter", "gutar",
+                                "gammel person", "eldre", "de gamle",
+                                "kvinne", "gravid",
+                                "gratis skolemat", "gratis skolemåltid"]
+                        },
+                        {
+                            "termlist_name": "termlist2_2g",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "_comment": "This term is an issue for Norwegian where 'næring' (NO) is nutrients and 'næringsliv' (NO) is business so the latter is removed with a NOT search",
+                            "wordlist_en": [],
+                            "wordlist_no": ["næringsliv", "næringsdrivend"]
+                        }
+                    ]
+                },
+                {
+                    "number": 3,
+                    "logic_rule": "([termlist2_2h])",
+                    "sentence_split": false,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist2_2h",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["undernutrition", "under-nutrition", "undernourish", "under-nourish", "protein deficien", 
+                                "nutritional value", "nutrient content", "nutritional content"],
+                            "wordlist_no": ["underernær", "proteinmangel", "næringsinnhold", "næringsinnhald"]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "3",
+            "phrases": [
+                {
+                    "number": 1,
+                    "logic_rule": "([termlist2_3a] & ([termlist2_3b] | ([termlist2_3c] & [farming])))",
+                    "_comment": "Uses pre-search.",
+                    "sentence_split": true,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist2_3a",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "_comment": "I have added ownership and production resources here. 'tilgang/access' (NO) will cover access to land, knowledge, financial services etc.",
+                            "wordlist_en": ["intensification", "production", "productivity", "yield", "output", "production resources",
+                                "livelihood", "income", "profit", "revenue", "economic viability", "economically viable",
+                                "value addition", "diversification", "non-farm employment", "off-farm employment", 
+                                "access", "empowerment", "benefit", "tenure", "ownership",
+                                "right to land", "rights to land", "land rights", "property rights", "tenure rights",
+                                "land grab", "tenure insecurity",
+                                "equity", "equitable", "justice", "injustice", "barrier", "obstacle"],
+                            "wordlist_no": ["intensivering", "produksjon", "avling", "høsting", "produksjonsressurs",
+                                "levebrød", "inntekt", "avkastning", "økonomi", "finansielle tjenester", "innsatsmidl",
+                                "verdiøkning", "verdiauke", "sysselsetting utenfor", "sysselsette utenfor", "sysselsetting utafor", "sysselsette utafor",
+                                "sysselsette utanfor", "sysselsetting utanfor",
+                                "tilgang", "myndiggjør", "fordel", "eierskap", "eigarskap",
+                                "landrett",  "rettigheter til land", "eiendomsrett", "eigedomsrett", "landrike", "landfattig", "jordleie",
+                                "likestilling", "ulikhet", "ulikskap", "rettferd", "rettighet", "ekskludering", "marginali"]
+                        },
+                        {
+                            "termlist_name": "termlist2_3b",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "_comment": "'reindrift' (NO, reindeer herding) added, often small-scale",
+                            "wordlist_en": ["smallhold", "small-hold", "small holding", "small farm", 
+                                "family farm", "family-run farm", "family run farm", "family-owned farm", "family owned farm", "home gardening"],
+                            "wordlist_no": ["småbruk", "familiegård", "familiegard", "familiebruk", "kjøkkenhage", "grønnsakshage", "reindrift", "husdyrnomad"]
+                        },
+                        {
+                            "termlist_name": "termlist2_3c",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["small-scale", "indigenous", "homestead", "subsistence"],
+                            "wordlist_no": ["småskal", "urfolk", "urbefolk", "sami", "sapmi", "samer", "subsistens"]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "4",
+            "phrases": [
+                {
+                    "number": 1,
+                    "logic_rule": "([farming] & ([termlist2_4b] | ([termlist2_4c] & [termlist2_4c])))",
+                    "sentence_split": true,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist2_4b",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["intensif", "productivity", "efficiency", "yield", "agricultural output", "farm output"],
+                            "wordlist_no": ["produktivitet", "effektivitet", "avling"]
+                        }, 
+                        {
+                            "termlist_name": "termlist2_4c",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["production"],
+                            "wordlist_no": ["produksjon"]
+                        }, 
+                        {
+                            "termlist_name": "termlist2_4c",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "_comment": "'production' is combined with 'increasing' because a lot of the results were too irrelevant when alone", 
+                            "wordlist_en": ["increas", "improv"],
+                            "wordlist_no": ["økt", "øke", "auke", "auka"]
+                        }
+                    ]
+                },
+                {
+                    "number": 2,
+                    "logic_rule": "([farming] & [termlist2_4e])",
+                    "sentence_split": true,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist2_4e",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "_comment": "It was necessary to have disasters and plans in phrases in english because there are a lot of results about e.g. risks to local habitats from agriculture, rather than risks to agriculture",
+                            "wordlist_en": ["climate smart", "climate-smart", "resilien", "vulnerability", 
+                                "risk reduction", "disaster reduction",
+                                "disaster plan", "disaster management", "disaster strateg", "disaster relief", "disaster program", 
+                                "risk plan", "risk management", "risk strate", "manage risk", "risk program"],
+                            "wordlist_no": ["klimasmart", "sårbar", "risikoplan", "katastrofe", "beredskap"]
+                        }
+                    ]
+                },
+                {
+                    "number": 3,
+                    "logic_rule": "([farming] & [termlist2_4f] & ([termlist2_4g] | [termlist2_4h]))",
+                    "sentence_split": true,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist2_4f",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["adapt", "mitigat", "protect", "avoid", "limit", "prevent", "manag", 
+                                "planning", "plans", "strateg", "disaster reduc", "risk reduc", "relief", "program", "programme", "policy", "policies", "strateg", "framework", "governance", "legislat",
+                                "cope", "coping", "tolera", "preparedness", "early warning",
+                                "sendai"],
+                            "wordlist_no": ["tilpass", "forbered", "førebu", "beskytt", "unngå", "begrens", "hindr", "forebygg", "førebygg" ,"håndter",
+                                "planer", "planlegging", "handlingsplan", "rammeverk", "politikk", "retningslin", "styring", "ledelse", "leiing", "lovgiv", 
+                                "katastrofeplanlegging", "risikoreduksjon", "strategi", "krisehåndtering", "tåle", "beredskap", "varsling", "varsel"]
+                        }, 
+                        {
+                            "termlist_name": "termlist2_4g",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["climate change", "changing climate", "global warming",
+                                "disaster", "catastrophe", "hazard",
+                                "extreme climat", "extreme weather", "extreme precipitation", "extreme rain", "extreme snow", "extreme temperatur", "extreme storm", "extreme wind", 
+                                "rogue wave", "tsunami", "cyclone", "typhoon", "hurricane", "tornado", 
+                                "drought", "flood", 
+                                "avalanche", "landslide", "land-slide", "land slide", "rockslide", "rock-slide", "rock slide", "rockfall", "surface collapse", "mudflow", "mud-flow", 
+                                "cold spell", "cold wave", "dzud", "blizzard", "snowstorm", 
+                                "heatwave", "heat-wave", 
+                                "earthquake", "volcan", "ash cloud", "ash fall", "tephra", 
+                                "wildfire", "wild-fire", "wild fire", "forest-fire", "forest fire", "forestfire", 
+                                "sea-level rise", "sea-level change", "rising sea-level", 
+                                "outbreak", "pandemic", "epidemic", 
+                                "armed conflict", "political instability", "civil instability", "politically volatile", 
+                                "unrest", "financial crash", "financial shock", "economic downturn", "economic shock"],
+                            "wordlist_no": ["klimaendring", "global oppvarm", 
+                                "katastrof", "krise", 
+                                "ekstremvær", "ekstremver", 
+                                "tropisk lavtrykk", "tropisk lågtrykk", "flodbølg", "monsterbølg", "ekstrembølg", 
+                                "orkan",  "tyfon", "syklon", "snøstorm", "tornado",
+                                "flom", "flaum", "oversvøm", "ovefløym", "tørke", 
+                                "snøskred", "skred", "snøras", "lavine", "jordskred", "jordras", "sørpeskred", "leirras", "leirskred", "steinras", "steinskred", "synkehull", 
+                                "uvanlig kulde", "uvanlig kaldt", "uvanleg kulde", "uvanleg kaldt", "ekstrem kuld", "ekstremkuld", "kuldebølg", "snøstorm", 
+                                "varmebølg", "hetebølg", "ekstrem varm", "ekstremvarm", "uvanlig varm", "uvanleg varm", 
+                                "jordskjelv", "vulkan", "askenedfall", "oskenedfall", "askesky", "oskesky", 
+                                "skogbrann", "gressbrann", "grasbrann", "lyngbrann", 
+                                "havnivåstigning", "stormflo", 
+                                "pandemi", "epidemi", "utbrudd", "utbrot",
+                                "politisk ustabilitet", "væpnede konflikter", "væpnet konflikt", "væpna konflikt", "borgerkrig", "borgarkrig", "fremmedkrig", "finanskrise", "finanssjokk", 
+                                "finanskatastrofe", "finanskræsj", "økonomisk nedgang", "økonomisk sjokk", "økonomisk katastrofe"]
+                        }, 
+                        {
+                            "termlist_name": "termlist2_4h",
+                            "formatting_rule": "specific_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["war", "wars"],
+                            "wordlist_no": ["krig", "ras"]
+                        }
+                    ]
+                },
+                {
+                    "number": 4,
+                    "logic_rule": "([termlist2_4i] | ([farming] & [termlist2_4j]))",
+                    "sentence_split": false,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist2_4i",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "_comment": "'organic' is not used alone, but is instead combined in phrases to avoid e.g. organic acids, organic matter. Moved to this part rather than 4j as it can stand alone. 'bærekraftig fôr' (NO) is added specifically due to it's inclusion as a priority area ('samfunnsoppdrag') in the governments long-term plan.",
+                            "wordlist_en": ["ecoagricultur", "eco-agricultur", "agroecolog", "permaculture", "conservation agriculture", "conservation farming",
+                                "organic farm", "organic agricult", "organic crop", "organic orchard", "organic arable", "organic pasture",
+                                "organic aquacultur", "organic salmon", "organic pig", "organic poultry", "organic dairy", "organic reindeer"],
+                            "wordlist_no": ["økolandbruk", "økojordbruk", "permakultur"]
+                        },
+                        {
+                            "termlist_name": "termlist2_4j",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "_comment": "The following report from NIBIO was used to help with Norwegian sustainable agriculture terms: Bøe et al. (2020) Fangvekster som klimatiltak i Norge. Egnet dyrkingsareal, potensiale for klimagassbesparelse, kostnader, barrierer og virkemiddel. NIBIO Report. http://hdl.handle.net/11250/2638984",
+                            "wordlist_en": ["sustainab", "eco-friendly", "environmentally friendly", "ecosystem approach", "ecosystem based",
+                                "natural pest control", "natural pest management", "biological pest control", "intergrated pest management",
+                                "intercropping", "cover crop", "crop rotation", "polyculture", "permaculture", 
+                                "reduced tillage", "mulch", "mulching",
+                                "water conservation"],
+                            "wordlist_no": ["bærekraftig", "berekraftig", "selvbærende", "sjølvberande", 
+                                "miljøvennlig", "miljøvennleg", "miljøvenleg", "miljøbevisst", "miljømedveten", "miljømedviten", "økosystem", 
+                                "økologisk", "biologisk bekjempelse", "biologisk nedkjemping", "biologisk skadedyrkontroll", "integrert skadedyrkontroll", "integrert ugrasbekjempelse", "integrert plantevern",
+                                "vekstskifte", "grønngjødsling", "dekkvekst", "underkultur", "underså", "ettervekster", "polykultur", "permakultur",
+                                "redusert jordarbeiding", "gjødselplanlegging",
+                                "vannsparing"]
+                        }
+                    ]
+                },
+                {
+                    "number": 5,
+                    "logic_rule": "([farming] & [termlist2_4k])",
+                    "sentence_split": true,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist2_4k",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "_comment": "The following NIBIO report was used to help with relevant Norwegian terms around soil management: Bardalen et al. (2021). Jordvernets begrunnelser Kunnskapsgrunnlag for revidert jordvernstrategi. NIBIO Report. https://hdl.handle.net/11250/2738064", 
+                            "wordlist_en": ["soil conserv", "soil structure", "soil fertility", "soil health", "soil improvement",
+                                "soil quality", "land quality", "farmland quality", "quality of soil", "quality of land",
+                                "biodiversit", "species diversity", "ecosystem", "pollinator"],
+                            "wordlist_no": ["jordvern", "jordfunksjon", "jordforbedring", "jordforbetring", "jordforvaltning", "jordkvalitet", "jordas kvalitet",
+                                "biologisk mangfold", "biologiske mangfold", "biologisk mangfald", "biomangfold", "biomangfald", "artsmangfold", "artsmangfald",
+                                "biodiversit", "naturmangfold", "naturmangfald", "økosystem"]
+                        }
+                    ]
+                },
+                {
+                    "number": 6,
+                    "logic_rule": "([farming] & ([termlist2_4l] | ([termlist2_4m] & [termlist2_4n])))",
+                    "sentence_split": true,
+                    "_comment": "The following NIBIO report was used to help with relevant Norwegian terms around soil management: Bardalen et al. (2021). Jordvernets begrunnelser Kunnskapsgrunnlag for revidert jordvernstrategi. NIBIO Report. https://hdl.handle.net/11250/2738064. We don't need biodiversity/pollinator terms here because they are already covered in phrase 5.",
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist2_4l",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["desertification", "land degradation", "environmental impact", "environmental footprint"],
+                            "wordlist_no": ["vannknapphet", "ørkenspredning", "ørkenspreiing", "forørkning", "landforringelse", "jordforringelse", "miljøpåvirk", "fotavtrykk"]
+                        },
+                        {
+                            "termlist_name": "termlist2_4m",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "_comment": "'land' had some noise if used alone, for example Greenland",
+                            "wordlist_en": ["soil", "cropland", "farmland", "arable land", "cultivated land", "agricultural land"],
+                            "wordlist_no": ["jord", "dyrket mark", "dyrka mark", "dyrkamark", "dyrket land", "dyrka land"]
+                        },
+                        {
+                            "termlist_name": "termlist2_4n",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["loss", "degradation", "depletion", "erosion", "compaction", "waterlogging", "salinization", "salinisation", "acidifi", "pollut", "contaminat", "vulnerab"],
+                            "wordlist_no": ["forring", "forverr", "næringsfattig", "avrenning", "jordtap", "erosjon", "forsalting", "jordpakking", "forsuring", "forurensing", "forureining", "sårbar"]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "5",
+            "phrases": [
+                {
+                    "number": 1,
+                    "logic_rule": "([termlist2_5a] | ([farming] & [termlist2_5b]))",
+                    "sentence_split": true,
+                    "_comment": "Phrases 1&2 (from WOS) are combined here because it was difficult to find completely non-overlapping terms in Norwegian. Phrase 1 deals with terms quite specific to animal and plant genetic diversity in agriculture, while phrase 2 deals with genetic resources generally combined with agriculture. In practice, here the approach for these became so similar that I combined them.",
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist2_5a",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "_comment": "Apples are added in Norwegian as this seems to be a specific focus area.",
+                            "wordlist_en": ["plant genetic resource", "animal genetic resource", 
+                                "agricultural diversity", "agricultural biodiversity", "agrobiodiversity",
+                                "wild relative", 
+                                "local breed", "local cultivar", "traditional breed", "traditional cultivar", "indiengous breed", "indigenous cultivar", "autochthonous breed", "autochthonous cultivar",
+                                "indigenous variet", "indigenous crop", "indigenous grain", "indigenous vegetable", "indigenous fruit", "indigenous cereal", "indigenous rice", "indigenous wheat", "indigenous maize", "indigenous pulse",
+                                "indigenous livestock", "indigenous poultry", "indigenous cattle", "indigenous sheep", "indigenous goat", "indigenous chicken", "indigenous duck", "indigenous buffalo",
+                                "traditional livestock", "traditional poultry", "traditional cattle", "traditional sheep", "traditional goat", "traditional chicken", "traditional duck", "traditional buffalo",
+                                "traditional variet", "traditional crop", "traditional grain", "traditional vegetable", "traditional fruit", "traditional cereal", "traditional rice", "traditional wheat", "traditional maize", "traditional pulse",
+                                "local variet", "local crop", "local grain", "local vegetable", "local fruit", "local cereal", "local rice", "local wheat", "local maize", "local pulse",
+                                "local livestock", "local poultry", "local cattle", "local sheep", "local goat", "local chicken", "local duck", "local buffalo",
+                                "landrace"],
+                            "wordlist_no": ["plantegenetiske ressurs", "dyrgenetiske ressurs", "dyregenetiske ressurs",
+                                "biologisk mangfold for mat","biologisk mangfold for landbruk","biologisk mangfold for jordbruk",
+                                "biologisk diversitet for mat","biologisk diversitet for landbruk","biologisk diversitet for jordbruk",
+                                "biomangfold for mat","biomangfold for landbruk","biomangfold for jordbruk",
+                                "ville slekt", "villslekt",
+                                "gamle eplesort", "gamle eplevariant", "tradisjonelle eplesort", "tradisjonelle eplevariant"]
+                        },
+                        {
+                            "termlist_name": "termlist2_5b",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["heirloom", "wild relative", "genetic resource", "genetic diversity"],
+                            "wordlist_no": ["mangfold", "mangfald", "ville", "viltvoks", "viltvaks", "tradisjonelle", 
+                                "genetiske ressurs", "genressurs", "genetikk diversit"]
+                        }
+                    ]
+                },
+                {
+                    "number": 2,
+                    "logic_rule": "([farming] & ([termlist2_5d] | [termlist2_5e]))",
+                    "sentence_split": true,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist2_5d",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "_comment": "Here we have simplified (to adapt from abstract to title search) - drop the terms starting 'diversity OR genetic resources'... so it is enough for the title to mention cryoconservation / genebanks. In the abstract the more detialed approach was necessary becaue many works mention that they used a gene bank in the methods, but are not about gene banks.",
+                            "wordlist_en": ["cryoconserv"],
+                            "wordlist_no": ["kryo-bevaring", "kryobevaring"]
+                        },
+                        {
+                            "termlist_name": "termlist2_5e",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["plant bank", "seed bank", "genebank", "germplasm bank", "cryobank", "ex-situ", "cryopreserv"],
+                            "wordlist_no": ["frøhvelv", "frøkvelv", "plantebank", "frøbank", "genbank", "genbevaring", "genressurssenter", "kimplasmabank", "kimplasmabevaring", "kryopreserv"]
+                        }
+                    ]
+                },
+                {
+                    "number": 3,
+                    "logic_rule": "([termlist2_5h] | ([farming] & [termlist2_5f] & [termlist2_5g]))",
+                    "sentence_split": false,
+                    "_comment": "Corresponds to phrase 4 & 5 in WOS version",
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist2_5f",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["genetic resource", "agrobiodiversity",
+                                "plant bank", "seed bank", "genebank", "germplasm bank", "cryobank", "ex-situ", "cryopreserv", 
+                                "seed commons",
+                                "bioprospect", 
+                                "traditional knowledge", "local knowledge", "indigenous knowledge","autochthonous knowledge"],
+                            "wordlist_no": ["genetiske ressurs", "genressurs", 
+                                "frøhvelv", "frøkvelv","plantebank", "frøbank", "genbank", "genbevaring", "kimplasmabevaring", "kimplasmabank", "kimplasmaressurs",  "kryopreserv",
+                                "frøallmenning",
+                                "bioprospekt",
+                                "tradisjonelle kunnskap", "tradisjonell kunnskap", "urfolkskunnskap", "urfolksperspektiv"]
+                        },
+                        {
+                            "termlist_name": "termlist2_5g",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["governance", "justice", "ownership",
+                                "biopira", "inequit", 
+                                "material transfer", "consent", "sharing", "equitab", "equal", "fair", "access", "right", "availab",
+                                "Convention on biological diversity", "CBD", "Nagoya"],
+                            "wordlist_no": ["myndig", "styring", "ledelse", "leiing", "rettferd", "eierskap", "eigarskap",
+                                "avtale", "deling", "deler", "tilgang", "tilgjeng", "rett",
+                                "Konvensjonen om biologisk mangfold"]
+                        },
+                        {
+                            "termlist_name": "termlist2_5h",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["International Seed Treaty", "Global Plan of Action for Animal Genetic Resources", "Plant Genetic Resources for Food and Agriculture", "PGRFA"],
+                            "wordlist_no": ["Den internasjonale plantetraktaten"]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "a",
+            "phrases": [
+                {
+                    "number": 1,
+                    "logic_rule": "([LMIC] & ([termlist2_aa] | (([termlist2_ab] | [termlist2_ab_trunc] | [termlist2_ab_norighttrunc]) & [termlist2_ac])))",
+                    "sentence_split": false,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist2_aa",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["Agriculture Orientation Index for Government Expenditure"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist2_ab",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["government expenditure", "government spending", "public expenditure", "public spending",
+                                "investment", "investing", "finance", "financing", "fund", "grant", "financial resource",
+                                "cooperation fund", "co-operation fund", "development spending", 
+                                "international cooperation", "international co-operation", "international collaboration", "international network", "international partnership", "international aid", "international assistance",
+                                "international development", "development cooperation", "development co-operation", "development collaboration", "development network", "development partnership", "development aid", "development assistance",
+                                "foreign cooperation", "foreign co-operation", "foreign collaboration", "foreign network", "foreign partnership", "foreign aid", "foreign assistance"],
+                            "wordlist_no": ["statsbudsjett", "statsstøtte", "offentlig støtte", 
+                                "finansiel", "midlar", "økonomiske ressurs",
+                                "samarbeidsfond", "utviklingsstøtte", "utviklingsstønad", "bistand", "utviklingshjelp", "u-hjelp",
+                                "utviklingssamarbeid", "internasjonalt samarbeid", "internasjonale samarbeid"]
+                        },
+                        {
+                            "termlist_name": "termlist2_ab_norighttrunc",
+                            "formatting_rule": "specific",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["invest"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist2_ab_trunc",
+                            "formatting_rule": "specific_trunc",
+                            "na": false,
+                            "case": true,
+                            "wordlist_en": ["ODA"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist2_ac",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["rural infrastructure", "rural infrastructure", "rural techn", "rural development",
+                                "agronom", "agroecolog", "agro-ecolog", "agricultural sector",
+                                "plant bank", "seed bank", "gene bank", "genebank", "germplasm bank", "cryobank",
+                                "agricultur", "farm", "smallhold", "small-hold", "irrigat", "agrofood", "agrifood", "agri food", "agri-food", "aquacultur", "maricultur"],
+                            "wordlist_no": ["frøhvelv", "frøkvelv", "plantebank", "frøbank", 
+                                "genbank", "genbevaring", "genressurssenter", "kimplasmabank", "kimplasmabevaring",
+                                "jordbruk", "landbruk", "gård", "gard", "småbruk", "familiebruk", "matprodusent", "matproduksjon", "akvakultur", "havbruk"]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "b",
+            "phrases": [
+                {
+                    "number": 1,
+                    "logic_rule": "(([termlist2_ba] | [termlist2_bb]) & ([termlist2_bc] | [termlist2_bc_nolefttrunc] | [termlist2_bc_notrunc]))",
+                    "sentence_split": true,
+                    "_comment": "If there are issues with this search, compare to the original python script - some modifications, and dropped a termlist (_bd)",
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist2_ba",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["export subsid","export credit","export financ","export competition","export support"],
+                            "wordlist_no": ["eksportsubsidi", "eksporttiltak", "eksportrestriksjon", "markeds-forstyrrende"]
+                        },
+                        {
+                            "termlist_name": "termlist2_bb",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["distort", "price-fixing", "dumping", "trade restrict", "sanction", "Doha", 
+                                "food aid", "state support","state financial support", "WTO dispute"],
+                            "wordlist_no": ["vridning", "handelsrestriksjon", "matbistand", 
+                                "verdens handelsorganisasjon", "verdas handelsorganisasjon", "handelsreform"]
+                        },
+                        {
+                            "termlist_name": "termlist2_bc",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "_comment": "'food' will find agrifood etc.",
+                            "wordlist_en": ["food", "agricultur", "aquacultur", "maricultur", 
+                                "grain", "vegetable", "fruit", "cereal", "wheat", "maize", "pulses", "legume",
+                                "livestock", "fish", "salmon", "cattle", "sheep", "poultry", "pigs", "goats", "chicken", "buffalo", "ducks", "reindeer"],
+                            "wordlist_no": ["matprod", "gård", "landbruk", "jordbruk", "gardsbruk", "fiskeoppdrett", "lakseoppdrett", "havbruk", "akvakultur",
+                                "grønnsak", "grønsak", "belgfrukt", "frukt", "fiske", "laks", "sauedrift", "sauehold", "storfe", "fjærkre"]
+                        },
+                        {
+                            "termlist_name": "termlist2_bc_nolefttrunc",
+                            "formatting_rule": "no_left_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["crop", "crops"],
+                            "wordlist_no": ["rein"]
+                        },
+                        {
+                            "termlist_name": "termlist2_bc_notrunc",
+                            "formatting_rule": "specific_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["rice"],
+                            "wordlist_no": ["svin", "sau", "sauer"]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "c",
+            "phrases": [
+                {
+                    "number": 1,
+                    "logic_rule": "((([termlist2_cb] & [termlist2_cc]) | ([termlist2_cd] | [termlist2_ce])) & ([termlist2_ca] | [termlist2_ca_nolefttrunc] | [termlist2_ca_notrunc]))",
+                    "sentence_split": true,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist2_ca",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "_comment": "'food' will find agrifood etc.",
+                            "wordlist_en": ["food", "agricultur", "aquacultur", "maricultur", 
+                                "grain", "vegetable", "fruit", "cereal", "wheat", "maize", "pulses", "legume",
+                                "livestock", "fish", "salmon", "cattle", "sheep", "poultry", "pigs", "goats", "chicken", "buffalo", "ducks", "reindeer"],
+                            "wordlist_no": ["matprod", "gård", "landbruk", "jordbruk", "gardsbruk", "fiskeoppdrett", "lakseoppdrett", "havbruk", "akvakultur",
+                                "grønnsak", "grønsak", "belgfrukt", "frukt", "fiske", "laks", "sauedrift", "sauehold", "storfe", "fjærkre"]
+                        },
+                        {
+                            "termlist_name": "termlist2_ca_nolefttrunc",
+                            "formatting_rule": "no_left_trunc",
+                            "na": false,
+                            "case": false,
+                            "_comment": "using 'svine'(NO) here, because we expect it to talk about svineprodukt",
+                            "wordlist_en": ["crop", "crops"],
+                            "wordlist_no": ["rein", "svine"]
+                        },
+                        {
+                            "termlist_name": "termlist2_ca_notrunc",
+                            "formatting_rule": "specific_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["rice"],
+                            "wordlist_no": ["svin", "sau", "sauer"]
+                        },
+                        {
+                            "termlist_name": "termlist2_cb",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["price", "market", "trade", "trading"],
+                            "wordlist_no": ["pris", "kostnad", "marked", "marknad", "verdenshandel", "verdshandel", "internasjonal handel", "internasjonale handel"]
+                        },
+                        {
+                            "termlist_name": "termlist2_cc",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["volatil","anomalies","price shock","price spike","inflation","stabil","stable","function"],
+                            "wordlist_no": ["sving", "forutsig", "forutsei", "prishopp","prissjokk","inflasjon","funksjon"]
+                        },
+                        {
+                            "termlist_name": "termlist2_cd",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["price"],
+                            "wordlist_no": ["pris", "kostnad"]
+                        },
+                        {
+                            "termlist_name": "termlist2_ce",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["market", "marknad", "trading", "trading"],
+                            "wordlist_no": ["marked", "verdenshandel", "verdshandel", "internasjonal handel", "internasjonale handel"]
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "mentions": {
+        "logic_rule": "([termlist_sdg_a] | ([termlist_sdg_b] & [termlist_sdg_c]) | ([termlist_sdg_d] & [termlist_sdg_e]))",
+        "sentence_split": true,
+        "termlists": [
+            {
+                "termlist_name": "termlist_sdg_a",
+                "formatting_rule": "specific",
+                "na": false,
+                "case": false,
+                "wordlist_en": ["SDG 2", "SDGs 2", "SDG2", "sustainable development goal 2"],
+                "wordlist_no": ["bærekraftsmål 2"]
+            },
+            {
+                "termlist_name": "termlist_sdg_b",
+                "formatting_rule": "default",
+                "na": false,
+                "case": false,
+                "wordlist_en": ["sustainable development goal"],
+                "wordlist_no": ["bærekraftsmål"]
+            }, 
+            {
+                "termlist_name": "termlist_sdg_c",
+                "formatting_rule": "default",
+                "na": false,
+                "case": false,
+                "wordlist_en": ["goal 2"],
+                "wordlist_no": ["mål 2"]
+            }, 
+            {
+                "termlist_name": "termlist_sdg_d",
+                "formatting_rule": "specific",
+                "na": false,
+                "case": false,
+                "wordlist_en": ["sustainable development goal.*", "SDG", "goal 2"],
+                "wordlist_no": ["bærekraftsmål.*", "mål 2"]
+            }, 
+            {
+                "termlist_name": "termlist_sdg_e",
+                "formatting_rule": "default",
+                "na": false,
+                "case": false,
+                "wordlist_en": ["hunger", "food"],
+                "wordlist_no": ["utrydde sult"]
+            }
+        ]
+    }
+}

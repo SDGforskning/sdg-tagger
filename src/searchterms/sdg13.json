@@ -1,0 +1,760 @@
+{
+    "name": "sdg13",
+    "number": 13,
+    "generated_datetime": "09-12-2025 10:07:35",
+    "pre-search": [],
+    "targets": [
+        {
+            "name": "1",
+            "phrases": [
+                {
+                    "number": 1,
+                    "logic_rule": "(([termlist13_1a] | ([termlist13_1b] & [termlist13_1c]) | ([termlist13_1d] & [termlist13_1e]) | [termlist13_1f]) & (([termlist13_1g] & [termlist13_1h]) | ([termlist13_1i] & [termlist13_1j]) | [termlist13_1k] | ([termlist13_1l] & [termlist13_1m])))",
+                    "sentence_split": false,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist13_1a",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["coping", "cope", "adapt", "resilien", "mitigat", "risk reduction", "preparedness", "preparing", "preparation"],
+                            "wordlist_no": ["takl", "klare", "greie", "holde ut", "halde ut", "tåle", "tole", "utstå", "overkomme", "tilpas", "robust",
+                                            "mink", "demp", "reduser", "reduksjon", "beredskap", "forbered", "førebu"]
+                        },
+                        {
+                            "termlist_name": "termlist13_1b",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["mitigat", "prevent", "reduc", "decreas", "minimis", "minimiz", "manag"],
+                            "wordlist_no": ["mink", "demp", "forebygg", "førebygg", "reduser", "reduksjon", "minimer"]
+                        },
+                        {
+                            "termlist_name": "termlist13_1c",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["impact", "vulnerab"],
+                            "wordlist_no": ["innflytelse", "innvirkning", "innverknad", "påvirk", "påverk", "betydning", "sårbar"]
+                        },
+                        {
+                            "termlist_name": "termlist13_1d",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["disaster", "risk"],
+                            "wordlist_no": ["katastrof", "risiko"]
+                        },
+                        {
+                            "termlist_name": "termlist13_1e",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["plan", "assess", "strateg", "program", "policy", "policies", "governance", "reduc", "manag", "medical response", "relief"],
+                            "wordlist_no": ["plan", "vurder", "politikk", "retningslin", "styring", "ledelse", "leiing", "reduser", "reduksjon", "medisinsk", "bistand", "støtte", "stønad"]
+                        },
+                        {
+                            "termlist_name": "termlist13_1f",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["sendai", "cancun", "readiness and preparatory support programme", "readiness programme"],
+                            "wordlist_no": ["sendai", "cancun", "beredskap"]
+                        },
+                        {
+                            "termlist_name": "termlist13_1g",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["extreme"],
+                            "wordlist_no": ["ekstrem"]
+                        },
+                        {
+                            "termlist_name": "termlist13_1h",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["climat", "weather", "precipitation", "rain", "snow", "temperatur", "storm", "wind"],
+                            "wordlist_no": ["klima", "vær", "ver", "nedbør", "regn", "snø", "temperatur", "storm", "vind"]
+                        },
+                        {
+                            "termlist_name": "termlist13_1i",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["natural", "climat"],
+                            "wordlist_no": ["naturlig", "naturleg", "klima"]
+                        },
+                        {
+                            "termlist_name": "termlist13_1j",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["hazard", "catastroph", "disaster"],
+                            "wordlist_no": ["fare", "risiko", "katastrof"]
+                        },
+                        {
+                            "termlist_name": "termlist13_1k",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["rogue wave", "tsunami", "cyclone", "typhoon", "hurricane", "tornado",
+                                            "drought", "flood",
+                                            "avalanche", "landslide", "land-slide", "land slide", "rockslide", "rock-slide", "rock slide", "rockfall", "surface collapse", "mudflow", "mud-flow",
+                                            "cold spell", "cold wave", "dzud", "blizzard", "snowstorm",
+                                            "heatwave", "heat-wave",
+                                            "earthquake", "volcan", "ash cloud", "ash fall", "tephra",
+                                            "wildfire", "wild-fire", "wild fire", "forest-fire", "forest fire", "forestfire",
+                                            "sea-level rise", "sea-level change", "rising sea-level"],
+                            "wordlist_no": ["tropisk lavtrykk", "tropisk lågtrykk", "flodbølg", "monsterbølg", "ekstrembølg",
+                                            "orkan",  "tyfon", "syklon", "snøstorm",
+                                            "flom", "flaum", "oversvøm", "ovefløym", "tørke",
+                                            "snøskred", "skred", "snøras", "lavine", "jordskred", "jordras", "sørpeskred", "leirras", "leirskred", "steinras", "steinskred", "synkehull",
+                                            "uvanlig kulde", "uvanlig kaldt", "uvanleg kulde", "uvanleg kaldt", "ekstrem kuld", "ekstremkuld", "kuldebølg", "snøstorm",
+                                            "varmebølg", "hetebølg", "ekstrem varm", "ekstremvarm", "uvanlig varm", "uvanleg varm",
+                                            "jordskjelv", "vulkan", "askenedfall", "oskenedfall", "askesky", "oskesky",
+                                            "skogbrann", "gressbrann", "grasbrann", "lyngbrann",
+                                            "havnivåstigning", "stormflo"]
+                        },
+                        {
+                            "termlist_name": "termlist13_1l",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["sea level"],
+                            "wordlist_no": ["havflate", "havnivå"]
+                        },
+                        {
+                            "termlist_name": "termlist13_1m",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["chang", "rise", "rising"],
+                            "wordlist_no": ["forandr", "endr", "stig", "øk", "auke", "auking", "hev"]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "2",
+            "phrases": [
+                {
+                    "number": 1,
+                    "logic_rule": "(([termlist13_2a] | ([termlist13_2b] & [termlist13_2c]) | [termlist13_2d]) & ([termlist13_2e] & [termlist13_2f]) & ([termlist13_2g] | ([termlist13_2b] & [termlist13_2h]) | [termlist13_2i]))",
+                    "sentence_split": false,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist13_2a",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["climate change", "global warming", "climatic change", "changing climate", "climate measures", "climate action", "climate adaptation", "climate mitigation", "climate resilience"],
+                            "wordlist_no": ["klimaendring", "global oppvarming", "klima i endring", "klimamål", "klimahandling", "klimatilpas", "klimaforandring", "klimavariasjon", "klimatiltak"]
+                        },
+                        {
+                            "termlist_name": "termlist13_2b",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["warming"],
+                            "wordlist_no": ["oppvarming"]
+                        },
+                        {
+                            "termlist_name": "termlist13_2c",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["climat", "atmospher", "ocean"],
+                            "wordlist_no": ["klima", "atmosfær", "hav"]
+                        },
+                        {
+                            "termlist_name": "termlist13_2d",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["GHG", "greenhouse gas", "carbon footprint", "CO2 footprint", "carbon emission", "CO2 emission", "methane", "ch4", "nitrous oxide", "nox", "n20", "carbon dioxide",
+                                            "co2", "hydrofluorocarbons", "hfcs", "perfluorocarbons", "pfcs", "sulphur hexafluoride", "sulfur hexafluoride", "sf6"],
+                            "wordlist_no": ["klimagass", "karbonfotavtrykk", "karbonavtrykk", "karbondioksid", "karbonutslipp", "karbonutslepp", "co2-utslipp", "co2-utslepp", "metan", "ch4", "dinitrogenoksid", "nox", "n20", "lystgass",
+                                            "co2", "hydrofluorkarbon", "perfluorkarbon", "svovelheksafluorid", "sf6"]
+                        },
+                        {
+                            "termlist_name": "termlist13_2e",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["national", "state", "federal", "domestic", "sectoral", "multi level", "multilevel"],
+                            "wordlist_no": ["nasjonal", "stat", "føderal", "delstat", "fylke", "innenlands", "innalands", "innanlands", "sektor", "kommun"]
+                        },
+                        {
+                            "termlist_name": "termlist13_2f",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["program", "strategy", "framework", "initiativ", "plan", "policy", "policies", "law", "legislat", "governance", "mandat",
+                                            "nationally determined contribution", "adaptation communication", "monitoring and evaluation", "adaptation committee"],
+                            "wordlist_no": ["program", "strategi", "rammeverk", "initiativ", "plan", "avtale", "overenskomst", "politikk", "retningslin", "lov", "lovgiv", "styring", "ledelse", "leiing", "mandat",
+                                            "nasjonalt fastsatt bidrag", "nasjonalt fastsatte bidrag", "nasjonalt fastsette bidrag", "tilpasningskommunikasjon", "tilpassingskommunikasjon", "komite"]
+                        },
+                        {
+                            "termlist_name": "termlist13_2g",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["climate", "global warming", "climatic change"],
+                            "wordlist_no": ["klima", "global oppvarming"]
+                        },
+                        {
+                            "termlist_name": "termlist13_2h",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["atmosphere", "ocean"],
+                            "wordlist_no": ["atmosfære", "hav"]
+                        },
+                        {
+                            "termlist_name": "termlist13_2i",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["GHG", "greenhouse gas", "carbon footprint", "CO2 footprint", "carbon emission", "CO2 emission", "sea-level rise"],
+                            "wordlist_no": ["drivhusgass", "klimagass", "karbonfotavtrykk", "karbonavtrykk", "karbondioksid", "co2-utslipp", "co2-utslepp", "havnivåstigning"]
+                        }                      
+                    ]
+                },
+                {
+                    "number": 2,
+                    "logic_rule": "([termlist13_2j] & [termlist13_2k] & [termlist13_2l] & [termlist13_2m])",
+                    "sentence_split": true,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist13_2j",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["global temperatur", "surface temperature", "sea-level", "sea level", "sea ice", "glacial", "glaciers", "permafrost", "ocean acidification", "ocean heat content"],
+                            "wordlist_no": ["global temperatur", "global oppvarming", "overflatetemperatur", "havnivå", "havis", "glasial", "isbre", "permafrost", "havforsuring"]
+                        },
+                        {
+                            "termlist_name": "termlist13_2k",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["action", "sustainab", "adapt", "cope", "coping", "resilience", "mitigat", "impact", "effect",  "consequence", "influence", "vulnerab"],
+                            "wordlist_no": ["handling", "bærekraft", "berekraft", "takl", "klare", "greie", "fikse", "overkomme", "tilpas", "mink", "demp", "reduser", "reduksjon", "innflytelse", "innvirkning",
+                                            "innverknad", "påvirk", "påverk", "betydning", "effekt", "konsekvens", "sårbar"]
+                        },
+                        {
+                            "termlist_name": "termlist13_2l",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["national", "state", "federal", "domestic", "sectoral", "multi level", "multilevel"],
+                            "wordlist_no": ["nasjonal", "stat", "føderal", "delstat", "fylke", "innenlands", "innalands", "innanlands", "sektor", "kommune"]
+                        },{
+                            "termlist_name": "termlist13_2m",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["program", "strategy", "framework", "initiativ", "plan", "policy", "policies", "law", "legislat", "governance", "mandat",
+                                            "nationally determined contribution", "adaptation communication", "monitoring and evaluation", "adaptation committee"],
+                            "wordlist_no": ["program", "strategi", "rammeverk", "initiativ", "plan", "politikk", "retningslin", "lov", "lovgiv", "styring", "ledelse", "leiing", "mandat",
+                                            "nasjonalt fastsatt bidrag", "nasjonalt fastsatte bidrag", "nasjonalt fastsette bidrag", "tilpasningskommunikasjon", "tilpassingskommunikasjon", "komite"]
+                        }
+                    ]
+                },
+                {
+                    "number": 3,
+                    "logic_rule": "(([termlist13_2n] | [termlist13_2o]) & ([termlist13_2p] & [termlist13_2q]))",
+                    "sentence_split": true,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist13_2n",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["Kyoto protocol", "kyoto", "Paris agreement", "cop 21", "cop21", "cop 22", "cop22", "cop 23", "cop23",
+                                            "cop 24", "cop24", "cop 25", "cop25", "cop 26", "cop26", "cop 27", "cop27", "cop28",
+                                            "unfccc", "United Nations Framework Convention on Climate Change", "Cancun", "adaptation framework"],
+                            "wordlist_no": ["kyotoprotokoll", "kyoto", "parisavtale", "paris-avtale", "parisavtala", "paris-avtala", "klimakonvensjon", "Cancun",
+                                            "cop 21", "cop21", "cop 22", "cop22", "cop 23", "cop23", "cop 24", "cop24", "cop 25", "cop25", "cop 26", "cop26", "cop 27", "cop27", "cop28"]
+                        },
+                        {
+                            "termlist_name": "termlist13_2o",
+                            "formatting_rule": "specific_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["Paris"],
+                            "wordlist_no": ["Paris"]
+                        },
+                        {
+                            "termlist_name": "termlist13_2p",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["national", "state", "federal", "domestic", "sectoral", "multi level", "multilevel"],
+                            "wordlist_no": ["nasjonal", "stat", "føderal", "delstat", "fylke", "innenlands", "innalands", "innanlands", "sektor", "kommune"]
+                        },
+                        {
+                            "termlist_name": "termlist13_2q",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["program", "strategy", "framework", "initiativ", "plan", "policy", "policies", "law", "legislat", "governance", "mandat",
+                                            "nationally determined contribution", "adaptation communication", "monitoring and evaluation", "adaptation committee"],
+                            "wordlist_no": ["program", "strategi", "rammeverk", "initiativ", "plan", "politikk", "retningslin", "lov", "lovgiv", "styring", "ledelse", "leiing", "mandat",
+                                             "nasjonalt fastsatt bidrag", "nasjonalt fastsatte bidrag", "tilpasningskommunikasjon", "komite"]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "3",
+            "phrases": [
+                {
+                    "number": 1,
+                    "logic_rule": "((([termlist13_3a] & ([termlist13_3b] | ([termlist13_3c] & [termlist13_3d]))) | ([termlist13_3a] & [termlist13_3e]) | ([termlist13_3f] & [termlist13_3g]) | ([termlist13_3a] & [termlist13_3f] & [termlist13_3h])) & not [termlist13_3i])",
+                    "sentence_split": true,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist13_3a",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["climate", "climatic change", "global warming", "sea level rise", "rising sea level"],
+                            "wordlist_no": ["klima", "global oppvarming", "havnivåstigning"]
+                        },
+                        {
+                            "termlist_name": "termlist13_3b",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["action", "mitigat", "adaptive capacity", "capacity to adapt", "resilien", "early warning", "warning system", 
+                                            "preparedness", "risk", "vulnerab", "awareness",
+                                            "climate education", "climate sensitive education", "climate change education", "climate literacy", "solution", "problem"],
+                            "wordlist_no": [ "handl", "mink", "demp", "reduser", "reduksjon", "tilpas", "takl", "klare", "greie", "fikse", "overkomme", "tidlig varsling", "tidleg varsling", "varslingssystem",
+                                            "forbered", "førebu", "risik", "sårbar", "bevisst", "oppmerks",
+                                            "klimautdann", "klimaopplær", "klimakomp", "løsning", "løysing", "problem"]
+                        },
+                        {
+                            "termlist_name": "termlist13_3c",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["reduc", "minimi", "decreas", "limit", "alleviat"],
+                            "wordlist_no": ["reduser", "reduksjon", "minimer", "mink", "grens", "lett"]
+                        },
+                        {
+                            "termlist_name": "termlist13_3d",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["impact", "effect", "consequence"],
+                            "wordlist_no": ["innflytelse", "innvirkning", "innverknad", "påvirk", "påverk", "betydning", "effekt", "konsekvens", "følge", "følgje"]
+                        },
+                        {
+                            "termlist_name": "termlist13_3e",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["sustainab","adapt", "cope", "coping"],
+                            "wordlist_no": ["bærekraft", "berekraft", "tilpas", "takl", "klare", "greie", "fikse", "overkomme"]
+                        },
+                        {
+                            "termlist_name": "termlist13_3f",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["reduc", "minimi", "decreas", "limit", "alleviat", "lower", "mitigate", "tackl", "combat", "prevent", "stop", "avoid", "capture", "storage", "store", "storing", "sequestrat"],
+                            "wordlist_no": [ "reduser", "reduksjon", "minimer", "mink", "grens", "lett", "takl", "klare", "greie", "fikse", "overkomme", "kjempe", "hindr", "stopp", "stogg", "unngå", "fang", "lagr", "isoler", "isolasjon"]
+                        },
+                        {
+                            "termlist_name": "termlist13_3g",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["GHG", "greenhouse gas", "carbon footprint", "CO2 footprint", "carbon emission", "CO2 emission"],
+                            "wordlist_no": ["drivhusgass", "klimagass", "karbonfotavtrykk", "karbonavtrykk", "karbonutsl", "karbondioksidutsl", "co2-utsl"]
+                        },
+                        {
+                            "termlist_name": "termlist13_3h",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["methane", "CH4", "nitrous oxide", "NOX", "N2O", "CO2", "carbon", "HFCs", "PFCs", "sulphur hexafluoride", "sulfur hexafluoride", "SF6"],
+                            "wordlist_no": [ "metan", "CH4", "nitrogenoksid", "NOX", "N2O", "CO2", "karbon", "svovel", "sf6"]
+                        },
+                        {
+                            "termlist_name": "termlist13_3i",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["motivational climate", "organisational climate", "organizaional climate", "learning climate", "education climate", "emotional climate", "family climate"],
+                            "wordlist_no": ["motivasjonsklima", "organisasjonsklima", "arbeidsklima", "læringsklima", "følelsesmessig klima", "familieklima"]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "a",
+            "phrases": [
+                {
+                    "number": 1,
+                    "logic_rule": "([termlist13_a1])",
+                    "sentence_split": false,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist13_a1",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["green climate fund", "least developed countries fund", "LDCF", "special climate change fund", "SCCF"],
+                            "wordlist_no": ["grønt fond", "klimafond", "LDCF", "SCCF"]
+                        }
+                    ]
+                },
+                {
+                    "number": 2,
+                    "logic_rule": "((([termlist13_a2] | ([termlist13_a3] & [termlist13_a4])) & ([termlist13_a5] | ([termlist13_a6] & ([termlist13_a7] | ([termlist13_a8] & [termlist13_a9]) | [termlist13_a10] | ([termlist13_a11] & [termlist13_a12]))))) & [termlist13_a13])",
+                    "sentence_split": false,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist13_a2",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["transparency", "accountability", "governance", "allocation", "misallocation", "corruption", "operationali", "capitali,", "mobilis", "mobiliz", "contribut",
+                                            "commitment", "negotiation", "donor", "donation", "donate"],
+                            "wordlist_no": ["transparen", "ansvarlig", "ansvarleg", "styring", "ledelse", "leiing", "korrupsjon", "muting", "bestikke", "tildel", "fordel", "utdel", "alloker", "operasjonaliser", "kapital", "mobiliser", "bidra",
+                                            "forplikt", "forhandl", "giver", "givar", "gjevar", "donasjon", "doner"]
+                        },
+                        {
+                            "termlist_name": "termlist13_a3",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["financial mechanism"],
+                            "wordlist_no": ["finansiering"]
+                        },
+                        {
+                            "termlist_name": "termlist13_a4",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["UNFCC", "convention"],
+                            "wordlist_no": ["UNFCC", "konvensjon"]
+                        },
+                        {
+                            "termlist_name": "termlist13_a5",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["climate financ", "climate aid", "climate loan",  "climate fund", "climate bond", "climate investment", "green climate fund", "Least Developed Countries Fund",
+                                            "LDCF", "Special Climate Change Fund", "SCCF","adaptation fund", "adaptation financ"],
+                            "wordlist_no": ["klimafinans", "klimahjelp", "klimastø", "klimalån", "klimafond", "klimaobligasjon", "klimainvesteringsfond", "grønt fond", "klimafond", "tilpasningsfond", "tilpassingsfond",
+                                            "tilpasningsfinans", "tilpassingsfinans", "LDCF", "SCCF"]
+                        },
+                        {
+                            "termlist_name": "termlist13_a6",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["mitigat", "green", "climate"],
+                            "wordlist_no": ["mink", "demp", "reduser", "reduksjon", "grøn", "klima"]
+                        },
+                        {
+                            "termlist_name": "termlist13_a7",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["financ", "fund", "invest"],
+                            "wordlist_no": ["finans", "fond"]
+                        },
+                        {
+                            "termlist_name": "termlist13_a8",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["economic", "financial", "monetary"],
+                            "wordlist_no": ["økonomisk", "finans", "penge"]
+                        },
+                        {
+                            "termlist_name": "termlist13_a9",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["support", "assist", "resource"],
+                            "wordlist_no": ["støtte", "stønad", "assistanse", "ressurs"]
+                        },
+                        {
+                            "termlist_name": "termlist13_a10",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["ODA", "cooperation fund", "development spending"],
+                            "wordlist_no": ["ODA", "samarbeidsfond", "bistandsutgift", "bistandsmid"]
+                        },
+                        {
+                            "termlist_name": "termlist13_a11",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["international", "development", "foreign"],
+                            "wordlist_no": ["internasjonal", "utvikling", "bistand", "utenland", "utland", "utaland"]
+                        },
+                        {
+                            "termlist_name": "termlist13_a12",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["aid", "assistance", "finance", "grant", "investment"],
+                            "wordlist_no": ["hjelp", "støtte", "stønad", "assistanse", "bistand", "finans", "bevilgning", "bevilling", "tilskudd", "tilskot", "invester"]
+                        },
+                        {
+                            "termlist_name": "termlist13_a13",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["climate change", "global warming", "climate action", "climate mitigation", "climate adaptation", "climate financ", "climate aid", "climate loan", "climate fund", "climate bond",
+                                            "green climate fund", "Least Developed Countries Fund",
+                                            "LDCF", "Special Climate Change Fund", "SCCF","adaptation fund", "adaptation financ", "low carbon"],
+                            "wordlist_no": ["klimaendr", "global oppvarming", "klimahandling", "klimatilpas", "klimafinans", "klimahjelp", "klimastø", "klimalån", "klimafond", "klimaobligasjon", "grønt fond", "klimafond", "tilpasningsfond", "tilpassingsfond",
+                                            "tilpasningsfinans", "tilpassingsfinans", "lavkarbon", "lågkarbon", "LDCF", "SCCF"]
+                        }
+                    ]
+                },
+                {
+                    "number": 3,
+                    "logic_rule": "((([LMIC] | [termlist13_a14]) & ( [termlist13_a5] | ([termlist13_a6] & ([termlist13_a7] | ([termlist13_a8] & [termlist13_a9]) | [termlist13_a10] | ([termlist13_a11] & [termlist13_a12]))))) & ([termlist13_a13]))",
+                    "sentence_split": false,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist13_a5",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["climate financ", "climate aid", "climate loan",  "climate fund", "climate bond", "climate investment", "green climate fund", "Least Developed Countries Fund",
+                                            "LDCF", "Special Climate Change Fund", "SCCF","adaptation fund", "adaptation financ"],
+                            "wordlist_no": ["klimafinans", "klimahjelp", "klimastø", "klimalån", "klimafond", "klimaobligasjon", "klimainvesteringsfond", "grønt fond", "klimafond", "tilpasningsfond", "tilpassingsfond",
+                                            "tilpasningsfinans", "tilpassingsfinans", "LDCF", "SCCF"]
+                        },
+                        {
+                            "termlist_name": "termlist13_a6",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["mitigat", "green", "climate"],
+                            "wordlist_no": ["mink", "demp", "reduser", "reduksjon", "grøn", "klima"]
+                        },
+                        {
+                            "termlist_name": "termlist13_a7",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["financ", "fund", "invest"],
+                            "wordlist_no": ["finans", "fond"]
+                        },
+                        {
+                            "termlist_name": "termlist13_a8",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["economic", "financial", "monetary"],
+                            "wordlist_no": ["økonomisk", "finans", "penge"]
+                        },
+                        {
+                            "termlist_name": "termlist13_a9",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["support", "assist", "resource"],
+                            "wordlist_no": ["støtte", "stønad", "assistanse", "ressurs"]
+                        },
+                        {
+                            "termlist_name": "termlist13_a10",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["ODA", "cooperation fund", "development spending"],
+                            "wordlist_no": ["ODA", "samarbeidsfond", "bistandsutgift", "bistandsmid"]
+                        },
+                        {
+                            "termlist_name": "termlist13_a11",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["international", "development", "foreign"],
+                            "wordlist_no": ["internasjonal", "utvikling", "bistand", "utenland", "utland", "utaland"]
+                        },
+                        {
+                            "termlist_name": "termlist13_a12",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["aid", "assistance", "finance", "grant", "investment"],
+                            "wordlist_no": ["hjelp", "støtte", "stønad", "assistanse", "bistand", "finans", "bevilgning", "bevilling", "tilskudd", "tilskot", "invester"]
+                        },
+                        {
+                            "termlist_name": "termlist13_a13",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["climate change", "global warming", "climate action", "climate mitigation", "climate adaptation", "climate financ", "climate aid", "climate loan", "climate fund", "climate bond",
+                                            "green climate fund", "Least Developed Countries Fund",
+                                            "LDCF", "Special Climate Change Fund", "SCCF","adaptation fund", "adaptation financ", "low carbon"],
+                            "wordlist_no": ["klimaendr", "global oppvarming", "klimahandling", "klimatilpas", "klimafinans", "klimahjelp", "klimastø", "klimalån", "klimafond", "klimaobligasjon", "grønt fond", "klimafond", "tilpasningsfond", "tilpassingsfond",
+                                            "tilpasningsfinans", "tilpassingsfinans", "lavkarbon", "lågkarbon", "LDCF", "SCCF"]
+                        },
+                        {
+                            "termlist_name": "termlist13_a14",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["annex II party", "annex II parties", "developed contr", "developed nation", "oecd"],
+                            "wordlist_no": ["annex II", "utviklede land", "utvikla land", "oecd"]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "b",
+            "phrases": [
+                {
+                    "number": 1,
+                    "logic_rule": "(((([termlist13_b1] & [termlist13_b2]) | [termlist13_b3]) | (([termlist13_b4] | ([termlist13_b5] & [termlist13_b6])) & ([termlist13_b7] & [termlist13_b8]))) & ([LDC] | [SIDS]))",
+                    "sentence_split": false,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist13_b1",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["climate"],
+                            "wordlist_no": ["klima"]
+                        },
+                        {
+                            "termlist_name": "termlist13_b2",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["strateg", "policy", "policies", "plan", "management", "adaptation communication"],
+                            "wordlist_no": ["strategi", "politikk", "retningslin", "plan", "ledelse", "leiing", "styring", "tilpasningskommunikasjon", "tilpassingskommunikasjon"]
+                        },
+                        {
+                            "termlist_name": "termlist13_b3",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["nationally determined contribution", "green climate fund", "least developed countries fund", "LDCF", "special climate change fund", "sccf", "adaptation fund", "adaptation financ"],
+                            "wordlist_no": ["nasjonalt fastsatt bidrag", "nasjonalt fastsatte bidrag", "klimafond", "LDCF", "SCCF"]
+                        },
+                        {
+                            "termlist_name": "termlist13_b4",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["capacity", "capabilit", "educat", "curriculum", "curricula", "teacher training", "climate literacy", "research", "knowledge", "skills",
+                                            "tools", "competenc", "expertise", "training", "awareness", "responsibilit", "infrastructure", "technolog", "early warning system",
+                                            "communication", "collaboration", "cooperation", "co operation", "social network", "information network",
+                                            "economic resources", "financial resources", "human resource"],
+                            "wordlist_no": ["kapasitet", "evne", "utdann", "opplær", "pensum", "læreplan", "fagplan", "emneplan", "studieplan", "lærerutdann", "lærarutdann", "klimakompetanse", "forskning", "forsking", "kunnskap", "ferdighet", "ferdigheit",
+                                            "verktøy", "kompetanse", "ekspertise", "bevisst", "medvett", "medvit", "ansvar", "infrastruktur", "teknolog", "tidlig varsling", "tidleg varsling", "varslingssystem",
+                                            "kommunikasjon", "samarbeid", "sosiale nettverk", "informasjonsnettverk",
+                                            "økonomiske ressurs", "finansielle ressurs", "menneskelige ressurser", "menneskelege ressursar"]
+                        },
+                        {
+                            "termlist_name": "termlist13_b5",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["institutional", "administrativ", "policy", "governance"],
+                            "wordlist_no": [ "institusjonell", "administrativ", "politikk", "retningslin", "ledelse", "leiing", "styring"]
+                        },
+                        {
+                            "termlist_name": "termlist13_b6",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["structure", "values", "practices", "arrangement", "resources"],
+                            "wordlist_no": ["struktur", "verdi", "praksis", "ressurs"]
+                        },
+                        {
+                            "termlist_name": "termlist13_b7",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["climate", "global warming", "climatic change", "sea level rise"],
+                            "wordlist_no": ["klima", "global oppvarming", "havnivåstigning"]
+                        },
+                        {
+                            "termlist_name": "termlist13_b8",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["action", "sustainab", "mitigat", "adapt", "cope", "coping", "resilience", "early warning", "warning system", "preparedness", "risks", "vulnerab", "awareness",
+                                            "climate education", "climate sensitive education", "climate change education", "climate literacy", "solutions", "problem", "manag"],
+                            "wordlist_no": ["handl", "bærekraft", "berekraft", "mink", "demp", "reduser", "reduksjon", "tilpas", "takl", "klare", "greie", "fikse", "overkomme","tidlig varsling", "tidleg varsling",
+                                            "varslingssystem", "forbered", "førebu", "risik", "sårbar", "bevisst", "medvit", "medvett", "klimautdann", "klimakompet", "løsning", "løysing", "styring", "lede", "leie", "leiing"]
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "mentions": {
+        "logic_rule": "([termlist13_1] | ([termlist13_2] & [termlist13_3]) | ([termlist13_4] & [termlist13_5]) | [termlist13_6])",
+        "termlists": [
+            {
+                "termlist_name": "termlist13_1",
+                "formatting_rule": "default",
+                "na": false,
+                "case": false,
+                "wordlist_en": ["SDG 13", "SDGs 13", "SDG13", "sustainable development goal 13"],
+                "wordlist_no": [ "bærekraftsmål 13", "berekraftsmål 13", "SDG 13", "SDG13"]
+            },
+            {
+                "termlist_name": "termlist13_2",
+                "formatting_rule": "default",
+                "na": false,
+                "case": false,
+                "wordlist_en": ["sustainable development goal"],
+                "wordlist_no": ["bærekraftsmål", "berekraftsmål"]
+            },
+            {
+                "termlist_name": "termlist13_3",
+                "formatting_rule": "default",
+                "na": false,
+                "case": false,
+                "wordlist_en": ["goal 13"],
+                "wordlist_no": ["mål 13"]
+            },
+            {
+                "termlist_name": "termlist13_4",
+                "formatting_rule": "default",
+                "na": false,
+                "case": false,
+                "wordlist_en": ["sustainable development goal", "SDG", "goal 13"],
+                "wordlist_no": ["bærekraftsmål", "berekraftsmål", "mål 13", "SDG"]
+            },
+            {
+                "termlist_name": "termlist13_5",
+                "formatting_rule": "default",
+                "na": false,
+                "case": false,
+                "wordlist_en": ["climate"],
+                "wordlist_no": ["klima"]
+            },
+            {
+                "termlist_name": "termlist13_6",
+                "formatting_rule": "default",
+                "na": false,
+                "case": false,
+                "wordlist_en": ["climate action"],
+                "wordlist_no": ["stoppe klimaendringene", "stoppe klimaendringane"]
+            }
+        ]
+    }
+}
