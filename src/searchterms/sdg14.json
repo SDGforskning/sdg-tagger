@@ -20,7 +20,7 @@
                         "subtidal", "intertidal", "deep sea", "bathyal", "abyssal",
                         "rocky shore", "beach", "salt marsh", "mud flat", "mudflat", "tidal flat", "estuar", "fjord", 
                         "sea ice",
-                        "sea life", "sealife", "mangrove", "kelp bed", "kelp forest", "seagrass", "seaweed", "macroalga", "sponge ground", "organic fall", "coral", 
+                        "sea life", "sealife", "mangrove", "kelp bed", "kelp forest", "seagrass", "seaweed", "macroalga", "macro alga", "sponge ground", "organic fall", "coral", 
                         "whale", "dolphin", "echinoderm", "starfish", "sea urchin", "sea cucumber", "brittle star", "Asteroidea", "Ophiuroid", "Echinoid", "Holothuroid", "Crinoid",
                         "coastal communit", "coastal zone",
                         "offshore"],
@@ -29,7 +29,7 @@
                         "submarin", "fjære", "fjøre", "tidevann", "tidevatn", "havdyp", "havdjup", "dyphav", "djuphav", 
                         "sandstrand", "strandeng", "saltmarsk", "saltvannssump", "elvemunn",
                         "havis", 
-                        "sjødyr", "mangrove", "tareskog", "sjøgress", "sjøgras", "korall",
+                        "sjødyr", "mangrove", "tareskog", "makroalg", "sjøgress", "sjøgras", "korall",
                         "kystsamfunn", "kystson", 
                         "utaskjærs", "skipsfart"]
                 },
@@ -82,11 +82,11 @@
                             "case": false,
                             "_comment": "NO: After testing, 'avfall' is ok to use alone, thus the specific terms are removed 'farlig avfall', 'kjemikalieavfall', 'radioaktivt avfall', 'plastavfall','gruveavfall'.",
                             "wordlist_en": ["pollut", 
-                                "sewage","sewer", "eutrophicat","excess nutrient","excessive nutrient","effluent","runoff","waste",
+                                "sewage","sewer", "eutrophicat","excess nutrient","excessive nutrient","effluent","agricultural runoff", "farm runoff", "waste",
                                 "littering","garbage",
                                 "microplastic","micro plastic","micro-plastic","nanoplastic","nano plastic","plastic waste","plastic particles", "plastic litter", "plastic debris", "marine plastic",
                                 "heavy metal","toxic metal","mercury","arsenic","cadmium","chromium","copper","nickel",
-                                "organotin","tributyltin","mining","mine tailing",
+                                "organotin","tributyltin","mine tailing",
                                 "contaminant","bioaccumula","bioconcentrat","ecotox","toxic chemical","forever chemical",
                                 "endocrine disrupting chemical", "endocrine disruptor", "persistent organic pollutant", "pesticid","herbicide",
                                 "paraben", "polychlorinated biphenyl","hexachlorocyclohexane","hexachlorobenzene","hexachlorobutadiene",
@@ -119,7 +119,7 @@
                             "formatting_rule": "specific_trunc",
                             "na": false,
                             "case": false,
-                            "wordlist_en": ["litter", "trash", ".*plastics"],
+                            "wordlist_en": ["litter", "trash", ".*plastics", "mining"],
                             "wordlist_no": ["bly", "arsen", "krom", "tinn", "plast"]
                         },
                         {
@@ -128,7 +128,7 @@
                             "na": false,
                             "case": false,
                             "_comment":"EN: 'lead' is included here rather than 1c because of the verb 'to lead'",
-                            "wordlist_en": ["oil", "lead", "chemical.*"],
+                            "wordlist_en": ["oil", "lead", "chemical.*", "runoff"],
                             "wordlist_no": ["olje", "kjemikal.*"]
                         },
                         {
@@ -144,7 +144,7 @@
                             "formatting_rule": "default",
                             "na": false,
                             "case": false,
-                            "wordlist_en": ["PM2.5","PM10","leaf litter"],
+                            "wordlist_en": ["PM2.5","PM10","leaf litter", "waste-to-energy"],
                             "wordlist_no": ["PM2.5","PM10"]
                         }
                     ]
@@ -715,7 +715,7 @@
                                 "cooperat","co-operat","collaborat","network","partnership",
                                 "open data","data sharing","open science",
                                 "technology transfer", "knowledge transfer", "technical transfer",
-                                "invest", "fund", "financ", "grant", "support", "assist",
+                                "investment", "funding", "financ", "grant", "support", "assist",
                                 "international network",
                                 "policy","policies","initiativ","framework","governance","strateg","program","agenda",
                                 "innovation"],
@@ -734,7 +734,7 @@
                             "formatting_rule": "specific_trunc",
                             "na": false,
                             "case": false,
-                            "wordlist_en": ["plan","planned","planning","aid","ODA"],
+                            "wordlist_en": ["plan", "planned", "planning", "aid", "ODA", "invest", "investing", "fund", "funds"],
                             "wordlist_no": ["øke", "øker", "midler"]
                         },
                         {
@@ -778,8 +778,8 @@
                             "formatting_rule": "default",
                             "na": false,
                             "case": false,
-                            "wordlist_en": ["ocean","marine","biolog","ecological","ecological","environmental","network","facilit","system"],
-                            "wordlist_no": ["hav", "sjø", "marin", "økologi", "miljø", "nettverk", "fasilitet", "system"]
+                            "wordlist_en": ["ocean","marine","biolog","ecological","environmental","network","facilit","system"],
+                            "wordlist_no": ["havet", "sjø", "marin", "økologi", "miljø", "nettverk", "fasilitet", "system"]
                         },
                         {
                             "termlist_name": "termlist14_ai",
