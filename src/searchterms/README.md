@@ -162,4 +162,50 @@ Our "rule": Make a pre-search if a termlist is used in more than two phrases (i.
 
 ## Functions for testing in demo.ipynb<a name="testing"></a>
 
+The functions below appear in the order they appear in the file. However, the most useful functions for testing are: 
+- Run search on one specific target on an entire dataframe (4) - good for precision
+- Search for all targets in a specific goal (1) - good for identifying specific problems or why certain unexpected results are flagged
 
+### 1. Search for all targets in a specific goal (search_all_targets_in_goal)
+This function allows you to see whether a specific piece of text (that you paste in manually) would flag as SDG-related for your chosen SDG. 
+
+- Runs against: A single text (a sentence or paragraph)
+- Searches for: One SDG at once
+- Output: You see for each presearch, target and phrase TRUE or FALSE, where TRUE means the text would be flagged by that phrase.
+
+**Example use case**: You look through the results for one of your searches, and can't figure out why one of them is flagged target. Paste the relevant text (title/abstract) here, and you can see which target/phrase it is flagged by. You can also delete parts of the abstract and run the function again to help identify which sentence is causing the issues. 
+
+### 2. Search all goals on one text (search_all_goals)
+Does the same as _search_all_targets_in_goal_, but for all SDGs. 
+
+- Runs against: A single text (a sentence or paragraph)
+- Searches for: All SDGs that are functional and defined in consts.py
+- Output: You see for each presearch, target and phrase TRUE or FALSE, where TRUE means the text would be flagged by that phrase.
+
+### 3. Trigger all country category searches (all_country_searches)
+Not generally of use, ignore for now. 
+
+### 4. Run search on one specific target on an entire dataframe
+You run your SDG search against a dataset of real publications. It will provide a table which shows the publication data you specify, as well as (optionally) whether the item was found by the title, abstract or another specified field.
+
+- Runs against: A dataset (csv or xlsx) of publications, where it will search within the columns you specify in _COLUMNS_. You specify how many rows you want to search (or only rows of a specific language) in box 2. 
+- Searches for: One SDG and target at once
+- Output: You get a table of results. This table will only contain results found by the search if you keep _INCLUDE_FALSE_VALUES = False_, but will show all publications in the dataset (even those not found by the search) if you change this to _False_. The table will include fields that you define in _EXTRA_COLUMNS_ and _VIEW_. You can save these results to excel for processing - see function nr 6. 
+- Important info: The search generally runs rapidly, and can search 10000 results in about a minute. The _DO_NOT_RUN_COUNTRIES_SEARCH_ part is wise to leave as TRUE at the moment - it should be FALSE for testing targets that include a countries search (e.g. LMIC), but at the moment works far too slowly to be useful during rapid testing. 
+
+**Example use case**: 
+- Useful for checking **precision**, if you use a general dataset (for example, all Norwegian publications). You can think of this function like running the search in Web of Science and checking the results list.
+- Useful for checking **recall**, if you use a SDG-specific dataset (for example, a set you know should be relevant to your SDG). It will easily show you which are found/not found by your search. 
+
+### 5. Run search for all sdgs on an entire dataframe
+This function is similar to the previous one, but can search for multiple SDGs and targets. In the background it searches for all targets of the specified SDGs, even if you choose to only show one - it therefore takes a longer time and should not be used on large datasets. In nearly all use cases, **Run search on one specific target on an entire dataframe** should be used instead with specific datasets. 
+
+- Runs against: A dataset (csv or xlsx) of publications, where it will search within the columns you specify in _COLUMNS_. You specify how many rows you want to search, only rows of a specific language, or **only rows previously tagged as an SDG**, in box 2. 
+- Searches for: All specified SDGs and targets
+- Output: You get a table of results. This table will only contain results found by the search if you keep _INCLUDE_FALSE_VALUES = False_, but will show all publications in the dataset (even those not found by the search) if you change this to _False_. The table will include fields that you define in _EXTRA_COLUMNS_ and _VIEW_.
+- Important info: The search is slower, and we suggest testing 100 at once to test speed. 
+
+**Example use case**: Useful for checking **recall** against a set of already labelled publications - this was most relevant for the group converting existing searches, where we were trying to replicate an existing resultset we have. In Box 2 you can specify to only search in publications already labelled as an SDG target by the previous search - you can then check whether your search finds all of them. 
+
+### 6. Saving the styled results to excel
+After running **Run search on one specific target on an entire dataframe**, you can run this function and it will export your output to excel. The text after _file_path =_ (by default ´'styled_output.xlsx'´) is the name it will save the excel file as - change this to a new name, if you don't want to overwrite. 
