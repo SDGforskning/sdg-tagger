@@ -95,10 +95,24 @@ The list of terms that should be searched for, separated by a comma, and enclose
 ```
 
 #### termlist: formatting_rule
-How the termlist should be truncated. This recreates how we did it in python (stopping right truncation, all truncation, or allowing all (default)). **The names for these that should be used can be found in the formats.json** file. This must be filled out or you will get an error. 
+How the termlist should be truncated. **The names for these that should be used can be found in the formats.json** file. This must be filled out or you will get an error. 
 
+Note that we are currently working in two systems (issue https://github.com/SDGforskning/sdg-tagger/issues/28). Those working on old SDGs are using the old names for these rules; those working on new should use the new more intuitive names. **If in doubt, follow the rules on your branch - check the formats.json file on your branch and use the correct name from there**. 
+
+NEW
 ```
-"formatting_rule": "default",
+    "trunc": "(?:{})",                #All allowed, e.g. cat will find category and wildcat
+    "no_right_trunc": "(?:{})\\b",    #Left hand allowed, e.g. cat will find wildcat but not category
+    "no_trunc": "\\b(?:{})\\b"        #None allowed, e.g. cat will find cat
+    "no_left_trunc": "\\b(?:{})"      #Left hand allowed, e.g. cat will find category but not wildcat
+```
+
+OLD
+```
+    "default": "(?:{})",                 #All allowed, e.g. cat will find category and wildcat
+    "specific": "(?:{})\\b",             #Left hand allowed, e.g. cat will find wildcat but not category
+    "specific_trunc": "\\b(?:{})\\b",    #None allowed, e.g. cat will find cat
+    "no_left_trunc": "\\b(?:{})"         #Left hand allowed, e.g. cat will find category but not wildcat
 ```
 
 #### termlist: case
