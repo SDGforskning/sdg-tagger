@@ -195,6 +195,7 @@ Does the same as _search_all_targets_in_goal_, but for all SDGs.
 - Runs against: A single text (a sentence or paragraph)
 - Searches for: All SDGs that are functional and defined in consts.py
 - Output: You see for each presearch, target and phrase TRUE or FALSE, where TRUE means the text would be flagged by that phrase.
+- Important info: You will need to make sure your SDG is listed in consts.py for it to work on yours (`LIST_ALL_SDG_NR = [1, 2, 3, 4, 7, 13]`)
 
 ### 3. Trigger all country category searches (all_country_searches)
 Not generally of use, ignore for now. 
