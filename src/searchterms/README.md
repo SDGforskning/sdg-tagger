@@ -104,7 +104,7 @@ NEW
     "trunc": "(?:{})",                #All allowed, e.g. cat will find category and wildcat
     "no_right_trunc": "(?:{})\\b",    #Left hand allowed, e.g. cat will find wildcat but not category
     "no_trunc": "\\b(?:{})\\b"        #None allowed, e.g. cat will find cat
-    "no_left_trunc": "\\b(?:{})"      #Left hand allowed, e.g. cat will find category but not wildcat
+    "no_left_trunc": "\\b(?:{})"      #Right hand allowed, e.g. cat will find category but not wildcat
 ```
 
 OLD
@@ -112,7 +112,7 @@ OLD
     "default": "(?:{})",                 #All allowed, e.g. cat will find category and wildcat
     "specific": "(?:{})\\b",             #Left hand allowed, e.g. cat will find wildcat but not category
     "specific_trunc": "\\b(?:{})\\b",    #None allowed, e.g. cat will find cat
-    "no_left_trunc": "\\b(?:{})"         #Left hand allowed, e.g. cat will find category but not wildcat
+    "no_left_trunc": "\\b(?:{})"         #Right hand allowed, e.g. cat will find category but not wildcat
 ```
 
 #### termlist: case
