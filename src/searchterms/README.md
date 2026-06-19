@@ -178,7 +178,7 @@ However, there is an exception to the above "rule". Pre-searches do not obey _se
 The functions below appear in the order they appear in the file. However, the most useful functions for testing are: 
 - Run search on one specific target on an entire dataframe (4) - good for precision
 - Search for all targets in a specific goal (1) - good for identifying specific problems or why certain unexpected results are flagged
-- An extra bit of code, "Extra function: Compare results sets with NOT", can be used to compare results of (4) before and after a change to your search
+- An extra bit of code, "Extra function: Compare results before and after changes to a search", can be used to compare results of (4) before and after a change to your search
 
 ### 1. Search for all targets in a specific goal (search_all_targets_in_goal)
 This function allows you to see whether a specific piece of text (that you paste in manually) would flag as SDG-related for your chosen SDG. 
@@ -187,7 +187,7 @@ This function allows you to see whether a specific piece of text (that you paste
 - Searches for: One SDG at once
 - Output: You see for each presearch, target and phrase TRUE or FALSE, where TRUE means the text would be flagged by that phrase.
 
-**Example use case**: You look through the results for one of your searches, and can't figure out why one of them is flagged target. Paste the relevant text (title/abstract) here, and you can see which target/phrase it is flagged by. You can also delete parts of the abstract and run the function again to help identify which sentence is causing the issues. 
+**Example use case**: You look through the results for one of your searches (e.g. after running (4)), and can't figure out why one of them is flagged target. Paste the relevant text (title/abstract) here, and you can see which target/phrase it is flagged by. You can also delete parts of the abstract and run the function again to help identify which sentence is causing the issues. 
 
 ### 2. Search all goals on one text (search_all_goals)
 Does the same as _search_all_targets_in_goal_, but for all SDGs. 
@@ -211,14 +211,14 @@ You run your SDG search against a dataset of real publications. It will provide 
 - Useful for checking **precision**, if you use a general dataset (for example, all Norwegian publications). You can think of this function like running the search in Web of Science and checking the results list.
 - Useful for checking **recall**, if you use a SDG-specific dataset (for example, a set you know should be relevant to your SDG). It will easily show you which are found/not found by your search.
 
-### Extra function: Compare results sets with NOT
+### Extra function: Compare results before and after changes to a search
 Compare results before and after changes to the search. 
 
 This code is not a neat function, but ad-hoc code that lets you save the results of a search ("4. Run search on one specific target on an entire dataframe"), change your search in the sdg.json file and save it, run (4) again, and then see which results you have gained or lost. 
 
-Runs against: A search already done by running function (4)
-Output: You get two tables of results - one showing the results in set 1 but not 2 (i.e. what did you have before the change, **lost**), and one showing 2 not 1 (what did you gain from the change, **gain**). 
-Important info: Requires you to follow a small workflow - this is described in the demo file. 
+- Runs against: A search already done by running function (4)
+- Output: You get two tables of results - one showing the results in set 1 but not 2 (i.e. what did you have before the change, **lost**), and one showing 2 not 1 (what did you gain from the change, **gain**). 
+- Important info: Requires you to follow a small workflow - this is described in the demo file. 
 
 ### 5. Run search for all sdgs on an entire dataframe
 This function is similar to the previous one, but can search for multiple SDGs and targets. In the background it searches for all targets of the specified SDGs, even if you choose to only show one - it therefore takes a longer time and should not be used on large datasets. In nearly all use cases, **Run search on one specific target on an entire dataframe** should be used instead with specific datasets. 
