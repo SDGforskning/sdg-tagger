@@ -47,7 +47,7 @@
                             "case": false,
                             "_comment": "Only Norwegian used here and combined with 2c. In English, _low income_ is combined like _poor_ (in 2d) - if not, there are too many irreleavnt results about low income countries", 
                             "wordlist_en": [],
-                            "wordlist_no": ["låginntekt", "låg inntekt","fattig"]
+                            "wordlist_no": ["låginntekt", "låg inntekt", "fattig"]
                         },
                         {
                             "termlist_name": "termlist1_2c",
@@ -80,7 +80,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist1_3a",
-                            "formatting_rule": "default",
+                            "formatting_rule": "no_left_trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["welfare system", "welfare service", "social security", "social service", "social assistance", "social floor", "social safety net", "safety net program",
@@ -351,7 +351,7 @@
                             "disadvantaged", "marginalis", "marginalized", "vulnerable", "discriminated",
                             "slum", "shanty town", "informal settlement", "homeless",
                             "patient", "disabled", "disabilities", "disability",
-                            "older people", "old people", "retired people", "elderly", "elders", "pensioner", 
+                            "older people", "old people", "older person", "old person", "retired person", "retired people", "elderly", "elders", "pensioner", 
                             "unemployed",
                             "women", "woman", "girl", "pregnan", "maternity", "child", "baby", "babies", "newborn", "toddler", "youth", "infant",
                             "indigenous", "minorities", "minority", "refugee", "asylum", "immigrant",

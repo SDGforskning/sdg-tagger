@@ -154,16 +154,24 @@
                 },
                 {
                     "number": 4,
-                    "logic_rule": "(((([termlist4_1_4a] & ([termlist4_1_4b] | [termlist4_1_4f])) | [termlist4_1_4c]) & ([termlist4_1_4d] | [termlist4_1_4f])) & [termlist4_1_4e])",
-                    "sentence_split": true,
+                    "logic_rule": "(((([termlist4_1_4a] | [termlist4_1_4aa]) & ([termlist4_1_4b] | [termlist4_1_4f])) | [termlist4_1_4c]) & ([termlist4_1_4d] | [termlist4_1_4f]) & [termlist4_1_4e])",
+                    "sentence_split": false,
                     "termlists": [
                         {
                             "termlist_name": "termlist4_1_4a",
                             "formatting_rule": "default",
                             "na": false,
                             "case": false,
-                            "wordlist_en": ["basic", "fundamental", "minim", "core", "elementary"],
+                            "wordlist_en": ["basic", "fundamental", "minim", "elementary"],
                             "wordlist_no": ["basic", "fundamental", "minim", "basis", "kjerne", "elementær", "grunnlegg"]
+                        },
+                        {
+                            "termlist_name": "termlist4_1_4aa",
+                            "formatting_rule": "no_left_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["core"],
+                            "wordlist_no": []
                         },
                         {
                             "termlist_name": "termlist4_1_4b",
@@ -179,7 +187,7 @@
                             "formatting_rule": "default",
                             "na": false,
                             "case": false,
-                            "wordlist_en": [],
+                            "wordlist_en": [],  
                             "wordlist_no": ["basisferdighe", "basiskompetanse", "kjerneferdighe", "kjernekompetanse"]
                         },
                         {
@@ -433,7 +441,7 @@
             "phrases": [
                 {
                     "number": 1,
-                    "logic_rule": "(([termlist4_4_1a] & [termlist4_4_1b]) | [termlist4_4_1c])",
+                    "logic_rule": "((([termlist4_4_1a] | [termlist4_4_1aa]) & [termlist4_4_1b]) | [termlist4_4_1c])",
                     "sentence_split": true,
                     "termlists": [
                         {
@@ -441,9 +449,17 @@
                             "formatting_rule": "default",
                             "na": false,
                             "case": false,
-                            "wordlist_en": ["skill", "abilit", "competenc", "literac"],
+                            "wordlist_en": ["skill", "competenc", "literac"],
                             "wordlist_no": ["ferdigh", "kompetanse", "dugleik", "dyktighe"],
                             "_comment": "'skill' covers 'upskill' and 'reskill' etc."
+                        },
+                         {
+                            "termlist_name": "termlist4_4_1aa",
+                            "formatting_rule": "no_left_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["abilit"],
+                            "wordlist_no": []
                         },
                         {
                             "termlist_name": "termlist4_4_1b",
@@ -1172,7 +1188,7 @@
             "phrases": [
                 {
                     "number": 1,
-                    "logic_rule": "(([termlist4_a_1a] & ([termlist4_a_1b] | ([termlist4_a_1c] & [termlist4_a_1d]))) & not [termlist4_a_1e])",
+                    "logic_rule": "(([termlist4_a_1a] & ([termlist4_a_1b] | [termlist4_a_1bb] | ([termlist4_a_1c] & [termlist4_a_1d]))) & not [termlist4_a_1e])",
                     "sentence_split": true,
                     "termlists": [
                         {
@@ -1189,7 +1205,15 @@
                             "na": false,
                             "case": false,
                             "wordlist_en": ["safe", "secure", "non-violen", "inclusive"],
-                            "wordlist_no": ["sikker", "sikre", "trygg", "barneven", "borneven", "ikke-vold", "ikkje-vald", "inkluder"]
+                            "wordlist_no": ["sikre", "trygg", "barneven", "borneven", "ikke-vold", "ikkje-vald", "inkluder"]
+                        },
+                        {
+                            "termlist_name": "termlist4_a_1bb",
+                            "formatting_rule": "no_left_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": [],
+                            "wordlist_no": ["sikker"]
                         },
                         {
                             "termlist_name": "termlist4_a_1c",
