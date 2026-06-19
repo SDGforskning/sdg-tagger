@@ -148,16 +148,29 @@ Examples of invalid logic rules:
 
 #### phrase: sentence_split (true/false)
 
-This determines whether the search (logic_rule) should be carried out _within a sentence_ (=true), or within the whole text (=false). Default = false, but in most cases we likely want to change this to **true** as we want this to work for project descriptions and abstracts.
+This determines whether the search (_logic_rule_) should be carried out **within a sentence** (=true), or **within the whole text** (=false). Default = false, but in most cases we likely want to change this to **true** as we want this to work for project descriptions and abstracts.
 
-For example, in SDG1.1, this is set to false - there is only one term list, so it can be anywhere (no AND operator). This could also be the case for AND or especially NOT searches where we don't need the terms to be near each other. But in SDG1.4 phrase 1 it is set to true - we want it to find "access" and "banking" used close to each other to increase the chances of it being about access to banking services. 
+The following example will only find a result if a term from termlist14_7a and termlist14_7b occur within the same sentence.
+```
+"logic_rule": "([termlist14_7a] & [termlist14_7b])",
+"sentence_split": true,
+```
 
-Note: We may come across mixed cases: for example, we want to find results about access to banking in LMICs. Here it might have been optimal to have a solution where we could search for "access" and "banking" within the same sentence, but allow that the LMIC comes in another sentence - however, right now, we do not have this functionality. See https://github.com/SDGforskning/sdg-tagger/issues/18
+Some more real examples: in SDG1.1, this is set to false - there is only one term list, so it can be anywhere (no AND operator). This could also be the case for AND or especially NOT searches where we don't need the terms to be near each other. But in SDG1.4 phrase 1 it is set to true - we want it to find "access" and "banking" used close to each other to increase the chances of it being about access to banking services. 
+
+Note that sentence_split only affects the termlists, not **presearches** or **country lists** - these are always searched for within the whole text. For example, the following _logic_rule_ will find items where a term from SIDS (a country list) and a term from marine_terms (a pre-search) are in different sentences to the terms from termlist14_7a and termlist14_7b, even though sentence_split = true. The terms from termlist14_7a and termlist14_7b must still occur within the same sentence to get a positive result. 
+
+```
+"logic_rule": "(([termlist14_7a] & [termlist14_7b]) & ([LDC] | [SIDS]) & [marine_terms])",
+"sentence_split": true,
+```
 
 #### pre_search<a name="presearch"></a>
 If you want to reuse a termlist across phrases, or in many targets - consider adding it as a _pre_search_. This can be referred to in all _logic_rules_ within that SDG. Example - see SDG 2.
 
 Our "rule": Make a pre-search if a termlist is used in more than two phrases (i.e. has to be copied more than twice). If a term-list is only used in two phrases, copy it. **When re-using a termlist or when making a pre-search, add a comment listing the targets and phrases where it is used.**
+
+However, there is an exception to the above "rule". Pre-searches do not obey _sentence_split_ when used in a target (see information about this under _sentence_split_). Therefore, if you need to combine terms from a termlist with terms from a pre-search WITHIN a sentence, you should duplicate it as a termlist instead so that _sentence_split_ works. 
 
 
 ## Functions for testing in demo.ipynb<a name="testing"></a>
@@ -165,6 +178,7 @@ Our "rule": Make a pre-search if a termlist is used in more than two phrases (i.
 The functions below appear in the order they appear in the file. However, the most useful functions for testing are: 
 - Run search on one specific target on an entire dataframe (4) - good for precision
 - Search for all targets in a specific goal (1) - good for identifying specific problems or why certain unexpected results are flagged
+- An extra bit of code, "Extra function: Compare results sets with NOT", can be used to compare results of (4) before and after a change to your search
 
 ### 1. Search for all targets in a specific goal (search_all_targets_in_goal)
 This function allows you to see whether a specific piece of text (that you paste in manually) would flag as SDG-related for your chosen SDG. 
@@ -195,7 +209,16 @@ You run your SDG search against a dataset of real publications. It will provide 
 
 **Example use case**: 
 - Useful for checking **precision**, if you use a general dataset (for example, all Norwegian publications). You can think of this function like running the search in Web of Science and checking the results list.
-- Useful for checking **recall**, if you use a SDG-specific dataset (for example, a set you know should be relevant to your SDG). It will easily show you which are found/not found by your search. 
+- Useful for checking **recall**, if you use a SDG-specific dataset (for example, a set you know should be relevant to your SDG). It will easily show you which are found/not found by your search.
+
+### Extra function: Compare results sets with NOT
+Compare results before and after changes to the search. 
+
+This code is not a neat function, but ad-hoc code that lets you save the results of a search ("4. Run search on one specific target on an entire dataframe"), change your search in the sdg.json file and save it, run (4) again, and then see which results you have gained or lost. 
+
+Runs against: A search already done by running function (4)
+Output: You get two tables of results - one showing the results in set 1 but not 2 (i.e. what did you have before the change, **lost**), and one showing 2 not 1 (what did you gain from the change, **gain**). 
+Important info: Requires you to follow a small workflow - this is described in the demo file. 
 
 ### 5. Run search for all sdgs on an entire dataframe
 This function is similar to the previous one, but can search for multiple SDGs and targets. In the background it searches for all targets of the specified SDGs, even if you choose to only show one - it therefore takes a longer time and should not be used on large datasets. In nearly all use cases, **Run search on one specific target on an entire dataframe** should be used instead with specific datasets. 
