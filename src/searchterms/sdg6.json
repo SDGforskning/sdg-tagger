@@ -192,32 +192,172 @@
                 },
                 {
                     "number": 2,
-                    "logic_rule": "()",
-                    "sentence_split": false,
+                    "logic_rule": "(([termlist6_2j] & ([termlist6_2k] | [termlist6_2kcase])) | [termlist6_2l] | ([termlist6_2m] & [termlist6_2n]) | ([termlist6_2o] & [termlist6_2p]) | ([termlist6_2q] & [termlist6_2r]))",
+                    "sentence_split": true,
                     "termlists": [
                         {
-                            "termlist_name": "",
-                            "formatting_rule": "",
+                            "termlist_name": "termlist6_2j",
+                            "formatting_rule": "no_left_trunc",
                             "na": false,
                             "case": false,
-                            "wordlist_en": [],
+                            "wordlist_en": ["inadequate","unsafe","poor","bad","unknown","limited",
+                                            "unimproved","unsafe","unhygienic","unsanitary","insanitary", 
+                                            "absent","absence","lack"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_2k",
+                            "formatting_rule": "no_left_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["sanitation","hygiene service","hygiene facilit",
+                                            "handwashing","hand-washing","washing hands","wash hands",
+                                            "toilet","lavatory","lavatories","latrine","water closet","outhouse"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_2kcase",
+                            "formatting_rule": "no_trunc",
+                            "na": false,
+                            "case": true,
+                            "wordlist_en": ["WASH"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_2l",
+                            "formatting_rule": "no_left_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["unimproved sanitation facilit","no toilet","open defecation"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_2m",
+                            "formatting_rule": "no_left_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["toilet","latrine"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_2n",
+                            "formatting_rule": "no_left_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["open pit","hanging","bucket","pan","tray","container"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_2o",
+                            "formatting_rule": "no_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["defecation"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_2p",
+                            "formatting_rule": "no_left_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["bush","ditch","surface water","channel","beach","river","stream","sea"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_2q",
+                            "formatting_rule": "trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["contact"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_2r",
+                            "formatting_rule": "no_left_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["human excret","human faeces","human stool","faecal sludge"],
                             "wordlist_no": []
                         }
                     ]
                 },
                 {
                     "number": 3,
-                    "logic_rule": "()",
-                    "sentence_split": false,
+                    "logic_rule": "(([termlist6_2s] | [termlist6_2scase]) & ([termlist6_2t] | ([termlist6_2w] & [termlist6_2x]) | ([termlist6_2u] & [termlist6_2v])))",
+                    "sentence_split": true,
                     "termlists": [
                         {
-                            "termlist_name": "",
-                            "formatting_rule": "",
+                            "termlist_name": "termlist6_2s",
+                            "formatting_rule": "no_left_trunc",
                             "na": false,
                             "case": false,
-                            "wordlist_en": [],
+                            "wordlist_en": ["sanitation","hygiene service","hygiene facilit",
+                                            "handwashing","hand-washing","washing hands","wash hands",
+                                            "toilet","lavatory","lavatories","latrine","water closet","outhouse"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_2scase",
+                            "formatting_rule": "no_trunc",
+                            "na": false,
+                            "case": true,
+                            "wordlist_en": ["WASH"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_2t",
+                            "formatting_rule": "no_left_trunc",
+                            "na": false,
+                            "case": true,
+                            "wordlist_en": ["inequalit","inequity","discriminat","nondiscriminat","non discriminat","non-discriminat",
+                                            "barrier","obstacle","hinder","hindrance",
+                                            "insecure","dangerous","unsafe","hazardous",
+                                            "slippery floor","step"],
+                            "wordlist_no": []
+                        },
+                         {
+                            "termlist_name": "termlist6_2w",
+                            "formatting_rule": "no_left_trunc",
+                            "na": false,
+                            "case": true,
+                            "wordlist_en": ["lack","narrow","tight"],
+                            "wordlist_no": []
+                        },
+                         {
+                            "termlist_name": "termlist6_2x",
+                            "formatting_rule": "no_left_trunc",
+                            "na": false,
+                            "case": true,
+                            "wordlist_en": ["space","entrance"],
+                            "wordlist_no": []
+                        },
+                         {
+                            "termlist_name": "termlist6_2u",
+                            "formatting_rule": "no_left_trunc",
+                            "na": false,
+                            "case": true,
+                            "wordlist_en": ["poverty", "rural poor", "urban poor", "working poor", "destitute", "low income", "low-income", 
+                                            "poor households", "poorest households", "poor families", "poorest families", "poor communit", "poorest communit", 
+                                            "disadvantaged", "marginalis", "marginalized", "vulnerable", "discriminated",
+                                            "slum", "shanty town", "informal settlement", "homeless",
+                                            "patient", "disabled", "disabilities", "disability",
+                                            "older people", "old people", "retired people", "elderly", "elders", "pensioner", 
+                                            "unemployed",
+                                            "women", "woman", "girl", "pregnan", "maternity", "child", "baby", "babies", "newborn", "toddler", "youth", "infant",
+                                            "indigenous", "minorities", "minority", "refugee", "asylum", "immigrant",
+                                             "trans people", "transgender", "lgbt", "lesbian", "gay", "bisexual", "intersex"
+],
+                            "wordlist_no": []
+                        },
+                         {
+                            "termlist_name": "termlist6_2v",
+                            "formatting_rule": "trunc",
+                            "na": false,
+                            "case": true,
+                            "wordlist_en": ["availab","access"],
                             "wordlist_no": []
                         }
+                        
                     ]
                 }
             ]
