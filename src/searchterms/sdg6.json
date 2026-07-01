@@ -367,30 +367,303 @@
             "phrases": [
                 {
                     "number": 1,
-                    "logic_rule": "()",
-                    "sentence_split": false,
+                    "logic_rule": "(([termlist6_3a] | ([termlist6_3b] & not [termlist6_3c]) | ([termlist6_3d] & [termlist6_3e])) & ([termlist6_3f] | [termlist6_3g] | [termlist6_3gcase] | ([termlist6_3h] & [termlist6_3i]) | ([termlist6_3j] & [termlist6_3k])))",
+                    "sentence_split": true,
                     "termlists": [
                         {
-                            "termlist_name": "",
-                            "formatting_rule": "",
+                            "termlist_name": "termlist6_3a",
+                            "formatting_rule": "no_trunc",
                             "na": false,
                             "case": false,
-                            "wordlist_en": [],
+                            "wordlist_en": ["freshwater","fresh water","lake","pond","lakes","ponds",
+                                            "brook","creek","brooks","creeks",
+                                            "aquifer","groundwater","aquifers","groundwaters",
+                                            "natural water","water source","natural waters","water sources",
+                                            "water reservoir","water reservoirs",
+                                            "drinking water","drinking-water","drinkable water","potable water","water for drinking","water used for drinking"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_3b",
+                            "formatting_rule": "no_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["river","rivers"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_3c",
+                            "formatting_rule": "no_left_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["river delta"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_3d",
+                            "formatting_rule": "trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["stream"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_3e",
+                            "formatting_rule": "no_left_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["water"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_3f",
+                            "formatting_rule": "no_left_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["wastewater","waste water","sewage","sewer","effluent"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_3g",
+                            "formatting_rule": "trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["pollut","contaminated","contaminant",
+                                            "plastic","microplastic","micro plastic","nanoplastic","nano plastic", 
+                                            "toxic chemical","endocrine disrupting chemical",
+                                            "persistent organic pollutant","polychlorinated biphenyl", 
+                                            "hexachlorocyclohexane","hexachlorobenzene","hexachlorobutadiene","pentachlorobenzene", 
+                                            "pentachlorophenol","pentachloroanisole","hexabromocyclododecane","polybrominated diphenyl ether", 
+                                            "perflurochemicals","endosulfan",
+                                            "polycyclic aromatic hydrocarbon",
+                                            "oil spill"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_3gcase",
+                            "formatting_rule": "no_trunc",
+                            "na": false,
+                            "case": true,
+                            "wordlist_en": ["PCB","DDT","PFAS","PAH","PCBs","PAHs","TBT"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_3h",
+                            "formatting_rule": "no_left_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["aquacultur","farm","industr","livestock","agricultur",
+                                            "household","domestic","urban","dumping"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_3i",
+                            "formatting_rule": "trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["waste","discharge","runoff","run off","stormwater"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_3j",
+                            "formatting_rule": "trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["heavy metal","toxic metal","mercury","arsenic","fluoride","cadmium","chromium","copper","nickel", 
+                                            "organotin","tributyltin","mining","mine tailing","oil", 
+                                            "pesticide","herbicide", 
+                                            "pharmaceutic","antibiotic","medical", 
+                                            "pathogen","bacteria","virus","viruses", 
+                                            "protozoa","helminth","parasite", 
+                                            "Legionella pneumophila","E. coli","Escherichia coli ","coliform",
+                                            "Vibrio cholerae","Salmonella","Shigella","Campylobacter","Rotavirus", 
+                                            "Norovirus","Hepatitis","Adenovirus","Cryptosporidium"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_3k",
+                            "formatting_rule": "trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["contaminat","pollut","residue"],
                             "wordlist_no": []
                         }
                     ]
                 },
                 {
                     "number": 2,
-                    "logic_rule": "()",
-                    "sentence_split": false,
+                    "logic_rule": "([termlist6_3l] | (([termlist6_3m] | [termlist6_mcase]) & ([termlist6_3n] | (([termlist6_3o] | [termlist6_ocase] | ([termlist6_3p] & [termlist6_3q]) | ([termlist6_3r] & [termlist6_3s])) & [termlist6_3t]))))",
+                    "sentence_split": true,
                     "termlists": [
                         {
-                            "termlist_name": "",
-                            "formatting_rule": "",
+                            "termlist_name": "termlist6_3l",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
-                            "wordlist_en": [],
+                            "wordlist_en": ["water purification"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_3m",
+                            "formatting_rule": "no_left_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["treatment","remov","recovery","technolog",
+                                            "monitor","assess",
+                                            "indicator","bioindicator","index","indices",
+                                            "life cycle assess",
+                                            "environmental assess","environmental impact assess",
+                                            "manag","pollution control","strategy","strategies",
+                                            "regulat","legislat","policy","policies","framework","programme"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_3mcase",
+                            "formatting_rule": "no_trunc",
+                            "na": false,
+                            "case": true,
+                            "wordlist_en": ["LCA","LCAs"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_3n",
+                            "formatting_rule": "no_left_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["wastewater","waste water","sewage","sewer","effluent"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_3o",
+                            "formatting_rule": "trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["pollut","contaminated","contaminant",
+                                            "plastic","microplastic","micro plastic","nanoplastic","nano plastic", 
+                                            "toxic chemical","endocrine disrupting chemical",
+                                            "persistent organic pollutant","polychlorinated biphenyl", 
+                                            "hexachlorocyclohexane","hexachlorobenzene","hexachlorobutadiene","pentachlorobenzene", 
+                                            "pentachlorophenol","pentachloroanisole","hexabromocyclododecane","polybrominated diphenyl ether", 
+                                            "perflurochemicals","endosulfan",
+                                            "polycyclic aromatic hydrocarbon",
+                                            "oil spill"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_3ocase",
+                            "formatting_rule": "no_trunc",
+                            "na": false,
+                            "case": true,
+                            "wordlist_en": ["PCB","DDT","PFAS","PAH","PCBs","PAHs","TBT"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_3p",
+                            "formatting_rule": "no_left_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["aquacultur","farm","industr","livestock","agricultur",
+                                            "household","domestic","urban","dumping"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_3q",
+                            "formatting_rule": "trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["waste","discharge","runoff","run off","stormwater"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_3r",
+                            "formatting_rule": "trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["heavy metal","toxic metal","mercury","arsenic","fluoride","cadmium","chromium","copper","nickel", 
+                                            "organotin","tributyltin","mining","mine tailing","oil", 
+                                            "pesticide","herbicide", 
+                                            "pharmaceutic","antibiotic","medical", 
+                                            "pathogen","bacteria","virus","viruses", 
+                                            "protozoa","helminth","parasite", 
+                                            "Legionella pneumophila","E. coli","Escherichia coli ","coliform",
+                                            "Vibrio cholerae","Salmonella","Shigella","Campylobacter","Rotavirus", 
+                                            "Norovirus","Hepatitis","Adenovirus","Cryptosporidium"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_3s",
+                            "formatting_rule": "trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["contaminat","pollut","residue"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_3t",
+                            "formatting_rule": "no_left_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["water"],
+                            "wordlist_no": []
+                        }
+                    ]
+                },
+                {
+                    "number": 3,
+                    "logic_rule": "([termlist6_3u] & ([termlist6_3v] | ([termlist6_3w] & not [termlist6_3x]) | ([termlist6_3y] & [termlist6_3z])))",
+                    "sentence_split": true,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist6_3u",
+                            "formatting_rule": "trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["water quality","quality of water"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_3v",
+                            "formatting_rule": "no_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["freshwater","fresh water","lake","pond","lakes","ponds",
+                                            "brook","creek","brooks","creeks",
+                                            "aquifer","groundwater","aquifers","groundwaters",
+                                            "natural water","water source","natural waters","water sources",
+                                            "water reservoir","water reservoirs",
+                                            "drinking water","drinking-water","drinkable water","potable water","water for drinking","water used for drinking"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_3w",
+                            "formatting_rule": "no_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["river","rivers"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_3x",
+                            "formatting_rule": "no_left_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["river delta"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_3y",
+                            "formatting_rule": "trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["stream"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_3z",
+                            "formatting_rule": "no_left_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["water"],
                             "wordlist_no": []
                         }
                     ]
