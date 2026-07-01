@@ -75,7 +75,7 @@
             "phrases": [
                 {
                     "number": 1,
-                    "logic_rule": "([termlist1_3a] | [termlist1_3b])",
+                    "logic_rule": "([termlist1_3a] | [termlist1_3b] | ([termlist1_3c] & [termlist1_3d])) ",
                     "sentence_split": true,
                     "termlists": [
                         {
@@ -83,19 +83,8 @@
                             "formatting_rule": "no_left_trunc",
                             "na": false,
                             "case": false,
-                            "wordlist_en": ["welfare system", "welfare service", "social security", "social service", "social assistance", "social floor", "social safety net", "safety net program",
-                            "social protection", "social benefits" , "social insurance", "social care service",
-                            "basic income" , "income security" , "guaranteed income" , "living allowance" , "housing assistance",
-                            "cash benefit" , "cash transfer", "cash plus program",
-                            "school feeding" , "free school meal" , "food stamp program" , "nutrition assistance program" , "food assistance program" , "WIC program" , "WIC benefits",
-                            "labour market polic" , "labor market polic" , "labour market intervention" , "labor market intervention", "labour market program" , "labor market program" , "public works program",
-                            "unemployment benefit" , "unemployment compensation" , "unemployment insurance" , "unemployment allowance" , 
-                            "disability benefit" , "disability allowance" , "disability pension" , "disability tax credit" , "disability insurance", 
-                            "health care benefit" , "sickness benefit" , "sick benefit" , "sick pay" , "paid sick leave" , "paid medical leave" , "sickness allowance",
-                            "maternity pay" , "maternity insurance" , "maternity benefit" , "maternity allowance" , "paid maternity leave" , 
-                            "parental benefit" , "paid parental leave" , "paid family leave" , "family leave tax credit" , "parental leave tax credit",
-                            "child benefit" , "child tax credit" , "child allowance",
-                            "pension insurance" , "pension plan" , "pension benefit" , "public pension" , "state pension"],
+                            "wordlist_en": ["welfare system", "welfare service", "social security system", "social service", "social assistance",
+                            "social floor", "social protection program", "social safety net", "safety net program"],
                             "wordlist_no": ["velferdssystem", "velferdstjeneste", "velferdsteneste", "velferdsgode", "velferdsordning", "velferdsmodell", "velferdspolitikk", 
                             "folketrygd", "trygdeordning", "sikkerhetsnett", "trygderett", 
                             "sosialpolitiske ordning", "sosialhjelp",
@@ -110,6 +99,33 @@
                             "case": true,
                             "wordlist_en": [],
                             "wordlist_no": ["NAV"]
+                        },
+                        {
+                            "termlist_name": "termlist1_3c",
+                            "formatting_rule": "no_left_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["social protection", "social security", "social benefits" , "social insurance", "social care service", "basic income" , "income security" , "guaranteed income" , "living allowance" , "housing assistance" , "cash benefit" , "cash grant", "cash transfer", "cash plus program", "school feeding" , "free school meal" , "food stamp program" , "nutrition assistance program" , "food assistance program" , "WIC program" , "WIC benefits", "labour market polic" , "labor market polic" , "labour market intervention" , "labor market intervention", "labour market program" , "labor market program" , "public works program" , "unemployment benefit" , "unemployment compensation" , "unemployment insurance" , "unemployment allowance" , "disability benefit" , "disability allowance" , "disability pension" , "disability tax credit" , "disability insurance", "health care benefit" , "sickness benefit" , "sick benefit" , "sick pay" , "paid sick leave" , "paid medical leave" , "sickness allowance", "maternity pay" , "maternity insurance" , "maternity benefit" , "maternity allowance" , "paid maternity leave" , 
+                            "parental benefit" , "paid parental leave" , "paid family leave" , "family leave tax credit" , "parental leave tax credit", "child benefit" , "child tax credit" , "child allowance",
+                            "pension insurance" , "pension plan" , "pension benefit" , "public pension" , "state pension"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist1_3d",
+                            "formatting_rule": "no_left_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["poverty", "rural poor", "urban poor", "working poor", "the poor", "destitute", "low income", "low-income", 
+                            "poor households", "poorest households", "poor families", "poorest families", "poor communit", "poorest communit", 
+                            "disadvantaged", "marginalis", "marginalized", "vulnerable", "discriminated",
+                            "slum", "shanty town", "informal settlement", "homeless",
+                            "patient", "disabled", "disabilities", "disability",
+                            "older people", "old people", "retired people", "elderly", "elders", "pensioner", 
+                            "unemployed",
+                            "women", "woman", "girl", "pregnan", "maternity", "child", "baby", "babies", "newborn", "toddler", "youth", "infant",
+                            "indigenous", "minorities", "minority", "refugee", "asylum", "immigrant",
+                            "trans people", "transgender", "lgbt", "lesbian", "gay", "bisexual", "intersex"],
+                            "wordlist_no": []
                         }
                     ]
                 }
