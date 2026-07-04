@@ -136,7 +136,7 @@
             "phrases": [
                 {
                     "number": 1,
-                    "logic_rule": "([termlist1_4a] | ([termlist1_4b] & [termlist1_4c]))",
+                    "logic_rule": "([termlist1_4a] | ([termlist1_4b] & [termlist1_4c] & [termlist1_4cc]) | ([termlist1_4bno] & [termlist1_4cno]))",
                     "sentence_split": true,
                     "termlists": [
                         {
@@ -159,6 +159,14 @@
                             "affordab" , "pro poor" , "pro-poor", "inexpensive" , "free of charge" , "free service",
                             "inaccessib" , "barrier" , "obstacle" , "unequal" , "inequalit" , "inequitab" , "exclusion", 
                             "unaffordab" , "expensive"],
+                            "wordlist_no": []
+                        },
+                         {
+                            "termlist_name": "termlist1_4bno",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": [],
                             "wordlist_no": ["tilgang", "tilgjenge", "likestilling", "likhet", "likheit", "rettferd", "rettvis",
                             "kontroll", "rettighet", "rettigheit", "inkludering", "inkluderende", "inkluderande", "ekskludering", "barrier", "marginalis", "myndiggjør", "myndiggjer",
                             "dyre", "ikke råd", "ikkje råd"]
@@ -168,20 +176,50 @@
                             "formatting_rule": "default",
                             "na": false,
                             "case": false,
-                            "_comment":"_Saving_ (=_sparing_ NO) are not used here as they mostly add noise from _energy saving_, _cost saving_ or _nerve-sparing_ (medical). _seed banks_ are also an issue",
                             "wordlist_en": ["a bank" , "bank account" , "banking" , "bank services", "financial service", "monetary service", "economic service",
                             "digital finance", "mobile money", "electronic payment", "digital payment", "fintech",
                             "credit", "savings account", "insurance", "payment service", "transfer service", "transfer fund",
                             "financial resource", "monetary resource", "economic resource", "financial asset", "economic asset", "financial opportunit"],
-                            "wordlist_no": ["bankkonto", "bankkunde", "sparebank", "banktjenester", "finansielle tjenester", "banktenester", "finansielle tenester",
-                            "kreditt", "lån", "sparekonto", "forsikring", "betalingsløsning", "betalingsløysing", "betalingstjeneste", "betalingsteneste", "digitale penger", "digitale pengar", "nettbank", "mobilbank",
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist1_4cno",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "_comment":"_Saving_ (=_sparing_ NO) are not used here as they mostly add noise from _energy saving_, _cost saving_ or _nerve-sparing_ (medical). _seed banks_ are also an issue",
+                            "wordlist_en": [],
+                            "wordlist_no": ["bankkont", "bankkunde", "sparebank", "banktjenester", "finansielle tjenester", "banktenester", "finansielle tenester",
+                            "kreditt", "lån", "sparekont", "forsikring", "betalingsløsning", "betalingsløysing", "betalingstjeneste", "betalingsteneste", "digitale penger", "digitale pengar", "nettbank", "mobilbank",
                             "finansielle ressurs", "økonomiske ressurs"]
+                        },
+                        {
+                            "termlist_name": "termlist1_4cc",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,                        
+                            "wordlist_en": ["poverty", "rural poor", "urban poor", "working poor", "the poor", "destitute", "living in poverty", "low income", "low-income", 
+                            "poor households", "poorest households", "poor families", "poorest families", "poor communit", "poorest communit", 
+                            "disadvantaged", "marginalis", "marginalized", "vulnerable", "discriminated",
+                            "slum", "shanty town", "informal settlement", "homeless",
+                            "patient", "disabled", "disabilities", "disability",
+                            "older people", "old people", "retired people", "elderly", "elders", "pensioner", 
+                            "unemployed",
+                            "women", "woman", "girl", "pregnan", "maternity", "child", "baby", "babies", "newborn", "toddler", "youth", "infant",
+                            "indigenous", "minorities", "minority", "refugee", "asylum", "immigrant",
+                            "trans people", "transgender", "lgbt", "lesbian", "gay", "bisexual", "intersex",
+                            "least developed countr", "least developed nation", 
+                            "Angola", "Benin", "beninese", "Burkina Faso", "Burkina fasso", "burkin", "Burundi", "Central African Republic", "central african", "Chad", "Comoros", "comoro islands", "iles comores", "Congo", "Djibouti", "Eritrea", "Ethiopia", "Gambia", "Guinea", "Guinea-Bissau", "guinean", "Lesotho", "lesothan", "Liberia", 
+                            "Madagasca", "Malawi", "malian", "Mauritania", "Mozambique", "mozambican", "Niger", "Rwanda", "Sao Tome and Principe", "Senegal", "Sierra Leone", "Somalia", "South Sudan", "Sudan", "sudanese", "Togo", "togolese", "tongan", "Uganda", "Tanzania", "Zambia", "Cambodia", "Kiribati", 
+                            "Lao People’s democratic republic", "Laos", "Myanmar", "myanma", "Solomon islands", "Timor Leste", "Tuvalu", "Vanuatu", 
+                             "Afghanistan", "afghan", "Bangladesh", "Bhutan", "Nepal", "Yemen", "Haiti"],
+                            "wordlist_no": []
                         }
                     ]
                 },
                 {
                     "number": 2,
-                    "logic_rule": "(([termlist1_4f] | ([termlist1_4d] & [termlist1_4e])) & not [termlist1_4g])",
+                    "logic_rule": "(([termlist1_4f] & [termlist1_4ee]) | [termlist1_4fno] | ([termlist1_4d] & [termlist1_4e] & [termlist1_4ee]) | ([termlist1_4dno] & [termlist1_4eno]) & not [termlist1_4g])",
                     "sentence_split": true,
                     "termlists": [
                         {
@@ -189,13 +227,21 @@
                             "formatting_rule": "default",
                             "na": false,
                             "case": false,
-                            "_comment": "We removed _inkludering_(NO) because the results were about using farms in inclusive education", 
                             "wordlist_en": ["access" , "equitab" , "equity" , "equality" , "equal", 
                             "ownership" , "control" , "right" , "empower" , "inclusion", "sharing",
                             "affordab" , "pro poor" , "pro-poor", 
                             "inaccessib" , "barrier" , "obstacle" , "unequal" , "inequalit" , "inequitab" , "exclusion",
                             "unaffordab" , "expensive", "insecurity",
                             "land rental", "income security", "secure livelihood"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist1_4dno",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "_comment": "We removed _inkludering_(NO) because the results were about using farms in inclusive education", 
+                            "wordlist_en": [],
                             "wordlist_no": ["tilgang", "tilgjenge", "likestilling", "ulikhet", "rettferd", "rettvis", 
                             "eierskap", "eigarskap", "kontroll", "rettighet", "rettigheit", "ekskludering", "barrier", "marginali", "myndiggjør", "myndiggjer",
                             "dyre", "ikke råd", "ikkje råd", "sikkerhet", "sikkerheit", "usikker",
@@ -206,10 +252,19 @@
                             "formatting_rule": "specific_trunc",
                             "na": false,
                             "case": false,
-                            "_comment": "Here we are preventing truncation because _arv_(NO) is problematic. We also had to remove the term _land_ and _income_ and specify them in phrases (e.g. _income inequality_) under 4f. This was because there were many results about e.g. health outcomes of a disease in a low-income country.", 
+                            "_comment": "We had to remove the term _land_ and _income_ and specify them in phrases (e.g. _income inequality_) under 4f. This was because there were many results about e.g. health outcomes of a disease in a low-income country.", 
                             "wordlist_en": ["economic resource.*", "natural resources",
                             "employment", "decent work", "paid work", "labour market", "incomes", "livelihood", "livelihoods", "wealth", "inheritance", 
                             "farmland.*", "land resources", "farm", "farms", "tenure", "property", "home ownership"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist1_4eno",
+                            "formatting_rule": "specific_trunc",
+                            "na": false,
+                            "case": false,
+                            "_comment": "Here we are preventing truncation because _arv_(NO) is problematic.", 
+                            "wordlist_en": [],
                             "wordlist_no": ["finansielle ressurs.*", "økonomiske ressurs.*", "naturressurs.*",
                             "lønnet arbeid", "løna arbeid", "anstendig arbeid.*", "arbeidsmark.*", "inntekt", "lønn", "levebrød", "underhold", "underhald", "rikdom", "arv", "arving", "utkomme", "utkome", 
                             "gård", "småbruk", "familiegård", "gårdsbruk", "gardsbruk", "dyrket mark", "dyrka mark", "dyrkamark", "kultivert mark", "landsressurs.*", 
@@ -221,8 +276,38 @@
                             "na": false,
                             "case": false,
                             "wordlist_en": ["land rights", "rights to land", "right to land", "access to land", "land grab", "tenure security", "secure tenure", "income inequality"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist1_4fno",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": [],
                             "wordlist_no": ["rettigheter til land", "rettigheiter til land", "rett til land", "jordleie", "jordleige", "leie av jord", "leige av jord", "tomtefeste",
                             "bygsling", "tomterett", "servitutt"]
+                        },
+                        {
+                            "termlist_name": "termlist1_4ee",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,                        
+                            "wordlist_en": ["poverty", "rural poor", "urban poor", "working poor", "the poor", "destitute", "living in poverty", "low income", "low-income", 
+                            "poor households", "poorest households", "poor families", "poorest families", "poor communit", "poorest communit", 
+                            "disadvantaged", "marginalis", "marginalized", "vulnerable", "discriminated",
+                            "slum", "shanty town", "informal settlement", "homeless",
+                            "patient", "disabled", "disabilities", "disability",
+                            "older people", "old people", "retired people", "elderly", "elders", "pensioner", 
+                            "unemployed",
+                            "women", "woman", "girl", "pregnan", "maternity", "child", "baby", "babies", "newborn", "toddler", "youth", "infant",
+                            "indigenous", "minorities", "minority", "refugee", "asylum", "immigrant",
+                            "trans people", "transgender", "lgbt", "lesbian", "gay", "bisexual", "intersex",
+                            "least developed countr", "least developed nation", 
+                            "Angola", "Benin", "beninese", "Burkina Faso", "Burkina fasso", "burkin", "Burundi", "Central African Republic", "central african", "Chad", "Comoros", "comoro islands", "iles comores", "Congo", "Djibouti", "Eritrea", "Ethiopia", "Gambia", "Guinea", "Guinea-Bissau", "guinean", "Lesotho", "lesothan", "Liberia", 
+                            "Madagasca", "Malawi", "malian", "Mauritania", "Mozambique", "mozambican", "Niger", "Rwanda", "Sao Tome and Principe", "Senegal", "Sierra Leone", "Somalia", "South Sudan", "Sudan", "sudanese", "Togo", "togolese", "tongan", "Uganda", "Tanzania", "Zambia", "Cambodia", "Kiribati", 
+                            "Lao People’s democratic republic", "Laos", "Myanmar", "myanma", "Solomon islands", "Timor Leste", "Tuvalu", "Vanuatu", 
+                            "Afghanistan", "afghan", "Bangladesh", "Bhutan", "Nepal", "Yemen", "Haiti"],
+                            "wordlist_no": []
                         },
                         {
                             "termlist_name": "termlist1_4g",
@@ -236,7 +321,7 @@
                 },
                 {
                     "number": 3,
-                    "logic_rule": "(([termlist1_4h] & [termlist1_4i]) & not [termlist1_4jnot])",
+                    "logic_rule": "(([termlist1_4h] & [termlist1_4i] & [termlist1_4ii]) | ([termlist1_4hno] & [termlist1_4ino]) & not [termlist1_4jnot])",
                     "sentence_split": true,
                     "termlists": [
                         {
@@ -248,6 +333,14 @@
                             "ownership", "right",
                             "affordab" , "pro poor" , "pro-poor", "inexpensive", "unaffordab" , "expensive", "low cost", "free of charge", "free service",
                             "inaccessib" , "barrier", "inequalit", "inequitab", "exclusion"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist1_4hno",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": [],
                             "wordlist_no": ["tilgang", "tilgjenge", "likestilling", "ulikhet", "rettferd", "rettvis", "myndiggjør", "myndiggjer",
                             "eierskap", "eigarskap", "rettighet", "rettigheit",
                             "ikke råd", "ikkje råd",
@@ -257,8 +350,7 @@
                             "termlist_name": "termlist1_4i",
                             "formatting_rule": "default",
                             "na": false,
-                            "case": false,
-                            "_comment":"skole(NO) is limited to specific basic levels here to avoid its use in Norwegian university names, e.g. _Høyskole_", 
+                            "case": false, 
                             "wordlist_en": ["basic service", "basic facilities", "essential service",
                             "drinking water", "sanitation", "basic hygiene", "hygiene service", "toilet", "handwashing", "sewage", "WASH facilities", 
                             "clean water",
@@ -269,6 +361,15 @@
                             "electricity", "energy service", "modern energy", "clean fuel", "clean energy", "modern energy",
                             "public open space", "public space", "public green space",
                             "basic mobility", "urban mobility", "rural mobility", "all-season road", "transport service", "public transport"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist1_4ino",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "_comment":"skole(NO) is limited to specific basic levels here to avoid its use in Norwegian university names, e.g. _Høyskole_", 
+                            "wordlist_en": [],
                             "wordlist_no": ["grunnleggende tjeneste", "grunnleggjande teneste", "grunnleggende fasilitet", 
                             "drikkevann", "drikkevatn", "grunnleggende hygiene", "grunnleggjande hygiene", "kloakk", "toalett", "vannklosett", "vassklosett", "håndvask", "handvask", "sanitær",
                             "rent vann", "reint vatn", "reint vann", "innlagt vann", "innlagt vatn", "vanntilgang", "vannforsyning",
@@ -280,6 +381,28 @@
                             "offentlig rom", "offentlige rom", "offentleg rom", "offentlege rom", "grønt areal", "grønne areal", "grøntområde", "friområde", "friareal", "rekreasjonsområde",
                             "offentlig transport", "offentlige transport", "offentleg transport", "offentlege transport", "kollektivtransport", "kollevktivtilb", "transportordning", 
                             "mobilitet"]
+                        },
+                        {
+                            "termlist_name": "termlist1_4ii",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,                        
+                            "wordlist_en": ["poverty", "rural poor", "urban poor", "working poor", "the poor", "destitute", "living in poverty", "low income", "low-income", 
+                            "poor households", "poorest households", "poor families", "poorest families", "poor communit", "poorest communit", 
+                            "disadvantaged", "marginalis", "marginalized", "vulnerable", "discriminated",
+                            "slum", "shanty town", "informal settlement", "homeless",
+                            "patient", "disabled", "disabilities", "disability",
+                            "older people", "old people", "retired people", "elderly", "elders", "pensioner", 
+                            "unemployed",
+                            "women", "woman", "girl", "pregnan", "maternity", "child", "baby", "babies", "newborn", "toddler", "youth", "infant",
+                            "indigenous", "minorities", "minority", "refugee", "asylum", "immigrant",
+                            "trans people", "transgender", "lgbt", "lesbian", "gay", "bisexual", "intersex",
+                            "least developed countr", "least developed nation", 
+                            "Angola", "Benin", "beninese", "Burkina Faso", "Burkina fasso", "burkin", "Burundi", "Central African Republic", "central african", "Chad", "Comoros", "comoro islands", "iles comores", "Congo", "Djibouti", "Eritrea", "Ethiopia", "Gambia", "Guinea", "Guinea-Bissau", "guinean", "Lesotho", "lesothan", "Liberia", 
+                            "Madagasca", "Malawi", "malian", "Mauritania", "Mozambique", "mozambican", "Niger", "Rwanda", "Sao Tome and Principe", "Senegal", "Sierra Leone", "Somalia", "South Sudan", "Sudan", "sudanese", "Togo", "togolese", "tongan", "Uganda", "Tanzania", "Zambia", "Cambodia", "Kiribati", 
+                            "Lao People’s democratic republic", "Laos", "Myanmar", "myanma", "Solomon islands", "Timor Leste", "Tuvalu", "Vanuatu", 
+                            "Afghanistan", "afghan", "Bangladesh", "Bhutan", "Nepal", "Yemen", "Haiti"],
+                            "wordlist_no": []
                         },
                         {
                             "termlist_name": "termlist1_4jnot",
@@ -362,7 +485,7 @@
                             "formatting_rule": "default",
                             "na": false,
                             "case": false,
-                            "wordlist_en": ["poverty", "rural poor", "urban poor", "working poor", "destitute", "low income", "low-income", "poor households", "poorest households", "poor communit", "poorest communit", 
+                            "wordlist_en": ["poverty", "rural poor", "urban poor", "working poor", "the poor", "destitute", "low income", "low-income", "poor households", "poorest households", "poor famil", "poorest famil", "poor communit", "poorest communit", 
                             "social capital",
                             "disadvantaged", "marginalis", "marginalized", "vulnerable", "discriminated",
                             "slum", "shanty town", "informal settlement", "homeless",
