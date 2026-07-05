@@ -589,7 +589,7 @@
                             "formatting_rule": "default",
                             "na": false,
                             "case": false,
-                            "wordlist_en": ["anti poverty", "anti-poverty", "antipoverty"],
+                            "wordlist_en": ["anti poverty", "anti-poverty", "antipoverty", "pro poor", "pro-poor", "out of poverty"],
                             "wordlist_no": []
                         },
                         {

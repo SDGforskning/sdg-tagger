@@ -1031,7 +1031,7 @@
                             "na": false,
                             "case": false,
                             "wordlist_en": ["illitera"],
-                            "wordlist_no": []
+                            "wordlist_no": ["analfabet"]
                         },
                         {
                             "termlist_name": "termlist4_6_2b",
