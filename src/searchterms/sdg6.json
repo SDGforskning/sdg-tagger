@@ -1275,30 +1275,128 @@
             "phrases": [
                 {
                     "number": 1,
-                    "logic_rule": "()",
-                    "sentence_split": false,
+                    "logic_rule": "(([termlist6_ba] & [termlist6_bb]) & ([termlist6_bc] | [termlist6_bccase] | [termlist6_bd] | [termlist6_be] | [termlist6_becase] | ([termlist6_bf] & (([termlist6_bg] & [termlist6_bh]) | ([termlist6_bi] & [termlist6_bj]) | [termlist6_bk]))))",
+                    "sentence_split": true,
+                    "_comment": "Freshwater string is the same used in 6.3 but without 'drinking water' which is already included earlier in the phrase with lesser restrictions.",
                     "termlists": [
                         {
-                            "termlist_name": "",
-                            "formatting_rule": "",
+                            "termlist_name": "termlist6_ba",
+                            "formatting_rule": "no_left_trunc",
                             "na": false,
                             "case": false,
-                            "wordlist_en": [],
+                            "wordlist_en": ["local","stakeholder","municip","commun","district"],
                             "wordlist_no": []
-                        }
-                    ]
-                },
-                {
-                    "number": 2,
-                    "logic_rule": "()",
-                    "sentence_split": false,
-                    "termlists": [
+                        },
                         {
-                            "termlist_name": "",
-                            "formatting_rule": "",
+                            "termlist_name": "termlist6_bb",
+                            "formatting_rule": "no_left_trunc",
                             "na": false,
                             "case": false,
-                            "wordlist_en": [],
+                            "wordlist_en": ["participat","contribut","impact","plan", 
+                                            "choice","choose","solution", 
+                                            "decision making","making decision", 
+                                            "administrat","policy","policies","procedure","scheme", 
+                                            "manage","develop","govern","development",
+                                            "resource us","using resource", 
+                                            "empower","engage","collaborat","co-operat","cooperat","inclus"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_bc",
+                            "formatting_rule": "trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["water use efficiency",
+                                            "water supply","water supplies","supply of freshwater","supply of water",
+                                            "water resource","freshwater resource"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_bccase",
+                            "formatting_rule": "no_trunc",
+                            "na": false,
+                            "case": true,
+                            "wordlist_en": ["WUE"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_bd",
+                            "formatting_rule": "trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["drinking water","drinking-water","drinkable water",
+                                            "potable water","water for drinking","water used for drinking"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_be",
+                            "formatting_rule": "no_left_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["sanitation",
+                                            "hygiene service","hygiene facilit",
+                                            "handwashing","hand-washing","washing hands","wash hands"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_becase",
+                            "formatting_rule": "no_trunc",
+                            "na": false,
+                            "case": true,
+                            "wordlist_en": ["WASH"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_bf",
+                            "formatting_rule": "no_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["freshwater","fresh water","lake","pond","lakes","ponds",
+                                            "brook","creek","brooks","creeks",
+                                            "aquifer","groundwater","aquifers","groundwaters",
+                                            "natural water","water source","natural waters","water sources",
+                                            "water reservoir","water reservoirs"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_bg",
+                            "formatting_rule": "no_left_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["wastewater","waste water","sewage","sewer","effluent"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_gh",
+                            "formatting_rule": "no_left_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["treatment"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_bi",
+                            "formatting_rule": "no_left_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["water","freshwater"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_bj",
+                            "formatting_rule": "no_left_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["quality","quantity","area","extent","volume"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_bk",
+                            "formatting_rule": "no_left_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["ecosystem","habitat","ecological communit","biotope",
+                                            "biodiversity"],
                             "wordlist_no": []
                         }
                     ]
