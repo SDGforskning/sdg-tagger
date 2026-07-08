@@ -1405,24 +1405,57 @@
         }
     ],
     "mentions": {
-        "logic_rule": "",
+        "logic_rule": "([termlist6_sdg_a] | ([termlist6_sdg_b] & ([termlist6_sdg_c] | [termlist6_sdg_d])) | ([termlist6_sdg_e] & [termlist6_sdg_f]))",
         "termlists": [
             {
-                "termlist_name": "",
-                "formatting_rule": "",
+                "termlist_name": "termlist6_sdg_a",
+                "formatting_rule": "no_trunc",
                 "na": false,
                 "case": false,
-                "wordlist_en": [],
+                "wordlist_en": ["SDG 6","SDGs 6","SDG6","sustainable development goal 6"],
                 "wordlist_no": []
             },
             {
-                "termlist_name": "",
-                "formatting_rule": "",
+                "termlist_name": "termlist6_sdg_b",
+                "formatting_rule": "trunc",
                 "na": false,
                 "case": false,
-                "wordlist_en": [],
+                "wordlist_en": ["sustainable development goal"],
+                "wordlist_no": []
+            },
+            {
+                "termlist_name": "termlist6_sdg_c",
+                "formatting_rule": "no_trunc",
+                "na": false,
+                "case": false,
+                "wordlist_en": ["goal 6"],
+                "wordlist_no": []
+            },
+            {
+                "termlist_name": "termlist6_sdg_d",
+                "formatting_rule": "trunc",
+                "na": false,
+                "case": false,
+                "wordlist_en": ["water and sanitation"],
+                "wordlist_no": []
+            },
+            {
+                "termlist_name": "termlist6_sdg_e",
+                "formatting_rule": "trunc",
+                "na": false,
+                "case": false,
+                "wordlist_en": ["sustainable development goal","SDG","goal 6"],
+                "wordlist_no": []
+            },
+            {
+                "termlist_name": "termlist6_sdg_f",
+                "formatting_rule": "no_trunc",
+                "na": false,
+                "case": false,
+                "wordlist_en": ["sanitation","hygiene","water"],
                 "wordlist_no": []
             }
+            
         ]
     }
 }
