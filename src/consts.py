@@ -16,6 +16,7 @@ COUNTRIES = _read_file(COUNTRIES_FILE_PATH)['phrases']
 REGEX_PATTERNS = _read_file(FORMATS_FILE_PATH)
 
 LIST_ALL_SDG_NR = [1, 2]
-ADDITIONAL_LANGUAGES = {
+LANGUAGES = {
+    'en':True,
     'no':True
 }

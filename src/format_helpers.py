@@ -1,6 +1,6 @@
 import re
 
-from .consts import ADDITIONAL_LANGUAGES, REGEX_PATTERNS
+from .consts import LANGUAGES, REGEX_PATTERNS
 
 
 def _check_for_missing_matches(
@@ -42,25 +42,26 @@ def _format_list_with_pattern(pattern: str, search_terms: list[str]) -> str:
     return pattern.format('|'.join(search_terms))
 
 
-def _get_additional_language_terms(term_list: dict[str, list[str]]) -> list[str]:
-    """Check which other languages to add and adds terms for those languages.
+def _get_language_termlists(term_list: dict[str, list[str]]) -> dict[str, list[str]]:
+    """
 
     Args:
-        term_list: a list of term lists, one for each available language
+        term_list: a dict of term lists, one for each available language
 
     Returns:
-        a list of all terms of the additional languages
+        a dict of termlists for each language
     """
-    terms = []
-    for language in ADDITIONAL_LANGUAGES.keys():
-        if ADDITIONAL_LANGUAGES[language] is True:
+    language_termlists = {}
+    for language in LANGUAGES.keys():
+        if LANGUAGES[language] is True:
             if f'wordlist_{language}' in term_list.keys():
-                terms += term_list[f'wordlist_{language}']
+                key=f'wordlist_{language}'
+                language_termlists[language] = term_list[key]
             else:
                 message = f'''WARNING: The termlist {term_list['termlist_name']} does not have a list for language {language}.'''
                 print(f'\033[1;31m{message}\033[0m')
 
-    return terms
+    return language_termlists
 
 
 def format_logic_rules(
@@ -107,24 +108,25 @@ def format_logic_rules(
 
 
 def prepare_regex_search_termlist(
-    term_lists: dict[str, list[str]],
+    terms: list[str],
     input_text: str,
+    formatting_rule: str,
+    case: bool,
 ) -> tuple[str, str]:
     """Formats the regex search for a termlist given its formatting rules, and lowers the input text if required in the termlist rules.
 
     Args:
-        term_lists: lists of terms and the rules to use when searching
+        term_list: lists of terms for searching
         text: the text to search in
+        formatting_rule:
+        case:
 
     Returns:
         the formated regex search for the termlist, and the formated text to search in
     """
-    pattern = str(REGEX_PATTERNS[term_lists['formatting_rule']])
-    terms = term_lists['wordlist_en']
-    if any(ADDITIONAL_LANGUAGES.values()):
-        terms += _get_additional_language_terms(term_lists)
+    pattern = str(REGEX_PATTERNS[formatting_rule])
 
-    if not term_lists['case']:
+    if not case:
         text = input_text.lower()
         terms = [term.lower() for term in terms]
     else:
