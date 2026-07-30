@@ -125,7 +125,7 @@
                     "formatting_rule": "default",
                     "na": false,
                     "case": false,
-                    "wordlist_en": ["species", "plant", "animal", "organism", "flora", "fauna", "wildlife", "insect", "amphibian", "reptil", "bird", "moss", "liverwort", "hornwort", "lichen", "bryophyte", "tree", "grass", "pollinat"],
+                    "wordlist_en": ["species", "animal", "organism", "flora", "fauna", "wildlife", "amphibian", "reptil", "bird", "mosses", "liverwort", "hornwort", "lichen", "bryophyte", "grass", "pollinat"],
                     "wordlist_no": ["rovdyr", "pattedyr", "dyreart", "dyrart", "dyreliv", "insekt", "amfibi", "krypdyr", "fugl", "moser", "mosar", "bryofytt", "trær", "pollinat", "polliner"]
                 },
                 {
@@ -133,85 +133,8 @@
                     "formatting_rule": "specific_trunc",
                     "na": false,
                     "case": false,
-                    "wordlist_en": [],
-                    "wordlist_no": ["art","arter","dyr", "vilt"]
-                }
-            ]
-        },
-                {
-            "name": "diversity_ecosystems",
-            "_comment": "Used in 15.1, 15.9 and 15.a",
-            "logic_rule": "([diversity_ecosystems1] & ([diversity_ecosystems2] | [termlistanimalsplants1] | [termlistanimalsplants2] | [termlist15_terr1] | [termlist15_terr2]))",
-            "sentence_split": true,
-            "termlists": [
-                {
-                    "termlist_name": "diversity_ecosystems1",
-                    "formatting_rule": "default",
-                    "na": false,
-                    "case": false,
-                    "_comment": "Used also in 15.1 phrase 4",
-                    "wordlist_en": ["diversit", "richness", "ecosystem", "community", "environment", "habitat"],
-                    "wordlist_no": ["diversit", "mangfold", "mangfald", "økosystem", "samfunn", "miljø", "habitat"]
-                },
-                {
-                    "termlist_name": "diversity_ecosystems2",
-                    "formatting_rule": "default",
-                    "na": false,
-                    "case": false,
-                    "wordlist_en": ["taxonom", "ecolog"],
-                    "wordlist_no": ["taksonom", "økologi"]
-                },
-                {
-                    "termlist_name": "termlistanimalsplants1",
-                    "formatting_rule": "default",
-                    "na": false,
-                    "case": false,
-                    "wordlist_en": ["species", "plant", "animal", "organism", "flora", "fauna", "wildlife", "insect", "amphibian", "reptil", "bird", "moss", "liverwort", "hornwort", "lichen", "bryophyte", "tree", "grass", "pollinat"],
-                    "wordlist_no": ["rovdyr", "pattedyr", "dyreart", "dyrart", "dyreliv", "insekt", "amfibi", "krypdyr", "fugl", "moser", "mosar", "bryofytt", "trær", "pollinat", "polliner"]
-                },
-                {
-                    "termlist_name": "termlistanimalsplants2",
-                    "formatting_rule": "specific_trunc",
-                    "na": false,
-                    "case": false,
-                    "wordlist_en": [],
-                    "wordlist_no": ["art","arter","dyr", "vilt"]
-                },
-                {
-                    "termlist_name": "termlist15_terr1",
-                    "formatting_rule": "default",
-                    "na": false,
-                    "case": false,
-                    "wordlist_en": ["terrestrial",
-                        "forest", "woodland", "taiga", "jungle", "mangrove", 
-                        "peatland", "peat land", "swamp", "wetland", "marsh", "paludal",
-                        "farmland", "agricultural land", "cropland", "pasture", "rangeland",
-                        "shrub", "meadow", "bushland", "heath", "moorland",
-                        "savanna","grassland","prairie",
-                        "dryland", "dry land", "desert", 
-                        "lowland",
-                        "mountain", "highland", "alpine", "tundra", "upland",
-                        "freshwater", "limnic", "inland fish", "river fish", "lake fish",
-                        "brook", "creek"],
-                    "wordlist_no": ["terrestrisk", "landlevende", "villmarksområd",
-                        "skog", "jungel", "mangrove", 
-                        "torv", "torvmos", "torvmyr", "slåttemyr", "myrer", "myrar", "sumper", "sumpar", "våtmark", "våteng", "torvmark",
-                        "dyrket mark", "dyrket jord", "dyrka jord", "dyrka mark", "landbruksmark", "utmark", "innmark", "beite", 
-                        "kratt", "busker", "lynghei",
-                        "engmark", "natureng", "kultureng", "engvegeta", "moseeng", "gresseng", "strandeng", "slåttemark", "gressmark",
-                        "savanna", "prærie", "gresslette", "grasland", "tørre område",
-                        "tørrmark", "ørken", "halvtørre områd",
-                        "fjell", "bergtopp", "alpin", "tundra", "vidda", "vidder",
-                        "ferskvann", "ferskvatn", "innlandsfisk", "innsjø"]
-                },
-                {
-                    "termlist_name": "termlist15_terr2",
-                    "formatting_rule": "specific_trunc",
-                    "na": false,
-                    "case": false,
-                    "wordlist_en": ["soil", "soils", "bog", "bogs", "mire", "mires", "fen", "fens", "bush", "bushes", "plains", "steppe",
-                    "lake", "lakes", "pond", "ponds", "river", "rivers", "stream", "streams"],
-                    "wordlist_no": ["jord", "åker", "myr", "sump", "eng", "enger", "busk", "elv", "elver", "bekk"]
+                    "wordlist_en": ["plant", "plants", "insect", "insects", "moss", "tree", "trees"],
+                    "wordlist_no": ["art", "arter", "dyr", "vilt"]
                 }
             ]
         },
@@ -267,7 +190,7 @@
                     "formatting_rule": "default",
                     "na": false,
                     "case": false,
-                    "wordlist_en": ["Trade in Endangered Species of Wild F"],
+                    "wordlist_en": ["trade in endangered species"],
                     "wordlist_no": ["internasjonal handel med truede dyr", "handel med truede og sårbare arter", "handel med truede arter", "handel med truede dyreart"]
                 },
                 {
@@ -332,8 +255,8 @@
                             "na": false,
                             "case": false,
                             "_comment": "Used in multiple phrases in 15.1 (also partially repeated, but not identical in 15.3 phrase 4 and 15.a)",
-                            "wordlist_en": ["protect", "preserv", "conserv", "restor", "reforest", "re-forest", "sustainabl"],
-                            "wordlist_no": ["verne", "verna", "vern av", "miljøvern", "bevare", "bevaring", "frede", "freda", "fredning", "gjenoppbygg", "restaure", "skogplanting", "gjengro", "bærekraft", "berekraft"]
+                            "wordlist_en": ["protect", "preserv", "conserv", "restor", "reforest", "re-forest", "sustainable use", "sustainable management"],
+                            "wordlist_no": ["verne", "verna", "vern av", "miljøvern", "bevare", "bevaring", "frede", "freda", "fredning", "gjenoppbygg", "restaure", "skogplanting", "gjengro", "bærekraftig bruk", "bærekraftig forvalt", "berekraftig bruk", "berekraftig forvalt"]
                         },
                         {
                             "termlist_name": "termlist15_1e",
@@ -341,7 +264,7 @@
                             "na": false,
                             "case": false,
                             "_comment": "EN: 'area' is combined, cut away 95 % noisy results. NO: Added 'natur' and 'kulturlandskap'(NO) instead of 'område'(NO) because there were too many results from cultural/human conservation. 'landskap'(NO) alone got a lot of cultural results, so it is combined to specific types.",
-                            "wordlist_en": ["ecosystem", "ecolog", "zone", "environment", "protected area", "protected zone", "protection zone", "conservation area", "conservation zone"],
+                            "wordlist_en": ["ecosystem", "ecolog", "environment", "protected area", "protected zone", "protection zone", "conservation area", "conservation zone"],
                             "wordlist_no": ["økosystem", "kulturlandskap", "landskapsvern", "miljøvern", "miljøparagraf"]
                         },
                         {
@@ -357,8 +280,9 @@
                 },
                 {
                     "number": 3,
-                    "logic_rule": "(([protect_conserve] & ([termlist15_1g] | [diversity_ecosystems])) & not [terrestrial_double_NOT])",
+                    "logic_rule": "(([protect_conserve] & ([termlist15_1g] | ([diversity_ecosystems1] & ([diversity_ecosystems2] | [termlistanimalsplants1] | [termlistanimalsplants2])))) & not [terrestrial_double_NOT])",
                     "sentence_split": true,
+                    "_comment": "Repetition of diversityecosystems and animalsplants because need these within the same sentence as the other terms - they are also used in 15.9 and 15.a",
                     "termlists": [
                         {
                             "termlist_name": "protect_conserve",
@@ -366,8 +290,8 @@
                             "na": false,
                             "case": false,
                             "_comment": "Used in multiple phrases in 15.1 (also partially repeated, but not identical in 15.3 phrase 4 and 15.a)",
-                            "wordlist_en": ["protect", "preserv", "conserv", "restor", "reforest", "re-forest", "sustainabl"],
-                            "wordlist_no": ["verne", "verna", "vern av", "miljøvern", "bevare", "bevaring", "frede", "freda", "fredning", "gjenoppbygg", "restaure", "skogplanting", "gjengro", "bærekraft", "berekraft"]
+                            "wordlist_en": ["protect", "preserv", "conserv", "restor", "reforest", "re-forest", "sustainable use", "sustainable management"],
+                            "wordlist_no": ["verne", "verna", "vern av", "miljøvern", "bevare", "bevaring", "frede", "freda", "fredning", "gjenoppbygg", "restaure", "skogplanting", "gjengro", "bærekraftig bruk", "bærekraftig forvalt", "berekraftig bruk", "berekraftig forvalt"]
                         },
                         {
                             "termlist_name": "termlist15_1g",
@@ -380,12 +304,45 @@
                             "wordlist_no": ["leveområd", "naturvern",
                                 "biologisk mangf", "biomangf", "biologiske mangf", "artsmangf", "artsdiversitet", "naturmangf", "genetisk mangf", "genetisk diversitet",
                                 "nøkkelart"]
+                        },
+                        {
+                            "termlist_name": "diversity_ecosystems1",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "_comment": "Used also in 15.1 phrase 4",
+                            "wordlist_en": ["diversit", "richness", "ecosystem", "community", "environment", "habitat"],
+                            "wordlist_no": ["diversit", "mangfold", "mangfald", "økosystem", "samfunn", "miljø", "habitat"]
+                        },
+                        {
+                            "termlist_name": "diversity_ecosystems2",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["taxonom", "ecolog"],
+                            "wordlist_no": ["taksonom", "økologi"]
+                        },
+                        {
+                            "termlist_name": "termlistanimalsplants1",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["species", "animal", "organism", "flora", "fauna", "wildlife", "amphibian", "reptil", "bird", "liverwort", "mosses", "hornwort", "lichen", "bryophyte", "grass", "pollinat"],
+                            "wordlist_no": ["rovdyr", "pattedyr", "dyreart", "dyrart", "dyreliv", "insekt", "amfibi", "krypdyr", "fugl", "moser", "mosar", "bryofytt", "trær", "pollinat", "polliner"]
+                        },
+                        {
+                            "termlist_name": "termlistanimalsplants2",
+                            "formatting_rule": "specific_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["plant", "plants", "tree", "trees", "moss", "insect", "insects"],
+                            "wordlist_no": ["art", "arter", "planter", "dyr", "vilt"]
                         }
                     ]
                 },
                 {
                     "number": 4,
-                    "logic_rule": "(([protect_conserve] & [termlist15_1h] & [terr_terms]) & not [terrestrial_double_NOT])",
+                    "logic_rule": "(([protect_conserve] & [diversity_ecosystems1] & [terr_terms]) & not [terrestrial_double_NOT])",
                     "sentence_split": true,
                     "termlists": [
                         {
@@ -394,23 +351,23 @@
                             "na": false,
                             "case": false,
                             "_comment": "Used in multiple phrases in 15.1 (also partially repeated, but not identical in 15.3 phrase 4 and 15.a)",
-                            "wordlist_en": ["protect", "preserv", "conserv", "restor", "reforest", "re-forest", "sustainabl"],
-                            "wordlist_no": ["verne", "verna", "vern av", "miljøvern", "bevare", "bevaring", "frede", "freda", "fredning", "gjenoppbygg", "restaure", "skogplanting", "gjengro", "bærekraft", "berekraft"]
+                            "wordlist_en": ["protect", "preserv", "conserv", "restor", "reforest", "re-forest", "sustainable use", "sustainable management"],
+                            "wordlist_no": ["verne", "verna", "vern av", "miljøvern", "bevare", "bevaring", "frede", "freda", "fredning", "gjenoppbygg", "restaure", "skogplanting", "gjengro", "bærekraftig bruk", "bærekraftig forvalt", "berekraftig bruk", "berekraftig forvalt"]
                         },
                         {
-                            "termlist_name": "termlist15_1h",
+                            "termlist_name": "diversity_ecosystems1",
                             "formatting_rule": "default",
                             "na": false,
                             "case": false,
-                            "_comment": "Partially similar to diversity_ecosystems presearch",
-                            "wordlist_en": ["diversit", "ecosystem", "community", "environment", "habitat"],
+                            "_comment": "Repeated also in 15.1 phrase 3, 15.9, 15.a",
+                            "wordlist_en": ["diversit", "richness", "ecosystem", "community", "environment", "habitat"],
                             "wordlist_no": ["diversit", "mangfold", "mangfald", "økosystem", "samfunn", "miljø", "habitat"]
                         }
                     ]
                 },
                 {
                     "number": 5,
-                    "logic_rule": "([termlist15_1j] | ([termlist15_1k] & [termlist15_1l]) | ((([termlist15_1k] & [termlist15_1n]) & ([termlist15_1o] | [terr_terms])) & not [terrestrial_double_NOT]) | (([termlist15_1k] & [termlist15_1n] & [termlist15_1o]) & not [terrestrial_double_NOT]))",
+                    "logic_rule": "([termlist15_1j] | ([termlist15_1k] & [termlist15_1l]) | ((([termlist15_1k] & [termlist15_1n]) & ([termlist15_1o] | [terr_terms])) & not [terrestrial_double_NOT]))",
                     "sentence_split": true,
                     "termlists": [
                         {
@@ -444,7 +401,7 @@
                             "na": false,
                             "case": false,
                             "_comment":"'ved' (NO: firewood) is difficult in Norwegian because it is often combined with other words (can't stop truncation), and it is a preposition.", 
-                            "wordlist_en": ["manag", "sustainable us", "responsible us", "usage", "development", "ecosystem approach",
+                            "wordlist_en": ["manag", "sustainable us", "responsible us", "usage", "ecosystem approach",
                                 "govern", "administr", "planning", "policies", "policy", "strateg",
                                 "recreation", "tourism", "tourist", "fuel wood", "fire wood", "firewood"],
                             "wordlist_no": ["forvalt", "bærekraftig bruk", "ansvarlig bruk", "økosystemtilnærm", "økosystembasert forvaltning",
@@ -1416,8 +1373,9 @@
             "phrases": [
                 {
                     "number": 1,
-                    "logic_rule": "([termlist15_9d] | [termlist15_9dcase] | ((([termlist15_9a] | [termlist15_9atrunc] | [diversity_ecosystems]) & ([termlist15_9e] & ([termlist15_9f] | [termlist15_9ftrunc]))) & not [terrestrial_double_NOT]))",
+                    "logic_rule": "([termlist15_9d] | [termlist15_9dcase] | ((([termlist15_9a] | [termlist15_9atrunc] | ([diversity_ecosystems1] & ([diversity_ecosystems2] | [termlistanimalsplants1] | [termlistanimalsplants2] | [termlist15_terr1] | [termlist15_terr2]))) & ([termlist15_9e] & ([termlist15_9f] | [termlist15_9ftrunc]))) & not [terrestrial_double_NOT]))",
                     "sentence_split": false,
+                    "_comment": "Repetition of diversityecosystems, animalsplants and terrestrial terms because need these within the same sentence as the other terms - they are also used in 15.1 phrase 3 and 4 and 15.a",
                     "termlists": [
                         {
                             "termlist_name": "termlist15_9d",
@@ -1452,6 +1410,75 @@
                             "case": false,
                             "wordlist_en": ["cbd", "habitat"],
                             "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "diversity_ecosystems1",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "_comment": "Used also in 15.1 phrase 4",
+                            "wordlist_en": ["diversit", "richness", "ecosystem", "community", "environment", "habitat"],
+                            "wordlist_no": ["diversit", "mangfold", "mangfald", "økosystem", "samfunn", "miljø", "habitat"]
+                        },
+                        {
+                            "termlist_name": "diversity_ecosystems2",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["taxonom", "ecolog"],
+                            "wordlist_no": ["taksonom", "økologi"]
+                        },
+                        {
+                            "termlist_name": "termlistanimalsplants1",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["species", "animal", "organism", "flora", "fauna", "wildlife", "amphibian", "reptil", "bird", "liverwort", "mosses", "hornwort", "lichen", "bryophyte", "grass", "pollinat"],
+                            "wordlist_no": ["rovdyr", "pattedyr", "dyreart", "dyrart", "dyreliv", "insekt", "amfibi", "krypdyr", "fugl", "moser", "mosar", "bryofytt", "trær", "pollinat", "polliner"]
+                        },
+                        {
+                            "termlist_name": "termlistanimalsplants2",
+                            "formatting_rule": "specific_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["plant", "plants", "tree", "trees", "moss", "insect", "insects"],
+                            "wordlist_no": ["art", "arter", "planter", "dyr", "vilt"]
+                        },
+                        {
+                            "termlist_name": "termlist15_terr1",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["terrestrial",
+                                "forest", "woodland", "taiga", "jungle", "mangrove", 
+                                "peatland", "peat land", "swamp", "wetland", "marsh", "paludal",
+                                "farmland", "agricultural land", "cropland", "pasture", "rangeland",
+                                "shrub", "meadow", "bushland", "heath", "moorland",
+                                "savanna","grassland","prairie",
+                                "dryland", "dry land", "desert", 
+                                "lowland",
+                                "mountain", "highland", "alpine", "tundra", "upland",
+                                "freshwater", "limnic", "inland fish", "river fish", "lake fish",
+                                "brook", "creek"],
+                            "wordlist_no": ["terrestrisk", "landlevende", "villmarksområd",
+                                "skog", "jungel", "mangrove", 
+                                "torv", "torvmos", "torvmyr", "slåttemyr", "myrer", "myrar", "sumper", "sumpar", "våtmark", "våteng", "torvmark",
+                                "dyrket mark", "dyrket jord", "dyrka jord", "dyrka mark", "landbruksmark", "utmark", "innmark", "beite", 
+                                "kratt", "busker", "lynghei",
+                                "engmark", "natureng", "kultureng", "engvegeta", "moseeng", "gresseng", "strandeng", "slåttemark", "gressmark",
+                                "savanna", "prærie", "gresslette", "grasland", "tørre område",
+                                "tørrmark", "ørken", "halvtørre områd",
+                                "fjell", "bergtopp", "alpin", "tundra", "vidda", "vidder",
+                                "ferskvann", "ferskvatn", "innlandsfisk", "innsjø"]
+                        },
+                        {
+                            "termlist_name": "termlist15_terr2",
+                            "formatting_rule": "specific_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["soil", "soils", "bog", "bogs", "mire", "mires", "fen", "fens", "bush", "bushes", "plains", "steppe",
+                            "lake", "lakes", "pond", "ponds", "river", "rivers", "stream", "streams"],
+                            "wordlist_no": ["jord", "åker", "myr", "sump", "eng", "enger", "busk", "elv", "elver", "bekk"]
                         },
                         {
                             "termlist_name": "termlist15_9e",
@@ -1490,8 +1517,8 @@
             "phrases": [
                 {
                     "number": 1,
-                    "logic_rule": "((([termlist15_aa] | ([termlist15_ab] | [termlist15_abtrunc])) & ([termlist15_ad] | [diversity_ecosystems]) & ([termlist15_ag] | [termlist15_agcase])) & not [terrestrial_double_NOT])",
-                    "_comment": "Tested taking out termlist15_ac, currently not used: was previously (([termlist15_ab] | [termlist15_abtrunc]) & [termlist15_ac])",
+                    "logic_rule": "((([termlist15_aa] | ([termlist15_ab] | [termlist15_abtrunc])) & ([termlist15_ad] | ([diversity_ecosystems1] & ([diversity_ecosystems2] | [termlistanimalsplants1] | [termlistanimalsplants2] | [termlist15_terr1] | [termlist15_terr2]))) & ([termlist15_ag] | [termlist15_agcase])) & not [terrestrial_double_NOT])",
+                    "_comment": "Repetition of diversityecosystems, animalsplants and terrestrial terms because need these within the same sentence as the other terms - they are also used in 15.1 phrase 3 and 4 and 15.9. Tested taking out termlist15_ac, currently not used: was previously (([termlist15_ab] | [termlist15_abtrunc]) & [termlist15_ac])",
                     "sentence_split": true,
                     "termlists": [
                         {
@@ -1540,6 +1567,75 @@
                                 "ecosystem service", "ecosystem restor", "rio marker"],
                             "wordlist_no": ["biologisk diversitet", "biomangf", "artsmangf", "biologisk mangf", "biologiske mangf",
                                 "økosystem", "leveområd", "naturvern"]
+                        },
+                        {
+                            "termlist_name": "diversity_ecosystems1",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "_comment": "Used also in 15.1 phrase 4",
+                            "wordlist_en": ["diversit", "richness", "ecosystem", "community", "environment", "habitat"],
+                            "wordlist_no": ["diversit", "mangfold", "mangfald", "økosystem", "samfunn", "miljø", "habitat"]
+                        },
+                        {
+                            "termlist_name": "diversity_ecosystems2",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["taxonom", "ecolog"],
+                            "wordlist_no": ["taksonom", "økologi"]
+                        },
+                        {
+                            "termlist_name": "termlistanimalsplants1",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["species", "animal", "organism", "flora", "fauna", "wildlife", "amphibian", "reptil", "bird", "liverwort", "mosses", "hornwort", "lichen", "bryophyte", "grass", "pollinat"],
+                            "wordlist_no": ["rovdyr", "pattedyr", "dyreart", "dyrart", "dyreliv", "insekt", "amfibi", "krypdyr", "fugl", "moser", "mosar", "bryofytt", "trær", "pollinat", "polliner"]
+                        },
+                        {
+                            "termlist_name": "termlistanimalsplants2",
+                            "formatting_rule": "specific_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["plant", "plants", "tree", "trees", "moss", "insect", "insects"],
+                            "wordlist_no": ["art", "arter", "planter", "dyr", "vilt"]
+                        },
+                        {
+                            "termlist_name": "termlist15_terr1",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["terrestrial",
+                                "forest", "woodland", "taiga", "jungle", "mangrove", 
+                                "peatland", "peat land", "swamp", "wetland", "marsh", "paludal",
+                                "farmland", "agricultural land", "cropland", "pasture", "rangeland",
+                                "shrub", "meadow", "bushland", "heath", "moorland",
+                                "savanna","grassland","prairie",
+                                "dryland", "dry land", "desert", 
+                                "lowland",
+                                "mountain", "highland", "alpine", "tundra", "upland",
+                                "freshwater", "limnic", "inland fish", "river fish", "lake fish",
+                                "brook", "creek"],
+                            "wordlist_no": ["terrestrisk", "landlevende", "villmarksområd",
+                                "skog", "jungel", "mangrove", 
+                                "torv", "torvmos", "torvmyr", "slåttemyr", "myrer", "myrar", "sumper", "sumpar", "våtmark", "våteng", "torvmark",
+                                "dyrket mark", "dyrket jord", "dyrka jord", "dyrka mark", "landbruksmark", "utmark", "innmark", "beite", 
+                                "kratt", "busker", "lynghei",
+                                "engmark", "natureng", "kultureng", "engvegeta", "moseeng", "gresseng", "strandeng", "slåttemark", "gressmark",
+                                "savanna", "prærie", "gresslette", "grasland", "tørre område",
+                                "tørrmark", "ørken", "halvtørre områd",
+                                "fjell", "bergtopp", "alpin", "tundra", "vidda", "vidder",
+                                "ferskvann", "ferskvatn", "innlandsfisk", "innsjø"]
+                        },
+                        {
+                            "termlist_name": "termlist15_terr2",
+                            "formatting_rule": "specific_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["soil", "soils", "bog", "bogs", "mire", "mires", "fen", "fens", "bush", "bushes", "plains", "steppe",
+                            "lake", "lakes", "pond", "ponds", "river", "rivers", "stream", "streams"],
+                            "wordlist_no": ["jord", "åker", "myr", "sump", "eng", "enger", "busk", "elv", "elver", "bekk"]
                         },
                         {
                             "termlist_name": "termlist15_ag",
