@@ -69,6 +69,30 @@ def _is_logic_rule_true(
     return boolean_result
 
 
+def _invert_dictionary(input_dict: dict[str, dict[str, bool]]) -> dict[str, dict[str, bool]]:
+    """Inverts the keys of the outer and inner dict while keeping the values in the inner dict
+
+    Transforms the dict from dict[X, dict[Y, bool]] to dict[Y, dict[X, bool]]
+
+    Args:
+        input_dict: the dict to invert
+
+    Returns:
+        a dict where the keys now are the keys that were originally in the inner dict
+        
+    """
+    result = {}
+    
+    for term, languages in input_dict.items():
+        for lang, is_active in languages.items():
+            if lang not in result:
+                result[lang] = {}
+
+            result[lang][term] = is_active
+            
+    return result
+
+
 def _are_terms_in_input_text(
     termlists: list[dict],
     input_text: str,
@@ -102,30 +126,8 @@ def _are_terms_in_input_text(
         
         termlist_results[term_list['termlist_name']] = results_by_language
 
-    return termlist_results
+    return _invert_dictionary(termlist_results)
 
-def reformat_languages(input_dict: dict[str, dict[str, bool]]) -> dict[str, dict[str, bool]]:
-    """Inverts the keys of the outer and inner dict while keeping the values in the inner dict
-
-    Transforms the dict from dict[X, dict[Y, bool]] to dict[Y, dict[X, bool]]
-
-    Args:
-        input_dict: the dict to invert
-
-    Returns:
-        a dict where the keys now are the keys that were originally in the inner dict
-        
-    """
-    result = {}
-    
-    for term, languages in input_dict.items():
-        for lang, is_active in languages.items():
-            if lang not in result:
-                result[lang] = {}
-
-            result[lang][term] = is_active
-            
-    return result
 
 def search_for_phrase_unindexed(
     termlists: list[dict],
@@ -148,11 +150,8 @@ def search_for_phrase_unindexed(
     """
     all_language_termlist_results = _are_terms_in_input_text(termlists, input_text)
 
-    print(all_language_termlist_results)
-    inverted_dict = reformat_languages(all_language_termlist_results)
-
     all_results = []
-    for _, termlist_results in inverted_dict.items():
+    for _, termlist_results in all_language_termlist_results.items():
         print(termlist_results)
         language_search_result = _is_logic_rule_true(
             termlist_results, logic_rule_raw, countries_results, pre_search_results

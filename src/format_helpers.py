@@ -137,4 +137,4 @@ def prepare_regex_search_termlist(
         return regex_term_list, text
     
     else:
-        return ''. text
+        return '', text
