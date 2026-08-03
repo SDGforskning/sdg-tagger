@@ -892,7 +892,7 @@
                 {
                     "number": 1,
                     "logic_rule": "(([termlist14_ba] | [termlist14_bb]) & ([termlist14_bc] & [termlist14_bd]))",
-                    "sentence_split": false,
+                    "sentence_split": true,
                     "termlists": [
                         {
                             "termlist_name": "termlist14_ba",
