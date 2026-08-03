@@ -173,7 +173,7 @@ def test_format_list_with_pattern_no_left_trunc(input_terms, output_text):
         ),
     ],
 )
-def test__get_language_termlists_(input_terms, output_dict):
+def test__get_language_termlists_one_of_one_languages(input_terms, output_dict):
     # Arrange
     # Act
     with mock.patch('src.format_helpers.LANGUAGES', {'no': True}):
@@ -197,7 +197,7 @@ def test__get_language_termlists_(input_terms, output_dict):
         ),
     ],
 )
-def test__get_language_termlists_(input_terms, output_dict):
+def test__get_language_termlists_two_of_two_languages(input_terms, output_dict):
     # Arrange
     # Act
     with mock.patch('src.format_helpers.LANGUAGES', {'no': True}):
@@ -222,7 +222,7 @@ def test__get_language_termlists_(input_terms, output_dict):
         ),
     ],
 )
-def test__get_language_termlists_(input_terms, output_dict):
+def test__get_language_termlists_one_of_two_languages(input_terms, output_dict):
     # Arrange
     # Act
     with mock.patch('src.format_helpers.LANGUAGES', {'en':True, 'no': False}):
@@ -247,7 +247,7 @@ def test__get_language_termlists_(input_terms, output_dict):
         ),
     ],
 )
-def test__get_language_termlists_(input_terms, output_dict):
+def test__get_language_termlists_missing_language_terms(input_terms, output_dict):
     # Arrange
     # Act
     with mock.patch('src.format_helpers.LANGUAGES', {'en':True, 'no': True}):
