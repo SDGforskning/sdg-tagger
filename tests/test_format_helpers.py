@@ -9,7 +9,7 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from src.format_helpers import (
     _check_for_missing_matches,
     _format_list_with_pattern,
-    #_get_additional_language_terms,
+    _get_language_termlists,
     format_logic_rules,
     prepare_regex_search_termlist,
 )
@@ -157,94 +157,104 @@ def test_format_list_with_pattern_no_left_trunc(input_terms, output_text):
     assert result == output_text
 
 
-################ TESTS FOR _get_additional_language_terms ################
-#ADDITIONAL_LANGUAGES = {'no': True}
-#
-#
-## Testcase: missing language list
-#@pytest.mark.skip(reason="Deleted")
-#def test_get_additional_language_terms_missing_list(capsys):
-#    # Arrange
-#    term_list = {'termlist_name': 'Test1', 'wordlist_en': [], 'wordlist_fr': []}
-#    # Act
-#    _get_additional_language_terms(term_list)
-#    captured = capsys.readouterr()
-#    # Assert
-#    assert (
-#        'WARNING: The termlist Test1 does not have a list for language no.'
-#        in captured.out
-#    )
-#
-#
-## Testcase: add terms for 'no'
-#@pytest.mark.skip(reason="Deleted")
-#@pytest.mark.parametrize(
-#    'input_terms, output_list',
-#    [
-#        (
-#            {
-#                'termlist_name': 'Test1',
-#                'wordlist_en': ['one', 'two'],
-#                'wordlist_no': ['three', 'four'],
-#            },
-#            ['three', 'four'],
-#        ),
-#        (
-#            {
-#                'termlist_name': 'Test1',
-#                'wordlist_en': ['one', 'two'],
-#                'wordlist_no': [],
-#            },
-#            [],
-#        ),
-#    ],
-#)
-#def test_get_additional_language_terms_with_no(input_terms, output_list):
-#    # Arrange
-#    # Act
-#    with mock.patch('src.format_helpers.ADDITIONAL_LANGUAGES', {'no': True}):
-#        results = _get_additional_language_terms(input_terms)
-#    # Assert
-#    assert set(results) == set(output_list)
-#
-#
-## Testcase: add terms for multiple languages
-#@pytest.mark.skip(reason="Deleted")
-#@pytest.mark.parametrize(
-#    'input_terms, output_list',
-#    [
-#        (
-#            {
-#                'termlist_name': 'Test1',
-#                'wordlist_en': ['one', 'two'],
-#                'wordlist_no': ['three', 'four'],
-#                'wordlist_fi': ['five'],
-#            },
-#            ['three', 'four', 'five'],
-#        ),
-#        (
-#            {
-#                'termlist_name': 'Test1',
-#                'wordlist_en': ['one', 'two'],
-#                'wordlist_fi': ['three', 'four'],
-#                'wordlist_no': [],
-#            },
-#            ['three', 'four'],
-#        ),
-#    ],
-#)
-#def test_get_additional_language_terms_with_multiple_languages(
-#    input_terms, output_list
-#):
-#    # Arrange
-#    # Act
-#    with mock.patch(
-#        'src.format_helpers.ADDITIONAL_LANGUAGES', {'no': True, 'fi': True}
-#    ):
-#        results = _get_additional_language_terms(input_terms)
-#    # Assert
-#    assert set(results) == set(output_list)
-#
+################ TESTS FOR _get_language_termlists ################
+# Testcase: get 1/1 language
+@pytest.mark.parametrize(
+    'input_terms, output_dict',
+    [
+        (
+            {
+                'termlist_name': 'Test1',
+                'wordlist_no': ['tre', 'fire'],
+            },
+            {
+                'no': ['tre', 'fire']
+            },
+        ),
+    ],
+)
+def test__get_language_termlists_(input_terms, output_dict):
+    # Arrange
+    # Act
+    with mock.patch('src.format_helpers.LANGUAGES', {'no': True}):
+        results = _get_language_termlists(input_terms)
+    # Assert
+    assert set(results) == set(output_dict)
+
+
+# Testcase: get 2/2 languages
+@pytest.mark.parametrize(
+    'input_terms, output_dict',
+    [
+        (
+            {
+                'termlist_name': 'Test1',
+                'wordlist_no': ['tre', 'fire'],
+            },
+            {
+                'no': ['tre', 'fire']
+            },
+        ),
+    ],
+)
+def test__get_language_termlists_(input_terms, output_dict):
+    # Arrange
+    # Act
+    with mock.patch('src.format_helpers.LANGUAGES', {'no': True}):
+        results = _get_language_termlists(input_terms)
+    # Assert
+    assert set(results) == set(output_dict)
+
+
+# Testcase: get 1/2 languages - e.g. two languages exists but only one is set to true in the constant. 
+@pytest.mark.parametrize(
+    'input_terms, output_dict',
+    [
+        (
+            {
+                'termlist_name': 'Test1',
+                'wordlist_en': ['one', 'two'],
+                'wordlist_no': ['tre', 'fire'],
+            },
+            {
+                'en': ['one', 'two']
+            },
+        ),
+    ],
+)
+def test__get_language_termlists_(input_terms, output_dict):
+    # Arrange
+    # Act
+    with mock.patch('src.format_helpers.LANGUAGES', {'en':True, 'no': False}):
+        results = _get_language_termlists(input_terms)
+    # Assert
+    assert set(results) == set(output_dict)
+
+
+#test get 2 languages where one language is not there
+# Testcase: get 1/1 language
+@pytest.mark.parametrize(
+    'input_terms, output_dict',
+    [
+        (
+            {
+                'termlist_name': 'Test1',
+                'wordlist_no': ['tre', 'fire'],
+            },
+            {
+                'no': ['tre', 'fire']
+            },
+        ),
+    ],
+)
+def test__get_language_termlists_(input_terms, output_dict):
+    # Arrange
+    # Act
+    with mock.patch('src.format_helpers.LANGUAGES', {'en':True, 'no': True}):
+        results = _get_language_termlists(input_terms)
+    # Assert
+    assert set(results) == set(output_dict)
+
 
 ###################### TESTS FOR format_logic_rules ######################
 # Testcase: format correct, no countries or pre_search

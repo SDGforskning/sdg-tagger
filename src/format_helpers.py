@@ -43,7 +43,7 @@ def _format_list_with_pattern(pattern: str, search_terms: list[str]) -> str:
 
 
 def _get_language_termlists(term_list: dict[str, list[str]]) -> dict[str, list[str]]:
-    """
+    """ Get the list of terms for each of the languages to search accoding to the LANGUAGES const
 
     Args:
         term_list: a dict of term lists, one for each available language

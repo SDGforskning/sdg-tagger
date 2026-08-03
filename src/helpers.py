@@ -104,7 +104,7 @@ def _are_terms_in_input_text(
         input_text: the text to search in
 
     Returns:
-        The result of the search on the input text for each of the termlists
+        The result of the search on the input text for each language and each termlists
     """
     termlist_results = {}
     for term_list in termlists:
