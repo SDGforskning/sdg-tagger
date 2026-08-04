@@ -10,7 +10,7 @@
                 {
                     "number": 1,
                     "logic_rule": "(([termlist13_1a] | ([termlist13_1b] & [termlist13_1c]) | ([termlist13_1d] & [termlist13_1e]) | [termlist13_1f]) & (([termlist13_1g] & [termlist13_1h]) | ([termlist13_1i] & [termlist13_1j]) | [termlist13_1k] | ([termlist13_1l] & [termlist13_1m])))",
-                    "sentence_split": false,
+                    "sentence_split": true,
                     "termlists": [
                         {
                             "termlist_name": "termlist13_1a",
@@ -142,7 +142,7 @@
                 {
                     "number": 1,
                     "logic_rule": "(([termlist13_2a] | ([termlist13_2b] & [termlist13_2c]) | [termlist13_2d]) & ([termlist13_2e] & [termlist13_2f]) & ([termlist13_2g] | ([termlist13_2b] & [termlist13_2h]) | [termlist13_2i]))",
-                    "sentence_split": false,
+                    "sentence_split": true,
                     "termlists": [
                         {
                             "termlist_name": "termlist13_2a",
@@ -418,7 +418,7 @@
                 {
                     "number": 2,
                     "logic_rule": "((([termlist13_a2] | ([termlist13_a3] & [termlist13_a4])) & ([termlist13_a5] | ([termlist13_a6] & ([termlist13_a7] | ([termlist13_a8] & [termlist13_a9]) | [termlist13_a10] | ([termlist13_a11] & [termlist13_a12]))))) & [termlist13_a13])",
-                    "sentence_split": false,
+                    "sentence_split": true,
                     "termlists": [
                         {
                             "termlist_name": "termlist13_a2",
@@ -527,8 +527,8 @@
                 },
                 {
                     "number": 3,
-                    "logic_rule": "((([LMIC] | [termlist13_a14]) & ( [termlist13_a5] | ([termlist13_a6] & ([termlist13_a7] | ([termlist13_a8] & [termlist13_a9]) | [termlist13_a10] | ([termlist13_a11] & [termlist13_a12]))))) & ([termlist13_a13]))",
-                    "sentence_split": false,
+                    "logic_rule": "((([LMIC] | [termlist13_a14]) & ([termlist13_a5] | ([termlist13_a6] & ([termlist13_a7] | ([termlist13_a8] & [termlist13_a9]) | [termlist13_a10] | ([termlist13_a11] & [termlist13_a12]))))) & ([termlist13_a13]))",
+                    "sentence_split":true,
                     "termlists": [
                         {
                             "termlist_name": "termlist13_a5",
