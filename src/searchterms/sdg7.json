@@ -289,7 +289,7 @@
                 {
                     "number": 1,
                     "logic_rule": "(([termlist7_2a] & [termlist7_2b]) | ([termlist7_2c] & [termlist7_2d]))",
-                    "sentence_split": false,
+                    "sentence_split": true,
                     "termlists": [
                         {
                             "termlist_name": "termlist7_2a",
@@ -724,7 +724,7 @@
                 },
                 {
                     "number": 4,
-                    "logic_rule": "([termlist7_3l] | ([termlist7_3m] | [termlist7_3n]))",
+                    "logic_rule": "([termlist7_3l] & ([termlist7_3m] | [termlist7_3n]))",
                     "_comment": "We have simplified the search as we are only searching titles, and left out specific energy terms. All that is required now is terms for energy efficien combined with sufficien, or the title to contain energy suffici* - NB energy terms taken in now that we also search abstracts", 
                     "sentence_split": false,
                     "termlists": [
@@ -762,7 +762,7 @@
                 {
                     "number": 1,
                     "logic_rule": "(([termlist7_a1] | [termlist7_a1caps] | ([termlist7_a2] & [termlist7_a3]) | ([termlist7_a4] & [termlist7_a5]) | [termlist7_a6] | ([termlist7_a7] & [termlist7_a8])) & ([termlist7_a9] | ([termlist7_a10] & [termlist7_a11])))",
-                    "sentence_split": false,
+                    "sentence_split": true,
                     "termlists": [
                         {
                             "termlist_name": "termlist7_a1",
@@ -868,7 +868,7 @@
                 {
                     "number": 2,
                     "logic_rule": "(([termlist7_a12] | [termlist7_a1caps] | ([termlist7_a13] & [termlist7_a14]) | [termlist7_a15] | ([termlist7_a16] & [termlist7_a17])) & ([termlist7_a18] | ([termlist7_a19] & [termlist7_a20]) | ([termlist7_a21] & [termlist7_a22])))",
-                    "sentence_split": false,
+                    "sentence_split": true,
                     "termlists": [
                         {
                             "termlist_name": "termlist7_a12",
@@ -983,7 +983,7 @@
             "phrases": [
                 {
                     "number": 1,
-                    "logic_rule": "((([termlist7_b1] & [termlist7_b2]) | ([termlist7_b3] & [termlist7_b4])) & ([LMIC]))",
+                    "logic_rule": "((([termlist7_b1] | ([termlist7_b2] & [termlist7_b3]) | ([termlist7_b4] & [termlist7_b5])) & ([LMIC])))",
                     "sentence_split": false,
                     "termlists": [
                         {
@@ -992,12 +992,20 @@
                             "na": false,
                             "case": false,
                             "wordlist_en": ["energy service", "energy sector", "electrical infrastructure", 
-                                            "electricity supply", "power supply", "energy", "electricity"],
+                                            "electricity supply", "power supply"],
                             "wordlist_no": [ "energitjeneste", "energiteneste", "energisektor", "elektrisk infrastruktur", "energiinfrastruktur", "elektrisitetsforsyning", 
-                                             "strømforsyning", "straumforsyning", "kraftforsyning", "energi", "elektrisitet"]
+                                             "strømforsyning", "straumforsyning", "kraftforsyning"]
                         },
                         {
                             "termlist_name": "termlist7_b2",
+                            "formatting_rule": "default",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["energy", "electricity"],
+                            "wordlist_no": ["energi", "elektrisitet"]
+                        },
+                        {
+                            "termlist_name": "termlist7_b3",
                             "formatting_rule": "default",
                             "na": false,
                             "case": false,
@@ -1008,7 +1016,7 @@
                                             "mikrokraftverk", "øydrift", "smartnett", "energilagring"]
                         },
                         {
-                            "termlist_name": "termlist7_b3",
+                            "termlist_name": "termlist7_b4",
                             "formatting_rule": "default",
                             "na": false,
                             "case": false,
@@ -1016,7 +1024,7 @@
                             "wordlist_no": ["kraftstasjon", "kraftverk", "kraftprod", "strømprod", "straumprod"]
                         },
                         {
-                            "termlist_name": "termlist7_b4",
+                            "termlist_name": "termlist7_b5",
                             "formatting_rule": "default",
                             "na": false,
                             "case": false,
