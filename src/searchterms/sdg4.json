@@ -197,7 +197,7 @@
                             "na": false,
                             "case": false,
                             "wordlist_en": ["core"],
-                            "comment": "no trunc to avoid _score_",
+                            "_comment": "no trunc to avoid _score_",
                             "wordlist_no": []
                         },
                         {
