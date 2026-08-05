@@ -220,7 +220,7 @@ def dataframe_search_target(
     sdg_nr: int, 
     target: str, 
     text_column: str,
-    countries: dict[str:bool] = False
+    do_country_search: bool = True
 ) -> pd.DataFrame:
     """Takes a dataframe and searches for a sdg target on a text column. Adds the result as a column and returns the dataframe. 
 
@@ -236,9 +236,24 @@ def dataframe_search_target(
     df_results = df.copy()
     columns = _get_formatted_column_names_one_target(sdg_nr, target)
     df_results[text_column] = df_results[text_column].apply(_to_string_or_empty)
-    
-    df_results[columns] = df_results[text_column].progress_apply(
-        lambda x: _row_search_one_target(x, sdg_nr, target, countries)
-    )
+    print(df_results.columns.tolist())
+
+    if not do_country_search:
+        df_results[columns] = df_results.progress_apply(
+            lambda row: _row_search_one_target(
+                row[text_column], 
+                sdg_nr, 
+                target, 
+                countries = {
+                    'SIDS': row[f'SIDS_{text_column}'],
+                    'LDC': row[f'LDC_{text_column}'],
+                    'LDS': row[f'LDS_{text_column}'],
+                    'LMIC': row[f'LMIC_{text_column}']
+                }
+            ),
+            axis=1
+        )
+    else:
+        df_results[columns] = df_results[text_column].progress_apply(lambda x: _row_search_one_target(x, sdg_nr, target, countries=False))
 
     return df_results
