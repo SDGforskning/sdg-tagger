@@ -14,7 +14,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist1_1",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["extreme poverty", "severe poverty", "deep poverty", "abject poverty", "absolute poverty", "destitution", "global poverty", "international poverty"],
@@ -34,7 +34,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist1_2a",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["anti-poverty", "antipoverty", "out of poverty", "poverty", "rural poor", "urban poor", "working poor"],
@@ -42,7 +42,7 @@
                         },
                         {
                             "termlist_name": "termlist1_2b",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "_comment": "Only Norwegian used here and combined with 2c. In English, _low income_ is combined like _poor_ (in 2d) - if not, there are too many irreleavnt results about low income countries", 
@@ -51,7 +51,7 @@
                         },
                         {
                             "termlist_name": "termlist1_2c",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": [],
@@ -59,7 +59,7 @@
                         },
                         {
                             "termlist_name": "termlist_2d",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "_comment": "Testing revealed that _poor_ AND _people_ terms mostly found medical results (e.g. _children of mothers with poor iodine intake_), therefore _poor_ is combined in phrases. This is only an issue in English.",
@@ -141,7 +141,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist1_4a",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["financial inclusion", "unbanked",
@@ -150,7 +150,7 @@
                         },
                         {
                             "termlist_name": "termlist1_4b",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "_comment":"_equity_ etc. will cover _inequity_ due to automatic truncation",
@@ -163,7 +163,7 @@
                         },
                          {
                             "termlist_name": "termlist1_4bno",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": [],
@@ -173,7 +173,7 @@
                         },
                         {
                             "termlist_name": "termlist1_4c",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["a bank" , "bank account" , "banking" , "bank services", "financial service", "monetary service", "economic service",
@@ -184,7 +184,7 @@
                         },
                         {
                             "termlist_name": "termlist1_4cno",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "_comment":"_Saving_ (=_sparing_ NO) are not used here as they mostly add noise from _energy saving_, _cost saving_ or _nerve-sparing_ (medical). _seed banks_ are also an issue",
@@ -195,7 +195,7 @@
                         },
                         {
                             "termlist_name": "termlist1_4cc",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,                        
                             "wordlist_en": ["poverty", "rural poor", "urban poor", "working poor", "the poor", "destitute", "living in poverty", "low income", "low-income", 
@@ -224,7 +224,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist1_4d",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["access" , "equitab" , "equity" , "equality" , "equal", 
@@ -237,7 +237,7 @@
                         },
                         {
                             "termlist_name": "termlist1_4dno",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "_comment": "We removed _inkludering_(NO) because the results were about using farms in inclusive education", 
@@ -249,7 +249,7 @@
                         },
                         {
                             "termlist_name": "termlist1_4e",
-                            "formatting_rule": "specific_trunc",
+                            "formatting_rule": "no_trunc",
                             "na": false,
                             "case": false,
                             "_comment": "We had to remove the term _land_ and _income_ and specify them in phrases (e.g. _income inequality_) under 4f. This was because there were many results about e.g. health outcomes of a disease in a low-income country.", 
@@ -260,7 +260,7 @@
                         },
                         {
                             "termlist_name": "termlist1_4eno",
-                            "formatting_rule": "specific_trunc",
+                            "formatting_rule": "no_trunc",
                             "na": false,
                             "case": false,
                             "_comment": "Here we are preventing truncation because _arv_(NO) is problematic.", 
@@ -272,7 +272,7 @@
                         },
                         {
                             "termlist_name": "termlist1_4f",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["land rights", "rights to land", "right to land", "access to land", "land grab", "tenure security", "secure tenure", "income inequality"],
@@ -280,7 +280,7 @@
                         },
                         {
                             "termlist_name": "termlist1_4fno",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": [],
@@ -289,7 +289,7 @@
                         },
                         {
                             "termlist_name": "termlist1_4ee",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,                        
                             "wordlist_en": ["poverty", "rural poor", "urban poor", "working poor", "the poor", "destitute", "living in poverty", "low income", "low-income", 
@@ -311,7 +311,7 @@
                         },
                         {
                             "termlist_name": "termlist1_4g",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["intellectual property right", "wind farm", "quality control", "parasite control", "worm control", "pest control"],
@@ -326,7 +326,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist1_4h",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["access" , "equitab" , "equity" , "equality" , "equal", "empower" , "inclusion", 
@@ -337,7 +337,7 @@
                         },
                         {
                             "termlist_name": "termlist1_4hno",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": [],
@@ -348,7 +348,7 @@
                         },
                         {
                             "termlist_name": "termlist1_4i",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false, 
                             "wordlist_en": ["basic service", "basic facilities", "essential service",
@@ -365,7 +365,7 @@
                         },
                         {
                             "termlist_name": "termlist1_4ino",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "_comment":"skole(NO) is limited to specific basic levels here to avoid its use in Norwegian university names, e.g. _Høyskole_", 
@@ -384,7 +384,7 @@
                         },
                         {
                             "termlist_name": "termlist1_4ii",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,                        
                             "wordlist_en": ["poverty", "rural poor", "urban poor", "working poor", "the poor", "destitute", "living in poverty", "low income", "low-income", 
@@ -406,7 +406,7 @@
                         },
                         {
                             "termlist_name": "termlist1_4jnot",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "_comment": "Terms from ICT that are used a lot in healthcare (i.e. technical access and security) that we want to remove.", 
@@ -427,7 +427,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist1_5a",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["sendai", "protect", "safeguard", "safety", "safety net", "social protection", "social floor", "social security",
@@ -441,7 +441,7 @@
                         },
                         {
                             "termlist_name": "termlist1_5b",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["disaster", "catastrophe", "hazard",
@@ -474,7 +474,7 @@
                         },
                         {
                             "termlist_name": "termlist1_5c",
-                            "formatting_rule": "specific_trunc",
+                            "formatting_rule": "no_trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["war", "wars"],
@@ -482,7 +482,7 @@
                         },
                         {
                             "termlist_name": "termlist1_5d",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["poverty", "rural poor", "urban poor", "working poor", "the poor", "destitute", "low income", "low-income", "poor households", "poorest households", "poor famil", "poorest famil", "poor communit", "poorest communit", 
@@ -532,7 +532,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist1_aaalt",
-                            "formatting_rule": "specific_trunc",
+                            "formatting_rule": "no_trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["oda", "development spending", "development assistance"],
@@ -540,7 +540,7 @@
                         },
                         {
                             "termlist_name": "termlist1_aaalt2",
-                            "formatting_rule": "specific_trunc",
+                            "formatting_rule": "no_trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["fdi", "aid", "assistance", "funding", "grant", "invest", "investment.*", "investing", "financial support", "financing", "resources", "capital flow.*",
@@ -550,7 +550,7 @@
                         },
                         {
                             "termlist_name": "termlist1_ab",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["poverty", "pro-poor", "antipoverty"],
@@ -570,7 +570,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist1_ba",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["legislat", "program", "strateg", "policy", "policies", "planning", "framework", "initiativ"],
@@ -578,7 +578,7 @@
                         },
                         {
                             "termlist_name": "termlist1_ba_trunc",
-                            "formatting_rule": "specific",
+                            "formatting_rule": "no_right_trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["law", "laws", "plan", "plans"],
@@ -586,7 +586,7 @@
                         },
                         {
                             "termlist_name": "termlist1_bb",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["anti poverty", "anti-poverty", "antipoverty", "pro poor", "pro-poor", "out of poverty"],
@@ -594,7 +594,7 @@
                         },
                         {
                             "termlist_name": "termlist1_bc",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["poverty"],
@@ -602,7 +602,7 @@
                         },
                         {
                             "termlist_name": "termlist1_bd",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["minimi", "reduc", "mitigat", "alleviat", "tackl", "fight", "combat", "ending", "eliminat", "eradicat", "prevent", "out of", "overcom", "escap", "relief"],
@@ -610,7 +610,7 @@
                         },
                         {
                             "termlist_name": "termlist1_bd_trunc",
-                            "formatting_rule": "specific",
+                            "formatting_rule": "no_right_trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": [],
@@ -627,7 +627,7 @@
         "termlists" :[
             {
                 "termlist_name": "termlist_sdg_a",
-                "formatting_rule": "specific", 
+                "formatting_rule": "no_right_trunc", 
                 "na": false,
                 "case": false,
                 "wordlist_en": ["SDG 1", "SDGs 1", "SDG1", "sustainable development goal 1"],
@@ -635,7 +635,7 @@
             },
             {
                 "termlist_name": "termlist_sdg_b",
-                "formatting_rule": "default", 
+                "formatting_rule": "trunc", 
                 "na": false,
                 "case": false,
                 "wordlist_en": ["sustainable development goal"],
@@ -643,7 +643,7 @@
             },
             {
                 "termlist_name": "termlist_sdg_c",
-                "formatting_rule": "specific", 
+                "formatting_rule": "no_right_trunc", 
                 "na": false,
                 "case": false,
                 "wordlist_en": ["goal 1"],
@@ -651,7 +651,7 @@
             },
             {
                 "termlist_name": "termlist_sdg_d",
-                "formatting_rule": "specific", 
+                "formatting_rule": "no_right_trunc", 
                 "na": false,
                 "case": false,
                 "wordlist_en": ["sustainable development goal.*", "SDG", "goal 1"],
@@ -659,7 +659,7 @@
             },
             {
                 "termlist_name": "termlist_sdg_e",
-                "formatting_rule": "default", 
+                "formatting_rule": "trunc", 
                 "na": false,
                 "case": false,
                 "wordlist_en": ["poverty"],
@@ -667,7 +667,7 @@
             },
             {
                 "termlist_name": "termlist_sdg_f",
-                "formatting_rule": "default", 
+                "formatting_rule": "trunc", 
                 "na": false,
                 "case": false,
                 "wordlist_en": ["no poverty"],

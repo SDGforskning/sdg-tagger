@@ -11,7 +11,7 @@
             "termlists": [
                 {
                     "termlist_name": "termlist15_terr1",
-                    "formatting_rule": "default",
+                    "formatting_rule": "trunc",
                     "na": false,
                     "case": false,
                     "wordlist_en": ["terrestrial",
@@ -38,7 +38,7 @@
                 },
                 {
                     "termlist_name": "termlist15_terr2",
-                    "formatting_rule": "specific_trunc",
+                    "formatting_rule": "no_trunc",
                     "na": false,
                     "case": false,
                     "wordlist_en": ["soil", "soils", "bog", "bogs", "mire", "mires", "fen", "fens", "bush", "bushes", "plains", "steppe",
@@ -55,7 +55,7 @@
             "termlists": [
                 {
                     "termlist_name": "termlist_not1",
-                    "formatting_rule": "default",
+                    "formatting_rule": "trunc",
                     "na": false,
                     "case": false,
                     "_comment" : "NO: 'språk' is added here as in Norwegian a lot of the same terms are used for language conservation as nature conservation (e.g. forvaltningsområde). This also concerns 'protection', hence the addition of 'barnevernet' (NO: child protective services).", 
@@ -68,7 +68,7 @@
                 },
                 {
                     "termlist_name": "termlist_not2",
-                    "formatting_rule": "specific_trunc",
+                    "formatting_rule": "no_trunc",
                     "na": false,
                     "case": false,
                     "_comment" : "NO: 'språk' is added here as in Norwegian a lot of the same terms are used for language conservation as nature conservation (e.g. forvaltningsområde). This also concerns 'protection', hence the addition of 'barnevernet' (NO: child protective services).", 
@@ -77,7 +77,7 @@
                 },
                 {
                     "termlist_name": "termlist15_terr1",
-                    "formatting_rule": "default",
+                    "formatting_rule": "trunc",
                     "na": false,
                     "case": false,
                     "_comment": "'forest' is changed for rain forest, boreal etc. to help avoid random forest, kelp forest",
@@ -105,7 +105,7 @@
                 },
                 {
                     "termlist_name": "termlist15_terr2",
-                    "formatting_rule": "specific_trunc",
+                    "formatting_rule": "no_trunc",
                     "na": false,
                     "case": false,
                     "wordlist_en": ["soil", "soils", "bog", "bogs", "mire", "mires", "fen", "fens", "bush", "bushes", "plains", "steppe",
@@ -122,7 +122,7 @@
             "termlists": [
                 {
                     "termlist_name": "termlistanimalsplants1",
-                    "formatting_rule": "default",
+                    "formatting_rule": "trunc",
                     "na": false,
                     "case": false,
                     "wordlist_en": ["species", "animal", "organism", "flora", "fauna", "wildlife", "amphibian", "reptil", "bird", "mosses", "liverwort", "hornwort", "lichen", "bryophyte", "grass", "pollinat"],
@@ -130,7 +130,7 @@
                 },
                 {
                     "termlist_name": "termlistanimalsplants2",
-                    "formatting_rule": "specific_trunc",
+                    "formatting_rule": "no_trunc",
                     "na": false,
                     "case": false,
                     "wordlist_en": ["plant", "plants", "insect", "insects", "moss", "tree", "trees"],
@@ -146,7 +146,7 @@
             "termlists": [
                 {
                     "termlist_name": "termlist15_7a",
-                    "formatting_rule": "default",
+                    "formatting_rule": "trunc",
                     "na": false,
                     "case": false,
                     "wordlist_en": ["poach", "traffick", "smuggl", "illegal"],
@@ -154,7 +154,7 @@
                 },
                 {
                     "termlist_name": "termlist15_7d",
-                    "formatting_rule": "default",
+                    "formatting_rule": "trunc",
                     "na": false,
                     "case": false,
                     "_comment": "Used in 15.7 phrase 2 also",
@@ -163,7 +163,7 @@
                 },
                 {
                     "termlist_name": "termlistanimalsplants1",
-                    "formatting_rule": "default",
+                    "formatting_rule": "trunc",
                     "na": false,
                     "case": false,
                     "wordlist_en": ["species", "plant", "animal", "organism", "flora", "fauna", "wildlife", "insect", "amphibian", "reptil", "bird", "moss", "liverwort", "hornwort", "lichen", "bryophyte", "tree", "grass", "pollinat"],
@@ -171,7 +171,7 @@
                 },
                 {
                     "termlist_name": "termlistanimalsplants2",
-                    "formatting_rule": "specific_trunc",
+                    "formatting_rule": "no_trunc",
                     "na": false,
                     "case": false,
                     "wordlist_en": [],
@@ -187,7 +187,7 @@
             "termlists": [
                 {
                     "termlist_name": "termlist15_7g",
-                    "formatting_rule": "default",
+                    "formatting_rule": "trunc",
                     "na": false,
                     "case": false,
                     "wordlist_en": ["trade in endangered species"],
@@ -195,7 +195,7 @@
                 },
                 {
                     "termlist_name": "termlist15_7gcase",
-                    "formatting_rule": "specific_trunc",
+                    "formatting_rule": "no_trunc",
                     "na": false,
                     "case": true,
                     "wordlist_en": ["CITES"],
@@ -215,7 +215,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist15_1a",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["protected area","conservation area","conservation zone","Wilderness area","Nature reserve","National park",
@@ -227,7 +227,7 @@
                         },
                         {
                             "termlist_name": "protect_conserve",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "_comment": "Used in multiple phrases in 15.1 (also partially repeated, but not identical in 15.3 phrase 4 and 15.a)",
@@ -236,7 +236,7 @@
                         },
                         {
                             "termlist_name": "termlist15_1c",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["habitat","biotop"],
@@ -251,7 +251,7 @@
                     "termlists": [
                         {
                             "termlist_name": "protect_conserve",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "_comment": "Used in multiple phrases in 15.1 (also partially repeated, but not identical in 15.3 phrase 4 and 15.a)",
@@ -260,7 +260,7 @@
                         },
                         {
                             "termlist_name": "termlist15_1e",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "_comment": "EN: 'area' is combined, cut away 95 % noisy results. NO: Added 'natur' and 'kulturlandskap'(NO) instead of 'område'(NO) because there were too many results from cultural/human conservation. 'landskap'(NO) alone got a lot of cultural results, so it is combined to specific types.",
@@ -286,7 +286,7 @@
                     "termlists": [
                         {
                             "termlist_name": "protect_conserve",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "_comment": "Used in multiple phrases in 15.1 (also partially repeated, but not identical in 15.3 phrase 4 and 15.a)",
@@ -295,7 +295,7 @@
                         },
                         {
                             "termlist_name": "termlist15_1g",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["habitat", "nature conservation",
@@ -307,7 +307,7 @@
                         },
                         {
                             "termlist_name": "diversity_ecosystems1",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "_comment": "Used also in 15.1 phrase 4",
@@ -316,7 +316,7 @@
                         },
                         {
                             "termlist_name": "diversity_ecosystems2",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["taxonom", "ecolog"],
@@ -324,7 +324,7 @@
                         },
                         {
                             "termlist_name": "termlistanimalsplants1",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["species", "animal", "organism", "flora", "fauna", "wildlife", "amphibian", "reptil", "bird", "liverwort", "mosses", "hornwort", "lichen", "bryophyte", "grass", "pollinat"],
@@ -332,7 +332,7 @@
                         },
                         {
                             "termlist_name": "termlistanimalsplants2",
-                            "formatting_rule": "specific_trunc",
+                            "formatting_rule": "no_trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["plant", "plants", "tree", "trees", "moss", "insect", "insects"],
@@ -347,7 +347,7 @@
                     "termlists": [
                         {
                             "termlist_name": "protect_conserve",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "_comment": "Used in multiple phrases in 15.1 (also partially repeated, but not identical in 15.3 phrase 4 and 15.a)",
@@ -356,7 +356,7 @@
                         },
                         {
                             "termlist_name": "diversity_ecosystems1",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "_comment": "Repeated also in 15.1 phrase 3, 15.9, 15.a",
@@ -372,7 +372,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist15_1j",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["agro-ecological","agro ecological", "key biodiversity area", "important sites for biodiversity", "ecotourism","eco-tourism"],
@@ -380,7 +380,7 @@
                         },
                         {
                             "termlist_name": "termlist15_1k",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["sustainabl", "responsibl", "environmental", "ecological", "ecosystem approach", "ecosystem-based", "long-term"],
@@ -388,7 +388,7 @@
                         },
                         {
                             "termlist_name": "termlist15_1l",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "_comment": "Fishing terms are limited to freshwater. NO: Salmon and trout included as partially freshwater and important species there.",
@@ -397,7 +397,7 @@
                         },
                         {
                             "termlist_name": "termlist15_1n",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "_comment":"'ved' (NO: firewood) is difficult in Norwegian because it is often combined with other words (can't stop truncation), and it is a preposition.", 
@@ -410,7 +410,7 @@
                         },
                         {
                             "termlist_name": "termlist15_1o",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["ecosystem service","natural resource","groundwater",
@@ -429,7 +429,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist15_1s",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["Convention on Biological Diversity", "biodiversity convention",
@@ -447,7 +447,7 @@
                         },
                         {
                             "termlist_name": "termlist15_1t_case",
-                            "formatting_rule": "specific_trunc",
+                            "formatting_rule": "no_trunc",
                             "na": false,
                             "case": true,
                             "wordlist_en": ["UNCCD", "ITPGRFA"],
@@ -455,7 +455,7 @@
                         },
                         {
                             "termlist_name": "termlist15_1u",
-                            "formatting_rule": "specific_trunc",
+                            "formatting_rule": "no_trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["Framework Convention on Climate Change", "UNFCCC", "CBD", "world heritage convention", "European landscape convention", "CITES"],
@@ -463,7 +463,7 @@
                         },
                         {
                             "termlist_name": "termlist15_1v",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["ecosystem", "habitat", "environment", "biotop", "ecolog", "biodivers", "biological diversit"],
@@ -484,7 +484,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist15_2a",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["sustainable forest","sustainable woodland","sustainable silvicultur","sustainable arboricultur",
@@ -496,7 +496,7 @@
                         },
                         {
                             "termlist_name": "termlist15_2acaps",
-                            "formatting_rule": "specific",
+                            "formatting_rule": "no_right_trunc",
                             "na": false,
                             "case": true,
                             "wordlist_en": ["UNSPF", "GFG"],
@@ -504,7 +504,7 @@
                         },
                         {
                             "termlist_name": "termlist15_2b",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["sustainab", "responsibl", "environmental", "ecological"],
@@ -512,7 +512,7 @@
                         },
                         {
                             "termlist_name": "termlist15_2c",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["manag", "govern", "development", "administ", "planning", "policy", "policies", "strateg", "approach",
@@ -532,7 +532,7 @@
                         },
                         {
                             "termlist_name": "termlist15_2ctrunc",
-                            "formatting_rule": "specific_trunc",
+                            "formatting_rule": "no_trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["use", "usage", "using", "cut"],
@@ -540,7 +540,7 @@
                         },
                         {
                             "termlist_name": "termlist15_2d",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "_comment": "Used also in 15.b",
@@ -556,7 +556,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist15_2e",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["deforest", "de-forest"],
@@ -564,7 +564,7 @@
                         },
                         {
                             "termlist_name": "termlist15_2f",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["forests", "woodland", "silvicultur", "arboricultu"],
@@ -572,7 +572,7 @@
                         },
                         {
                             "termlist_name": "termlist15_2ftrunc",
-                            "formatting_rule": "specific",
+                            "formatting_rule": "no_right_trunc",
                             "na": false,
                             "case": false,
                             "_comment": "NO: Here we don't allow right truncation because 'skog' (NO) finds 'skogsfugl' etc. EN: Left truncation still allows 'rainforest' etc.", 
@@ -581,7 +581,7 @@
                         },
                         {
                             "termlist_name": "termlist15_2g",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["losses", "degradation", "decreas", "reduc", "mitigat", "disappear"],
@@ -589,7 +589,7 @@
                         },
                         {
                             "termlist_name": "termlist15_2gtrunc",
-                            "formatting_rule": "specific_trunc",
+                            "formatting_rule": "no_trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["loss", "lost"],
@@ -597,7 +597,7 @@
                         },
                         {
                             "termlist_name": "termlist15_2hcase",
-                            "formatting_rule": "specific_trunc",
+                            "formatting_rule": "no_trunc",
                             "na": false,
                             "case": true,
                             "wordlist_en": ["REDD"],
@@ -612,7 +612,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist15_2i",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["afforest", "reforest", "re-forest"],
@@ -620,7 +620,7 @@
                         },
                         {
                             "termlist_name": "termlist15_2l",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["forest cover", "forest area", "forested area"],
@@ -636,7 +636,7 @@
                         },
                         {
                             "termlist_name": "termlist15_2j",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["forests", "woodland"],
@@ -644,7 +644,7 @@
                         },
                         {
                             "termlist_name": "termlist15_2jtrunc",
-                            "formatting_rule": "specific",
+                            "formatting_rule": "no_right_trunc",
                             "na": false,
                             "case": false,
                             "_comment": "NO: Here we don't allow right truncation because 'skog' (NO) finds 'skogsfugl' etc. Left truncation still allows 'rainforest' etc.", 
@@ -653,7 +653,7 @@
                         },
                         {
                             "termlist_name": "termlist15_2k",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["restor", "rehabilit", "increase cover"],
@@ -674,7 +674,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist15_3a",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["desertific", "convention to combat desertification"],
@@ -682,7 +682,7 @@
                         },
                         {
                             "termlist_name": "termlist15_3acaps",
-                            "formatting_rule": "specific_trunc",
+                            "formatting_rule": "no_trunc",
                             "na": false,
                             "case": true,
                             "wordlist_en": ["UNCCD"],
@@ -698,7 +698,7 @@
                         },
                         {
                             "termlist_name": "termlist15_3c",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["desert", "drylands", "dryland area"],
@@ -713,7 +713,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist15_3d",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["desertific", "drought", "flood", "drylands", "dryland area"],
@@ -721,7 +721,7 @@
                         },
                         {
                             "termlist_name": "termlist15_3e",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["soil structure" , "soil fertility", "soil health", "soil quality", "land quality"],
@@ -729,7 +729,7 @@
                         },
                         {
                             "termlist_name": "termlist15_3f",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["land", "soil"],
@@ -737,7 +737,7 @@
                         },
                         {
                             "termlist_name": "termlist15_3g",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["quality", "fertility", "degrad", "erosion", "eroded"],
@@ -752,7 +752,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist15_3h",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "_comment": "NO: Translations of these (e.g.'uttørking') are combined with soil terms in 3j.",
@@ -761,7 +761,7 @@
                         },
                         {
                             "termlist_name": "termlist15_3i",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["topsoil"],
@@ -769,7 +769,7 @@
                         },
                         {
                             "termlist_name": "termlist15_3itrunc",
-                            "formatting_rule": "specific_trunc",
+                            "formatting_rule": "no_trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["land", "soil", "soils"],
@@ -777,7 +777,7 @@
                         },
                         {
                             "termlist_name": "termlist15_3j",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["quality", "degrad", "erosion", "eroded", "salinisat", "alkalinisat", "acidificat", "contaminat", "pollution", "biodiversity loss"],
@@ -785,7 +785,7 @@
                         },
                         {
                             "termlist_name": "termlist15_3k",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["declin","decreas","reduc","degrad","lower","loss"],
@@ -793,7 +793,7 @@
                         },
                         {
                             "termlist_name": "termlist15_3ktrunc",
-                            "formatting_rule": "specific_trunc",
+                            "formatting_rule": "no_trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": [],
@@ -801,7 +801,7 @@
                         },
                         {
                             "termlist_name": "termlist15_3l",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["biodiversity","soil","vegetation","groundwater"],
@@ -809,7 +809,7 @@
                         },
                         {
                             "termlist_name": "termlist15_3m",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["desert", "drylands", "dryland area", "sub-humid", "sub humid", "semi-arid", "semiarid"],
@@ -817,7 +817,7 @@
                         },
                         {
                             "termlist_name": "termlist15_3mtrunc",
-                            "formatting_rule": "specific_trunc",
+                            "formatting_rule": "no_trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["arid"],
@@ -833,7 +833,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist15_3n",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "_comment": "Used also in 15.a phrase 1",
@@ -844,7 +844,7 @@
                         },
                         {
                             "termlist_name": "termlist15_3o",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "_comment":" NO: 'jord' is added in phrases here as the terms it is combined with (AND) are a lot more general than in the other phrases - causes issues with e.g. 'Jordan' or 'fjord' or 'gjorde'", 
@@ -853,7 +853,7 @@
                         },
                         {
                             "termlist_name": "termlist15_3p",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["fertility", "productivity", "stucture", "health", 
@@ -875,7 +875,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist15_4a",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["mountain", "alpine", "highland", "montane", "high elevation ecosystem", "high altitude ecosystem", "high-elevation ecosystem", "high-altitude ecosystem"],
@@ -883,7 +883,7 @@
                         },
                         {
                             "termlist_name": "termlist15_4b",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["manag", "conserv", "protect", "restor", "rehabilit",
@@ -903,7 +903,7 @@
                         },
                         {
                             "termlist_name": "termlist15_4c",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["ecosystem", "habitat",
@@ -917,7 +917,7 @@
                         },
                         {
                             "termlist_name": "termlist15_4d",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["Protected area","Wilderness area", "nature conservation",
@@ -936,7 +936,7 @@
                         },
                         {
                             "termlist_name": "termlist15_4dcase",
-                            "formatting_rule": "specific_trunc",
+                            "formatting_rule": "no_trunc",
                             "na": false,
                             "case": true,
                             "wordlist_en": ["KBA", "KBAs", "CBD", "CITES"],
@@ -957,7 +957,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist15_5a",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "_comment": "Used also in phrase 2",
@@ -966,7 +966,7 @@
                         },
                         {
                             "termlist_name": "termlist15_5atrunc",
-                            "formatting_rule": "specific_trunc",
+                            "formatting_rule": "no_trunc",
                             "na": false,
                             "case": false,
                             "_comment": "Used also in phrase 2",
@@ -975,7 +975,7 @@
                         },
                         {
                             "termlist_name": "termlist15_5b",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["ecosystem","biotope","habitat"],
@@ -983,7 +983,7 @@
                         },
                         {
                             "termlist_name": "termlist15_5c",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["communit"],
@@ -991,7 +991,7 @@
                         },
                         {
                             "termlist_name": "termlist15_5d",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["ecolog"],
@@ -1006,7 +1006,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist15_5a",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "_comment": "Used also in phrase 1",
@@ -1015,7 +1015,7 @@
                         },
                         {
                             "termlist_name": "termlist15_5atrunc",
-                            "formatting_rule": "specific_trunc",
+                            "formatting_rule": "no_trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": [],
@@ -1024,7 +1024,7 @@
                         },
                         {
                             "termlist_name": "termlist15_5e",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["diversity", "species"],
@@ -1032,7 +1032,7 @@
                         },
                         {
                             "termlist_name": "termlist15_5etrunc",
-                            "formatting_rule": "specific_trunc",
+                            "formatting_rule": "no_trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": [],
@@ -1047,7 +1047,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist15_5f",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["manag", "conserv", "protect", "restor", "rehabilit", "preserv",
@@ -1063,7 +1063,7 @@
                         },
                         {
                             "termlist_name": "termlist15_5g",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "_comment":"NO: 'trua art' (NO) etc are included as phrases here because both terms are easily creating noise with automatic truncation. EN: English combinations are covered in h+i below.",
@@ -1075,7 +1075,7 @@
                         },
                         {
                             "termlist_name": "termlist15_5gcase",
-                            "formatting_rule": "specific_trunc",
+                            "formatting_rule": "no_trunc",
                             "na": false,
                             "case": true,
                             "wordlist_en": ["KBA", "KBAs", "CBD", "RLI", "IUCN"],
@@ -1083,7 +1083,7 @@
                         },
                         {
                             "termlist_name": "termlist15_5h",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["threatened","near extinct", "near-extinct","at risk","endanger","vulnerable","protected","red list","red-list", "diversity"],
@@ -1098,7 +1098,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist15_5j",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["threatened","near extinct", "near-extinct","at risk","endanger","vulnerable","protected","red list","red-list"],
@@ -1106,7 +1106,7 @@
                         },
                         {
                             "termlist_name": "termlist15_5l",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["extinction", "loss", "going extinct"],
@@ -1114,7 +1114,7 @@
                         },
                         {
                             "termlist_name": "termlist15_5ltrunc",
-                            "formatting_rule": "specific_trunc",
+                            "formatting_rule": "no_trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": [],
@@ -1134,7 +1134,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist15_6a",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["share", "sharing", "fairness", "equitab", "equal", "access", "right", "ownership", "appropriati", "biopira", "biocoloni", "using", "utiliz", "utilis", "use of", "use and conservation of"],
@@ -1142,7 +1142,7 @@
                         },
                         {
                             "termlist_name": "termlist15_6atrunc",
-                            "formatting_rule": "specific_trunc",
+                            "formatting_rule": "no_trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["fair"],
@@ -1150,7 +1150,7 @@
                         },
                         {
                             "termlist_name": "termlist15_6b",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "_comment": "Used also in phrase 2",
@@ -1161,7 +1161,7 @@
                         },
                         {
                             "termlist_name": "termlist15_6c",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["ecosystem", "biotop", "diversity"],
@@ -1176,7 +1176,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist15_6b",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["genetic resource", "gene resource", "bioresource", "biological resource",
@@ -1186,7 +1186,7 @@
                         },
                         {
                             "termlist_name": "termlist15_6c",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["ecosystem", "biotop", "diversity"],
@@ -1194,7 +1194,7 @@
                         },
                         {
                             "termlist_name": "termlist15_6d",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["benefit", "results", "transfer", "technolog", "participat", "product", "monetary", "royalties", "compensat", "bioprospect"],
@@ -1202,7 +1202,7 @@
                         },
                         {
                             "termlist_name": "termlist15_6e",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["Nagoya", "Convention on biological diversity", "benefit sharing", "benefit-sharing", "Plant Genetic Resources for Food and Agriculture"],
@@ -1210,7 +1210,7 @@
                         },
                         {
                             "termlist_name": "termlist15_6ecase",
-                            "formatting_rule": "specific_trunc",
+                            "formatting_rule": "no_trunc",
                             "na": false,
                             "case": true,
                             "wordlist_en": ["CBD","ABS","PGRFA"],
@@ -1218,7 +1218,7 @@
                         },
                         {
                             "termlist_name": "termlist15_6f",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["Access and benefit sharing", "Access and benefit-sharing",  "Bonn guideline"],
@@ -1239,7 +1239,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist15_7b",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["protected", "endanger", "threat", "extinct", "at risk", "vulnerable", "red list", "red-list"],
@@ -1254,7 +1254,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist15_7e",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["illegal", "illicit", "criminal", "crime"],
@@ -1262,7 +1262,7 @@
                         },
                         {
                             "termlist_name": "termlist15_7f",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["product" , "manufact" , "merchandise" , "artifact" , "fabricat" , "handicraft" , "handiwork",
@@ -1274,7 +1274,7 @@
                         },
                         {
                             "termlist_name": "termlist15_7d",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "_comment": "Used in presearch 'poaching_endangered' also",
@@ -1290,7 +1290,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist15_7g",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "_comment": "Wildlife crime can be more than just poaching and illegal trade/possesion, but is often used to mean these, and so is included",
@@ -1312,7 +1312,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist15_8a",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["introduc", "spread", "expansion", "dispers", "range increas",
@@ -1333,7 +1333,7 @@
                         },
                         {
                             "termlist_name": "termlist15_8atrunc",
-                            "formatting_rule": "specific_trunc",
+                            "formatting_rule": "no_trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": [],
@@ -1341,7 +1341,7 @@
                         },
                         {
                             "termlist_name": "termlist15_8b",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["invasive","alien","exotic","nonnative","non-native","non native","nonindigenous","non-indigenous","non indigenous"],
@@ -1349,7 +1349,7 @@
                         },
                         {
                             "termlist_name": "termlist15_8c",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["rodent"],
@@ -1357,7 +1357,7 @@
                         },
                         {
                             "termlist_name": "termlist15_8d",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["Pelophylax ridibundus" , "Pelophylax lessonae" , "Pelophylax esculentus" , "Esox lucius" , "Neogobius melanostomus" , "Phoxinus phoxinus" , "Scardinius erythrophthalmus" , "Branta canadensis" , "Barbarea vulgaris" , "Bunias orientalis" , "Elodea canadensis" , "Elodea nuttallii" , "Lactuca serriola" , "Lupinus nootkatensis" , "Symphytum officinale" , "Reynoutria ×bohemica" , "Vincetoxicum rossicum" , "Epilobium ciliatum ciliatum" , "Epilobium ciliatum glandulosum" , "Aruncus dioicus" , "Lamiastrum galeobdolon argentatum" , "Lamiastrum galeobdolon galeobdolon" , "Lysimachia punctata" , "Pastinaca sativa hortensis" , "Amelanchier spicata" , "Berberis thunbergii" , "Cotoneaster bullatus" , "Cotoneaster dielsianus" , "Cotoneaster horizontalis" , "Lonicera caerulea" , "Lysimachia nummularia" , "Rosa rugosa" , "Arctium tomentosum" , "Lupinus polyphyllus" , "Rorippa ×armoracioides" , "Salix viminalis" , "Bromopsis inermis" , "Cerastium tomentosum" , "Cotoneaster lucidus" , "Heracleum mantegazzianum" , "Heracleum persicum" , "Laburnum anagyroides" , "Melilotus albus" , "Petasites japonicus giganteus" , "Petasites hybridus" , "Phedimus spurius" , "Primula elatior elatior" , "Reynoutria sachalinensis" , "Sambucus racemosa" , "Senecio viscosus" , "Sorbaria sorbifolia" , "Swida sericea" , "Vinca minor" , "Taxus xmedia" , "Senecio inaequidens" , "Melilotus officinalis" , "Odontites vulgaris" , "Solidago canadensis" , "Festuca rubra commutata" , "Cotoneaster divaricatus" , "Berteroa incana" , "Pinus mugo uncinata" , "Cytisus scoparius" , "Impatiens glandulifera" , "Impatiens parviflora" , "Myrrhis odorata" , "Phedimus hybridus" , "Populus balsamifera" , "Reynoutria japonica" , "Sorbus mougeotii" , "Spiraea xbillardii" , "Spiraea xrosalba" , "Spiraea xrubella" , "Tsuga heterophylla" , "Alchemilla mollis" , "Pinus contorta" , "Picea sitchensis" , "Picea xlutzii" , "Acer pseudoplatanus" , "Laburnum alpinum" , "Pinus mugo" , "Campylopus introflexus" , "Neovison vison" , "Lepus europaeus" , "Nyctereutes procyonoides" , "Sciurus carolinensis" , "Castor canadensis" , "Echinococcus multilocularis" , "Gyrodactylus salaris" , "Angiostrongylus vasorum" , "Anguillicoloides crassus" , "Bursaphelenchus xylophilus" , "Meloidogyne hapla" , "Meloidogyne minor" , "Aphanomyces astaci" , "Batrachochytrium dendrobatidis" , "Batrachochytrium salamandrivorans" , "Hymenoscyphus fraxineus" , "Phytophthora ramorum" , "Phytophthora austrocedri" , "Agrilus planipennis" , "Anoplophora glabripennis" , "Harmonia axyridis" , "Ips amitinus" , "Arion vulgaris" , "Dreissena bugensis" , "Dreissena polymorpha" , "Potamopyrgus antipodarum" , "Opilio canestrinii" , "Eriocheir sinensis" , "Daphnia parvula" , "Pacifastacus leniusculus" , "Aedes japonicus" , "Bombus terrestris"],
@@ -1379,7 +1379,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist15_9d",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["national biodiversity strateg", "national biodiversity action plan", "biodiversity policy and action plan"],
@@ -1387,7 +1387,7 @@
                         },
                         {
                             "termlist_name": "termlist15_9dcase",
-                            "formatting_rule": "specific_trunc",
+                            "formatting_rule": "no_trunc",
                             "na": false,
                             "case": true,
                             "wordlist_en": ["NBSAP", "NBSAPs"],
@@ -1395,7 +1395,7 @@
                         },
                         {
                             "termlist_name": "termlist15_9a",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["biodiversit", "biological diversity", "species diversity",
@@ -1405,7 +1405,7 @@
                         },
                         {
                             "termlist_name": "termlist15_9atrunc",
-                            "formatting_rule": "specific_trunc",
+                            "formatting_rule": "no_trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["cbd", "habitat"],
@@ -1413,7 +1413,7 @@
                         },
                         {
                             "termlist_name": "diversity_ecosystems1",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "_comment": "Used also in 15.1 phrase 4",
@@ -1422,7 +1422,7 @@
                         },
                         {
                             "termlist_name": "diversity_ecosystems2",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["taxonom", "ecolog"],
@@ -1430,7 +1430,7 @@
                         },
                         {
                             "termlist_name": "termlistanimalsplants1",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["species", "animal", "organism", "flora", "fauna", "wildlife", "amphibian", "reptil", "bird", "liverwort", "mosses", "hornwort", "lichen", "bryophyte", "grass", "pollinat"],
@@ -1438,7 +1438,7 @@
                         },
                         {
                             "termlist_name": "termlistanimalsplants2",
-                            "formatting_rule": "specific_trunc",
+                            "formatting_rule": "no_trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["plant", "plants", "tree", "trees", "moss", "insect", "insects"],
@@ -1446,7 +1446,7 @@
                         },
                         {
                             "termlist_name": "termlist15_terr1",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["terrestrial",
@@ -1473,7 +1473,7 @@
                         },
                         {
                             "termlist_name": "termlist15_terr2",
-                            "formatting_rule": "specific_trunc",
+                            "formatting_rule": "no_trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["soil", "soils", "bog", "bogs", "mire", "mires", "fen", "fens", "bush", "bushes", "plains", "steppe",
@@ -1482,7 +1482,7 @@
                         },
                         {
                             "termlist_name": "termlist15_9e",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["national", "local", "government", "regional", "sector", "municipal", "federal", "urban", "settlement", "multilevel", "multi-level",
@@ -1492,7 +1492,7 @@
                         },
                         {
                             "termlist_name": "termlist15_9f",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["target", "goal", "program", "strateg", "policy", "policies", "framework", "governance", "governing", 
@@ -1502,7 +1502,7 @@
                         },
                         {
                             "termlist_name": "termlist15_9ftrunc",
-                            "formatting_rule": "specific_trunc",
+                            "formatting_rule": "no_trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["plan", "planning", "plans", "govern"],
@@ -1523,7 +1523,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist15_aa",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "_comment": "Used also in 15.3 phrase 4",
@@ -1534,7 +1534,7 @@
                         },
                         {
                             "termlist_name": "termlist15_ab",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["manag", "govern", "development", "administrat", "planning"],
@@ -1542,7 +1542,7 @@
                         },
                         {
                             "termlist_name": "termlist15_abtrunc",
-                            "formatting_rule": "specific_trunc",
+                            "formatting_rule": "no_trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["use", "using", "plan"],
@@ -1550,7 +1550,7 @@
                         },
                         {
                             "termlist_name": "termlist15_ac",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["sustainabl", "responsib", "environmental", "ecological", "ecosystem"],
@@ -1558,7 +1558,7 @@
                         },
                         {
                             "termlist_name": "termlist15_ad",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "_comment": "EN: 'ecosystem' alone is included in termlist15_ae",
@@ -1570,7 +1570,7 @@
                         },
                         {
                             "termlist_name": "diversity_ecosystems1",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "_comment": "Used also in 15.1 phrase 4",
@@ -1579,7 +1579,7 @@
                         },
                         {
                             "termlist_name": "diversity_ecosystems2",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["taxonom", "ecolog"],
@@ -1587,7 +1587,7 @@
                         },
                         {
                             "termlist_name": "termlistanimalsplants1",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["species", "animal", "organism", "flora", "fauna", "wildlife", "amphibian", "reptil", "bird", "liverwort", "mosses", "hornwort", "lichen", "bryophyte", "grass", "pollinat"],
@@ -1595,7 +1595,7 @@
                         },
                         {
                             "termlist_name": "termlistanimalsplants2",
-                            "formatting_rule": "specific_trunc",
+                            "formatting_rule": "no_trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["plant", "plants", "tree", "trees", "moss", "insect", "insects"],
@@ -1603,7 +1603,7 @@
                         },
                         {
                             "termlist_name": "termlist15_terr1",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["terrestrial",
@@ -1630,7 +1630,7 @@
                         },
                         {
                             "termlist_name": "termlist15_terr2",
-                            "formatting_rule": "specific_trunc",
+                            "formatting_rule": "no_trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["soil", "soils", "bog", "bogs", "mire", "mires", "fen", "fens", "bush", "bushes", "plains", "steppe",
@@ -1639,7 +1639,7 @@
                         },
                         {
                             "termlist_name": "termlist15_ag",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["investing", "invest in", "investment", "investor", "financ", "spending", "funding", "grant", "funds",
@@ -1655,7 +1655,7 @@
                         },
                         {
                             "termlist_name": "termlist15_agcase",
-                            "formatting_rule": "specific_trunc",
+                            "formatting_rule": "no_trunc",
                             "na": false,
                             "case": true,
                             "wordlist_en": ["GEF", "BIOFIN", "PAGE", "PEA", "ODA"],
@@ -1675,7 +1675,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist15_ba",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["investing", "investment", "investor", "invest in", "financ", "spending", "funding", "grant", "funds",
@@ -1687,7 +1687,7 @@
                         },
                         {
                             "termlist_name": "termlist15_bacase",
-                            "formatting_rule": "specific_trunc",
+                            "formatting_rule": "no_trunc",
                             "na": false,
                             "case": true,
                             "wordlist_en": ["ODA"],
@@ -1695,7 +1695,7 @@
                         },
                         {
                             "termlist_name": "termlist15_bb",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "_comment": "Used also in 15.2",
@@ -1704,7 +1704,7 @@
                         },
                         {
                             "termlist_name": "termlist15_bNOT",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["kelp forest"],
@@ -1724,7 +1724,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist15_cc",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["capacity",
@@ -1750,7 +1750,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist15_ca",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["poaching", "poacher"],
@@ -1758,7 +1758,7 @@
                         },
                         {
                             "termlist_name": "termlist15_ce",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["livelihood", "employment", "local communit", "local people", "indigenous communit", "indigenous people", "rural communit", "rural people", "native communit", "native people"],
@@ -1766,7 +1766,7 @@
                         },
                         {
                             "termlist_name": "termlist15_cf",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "_comment": "Not used right now.",
@@ -1775,7 +1775,7 @@
                         },
                         {
                             "termlist_name": "termlist15_cg",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["fishing", "fisher", "hunting", "hunter", "touris", "agroforest", "agricult", "farmer", "farming", "income"],
@@ -1791,7 +1791,7 @@
         "termlists": [
             {
                 "termlist_name": "termlist_sdg_a",
-                "formatting_rule": "default",
+                "formatting_rule": "trunc",
                 "na": false,
                 "case": false,
                 "wordlist_en": ["SDG 15", "SDGs 15", "SDG15", "sustainable development goal 15"],
@@ -1799,7 +1799,7 @@
             },
             {
                 "termlist_name": "termlist_sdg_b",
-                "formatting_rule": "default",
+                "formatting_rule": "trunc",
                 "na": false,
                 "case": false,
                 "wordlist_en": ["sustainable development goal"],
@@ -1807,7 +1807,7 @@
             },
             {
                 "termlist_name": "termlist_sdg_c",
-                "formatting_rule": "default",
+                "formatting_rule": "trunc",
                 "na": false,
                 "case": false,
                 "wordlist_en": ["goal 15"],
@@ -1815,7 +1815,7 @@
             },
             {
                 "termlist_name": "termlist_sdg_d",
-                "formatting_rule": "default",
+                "formatting_rule": "trunc",
                 "na": false,
                 "case": false,
                 "wordlist_en": ["sustainable development goal", "SDG", "goal 15"],
@@ -1823,7 +1823,7 @@
             },
             {
                 "termlist_name": "termlist_sdg_f",
-                "formatting_rule": "default",
+                "formatting_rule": "trunc",
                 "na": false,
                 "case": false,
                 "wordlist_en": ["life on land"],

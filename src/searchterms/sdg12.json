@@ -10,7 +10,7 @@
             "termlists": [
                 {
                     "termlist_name": "termlist12_scp1",
-                    "formatting_rule": "default",
+                    "formatting_rule": "trunc",
                     "na": false,
                     "case": false,
                     "_comment": "In Norwegian, the construction terms (translations of ecobuilding etc.) are added to the phrase below as it needs more flexibility in this language. Svanemerk is a Norwegian ecolabelling scheme",
@@ -35,7 +35,7 @@
                 },
                 {
                     "termlist_name": "termlist12_scp2_trunc",
-                    "formatting_rule": "specific_trunc",
+                    "formatting_rule": "no_trunc",
                     "na": false,
                     "case": false,
                     "_comment": "truncated as 'eco' causes noise if not. 'Grønn' (NO) is truncated to avoid 'grønnsak'. Duplicated to separate pre-search.",
@@ -44,7 +44,7 @@
                 },
                 {
                     "termlist_name": "termlist12_scp3",
-                    "formatting_rule": "default",
+                    "formatting_rule": "trunc",
                     "na": false,
                     "case": false,
                     "_comment": "will find e.g. 'miljøsertifisering' (NO)",
@@ -58,7 +58,7 @@
                 },
                 {
                     "termlist_name": "termlist12_scp4_trunc",
-                    "formatting_rule": "specific_trunc",
+                    "formatting_rule": "no_trunc",
                     "na": false,
                     "case": false,
                     "_comment": "Duplicated to separate pre-search.",
@@ -67,7 +67,7 @@
                 },
                 {
                     "termlist_name": "termlist12_scp5",
-                    "formatting_rule": "default",
+                    "formatting_rule": "trunc",
                     "na": false,
                     "case": false,
                     "_comment": "Duplicated to separate pre-search.",
@@ -76,7 +76,7 @@
                 },
                 {
                     "termlist_name": "termlist12_scp6",
-                    "formatting_rule": "default",
+                    "formatting_rule": "trunc",
                     "na": false,
                     "case": false,
                     "_comment": "Duplicated to separate pre-search.",
@@ -89,7 +89,7 @@
                 },
                 {
                     "termlist_name": "termlist12_scp7",
-                    "formatting_rule": "default",
+                    "formatting_rule": "trunc",
                     "na": false,
                     "case": false,
                     "_comment": "Duplicated to separate pre-search.",
@@ -115,7 +115,7 @@
                 },
                 {
                     "termlist_name": "termlist12_scp8_trunc",
-                    "formatting_rule": "specific_trunc",
+                    "formatting_rule": "no_trunc",
                     "na": false,
                     "case": false,
                     "wordlist_en": ["green", "eco", "eco-.*", "sustainab.*", "environmental.*", "ecological.*"],
@@ -123,7 +123,7 @@
                 },
                 {
                     "termlist_name": "termlist12_scp9",
-                    "formatting_rule": "default",
+                    "formatting_rule": "trunc",
                     "na": false,
                     "case": false,
                     "wordlist_en": ["waste", "garbage", "trash", "rubbish", "litter", "sewage", "sludge"],
@@ -139,7 +139,7 @@
                 },
                 {
                     "termlist_name": "termlist12_scp10",
-                    "formatting_rule": "default",
+                    "formatting_rule": "trunc",
                     "na": false,
                     "case": false,
                     "_comment": "'behandling' (NO) not included, as mostly seems to result in e.g. 'miljøbehandling' in health",
@@ -151,7 +151,7 @@
                 },
                 {
                     "termlist_name": "termlist12_scp11",
-                    "formatting_rule": "default",
+                    "formatting_rule": "trunc",
                     "na": false,
                     "case": false,
                     "_comment": "The space in front of 'handling' (EN/NO) is necessary to prevent 'behandling' in Norwegian. Not needed in other languages potentially.",
@@ -190,7 +190,7 @@
             "termlists": [
                 {
                     "termlist_name": "termlist12_scp2_trunc",
-                    "formatting_rule": "specific_trunc",
+                    "formatting_rule": "no_trunc",
                     "na": false,
                     "case": false,
                     "_comment": "truncated as 'eco' causes noise if not. 'Grønn' (NO) is truncated to avoid 'grønnsak'. Duplicated from scp pre-search",
@@ -206,7 +206,7 @@
             "termlists": [
                 {
                     "termlist_name": "termlist12_scp4_trunc",
-                    "formatting_rule": "specific_trunc",
+                    "formatting_rule": "no_trunc",
                     "na": false,
                     "case": false,
                     "_comment": "Duplicated from scp pre-search",
@@ -222,7 +222,7 @@
             "termlists": [
                 {
                     "termlist_name": "termlist12_scp5",
-                    "formatting_rule": "default",
+                    "formatting_rule": "trunc",
                     "na": false,
                     "case": false,
                     "_comment": "Duplicated from scp pre-search",
@@ -238,7 +238,7 @@
             "termlists": [
                 {
                     "termlist_name": "termlist12_scp6",
-                    "formatting_rule": "default",
+                    "formatting_rule": "trunc",
                     "na": false,
                     "case": false,
                     "_comment": "Duplicated from scp pre-search",
@@ -274,7 +274,7 @@
             "termlists": [
                 {
                     "termlist_name": "termlist12_scp7",
-                    "formatting_rule": "default",
+                    "formatting_rule": "trunc",
                     "na": false,
                     "case": false,
                     "_comment": "Duplicated from scp pre-search",
@@ -304,7 +304,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist12_1a",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["10 year framework of program", "10-year framework of program", "10YFP"],
@@ -312,7 +312,7 @@
                         },
                         {
                             "termlist_name": "termlist12_1b_trunc",
-                            "formatting_rule": "specific_trunc",
+                            "formatting_rule": "no_trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["polic.*", "govern.*", "action plan.*", "regulat.*", "legal.*", "law", "laws", "legislat.*", "standards", "code of conduct.*", "accounting", "reporting"],
@@ -320,7 +320,7 @@
                         },
                         {
                             "termlist_name": "termlist12_1c_trunc",
-                            "formatting_rule": "specific_trunc",
+                            "formatting_rule": "no_trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["strateg.*", "framework", "program.*", "plan", "plans", "planning", "target.*", "goal.*", "instrument", "instruments", "national standard", "international standard"],
@@ -340,7 +340,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist12_2a_trunc",
-                            "formatting_rule": "specific_trunc",
+                            "formatting_rule": "no_trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["eco", "eco-.*", "green", "sustainab.*", "responsibl.*", "environmental.*", "ecological", "long-term management"],
@@ -348,7 +348,7 @@
                         },
                         {
                             "termlist_name": "termlist12_2c_trunc",
-                            "formatting_rule": "specific_trunc",
+                            "formatting_rule": "no_trunc",
                             "na": false,
                             "case": false,
                             "_comment": "Duplicated in 12.2 phrase 2, 3 & 4",
@@ -359,7 +359,7 @@
                         },
                         {
                             "termlist_name": "termlist12_2d",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "_comment": "Terms that already indicate USE of resources (2d) - combined with sustainable/eco etc (2a). Duplicated in 12.2 phrase 2, 3 & 4.",
@@ -374,7 +374,7 @@
                         },
                         {
                             "termlist_name": "termlist12_2e",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "_comment": "Terms that are just resources (2e) - combined with sustainable/eco (2a) and management/extraction (2c). Duplicated in 12.2 phrase 2, 3 & 4.",
@@ -391,7 +391,7 @@
                         },
                         {
                             "termlist_name": "termlist12_2e_trunc",
-                            "formatting_rule": "specific_trunc",
+                            "formatting_rule": "no_trunc",
                             "na": false,
                             "case": false,
                             "_comment": "Duplicated in 12.2 phrase 2, 3 & 4",
@@ -400,7 +400,7 @@
                         },
                         {
                             "termlist_name": "termlist12_2f",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["global forest goals", "forest under certification", "certified forest area", "international resource panel"],
@@ -416,7 +416,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist12_2g",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["unsustainab", "irresponsib", "unecological", "inefficien"],
@@ -424,7 +424,7 @@
                         },
                         {
                             "termlist_name": "termlist12_2h_trunc",
-                            "formatting_rule": "specific_trunc",
+                            "formatting_rule": "no_trunc",
                             "na": false,
                             "case": false,
                             "_comment": "Duplicated to 12.2 phrase 4",
@@ -433,7 +433,7 @@
                         },
                         {
                             "termlist_name": "termlist12_2c_trunc",
-                            "formatting_rule": "specific_trunc",
+                            "formatting_rule": "no_trunc",
                             "na": false,
                             "case": false,
                             "_comment": "Duplicated from 12.2 phrase 1",
@@ -444,7 +444,7 @@
                         },
                         {
                             "termlist_name": "termlist12_2d",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "_comment": "Terms that already indicate USE of resources (2d) - combined with sustainable/eco etc (2a). Duplicated from 12.2 phrase 1",
@@ -459,7 +459,7 @@
                         },
                         {
                             "termlist_name": "termlist12_2e",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "_comment": "Terms that are just resources (2e) - combined with sustainable/eco (2a) and management/extraction (2c). Duplicated from 12.2 phrase 1",
@@ -476,7 +476,7 @@
                         },
                         {
                             "termlist_name": "termlist12_2e_trunc",
-                            "formatting_rule": "specific_trunc",
+                            "formatting_rule": "no_trunc",
                             "na": false,
                             "case": false,
                             "_comment": "Duplicated from 12.2 phrase 1",
@@ -493,7 +493,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist12_2i",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["circular econom", "circular bioeconom", "circular product", "circular consumption",
@@ -503,7 +503,7 @@
                         },
                         {
                             "termlist_name": "termlist12_2j",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["efficient consum", "efficient us", "conservative us"],
@@ -511,7 +511,7 @@
                         },
                         {
                             "termlist_name": "termlist12_2d",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "_comment": "Terms that already indicate USE of resources (2d) - combined with sustainable/eco etc (2a). Duplicated from 12.2 phrase 1",
@@ -526,7 +526,7 @@
                         },
                         {
                             "termlist_name": "termlist12_2e",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "_comment": "Terms that are just resources (2e) - combined with sustainable/eco (2a) and management/extraction (2c). Duplicated from 12.2 phrase 1",
@@ -543,7 +543,7 @@
                         },
                         {
                             "termlist_name": "termlist12_2e_trunc",
-                            "formatting_rule": "specific_trunc",
+                            "formatting_rule": "no_trunc",
                             "na": false,
                             "case": false,
                             "_comment": "Duplicated from 12.2 phrase 1",
@@ -560,7 +560,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist12_2k",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["resource", "material"],
@@ -568,7 +568,7 @@
                         },
                         {
                             "termlist_name": "termlist12_2l_trunc",
-                            "formatting_rule": "specific_trunc",
+                            "formatting_rule": "no_trunc",
                             "na": false,
                             "case": false,
                             "_comment": "'using' caused a lot of noise, many results about for example 'Examining resource x USING method y', and not actually about use of the resource. Extraction is specified as 'extracts' gives results from oil extracts",
@@ -584,7 +584,7 @@
                         },
                         {
                             "termlist_name": "termlist12_2d",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "_comment": "Terms that already indicate USE of resources (2d) - combined with sustainable/eco etc (2a). Duplicated from 12.2 phrase 1",
@@ -599,7 +599,7 @@
                         },
                         {
                             "termlist_name": "termlist12_2e",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "_comment": "Terms that are just resources (2e) - combined with sustainable/eco (2a) and management/extraction (2c). Duplicated from 12.2 phrase 1",
@@ -616,7 +616,7 @@
                         },
                         {
                             "termlist_name": "termlist12_2e_trunc",
-                            "formatting_rule": "specific_trunc",
+                            "formatting_rule": "no_trunc",
                             "na": false,
                             "case": false,
                             "_comment": "Duplicated from 12.2 phrase 1",
@@ -625,7 +625,7 @@
                         },
                         {
                             "termlist_name": "termlist12_2h_trunc",
-                            "formatting_rule": "specific_trunc",
+                            "formatting_rule": "no_trunc",
                             "na": false,
                             "case": false,
                             "_comment": "Duplicated from 12.2 phrase 2",
@@ -641,7 +641,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist12_2m",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "_comment": "Space before ' rice' to avoid 'price', similarly 'sau/svin' (NO) and after 'xxxfor' (NO, to avoid 'forbund' etc.). Note that 'agricultur' will also cover e.g. 'ecoagriculture'",
@@ -662,19 +662,18 @@
                         },
                         {
                             "termlist_name": "termlist12_2m_trunc",
-                            "formatting_rule": "specific",
+                            "formatting_rule": "no_trunc",
                             "na": false,
                             "case": false,
-                            "_comment": "Space before ' rice' to avoid 'price', similarly 'sau/svin' (NO) and after 'xxxfor' (NO, to avoid 'forbund' etc.). Note that 'agricultur' will also cover e.g. 'ecoagriculture'",
                             "wordlist_en": [],
                             "wordlist_no": ["sau"]
                         },
                         {
                             "termlist_name": "termlist12_2m_norighttrunc",
-                            "formatting_rule": "specific",
+                            "formatting_rule": "no_right_trunc",
                             "na": false,
                             "case": false,
-                            "_comment": "Space before ' rice' to avoid 'price', similarly 'sau/svin' (NO) and after 'xxxfor' (NO, to avoid 'forbund' etc.). Note that 'agricultur' will also cover e.g. 'ecoagriculture'",
+                            "_comment": "'xxxfor' (NO, to avoid 'forbund' etc.)",
                             "wordlist_en": ["animal feed", "fish feed"],
                             "wordlist_no": ["dyrefor", "fiskefor"]
                         },
@@ -683,13 +682,13 @@
                             "formatting_rule": "no_left_trunc",
                             "na": false,
                             "case": false,
-                            "_comment": "Space before ' rice' to avoid 'price', similarly 'sau/svin' (NO) and after 'xxxfor' (NO, to avoid 'forbund' etc.). Note that 'agricultur' will also cover e.g. 'ecoagriculture'",
+                            "_comment": "Before 'rice' to avoid 'price', similarly 'sau/svin' (NO)",
                             "wordlist_en": ["rice"],
                             "wordlist_no": ["svin", "rein"]
                         },
                         {
                             "termlist_name": "termlist12_2n",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "_comment": "'organic' is not used alone, but is instead combined in phrases to avoid e.g. organic acids, organic matter. Moved to this part rather than 4j as it can stand alone. 'bærekraftig fôr' (NO) is added specifically due to it's inclusion as a priority area ('samfunnsoppdrag') in the governments Long-term plan.",
@@ -700,7 +699,7 @@
                         },
                         {
                             "termlist_name": "termlist12_2o",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["sustainab", "eco-friendly", "environmentally friendly", "ecosystem approach", "ecosystem based",
@@ -728,7 +727,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist12_3a",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["food", "fodder"],
@@ -736,7 +735,7 @@
                         },
                         {
                             "termlist_name": "termlist12_3a_trunc",
-                            "formatting_rule": "specific_trunc",
+                            "formatting_rule": "no_trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["animal feed", "fish feed"],
@@ -744,7 +743,7 @@
                         },
                         {
                             "termlist_name": "termlist12_3b_trunc",
-                            "formatting_rule": "specific_trunc",
+                            "formatting_rule": "no_trunc",
                             "na": false,
                             "case": false,
                             "_comment": "This works ok without the NOT phrase in a title search. Duplicated to 12.3 phrase 2",
@@ -761,7 +760,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist12_3c",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["cereal", "pulses", "fruit", "berry", "berries", "vegetable", "soybean", "lentil", "chickpea", "legume",
@@ -775,7 +774,7 @@
                         },
                         {
                             "termlist_name": "termlist12_3c_trunc",
-                            "formatting_rule": "specific_trunc",
+                            "formatting_rule": "no_trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["crop", "crops", "rice", "fisher.*", "pig", "pigs", "duck", "milk"],
@@ -783,7 +782,7 @@
                         },
                         {
                             "termlist_name": "termlist12_3d",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["production", "processing", "storage", "transport", "distribution", "market", "packaging", "supply chain", "logistics",
@@ -805,7 +804,7 @@
                         },
                         {
                             "termlist_name": "termlist12_3b_trunc",
-                            "formatting_rule": "specific_trunc",
+                            "formatting_rule": "no_trunc",
                             "na": false,
                             "case": false,
                             "_comment": "This works ok without the NOT phrase in a title search. Duplicated from 12.4 phrase 1",
@@ -826,7 +825,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist12_4a_trunc",
-                            "formatting_rule": "specific_trunc",
+                            "formatting_rule": "no_trunc",
                             "na": false,
                             "case": false,
                             "_comment": "Duplicated to 12.4 phrase 2",
@@ -835,7 +834,7 @@
                         },
                         {
                             "termlist_name": "termlist12_4b_trunc",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["life cycle.*", "lifecycle.*", "end of life", "end of chain",
@@ -849,7 +848,7 @@
                         },
                         {
                             "termlist_name": "termlist12_4b",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["life cycle analysis", "lifecycle analysis", "cradle to cradle", "cradle-to-cradle"],
@@ -857,7 +856,7 @@
                         },
                         {
                             "termlist_name": "termlist12_4c",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "_comment": "Duplicated to 12.4 phrase 2, 3 & 4",
@@ -878,7 +877,7 @@
                         },
                         {
                             "termlist_name": "termlist12_4c_trunc",
-                            "formatting_rule": "specific_trunc",
+                            "formatting_rule": "no_trunc",
                             "na": false,
                             "case": false,
                             "_comment": "Duplicated to 12.4 phrase 2, 3 & 4",
@@ -887,7 +886,7 @@
                         },
                         {
                             "termlist_name": "termlist12_4d",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["Dubai Declaration on International Chemicals Management", "Strategic Approach to International Chemicals Management", "SAICM"],
@@ -895,7 +894,7 @@
                         },
                         {
                             "termlist_name": "termlist12_4not",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "_comment": "This is a specific phrase included for the Norwegian searches - there are a number of reports with risk assessments for 'herbicide tolerant' GM crops",
@@ -912,7 +911,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist12_4e_trunc",
-                            "formatting_rule": "specific_trunc",
+                            "formatting_rule": "no_trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["life cycle.*", "lifecycle.*",
@@ -926,7 +925,7 @@
                         },
                         {
                             "termlist_name": "termlist12_4f",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "_comment": "The space after 'litter ' is intentional to stop 'litteratur' (NO)",
@@ -944,7 +943,7 @@
                         },
                         {
                             "termlist_name": "termlist12_4f_norighttrunc",
-                            "formatting_rule": "specific",
+                            "formatting_rule": "no_right_trunc",
                             "na": false,
                             "case": false,
                             "_comment": "The space after 'litter ' is intentional to stop 'litteratur' (NO)",
@@ -953,7 +952,7 @@
                         },
                         {
                             "termlist_name": "termlist12_4g",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["recycl", "reuse", "re-use", "reusing", "re-using",
@@ -966,7 +965,7 @@
                         },
                         {
                             "termlist_name": "termlist12_4h",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["Basel Convention", "Rotterdam Convention", "Stockholm Convention", "Montreal Protocol", "Minamata Convention", "Bamako Convention"],
@@ -975,7 +974,7 @@
                         },
                         {
                             "termlist_name": "termlist12_4a_trunc",
-                            "formatting_rule": "specific_trunc",
+                            "formatting_rule": "no_trunc",
                             "na": false,
                             "case": false,
                             "_comment": "Duplicated from 12.4 phrase 1",
@@ -988,11 +987,11 @@
                     "number": 3,
                     "logic_rule": "(([termlist12_4i] | [termlist12_4i_trunc]) & [termlist12_4j] & ([termlist12_4c] | [termlist12_4c_trunc] | ([termlist12_4f] | [termlist12_4f_nolefttrunc] | [termlist12_4f_norighttrunc])))",
                     "sentence_split": false,
-                    "_comment": "Reuse phrasedefault12_4f, phrasedefault12_4c and phrasespecific12_4c from phrases 1 and 2 (wastes and chemicals)",
+                    "_comment": "Reuse phrasetrunc12_4f, phrasetrunc12_4c and phrasespecific12_4c from phrases 1 and 2 (wastes and chemicals)",
                     "termlists": [
                         {
                             "termlist_name": "termlist12_4i",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["reduc", "minim", "decreas", "stopping", "avoid", "prevent", "combat", "tackl", "resist", "lowering", "lowered", "prohibit", "cleanup", "clean up"],
@@ -1000,7 +999,7 @@
                         },
                         {
                             "termlist_name": "termlist12_4i_trunc",
-                            "formatting_rule": "specific_trunc",
+                            "formatting_rule": "no_trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["stop", "end", "ends", "ending", "ended", "halt", "halting", "lower"],
@@ -1008,7 +1007,7 @@
                         },
                         {
                             "termlist_name": "termlist12_4j",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["releas", "emission", "effluent", "discharge", "pollut", "contaminat"],
@@ -1016,7 +1015,7 @@
                         },
                         {
                             "termlist_name": "termlist12_4f",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "_comment": "The space after 'litter ' is intentional to stop 'litteratur' (NO)",
@@ -1034,7 +1033,7 @@
                         },
                         {
                             "termlist_name": "termlist12_4f_norighttrunc",
-                            "formatting_rule": "specific",
+                            "formatting_rule": "no_right_trunc",
                             "na": false,
                             "case": false,
                             "_comment": "The space after 'litter ' is intentional to stop 'litteratur' (NO)",
@@ -1043,7 +1042,7 @@
                         },
                         {
                             "termlist_name": "termlist12_4c",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "_comment": "Duplicated from 12.4 phrase 1",
@@ -1064,7 +1063,7 @@
                         },
                         {
                             "termlist_name": "termlist12_4c_trunc",
-                            "formatting_rule": "specific_trunc",
+                            "formatting_rule": "no_trunc",
                             "na": false,
                             "case": false,
                             "_comment": "Duplicated from 12.4 phrase 1",
@@ -1077,11 +1076,11 @@
                     "number": 4,
                     "logic_rule": "(([termlist12_4k] | [termlist12_4k_trunc]) & [termlist12_4l] & ([termlist12_4c] | [termlist12_4c_trunc] | ([termlist12_4f] | [termlist12_4f_nolefttrunc] | [termlist12_4f_norighttrunc])))",
                     "sentence_split": false,
-                    "_comment": "Reuse phrasedefault12_4f, phrasedefault12_4c and phrasespecific12_4c from phrases 1 and 2 (wastes and chemicals)",
+                    "_comment": "Reuse phrasetrunc12_4f, phrasetrunc12_4c and phrasespecific12_4c from phrases 1 and 2 (wastes and chemicals)",
                     "termlists": [
                         {
                             "termlist_name": "termlist12_4k",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "_comment": "inkludert 'minim' fra EN liste. Må dobbeltsjekkes at det ikke gir irrelevante treff",
@@ -1090,7 +1089,7 @@
                         },
                         {
                             "termlist_name": "termlist12_4k_trunc",
-                            "formatting_rule": "specific_trunc",
+                            "formatting_rule": "no_trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["stop", "stopping", "lower"],
@@ -1098,7 +1097,7 @@
                         },
                         {
                             "termlist_name": "termlist12_4l",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["health", "wellbeing", "well-being", "risk", "hazard", "danger", "effect"],
@@ -1106,10 +1105,9 @@
                         },
                         {
                             "termlist_name": "termlist12_4f",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
-                            "_comment": "The space after 'litter ' is intentional to stop 'litteratur' (NO)",
                             "wordlist_en": ["waste", "garbage", "trash", "rubbish", "sewage", "sludge", "street sweepings", "construction debris", "demolition debris"],
                             "wordlist_no": ["avfall", "søppel", "kloakk", "byggrester"]
                         },
@@ -1118,22 +1116,20 @@
                             "formatting_rule": "no_left_trunc",
                             "na": false,
                             "case": false,
-                            "_comment": "The space after 'litter ' is intentional to stop 'litteratur' (NO)",
                             "wordlist_en": [],
                             "wordlist_no": ["slam"]
                         },
                         {
                             "termlist_name": "termlist12_4f_norighttrunc",
-                            "formatting_rule": "specific",
+                            "formatting_rule": "no_right_trunc",
                             "na": false,
                             "case": false,
-                            "_comment": "The space after 'litter ' is intentional to stop 'litteratur' (NO)",
                             "wordlist_en": ["litter"],
                             "wordlist_no": []
                         },
                         {
                             "termlist_name": "termlist12_4c",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "_comment": "Duplicated from 12.4 phrase 1",
@@ -1154,7 +1150,7 @@
                         },
                         {
                             "termlist_name": "termlist12_4c_trunc",
-                            "formatting_rule": "specific_trunc",
+                            "formatting_rule": "no_trunc",
                             "na": false,
                             "case": false,
                             "_comment": "Duplicated from 12.4 phrase 1",
@@ -1175,7 +1171,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist12_5a",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "_comment": "Waste terms with multiple meanings. The space after 'litter ' is intentional to stop 'litteratur' (NO)",
@@ -1184,7 +1180,7 @@
                         },
                         {
                             "termlist_name": "termlist12_5b",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "_comment": "Waste terms which are generally to do with physical/chemical waste. Most Norwegian terms are covered by 'avfall' (e.g. spesialavfall, landbruksavfall) and don't needs specifying.",
@@ -1204,7 +1200,7 @@
                         },
                         {
                             "termlist_name": "termlist12_5c",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["household", "domestic", "residential", 
@@ -1217,7 +1213,7 @@
                         },
                         {
                             "termlist_name": "termlist12_5d",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["generation", "generated"],
@@ -1225,7 +1221,7 @@
                         },
                         {
                             "termlist_name": "termlist12_5e_trunc",
-                            "formatting_rule": "specific_trunc",
+                            "formatting_rule": "no_trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["reduc.*", "minimi.*", "decreas.*", "stop", "end", "ends", "ended", "ending", "eliminat.*",
@@ -1241,7 +1237,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist12_5f",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["recycl", "reuse", "re-use", "reusing", "re-using",
@@ -1257,7 +1253,7 @@
                         },
                         {
                             "termlist_name": "termlist12_5g",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["sidestream", "side-stream", "byproduct", "by-product",
@@ -1275,7 +1271,7 @@
                         },
                         {
                             "termlist_name": "termlist12_5h",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["recycl", "reuse", "re-use", "reusing", "re-using",
@@ -1288,7 +1284,7 @@
                         },
                         {
                             "termlist_name": "termlist12_5i",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["bioeconom", "bio-econom", 
@@ -1300,7 +1296,7 @@
                         },
                         {
                             "termlist_name": "termlist12_5j",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["circular econom", "circular bioeconom", "circular product", "circular consumption", "zero waste"],
@@ -1308,7 +1304,7 @@
                         },
                         {
                             "termlist_name": "termlist12_5k",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["footprint", "lifecycle analys", "lifecycle assess", "material lifecycle", "cradle to cradle", "cradle-to-cradle"],
@@ -1316,7 +1312,7 @@
                         },
                         {
                             "termlist_name": "termlist12_5l",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["recycl", "reuse"],
@@ -1337,7 +1333,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist12_6a",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "_comment": "Dulidated to 12.6 phrase 2",
@@ -1346,7 +1342,7 @@
                         },
                         {
                             "termlist_name": "termlist12_6c",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "_comment": "'Industri' (NO) has a space after to prevent 'industriasliert' but allow e.g. 'kjemikalieindustri'. Duplicated to 12.6 phrase 2",
@@ -1359,16 +1355,16 @@
                         },
                         {
                             "termlist_name": "termlist12_6c_norighttrunc",
-                            "formatting_rule": "specific",
+                            "formatting_rule": "no_right_trunc",
                             "na": false,
                             "case": false,
-                            "_comment": "'Industri' (NO) has a space after to prevent 'industriasliert' but allow e.g. 'kjemikalieindustri'. Duplicated to 12.6 phrase 2",
+                            "_comment": "'Industri' (NO) no right trunc to prevent 'industriasliert' but allow e.g. 'kjemikalieindustri'. Duplicated to 12.6 phrase 2",
                             "wordlist_en": [],
                             "wordlist_no": ["industri"]
                         },
                         {
                             "termlist_name": "termlist12_6c_trunc",
-                            "formatting_rule": "specific_trunc",
+                            "formatting_rule": "no_trunc",
                             "na": false,
                             "case": false,
                             "_comment": "Duplicated to 12.6 phrase 2",
@@ -1381,11 +1377,11 @@
                     "number": 2,
                     "logic_rule": "((([termlist12_6d] & [termlist12_6e]) | [termlist12_6f]) & ([termlist12_6c] | [termlist12_6c_trunc] | [termlist12_6c_norighttrunc]))",
                     "sentence_split": false,
-                    "_comment": "Reuse lists phrasespecific12_6c and phrasedefault12_6c from phrase 1 for companies terms",
+                    "_comment": "Reuse lists phrasespecific12_6c and phrasetrunc12_6c from phrase 1 for companies terms",
                     "termlists": [
                         {
                             "termlist_name": "termlist12_6d",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "_comment": "'environmental' works ok alone in English, but in Norwegian (miljø) creates some noise.",
@@ -1394,7 +1390,7 @@
                         },
                         {
                             "termlist_name": "termlist12_6e",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["report", "accounting", "publish", "disclos"],
@@ -1402,7 +1398,7 @@
                         },
                         {
                             "termlist_name": "termlist12_6f",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["environmental information disclos"],
@@ -1410,7 +1406,7 @@
                         },
                         {
                             "termlist_name": "termlist12_6a",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "_comment": "Duplicated from 12.6 phrase 1",
@@ -1419,7 +1415,7 @@
                         },
                         {
                             "termlist_name": "termlist12_6c",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "_comment": "'Industri' (NO) has a space after to prevent 'industriasliert' but allow e.g. 'kjemikalieindustri'. Duplicated to 12.6 phrase 2",
@@ -1432,16 +1428,16 @@
                         },
                         {
                             "termlist_name": "termlist12_6c_norighttrunc",
-                            "formatting_rule": "specific",
+                            "formatting_rule": "no_right_trunc",
                             "na": false,
                             "case": false,
-                            "_comment": "'Industri' (NO) has a space after to prevent 'industriasliert' but allow e.g. 'kjemikalieindustri'. Duplicated to 12.6 phrase 2",
+                            "_comment": "'Industri' (NO) no right trunc to prevent 'industriasliert' but allow e.g. 'kjemikalieindustri'. Duplicated to 12.6 phrase 2",
                             "wordlist_en": [],
                             "wordlist_no": ["industri"]
                         },
                         {
                             "termlist_name": "termlist12_6c_trunc",
-                            "formatting_rule": "specific_trunc",
+                            "formatting_rule": "no_trunc",
                             "na": false,
                             "case": false,
                             "_comment": "Duplicated from 12.6 phrase 1",
@@ -1462,7 +1458,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist12_7a",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "_comment": "Not needed.",
@@ -1472,7 +1468,7 @@
                         },
                         {
                             "termlist_name": "termlist12_7b",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["fair trade", "human rights",
@@ -1486,7 +1482,7 @@
                         },
                         {
                             "termlist_name": "termlist12_7c",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["procurement", "aquisition", "purchas", "contract", "tender"],
@@ -1494,7 +1490,7 @@
                         },
                         {
                             "termlist_name": "termlist12_7d",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "_comment": "We have not included 7d in the final search as it lost relevant results in a title search. A few less relevant creep in (about e.g. consumer purchasing), but more relevant are lost.",
@@ -1515,7 +1511,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist12_8a",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["education for sustainable", "education in sustainable", "sustainable development educat", "sustainability educat"],
@@ -1523,7 +1519,7 @@
                         },
                         {
                             "termlist_name": "termlist12_8b",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["awareness", "lifelong learn", "life-long learn"],
@@ -1531,7 +1527,7 @@
                         },
                         {
                             "termlist_name": "termlist12_8c",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "_comment": "Inkludert 'inform' fra EN liste. Må dobbeltsjekkes at det ikke gir irrelevante treff",
@@ -1540,7 +1536,7 @@
                         },
                         {
                             "termlist_name": "termlist12_8g",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["consumer", "customer", "resident", "visitor", "guest", "tourist", "employee", "farmer",
@@ -1554,7 +1550,7 @@
                         },
                         {
                             "termlist_name": "termlist12_8d_trunc",
-                            "formatting_rule": "specific_trunc",
+                            "formatting_rule": "no_trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["green", "eco", "eco-.*", "sustainab.*", "environmental.*", "ecological.*", "social responsib", "socially responsib", "circular",
@@ -1577,7 +1573,7 @@
                         },
                         {
                             "termlist_name": "termlist12_8e",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["responsible"],
@@ -1585,7 +1581,7 @@
                         },
                         {
                             "termlist_name": "termlist12_8f_trunc",
-                            "formatting_rule": "specific_trunc",
+                            "formatting_rule": "no_trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["consumer.*", "consumption", "tourism", "product", "lifestyle.*", "life-style.*", "purchas.*", "waste"],
@@ -1606,7 +1602,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist12_a1",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "_comment": "Duplicated to 12.a phrase 2",
@@ -1635,7 +1631,7 @@
                         },
                         {
                             "termlist_name": "termlist12_a1_trunc",
-                            "formatting_rule": "specific_trunc",
+                            "formatting_rule": "no_trunc",
                             "na": false,
                             "case": false,
                             "_comment": "Duplicated to 12.a phrase 2",
@@ -1652,7 +1648,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist12_a2",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["energy transition",  
@@ -1669,7 +1665,7 @@
                         },
                         {
                             "termlist_name": "termlist12_a3",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["power", "energy", "electricity"],
@@ -1677,7 +1673,7 @@
                         },
                         {
                             "termlist_name": "termlist12_a4",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["clean", "sustainab", "renewable",
@@ -1692,7 +1688,7 @@
                         },
                         {
                             "termlist_name": "termlist12_a1",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "_comment": "Duplicated from 12.a phrase 1",
@@ -1721,7 +1717,7 @@
                         },
                         {
                             "termlist_name": "termlist12_a1_trunc",
-                            "formatting_rule": "specific_trunc",
+                            "formatting_rule": "no_trunc",
                             "na": false,
                             "case": false,
                             "_comment": "Duplicated from 12.a phrase 1",
@@ -1743,7 +1739,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist12_b1",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["monitor", "report", "account", "control", "measur", "assess", "evaluat", "survey"],
@@ -1751,7 +1747,7 @@
                         },
                         {
                             "termlist_name": "termlist12_b2",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["tourism", "tourist", "hospitality", "leisure", "air travel", "hotel"],
@@ -1767,7 +1763,7 @@
                         },
                         {
                             "termlist_name": "termlist12_b3",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["ecotourism"],
@@ -1787,7 +1783,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist12_c2",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["subsidi", "subsidy", "fiscal incentive", "price support", "underpricing", "underprice", "under-pricing", "under-price", "under pricing", "under price", 
@@ -1812,7 +1808,7 @@
                         },
                         {
                             "termlist_name": "termlist12_c3",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "_comment": "duplicated in phrase 2",
@@ -1821,7 +1817,7 @@
                         },
                         {
                             "termlist_name": "termlist12_c3_trunc",
-                            "formatting_rule": "specific_trunc",
+                            "formatting_rule": "no_trunc",
                             "na": false,
                             "case": false,
                             "_comment": "duplicated in phrase 2",
@@ -1838,7 +1834,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist12_c5_trunc",
-                            "formatting_rule": "specific_trunc",
+                            "formatting_rule": "no_trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["taxation", "tax", "taxes", "tariff.*", "duty", "duties", "fees", "fee"],
@@ -1846,7 +1842,7 @@
                         },
                         {
                             "termlist_name": "termlist12_c6",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["heavy duty", "light duty", "medium duty"],
@@ -1854,7 +1850,7 @@
                         },
                         {
                             "termlist_name": "termlist12_c3",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "_comment": "duplicated from phrase 1",
@@ -1863,7 +1859,7 @@
                         },
                         {
                             "termlist_name": "termlist12_c3_trunc",
-                            "formatting_rule": "specific_trunc",
+                            "formatting_rule": "no_trunc",
                             "na": false,
                             "case": false,
                             "_comment": "duplicated from phrase 1",
@@ -1880,7 +1876,7 @@
         "termlists": [
             {
                 "termlist_name": "termlist12_1",
-                "formatting_rule": "default",
+                "formatting_rule": "trunc",
                 "na": false,
                 "case": false,
                 "wordlist_en": ["SDG 12", "SDGs 12", "SDG12", "sustainable development goal 12"],
@@ -1888,7 +1884,7 @@
             },
             {
                 "termlist_name": "termlist12_2",
-                "formatting_rule": "default",
+                "formatting_rule": "trunc",
                 "na": false,
                 "case": false,
                 "wordlist_en": ["sustainable development goal"],
@@ -1896,7 +1892,7 @@
             },
             {
                 "termlist_name": "termlist12_3",
-                "formatting_rule": "default",
+                "formatting_rule": "trunc",
                 "na": false,
                 "case": false,
                 "wordlist_en": ["goal 12"],
@@ -1904,7 +1900,7 @@
             },
             {
                 "termlist_name": "termlist12_4",
-                "formatting_rule": "default",
+                "formatting_rule": "trunc",
                 "na": false,
                 "case": false,
                 "wordlist_en": ["sustainable development goal", "SDG", "goal 12"],
@@ -1912,7 +1908,7 @@
             },
             {
                 "termlist_name": "termlist12_5",
-                "formatting_rule": "default",
+                "formatting_rule": "trunc",
                 "na": false,
                 "case": false,
                 "_comment": "Possible search for the short titles of the SDGs, to be used in a title search",

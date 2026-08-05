@@ -14,7 +14,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist4_1_1a",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["completing", "completes", "completion", "finish", "graduat"],
@@ -22,7 +22,7 @@
                         },
                         {
                             "termlist_name": "termlist4_1_1aa",
-                            "formatting_rule": "specific_trunc",
+                            "formatting_rule": "no_trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["complete"],
@@ -30,7 +30,7 @@
                         },
                         {
                             "termlist_name": "termlist4_1_1b",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["primary school", "elementary school", 
@@ -41,7 +41,7 @@
                         },
                         {
                             "termlist_name": "termlist4_1_1c",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": [],
@@ -49,7 +49,7 @@
                         },
                         {
                             "termlist_name": "termlist4_1_1cc",
-                            "formatting_rule": "specific_trunc",
+                            "formatting_rule": "no_trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["education"],
@@ -58,7 +58,7 @@
                         },
                         {
                             "termlist_name": "termlist4_1_1ccc",
-                            "formatting_rule": "specific",
+                            "formatting_rule": "no_right_trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["school"],
@@ -67,7 +67,7 @@
                         },
                         {
                             "termlist_name": "termlist4_1_1d",
-                            "formatting_rule": "specific",
+                            "formatting_rule": "no_right_trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["boys", "girls", "kids", "child", "children", "pupil"],
@@ -91,7 +91,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist4_1_2a",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["dropout", "drop-out", "drop out", "dropping out", "early school-leaving"],
@@ -99,7 +99,7 @@
                         },
                         {
                             "termlist_name": "termlist4_1_2b",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["primary school", "elementary school", "primary educat", 
@@ -110,7 +110,7 @@
                         },
                         {
                             "termlist_name": "termlist4_1_2c",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["school", "education"],
@@ -118,7 +118,7 @@
                         },
                         {
                             "termlist_name": "termlist4_1_2d",
-                            "formatting_rule": "specific",
+                            "formatting_rule": "no_right_trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["boys", "girls", "kids", "child", "children", "pupil"],
@@ -150,7 +150,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist4_1_3a",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["access", "entry", "enroll", "admission", "admit"],
@@ -158,7 +158,7 @@
                         },
                         {
                             "termlist_name": "termlist4_1_3b",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["primary school", "elementary school", "primary educat", 
@@ -169,7 +169,7 @@
                         },
                         {
                             "termlist_name": "termlist4_1_3c",
-                            "formatting_rule": "specific_trunc",
+                            "formatting_rule": "no_trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["enter"],
@@ -185,7 +185,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist4_1_4a",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["basic", "fundamental", "minim", "elementary"],
@@ -202,7 +202,7 @@
                         },
                         {
                             "termlist_name": "termlist4_1_4b",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["proficienc", "skill", "comprehen", "literac", "mathematic", "reading",  
@@ -211,7 +211,7 @@
                         },
                         {
                             "termlist_name": "termlist4_1_4c",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": [],  
@@ -219,7 +219,7 @@
                         },
                         {
                             "termlist_name": "termlist4_1_4d",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["reading", "mathematic", "math", "maths", "numera"],
@@ -228,7 +228,7 @@
                         },
                         {
                             "termlist_name": "termlist4_1_4e",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["school", "student", "boys", "girls", "kids", "child", "pupil"],
@@ -244,7 +244,7 @@
                         },
                         {
                             "termlist_name": "termlist4_1_4ff",
-                            "formatting_rule": "specific_trunc",
+                            "formatting_rule": "no_trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["read"],
@@ -264,7 +264,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist4_2_1a",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["access", "obstacle", "barrier", "hinder", "hindrance", "equit"],
@@ -272,7 +272,7 @@
                         },
                         {
                             "termlist_name": "termlist4_2_1b",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["early childhood care", "kindergarten", "pre-kindergarten", "nurser", 
@@ -281,7 +281,7 @@
                         },
                     {
                             "termlist_name": "termlist4_2_1c",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["early childhood", "under five", "under-five"],
@@ -289,7 +289,7 @@
                         },
                     {
                             "termlist_name": "termlist4_2_1d",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["education"],
@@ -297,7 +297,7 @@
                         },
                     {
                             "termlist_name": "termlist4_2_1e",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": [],
@@ -313,7 +313,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist4_2_2a",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["school ready", "school-ready", "school readiness", "school-readiness"],
@@ -321,7 +321,7 @@
                         },
                         {
                             "termlist_name": "termlist4_2_2b",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["ready", "readiness", "prepared", "transition"],
@@ -329,7 +329,7 @@
                         },
                         {
                             "termlist_name": "termlist4_2_2c",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["primary education", "primary school", "elementary school", "first grade", "1st grade"],
@@ -337,7 +337,7 @@
                         },
                         {
                             "termlist_name": "termlist4_2_2d",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["development"],
@@ -345,7 +345,7 @@
                         },
                         {
                             "termlist_name": "termlist4_2_2e",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["child", "under-five", "early childhood"],
@@ -353,7 +353,7 @@
                         },
                         {
                             "termlist_name": "termlist4_2_2f",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["school entry", "start school", "start school"],
@@ -361,7 +361,7 @@
                         },
                         {
                             "termlist_name": "termlist4_2_2g",
-                            "formatting_rule": "specific_trunc",
+                            "formatting_rule": "no_trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": [],
@@ -369,7 +369,7 @@
                         },
                         {
                             "termlist_name": "termlist4_2_2h",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": [],
@@ -389,7 +389,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist4_3_1a",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["access", "inclusion", "inclusiv", "equit", "equal", "afford", "barrier", "obstacle", "discriminat"],
@@ -397,7 +397,7 @@
                         },
                         {
                             "termlist_name": "termlist4_3_1c",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["higher education"],
@@ -405,7 +405,7 @@
                         },
                         {
                             "termlist_name": "termlist4_3_1d",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["universit", "college"],
@@ -413,7 +413,7 @@
                         },
                         {
                             "termlist_name": "termlist4_3_1e",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["admission", "enrol", "access"],
@@ -421,7 +421,7 @@
                         },
                         {
                             "termlist_name": "termlist4_3_1f",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["technic", "vocation", "tertiar", "university", "postsecondary", "post secondary"],
@@ -429,7 +429,7 @@
                         },
                         {
                             "termlist_name": "termlist4_3_1g",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["education", "training", "school", "learning"],
@@ -437,7 +437,7 @@
                         },
                         {
                             "termlist_name": "termlist4_3_1h",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["open access", "equals", "accession", "library", "hospital"],
@@ -453,7 +453,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist4_3_3a",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["inclusive", "inclusion"],
@@ -461,7 +461,7 @@
                         },
                         {
                             "termlist_name": "termlist4_3_3b",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["higher education"],
@@ -481,7 +481,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist4_4_1a",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["skill", "competenc", "literac"],
@@ -498,7 +498,7 @@
                         },
                         {
                             "termlist_name": "termlist4_4_1b",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["employability", "employment", "decent job", "decent work", "entrepreneurship"],
@@ -506,7 +506,7 @@
                         },
                         {
                             "termlist_name": "termlist4_4_1c",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["entrepreneurship education", "entrepreneur education", "entrepreneurial education"],
@@ -521,7 +521,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist4_4_2a",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["unemploy", "underemploy", "out of work", "not in work"],
@@ -529,7 +529,7 @@
                         },
                         {
                             "termlist_name": "termlist4_4_2acaps",
-                            "formatting_rule": "specific_trunc",
+                            "formatting_rule": "no_trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["NEET", "NEETs"],
@@ -537,7 +537,7 @@
                         },
                         {
                             "termlist_name": "termlist4_4_2b",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["skill", "employability", "competenc", "litera", "continuing education", "lifelong learning", "life long learning", "adult learning", 
@@ -562,7 +562,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist4_4_3a",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["read", "writ", "comput", "literacy", "numeracy"],
@@ -571,7 +571,7 @@
                         },
                         {
                             "termlist_name": "termlist4_4_3b",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["basic technolog", "specialized", "specialised"],
@@ -579,7 +579,7 @@
                         },
                         {
                             "termlist_name": "termlist4_4_3c",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["skills", "knowledge"],
@@ -587,7 +587,7 @@
                         },
                         {
                             "termlist_name": "termlist4_4_3d",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["learn and adapt"],
@@ -595,7 +595,7 @@
                         },
                         {       
                             "termlist_name": "termlist4_4_3e",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["listen", "communicat"],
@@ -603,7 +603,7 @@
                         },
                         {
                             "termlist_name": "termlist4_4_3f",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["skills", "effective"],
@@ -611,7 +611,7 @@
                         },
                         {
                             "termlist_name": "termlist4_4_3g",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": [],
@@ -619,7 +619,7 @@
                         },
                         {
                             "termlist_name": "termlist4_4_3h",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["think creatively", "creative thinking", "solve problem", "problem-solv"],
@@ -627,7 +627,7 @@
                         },
                         {
                             "termlist_name": "termlist4_4_3i",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["interact"],
@@ -635,7 +635,7 @@
                         },
                         {
                             "termlist_name": "termlist4_4_3j",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["co-work", "colleague"],
@@ -643,7 +643,7 @@
                         },
                         {
                             "termlist_name": "termlist4_4_3k",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["work"],
@@ -651,7 +651,7 @@
                         },
                         {
                             "termlist_name": "termlist4_4_3l",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["team", "group"],
@@ -659,7 +659,7 @@
                         },
                         {
                             "termlist_name": "termlist4_4_3m",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["education", "professional development", "adult education", "adult learning", "lifelong learning", "life long learning", "employee development", "new skills"],
@@ -667,7 +667,7 @@
                         },
                         {
                             "termlist_name": "termlist4_4_3n",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["leader"],
@@ -675,7 +675,7 @@
                         },
                         {
                             "termlist_name": "termlist4_4_3o",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["follow"],
@@ -683,7 +683,7 @@
                         },
                         {
                             "termlist_name": "termlist4_4_3p",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["supervi"],
@@ -691,7 +691,7 @@
                         },
                         {
                             "termlist_name": "termlist4_4_3q",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["transfer"],
@@ -699,7 +699,7 @@
                         },
                         {
                             "termlist_name": "termlist4_4_3r",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["skills"],
@@ -707,7 +707,7 @@
                         },
                         {
                             "termlist_name": "termlist4_4_3s",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["employability", "employable"],
@@ -722,7 +722,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist4_4_4a",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["information and communication technology", "ICT", "vocational", "technical", "technolog", "comput", "data", "digital", "information"],
@@ -730,7 +730,7 @@
                         },
                         {
                             "termlist_name": "termlist4_4_4b",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["skill", "competen", "literac"],
@@ -738,7 +738,7 @@
                         },
                         {
                             "termlist_name": "termlist4_4_4c",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": [],
@@ -746,7 +746,7 @@
                         },
                         {
                             "termlist_name": "termlist4_4_4d",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["employab", "employment", "job", "decent work"],
@@ -766,7 +766,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist4_5_1a",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["gender", "girl", "woman", "women", "female", "boy", "male"],
@@ -774,7 +774,7 @@
                         },
                          {
                             "termlist_name": "termlist4_5_1b",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["equit", "equal", "balanc"],
@@ -782,7 +782,7 @@
                         },
                          {
                             "termlist_name": "termlist4_5_1c",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": [],
@@ -790,7 +790,7 @@
                         },
                          {
                             "termlist_name": "termlist4_5_1d",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["school", "education", "vocational training", "student"],
@@ -805,7 +805,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist4_5_2a",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["gender", "girl", "woman", "women", "female", "boy", "male"],
@@ -813,7 +813,7 @@
                         },
                         {
                             "termlist_name": "termlist4_5_2b",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["non-equit", "non-equal", "inequal", "unequal", "unbalanc", "imbalanc", "disparit", "discriminat", "obstacle", "barrier", "hindrance", "hinder", "bias", "parity", "gap"],
@@ -821,7 +821,7 @@
                         },
                         {
                             "termlist_name": "termlist4_5_2c",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["gender gap", "gender parity"],
@@ -829,7 +829,7 @@
                         },
                         {
                             "termlist_name": "termlist4_5_2d",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["school", "education", "vocational training", "student"],
@@ -837,7 +837,7 @@
                         },
                         {
                             "termlist_name": "termlist4_5_2e",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["mortality", "health", "wealth"],
@@ -845,7 +845,7 @@
                         },
                         {
                             "termlist_name": "termlist4_5_2f",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["difference", "discrepan"],
@@ -853,7 +853,7 @@
                         },
                         {
                             "termlist_name": "termlist4_5_2g",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["complet", "perform", "success", "achieve", "access", "enter", "entry", "enroll", "admission", "admit", "graduation", "graduating", "attend"],
@@ -868,7 +868,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist4_5_3a",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["access", "admission", "admit", "attend", "entry", "enrol", "inclusion", "inclusiv", "non-discriminat", "equitab",
@@ -878,7 +878,7 @@
                         },
                         {
                             "termlist_name": "termlist4_5_3b",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["discriminat", "non-discriminat", "inequit", "unequit", "disparit", "barrier", "obstacle", "exclusion", "excluding"],
@@ -886,7 +886,7 @@
                         },
                         {
                             "termlist_name": "termlist4_5_3c",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["school", "vocational training"],
@@ -894,7 +894,7 @@
                         },
                         {
                             "termlist_name": "termlist4_5_3cc",
-                            "formatting_rule": "specific",
+                            "formatting_rule": "no_right_trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["education"],
@@ -902,7 +902,7 @@
                         },
                         {
                             "termlist_name": "termlist4_5_3d",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["person", "people", "adult", "child", "student", "youth", "adolescent"],
@@ -910,7 +910,7 @@
                         },
                         {
                             "termlist_name": "termlist4_5_3e",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["disabled", "disabilit", "unemployed", "older", "elderly", "poor", "poverty", "disadvantaged", "vulnerab", "displaced", "marginali", "developing countr",
@@ -923,7 +923,7 @@
                         },
                         {
                             "termlist_name": "termlist4_5_3f",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["disab", "disadvantage", "vulnerab", "indigenous", "the poor", "refugee", "asylum", "displaced", "migrant", 
@@ -934,7 +934,7 @@
                         },
                         {
                             "termlist_name": "termlist4_5_3g",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["special educat", "special needs educat", "inclusive education", "aided education"],
@@ -942,7 +942,7 @@
                         },
                         {
                             "termlist_name": "termlist4_5_3h",
-                            "formatting_rule": "specific_trunc",
+                            "formatting_rule": "no_trunc",
                             "na": false,
                             "case": true,
                             "wordlist_en": ["SEN"],
@@ -962,7 +962,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist4_6_1a",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["proficienc", "skill", "comprehension", "comprehend", "literac"],
@@ -970,7 +970,7 @@
                         },
                          {
                             "termlist_name": "termlist4_6_1b",
-                            "formatting_rule": "specific_trunc",
+                            "formatting_rule": "no_trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["ability", "abilities", "level"],
@@ -978,7 +978,7 @@
                         },
                          {
                             "termlist_name": "termlist4_6_1c",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["reading", "literate", "maths", "mathematics", "numera"],
@@ -987,7 +987,7 @@
                         },
                          {
                             "termlist_name": "termlist4_6_1d",
-                            "formatting_rule": "specific_trunc",
+                            "formatting_rule": "no_trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["read", "mathematic"],
@@ -995,7 +995,7 @@
                         },
                          {
                             "termlist_name": "termlist4_6_1e",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["teacher", "readability", "readiness", "spread", "information literacy"],
@@ -1004,7 +1004,7 @@
                         },
                          {
                             "termlist_name": "termlist4_6_1f",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["core literacy", "functional literacy", "basic literacy"],
@@ -1027,7 +1027,7 @@
                         },
                         {
                             "termlist_name": "termlist4_6_2a",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["illitera"],
@@ -1035,7 +1035,7 @@
                         },
                         {
                             "termlist_name": "termlist4_6_2b",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["reading", "mathematic", "maths", "mathematics", "numera"],
@@ -1044,7 +1044,7 @@
                         },
                         {
                             "termlist_name": "termlist4_6_2c",
-                            "formatting_rule": "specific_trunc",
+                            "formatting_rule": "no_trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["read", "literate"],
@@ -1064,7 +1064,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist4_7_1a",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["educat", "curricul", "student assess", "teaching", "teacher education", 
@@ -1074,7 +1074,7 @@
                         },
                         {
                             "termlist_name": "termlist4_7_1b",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["learn"],
@@ -1082,7 +1082,7 @@
                         },
                         {
                             "termlist_name": "termlist4_7_1c",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": [],
@@ -1090,7 +1090,7 @@
                         },
                         {
                             "termlist_name": "termlist4_7_1d",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["student"],
@@ -1098,7 +1098,7 @@
                         },
                         {
                             "termlist_name": "termlist4_7_1e",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["sustainable development", "sustainable lifestyle", "global citizen", "glocal", 
@@ -1109,7 +1109,7 @@
                         },
                         {
                             "termlist_name": "termlist4_7_1f",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["sustainability"],
@@ -1117,7 +1117,7 @@
                         },
                         {
                             "termlist_name": "termlist4_7_1g",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["interdisciplinar", "transdisciplinar", "crossdisciplinar", "cultural", "economic", "ecological", 
@@ -1127,7 +1127,7 @@
                         },
                         {
                             "termlist_name": "termlist4_7_1h",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["Global Citizenship Education"],
@@ -1150,7 +1150,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist4_7_2a",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["education for sustainab", "education in sustainab", "education on sustainab", 
@@ -1160,7 +1160,7 @@
                         },
                         {
                             "termlist_name": "termlist4_7_2b",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["whole school", "teaching"],
@@ -1169,7 +1169,7 @@
                         },
                         {
                             "termlist_name": "termlist4_7_2c",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["sustainab"],
@@ -1177,7 +1177,7 @@
                         },
                         {
                             "termlist_name": "termlist4_7_2cspec",
-                            "formatting_rule": "specific_trunc",
+                            "formatting_rule": "no_trunc",
                             "na": false,
                             "case": true,
                             "wordlist_en": ["ESD"],
@@ -1185,7 +1185,7 @@
                         },
                         {
                             "termlist_name": "termlist4_7_2d",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["educat"],
@@ -1208,7 +1208,7 @@
                         },
                         {
                             "termlist_name": "termlist4_7_3b",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["sustainable development"],
@@ -1216,7 +1216,7 @@
                         },
                         {
                             "termlist_name": "termlist4_7_3c",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": [],
@@ -1236,7 +1236,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist4_a_1a",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["school", "education facilit"],
@@ -1244,7 +1244,7 @@
                         },
                         {
                             "termlist_name": "termlist4_a_1b",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["safe", "secure", "non-violen", "inclusive"],
@@ -1260,7 +1260,7 @@
                         },
                         {
                             "termlist_name": "termlist4_a_1c",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["sensitiv"],
@@ -1268,7 +1268,7 @@
                         },
                         {
                             "termlist_name": "termlist4_a_1d",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["child", "disability", "gender"],
@@ -1276,7 +1276,7 @@
                         },
                         {
                             "termlist_name": "termlist4_a_1e",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["taste sensitivity"],
@@ -1291,7 +1291,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist4_a_2a",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["learning environment", "indoor environmental quality", "air quality"],
@@ -1299,7 +1299,7 @@
                         },
                         {
                             "termlist_name": "termlist4_a_2b",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["primary school", "elementary school", "primary educat", "middle school", 
@@ -1308,7 +1308,7 @@
                         },
                         {
                             "termlist_name": "termlist4_a_2c",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["student", "universit", "higher education", "teacher education"],
@@ -1323,7 +1323,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist4_a_3a",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["school", "education"],
@@ -1331,7 +1331,7 @@
                         },
                         {
                             "termlist_name": "termlist4_a_3b",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["basic services", "basic facilities", "basic infrastructure", "electricity", 
@@ -1344,7 +1344,7 @@
                         },
                         {
                             "termlist_name": "termlist4_a_3c",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["higher education"],
@@ -1364,7 +1364,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist4_ba",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["scholarships", "scholarship program", "fellowship", "exchange program", 
@@ -1373,7 +1373,7 @@
                         },
                         {
                             "termlist_name": "termlist4_bbuntrunc",
-                            "formatting_rule": "specific_trunc",
+                            "formatting_rule": "no_trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["grant", "grants"],
@@ -1381,7 +1381,7 @@
                         },
                         {
                             "termlist_name": "termlist4_bc",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["sponsor"],
@@ -1389,7 +1389,7 @@
                         },
                         {
                             "termlist_name": "termlist4_bd",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["education", "student", "trainee", "mobility"],
@@ -1409,7 +1409,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist4_c_1a",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["teacher supply", "supply of teacher", "teacher coverage", "teacher recruit", "recruitment of teacher", "recruiting of teacher", 
@@ -1419,7 +1419,7 @@
                         },
                         {
                             "termlist_name": "termlist4_c_1b",
-                            "formatting_rule": "specific_trunc",
+                            "formatting_rule": "no_trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": [],
@@ -1427,7 +1427,7 @@
                         },
                         {
                             "termlist_name": "termlist4_c_1c",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": [],
@@ -1435,7 +1435,7 @@
                         },
                         {
                             "termlist_name": "termlist4_c_1d",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": [],
@@ -1450,7 +1450,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist4_c_2a",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["teacher training", "teacher education", "education of teacher", "teacher qualification", "qualified teacher", "teacher student"],
@@ -1459,7 +1459,7 @@
                         },
                         {
                             "termlist_name": "termlist4_c_2b",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["teacher"],
@@ -1467,7 +1467,7 @@
                         },
                         {
                             "termlist_name": "termlist4_c_2c",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["qualification", "qualified", "training"],
@@ -1483,7 +1483,7 @@
         "termlists": [
             {
                 "termlist_name": "termlist_sdg4_a",
-                "formatting_rule": "default",
+                "formatting_rule": "trunc",
                 "na": false,
                 "case": false,
                 "wordlist_en": ["SDG 4", "SDGs 4", "SDG4", "sustainable development goal 4"],
@@ -1491,7 +1491,7 @@
             },
             {
                 "termlist_name": "termlist_sdg4_b",
-                "formatting_rule": "default",
+                "formatting_rule": "trunc",
                 "na": false,
                 "case": false,
                 "wordlist_en": ["sustainable development goal"],
@@ -1499,7 +1499,7 @@
             },
             {
                 "termlist_name": "termlist_sdg4_c",
-                "formatting_rule": "default",
+                "formatting_rule": "trunc",
                 "na": false,
                 "case": false,
                 "wordlist_en": ["goal 4"],
@@ -1507,7 +1507,7 @@
             },
             {
                 "termlist_name": "termlist_sdg4_d",
-                "formatting_rule": "default",
+                "formatting_rule": "trunc",
                 "na": false,
                 "case": false,
                 "wordlist_en": ["education"],
@@ -1515,7 +1515,7 @@
             },
             {
                 "termlist_name": "termlist_sdg4_e",
-                "formatting_rule": "default",
+                "formatting_rule": "trunc",
                 "na": false,
                 "case": false,
                 "wordlist_en": ["sustainable development goal", "SDG", "goal 4"],
@@ -1523,7 +1523,7 @@
             },
             {
                 "termlist_name": "termlist_sdg4_f",
-                "formatting_rule": "default",
+                "formatting_rule": "trunc",
                 "na": false,
                 "case": false,
                 "wordlist_en": ["learning", "teaching", "teacher", "early childhood", "child development", 
@@ -1535,7 +1535,7 @@
             },
             {
                 "termlist_name": "termlist_sdg4_g",
-                "formatting_rule": "default",
+                "formatting_rule": "trunc",
                 "na": false,
                 "case": false,
                 "wordlist_en": ["quality education"],

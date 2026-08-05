@@ -14,7 +14,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist7_1a",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["energy transition"],
@@ -22,7 +22,7 @@
                         },
                         {
                             "termlist_name": "termlist7_1b",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["household", "cooking", "stove", "lighting", "lamps", "heating"],
@@ -30,7 +30,7 @@
                         },
                         {
                             "termlist_name": "termlist7_1c",
-                            "formatting_rule": "specific_trunc",
+                            "formatting_rule": "no_trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["clean", "cleaner", "modern"],
@@ -38,7 +38,7 @@
                         },
                         {
                             "termlist_name": "termlist7_1c2",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["fuel", "energy", "electricity", "cooking", "stove", "lighting", "lamp", "heating"],
@@ -46,7 +46,7 @@
                         },
                         {
                             "termlist_name": "termlist7_1d",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["household", "homes", "house", "housing", "residential", "dwelling", "domestic", "slum", "village", "women"],
@@ -62,7 +62,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist7_1e",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["solar cook", "solar box cook", "improved cookstove", "improved stove", "modern cookstove", "modern stove", "stove exchange"],
@@ -77,7 +77,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist7_1f",
-                            "formatting_rule": "specific_trunc",
+                            "formatting_rule": "no_trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["kerosene", "solid fuel.*", "coal"],
@@ -86,7 +86,7 @@
                         },
                         {
                             "termlist_name": "termlist7_1f2",
-                            "formatting_rule": "specific_trunc",
+                            "formatting_rule": "no_trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["kerosene", "solid fuel.*"],
@@ -94,7 +94,7 @@
                         },
                         {
                             "termlist_name": "termlist7_1g",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["household", "home", "hous", "residential", "dwelling", "domestic use", "slum", "residential heating", "central heating", "winter heating",
@@ -104,7 +104,7 @@
                         },
                         {
                             "termlist_name": "termlist7_1g2",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["heating"],
@@ -119,7 +119,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist7_1h",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["energy poverty", "energy vulnerability", "fuel poverty", "energy democracy", "energy justice", "energy inequit", "energy security", "energy insecur"],
@@ -134,7 +134,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist7_1i",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["electricity", "energy", "power", "universal electrification", "rural electrification", "national electrification", "electrification", "grid extension", "grid extensions",
@@ -144,7 +144,7 @@
                         },
                         {
                             "termlist_name": "termlist7_1j",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["household", "home", "house", "housing", "residential", "dwelling", "domestic use", "slum", "village","sustainable", "green", "clean","modern"],
@@ -152,7 +152,7 @@
                         },
                         {
                             "termlist_name": "termlist7_1k",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["rural", "remote region", "remote area", "remote communit"],
@@ -160,7 +160,7 @@
                         },
                         {
                             "termlist_name": "termlist7_1i2",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["universal electrification", "rural electrification", "national electrification"],
@@ -168,7 +168,7 @@
                         },
                         {
                             "termlist_name": "termlist7_1x",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["access", "provision"],
@@ -176,7 +176,7 @@
                         },
                         {
                             "termlist_name": "termlist7_1xt",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["energy services", "energy supply"],
@@ -184,7 +184,7 @@
                         },
                         {
                             "termlist_name": "termlist7_1xtr",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["electric", "energy", "power"],
@@ -192,7 +192,7 @@
                         },
                         {
                             "termlist_name": "termlist7_1xtra",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["electrification", "grid extension"],
@@ -200,7 +200,7 @@
                         },
                         {
                             "termlist_name": "termlist7_1xtras",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["energy", "electricity", "electrical supply", "power supply"],
@@ -215,7 +215,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist7_1l",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["stable", "stability", "reliable", "reliability", "secur", "resilient", "resilience", "affordable", "affordability", "inexpensive", "low cost", "cheap",
@@ -224,7 +224,7 @@
                         },
                         {
                             "termlist_name": "termlist7_1m",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["energy services", "electric supply"],
@@ -232,7 +232,7 @@
                         },
                         {
                             "termlist_name": "termlist7_1n",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["energy", "power", "electricity"],
@@ -240,7 +240,7 @@
                         },
                         {
                             "termlist_name": "termlist7_1o",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["household", "home", "house", "housing", "residential", "dwelling", "domestic use", "slum", "village", "sustainable"],
@@ -249,7 +249,7 @@
                         },
                         {
                             "termlist_name": "termlist7_1p",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["microgrid", "micro grid", "minigrid", "mini grid", "off grid solution", "off-grid system"],
@@ -257,7 +257,7 @@
                         },
                         {
                             "termlist_name": "termlist7_1q",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["energy", "electricity"],
@@ -265,7 +265,7 @@
                         },
                         {
                             "termlist_name": "termlist7_1r",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["infrastructure", "off grid", "decentralised", "decentralized", "cooperative"],
@@ -273,7 +273,7 @@
                         },
                         {
                             "termlist_name": "termlist7_1s",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["community energy", "community renewable energy"],
@@ -293,7 +293,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist7_2a",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["renewable"],
@@ -301,7 +301,7 @@
                         },
                         {
                             "termlist_name": "termlist7_2b",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["energy transition", "sector transformation", "energy transformation"],
@@ -309,7 +309,7 @@
                         },
                         {
                             "termlist_name": "termlist7_2c",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["renewable energy"],
@@ -317,7 +317,7 @@
                         },
                         {
                             "termlist_name": "termlist7_2d",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["substitut", "uptake"],
@@ -332,7 +332,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist7_2e",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["relian", "primary use", "primary usage", "primary source", "adopt", "implementation", "uptake", "contribution", "proportion", "share", "expansion", "feasibility", 
@@ -355,7 +355,7 @@
                         },
                         {
                             "termlist_name": "termlist7_2f",
-                            "formatting_rule": "specific_trunc",
+                            "formatting_rule": "no_trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["invest"],
@@ -363,7 +363,7 @@
                         },
                         {
                             "termlist_name": "termlist7_2g",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["non conventional energy"],
@@ -371,7 +371,7 @@
                         },
                         {
                             "termlist_name": "termlist7_2h",
-                            "formatting_rule": "specific_trunc",
+                            "formatting_rule": "no_trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["electricity", "power", "energy"],
@@ -379,7 +379,7 @@
                         },
                         {
                             "termlist_name": "termlist7_2i",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["renewable", "sustainable", "green", "hydrothermal", "geothermal", "hydroelectric", "hydropower", "hydro", "hydrokinetic"],
@@ -387,7 +387,7 @@
                         },
                         {
                             "termlist_name": "termlist7_2j",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["geothermal heat pump", "ground source heat pump", "solar cell", "solar-cell", "solar panel", "solar-panel", "solar power", "solar array", "solar PV", 
@@ -397,7 +397,7 @@
                         },
                         {
                             "termlist_name": "termlist7_2k",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["solar thermal"],
@@ -405,7 +405,7 @@
                         },
                         {
                             "termlist_name": "termlist7_2l",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["power", "technolog", "collector", "district"],
@@ -413,7 +413,7 @@
                         },
                         {
                             "termlist_name": "termlist7_2m",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["solar thermal energy"],
@@ -421,7 +421,7 @@
                         },
                         {
                             "termlist_name": "termlist7_2n",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["power", "electric", "water heating", "industrial process heat"],
@@ -429,7 +429,7 @@
                         },
                         {
                             "termlist_name": "termlist7_2o",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["wind farm", "wind turbine", "wind park", "wind factory", "wind factories", "wind energy",
@@ -439,7 +439,7 @@
                         },
                         {
                             "termlist_name": "termlist7_2p",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["wave energy"],
@@ -447,7 +447,7 @@
                         },
                         {
                             "termlist_name": "termlist7_2q",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["converter", "renewable", "power", "generat", "energy harvesting"],
@@ -455,7 +455,7 @@
                         },
                         {
                             "termlist_name": "termlist7_2r",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["biofuel", "bioenergy", "biodiesel"],
@@ -463,7 +463,7 @@
                         },
                         {
                             "termlist_name": "termlist7_2s",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["biomass", "wind", "solar", "ammonia"],
@@ -471,7 +471,7 @@
                         },
                         {
                             "termlist_name": "termlist7_2t",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["electric", "energy", "power system"],
@@ -479,7 +479,7 @@
                         },
                         {
                             "termlist_name": "termlist7_2u",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["hydrogen"],
@@ -487,7 +487,7 @@
                         },
                         {
                             "termlist_name": "termlist7_2v",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["renewable", "green"],
@@ -495,7 +495,7 @@
                         },
                         {
                             "termlist_name": "termlist7_2w",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["fuel cell", "battery", "batteries", "lithium ion", "energy storage", "smart grid", "smart-grid"],
@@ -503,7 +503,7 @@
                         },
                         {
                             "termlist_name": "termlist7_2x",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["renewab", "sustainab"],
@@ -518,7 +518,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist7_2y",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["fossil fuel", "natural gas", "grey hydrogen", "conventional energy"],
@@ -526,7 +526,7 @@
                         },
                         {
                             "termlist_name": "termlist7_2z",
-                            "formatting_rule": "specific_trunc",
+                            "formatting_rule": "no_trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["coal", "oil"],
@@ -534,7 +534,7 @@
                         },
                         {
                             "termlist_name": "termlist7_2z1",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["reduc", "decreas", "improv", "support", "encourag", "intervention", "policy", "policies", "legislation", "incentiv"],
@@ -542,7 +542,7 @@
                         },
                         {
                             "termlist_name": "termlist7_2z2",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["reliance", "consumption", "transition", "substitut", "primary source"],
@@ -550,7 +550,7 @@
                         },
                         {
                             "termlist_name": "termlist7_2z3",
-                            "formatting_rule": "specific_trunc",
+                            "formatting_rule": "no_trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["use", "usage"],
@@ -558,7 +558,7 @@
                         },
                         {
                             "termlist_name": "termlist7_2z4",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["phase out", "phasing out", "energy transition", "energy strateg", "energy management", "energy planning", "energy policy",
@@ -569,7 +569,7 @@
                         },
                         {
                             "termlist_name": "termlist7_2z5",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["fossil fuel", "natural gas", "grey hydrogen", "conventional energy", "petroleum"],
@@ -577,7 +577,7 @@
                         },
                         {
                             "termlist_name": "termlist7_2z6",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["palm oil", "oil palm", "olive oil", "coconut oil", "vegetable oil", "eucalyptus oil", "cooking oil", "fish oil", "liver oil",
@@ -599,7 +599,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist7_3a",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["energy intensity"],
@@ -608,7 +608,7 @@
                         },
                         {
                             "termlist_name": "termlist7_3b",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["energy consum", "energy-saving", "sustainab", "energy efficien", "GDP", "econom", "industrial", "industry", "manufactur", "carbon emission", "co2 emission", "footprint"],
@@ -623,7 +623,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist7_3c",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["energy consum"],
@@ -631,7 +631,7 @@
                         },
                         {
                             "termlist_name": "termlist7_3d",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["decoupl", "de coupl"],
@@ -640,7 +640,7 @@
                         },
                         {
                             "termlist_name": "termlist7_3e",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["econom", "GDP"],
@@ -657,7 +657,7 @@
                         {
                             "_comment": "A direct translation of the Web of Science search into Norwegian language gave barely any results. We therefore allowed a few terms for energy efficiency and energy saving in Norwegian to stand alone in order to capture some more relevant titles. This was not done in english because it is poor precision.",
                             "termlist_name": "termlist7_3f",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["energy efficien", "energy utilisation efficiency", "energy utilization efficiency", "energy saving", "energy loss", "energy conservation"],
@@ -665,7 +665,7 @@
                         },
                         {
                             "termlist_name": "termlist7_3g",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["housing", "houses", "homes", "household", "domestic", "residential", "building", "cities", "service sector", "office", "retail", "food services", "restaurant", 
@@ -680,7 +680,7 @@
                         },
                         {
                             "termlist_name": "termlist7_3h",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["energy efficien", "energy conservation"],
@@ -688,7 +688,7 @@
                         },
                         {
                             "termlist_name": "termlist7_3i",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["policy", "policies", "framework", "legislation", "management", "plan", "initiativ", "intervention", "incentive", "invest"],
@@ -696,7 +696,7 @@
                         },
                         {
                             "termlist_name": "termlist7_3j",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["energy efficien"],
@@ -704,7 +704,7 @@
                         },
                         {
                             "termlist_name": "termlist7_3k",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["green bond", "climate bond", "energy certificat", "green certificat", "energy sustainability", "minimum energy performance", "energy labelling", "energy standard", 
@@ -714,7 +714,7 @@
                         },
                         {
                             "termlist_name": "termlist7_3standalone",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["energy efficien", "energy utilisation efficiency", "energy utilization efficiency", "energy saving", "energy conservation"],
@@ -730,7 +730,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist7_3l",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["energy suffici"],
@@ -738,7 +738,7 @@
                         },
                         {
                             "termlist_name": "termlist7_3m",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["electric", "energy generat", "energy service", "energy sector", "energy system", "power system", "energy security", "renewable energy"],
@@ -746,7 +746,7 @@
                         },
                         {
                             "termlist_name": "termlist7_3n",
-                            "formatting_rule": "specific_trunc",
+                            "formatting_rule": "no_trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["electric"],
@@ -766,7 +766,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist7_a1",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["development spending", "cooperation fund"],
@@ -774,7 +774,7 @@
                         },
                         {
                             "termlist_name": "termlist7_a1caps",
-                            "formatting_rule": "specific_trunc",
+                            "formatting_rule": "no_trunc",
                             "na": false,
                             "case": true,
                             "wordlist_en": ["ODA"],
@@ -782,7 +782,7 @@
                         },
                         {
                             "termlist_name": "termlist7_a2",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["international", "development", "foreign"],
@@ -790,7 +790,7 @@
                         },
                         {
                             "termlist_name": "termlist7_a3",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["cooperat", "co-operat", "collaborat", "network", "partnership", "aid", "assistance", "fund", "grant", "financing", "financial resources", "capital flow"],
@@ -798,7 +798,7 @@
                         },
                         {
                             "termlist_name": "termlist7_a4",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["knowledge", "technolog", "technical", "research", "scientific", "R&D"],
@@ -806,7 +806,7 @@
                         },
                         {
                             "termlist_name": "termlist7_a5",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["access", "capacity", "transfer", "sharing", "share", "cooperat", "co-operat", "collaborat", "partnership"],
@@ -814,7 +814,7 @@
                         },
                         {
                             "termlist_name": "termlist7_a6",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["invest", "financing", "funding", "financial resources", "economic support", "economic assistance", "green bond", "climate bond"],
@@ -822,7 +822,7 @@
                         },
                         {
                             "termlist_name": "termlist7_a7",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["financial", "monetary"],
@@ -830,7 +830,7 @@
                         },
                         {
                             "termlist_name": "termlist7_a8",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["support", "assist"],
@@ -838,7 +838,7 @@
                         },
                         {
                             "termlist_name": "termlist7_a9",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["energy research", "energy efficiency research", "energy transition", "energy technolog"],
@@ -846,7 +846,7 @@
                         },
                         {
                             "termlist_name": "termlist7_a10",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["technolog", "innovation", "R&D"],
@@ -854,7 +854,7 @@
                         },
                         {
                             "termlist_name": "termlist7_a11",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["clean energy", "green energy", "decarboni", "low carbon", "energy efficien", "renewable", "solar", 
@@ -872,7 +872,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist7_a12",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["development spending", "cooperation fund"],
@@ -880,7 +880,7 @@
                         },
                         {
                             "termlist_name": "termlist7_a1caps",
-                            "formatting_rule": "specific_trunc",
+                            "formatting_rule": "no_trunc",
                             "na": false,
                             "case": true,
                             "wordlist_en": ["ODA"],
@@ -888,7 +888,7 @@
                         },
                         {
                             "termlist_name": "termlist7_a13",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["international", "development", "foreign"],
@@ -896,7 +896,7 @@
                         },
                         {
                             "termlist_name": "termlist7_a14",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["cooperat", "co-operat", "collaborat", "network", "partnership", "aid", "assistance", "fund", "grant", "financing", 
@@ -906,7 +906,7 @@
                         },
                         {
                             "termlist_name": "termlist7_a15",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["invest", "financing", "funding", "financial resources", "economic support", "economic assistance", "green bond", "climate bond"],
@@ -914,7 +914,7 @@
                         },
                         {
                             "termlist_name": "termlist7_a16",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["financial", "monetary"],
@@ -922,7 +922,7 @@
                         },
                         {
                             "termlist_name": "termlist7_a17",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["support", "assist"],
@@ -930,7 +930,7 @@
                         },
                         {
                             "termlist_name": "termlist7_a18",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["clean energy", "energy service", "energy sector", "electrical infrastructure", "electricity supply", "power supply", "community energy", 
@@ -942,7 +942,7 @@
                         },
                         {
                             "termlist_name": "termlist7_a19",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["energy", "electricity"],
@@ -950,7 +950,7 @@
                         },
                         {
                             "termlist_name": "termlist7_a20",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["infrastructure", "technology", "off grid", "offgrid", "off-grid", "decentralised", "decentralized", "cooperative"],
@@ -958,7 +958,7 @@
                         },
                         {
                             "termlist_name": "termlist7_a21",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["power station", "power generation", "energy generation", "generator"],
@@ -966,7 +966,7 @@
                         },
                         {
                             "termlist_name": "termlist7_a22",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["modern", "clean", "sustainable", "renewable", "solar", "wind", "geothermal", "hydroelectric", "hydro electric", "hydropower", 
@@ -988,7 +988,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist7_b1",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["energy service", "energy sector", "electrical infrastructure", 
@@ -998,7 +998,7 @@
                         },
                         {
                             "termlist_name": "termlist7_b2",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["energy", "electricity"],
@@ -1006,7 +1006,7 @@
                         },
                         {
                             "termlist_name": "termlist7_b3",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["infrastructure", "technolog", "off grid", "offgrid", "off-grid", "decentralised", "decentralized", "community", "cooperative", "co-operative",
@@ -1017,7 +1017,7 @@
                         },
                         {
                             "termlist_name": "termlist7_b4",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["power station", "power generation", "energy generation", "generator"],
@@ -1025,7 +1025,7 @@
                         },
                         {
                             "termlist_name": "termlist7_b5",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["modern", "clean", "sustainable", "renewable", "decarboni", "low carbon", "solar", "wind", "geothermal", 
@@ -1043,7 +1043,7 @@
         "termlists": [
             {
                 "termlist_name": "termlist7_1",
-                "formatting_rule": "default",
+                "formatting_rule": "trunc",
                 "na": false,
                 "case": false,
                 "wordlist_en": ["SDG 7", "SDGs 7", "SDG7", "sustainable development goal 7"],
@@ -1051,7 +1051,7 @@
             },
             {
                 "termlist_name": "termlist7_2",
-                "formatting_rule": "default",
+                "formatting_rule": "trunc",
                 "na": false,
                 "case": false,
                 "wordlist_en": ["sustainable development goal"],
@@ -1059,7 +1059,7 @@
             },
             {
                 "termlist_name": "termlist7_3",
-                "formatting_rule": "default",
+                "formatting_rule": "trunc",
                 "na": false,
                 "case": false,
                 "wordlist_en": ["goal 7"],
@@ -1067,7 +1067,7 @@
             },
             {
                 "termlist_name": "termlist7_4",
-                "formatting_rule": "default",
+                "formatting_rule": "trunc",
                 "na": false,
                 "case": false,
                 "wordlist_en": ["sustainable development goal", "SDG", "goal 7"],
@@ -1075,7 +1075,7 @@
             },
             {
                 "termlist_name": "termlist7_5",
-                "formatting_rule": "default",
+                "formatting_rule": "trunc",
                 "na": false,
                 "case": false,
                 "wordlist_en": ["energy"],
@@ -1083,7 +1083,7 @@
             },
             {
                 "termlist_name": "termlist7_6",
-                "formatting_rule": "default",
+                "formatting_rule": "trunc",
                 "na": false,
                 "case": false,
                 "wordlist_en": ["affordable and clean energy"],

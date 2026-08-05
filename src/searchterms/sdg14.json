@@ -12,7 +12,7 @@
             "termlists": [
                 {
                     "termlist_name": "termlist14_marine1",
-                    "formatting_rule": "default",
+                    "formatting_rule": "trunc",
                     "na": false,
                     "case": false,
                     "wordlist_en": ["marine", "mariculture", "barents sea", "norwegian sea",
@@ -35,7 +35,7 @@
                 },
                 {
                     "termlist_name": "termlist14_marine2",
-                    "formatting_rule": "specific_trunc",
+                    "formatting_rule": "no_trunc",
                     "na": false,
                     "case": false,
                     "_comment": "'marin'(NO), 'tang' (NO), 'tare'(NO) are added here instead of untruncated in termlist_marine1 because it is part of other words (e.g. marinate)",
@@ -44,7 +44,7 @@
                 },
                 {
                     "termlist_name": "termlist14_marine3",
-                    "formatting_rule": "specific_trunc",
+                    "formatting_rule": "no_trunc",
                     "na": false,
                     "case": false,
                     "wordlist_en": ["sea", "seas", "coast", "coastal", "tidal"],
@@ -52,7 +52,7 @@
                 },
                 {
                     "termlist_name": "termlist14_marine4",
-                    "formatting_rule": "default",
+                    "formatting_rule": "trunc",
                     "na": false,
                     "case": false,
                     "_comment": "CURRENTLY NOT IN USE.",
@@ -77,7 +77,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist14_1a",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "_comment": "NO: After testing, 'avfall' is ok to use alone, thus the specific terms are removed 'farlig avfall', 'kjemikalieavfall', 'radioaktivt avfall', 'plastavfall','gruveavfall'.",
@@ -108,7 +108,7 @@
                         },
                         {
                             "termlist_name": "termlist14_1b_case",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": true,
                             "wordlist_en": ["PCB", "PCBs", "DDT","PAH", "PAHs", "TBT", "PFAS"],
@@ -116,7 +116,7 @@
                         },
                         {
                             "termlist_name": "termlist14_1c",
-                            "formatting_rule": "specific_trunc",
+                            "formatting_rule": "no_trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["litter", "trash", ".*plastics", "mining"],
@@ -124,7 +124,7 @@
                         },
                         {
                             "termlist_name": "termlist14_1d",
-                            "formatting_rule": "specific_trunc",
+                            "formatting_rule": "no_trunc",
                             "na": false,
                             "case": false,
                             "_comment":"EN: 'lead' is included here rather than 1c because of the verb 'to lead'",
@@ -133,7 +133,7 @@
                         },
                         {
                             "termlist_name": "termlist14_1e",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["contamina", "discharge", "toxici"],
@@ -141,7 +141,7 @@
                         },
                         {
                             "termlist_name": "termlist14_1not",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["PM2.5","PM10","leaf litter", "waste-to-energy"],
@@ -162,7 +162,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist14_2a",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["marine reserve", "ocean reserve", "marine sanctuar", "marine park", "particularly sensitive sea area","marine conservation",
@@ -173,7 +173,7 @@
                         },
                         {
                             "termlist_name": "termlist_14_2acase",
-                            "formatting_rule": "specific_trunc",
+                            "formatting_rule": "no_trunc",
                             "na": false,
                             "case": true,
                             "wordlist_en": ["LMMA.*", "NTMR", "ICZM", "LSMPA.*", "MPA", "MPAs"],
@@ -181,7 +181,7 @@
                         },
                         {
                             "termlist_name": "termlist14_2b",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["nature reserve", 
@@ -197,7 +197,7 @@
                         },
                         {
                             "termlist_name": "termlist14_2c",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["protect","conserve","conservation","conserves","conserving"],
@@ -205,7 +205,7 @@
                         },
                         {
                             "termlist_name": "termlist14_2d",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["area", "zone", "habitat", "ecosystem"],
@@ -213,7 +213,7 @@
                         },
                         {
                             "termlist_name": "termlist14_2not",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": true,
                             "_comment": "MPA can cause an issue if you run a search in titles - but not using it loses relevant results. In abstracts/longer texts it sometimes works better to drop MPA as they normally use the full term somewhere ('protected areas')",
@@ -229,7 +229,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist14_2e",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["manag", "conserv", "preserv", "protect", "restor", "rehabilita", "resilien"],
@@ -237,7 +237,7 @@
                         },
                         {
                             "termlist_name": "termlist14_2f",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["habitat","ecosystem","environment","ecological communit",
@@ -264,7 +264,7 @@
                         },
                         {
                             "termlist_name": "termlist14_2f_trunc",
-                            "formatting_rule": "specific_trunc",
+                            "formatting_rule": "no_trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["seas"],
@@ -272,7 +272,7 @@
                         },
                         {
                             "termlist_name": "termlist14_2hcase",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": true,
                             "wordlist_en": ["BBNJ", "CBD", "HELCOM", "OSPAR", "UNEP", "CCAMLR"],
@@ -293,7 +293,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist14_3a",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["impact", "effect", "affect", "respons", "consequence",
@@ -320,7 +320,7 @@
                         },
                         {
                             "termlist_name": "termlist14_3d",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["protect","conserve","conservation","conserves","conserving", "address", "tackle", "prevent"],
@@ -328,7 +328,7 @@
                         },
                         {
                             "termlist_name": "termlist14_3b",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["acidi", "ocean ph", "seawater ph", "low ph", "declining ph", "decreasing ph", "decreased ph", "effect of ph", "effects of ph"],
@@ -336,7 +336,7 @@
                         },
                         {
                             "termlist_name": "termlist14_3ccase",
-                            "formatting_rule": "specific_trunc",
+                            "formatting_rule": "no_trunc",
                             "na": false,
                             "case": true,
                             "wordlist_en": ["OA"],
@@ -357,7 +357,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist14_4a",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["overfish", "bycatch", "by-catch", "IUU fish", "ghost fishing", "ghost net", "ALDFG", "poison fishing"],
@@ -365,7 +365,7 @@
                         },
                         {
                             "termlist_name": "termlist14_4b",
-                            "formatting_rule": "specific_trunc",
+                            "formatting_rule": "no_trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["gear", "net", "nets"],
@@ -373,7 +373,7 @@
                         },
                         {
                             "termlist_name": "termlist14_4c",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["abandoned", "lost", "discarded"],
@@ -381,7 +381,7 @@
                         },
                         {
                             "termlist_name": "termlist14_4d",
-                            "formatting_rule": "specific_trunc",
+                            "formatting_rule": "no_trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["trawl.*"],
@@ -389,7 +389,7 @@
                         },
                         {
                             "termlist_name": "termlist14_4e",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["degrad", "damag", "harm"],
@@ -397,7 +397,7 @@
                         },
                         {
                             "termlist_name": "termlist14_4f",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["overharvest", "overexploit", "overcapacit", "collaps", "closure",
@@ -407,7 +407,7 @@
                         },
                         {
                             "termlist_name": "termlist14_4g",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["fishing", "fisher", "fish stock", "shellfish", "trawl"],
@@ -423,7 +423,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist14_4h",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["manag", "planning", "governance", 
@@ -450,7 +450,7 @@
                         },
                         {
                             "termlist_name": "termlist14_4icase",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": true,
                             "wordlist_en": ["EBFM", "MSY", "RFMO", "UNCLOS", "CCRF", "UNFSA"],
@@ -458,7 +458,7 @@
                         },
                         {
                             "termlist_name": "termlist14_4jtrunc",
-                            "formatting_rule": "specific_trunc",
+                            "formatting_rule": "no_trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["law", "plan", "plans"],
@@ -476,7 +476,7 @@
                         },
                         {
                             "termlist_name": "termlist14_4ktrunc",
-                            "formatting_rule": "specific_trunc",
+                            "formatting_rule": "no_trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["cod"],
@@ -484,7 +484,7 @@
                         },
                         {
                             "termlist_name": "termlist14_4l",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["catch"],
@@ -492,7 +492,7 @@
                         },
                         {
                             "termlist_name": "termlist14_4m",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["entitlement", "limit", "tolerance"],
@@ -512,7 +512,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist14_5a",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["marine reserve", "ocean reserve", "nature reserve", "marine sanctuar", "marine park", "particularly sensitive sea area", "marine conservation",
@@ -532,7 +532,7 @@
                         },
                         {
                             "termlist_name": "termlist14_5b",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["protect","conserved","conservation","conserves","conserving"],
@@ -540,7 +540,7 @@
                         },
                         {
                             "termlist_name": "termlist14_5c",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["area", "zone", "habitat", "ecosystem"],
@@ -548,7 +548,7 @@
                         },
                         {
                             "termlist_name": "termlist14_5not",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": [],
@@ -568,7 +568,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist14_6a",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["subsidy", "subsidies", "subsidiz", "subsidis", 
@@ -578,7 +578,7 @@
                         },
                         {
                             "termlist_name": "termlist14_6acaps",
-                            "formatting_rule": "specific_trunc",
+                            "formatting_rule": "no_trunc",
                             "na": false,
                             "case": true,
                             "wordlist_en": ["ODA", "WTO"],
@@ -586,7 +586,7 @@
                         },
                         {
                             "termlist_name": "termlist14_6b",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["fishing", "fisher", "shellfish", "trawl"],
@@ -594,7 +594,7 @@
                         },
                         {
                             "termlist_name": "termlist14_6not",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["larval subsid", "recruitment subsid"],
@@ -615,7 +615,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist14_7a",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["econom","wealth",
@@ -633,7 +633,7 @@
                         },
                         {
                             "termlist_name": "termlist14_7acaps",
-                            "formatting_rule": "specific_trunc",
+                            "formatting_rule": "no_trunc",
                             "na": false,
                             "case": true,
                             "wordlist_en": ["GDP"],
@@ -641,7 +641,7 @@
                         },
                         {
                             "termlist_name": "termlist14_7b",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["sustainab", "marine conservation",
@@ -672,7 +672,7 @@
                         },
                         {
                             "termlist_name": "termlist14_7bcaps",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": true,
                             "wordlist_en": ["LMMA","ICZM","MPA","RFMO","CCRF","UNFSA"],
@@ -692,7 +692,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist14_aa",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["transfer of marine technolog", "marine technology transfer", "technology transfer"],
@@ -707,7 +707,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist14_ab",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["establish","build","develop","implement","propos","design","provide","provision",
@@ -731,7 +731,7 @@
                         },
                         {
                             "termlist_name": "termlist14_ac",
-                            "formatting_rule": "specific_trunc",
+                            "formatting_rule": "no_trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["plan", "planned", "planning", "aid", "ODA", "invest", "investing", "fund", "funds"],
@@ -739,7 +739,7 @@
                         },
                         {
                             "termlist_name": "termlist14_ad",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["knowledge","technolog","technical","research","scientific","R&D"],
@@ -747,7 +747,7 @@
                         },
                         {
                             "termlist_name": "termlist14_ae",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["sharing","shared","share","cooperat","co-operat","collaborat","partnership","network"],
@@ -755,7 +755,7 @@
                         },
                         {
                             "termlist_name": "termlist14_af",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "_comment": "Originally 'research' was allowed alone, but caused a lot of noise",
@@ -770,7 +770,7 @@
                         },
                         {
                             "termlist_name": "termlist14_ag",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["observation","observator","monitoring","equipment"],
@@ -778,7 +778,7 @@
                         },
                         {
                             "termlist_name": "termlist14_ah",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["ocean", "marine environment", "biolog", "ecological", "environmental", "network", "facilit", "observation system", "ecosystem"],
@@ -786,7 +786,7 @@
                         },
                         {
                             "termlist_name": "termlist14_ai",
-                            "formatting_rule": "specific_trunc",
+                            "formatting_rule": "no_trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["taxonom.*", "genetic", "species", "diversity", "technolog.*", "technical"],
@@ -794,7 +794,7 @@
                         },
                         {
                             "termlist_name": "termlist14_aj",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["knowledge","capacity","advisor","capabilit","training","expertise","skills","compentenc",
@@ -812,7 +812,7 @@
                         },
                         {
                             "termlist_name": "termlist14_anot",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "_comment": "NO: There are a lot of reports about torp sandefjord which show up due to 'Fjord'- manually removed them here (Norway only)",
@@ -829,7 +829,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist14_ak",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["blue growth","blue econom","marine economy"],
@@ -837,7 +837,7 @@
                         },
                         {
                             "termlist_name": "termlist14_al",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "_comment": "CURRENTLY NOT IN USE.",
@@ -846,7 +846,7 @@
                         },
                         {
                             "termlist_name": "termlist14_am",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["bioresource","biological resource","genetic resource","living marine resources",
@@ -856,7 +856,7 @@
                         },
                         {
                             "termlist_name": "termlist14_an",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["bioprospect","biopiracy","Nagoya","biotech","marine natural product","bioactive",
@@ -896,7 +896,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist14_ba",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["access", "right",
@@ -914,7 +914,7 @@
                         },
                         {
                             "termlist_name": "termlist14_bb",
-                            "formatting_rule": "specific_trunc",
+                            "formatting_rule": "no_trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["law", "laws"],
@@ -922,7 +922,7 @@
                         },
                         {
                             "termlist_name": "termlist14_bc",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["fishing", "fisher", "fish stock", "fish market", "shellfish", "marine resource", "marine harvest"],
@@ -930,7 +930,7 @@
                         },
                         {
                             "termlist_name": "termlist14_bd",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "_comment": "Some terms here are from a Norwegian perspective (Sami, Sapmi).",
@@ -952,7 +952,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist14_ca",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["law of the sea",
@@ -990,7 +990,7 @@
                         },
                         {
                             "termlist_name": "termlist14_ca_case",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": true,
                             "wordlist_en": ["UNCLOS","ABNJ","BBNJ","RFMO","CCRF","UNFSA","MSFD","MARPOL"],
@@ -998,7 +998,7 @@
                         },
                         {
                             "termlist_name": "termlist14_cb",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "_comment": "Relevant, but not marine-specific legislation.",
@@ -1027,7 +1027,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist14_cc",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["international", "beyond national jurisdiction", "high seas", "europ", "pacific", "asia", "africa", "latin america", "south america", "arctic"],
@@ -1035,7 +1035,7 @@
                         },
                         {
                             "termlist_name": "termlist14_cccaps",
-                            "formatting_rule": "specific_trunc",
+                            "formatting_rule": "no_trunc",
                             "na": false,
                             "case": true,
                             "wordlist_en": ["UN", "ABNJ"],
@@ -1043,7 +1043,7 @@
                         },
                         {
                             "termlist_name": "termlist14_cd",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["governance","policy","policies","regulat","legal","legislat","agreement","treaty","treaties","framework","instrument"],
@@ -1051,7 +1051,7 @@
                         },
                         {
                             "termlist_name": "termlist14_ce",
-                            "formatting_rule": "specific_trunc",
+                            "formatting_rule": "no_trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["law", "laws"],
@@ -1059,7 +1059,7 @@
                         },
                         {
                             "termlist_name": "termlist14_cf",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["conservation","sustainab","ecosystem restoration",
@@ -1083,7 +1083,7 @@
                         },
                         {
                             "termlist_name": "termlist14_cfcaps",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": true,
                             "wordlist_en": ["MSP", "ICZM", "LMMA", "MPA", "LSMPA"],
@@ -1099,7 +1099,7 @@
         "termlists": [
             {
                 "termlist_name": "termlist_sdg_a",
-                "formatting_rule": "default",
+                "formatting_rule": "trunc",
                 "na": false,
                 "case": false,
                 "wordlist_en": ["SDG 14", "SDGs 14", "SDG14", "sustainable development goal 14"],
@@ -1107,7 +1107,7 @@
             },
             {
                 "termlist_name": "termlist_sdg_b",
-                "formatting_rule": "default",
+                "formatting_rule": "trunc",
                 "na": false,
                 "case": false,
                 "wordlist_en": ["sustainable development goal"],
@@ -1115,7 +1115,7 @@
             },
             {
                 "termlist_name": "termlist_sdg_c",
-                "formatting_rule": "default",
+                "formatting_rule": "trunc",
                 "na": false,
                 "case": false,
                 "wordlist_en": ["goal 14"],
@@ -1123,7 +1123,7 @@
             },
             {
                 "termlist_name": "termlist_sdg_d",
-                "formatting_rule": "default",
+                "formatting_rule": "trunc",
                 "na": false,
                 "case": false,
                 "wordlist_en": ["sustainable development goal", "SDG", "goal 14"],
@@ -1131,7 +1131,7 @@
             },
             {
                 "termlist_name": "termlist_sdg_e",
-                "formatting_rule": "specific_trunc",
+                "formatting_rule": "no_trunc",
                 "na": false,
                 "case": false,
                 "wordlist_en": ["ocean.*", "marine", "sea", "seas", "fisher.*"],
@@ -1139,7 +1139,7 @@
             },
             {
                 "termlist_name": "termlist_sdg_f",
-                "formatting_rule": "default",
+                "formatting_rule": "trunc",
                 "na": false,
                 "case": false,
                 "wordlist_en": ["life below water"],

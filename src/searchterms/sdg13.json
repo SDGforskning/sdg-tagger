@@ -14,7 +14,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist13_1a",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["coping", "cope", "adapt", "resilien", "mitigat", "risk reduction", "preparedness", "preparing", "preparation"],
@@ -23,7 +23,7 @@
                         },
                         {
                             "termlist_name": "termlist13_1b",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["mitigat", "prevent", "reduc", "decreas", "minimis", "minimiz", "manag"],
@@ -31,7 +31,7 @@
                         },
                         {
                             "termlist_name": "termlist13_1c",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["impact", "vulnerab"],
@@ -39,7 +39,7 @@
                         },
                         {
                             "termlist_name": "termlist13_1d",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["disaster", "risk"],
@@ -47,7 +47,7 @@
                         },
                         {
                             "termlist_name": "termlist13_1e",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["plan", "assess", "strateg", "program", "policy", "policies", "governance", "reduc", "manag", "medical response", "relief"],
@@ -55,7 +55,7 @@
                         },
                         {
                             "termlist_name": "termlist13_1f",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["sendai", "cancun", "readiness and preparatory support programme", "readiness programme"],
@@ -63,7 +63,7 @@
                         },
                         {
                             "termlist_name": "termlist13_1g",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["extreme"],
@@ -71,7 +71,7 @@
                         },
                         {
                             "termlist_name": "termlist13_1h",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["climat", "weather", "precipitation", "rain", "snow", "temperatur", "storm", "wind"],
@@ -79,7 +79,7 @@
                         },
                         {
                             "termlist_name": "termlist13_1i",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["natural", "climat"],
@@ -87,7 +87,7 @@
                         },
                         {
                             "termlist_name": "termlist13_1j",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["hazard", "catastroph", "disaster"],
@@ -95,7 +95,7 @@
                         },
                         {
                             "termlist_name": "termlist13_1k",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["rogue wave", "tsunami", "cyclone", "typhoon", "hurricane", "tornado",
@@ -118,7 +118,7 @@
                         },
                         {
                             "termlist_name": "termlist13_1l",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["sea level"],
@@ -126,7 +126,7 @@
                         },
                         {
                             "termlist_name": "termlist13_1m",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["chang", "rise", "rising"],
@@ -146,7 +146,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist13_2a",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["climate change", "global warming", "climatic change", "changing climate", "climate measures", "climate action", "climate adaptation", "climate mitigation", "climate resilience"],
@@ -154,7 +154,7 @@
                         },
                         {
                             "termlist_name": "termlist13_2b",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["warming"],
@@ -162,7 +162,7 @@
                         },
                         {
                             "termlist_name": "termlist13_2c",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["climat", "atmospher", "ocean"],
@@ -170,7 +170,7 @@
                         },
                         {
                             "termlist_name": "termlist13_2d",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["GHG", "greenhouse gas", "carbon footprint", "CO2 footprint", "carbon emission", "CO2 emission", "methane", "ch4", "nitrous oxide", "nox", "n20", "carbon dioxide",
@@ -180,7 +180,7 @@
                         },
                         {
                             "termlist_name": "termlist13_2e",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["national", "state", "federal", "domestic", "sectoral", "multi level", "multilevel"],
@@ -188,7 +188,7 @@
                         },
                         {
                             "termlist_name": "termlist13_2f",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["program", "strategy", "framework", "initiativ", "plan", "policy", "policies", "law", "legislat", "governance", "mandat",
@@ -198,7 +198,7 @@
                         },
                         {
                             "termlist_name": "termlist13_2g",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["climate", "global warming", "climatic change"],
@@ -206,7 +206,7 @@
                         },
                         {
                             "termlist_name": "termlist13_2h",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["atmosphere", "ocean"],
@@ -214,7 +214,7 @@
                         },
                         {
                             "termlist_name": "termlist13_2i",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["GHG", "greenhouse gas", "carbon footprint", "CO2 footprint", "carbon emission", "CO2 emission", "sea-level rise"],
@@ -229,7 +229,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist13_2j",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["global temperatur", "surface temperature", "sea-level", "sea level", "sea ice", "glacial", "glaciers", "permafrost", "ocean acidification", "ocean heat content"],
@@ -237,7 +237,7 @@
                         },
                         {
                             "termlist_name": "termlist13_2k",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["action", "sustainab", "adapt", "cope", "coping", "resilience", "mitigat", "impact", "effect",  "consequence", "influence", "vulnerab"],
@@ -246,14 +246,14 @@
                         },
                         {
                             "termlist_name": "termlist13_2l",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["national", "state", "federal", "domestic", "sectoral", "multi level", "multilevel"],
                             "wordlist_no": ["nasjonal", "stat", "føderal", "delstat", "fylke", "innenlands", "innalands", "innanlands", "sektor", "kommune"]
                         },{
                             "termlist_name": "termlist13_2m",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["program", "strategy", "framework", "initiativ", "plan", "policy", "policies", "law", "legislat", "governance", "mandat",
@@ -270,7 +270,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist13_2n",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["Kyoto protocol", "kyoto", "Paris agreement", "cop 21", "cop21", "cop 22", "cop22", "cop 23", "cop23",
@@ -281,7 +281,7 @@
                         },
                         {
                             "termlist_name": "termlist13_2o",
-                            "formatting_rule": "specific_trunc",
+                            "formatting_rule": "no_trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["Paris"],
@@ -289,7 +289,7 @@
                         },
                         {
                             "termlist_name": "termlist13_2p",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["national", "state", "federal", "domestic", "sectoral", "multi level", "multilevel"],
@@ -297,7 +297,7 @@
                         },
                         {
                             "termlist_name": "termlist13_2q",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["program", "strategy", "framework", "initiativ", "plan", "policy", "policies", "law", "legislat", "governance", "mandat",
@@ -319,7 +319,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist13_3a",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["climate", "climatic change", "global warming", "sea level rise", "rising sea level"],
@@ -327,7 +327,7 @@
                         },
                         {
                             "termlist_name": "termlist13_3b",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["action", "mitigat", "adaptive capacity", "capacity to adapt", "resilien", "early warning", "warning system", 
@@ -339,7 +339,7 @@
                         },
                         {
                             "termlist_name": "termlist13_3c",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["reduc", "minimi", "decreas", "limit", "alleviat"],
@@ -347,7 +347,7 @@
                         },
                         {
                             "termlist_name": "termlist13_3d",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["impact", "effect", "consequence"],
@@ -355,7 +355,7 @@
                         },
                         {
                             "termlist_name": "termlist13_3e",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["sustainab","adapt", "cope", "coping"],
@@ -363,7 +363,7 @@
                         },
                         {
                             "termlist_name": "termlist13_3f",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["reduc", "minimi", "decreas", "limit", "alleviat", "lower", "mitigate", "tackl", "combat", "prevent", "stop", "avoid", "capture", "storage", "store", "storing", "sequestrat"],
@@ -371,7 +371,7 @@
                         },
                         {
                             "termlist_name": "termlist13_3g",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["GHG", "greenhouse gas", "carbon footprint", "CO2 footprint", "carbon emission", "CO2 emission"],
@@ -379,7 +379,7 @@
                         },
                         {
                             "termlist_name": "termlist13_3h",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["methane", "CH4", "nitrous oxide", "NOX", "N2O", "CO2", "carbon", "HFCs", "PFCs", "sulphur hexafluoride", "sulfur hexafluoride", "SF6"],
@@ -387,7 +387,7 @@
                         },
                         {
                             "termlist_name": "termlist13_3i",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["motivational climate", "organisational climate", "organizaional climate", "learning climate", "education climate", "emotional climate", "family climate"],
@@ -407,7 +407,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist13_a1",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["green climate fund", "least developed countries fund", "LDCF", "special climate change fund", "SCCF"],
@@ -422,7 +422,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist13_a2",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["transparency", "accountability", "governance", "allocation", "misallocation", "corruption", "operationali", "capitali,", "mobilis", "mobiliz", "contribut",
@@ -432,7 +432,7 @@
                         },
                         {
                             "termlist_name": "termlist13_a3",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["financial mechanism"],
@@ -440,7 +440,7 @@
                         },
                         {
                             "termlist_name": "termlist13_a4",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["UNFCC", "convention"],
@@ -448,7 +448,7 @@
                         },
                         {
                             "termlist_name": "termlist13_a5",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["climate financ", "climate aid", "climate loan",  "climate fund", "climate bond", "climate investment", "green climate fund", "Least Developed Countries Fund",
@@ -458,7 +458,7 @@
                         },
                         {
                             "termlist_name": "termlist13_a6",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["mitigat", "green", "climate"],
@@ -466,7 +466,7 @@
                         },
                         {
                             "termlist_name": "termlist13_a7",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["financ", "fund", "invest"],
@@ -474,7 +474,7 @@
                         },
                         {
                             "termlist_name": "termlist13_a8",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["economic", "financial", "monetary"],
@@ -482,7 +482,7 @@
                         },
                         {
                             "termlist_name": "termlist13_a9",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["support", "assist", "resource"],
@@ -490,7 +490,7 @@
                         },
                         {
                             "termlist_name": "termlist13_a10",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["ODA", "cooperation fund", "development spending"],
@@ -498,7 +498,7 @@
                         },
                         {
                             "termlist_name": "termlist13_a11",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["international", "development", "foreign"],
@@ -506,7 +506,7 @@
                         },
                         {
                             "termlist_name": "termlist13_a12",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["aid", "assistance", "finance", "grant", "investment"],
@@ -514,7 +514,7 @@
                         },
                         {
                             "termlist_name": "termlist13_a13",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["climate change", "global warming", "climate action", "climate mitigation", "climate adaptation", "climate financ", "climate aid", "climate loan", "climate fund", "climate bond",
@@ -532,7 +532,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist13_a5",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["climate financ", "climate aid", "climate loan",  "climate fund", "climate bond", "climate investment", "green climate fund", "Least Developed Countries Fund",
@@ -542,7 +542,7 @@
                         },
                         {
                             "termlist_name": "termlist13_a6",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["mitigat", "green", "climate"],
@@ -550,7 +550,7 @@
                         },
                         {
                             "termlist_name": "termlist13_a7",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["financ", "fund", "invest"],
@@ -558,7 +558,7 @@
                         },
                         {
                             "termlist_name": "termlist13_a8",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["economic", "financial", "monetary"],
@@ -566,7 +566,7 @@
                         },
                         {
                             "termlist_name": "termlist13_a9",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["support", "assist", "resource"],
@@ -574,7 +574,7 @@
                         },
                         {
                             "termlist_name": "termlist13_a10",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["ODA", "cooperation fund", "development spending"],
@@ -582,7 +582,7 @@
                         },
                         {
                             "termlist_name": "termlist13_a11",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["international", "development", "foreign"],
@@ -590,7 +590,7 @@
                         },
                         {
                             "termlist_name": "termlist13_a12",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["aid", "assistance", "finance", "grant", "investment"],
@@ -598,7 +598,7 @@
                         },
                         {
                             "termlist_name": "termlist13_a13",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["climate change", "global warming", "climate action", "climate mitigation", "climate adaptation", "climate financ", "climate aid", "climate loan", "climate fund", "climate bond",
@@ -609,7 +609,7 @@
                         },
                         {
                             "termlist_name": "termlist13_a14",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["annex II party", "annex II parties", "developed contr", "developed nation", "oecd"],
@@ -629,7 +629,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist13_b1",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["climate"],
@@ -637,7 +637,7 @@
                         },
                         {
                             "termlist_name": "termlist13_b2",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["strateg", "policy", "policies", "plan", "management", "adaptation communication"],
@@ -645,7 +645,7 @@
                         },
                         {
                             "termlist_name": "termlist13_b3",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["nationally determined contribution", "green climate fund", "least developed countries fund", "LDCF", "special climate change fund", "sccf", "adaptation fund", "adaptation financ"],
@@ -653,7 +653,7 @@
                         },
                         {
                             "termlist_name": "termlist13_b4",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["capacity", "capabilit", "educat", "curriculum", "curricula", "teacher training", "climate literacy", "research", "knowledge", "skills",
@@ -667,7 +667,7 @@
                         },
                         {
                             "termlist_name": "termlist13_b5",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["institutional", "administrativ", "policy", "governance"],
@@ -675,7 +675,7 @@
                         },
                         {
                             "termlist_name": "termlist13_b6",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["structure", "values", "practices", "arrangement", "resources"],
@@ -683,7 +683,7 @@
                         },
                         {
                             "termlist_name": "termlist13_b7",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["climate", "global warming", "climatic change", "sea level rise"],
@@ -691,7 +691,7 @@
                         },
                         {
                             "termlist_name": "termlist13_b8",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["action", "sustainab", "mitigat", "adapt", "cope", "coping", "resilience", "early warning", "warning system", "preparedness", "risks", "vulnerab", "awareness",
@@ -709,7 +709,7 @@
         "termlists": [
             {
                 "termlist_name": "termlist13_1",
-                "formatting_rule": "default",
+                "formatting_rule": "trunc",
                 "na": false,
                 "case": false,
                 "wordlist_en": ["SDG 13", "SDGs 13", "SDG13", "sustainable development goal 13"],
@@ -717,7 +717,7 @@
             },
             {
                 "termlist_name": "termlist13_2",
-                "formatting_rule": "default",
+                "formatting_rule": "trunc",
                 "na": false,
                 "case": false,
                 "wordlist_en": ["sustainable development goal"],
@@ -725,7 +725,7 @@
             },
             {
                 "termlist_name": "termlist13_3",
-                "formatting_rule": "default",
+                "formatting_rule": "trunc",
                 "na": false,
                 "case": false,
                 "wordlist_en": ["goal 13"],
@@ -733,7 +733,7 @@
             },
             {
                 "termlist_name": "termlist13_4",
-                "formatting_rule": "default",
+                "formatting_rule": "trunc",
                 "na": false,
                 "case": false,
                 "wordlist_en": ["sustainable development goal", "SDG", "goal 13"],
@@ -741,7 +741,7 @@
             },
             {
                 "termlist_name": "termlist13_5",
-                "formatting_rule": "default",
+                "formatting_rule": "trunc",
                 "na": false,
                 "case": false,
                 "wordlist_en": ["climate"],
@@ -749,7 +749,7 @@
             },
             {
                 "termlist_name": "termlist13_6",
-                "formatting_rule": "default",
+                "formatting_rule": "trunc",
                 "na": false,
                 "case": false,
                 "wordlist_en": ["climate action"],
