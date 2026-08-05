@@ -9,7 +9,7 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from src.format_helpers import (
     _check_for_missing_matches,
     _format_list_with_pattern,
-    _get_additional_language_terms,
+    _get_language_termlists,
     format_logic_rules,
     prepare_regex_search_termlist,
 )
@@ -157,90 +157,103 @@ def test_format_list_with_pattern_no_left_trunc(input_terms, output_text):
     assert result == output_text
 
 
-################ TESTS FOR _get_additional_language_terms ################
-ADDITIONAL_LANGUAGES = {'no': True}
-
-
-# Testcase: missing language list
-def test_get_additional_language_terms_missing_list(capsys):
-    # Arrange
-    term_list = {'termlist_name': 'Test1', 'wordlist_en': [], 'wordlist_fr': []}
-    # Act
-    _get_additional_language_terms(term_list)
-    captured = capsys.readouterr()
-    # Assert
-    assert (
-        'WARNING: The termlist Test1 does not have a list for language no.'
-        in captured.out
-    )
-
-
-# Testcase: add terms for 'no'
+################ TESTS FOR _get_language_termlists ################
+# Testcase: get 1/1 language
 @pytest.mark.parametrize(
-    'input_terms, output_list',
+    'input_terms, output_dict',
+    [
+        (
+            {
+                'termlist_name': 'Test1',
+                'wordlist_no': ['tre', 'fire'],
+            },
+            {
+                'no': ['tre', 'fire']
+            },
+        ),
+    ],
+)
+def test__get_language_termlists_one_of_one_languages(input_terms, output_dict):
+    # Arrange
+    # Act
+    with mock.patch('src.format_helpers.LANGUAGES', {'no': True}):
+        results = _get_language_termlists(input_terms)
+    # Assert
+    assert set(results) == set(output_dict)
+
+
+# Testcase: get 2/2 languages
+@pytest.mark.parametrize(
+    'input_terms, output_dict',
+    [
+        (
+            {
+                'termlist_name': 'Test1',
+                'wordlist_no': ['tre', 'fire'],
+            },
+            {
+                'no': ['tre', 'fire']
+            },
+        ),
+    ],
+)
+def test__get_language_termlists_two_of_two_languages(input_terms, output_dict):
+    # Arrange
+    # Act
+    with mock.patch('src.format_helpers.LANGUAGES', {'no': True}):
+        results = _get_language_termlists(input_terms)
+    # Assert
+    assert set(results) == set(output_dict)
+
+
+# Testcase: get 1/2 languages - e.g. two languages exists but only one is set to true in the constant. 
+@pytest.mark.parametrize(
+    'input_terms, output_dict',
     [
         (
             {
                 'termlist_name': 'Test1',
                 'wordlist_en': ['one', 'two'],
-                'wordlist_no': ['three', 'four'],
+                'wordlist_no': ['tre', 'fire'],
             },
-            ['three', 'four'],
-        ),
-        (
             {
-                'termlist_name': 'Test1',
-                'wordlist_en': ['one', 'two'],
-                'wordlist_no': [],
+                'en': ['one', 'two']
             },
-            [],
         ),
     ],
 )
-def test_get_additional_language_terms_with_no(input_terms, output_list):
+def test__get_language_termlists_one_of_two_languages(input_terms, output_dict):
     # Arrange
     # Act
-    with mock.patch('src.format_helpers.ADDITIONAL_LANGUAGES', {'no': True}):
-        results = _get_additional_language_terms(input_terms)
+    with mock.patch('src.format_helpers.LANGUAGES', {'en':True, 'no': False}):
+        results = _get_language_termlists(input_terms)
     # Assert
-    assert set(results) == set(output_list)
+    assert set(results) == set(output_dict)
 
 
-# Testcase: add terms for multiple languages
+#test get 2 languages where one language is not there
+# Testcase: get 1/1 language
 @pytest.mark.parametrize(
-    'input_terms, output_list',
+    'input_terms, output_dict',
     [
         (
             {
                 'termlist_name': 'Test1',
-                'wordlist_en': ['one', 'two'],
-                'wordlist_no': ['three', 'four'],
-                'wordlist_fi': ['five'],
+                'wordlist_no': ['tre', 'fire'],
             },
-            ['three', 'four', 'five'],
-        ),
-        (
             {
-                'termlist_name': 'Test1',
-                'wordlist_en': ['one', 'two'],
-                'wordlist_fi': ['three', 'four'],
-                'wordlist_no': [],
+                'no': ['tre', 'fire']
             },
-            ['three', 'four'],
         ),
     ],
 )
-def test_get_additional_language_terms_with_multiple_languages(
-    input_terms, output_list
-):
+def test__get_language_termlists_missing_language_terms(input_terms, output_dict):
     # Arrange
     # Act
-    with mock.patch(
-        'src.format_helpers.ADDITIONAL_LANGUAGES', {'no': True, 'fi': True}
-    ):
-        results = _get_additional_language_terms(input_terms)
+    with mock.patch('src.format_helpers.LANGUAGES', {'en':True, 'no': True}):
+        results = _get_language_termlists(input_terms)
     # Assert
-    assert set(results) == set(output_list)
+    assert set(results) == set(output_dict)
 
 
 ###################### TESTS FOR format_logic_rules ######################
@@ -398,132 +411,91 @@ def test_format_logic_rules_correct_replacing_logic(
 ################ TESTS FOR prepare_regex_search_termlist ################
 # Testcase: test that it correctly calls _format_list_with_pattern with correct inputs
 @patch('src.format_helpers._format_list_with_pattern')
-@patch('src.format_helpers._get_additional_language_terms', return_value=[])
 def test_prepare_regex_search_termlist_calls_format(
-    mocker_get_additional_language_terms, mocker_format_list_with_pattern
+    mocker_format_list_with_pattern
 ):
     # Arrange
-    termlists = {
-        'name': 'Test1',
-        'wordlist_en': ['one', 'two'],
-        'formatting_rule': 'DEFAULT',
-        'case': False,
-    }
+    termlist = ['one', 'two']
+    formatting_rule = 'DEFAULT'
+    case = False
+
     # Act
-    with mock.patch(
-        'src.format_helpers.ADDITIONAL_LANGUAGES', {'no': True}
-    ) and mock.patch('src.format_helpers.REGEX_PATTERNS', {'DEFAULT': '(?:{})'}):
-        prepare_regex_search_termlist(termlists, 'text')
+    with mock.patch('src.format_helpers.REGEX_PATTERNS', {'DEFAULT': '(?:{})'}):
+        prepare_regex_search_termlist(termlist, 'text', formatting_rule, case)
     # Assert
     mocker_format_list_with_pattern.assert_called_once_with('(?:{})', ['one', 'two'])
 
 
 # Testcase: Lowering the words in the list if case=False
 @patch('src.format_helpers._format_list_with_pattern')
-@patch('src.format_helpers._get_additional_language_terms', return_value=[])
 def test_prepare_regex_search_termlist_lowercase_list(
-    mocker_get_additional_language_terms, mocker_format_list_with_pattern
+    mocker_format_list_with_pattern
 ):
     # Arrange
-    termlists = {
-        'name': 'Test1',
-        'wordlist_en': ['ONE', 'Two'],
-        'formatting_rule': 'DEFAULT',
-        'case': False,
-    }
+    termlist = ['ONE', 'Two']
+    formatting_rule = 'DEFAULT'
+    case = False
+
     # Act
-    with mock.patch(
-        'src.format_helpers.ADDITIONAL_LANGUAGES', {'no': True}
-    ) and mock.patch('src.format_helpers.REGEX_PATTERNS', {'DEFAULT': '(?:{})'}):
-        prepare_regex_search_termlist(termlists, 'text')
+    with mock.patch('src.format_helpers.REGEX_PATTERNS', {'DEFAULT': '(?:{})'}):
+        prepare_regex_search_termlist(termlist, 'text', formatting_rule, case)
     # Assert
     mocker_format_list_with_pattern.assert_called_once_with('(?:{})', ['one', 'two'])
 
 
 # Testcase: Lowering the words in the input text if case=False
 @patch('src.format_helpers._format_list_with_pattern')
-@patch('src.format_helpers._get_additional_language_terms', return_value=[])
 def test_prepare_regex_search_termlist_lowercase_text(
-    mocker_get_additional_language_terms, mocker_format_list_with_pattern
+    mocker_format_list_with_pattern
 ):
     # Arrange
-    termlists = {
-        'name': 'Test1',
-        'wordlist_en': ['ONE', 'Two'],
-        'formatting_rule': 'DEFAULT',
-        'case': False,
-    }
+    termlist =['ONE', 'Two']
+    formatting_rule = 'DEFAULT'
+    case = False
+
     input_text = 'Text with UPPERCASE'
     output_excpected = 'text with uppercase'
     # Act
-    with mock.patch(
-        'src.format_helpers.ADDITIONAL_LANGUAGES', {'no': True}
-    ) and mock.patch('src.format_helpers.REGEX_PATTERNS', {'DEFAULT': '(?:{})'}):
-        _, output_text = prepare_regex_search_termlist(termlists, input_text)
+    with mock.patch('src.format_helpers.REGEX_PATTERNS', {'DEFAULT': '(?:{})'}):
+        _, output_text = prepare_regex_search_termlist(termlist, input_text, formatting_rule, case)
+
     # Assert
     assert output_text == output_excpected
 
 
 # Testcase: NOT Lowering the words in the list if case=True
 @patch('src.format_helpers._format_list_with_pattern')
-@patch('src.format_helpers._get_additional_language_terms', return_value=[])
-@patch('src.format_helpers.ADDITIONAL_LANGUAGES', {'no': True})
 @patch('src.format_helpers.REGEX_PATTERNS', {'DEFAULT': '(?:{})'})
 def test_prepare_regex_search_termlist_do_not_lowercase_list(
-    mocker_get_additional_language_terms, mocker_format_list_with_pattern
+    mocker_format_list_with_pattern
 ):
     # Arrange
-    termlists = {
-        'name': 'Test1',
-        'wordlist_en': ['ONE', 'Two'],
-        'formatting_rule': 'DEFAULT',
-        'case': True,
-    }
+    termlist = ['ONE', 'Two']
+    formatting_rule = 'DEFAULT'
+    case = True
+ 
     # Act
-    prepare_regex_search_termlist(termlists, 'text')
+    prepare_regex_search_termlist(termlist, 'text', formatting_rule, case)
+
     # Assert
     mocker_format_list_with_pattern.assert_called_once_with('(?:{})', ['ONE', 'Two'])
 
 
 # Testcase: NOT Lowering the words in the input text if case=True
 @patch('src.format_helpers._format_list_with_pattern')
-@patch('src.format_helpers._get_additional_language_terms', return_value=[])
-@patch('src.format_helpers.ADDITIONAL_LANGUAGES', {'no': True})
 @patch('src.format_helpers.REGEX_PATTERNS', {'DEFAULT': '(?:{})'})
 def test_prepare_regex_search_termlist_do_not_lowercase_text(
-    mocker_get_additional_language_terms, mocker_format_list_with_pattern
+    mocker_format_list_with_pattern
 ):
     # Arrange
-    termlists = {
-        'name': 'Test1',
-        'wordlist_en': ['ONE', 'Two'],
-        'formatting_rule': 'DEFAULT',
-        'case': True,
-    }
+    termlist = ['ONE', 'Two']
+    formatting_rule = 'DEFAULT'
+    case = True
+
     input_text = 'Text with UPPERCASE'
     output_excpected = 'Text with UPPERCASE'
     # Act
-    _, output_text = prepare_regex_search_termlist(termlists, input_text)
+    _, output_text = prepare_regex_search_termlist(termlist, input_text, formatting_rule, case)
     # Assert
     assert output_text == output_excpected
 
-
-# Testcase: no additional languages
-@patch('src.format_helpers._format_list_with_pattern')
-@patch('src.format_helpers._get_additional_language_terms')
-@patch('src.format_helpers.ADDITIONAL_LANGUAGES', {'no': False})
-@patch('src.format_helpers.REGEX_PATTERNS', {'DEFAULT': '(?:{})'})
-def test_prepare_regex_search_termlist_no_additional_language(
-    mocker_get_additional_language_terms, mocker_format_list_with_pattern
-):
-    # Arrange
-    termlists = {
-        'name': 'Test1',
-        'wordlist_en': ['ONE', 'Two'],
-        'formatting_rule': 'DEFAULT',
-        'case': False,
-    }
-    # Act
-    prepare_regex_search_termlist(termlists, 'text')
-    # Assert
-    mocker_get_additional_language_terms.assert_not_called()
