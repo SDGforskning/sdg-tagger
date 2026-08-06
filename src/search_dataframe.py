@@ -87,18 +87,19 @@ def _format_results(
     return countries + sdgs
 
 
-def _row_search(text: str, sdg_list: list[int]) -> pd.Series:
+def _row_search(text: str, sdg_list: list[int], countries: dict[str: bool] = False) -> pd.Series:
     """Performs search for all sdgs for a given text and returns is as a pandas series (aka a row in a pandas dataframe)
 
     Args:
         text: the text to be labelled
         sdg_list: A list of SDGs to do the search on
+        countries: Results of countries search. False by default (optional)
 
     Returns:
         The results of the SDG search as a Pandas series
     """
     sdg_list = [sdg for sdg in sdg_list if int(sdg) in set(LIST_ALL_SDG_NR)]
-    results_raw = search_all_goals(text, sdg_list)
+    results_raw = search_all_goals(text, sdg_list, countries)
     results_formatted = _format_results(results_raw, sdg_list)
     return pd.Series(results_formatted)
 
@@ -193,6 +194,7 @@ def dataframe_search(
     df: pd.DataFrame,
     sdg_list: list[int] = LIST_ALL_SDG_NR,
     text_column: str = 'result_title',
+    do_country_search: bool = True
 ) -> pd.DataFrame:
     """Replicating the original script that took a dataframe with titles and performed searches for all sdgs for each row
 
@@ -200,6 +202,8 @@ def dataframe_search(
         df: a dataframe containing texts to perform SDG search on.
         sdg_list: list of SDGs to perform the search on. Default is all SDGs.
         text_column: the name of the column in the df containing the text to tag. Default is 'result_title'
+        do_country_search: boolean for whether to run countries search or not. If False it will assume that the 
+            df contains the four country search result columns that are needed.
 
     Returns:
         a dataframe with the results of all SDG searches
@@ -208,9 +212,24 @@ def dataframe_search(
     columns = _get_formatted_column_names_export(sdg_list)
     df_results[text_column] = df_results[text_column].apply(_to_string_or_empty)
 
-    df_results[columns] = df_results[text_column].progress_apply(
-        lambda x: _row_search(x, sdg_list)
-    )
+    if not do_country_search:
+        df_results[columns] = df_results.progress_apply(
+            lambda row: _row_search(
+                row[text_column], 
+                sdg_list, 
+                countries = {
+                    'SIDS': row[f'SIDS_{text_column}'],
+                    'LDC': row[f'LDC_{text_column}'],
+                    'LDS': row[f'LDS_{text_column}'],
+                    'LMIC': row[f'LMIC_{text_column}']
+                }
+            ),
+            axis=1
+        )
+    else:
+        df_results[columns] = df_results[text_column].progress_apply(
+            lambda x: _row_search(x, sdg_list)
+        )
 
     return df_results
 
@@ -229,6 +248,8 @@ def dataframe_search_target(
         sdg_nr: the SDG to perform the search on
         target: the target to search for
         text_column: the name of the column in the df containing the text to tag. Default is 'result_title'
+        do_country_search: boolean for whether to run countries search or not. If False it will assume that the 
+            df contains the four country search result columns that are needed.
 
     Returns:
         a dataframe with the results of the sdg target search and the countries and pre-searches
@@ -236,7 +257,6 @@ def dataframe_search_target(
     df_results = df.copy()
     columns = _get_formatted_column_names_one_target(sdg_nr, target)
     df_results[text_column] = df_results[text_column].apply(_to_string_or_empty)
-    print(df_results.columns.tolist())
 
     if not do_country_search:
         df_results[columns] = df_results.progress_apply(
