@@ -3,8 +3,7 @@ import os
 import json
 from typing import Any
 
-from .format_helpers import prepare_regex_search_termlist, format_logic_rules
-
+from .format_helpers import prepare_regex_search_termlist, format_logic_rules, _get_language_termlists
 
 ####################### File helpers #######################
 def get_sdg_phrases(sdg_number: int) -> tuple[list[dict], list[dict], dict]:
@@ -70,10 +69,34 @@ def _is_logic_rule_true(
     return boolean_result
 
 
+def _invert_dictionary(input_dict: dict[str, dict[str, bool]]) -> dict[str, dict[str, bool]]:
+    """Inverts the keys of the outer and inner dict while keeping the values in the inner dict
+
+    Transforms the dict from dict[X, dict[Y, bool]] to dict[Y, dict[X, bool]]
+
+    Args:
+        input_dict: the dict to invert
+
+    Returns:
+        a dict where the keys now are the keys that were originally in the inner dict
+        
+    """
+    result = {}
+    
+    for term, languages in input_dict.items():
+        for lang, is_active in languages.items():
+            if lang not in result:
+                result[lang] = {}
+
+            result[lang][term] = is_active
+            
+    return result
+
+
 def _are_terms_in_input_text(
     termlists: list[dict],
     input_text: str,
-) -> dict[str, bool]:
+) -> dict[str, dict[str, bool]]:
     """Search in a text for terms in a list of termlists
 
     Args:
@@ -81,20 +104,29 @@ def _are_terms_in_input_text(
         input_text: the text to search in
 
     Returns:
-        The result of the search on the input text for each of the termlists
+        The result of the search on the input text for each language and each termlists
     """
     termlist_results = {}
     for term_list in termlists:
-        regex_term_list, formatted_text = prepare_regex_search_termlist(
-            term_list, input_text
-        )
-        if regex_term_list:
-            termlist_results[term_list['termlist_name']] = _pattern_search_boolean(
-                regex_term_list, formatted_text
-            )
-        else: termlist_results[term_list['termlist_name']] = False
+        dict_language_terms = _get_language_termlists(term_list)
+        results_by_language = {}
 
-    return termlist_results
+        for language, terms in dict_language_terms.items():
+            regex_term_list, formatted_text = prepare_regex_search_termlist(
+                terms = terms, 
+                input_text = input_text, 
+                formatting_rule = term_list['formatting_rule'],
+                case = term_list['case']
+            )
+            if regex_term_list:
+                results_by_language[language] = _pattern_search_boolean(
+                    regex_term_list, formatted_text
+                )
+            else: results_by_language[language] = False
+        
+        termlist_results[term_list['termlist_name']] = results_by_language
+
+    return _invert_dictionary(termlist_results)
 
 
 def search_for_phrase_unindexed(
@@ -104,7 +136,7 @@ def search_for_phrase_unindexed(
     countries_results: dict[str, bool] = {},
     pre_search_results: dict[str, bool] = {},
 ) -> bool:
-    """Search all the termlists in a phrase and checks the logic rule
+    """Search all the termlists in a phrase and checks the logic rule once for each language. Returns true if at least one language gave a true result
 
     Args:
         termlists: all the term lists used in the logic rule
@@ -116,11 +148,17 @@ def search_for_phrase_unindexed(
     Returns:
         bool: the result of the search on the input text
     """
-    termlist_results = _are_terms_in_input_text(termlists, input_text)
+    all_language_termlist_results = _are_terms_in_input_text(termlists, input_text)
 
-    return _is_logic_rule_true(
-        termlist_results, logic_rule_raw, countries_results, pre_search_results
-    )
+    all_results = []
+    for _, termlist_results in all_language_termlist_results.items():
+        print(termlist_results)
+        language_search_result = _is_logic_rule_true(
+            termlist_results, logic_rule_raw, countries_results, pre_search_results
+        )
+        all_results.append(language_search_result)
+
+    return any(all_results)
 
 
 def run_all_termlist_searches_in_list_of_phrases_bool(

@@ -32,7 +32,7 @@ def test_run_all_termlist_searches_in_list_of_phrases_bool_sentence_split(
             'termlists': [
                 {
                     'termlist_name': 'test1',
-                    'formatting_rule': 'default',
+                    'formatting_rule': 'trunc',
                     'na': False,
                     'case': False,
                     'wordlist_en': ['one', 'two'],
@@ -40,7 +40,7 @@ def test_run_all_termlist_searches_in_list_of_phrases_bool_sentence_split(
                 },
                 {
                     'termlist_name': 'test2',
-                    'formatting_rule': 'default',
+                    'formatting_rule': 'trunc',
                     'na': False,
                     'case': False,
                     'wordlist_en': ['three', 'four'],
