@@ -152,7 +152,6 @@ def search_for_phrase_unindexed(
 
     all_results = []
     for _, termlist_results in all_language_termlist_results.items():
-        print(termlist_results)
         language_search_result = _is_logic_rule_true(
             termlist_results, logic_rule_raw, countries_results, pre_search_results
         )
