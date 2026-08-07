@@ -1,0 +1,1461 @@
+{
+    "name": "sdg6",
+    "number": 6,
+    "generated_datetime": "20-05-2026 12:34:54",
+    "pre-search": [],
+    "targets": [
+        {
+            "name": "1",
+            "phrases": [
+                {
+                    "number": 1,
+                    "logic_rule": "([termlist6_1a] | ([termlist6_1b] & [termlist6_1c]))",
+                    "sentence_split": true,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist6_1a",
+                            "formatting_rule": "no_left_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["improved drinking water source","improved water source","safely managed drinking water"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_1b",
+                            "formatting_rule": "no_left_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["availab","access","affordab","clean","safe","safety","improved","manag",
+                                            "regulat","quality","monitor","potable","uncontaminated","unpolluted","pure",
+                                            "disinfect","piped","tap","faucet","running","municipal","borehol","tubewell",
+                                            "water provision","household water","domestic water",
+                                            "rainwater","protect dug well","protected spring","packaged","delivered",
+                                            "collect","fetch","distribut","water kiosk","water security","water insecurity",
+                                            "water justice","water safety"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_1c",
+                            "formatting_rule": "trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["drinking water","drinking-water","drinkable water",
+                                            "potable water","water for drinking","water used for drinking"],
+                            "wordlist_no": []
+                        }
+                    ]
+                },
+                {
+                    "number": 2,
+                    "logic_rule": "([termlist6_1d] | ([termlist6_1e] & [termlist6_1f]))",
+                    "sentence_split": true,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist6_1d",
+                            "formatting_rule": "no_left_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["unimproved drinking water source"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_1e",
+                            "formatting_rule": "no_left_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["unclean","unsafe","impure","unimproved","polluted","contaminated","contamination",
+                                            "non-potable","unhygienic","unsanitary","insanitary","untreated",
+                                            "unprotected dug well","unprotected spring","surface water",
+                                            "river","reservoir","lake","pond","stream","canal","channel", 
+                                            "poor quality","bad quality","unknown quality",
+                                            "pathogen", "bacteria","virus","viruses",
+                                            "protozoa","helminth","parasite",
+                                            "Legionella pneumophila","E. coli","Escherichia coli ","coliforms",
+                                            "Vibrio cholerae","Salmonella","Shigella","Campylobacter","Rotavirus",
+                                            "Norovirus","Hepatitis","Adenovirus","Cryptosporidium",
+                                            "arsenic","fluoride*"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_1f",
+                            "formatting_rule": "trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["drinking water","drinking-water","drinkable water",
+                                            "potable water","water for drinking","water used for drinking"],
+                            "wordlist_no": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "2",
+            "phrases": [
+                {
+                    "number": 1,
+                    "logic_rule": "([termlist6_2g] | ([termlist6_2h] & [termlist6_2i]) | ([termlist6_2a] & (([termlist6_2b] | [termlist6_2bcase] | [termlist6_2c] | ([termlist6_2d] & [termlist6_2e])) & [termlist6_2f])))",
+                    "sentence_split": true,
+                    "_comment": "String 2_6f is added to limit e.g. toilet/sewege results to relevants from WASH point of view.",
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist6_2a",
+                            "formatting_rule": "no_left_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["safe","safely","improved","basic","limited",
+                                            "equitab","non-equit","equal",
+                                            "adequate","appropriate","access","availab","unavailab",
+                                            "obstacle","barrier","hinder","hindrance"],
+                            "wordlist_no": []
+                        },
+                         {
+                            "termlist_name": "termlist6_2b",
+                            "formatting_rule": "no_left_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["sanitation","hygiene service","hygiene facilit",
+                                            "handwashing","hand-washing","washing hands","wash hands",
+                                            "toilet","lavatory","lavatories","latrine","water closet","outhouse"],
+                            "wordlist_no": []
+                        },
+                         {
+                            "termlist_name": "termlist6_2bcase",
+                            "formatting_rule": "no_trunc",
+                            "na": false,
+                            "case": true,
+                            "wordlist_en": ["WASH"],
+                            "wordlist_no": []
+                        },
+                         {
+                            "termlist_name": "termlist6_2c",
+                            "formatting_rule": "no_left_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["sewage","sewers","sewer network","sewer system","sewerage"],
+                            "wordlist_no": []
+                        },
+                         {
+                            "termlist_name": "termlist6_2d",
+                            "formatting_rule": "no_left_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["disposing","disposal","removal","remove","treat","containment",
+                                            "emptying","transport","reuse"],
+                            "wordlist_no": []
+                        },
+                         {
+                            "termlist_name": "termlist6_2e",
+                            "formatting_rule": "no_left_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["wastewater","human excreta","animal excreta","fecal","faecal","feces","faeces", 
+                                            "black water","urine","compost"],
+                            "wordlist_no": []
+                        },
+                         {
+                            "termlist_name": "termlist6_2f",
+                            "formatting_rule": "no_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["sanitation","hygiene"],
+                            "wordlist_no": []
+                        },
+                         {
+                            "termlist_name": "termlist6_2g",
+                            "formatting_rule": "trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["safely managed sanitation services","improved sanitation facilit",
+                                            "ventilated pit latrine","composting latrine","container based sanitation",
+                                            "pit toilet","dry toilet","composting toilet","separating toilet",
+                                            "separating latrine","urine-diverting dry toilet","urine-diverting dry latrine"],
+                            "wordlist_no": []
+                        },
+                         {
+                            "termlist_name": "termlist6_2h",
+                            "formatting_rule": "no_left_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["flush toilet","pit latrine"],
+                            "wordlist_no": []
+                        },
+                         {
+                            "termlist_name": "termlist6_2i",
+                            "formatting_rule": "no_left_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["sewer","septic tank","slab","platform","pit latrine"],
+                            "wordlist_no": []
+                        }
+                    ]
+                },
+                {
+                    "number": 2,
+                    "logic_rule": "(([termlist6_2j] & ([termlist6_2k] | [termlist6_2kcase])) | [termlist6_2l] | ([termlist6_2m] & [termlist6_2n]) | ([termlist6_2o] & [termlist6_2p]) | ([termlist6_2q] & [termlist6_2r]))",
+                    "sentence_split": true,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist6_2j",
+                            "formatting_rule": "no_left_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["inadequate","unsafe","poor","bad","unknown","limited",
+                                            "unimproved","unsafe","unhygienic","unsanitary","insanitary", 
+                                            "absent","absence","lack"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_2k",
+                            "formatting_rule": "no_left_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["sanitation","hygiene service","hygiene facilit",
+                                            "handwashing","hand-washing","washing hands","wash hands",
+                                            "toilet","lavatory","lavatories","latrine","water closet","outhouse"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_2kcase",
+                            "formatting_rule": "no_trunc",
+                            "na": false,
+                            "case": true,
+                            "wordlist_en": ["WASH"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_2l",
+                            "formatting_rule": "no_left_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["unimproved sanitation facilit","no toilet","open defecation"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_2m",
+                            "formatting_rule": "no_left_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["toilet","latrine"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_2n",
+                            "formatting_rule": "no_left_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["open pit","hanging","bucket","pan","tray","container"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_2o",
+                            "formatting_rule": "no_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["defecation"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_2p",
+                            "formatting_rule": "no_left_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["bush","ditch","surface water","channel","beach","river","stream","sea"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_2q",
+                            "formatting_rule": "trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["contact"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_2r",
+                            "formatting_rule": "no_left_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["human excret","human faeces","human stool","faecal sludge"],
+                            "wordlist_no": []
+                        }
+                    ]
+                },
+                {
+                    "number": 3,
+                    "logic_rule": "(([termlist6_2s] | [termlist6_2scase]) & ([termlist6_2t] | ([termlist6_2w] & [termlist6_2x]) | ([termlist6_2u] & [termlist6_2v])))",
+                    "sentence_split": true,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist6_2s",
+                            "formatting_rule": "no_left_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["sanitation","hygiene service","hygiene facilit",
+                                            "handwashing","hand-washing","washing hands","wash hands",
+                                            "toilet","lavatory","lavatories","latrine","water closet","outhouse"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_2scase",
+                            "formatting_rule": "no_trunc",
+                            "na": false,
+                            "case": true,
+                            "wordlist_en": ["WASH"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_2t",
+                            "formatting_rule": "no_left_trunc",
+                            "na": false,
+                            "case": true,
+                            "wordlist_en": ["inequalit","inequity","discriminat","nondiscriminat","non discriminat","non-discriminat",
+                                            "barrier","obstacle","hinder","hindrance",
+                                            "insecure","dangerous","unsafe","hazardous",
+                                            "slippery floor","step"],
+                            "wordlist_no": []
+                        },
+                         {
+                            "termlist_name": "termlist6_2w",
+                            "formatting_rule": "no_left_trunc",
+                            "na": false,
+                            "case": true,
+                            "wordlist_en": ["lack","narrow","tight"],
+                            "wordlist_no": []
+                        },
+                         {
+                            "termlist_name": "termlist6_2x",
+                            "formatting_rule": "no_left_trunc",
+                            "na": false,
+                            "case": true,
+                            "wordlist_en": ["space","entrance"],
+                            "wordlist_no": []
+                        },
+                         {
+                            "termlist_name": "termlist6_2u",
+                            "formatting_rule": "no_left_trunc",
+                            "na": false,
+                            "case": true,
+                            "wordlist_en": ["poverty", "rural poor", "urban poor", "working poor", "destitute", "low income", "low-income", 
+                                            "poor households", "poorest households", "poor families", "poorest families", "poor communit", "poorest communit", 
+                                            "disadvantaged", "marginalis", "marginalized", "vulnerable", "discriminated",
+                                            "slum", "shanty town", "informal settlement", "homeless",
+                                            "patient", "disabled", "disabilities", "disability",
+                                            "older people", "old people", "retired people", "elderly", "elders", "pensioner", 
+                                            "unemployed",
+                                            "women", "woman", "girl", "pregnan", "maternity", "child", "baby", "babies", "newborn", "toddler", "youth", "infant",
+                                            "indigenous", "minorities", "minority", "refugee", "asylum", "immigrant",
+                                             "trans people", "transgender", "lgbt", "lesbian", "gay", "bisexual", "intersex"
+],
+                            "wordlist_no": []
+                        },
+                         {
+                            "termlist_name": "termlist6_2v",
+                            "formatting_rule": "trunc",
+                            "na": false,
+                            "case": true,
+                            "wordlist_en": ["availab","access"],
+                            "wordlist_no": []
+                        }
+                        
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "3",
+            "phrases": [
+                {
+                    "number": 1,
+                    "logic_rule": "(([termlist6_3a] | ([termlist6_3b] & not [termlist6_3c]) | ([termlist6_3d] & [termlist6_3e])) & ([termlist6_3f] | [termlist6_3g] | [termlist6_3gcase] | ([termlist6_3h] & [termlist6_3i]) | ([termlist6_3j] & [termlist6_3k])))",
+                    "sentence_split": true,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist6_3a",
+                            "formatting_rule": "no_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["freshwater","fresh water","lake","pond","lakes","ponds",
+                                            "brook","creek","brooks","creeks",
+                                            "aquifer","groundwater","aquifers","groundwaters",
+                                            "natural water","water source","natural waters","water sources",
+                                            "water reservoir","water reservoirs",
+                                            "drinking water","drinking-water","drinkable water","potable water","water for drinking","water used for drinking"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_3b",
+                            "formatting_rule": "no_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["river","rivers"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_3c",
+                            "formatting_rule": "no_left_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["river delta"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_3d",
+                            "formatting_rule": "trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["stream"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_3e",
+                            "formatting_rule": "no_left_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["water"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_3f",
+                            "formatting_rule": "no_left_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["wastewater","waste water","sewage","sewer","effluent"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_3g",
+                            "formatting_rule": "trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["pollut","contaminated","contaminant",
+                                            "plastic","microplastic","micro plastic","nanoplastic","nano plastic", 
+                                            "toxic chemical","endocrine disrupting chemical",
+                                            "persistent organic pollutant","polychlorinated biphenyl", 
+                                            "hexachlorocyclohexane","hexachlorobenzene","hexachlorobutadiene","pentachlorobenzene", 
+                                            "pentachlorophenol","pentachloroanisole","hexabromocyclododecane","polybrominated diphenyl ether", 
+                                            "perflurochemicals","endosulfan",
+                                            "polycyclic aromatic hydrocarbon",
+                                            "oil spill"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_3gcase",
+                            "formatting_rule": "no_trunc",
+                            "na": false,
+                            "case": true,
+                            "wordlist_en": ["PCB","DDT","PFAS","PAH","PCBs","PAHs","TBT"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_3h",
+                            "formatting_rule": "no_left_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["aquacultur","farm","industr","livestock","agricultur",
+                                            "household","domestic","urban","dumping"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_3i",
+                            "formatting_rule": "trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["waste","discharge","runoff","run off","stormwater"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_3j",
+                            "formatting_rule": "trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["heavy metal","toxic metal","mercury","arsenic","fluoride","cadmium","chromium","copper","nickel", 
+                                            "organotin","tributyltin","mining","mine tailing","oil", 
+                                            "pesticide","herbicide", 
+                                            "pharmaceutic","antibiotic","medical", 
+                                            "pathogen","bacteria","virus","viruses", 
+                                            "protozoa","helminth","parasite", 
+                                            "Legionella pneumophila","E. coli","Escherichia coli ","coliform",
+                                            "Vibrio cholerae","Salmonella","Shigella","Campylobacter","Rotavirus", 
+                                            "Norovirus","Hepatitis","Adenovirus","Cryptosporidium"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_3k",
+                            "formatting_rule": "trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["contaminat","pollut","residue"],
+                            "wordlist_no": []
+                        }
+                    ]
+                },
+                {
+                    "number": 2,
+                    "logic_rule": "([termlist6_3l] | (([termlist6_3m] | [termlist6_3mcase]) & ([termlist6_3n] | (([termlist6_3o] | [termlist6_3ocase] | ([termlist6_3p] & [termlist6_3q]) | ([termlist6_3r] & [termlist6_3s])) & [termlist6_3t]))))",
+                    "sentence_split": true,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist6_3l",
+                            "formatting_rule": "trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["water purification"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_3m",
+                            "formatting_rule": "no_left_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["treatment","remov","recovery","technolog",
+                                            "monitor","assess",
+                                            "indicator","bioindicator","index","indices",
+                                            "life cycle assess",
+                                            "environmental assess","environmental impact assess",
+                                            "manag","pollution control","strategy","strategies",
+                                            "regulat","legislat","policy","policies","framework","programme"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_3mcase",
+                            "formatting_rule": "no_trunc",
+                            "na": false,
+                            "case": true,
+                            "wordlist_en": ["LCA","LCAs"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_3n",
+                            "formatting_rule": "no_left_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["wastewater","waste water","sewage","sewer","effluent"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_3o",
+                            "formatting_rule": "trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["pollut","contaminated","contaminant",
+                                            "plastic","microplastic","micro plastic","nanoplastic","nano plastic", 
+                                            "toxic chemical","endocrine disrupting chemical",
+                                            "persistent organic pollutant","polychlorinated biphenyl", 
+                                            "hexachlorocyclohexane","hexachlorobenzene","hexachlorobutadiene","pentachlorobenzene", 
+                                            "pentachlorophenol","pentachloroanisole","hexabromocyclododecane","polybrominated diphenyl ether", 
+                                            "perflurochemicals","endosulfan",
+                                            "polycyclic aromatic hydrocarbon",
+                                            "oil spill"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_3ocase",
+                            "formatting_rule": "no_trunc",
+                            "na": false,
+                            "case": true,
+                            "wordlist_en": ["PCB","DDT","PFAS","PAH","PCBs","PAHs","TBT"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_3p",
+                            "formatting_rule": "no_left_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["aquacultur","farm","industr","livestock","agricultur",
+                                            "household","domestic","urban","dumping"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_3q",
+                            "formatting_rule": "trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["waste","discharge","runoff","run off","stormwater"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_3r",
+                            "formatting_rule": "trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["heavy metal","toxic metal","mercury","arsenic","fluoride","cadmium","chromium","copper","nickel", 
+                                            "organotin","tributyltin","mining","mine tailing","oil", 
+                                            "pesticide","herbicide", 
+                                            "pharmaceutic","antibiotic","medical", 
+                                            "pathogen","bacteria","virus","viruses", 
+                                            "protozoa","helminth","parasite", 
+                                            "Legionella pneumophila","E. coli","Escherichia coli ","coliform",
+                                            "Vibrio cholerae","Salmonella","Shigella","Campylobacter","Rotavirus", 
+                                            "Norovirus","Hepatitis","Adenovirus","Cryptosporidium"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_3s",
+                            "formatting_rule": "trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["contaminat","pollut","residue"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_3t",
+                            "formatting_rule": "no_left_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["water"],
+                            "wordlist_no": []
+                        }
+                    ]
+                },
+                {
+                    "number": 3,
+                    "logic_rule": "([termlist6_3u] & ([termlist6_3v] | ([termlist6_3w] & not [termlist6_3x]) | ([termlist6_3y] & [termlist6_3z])))",
+                    "sentence_split": true,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist6_3u",
+                            "formatting_rule": "trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["water quality","quality of water"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_3v",
+                            "formatting_rule": "no_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["freshwater","fresh water","lake","pond","lakes","ponds",
+                                            "brook","creek","brooks","creeks",
+                                            "aquifer","groundwater","aquifers","groundwaters",
+                                            "natural water","water source","natural waters","water sources",
+                                            "water reservoir","water reservoirs",
+                                            "drinking water","drinking-water","drinkable water","potable water","water for drinking","water used for drinking"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_3w",
+                            "formatting_rule": "no_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["river","rivers"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_3x",
+                            "formatting_rule": "no_left_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["river delta"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_3y",
+                            "formatting_rule": "trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["stream"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_3z",
+                            "formatting_rule": "no_left_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["water"],
+                            "wordlist_no": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "4",
+            "phrases": [
+                {
+                    "number": 1,
+                    "logic_rule": "([termlist6_4a] | [termlist6_4acase] | ([termlist6_4b] & [termlist6_4c]) | ([termlist6_4d] & ([termlist6_4e] & [termlist6_4f])) | ([termlist6_4g] & [termlist6_4h]))",
+                    "sentence_split": true,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist6_4a",
+                            "formatting_rule": "no_left_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["water use efficiency","water security","water insecurity",
+                                            "water harvest","rainwater harvest","stormwater harvest","water evaporator",
+                                            "water saving","freshwater saving"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_4acase",
+                            "formatting_rule": "no_trunc",
+                            "na": false,
+                            "case": true,
+                            "wordlist_en": ["WUE"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_4b",
+                            "formatting_rule": "no_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["evaporation"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_4c",
+                            "formatting_rule": "no_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["solar","clean water","pure water"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_4d",
+                            "formatting_rule": "trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["sustainab","responsib","environmental","efficient", 
+                                            "unsustainab","irresponsib","inefficient","resilient","resilience",
+                                            "save","saving"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_4e",
+                            "formatting_rule": "no_left_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["water","freshwater"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_4f",
+                            "formatting_rule": "no_left_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["withdrawal","extract","resource us","usage","use",
+                                            "consumption","consume"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_4g",
+                            "formatting_rule": "no_left_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["recycl","re-cycl","re cycl","reuse","re-use","re use","reusing","re-using","re using"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_4h",
+                            "formatting_rule": "no_left_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["water","freshwater","greywater"],
+                            "wordlist_no": []
+                        }
+                    ]
+                },
+                {
+                    "number": 2,
+                    "logic_rule": "(([termlist6_4i] | ([termlist6_4j] & [termlist6_4k]) | ([termlist6_4l] & [termlist6_4m])) & not [termlist6_4n])",
+                    "sentence_split": true,
+                    "_comment": "Not string added to exclude irrelevant result about 'water filling' algorithm",
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist6_4i",
+                            "formatting_rule": "no_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["water scarcity","freshwater scarcity","scarcity of water","scarcity of freshwater",
+                                            "water stress","water withdrawal intensity"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_4j",
+                            "formatting_rule": "trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["extract","resource us","usage","consumption","consume"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_4k",
+                            "formatting_rule": "trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["water supply","water supplies","supply of freshwater","supply of water",
+                                            "water resource","freshwater resource" ],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_4l",
+                            "formatting_rule": "no_left_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["water","freshwater"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_4m",
+                            "formatting_rule": "no_left_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["withdrawal","abstraction","abstracted","allocation"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_4n",
+                            "formatting_rule": "no_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["water-filling","water filling"],
+                            "wordlist_no": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "5",
+            "phrases": [
+                {
+                    "number": 1,
+                    "logic_rule": "([termlist6_5a] | [termlist6_5acase] | ([termlist6_5b] & ([termlist6_5c] | ([termlist6_5d] & [termlist6_5e]))))",
+                    "sentence_split": true,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist6_5a",
+                            "formatting_rule": "no_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["integrated water resources management","integrated water management","integrated basin management"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_5acase",
+                            "formatting_rule": "no_trunc",
+                            "na": false,
+                            "case": true,
+                            "wordlist_en": ["IWRM"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_5b",
+                            "formatting_rule": "trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["cross sectoral","cross-sectoral","intersectoral","inter sectoral",
+                                            "multisectoral","multi sectoral", 
+                                            "coordinat","co-ordinat","integrated","interdependen","interconnect", 
+                                            "interact","synergy","synergies"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_5c",
+                            "formatting_rule": "no_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["water management"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_5d",
+                            "formatting_rule": "no_left_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["manage","develop","govern","development","administrat",
+                                            "plan","plans","planning", 
+                                            "policy","policies",
+                                            "resource use","usage","withdrawals"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_5e",
+                            "formatting_rule": "trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["water resource","freshwater resource", 
+                                            "water supply","water supplies","supply of water","supply of freshwater",
+                                            "supplies of water","supplies of freshwater",
+                                            "water basin","river basin",
+                                            "hydrological unit","watershed"],
+                            "wordlist_no": []
+                        }
+                    ]
+                },
+                {
+                    "number": 2,
+                    "logic_rule": "([termlist6_5f] & ([termlist6_5g] & [termlist6_5h]))",
+                    "sentence_split": true,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist6_5f",
+                            "formatting_rule": "no_left_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["arrangement","treaty","treaties","agreement","framework", 
+                                            "convention","memorandum of understanding","pact","settlement","accord", 
+                                            "protocol","policy","policies","legislation"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_5g",
+                            "formatting_rule": "trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["crossboundary","crossborder","cross-boundary","cross-border",
+                                            "transboundary","trans-boundary", 
+                                            "transborder","trans-border","interstate","international",
+                                            "co-operation","cooperation","collaboration"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_5h",
+                            "formatting_rule": "trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["water basin","lake","river","river basin","stream", 
+                                            "aquifer","groundwater",
+                                            "watershed","catchment", 
+                                            "water resource","freshwater resource", 
+                                            "water supply","water supplies","supply of water","supply of freshwater",
+                                            "supplies of water","supplies of freshwater",
+                                            "water basin","river basin",
+                                            "hydrological unit"],
+                            "wordlist_no": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "6",
+            "phrases": [
+                {
+                    "number": 1,
+                    "logic_rule": "([termlist6_6a] & ([termlist6_6b] & ([termlist6_6c] | ([termlist6_6d] & [termlist6_6e]))))",
+                    "sentence_split": true,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist6_6a",
+                            "formatting_rule": "no_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["conserve","conserving","manage","managing","managed", 
+                                            "protect","protecting","protected","restore","restoring","rehabilitate",
+                                            "management","conservation","protection","restoration","rehabilitation","resilience", 
+                                            "nature based solution","nature based solutions",
+                                            "extract","extraction","resource us","usage",
+                                            "consumption","withdrawal","withdrawals"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_6b",
+                            "formatting_rule": "no_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["freshwater","fresh water","lake","pond","lakes","ponds",
+                                            "brook","creek","brooks","creeks",
+                                            "aquifer","groundwater","aquifers","groundwaters",
+                                            "water reservoir","water reservoirs",
+                                            "artificial waterbody","artificial waterbodies",
+                                            "marsh","marshes","peatland","peatlands",
+                                            "bog","bogs","mire","mires","fen","fens","swamp","swamps", 
+                                            "wetland","mangrove","wetlands","mangroves", 
+                                            "floodplain","floodplains","rice paddy","rice paddies"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_6c",
+                            "formatting_rule": "no_left_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["ecosystem","habitat","ecological communit",
+                                            "biotope","biodiversity"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_6d",
+                            "formatting_rule": "no_left_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["water","freshwater"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_6e",
+                            "formatting_rule": "no_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["quality","quantity","area","extent","volume"],
+                            "wordlist_no": []
+                        }
+                    ]
+                },
+                {
+                    "number": 2,
+                    "logic_rule": "(([termlist6_6f] | ([termlist6_6m] & [termlist6_6n]) | ([termlist6_6g] & [termlist6_6h])) & ([termlist6_6i] & ([termlist6_6j] | ([termlist6_6k] & [termlist6_6l]))))",
+                    "sentence_split": true,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist6_6f",
+                            "formatting_rule": "no_left_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["deteriorat","declin","degrad","loss","lost","destruct","disappear","fragmentat", 
+                                            "erosion","flooding","drought",
+                                            "species extinct","species loss","species lost",
+                                            "biodiversity loss","biodiversity lost"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_6m",
+                            "formatting_rule": "no_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["flow"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_6n",
+                            "formatting_rule": "no_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["reduced","diminished","decrased","low"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_6g",
+                            "formatting_rule": "trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["unsustainab","exploit"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_6h",
+                            "formatting_rule": "no_left_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["manag","use","using","usage","utili","govern","development","administrat", 
+                                            "planning","policy","policies",
+                                            "water extract","withdrawal"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_6i",
+                            "formatting_rule": "no_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["freshwater","fresh water","lake","pond","lakes","ponds",
+                                            "brook","creek","brooks","creeks",
+                                            "aquifer","groundwater","aquifers","groundwaters",
+                                            "water reservoir","water reservoirs",
+                                            "artificial waterbody","artificial waterbodies",
+                                            "marsh","marshes","peatland","peatlands",
+                                            "bog","bogs","mire","mires","fen","fens","swamp","swamps", 
+                                            "wetland","mangrove","wetlands","mangroves", 
+                                            "floodplain","floodplains","rice paddy","rice paddies"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_6j",
+                            "formatting_rule": "no_left_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["ecosystem","habitat","ecological communit","biotope",
+                                            "biodiversity"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_6k",
+                            "formatting_rule": "no_left_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["water","freshwater"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_6l",
+                            "formatting_rule": "no_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["quality","quantity","area","extent","volume"],
+                            "wordlist_no": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "a",
+            "phrases": [
+                {
+                    "number": 1,
+                    "logic_rule": "([LMIC] & ([termlist6_aa] | ((([termlist6_ab] | [termlist6_abcase] | ([termlist6_ac] & [termlist6_ad])) & [termlist6_ae]) & (([termlist6_af] | [termlist6_afcase] | [termlist6_ai] | ([termlist6_ag] & [termlist6_ah]) | ([termlist6_aj] & [termlist6_ak])) & [termlist6_al]) | [termlist6_am] | ([termlist6_an] & [termlist6_ao]))))",
+                    "sentence_split": true,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist6_aa",
+                            "formatting_rule": "no_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["Global WASH strategy","Global WASH cluster"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_ab",
+                            "formatting_rule": "no_left_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["official development assistance","cooperation fund", 
+                                            "development spending","development aid","development assistance", 
+                                            "foreign aid","international aid","international assistance"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_abcase",
+                            "formatting_rule": "no_trunc",
+                            "na": false,
+                            "case": true,
+                            "wordlist_en": ["ODA"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_ac",
+                            "formatting_rule": "trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["international","development"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_ad",
+                            "formatting_rule": "trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["cooperat","co-operat","collaborat","network","partnership",
+                                            "support","investment"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_ae",
+                            "formatting_rule": "no_left_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["capacity building","institutional capacity","human capacity","technological capacity","scientific capacity", 
+                                            "financial capacity","capacity development","building capacit","developing capacit", 
+                                            "infrastructure","facilities","tools","technical support","managerial support",
+                                            "research","knowledge","skills","competenc","expertise","innovation",
+                                            "communication","social network","information network","campaign", 
+                                            "awareness","disseminat","educat","training", 
+                                            "knowledge transfer","transfer of technolog","technological transfer","technology transfer",
+                                            "expenditure","invest","financing","spending", 
+                                            "funding","funder","funds","grant","loan","microfinance", 
+                                            "financial support","financial resources",
+                                            "incentive","tax","fees", 
+                                            "subsidy","subsidies","subsidising","subsidizing","subsidise","subsidize", 
+                                            "policy","policies","empower","strateg","programme","program","intervention"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_af",
+                            "formatting_rule": "trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["sanitation","hygiene service","hygiene facilit",
+                                            "handwashing","hand-washing","washing hands","wash hands",
+                                            "toilet","lavatory","lavatories","latrine","water closet","outhouse",
+                                            "safely managed sanitation services","improved sanitation facilit",
+                                            "ventilated pit latrine","composting latrine","container based sanitation","pit toilet",
+                                            "dry toilet","composting toilet","separating toilet","separating latrine",
+                                            "urine-diverting dry toilet","urine-diverting dry latrine"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_afcase",
+                            "formatting_rule": "no_trunc",
+                            "na": false,
+                            "case": true,
+                            "wordlist_en": ["WASH"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_ai",
+                            "formatting_rule": "no_left_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["sewage","sewers","sewer network","sewer system","sewerage"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_ag",
+                            "formatting_rule": "no_left_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["flush toilet","pit latrine"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_ah",
+                            "formatting_rule": "no_left_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["sewer","septic tank","slab","platform","pit latrine"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_aj",
+                            "formatting_rule": "no_left_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["disposing","disposal","removal","remove","treat",
+                                            "containment","emptying","transport","reuse"
+],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_ak",
+                            "formatting_rule": "no_left_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["wastewater","human excreta","animal excreta","fecal","faecal","feces","faeces", 
+                                            "black water","urine","compost"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_al",
+                            "formatting_rule": "no_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["sanitation","hygiene"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_am",
+                            "formatting_rule": "no_left_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["improved drinking water source","improved water source",
+                                            "safely managed drinking water"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_an",
+                            "formatting_rule": "no_left_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["availab","access","affordab","clean","safe","safety",
+                                            "improved","manag","regulat","quality","monitor",
+                                            "potable","uncontaminated","unpolluted","pure","disinfect",
+                                            "piped","tap","faucet","running","municipal","borehol","tubewell",
+                                             "water provision","household water","domestic water",
+                                             "rainwater","protect dug well","protected spring",
+                                             "packaged","delivered","collect","fetch","distribut","water kiosk",
+                                             "water security","water insecurity","water justice","water safety"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_ao",
+                            "formatting_rule": "trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["drinking water","drinking-water","drinkable water",
+                                            "potable water","water for drinking","water used for drinking"],
+                            "wordlist_no": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "b",
+            "phrases": [
+                {
+                    "number": 1,
+                    "logic_rule": "(([termlist6_ba] & [termlist6_bb]) & ([termlist6_bc] | [termlist6_bccase] | [termlist6_bd] | [termlist6_be] | [termlist6_becase] | ([termlist6_bf] & (([termlist6_bg] & [termlist6_bh]) | ([termlist6_bi] & [termlist6_bj]) | [termlist6_bk]))))",
+                    "sentence_split": true,
+                    "_comment": "Freshwater string is the same used in 6.3 but without 'drinking water' which is already included earlier in the phrase with lesser restrictions.",
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist6_ba",
+                            "formatting_rule": "no_left_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["local","stakeholder","municip","commun","district"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_bb",
+                            "formatting_rule": "no_left_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["participat","contribut","impact","plan", 
+                                            "choice","choose","solution", 
+                                            "decision making","making decision", 
+                                            "administrat","policy","policies","procedure","scheme", 
+                                            "manage","develop","govern","development",
+                                            "resource us","using resource", 
+                                            "empower","engage","collaborat","co-operat","cooperat","inclus"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_bc",
+                            "formatting_rule": "trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["water use efficiency",
+                                            "water supply","water supplies","supply of freshwater","supply of water",
+                                            "water resource","freshwater resource"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_bccase",
+                            "formatting_rule": "no_trunc",
+                            "na": false,
+                            "case": true,
+                            "wordlist_en": ["WUE"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_bd",
+                            "formatting_rule": "trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["drinking water","drinking-water","drinkable water",
+                                            "potable water","water for drinking","water used for drinking"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_be",
+                            "formatting_rule": "no_left_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["sanitation",
+                                            "hygiene service","hygiene facilit",
+                                            "handwashing","hand-washing","washing hands","wash hands"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_becase",
+                            "formatting_rule": "no_trunc",
+                            "na": false,
+                            "case": true,
+                            "wordlist_en": ["WASH"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_bf",
+                            "formatting_rule": "no_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["freshwater","fresh water","lake","pond","lakes","ponds",
+                                            "brook","creek","brooks","creeks",
+                                            "aquifer","groundwater","aquifers","groundwaters",
+                                            "natural water","water source","natural waters","water sources",
+                                            "water reservoir","water reservoirs"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_bg",
+                            "formatting_rule": "no_left_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["wastewater","waste water","sewage","sewer","effluent"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_bh",
+                            "formatting_rule": "no_left_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["treatment"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_bi",
+                            "formatting_rule": "no_left_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["water","freshwater"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_bj",
+                            "formatting_rule": "no_left_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["quality","quantity","area","extent","volume"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist6_bk",
+                            "formatting_rule": "no_left_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["ecosystem","habitat","ecological communit","biotope",
+                                            "biodiversity"],
+                            "wordlist_no": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "mentions": {
+        "logic_rule": "([termlist6_sdg_a] | ([termlist6_sdg_b] & ([termlist6_sdg_c] | [termlist6_sdg_d])) | ([termlist6_sdg_e] & [termlist6_sdg_f]))",
+        "termlists": [
+            {
+                "termlist_name": "termlist6_sdg_a",
+                "formatting_rule": "no_trunc",
+                "na": false,
+                "case": false,
+                "wordlist_en": ["SDG 6","SDGs 6","SDG6","sustainable development goal 6"],
+                "wordlist_no": []
+            },
+            {
+                "termlist_name": "termlist6_sdg_b",
+                "formatting_rule": "trunc",
+                "na": false,
+                "case": false,
+                "wordlist_en": ["sustainable development goal"],
+                "wordlist_no": []
+            },
+            {
+                "termlist_name": "termlist6_sdg_c",
+                "formatting_rule": "no_trunc",
+                "na": false,
+                "case": false,
+                "wordlist_en": ["goal 6"],
+                "wordlist_no": []
+            },
+            {
+                "termlist_name": "termlist6_sdg_d",
+                "formatting_rule": "trunc",
+                "na": false,
+                "case": false,
+                "wordlist_en": ["water and sanitation"],
+                "wordlist_no": []
+            },
+            {
+                "termlist_name": "termlist6_sdg_e",
+                "formatting_rule": "trunc",
+                "na": false,
+                "case": false,
+                "wordlist_en": ["sustainable development goal","SDG","goal 6"],
+                "wordlist_no": []
+            },
+            {
+                "termlist_name": "termlist6_sdg_f",
+                "formatting_rule": "no_trunc",
+                "na": false,
+                "case": false,
+                "wordlist_en": ["sanitation","hygiene","water"],
+                "wordlist_no": []
+            }
+            
+        ]
+    }
+}

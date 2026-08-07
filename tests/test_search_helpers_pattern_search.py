@@ -6,13 +6,13 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 from src.helpers import _pattern_search_boolean
 
-DEFAULT = '(?:{})'
-SPECIFIC = '(?:{})\\b'
-SPECIFIC_TRUNC = '\\b(?:{})\\b'
-NO_LEFT_TRUNC = '\\b(?:{})'
+trunc = '(?:{})'
+no_right_trunc = '(?:{})\\b'
+no_trunc = '\\b(?:{})\\b'
+no_left_trunc = '\\b(?:{})'
 
 
-######################### Testcase: DEFAULT format + TRUE output #########################
+######################### Testcase: trunc format + TRUE output #########################
 @pytest.mark.regex_pattern
 @pytest.mark.parametrize(
     'input_regex, input_text',
@@ -25,7 +25,7 @@ NO_LEFT_TRUNC = '\\b(?:{})'
         ('(?:house|low-maintenance|low-ball)', 'this is a low-maintenance house'),
     ],
 )
-def test_pattern_search_boolean_default_true(input_regex, input_text):
+def test_pattern_search_boolean_trunc_true(input_regex, input_text):
     # Arrange
     # Act
     result = _pattern_search_boolean(input_regex, input_text)
@@ -33,7 +33,7 @@ def test_pattern_search_boolean_default_true(input_regex, input_text):
     assert result
 
 
-######################### Testcase: DEFAULT format + FALSE output #########################
+######################### Testcase: trunc format + FALSE output #########################
 @pytest.mark.regex_pattern
 @pytest.mark.parametrize(
     'input_regex, input_text',
@@ -45,7 +45,7 @@ def test_pattern_search_boolean_default_true(input_regex, input_text):
         ('(?:house|low-maintenance)', 'this is a random sentence'),
     ],
 )
-def test_pattern_search_boolean_default_false(input_regex, input_text):
+def test_pattern_search_boolean_trunc_false(input_regex, input_text):
     # Arrange
     # Act
     result = _pattern_search_boolean(input_regex, input_text)
@@ -53,7 +53,7 @@ def test_pattern_search_boolean_default_false(input_regex, input_text):
     assert not result
 
 
-######################### Testcase: SPECIFIC format + TRUE output #########################
+######################### Testcase: no_right_trunc format + TRUE output #########################
 @pytest.mark.regex_pattern
 @pytest.mark.parametrize(
     'input_regex, input_text',
@@ -62,7 +62,7 @@ def test_pattern_search_boolean_default_false(input_regex, input_text):
         ('(?:house)\\b', 'courthouse'),
     ],
 )
-def test_pattern_search_boolean_specific_true(input_regex, input_text):
+def test_pattern_search_boolean_no_right_trunc_true(input_regex, input_text):
     # Arrange
     # Act
     result = _pattern_search_boolean(input_regex, input_text)
@@ -70,7 +70,7 @@ def test_pattern_search_boolean_specific_true(input_regex, input_text):
     assert result
 
 
-######################### Testcase: SPECIFIC format + FALSE output #########################
+######################### Testcase: no_right_trunc format + FALSE output #########################
 @pytest.mark.regex_pattern
 @pytest.mark.parametrize(
     'input_regex, input_text',
@@ -81,7 +81,7 @@ def test_pattern_search_boolean_specific_true(input_regex, input_text):
         ('(?:house|low-maintenance)\\b', 'this is a random sentence'),
     ],
 )
-def test_pattern_search_boolean_specific_false(input_regex, input_text):
+def test_pattern_search_boolean_no_right_trunc_false(input_regex, input_text):
     # Arrange
     # Act
     result = _pattern_search_boolean(input_regex, input_text)
@@ -89,7 +89,7 @@ def test_pattern_search_boolean_specific_false(input_regex, input_text):
     assert not result
 
 
-######################### Testcase: SPECIFIC_TRUNC format + TRUE output #########################
+######################### Testcase: no_trunc format + TRUE output #########################
 @pytest.mark.regex_pattern
 @pytest.mark.parametrize(
     'input_regex, input_text',
@@ -98,7 +98,7 @@ def test_pattern_search_boolean_specific_false(input_regex, input_text):
         ('\\b(?:house)\\b', 'this house.'),
     ],
 )
-def test_pattern_search_boolean_specific_trunc_true(input_regex, input_text):
+def test_pattern_search_boolean_no_trunc_true(input_regex, input_text):
     # Arrange
     # Act
     result = _pattern_search_boolean(input_regex, input_text)
@@ -106,7 +106,7 @@ def test_pattern_search_boolean_specific_trunc_true(input_regex, input_text):
     assert result
 
 
-######################### Testcase: SPECIFIC_TRUNC format + FALSE output #########################
+######################### Testcase: no_trunc format + FALSE output #########################
 @pytest.mark.regex_pattern
 @pytest.mark.parametrize(
     'input_regex, input_text',
@@ -118,7 +118,7 @@ def test_pattern_search_boolean_specific_trunc_true(input_regex, input_text):
         ('\\b(?:house|low-maintenance)\\b', 'this is a random sentence'),
     ],
 )
-def test_pattern_search_boolean_specific_trunc_false(input_regex, input_text):
+def test_pattern_search_boolean_no_trunc_false(input_regex, input_text):
     # Arrange
     # Act
     result = _pattern_search_boolean(input_regex, input_text)
@@ -126,7 +126,7 @@ def test_pattern_search_boolean_specific_trunc_false(input_regex, input_text):
     assert not result
 
 
-######################### Testcase: STAR icon + SPECIFIC_TRUNC format + TRUE output #########################
+######################### Testcase: STAR icon + no_trunc format + TRUE output #########################
 @pytest.mark.regex_pattern
 @pytest.mark.parametrize(
     'input_regex, input_text',
@@ -135,7 +135,7 @@ def test_pattern_search_boolean_specific_trunc_false(input_regex, input_text):
         ('\\b(?:economic resource.*)\\b', 'economic resource'),
     ],
 )
-def test_pattern_search_boolean_specific_trunc_true_with_star(input_regex, input_text):
+def test_pattern_search_boolean_no_trunc_true_with_star(input_regex, input_text):
     # Arrange
     # Act
     result = _pattern_search_boolean(input_regex, input_text)
@@ -143,7 +143,7 @@ def test_pattern_search_boolean_specific_trunc_true_with_star(input_regex, input
     assert result
 
 
-######################### Testcase: STAR icon + SPECIFIC_TRUNC format + FALSE output #########################
+######################### Testcase: STAR icon + no_trunc format + FALSE output #########################
 @pytest.mark.regex_pattern
 @pytest.mark.parametrize(
     'input_regex, input_text',
@@ -153,7 +153,7 @@ def test_pattern_search_boolean_specific_trunc_true_with_star(input_regex, input
         ('\\b(?:house|low-maintenance)\\b', 'this is a random sentence'),
     ],
 )
-def test_pattern_search_boolean_specific_trunc_false_with_star(input_regex, input_text):
+def test_pattern_search_boolean_no_trunc_false_with_star(input_regex, input_text):
     # Arrange
     # Act
     result = _pattern_search_boolean(input_regex, input_text)

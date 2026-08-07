@@ -71,13 +71,13 @@ def test_check_for_missing_matches_no_missing_keys(input_dict):
 
 
 ################### TESTS FOR _format_list_with_pattern ###################
-DEFAULT = '(?:{})'
-SPECIFIC = '(?:{})\\b'
-SPECIFIC_TRUNC = '\\b(?:{})\\b'
-NO_LEFT_TRUNC = '\\b(?:{})'
+trunc = '(?:{})'
+no_right_trunc = '(?:{})\\b'
+no_trunc = '\\b(?:{})\\b'
+no_left_trunc = '\\b(?:{})'
 
 
-# Testcase: DEFAULT format
+# Testcase: trunc format
 @pytest.mark.regex_pattern
 @pytest.mark.parametrize(
     'input_terms, output_text',
@@ -88,16 +88,16 @@ NO_LEFT_TRUNC = '\\b(?:{})'
         ([], '(?:)'),
     ],
 )
-def test_format_list_with_pattern_default(input_terms, output_text):
+def test_format_list_with_pattern_trunc(input_terms, output_text):
     # Arrange
-    pattern = DEFAULT
+    pattern = trunc
     # Act
     result = _format_list_with_pattern(pattern, input_terms)
     # Assert
     assert result == output_text
 
 
-# Testcase: SPECIFIC format
+# Testcase: no_right_trunc format
 @pytest.mark.regex_pattern
 @pytest.mark.parametrize(
     'input_terms, output_text',
@@ -108,16 +108,16 @@ def test_format_list_with_pattern_default(input_terms, output_text):
         ([], '(?:)\\b'),
     ],
 )
-def test_format_list_with_pattern_specific(input_terms, output_text):
+def test_format_list_with_pattern_no_right_trunc(input_terms, output_text):
     # Arrange
-    pattern = SPECIFIC
+    pattern = no_right_trunc
     # Act
     result = _format_list_with_pattern(pattern, input_terms)
     # Assert
     assert result == output_text
 
 
-# Testcase: SPECIFIC_TRUNC format
+# Testcase: no_trunc format
 @pytest.mark.regex_pattern
 @pytest.mark.parametrize(
     'input_terms, output_text',
@@ -128,16 +128,16 @@ def test_format_list_with_pattern_specific(input_terms, output_text):
         ([], '\\b(?:)\\b'),
     ],
 )
-def test_format_list_with_pattern_specific_trunc(input_terms, output_text):
+def test_format_list_with_pattern_no_trunc(input_terms, output_text):
     # Arrange
-    pattern = SPECIFIC_TRUNC
+    pattern = no_trunc
     # Act
     result = _format_list_with_pattern(pattern, input_terms)
     # Assert
     assert result == output_text
 
 
-# Testcase: NO_LEFT_TRUNC format
+# Testcase: no_left_trunc format
 @pytest.mark.regex_pattern
 @pytest.mark.parametrize(
     'input_terms, output_text',
@@ -150,7 +150,7 @@ def test_format_list_with_pattern_specific_trunc(input_terms, output_text):
 )
 def test_format_list_with_pattern_no_left_trunc(input_terms, output_text):
     # Arrange
-    pattern = NO_LEFT_TRUNC
+    pattern = no_left_trunc
     # Act
     result = _format_list_with_pattern(pattern, input_terms)
     # Assert
@@ -416,11 +416,11 @@ def test_prepare_regex_search_termlist_calls_format(
 ):
     # Arrange
     termlist = ['one', 'two']
-    formatting_rule = 'DEFAULT'
+    formatting_rule = 'trunc'
     case = False
 
     # Act
-    with mock.patch('src.format_helpers.REGEX_PATTERNS', {'DEFAULT': '(?:{})'}):
+    with mock.patch('src.format_helpers.REGEX_PATTERNS', {'trunc': '(?:{})'}):
         prepare_regex_search_termlist(termlist, 'text', formatting_rule, case)
     # Assert
     mocker_format_list_with_pattern.assert_called_once_with('(?:{})', ['one', 'two'])
@@ -433,11 +433,11 @@ def test_prepare_regex_search_termlist_lowercase_list(
 ):
     # Arrange
     termlist = ['ONE', 'Two']
-    formatting_rule = 'DEFAULT'
+    formatting_rule = 'trunc'
     case = False
 
     # Act
-    with mock.patch('src.format_helpers.REGEX_PATTERNS', {'DEFAULT': '(?:{})'}):
+    with mock.patch('src.format_helpers.REGEX_PATTERNS', {'trunc': '(?:{})'}):
         prepare_regex_search_termlist(termlist, 'text', formatting_rule, case)
     # Assert
     mocker_format_list_with_pattern.assert_called_once_with('(?:{})', ['one', 'two'])
@@ -450,13 +450,13 @@ def test_prepare_regex_search_termlist_lowercase_text(
 ):
     # Arrange
     termlist =['ONE', 'Two']
-    formatting_rule = 'DEFAULT'
+    formatting_rule = 'trunc'
     case = False
 
     input_text = 'Text with UPPERCASE'
     output_excpected = 'text with uppercase'
     # Act
-    with mock.patch('src.format_helpers.REGEX_PATTERNS', {'DEFAULT': '(?:{})'}):
+    with mock.patch('src.format_helpers.REGEX_PATTERNS', {'trunc': '(?:{})'}):
         _, output_text = prepare_regex_search_termlist(termlist, input_text, formatting_rule, case)
 
     # Assert
@@ -465,13 +465,13 @@ def test_prepare_regex_search_termlist_lowercase_text(
 
 # Testcase: NOT Lowering the words in the list if case=True
 @patch('src.format_helpers._format_list_with_pattern')
-@patch('src.format_helpers.REGEX_PATTERNS', {'DEFAULT': '(?:{})'})
+@patch('src.format_helpers.REGEX_PATTERNS', {'trunc': '(?:{})'})
 def test_prepare_regex_search_termlist_do_not_lowercase_list(
     mocker_format_list_with_pattern
 ):
     # Arrange
     termlist = ['ONE', 'Two']
-    formatting_rule = 'DEFAULT'
+    formatting_rule = 'trunc'
     case = True
  
     # Act
@@ -483,13 +483,13 @@ def test_prepare_regex_search_termlist_do_not_lowercase_list(
 
 # Testcase: NOT Lowering the words in the input text if case=True
 @patch('src.format_helpers._format_list_with_pattern')
-@patch('src.format_helpers.REGEX_PATTERNS', {'DEFAULT': '(?:{})'})
+@patch('src.format_helpers.REGEX_PATTERNS', {'trunc': '(?:{})'})
 def test_prepare_regex_search_termlist_do_not_lowercase_text(
     mocker_format_list_with_pattern
 ):
     # Arrange
     termlist = ['ONE', 'Two']
-    formatting_rule = 'DEFAULT'
+    formatting_rule = 'trunc'
     case = True
 
     input_text = 'Text with UPPERCASE'
