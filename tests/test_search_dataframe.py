@@ -280,7 +280,7 @@ def test_row_search_with_mocks(mocker, input_text, input_sdgs):
     mock_format_results.return_value = [True, 'SDG01_01', 'SDG01_b', np.nan]
 
     # Act
-    expected_calls = [call(input_text, input_sdgs)]
+    expected_calls = [call(input_text, input_sdgs, False)]
 
     # Act
     _row_search(input_text, input_sdgs)
@@ -288,7 +288,6 @@ def test_row_search_with_mocks(mocker, input_text, input_sdgs):
     # Assert
     assert mock_search_all_goals.call_count == 1
     assert mock_search_all_goals.call_args_list == expected_calls
-
 
 ############################################################################################################
 
