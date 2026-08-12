@@ -134,7 +134,7 @@ def search_in_text_for_one_sdg(
 
 
 def search_all_goals(
-    text: str, sdg_list: list[int] = LIST_ALL_SDG_NR
+    text: str, sdg_list: list[int] = LIST_ALL_SDG_NR, countries_results: dict[str, bool] = False
 ) -> dict[str, dict[str, Any]]:
     """Search for all the goals in a text
 
@@ -147,7 +147,11 @@ def search_all_goals(
     """
     results: dict[str, Any] = {}
 
-    countries = run_all_country_searches(text)
+    if not countries_results:
+        countries = run_all_country_searches(text)
+    else: 
+        countries = countries_results
+        
     results['countries'] = countries
 
     for sdg in [sdg for sdg in sdg_list if sdg in set(LIST_ALL_SDG_NR)]:

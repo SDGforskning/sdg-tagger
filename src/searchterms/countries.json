@@ -7,7 +7,7 @@
             "termlists":[
                 {
                     "termlist_name":"LDC_termlist",
-                    "formatting_rule":"default",
+                    "formatting_rule":"trunc",
                     "na":false,
                     "case":false,
                     "wordlist_en":[
@@ -19,7 +19,7 @@
                 },
                 {
                     "termlist_name":"LDC_termlist_trunc",
-                    "formatting_rule":"specific_trunc",
+                    "formatting_rule":"no_trunc",
                     "na":false,
                     "case":false,
                     "wordlist_en":[
@@ -31,7 +31,7 @@
                 },
                 {
                     "termlist_name":"LDC_termlist_caps",
-                    "formatting_rule":"default",
+                    "formatting_rule":"trunc",
                     "na":false,
                     "case":true,
                     "wordlist_en":[
@@ -48,7 +48,7 @@
             "termlists":[
                 {
                     "termlist_name":"SIDS_termlist",
-                    "formatting_rule":"default",
+                    "formatting_rule":"trunc",
                     "na":false,
                     "case":false,
                     "wordlist_en":[
@@ -60,7 +60,7 @@
                 },
                 {
                     "termlist_name":"SIDS_termlist_caps",
-                    "formatting_rule":"default",
+                    "formatting_rule":"trunc",
                     "na":false,
                     "case":true,
                     "wordlist_en":[
@@ -77,7 +77,7 @@
             "termlists":[
                 {
                     "termlist_name":"LDS_termlist",
-                    "formatting_rule":"default",
+                    "formatting_rule":"trunc",
                     "na":false,
                     "case":false,
                     "wordlist_en":[
@@ -89,7 +89,7 @@
                 },
                 {
                     "termlist_name":"LDS_termlist_trunc",
-                    "formatting_rule":"default",
+                    "formatting_rule":"trunc",
                     "na":false,
                     "case":true,
                     "wordlist_en":[
@@ -107,7 +107,7 @@
             "termlists":[
                 {
                     "termlist_name":"LMIC_termlist",
-                    "formatting_rule":"default",
+                    "formatting_rule":"trunc",
                     "na":false,
                     "case":false,
                     "wordlist_en":[
@@ -131,7 +131,7 @@
                 },
                 {
                     "termlist_name":"LMIC_termlist_trunc",
-                    "formatting_rule":"specific_trunc",
+                    "formatting_rule":"no_trunc",
                     "na":false,
                     "case":false,
                     "wordlist_en":[
@@ -142,7 +142,7 @@
                 },
                 {
                     "termlist_name":"LMIC_termlist_caps",
-                    "formatting_rule":"default",
+                    "formatting_rule":"trunc",
                     "na":false,
                     "case":true,
                     "wordlist_en":[
