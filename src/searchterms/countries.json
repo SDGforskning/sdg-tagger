@@ -26,7 +26,7 @@
                         "Mali", "malian", "Chad", "laos", "togo"
                     ],
                     "wordlist_no":[
-                        "malier", "maliar", "malisk", "laos", "togo"
+                        "mali", "malier", "maliar", "malisk", "laos", "togo"
                     ]
                 },
                 {
@@ -106,7 +106,7 @@
                         "Mali", "malian", "chad", "niger"
                     ],
                     "wordlist_no":[
-                         "malier", "maliar", "malisk", "niger"
+                         "mali", "malier", "maliar", "malisk", "niger"
                     ]
                 }
             ]
@@ -145,9 +145,9 @@
                     "na":false,
                     "case":false,
                     "wordlist_en":[
-                        "kina", "Mali", "malian", "malier", "maliar", "malisk", "cuba", "cuban", "iran", "Laos", "peru"
+                        "Mali", "malian", "cuba", "cuban", "iran", "Laos", "peru"
                     ],
-                    "wordlist_no":["cuba", "cubansk", "iran"
+                    "wordlist_no":["kina", "mail", "malier", "maliar", "malisk", "cuba", "cubansk", "iran"
                     ]
                 },
                 {
