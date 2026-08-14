@@ -94,7 +94,7 @@
                         },
                         {
                             "termlist_name": "termlist7_1g",
-                            "formatting_rule": "trunc",
+                            "formatting_rule": "no_left_trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["household", "home", "hous", "residential", "dwelling", "domestic use", "slum", "residential heating", "central heating", "winter heating",
@@ -240,7 +240,7 @@
                         },
                         {
                             "termlist_name": "termlist7_1o",
-                            "formatting_rule": "trunc",
+                            "formatting_rule": "no_left_trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["household", "home", "house", "housing", "residential", "dwelling", "domestic use", "slum", "village", "sustainable"],
