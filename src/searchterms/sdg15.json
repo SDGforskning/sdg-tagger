@@ -758,8 +758,10 @@
                             "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
-                            "_comment": "NO: Translations of these (e.g.'uttørking') are combined with soil terms in 3j.",
-                            "wordlist_en": ["aridificat", "soil pollution", "soil loss"],
+                            "_comment": "EN: 'land' is combined in phrases because when included alone in 3itrunc it led to irrelevant results regarding changes in 'land use'. NO: Translations of these (e.g.'uttørking') are combined with soil terms in 3j.",
+                            "wordlist_en": ["aridificat", "soil pollution", "soil loss",
+                                "land degrad", "land erosion", "land salinisat", "land alkalinisat", "land contamin", "land pollution", 
+                                "degradation of land", "erosion of land", "salinisation of land", "alkalinisation of land", "contamination of land", "pollution of land"],
                             "wordlist_no": []
                         },
                         {
@@ -767,7 +769,7 @@
                             "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
-                            "wordlist_en": ["topsoil"],
+                            "wordlist_en": ["topsoil", "agricultural land", "farmland"],
                             "wordlist_no": ["dyrket mark", "dyrkamark", "dyrka mark", "dyrkamark",  "kultivert mark"]
                         },
                         {
@@ -775,7 +777,7 @@
                             "formatting_rule": "no_trunc",
                             "na": false,
                             "case": false,
-                            "wordlist_en": ["land", "soil", "soils"],
+                            "wordlist_en": ["soil", "soils"],
                             "wordlist_no": ["jord", "jordbruk", "jordtap", "mark"]
                         },
                         {
@@ -860,7 +862,7 @@
                             "na": false,
                             "case": false,
                             "wordlist_en": ["fertility", "productivity", "stucture", "health", 
-                            "protect", "conserv", "preserv", "restor", "rehabilit"],
+                            "protect soil", "soil protection", "conserv", "preserv", "restor", "rehabilit"],
                             "wordlist_no": ["fruktbar", "fertilitet", "produktivitet", "helse", 
                             "verne", "verna", "vern av", "miljøvern", "bevare", "bevaring", "frede", "freda", "fredning", "gjenoppbygg", "restaure"]
                         }
