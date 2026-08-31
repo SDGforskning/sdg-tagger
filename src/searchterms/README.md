@@ -233,7 +233,7 @@ It will take around 30 minutes to run, so do it when you have time. But you only
 ### 4b. Dataframe search: Run search on one specific target on an entire dataframe
 You run your SDG search against a dataset of real publications. It will provide a table which shows the publication data you specify, as well as (optionally) whether the item was found by the title, abstract or another specified field.
 
-- Runs against: A dataset (csv or xlsx) of publications, where it will search within the columns you specify in _COLUMNS_. You specify how many rows you want to search (or only rows of a specific language) in box 2. 
+- Runs against: A dataset (csv or xlsx) of publications, where it will search within the columns you specify in _COLUMNS_. You specify how many rows you want to search (or only rows of a specific language) in box 2. The location of the csv file is set in the first cell under "Dataframe search". 
 - Searches for: One SDG and target at once
 - Output: You get a table of results. This table will only contain results found by the search if you keep _INCLUDE_FALSE_VALUES = False_, but will show all publications in the dataset (even those not found by the search) if you change this to _False_. The table will include fields that you define in _EXTRA_COLUMNS_ and _VIEW_. You can save these results to excel for processing - see function nr 6. 
 - Important info: The search generally runs rapidly, and can search 10000 results in about a minute. You will need to have created the countries file by running 4a at some point previously, otherwise it will get an error. 
@@ -245,13 +245,13 @@ You run your SDG search against a dataset of real publications. It will provide 
 ### 4c. Dataframe search: Extra function - Compare results before and after changes to a search
 Compare results before and after changes to the search. 
 
-This code is not a neat function, but ad-hoc code that lets you save the results of a search ("4. Run search on one specific target on an entire dataframe"), change your search in the sdg.json file and save it, run (4) again, and then see which results you have gained or lost. 
+This code is not a neat function, but ad-hoc code that lets you save the results of a search ("4b. Run search on one specific target on an entire dataframe"), change your search in the sdg.json file and save it, run (4b) again, and then see which results you have gained or lost. 
 
-- Runs against: A search already done by running function (4)
+- Runs against: A search already done by running function (4b)
 - Output: You get two tables of results - one showing the results in set 1 but not 2 (i.e. what did you have before the change, **lost**), and one showing 2 not 1 (what did you gain from the change, **gain**). 
 - Important info: Requires you to follow a small workflow - this is described in the demo file. 
 
-### 4d. Run search for all sdgs on an entire dataframe
+### 4d. Dataframe search: Run search for all sdgs on an entire dataframe
 This function is similar to the previous one, but can search for multiple SDGs and targets. In the background it searches for all targets of the specified SDGs, even if you choose to only show one - it therefore takes a longer time and should not be used on large datasets. In nearly all use cases, **Run search on one specific target on an entire dataframe** should be used instead with specific datasets. 
 
 - Runs against: A dataset (csv or xlsx) of publications, where it will search within the columns you specify in _COLUMNS_. You specify how many rows you want to search, only rows of a specific language, or **only rows previously tagged as an SDG**, in box 2. 
@@ -262,4 +262,4 @@ This function is similar to the previous one, but can search for multiple SDGs a
 **Example use case**: Useful for checking **recall** against a set of already labelled publications - this was most relevant for the group converting existing searches, where we were trying to replicate an existing resultset we have. In Box 2 you can specify to only search in publications already labelled as an SDG target by the previous search - you can then check whether your search finds all of them. 
 
 ### 5. Saving the styled results to excel
-After running **Run search on one specific target on an entire dataframe**, you can run this function and it will export your output to excel. The text after _file_path =_ (by default ´'styled_output.xlsx'´) is the name it will save the excel file as - change this to a new name, if you don't want to overwrite. 
+After running **Run search on one specific target on an entire dataframe**, you can run this function and it will export your output to excel. The text after _file_path =_ (by default ´'styled_output.xlsx'´) is the name it will save the excel file as - change this to a new name, if you don't want to overwrite. You can use this to look at results in excel, if you find that easier to work with. 
