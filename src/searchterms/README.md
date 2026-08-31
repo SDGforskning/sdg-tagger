@@ -220,18 +220,20 @@ Not generally of use, ignore for now.
 
 ### 4. Dataframe search
 
-The functions under #4 all use a dataset of real publications. The first cell under "Dataframe search" is the code you need to use to import a set of publications from a csv file. **You must run this cell _every time_ you reopen the demo file in a new session/new day** - this tells the functions afterwards (4a-4d) where the data is stored. 
+The functions under #4 all use a dataset of real publications. 
 
-To use 4b-4d, you will also need to run 4a **once** (after this, it makes a new stored dataset, and you do not need to run it again, even if you restart VScode/come back to the work many days later). 
+**Important!**: The first cell under "Dataframe search" is the code that tells python where your set of publications is stored (the location of the csv file), and is needed for running 4a-4d. **You must run this cell _every time_ you reopen the demo file in a new session/new day**.
+
+**Important 2!**: To use 4b-4d, you will also need to run 4a **once** (this creates a new csv file in the same location as your data). You do not need to run it again, even if you restart VScode/come back to the work many days later. 
 
 ### 4a. Run country category search for an entire dataframe/file
 
-This function creates a new datafile in the folder where you have stored your publication data. If you publication data is called "publicationdata.csv", the new file will be called "publicationdata_countries.csv". The purpose of this function is to tag all publications with the country searches, so that the searches in 4b-4d run much faster.
+The purpose of this function is to tag all publications in your dataset with the results of the country searches, so that the searches in 4b-4d run much faster. It creates a new data set (csv file) in the folder where you have stored your publication data. If your publication data is called "publicationdata.csv", the new file will be called "publicationdata_countries.csv". 
 
-It will take around 30 minutes to run, so do it when you have time. But you only have to run 4a **once** (after this, it makes a new stored dataset, and you do not need to run it again, even if you restart VScode/come back to the work many days later). 
+It will take around 30 minutes to run, so do it when you have time. You only have to run 4a **once** (after this, it uses the created file, and you do not need to run it again, even if you restart VScode/come back to the work many days later). 
 
 ### 4b. Dataframe search: Run search on one specific target on an entire dataframe
-You run your SDG search against a dataset of real publications. It will provide a table which shows the publication data you specify, as well as (optionally) whether the item was found by the title, abstract or another specified field.
+You run your SDG search against a dataset of publications. It will provide a table which shows the results, including the publication data you specify, as well as (optionally) whether the item was found by the title, abstract or another specified field.
 
 - Runs against: A dataset (csv or xlsx) of publications, where it will search within the columns you specify in _COLUMNS_. You specify how many rows you want to search (or only rows of a specific language) in box 2. The location of the csv file is set in the first cell under "Dataframe search". 
 - Searches for: One SDG and target at once
