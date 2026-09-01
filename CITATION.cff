@@ -32,15 +32,15 @@ authors:
   - given-names: Inger
     family-names: Gåsemyr
     affiliation: University of Stavanger
-  - given-names: Lise Vik
-    family-names: Haugen
-    affiliation: Western Norway University of Applied Sciences
-    orcid: 'https://orcid.org/0009-0001-4744-4966'
   - given-names: Eli Heldaas
     family-names: Seland
     email: eli.h.seland@uib.no
     affiliation: University of Bergen
     orcid: 'https://orcid.org/0000-0001-9666-6197'
+  - given-names: Lise
+    family-names: Vik-Haugen
+    affiliation: Western Norway University of Applied Sciences
+    orcid: 'https://orcid.org/0009-0001-4744-4966'
 identifiers:
   - type: url
     value: 'https://github.com/SDGforskning/sdg-tagger'
