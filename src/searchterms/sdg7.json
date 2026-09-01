@@ -992,7 +992,7 @@
                 {
                     "number": 1,
                     "logic_rule": "((([termlist7_b1] | ([termlist7_b2] & [termlist7_b3]) | ([termlist7_b4] & [termlist7_b5])) & ([LMIC])))",
-                    "sentence_split": false,
+                    "sentence_split": true,
                     "termlists": [
                         {
                             "termlist_name": "termlist7_b1",
