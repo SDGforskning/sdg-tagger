@@ -42,7 +42,7 @@ For converting old SDGs:
 
 
 ## Workflow for editing and testing an SDGX.json file <a name="workflow"></a>
-1. Check you are on your branch (it is easiest to create a new branch online from the web version of the repository - ask which branch you should use as the source, it is likely _not_ "main" (default)). Then change to your new branch in VScode by clicking on the branch name (a tiny label in the bottom left corner), and choosing your new branch from the "remote" section of the list. As long as your branch name is in the bottom left corner, you are on your branch. 
+1. Check you are on your branch (it is easiest to create a new branch online from the web version of the repository - ask Caroline which branch you should use as the source. Then change to your new branch in VScode by clicking on the branch name (a tiny label in the bottom left corner), and choosing your new branch from the "remote" section of the list. As long as your branch name is in the bottom left corner, you are on your branch. 
 
     <img width="200" height="90" alt="bilde" src="https://github.com/user-attachments/assets/80f85927-c9d7-4d88-a144-974815341b1b" />
 
@@ -57,8 +57,9 @@ For converting old SDGs:
 - Selecting a termlist name in the logic rule (left clicking on it once) will also highlight other places it occurs in the script. Look to the very right of the screen, next to the overview
 - You can temporarily paste a "logic_rule" into a python script cell to view bracket matching (good for complicated rules)
 7. Test your search against real results using the functions in **demo.ipynb**. Here additional errors may also become issues when trying to run a search, such as missing brackets in the SDG.json files, and if so these need to be fixed as before. For how these tests work, see [Functions in demo for testing](#testing)
-8. Go back to step 3 if you wish to edit anything, and repeat 3-7 as necessary. You can open a _draft pull request_ at this stage (once you have made the first change on your branch) - and use the pull request to document any substantial changes you make, or changes that will need to be also changed in WOS (see example here: https://github.com/SDGforskning/sdg-tagger/pull/45). When opening the pull request, change the default option (main) so that you compare it with the source branch:
-<img width="800" height="150" alt="image" src="https://github.com/user-attachments/assets/e2360184-1eda-47cc-bb82-abaf89c1704e" />
+8. Go back to step 3 if you wish to edit anything, and repeat 3-7 as necessary. You can open a _draft pull request_ at this stage (once you have made the first change on your branch) - and use the pull request to document any substantial changes you make, or changes that will need to be also changed in WOS (see example here: https://github.com/SDGforskning/sdg-tagger/pull/45). When opening the pull request, compare it with the correct source branch (the one you want to merge it into). You can open a pull request by selecting your branch, and clicking on "Contribute":
+<img width="1067" height="376" alt="image" src="https://github.com/user-attachments/assets/51b899ca-cdbe-4536-aa77-5d5021c18ed5" />
+
 <img width="400" height="50" alt="image" src="https://github.com/user-attachments/assets/10eb21b9-5d52-4446-99f4-42a3fe4de186" />
 
 9. Once finished and happy with your SDG, you can request a review on your pull request.
