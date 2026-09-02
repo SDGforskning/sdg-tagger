@@ -20,9 +20,10 @@
                         "farmland", "agricultural land", "cropland", "pasture", "rangeland",
                         "shrub", "meadow", "bushland", "heath", "moorland",
                         "savanna","grassland","prairie",
+                        "land plain","alluvial plain","arid plain","delta plain","coastal plain", "great plains","major plain","european plain","gangetic plain","the pampas",
                         "dryland", "dry land", "desert", 
-                        "lowland",
-                        "mountain", "highland", "alpine", "tundra", "upland",
+                        "lowland", "flatlands",
+                        "mountain", "highland", "foothill", "alpine", "tundra", "upland",
                         "freshwater", "limnic", "inland fish", "river fish", "lake fish",
                         "brook", "creek"],
                     "wordlist_no": ["terrestrisk", "landlevende", "villmarksområd",
@@ -41,7 +42,7 @@
                     "formatting_rule": "no_trunc",
                     "na": false,
                     "case": false,
-                    "wordlist_en": ["soil", "soils", "bog", "bogs", "mire", "mires", "fen", "fens", "bush", "bushes", "plains", "steppe",
+                    "wordlist_en": ["soil", "soils", "bog", "bogs", "mire", "mires", "fen", "fens", "bush", "bushes", "steppe",
                     "lake", "lakes", "pond", "ponds", "river", "rivers", "stream", "streams"],
                     "wordlist_no": ["jord", "åker", "myr", "sump", "eng", "enger", "busk", "elv", "elver", "bekk"]
                 }
@@ -59,8 +60,8 @@
                     "na": false,
                     "case": false,
                     "_comment" : "NO: 'språk' is added here as in Norwegian a lot of the same terms are used for language conservation as nature conservation (e.g. forvaltningsområde). This also concerns 'protection', hence the addition of 'barnevernet' (NO: child protective services).", 
-                    "wordlist_en": ["marin", "coral", "ocean", "seafloor", "deep-sea", "deep sea", "kelp", "seagrass",
-                        "random forest", "internet of thing", "urban ecosystem",
+                    "wordlist_en": ["marin", "coral", "ocean", "seafloor", "deep-sea", "deep sea", "kelp", "seagrass", "abyssal plain",
+                        "random forest", "internet of thing", "urban ecosystem", "service ecosystem", "grassroots",
                         "salivary microbio","gut microbio","skin microbio","oral microbiome","gut flora","skin flora","immunologi","immunology",
                         "hormon","syndrome","vector","enzyme","infected","infection","infect"],
                     "wordlist_no": ["korall", "sjøbunn", "sjøbotn", "havbunn", "havbotn", "havdyp", "havdjup", "dyphav", "djuphav", "tareskog", "tare skog", "sjøgress",
@@ -80,17 +81,18 @@
                     "formatting_rule": "trunc",
                     "na": false,
                     "case": false,
-                    "_comment": "'forest' is changed for rain forest, boreal etc. to help avoid random forest, kelp forest; 'meadow' is also changed to avoid seagrass meadows",
+                    "_comment": "'forest' is changed for rain forest, boreal etc. to help avoid random forest, kelp forest; 'meadow' is also changed to avoid seagrass meadows, 'plains' is changed in combinations to avoid abyssal plains and 'plain language summary'",
                     "wordlist_en": ["terrestrial",
-                        "boreal forest", "ancient forest", "old growth forest", "rainforest", "deciduous forest", "coniferous forest", "mixed forest", "tropical forest", "montane forest", "cloud forest", "world's forests", 
+                        "boreal forest", "ancient forest", "old growth forest", "rainforest", "deciduous forest", "coniferous forest", "mixed forest", "tropical forest", "montane forest", "cloud forest", "world's forest", "forested",
                         "woodland", "taiga", "jungle", "mangrove", 
                         "peatland", "peat land", "swamp", "wetland", "marsh", "paludal",
                         "farmland", "agricultural land", "cropland", "pasture", "rangeland",
                         "shrub", "bushland", "heath", "moorland",
-                        "savanna", "alpine meadow", "grassland","prairie",
+                        "savanna","alpine meadow","meadowland","grassland","prairie",
+                        "land plain","alluvial plain","arid plain","delta plain","coastal plain", "great plains","major plain","european plain","gangetic plain","the pampas",
                         "dryland", "dry land", "desert", 
-                        "lowland",
-                        "mountain", "highland", "alpine", "tundra", "upland",
+                        "lowland", "flatlands",
+                        "mountain", "highland", "foothill", "alpine", "tundra", "upland",
                         "freshwater", "limnic", "inland fish", "river fish", "lake fish",
                         "brook", "creek"],
                     "wordlist_no": ["terrestrisk", "landlevende", "villmarksområd",
@@ -109,7 +111,7 @@
                     "formatting_rule": "no_trunc",
                     "na": false,
                     "case": false,
-                    "wordlist_en": ["soil", "soils", "bog", "bogs", "mire", "mires", "fen", "fens", "bush", "bushes", "plains", "steppe",
+                    "wordlist_en": ["soil", "soils", "bog", "bogs", "mire", "mires", "fen", "fens", "bush", "bushes", "steppe",
                     "lake", "lakes", "pond", "ponds", "river", "rivers", "stream", "streams"],
                     "wordlist_no": ["jord", "åker", "myr", "sump", "eng", "enger", "busk", "elv", "elver", "bekk"]
                 }
@@ -849,11 +851,11 @@
                         },
                         {
                             "termlist_name": "termlist15_3o",
-                            "formatting_rule": "trunc",
+                            "formatting_rule": "no_trunc",
                             "na": false,
                             "case": false,
                             "_comment":" NO: 'jord' is added in phrases here as the terms it is combined with (AND) are a lot more general than in the other phrases - causes issues with e.g. 'Jordan' or 'fjord' or 'gjorde'", 
-                            "wordlist_en": ["soil"],
+                            "wordlist_en": ["soil", "soils", "topsoil"],
                             "wordlist_no": ["dyrkbar jord", "dyrka jord", "dyrkajord", "dyrket jord", "matjord", "jordmass", "jordvern", "dyrket mark", "dyrkamark", "dyrka mark", "kultivert mark"]
                         },
                         {
@@ -957,7 +959,7 @@
             "phrases": [
                 {
                     "number": 1,
-                    "logic_rule": "(([termlist15_5a] | [termlist15_5atrunc]) & ([termlist15_5b] | ([termlist15_5c] & ([termlist15_5d] | [animals_plants]))))",
+                    "logic_rule": "(([termlist15_5a] | [termlist15_5atrunc]) & ([termlist15_5b] | ([termlist15_5c] & ([termlist15_5d] | [animals_plants])))  & not [terrestrial_double_NOT])",
                     "sentence_split": true,
                     "termlists": [
                         {
