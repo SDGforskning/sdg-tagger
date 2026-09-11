@@ -7,8 +7,8 @@
         {
             "name": "marine_terms",
             "_comment": "Used in many targets",
-            "logic_rule": "([termlist14_marine1] | [termlist14_marine2] | [termlist14_marine3])",
-            "sentence_split": false,
+            "logic_rule": "([termlist14_marine1] | [termlist14_marine2] | ([termlist14_marine3] & ([termlist14_marine4] | [termlist14_marine5])))",
+            "sentence_split": true,
             "termlists": [
                 {
                     "termlist_name": "termlist14_marine1",
@@ -18,11 +18,11 @@
                     "wordlist_en": ["marine", "mariculture", "barents sea", "norwegian sea",
                         "seabed", "seafloor", "seamount", "hydrothermal vent", "cold seep", "continental shelf", "continental shelves", "continental slope", 
                         "subtidal", "intertidal", "deep sea", "bathyal", "abyssal",
-                        "rocky shore", "beach", "salt marsh", "mud flat", "mudflat", "tidal flat", "estuar", "fjord", 
+                        "rocky shore", "beach", "salt marsh", "mud flat", "mudflat", "tidal flat", "fjord", 
                         "sea ice",
-                        "sea life", "sealife", "mangrove", "kelp bed", "kelp forest", "seagrass", "seaweed", "macroalga", "macro alga", "sponge ground", "organic fall", "coral", 
-                        "whale", "dolphin", "echinoderm", "starfish", "sea urchin", "sea cucumber", "brittle star", "Asteroidea", "Ophiuroid", "Echinoid", "Holothuroid", "Crinoid",
-                        "coastal communit", "coastal zone",
+                        "sea life", "sealife", "mangrove", "kelp bed", "kelp forest", "seagrass", "seaweed", "macroalga", "macro alga", "sponge ground", "organic fall",
+                        "whale", "dolphin", "shark", "echinoderm", "starfish", "sea urchin", "sea cucumber", "brittle star", "Asteroidea", "Ophiuroid", "Echinoid", "Holothuroid", "Crinoid",
+                        "coastal communit", "coastal zone", "coastal water",
                         "offshore"],
                     "wordlist_no": ["sjøområd", "havområd", "havbruk", "havforsuring", "Skagerrak", 
                         "sjøbunn", "sjøbotn", "havbunn", "havbotn", "sjøfjell", "hydrotermisk skorstein", "hydrotermiske skorstein", "hydrotermisk ventil", "midhavsrygg", "kontinentalskråning", "kontinentalhylle",
@@ -39,29 +39,36 @@
                     "na": false,
                     "case": false,
                     "_comment": "'marin'(NO), 'tang' (NO), 'tare'(NO) are added here instead of untruncated in termlist_marine1 because it is part of other words (e.g. marinate)",
-                    "wordlist_en": ["ocean", "oceans", "oceanogra.*", "seas", "reef", "reefs"],
-                    "wordlist_no": ["marin", "oseanografi.*", "hav", "havet", "verdenshav", "sjø", "sjøen", "tang", "tare", "hval"]
+                    "wordlist_en": ["sea", "ocean.*", "seas", "estuar.*", "reef", "reefs",  "coral.*"],
+                    "wordlist_no": ["sjø.*", "marin", "oseanografi.*", "hav", "havet", "verdenshav", "sjø", "sjøen", "tang", "tare", "hval", "hai", "haier"]
                 },
                 {
                     "termlist_name": "termlist14_marine3",
                     "formatting_rule": "no_trunc",
                     "na": false,
                     "case": false,
-                    "wordlist_en": ["sea", "seas", "coast", "coastal", "tidal"],
-                    "wordlist_no": ["sjø.*", "kyst.*", "tideva.*"]
+                    "wordlist_en": ["coast", "coastal", "tidal", "saltwater"],
+                    "wordlist_no": ["kyst.*", "tideva.*", "saltvann"]
                 },
                 {
                     "termlist_name": "termlist14_marine4",
-                    "formatting_rule": "trunc",
+                    "formatting_rule": "no_left_trunc",
                     "na": false,
                     "case": false,
-                    "_comment": "CURRENTLY NOT IN USE.",
                     "wordlist_en": ["habitat", "ecosystem", "dune", "wetland", "marsh", "bay", "lagoon", "gulf", "water", "current", "pelagi",
                         "fish", "shrimp", "shellfish", "aquacultur",
-                        "harbour", "harbor", "port", "maritim", "ship"],
+                        "harbour", "harbor", "maritim", "ship"],
                     "wordlist_no": ["leveområd", "økosystem", "våtmark", "sumpmark", "viker", "bukter", "strøm",
                         "fisk", "akvakultur", 
-                        "havn", "båt", "elvemunn"]
+                        "elvemunn"]
+                },
+                {
+                    "termlist_name": "termlist14_marine5",
+                    "formatting_rule": "no_trunc",
+                    "na": false,
+                    "case": false,
+                    "wordlist_en": ["port", "ports"],
+                    "wordlist_no": ["havn"]
                 }
             ]
         }
@@ -165,7 +172,8 @@
                             "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
-                            "wordlist_en": ["marine reserve", "ocean reserve", "marine sanctuar", "marine park", "particularly sensitive sea area","marine conservation",
+                            "wordlist_en": ["marine reserve", "ocean reserve", "marine sanctuar", "marine park", "sensitive sea area","marine conservation", "vulnerable marine ecosystem",
+                                "ocean conservation", "conserve the ocean", "conserve the marin", "conservation of the ocean", "conservation of the marine",
                                 "marine spatial planning", "coastal zone management","integrated coastal zone planning","coastal resources management",
                                 "locally managed marine area"],
                             "wordlist_no": ["marint vernområde","marine vernområde","marine verneområde","marine reservat","marint vern",
@@ -241,7 +249,8 @@
                             "na": false,
                             "case": false,
                             "wordlist_en": ["habitat","ecosystem","environment","ecological communit",
-                                "ocean", "marine", "mangrove", "kelp", "seagrass", "seaweed", "macroalga", "sponge ground", "reef", "coral", 
+                                "ocean",
+                                "mangrove", "kelp", "seagrass", "seaweed", "macroalga", "sponge ground", "reef", "coral", 
                                 "salt marsh", "mud flat", "mudflat", "tidal flat",
                                 "estuar", "fjord", "coastal dune", "coastal wetland", "coastal water", 
                                 "deep sea", "seafloor", "hydrothermal vent",
@@ -315,7 +324,7 @@
                             "formatting_rule": "no_left_trunc",
                             "na": false,
                             "case": false,
-                            "wordlist_en": [],
+                            "wordlist_en": ["stress"],
                             "wordlist_no": ["trua", "trued", "fare"]
                         },
                         {
@@ -328,11 +337,11 @@
                         },
                         {
                             "termlist_name": "termlist14_3b",
-                            "formatting_rule": "trunc",
+                            "formatting_rule": "no_trunc",
                             "na": false,
                             "case": false,
-                            "wordlist_en": ["acidi", "ocean ph", "seawater ph", "low ph", "declining ph", "decreasing ph", "decreased ph", "effect of ph", "effects of ph"],
-                            "wordlist_no": ["forsur", "nedgangen i pH", "nedgang i ph", "lav ph", "lavere ph", "lågere ph", "surere hav", "surare hav", "surt hav"]
+                            "wordlist_en": ["acidi.*", "ocean ph", "seawater ph", "low ph", "declining ph", "decreasing ph", "decreased ph", "effect of ph", "effects of ph"],
+                            "wordlist_no": ["forsur.*", "nedgangen i pH", "nedgang i ph", "lav ph", "lavere ph", "lågere ph", "surere hav.*", "surare hav.*", "surt hav.*"]
                         },
                         {
                             "termlist_name": "termlist14_3ccase",
@@ -610,7 +619,7 @@
             "phrases": [
                 {
                     "number": 1,
-                    "logic_rule": "(([termlist14_7a] | [termlist14_7acaps]) & ([LDC] | [SIDS]) & [marine_terms])",
+                    "logic_rule": "(([termlist14_7a] | [termlist14_7atrunc] | [termlist14_7acaps]) & ([LDC] | [SIDS]) & [marine_terms] & not [termlist14_7c_not])",
                     "sentence_split": false,
                     "termlists": [
                         {
@@ -621,7 +630,7 @@
                             "wordlist_en": ["econom","wealth",
                                 "exploit","goods and services","ecosystem service",
                                 "marine resource", "marine benefit", "biological resource", "genetic resource", "mineral resource", 
-                                "livelihood","job","income","profit","trade","trading","market","willingness to pay",
+                                "livelihood","income","profit","trade","trading","market","willingness to pay",
                                 "monetary","moneti","investor",
                                 "blue growth","blue bond"],
                             "wordlist_no": ["økonomi", "rikdom",
@@ -630,6 +639,14 @@
                                 "levebrød", "jobb", "arbeid", "inntekt", "profit", "handel", "marked", "markad",
                                 "penger", "investor",
                                 "blå vekst", "blåvekst"]
+                        },
+                        {
+                            "termlist_name": "termlist14_7atrunc",
+                            "formatting_rule": "no_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["job", "jobs"],
+                            "wordlist_no": []
                         },
                         {
                             "termlist_name": "termlist14_7acaps",
@@ -677,6 +694,14 @@
                             "case": true,
                             "wordlist_en": ["LMMA","ICZM","MPA","RFMO","CCRF","UNFSA"],
                             "wordlist_no": ["LMMA","ICZM","MPA","RFMO","CCRF","UNFSA"]
+                        },
+                        {
+                            "termlist_name": "termlist14_7c_not",
+                            "formatting_rule": "trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["trade wind"],
+                            "wordlist_no": []
                         }
                     ]
                 }
@@ -773,7 +798,7 @@
                             "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
-                            "wordlist_en": ["observation","observator","monitoring","equipment"],
+                            "wordlist_en": ["observing","observator","monitoring","equipment"],
                             "wordlist_no": ["observasjon", "overvåk", "overvak", "monitorer", "utstyr"]
                         },
                         {
@@ -905,7 +930,7 @@
                                 "inequit", "marginali", "criminal", "appropriat",
                                 "blue injustice", "blue justice", "distributional justice",
                                 "governance", "planning" , "legislation" , "policy" , "policies" , "framework" , "strateg" , "legislat" , "regulations"],
-                            "wordlist_no": ["tilgang", "rett",
+                            "wordlist_no": ["tilgang",
                                 "felles", "eierskap",
                                 "konflikt", "tvist", "konkurrans",
                                 "kriminel", "stjel",
@@ -918,7 +943,7 @@
                             "na": false,
                             "case": false,
                             "wordlist_en": ["law", "laws"],
-                            "wordlist_no": ["lov", "lovverk", "arv"]
+                            "wordlist_no": ["lov", "lovverk", "arv",  "rett.*"]
                         },
                         {
                             "termlist_name": "termlist14_bc",
