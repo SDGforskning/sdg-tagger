@@ -304,7 +304,8 @@
                             "na": false,
                             "case": false,
                             "wordlist_en": ["habitat", "nature conservation",
-                                "biodivers","biological diversity","species diversity","functional diversity","genetic diversity","taxonomic diversity",
+                                "biodivers","biological diversity","species diversity","functional diversity","genetic diversity","taxonomic diversity", "species richness", "taxonomic richness",
+                                "biological communit", "biotic communit",
                                 "key species","keystone species","foundation species","habitat forming species","key resource"],
                             "wordlist_no": ["leveområd", "naturvern",
                                 "biologisk mangf", "biomangf", "biologiske mangf", "artsmangf", "artsdiversitet", "naturmangf", "genetisk mangf", "genetisk diversitet",
@@ -419,7 +420,7 @@
                             "na": false,
                             "case": false,
                             "wordlist_en": ["ecosystem service","natural resource","groundwater",
-                                "biodiversit","biological diversity", "species richness",
+                                "biodiversit","biological diversity", "species richness", 
                                 "freshwater fish", "inland fish", "lake fish", "river fish", "hunting", "trapping"],
                             "wordlist_no": ["økosystemtjenest", "ferskvann", "ferskvatn",
                                 "biologisk diversitet", "biologisk mangf", "biologiske mangf", "biomangf", "artsmangf",
@@ -471,7 +472,8 @@
                             "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
-                            "wordlist_en": ["ecosystem", "habitat", "environment", "biotop", "ecolog", "biodivers", "biological diversit"],
+                            "wordlist_en": ["ecosystem", "habitat", "environment", "biotop", "ecolog", "biodivers", "biological diversit", "species richness", "taxonomic richness",
+                                "biological communit", "biotic communit"],
                             "wordlist_no": ["økosystem", "leveområd", "miljø", "økolog", "artsmangf", "biologisk diversit", "biologisk mangf", "biomangf"]
                         }
                     ]
@@ -986,8 +988,8 @@
                             "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
-                            "wordlist_en": ["ecosystem","biotope","habitat"],
-                            "wordlist_no": ["økosystem", "biotop", "leveområd"]
+                            "wordlist_en": ["ecosystem","biotope","habitat", "biological communit", "biotic communit"],
+                            "wordlist_no": ["økosystem", "biotop", "leveområd", "biologisk samfunn"]
                         },
                         {
                             "termlist_name": "termlist15_5c",
@@ -1075,7 +1077,8 @@
                             "na": false,
                             "case": false,
                             "_comment":"NO: 'trua art' (NO) etc are included as phrases here because both terms are easily creating noise with automatic truncation. EN: English combinations are covered in h+i below.",
-                            "wordlist_en": ["biodiversity","species diversity", "red list", "International Union for Conservation of Nature"],
+                            "wordlist_en": ["biodiversity","species diversity", "taxonomic diversity", "species richness", "taxonomic richness", 
+                            "red list", "International Union for Conservation of Nature"],
                             "wordlist_no": ["artsmangf", "artsdiversitet", "biomangf", "biologisk mangf", "biologiske mangf", "naturmangf",
                                 "artsforvaltning", "naturmangfoldloven", "lov om vern av naturens mangfold",
                                 "rødlist", "rød list", "raudlist", "raud list",
@@ -1416,7 +1419,7 @@
                             "na": false,
                             "case": false,
                             "wordlist_en": ["biodiversit", "biological diversity", "species diversity",
-                                "habitats", "biotop", "nature conserv"],
+                                "habitats", "biotop", "biological communit", "biotic communit", "nature conserv"],
                             "wordlist_no": ["biologisk diversitet", "biomangf", "artsmangf", "biologisk mangf", "biologiske mangf", "naturmangf",
                                 "økosystem", "leveområd", "naturvern"]
                         },
@@ -1581,7 +1584,7 @@
                             "case": false,
                             "_comment": "EN: 'ecosystem' alone is included in termlist15_ae",
                             "wordlist_en": ["biodiversit", "biological diversity", "species diversity",
-                                "habitat","biotop","nature conservation",
+                                "habitat","biotop", "biological communit", "biotic communit", "nature conservation",
                                 "ecosystem service", "ecosystem restor", "rio marker"],
                             "wordlist_no": ["biologisk diversitet", "biomangf", "artsmangf", "biologisk mangf", "biologiske mangf",
                                 "økosystem", "leveområd", "naturvern"]
