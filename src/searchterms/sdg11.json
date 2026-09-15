@@ -14,7 +14,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist11_1a",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["access", "obstacle", "barrier", "hinder", "hindrance", "equitab", "non-equit", "legislat", "govern", "strateg", "policy", "policies" , "framework" , "program"],
@@ -22,7 +22,7 @@
                         },
                         {
                             "termlist_name": "termlist11_1b",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["adequa", "inadequa", "afford", "low cost", "low-cost", "inexpensive", "unsafe", "safety", "secure", "security", "tenure"],
@@ -30,7 +30,7 @@
                         },
                         {
                             "termlist_name": "termlist11_1c",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["housing", "settlements", "living conditions"],
@@ -45,7 +45,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist11_1d",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["access", "obstacle", "barrier", "hinder", "hindrance", "equitab", "non-equit", "legislat", "governan", "strateg", "policy", "policies", "framework", "program"],
@@ -53,7 +53,7 @@
                         },
                         {
                             "termlist_name": "termlist11_1e",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "_comment": "'xxxxskole'(NO) is specified here to avoid in Norwegian university names, e.g. 'Høyskole'",
@@ -81,7 +81,7 @@
                         },
                         {
                             "termlist_name": "termlist11_1r",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["housing", "settlements", "living conditions",
@@ -98,7 +98,7 @@
                         },
                         {
                             "termlist_name": "termlist11_1rtrunc",
-                            "formatting_rule": "specific_trunc",
+                            "formatting_rule": "no_trunc",
                             "na": false,
                             "case": false,
                             "_comment": "'city' is prevented truncation due to 'capacity' etc.",
@@ -109,20 +109,20 @@
                 },
                 {
                     "number": 3,
-                    "logic_rule": "([termlist11_1s] | [termlist11_1strunk])",
+                    "logic_rule": "([termlist11_1s] | [termlist11_1strunc])",
                     "sentence_split": false,
                     "termlists": [
                         {
                             "termlist_name": "termlist11_1s",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["shanty town", "informal settlement"],
                             "wordlist_no": ["uformell bosetning", "uformelle bosetning", "uformell busetn", "uformelle busetn"]
                         },
                         {
-                            "termlist_name": "termlist11_1strunk",
-                            "formatting_rule": "specific_trunc",
+                            "termlist_name": "termlist11_1strunc",
+                            "formatting_rule": "no_trunc",
                             "na": false,
                             "case": false,
                             "_comment": "truncating 'slum' adds noise",
@@ -143,7 +143,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist11_2a",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["safe", "secure", "hazardous","sustainab", "unsafe", "dangerous","accident","access", "availab", "reliab", "afford", "low cost", "low-cost", "expensive", "cost-effective"],
@@ -151,7 +151,7 @@
                         },
                         {
                             "termlist_name": "termlist11_2a_trunc",
-                            "formatting_rule": "default",
+                            "formatting_rule": "no_trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["risk", "risks", "risky"],
@@ -159,7 +159,7 @@
                         },
                         {
                             "termlist_name": "termlist11_2b",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "_comment": "'driving' and 'driver' combined as otherwise problematic",
@@ -174,7 +174,7 @@
                         },
                         {
                             "termlist_name": "termlist11_2b2",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "_comment": "terms that need to be combined with city-terms, as they are used in e.g. biomedicine. 'reise' (NO) is moved here because often used in 'reiseliv' (tourism)",
@@ -183,7 +183,7 @@
                         },
                         {
                             "termlist_name": "termlist11_2c",
-                            "formatting_rule": "specific_trunc",
+                            "formatting_rule": "no_trunc",
                             "na": false,
                             "case": false,
                             "_comment": "terms where truncation is prevented: 'vei' and 'veg', although relevant terms (= way, road) seem to be used nearly always metaphorically ('way to safer workplaces') so suggest removal for practical reasons",
@@ -192,7 +192,7 @@
                         },
                         {
                             "termlist_name": "termlist11_2d",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["cities", "megacit", "urban", "metropolitan", 
@@ -207,7 +207,7 @@
                         },
                         {
                             "termlist_name": "termlist11_2dtrunc",
-                            "formatting_rule": "specific_trunc",
+                            "formatting_rule": "no_trunc",
                             "na": false,
                             "case": false,
                             "_comment": "'city' is here due to capaCITY etc.",
@@ -223,7 +223,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist11_2e",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["provide", "provision", "improv", "moderni", "reduc", "increas", "expand", "build", "boost", "rais", "extend", "implement", "establish", "develop", "strengthen", "enhanc"],
@@ -231,7 +231,7 @@
                         },
                         {
                             "termlist_name": "termlist11_2f",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["public transport"],
@@ -250,7 +250,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist11_3a",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["sustainab", "inclusiv", "participatory", "participation"],
@@ -258,7 +258,7 @@
                         },
                                             {
                             "termlist_name": "termlist11_3b",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["urbanisation", "urbanization", "urban development", "human settlement planning", "urban planning"],
@@ -272,7 +272,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist11_3c",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["settlement", 
@@ -291,15 +291,15 @@
                         },
                         {
                             "termlist_name": "termlist11_3c_trunc",
-                            "formatting_rule": "default",
+                            "formatting_rule": "no_trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["city"],
-                            "wordlist_no": []
+                            "wordlist_no": ["by"]
                         },
                         {
                             "termlist_name": "termlist11_3d",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["manag"],
@@ -307,7 +307,7 @@
                         },
                         {
                             "termlist_name": "termlist11_3d_trunc",
-                            "formatting_rule": "default",
+                            "formatting_rule": "no_trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["plan", "plans", "planning"],
@@ -315,7 +315,7 @@
                         },
                         {
                             "termlist_name": "termlist11_3e",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["democra", "taking part", "sustainab", "participatory", "participation", "stakeholder"],
@@ -335,7 +335,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist11_4a",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["manag", "maintain", "conservation", "conserving", "conserve", "preserv", "sustain", "protect", "safeguard"],
@@ -343,7 +343,7 @@
                         },
                         {
                             "termlist_name": "termlist11_4b",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["cultural heritage", "culture heritage", "cultural landscape", "heritage object", "heritage building", "heritage site", "museum",
@@ -368,7 +368,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist11_5a",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["disaster", "catastrophe"],
@@ -376,7 +376,7 @@
                         },
                         {
                             "termlist_name": "termlist11_5b",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["extreme"],
@@ -384,7 +384,7 @@
                         },
                         {
                             "termlist_name": "termlist11_5c",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["climat", "weather", "precipitation", "rain", "snow", "temperatur", "storm", "wind"],
@@ -392,7 +392,7 @@
                         },
                         {
                             "termlist_name": "termlist11_5d",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["natural", "climat","anthropogenic", "environmental", "deforestation", "desertification", "degradation", "pollution", "erosion", "chemical", "heavy metal", "pesticide", "biological", 
@@ -402,7 +402,7 @@
                         },
                         {
                             "termlist_name": "termlist11_5e",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["hazard"],
@@ -410,7 +410,7 @@
                         },
                         {
                             "termlist_name": "termlist11_5f",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["extreme climat", "extreme weather", "extreme precipitation", "extreme rain", "extreme snow", "extreme temperatur", "extreme storm", "extreme wind", 
@@ -439,7 +439,7 @@
                         },
                         {
                             "termlist_name": "termlist11_5ftrunc",
-                            "formatting_rule": "default",
+                            "formatting_rule": "no_trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["war", "wars"],
@@ -447,7 +447,7 @@
                         },
                         {
                             "termlist_name": "termlist11_5j",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["volatil", "unstable", "instability", "unrest"],
@@ -455,7 +455,7 @@
                         },
                         {
                             "termlist_name": "termlist11_5k",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["political", "civil"],
@@ -463,7 +463,7 @@
                         },
                         {
                             "termlist_name": "termlist11_5l",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["death", "casualt", "survivors", "fatal"],
@@ -471,7 +471,7 @@
                         },
                         {
                             "termlist_name": "termlist11_5s",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["affected", "injur", "trauma", "displaced", "missing"],
@@ -479,7 +479,7 @@
                         },
                         {
                             "termlist_name": "termlist11_5t",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["people", "person", "civilian", "women", "men", "child"],
@@ -487,7 +487,7 @@
                         },
                         {
                             "termlist_name": "termlist11_5m",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["surviv", "mortalit"],
@@ -495,7 +495,7 @@
                         },
                         {
                             "termlist_name": "termlist11_5n",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["people", "human", "patient", "victim", "civilian", 
@@ -521,7 +521,7 @@
                         },
                         {
                             "termlist_name": "termlist11_5o",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "_comment": "Other terms/norwegian terms already covered in 5n",
@@ -530,7 +530,7 @@
                         },
                         {
                             "termlist_name": "termlist11_5p",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["household", "people", "children", "communit"],
@@ -538,7 +538,7 @@
                         },
                         {
                             "termlist_name": "termlist11_5q",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["person", "people", "adult"],
@@ -546,7 +546,7 @@
                         },
                         {
                             "termlist_name": "termlist11_5r",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["vulnerable", "marginalised", "marginalized", "disadvantaged", "discriminated", "displaced", "patient", "trans", "intersex", "older", "old", "elderly", "retired", "indigenous"],
@@ -561,7 +561,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist11_5a",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "_comment": "reused (duplicate) from phrase nr 1",
@@ -570,7 +570,7 @@
                         },
                         {
                             "termlist_name": "termlist11_5b",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "_comment": "reused (duplicate) from phrase nr 1",
@@ -579,7 +579,7 @@
                         },
                         {
                             "termlist_name": "termlist11_5c",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "_comment": "reused (duplicate) from phrase nr 1",
@@ -588,7 +588,7 @@
                         },
                         {
                             "termlist_name": "termlist11_5d",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "_comment": "reused (duplicate) from phrase nr 1",
@@ -599,7 +599,7 @@
                         },
                         {
                             "termlist_name": "termlist11_5e",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "_comment": "reused (duplicate) from phrase nr 1",
@@ -608,7 +608,7 @@
                         },
                         {
                             "termlist_name": "termlist11_5f",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "_comment": "reused (duplicate) from phrase nr 1",
@@ -638,7 +638,7 @@
                         },
                         {
                             "termlist_name": "termlist11_5ftrunc",
-                            "formatting_rule": "default",
+                            "formatting_rule": "no_trunc",
                             "na": false,
                             "case": false,
                             "_comment": "reused (duplicate) from phrase nr 1",
@@ -647,7 +647,7 @@
                         },
                         {
                             "termlist_name": "termlist11_5j",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "_comment": "reused (duplicate) from phrase nr 1",
@@ -656,7 +656,7 @@
                         },
                         {
                             "termlist_name": "termlist11_5k",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "_comment": "reused (duplicate) from phrase nr 1",
@@ -665,7 +665,7 @@
                         },
                         {
                             "termlist_name": "termlist11_5l",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["domestic product", "gross global produc"],
@@ -673,7 +673,7 @@
                         },
                         {
                             "termlist_name": "termlist11_5ltrunc",
-                            "formatting_rule": "default",
+                            "formatting_rule": "no_trunc",
                             "na": false,
                             "case": false,
                             "_comment": "acronyms have truncation prevented to avoid results on gdpr",
@@ -694,7 +694,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist11_6a",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["environmental impact", "impact on the environment", "impacts on the environment", "footprint", "foot print"],
@@ -702,7 +702,7 @@
                         },
                         {
                             "termlist_name": "termlist11_6b",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "_comment": "'community' dropped as causes only noise. Added major Norwegian city names, adds no results to phrase 1 but quite a lot to phrase 2",
@@ -718,7 +718,7 @@
                         },
                         {
                             "termlist_name": "termlist11_6c",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["city", "urban.*"],
@@ -733,7 +733,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist11_6b",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "_comment": "Reused (duplicate) from phrase 1. 'community' dropped as causes only noise. Added major Norwegian city names, adds no results to phrase 1 but quite a lot to phrase 2",
@@ -749,7 +749,7 @@
                         },
                         {
                             "termlist_name": "termlist11_6c",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "_comment": "Reused (duplicate) from phrase 1",
@@ -758,7 +758,7 @@
                         },
                         {
                             "termlist_name": "termlist11_6d",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["smog", "air pollution", "suspended particles", "particulate matter", "pm2.5", "pm10", "clean air", "air quality"],
@@ -766,7 +766,7 @@
                         },
                         {
                             "termlist_name": "termlist11_6not",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["Cosmogenic"],
@@ -781,7 +781,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist11_6b",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "_comment": "Reused (duplicate) from phrase 1. 'community' dropped as causes only noise. Added major Norwegian city names, adds no results to phrase 1 but quite a lot to phrase 2",
@@ -797,7 +797,7 @@
                         },
                         {
                             "termlist_name": "termlist11_6c",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "_comment": "Reused (duplicate) from phrase 1",
@@ -806,7 +806,7 @@
                         },
                         {
                             "termlist_name": "termlist11_6e",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["solid waste", "bulky waste", "houshold waste", "domestic waste", "commercial waste", "industrial waste", "MSW",
@@ -822,7 +822,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist11_6f",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["environmental impact", "impact on the environment", "impacts on the environment","environmental assess", "footprint", "foot print"],
@@ -830,7 +830,7 @@
                         },
                         {
                             "termlist_name": "termlist11_6g",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["waste", "garbage", "rubbish"],
@@ -838,7 +838,7 @@
                         },
                         {
                             "termlist_name": "termlist11_6h",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["manag", "collect", "reuse", "re-use", "composting", "biological degrad"],
@@ -858,7 +858,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist11_7a",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["safe", "inclus", "access", "unrestrict"],
@@ -866,7 +866,7 @@
                         },
                         {
                             "termlist_name": "termlist11_7b",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["green space", "recreational area", 
@@ -882,7 +882,7 @@
                         },
                         {
                             "termlist_name": "termlist11_7c",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["park", "parks", "street", "avenue", "square", "beach", "waterfront", "riverbank"],
@@ -890,7 +890,7 @@
                         },
                         {
                             "termlist_name": "termlist11_7d",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["cities", "city", "megacit", "urban", "metropolitan",
@@ -912,7 +912,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist11_7b",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "_comment": "Reused (duplicate) from phrase 1",
@@ -929,7 +929,7 @@
                         },
                         {
                             "termlist_name": "termlist11_7c",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "_comment": "Reused (duplicate) from phrase 1",
@@ -938,7 +938,7 @@
                         },
                         {
                             "termlist_name": "termlist11_7e",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "_comment": "'equit' will find 'inequitable', 'justice' will find 'injustice' etc.",
@@ -961,7 +961,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist11_Aa",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["national", "regional"],
@@ -969,7 +969,7 @@
                         },
                         {
                             "termlist_name": "termlist11_Ab",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["plan", "strateg", "framework", "program", "policy", "policies", "cooperat"],
@@ -977,7 +977,7 @@
                         },
                         {
                             "termlist_name": "termlist11_Ac",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "_comment": "City names mostly cause noise here so are not included",
@@ -994,7 +994,7 @@
                         },
                         {
                             "termlist_name": "termlist11_Actrunc",
-                            "formatting_rule": "default",
+                            "formatting_rule": "no_trunc",
                             "na": false,
                             "case": false,
                             "_comment": "'city' is here due to capaCITY",
@@ -1015,7 +1015,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist11_Ba",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["sendai", "disaster risk reduction", "cancun adapation framework", "readiness and preparatory support programme", "readiness programme"],
@@ -1023,7 +1023,7 @@
                         },
                         {
                             "termlist_name": "termlist11_Bb",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "_comment": "space after 'plan' to prevent 'plant'",
@@ -1032,7 +1032,7 @@
                         },
                         {
                             "termlist_name": "termlist11_Bc",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "_comment": "dropped 'risk'/ 'risiko' (NO) - to drop results about chemical risk assessments/risks in health and animals. Used 'risk judgements'. 'klimatilpas'(NO) in termlist Bc is probably redundant, as it is included in Ba",
@@ -1041,7 +1041,7 @@
                         },
                         {
                             "termlist_name": "termlist11_Bd",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["settlement", 
@@ -1060,7 +1060,7 @@
                         },
                         {
                             "termlist_name": "termlist11_Bdtrunc",
-                            "formatting_rule": "default",
+                            "formatting_rule": "no_trunc",
                             "na": false,
                             "case": false,
                             "_comment": "#'city' is here due to capaCITY",
@@ -1081,7 +1081,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist11_Ca",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["sustainable architecture", "resilient architecture", "Sustainable Building and Construction Initiative", "sustainable building", "sustainable construction",
@@ -1091,7 +1091,7 @@
                         },
                         {
                             "termlist_name": "termlist11_Cb",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["sustainable", "green", "eco-", "ecofriendly", "environmentally friendly", "resili",
@@ -1100,7 +1100,7 @@
                         },
                         {
                             "termlist_name": "termlist11_Cc",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "_comment": "'building' causes issues (capacity building etc.)",
@@ -1109,7 +1109,7 @@
                         },
                         {
                             "termlist_name": "termlist11_Cd_case",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": true,
                             "wordlist_en": ["SBCI"],
@@ -1125,7 +1125,7 @@
         "termlists": [
             {
                 "termlist_name": "termlist11_1",
-                "formatting_rule": "default",
+                "formatting_rule": "trunc",
                 "na": false,
                 "case": false,
                 "wordlist_en": ["SDG 11", "SDGs 11", "SDG11", "sustainable development goal 11"],
@@ -1133,7 +1133,7 @@
             },
             {
                 "termlist_name": "termlist11_2",
-                "formatting_rule": "default",
+                "formatting_rule": "trunc",
                 "na": false,
                 "case": false,
                 "wordlist_en": ["sustainable development goal"],
@@ -1141,7 +1141,7 @@
             },
             {
                 "termlist_name": "termlist11_3",
-                "formatting_rule": "default",
+                "formatting_rule": "trunc",
                 "na": false,
                 "case": false,
                 "wordlist_en": ["goal 11"],
@@ -1149,7 +1149,7 @@
             },
             {
                 "termlist_name": "termlist11_4",
-                "formatting_rule": "default",
+                "formatting_rule": "trunc",
                 "na": false,
                 "case": false,
                 "wordlist_en": ["sustainable development goal", "SDG", "goal 11"],
@@ -1157,7 +1157,7 @@
             },
             {
                 "termlist_name": "termlist11_5",
-                "formatting_rule": "default",
+                "formatting_rule": "trunc",
                 "na": false,
                 "case": false,
                 "wordlist_en": ["cities"],
@@ -1165,7 +1165,7 @@
             },
             {
                 "termlist_name": "termlist11_6",
-                "formatting_rule": "default",
+                "formatting_rule": "trunc",
                 "na": false,
                 "case": false,
                 "_comment": "Possible search for the short titles of the SDGs, to be used in a title search",
