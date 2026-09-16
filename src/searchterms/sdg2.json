@@ -10,7 +10,7 @@
             "termlists": [
                 {
                     "termlist_name": "termlist2_4a",
-                    "formatting_rule": "default",
+                    "formatting_rule": "trunc",
                     "na": false,
                     "case": false,
                     "wordlist_en": ["food-produc", "food produc", "grower", "agrifood", "agri-food", "agro-food", "agro food",
@@ -31,7 +31,7 @@
                 },
                 {
                     "termlist_name": "termlist2_4anorighttrunc",
-                    "formatting_rule": "specific",
+                    "formatting_rule": "no_right_trunc",
                     "na": false,
                     "case": false,
                     "wordlist_en": ["animal feed", "fish feed"],
@@ -47,7 +47,7 @@
                 },
                 {
                     "termlist_name": "termlist2_4a_trunc",
-                    "formatting_rule": "specific_trunc",
+                    "formatting_rule": "no_trunc",
                     "na": false,
                     "case": false,
                     "wordlist_en": ["rice"],
@@ -67,7 +67,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist2_1a",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["end hunger", "ending hunger", "ends hunger", "world hunger", "hunger and poverty", "poverty and hunger", "child hunger", 
@@ -86,7 +86,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist2_1b",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["right to food", "right to adequate food", "food sovereignty",
@@ -99,7 +99,7 @@
                         },
                         {
                             "termlist_name": "termlist2_1c",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "_comment": "This term list is specific for Norway and can be dropped for works from other countries. VKM reports are mostly very specialised, for example risk assessments of certain substances. Therefore removed for now, but this could be discussed. Note that this does not remove all VKM reports, but does exclude those with 'opinion of the Norwegian Scientific Committee for Food Safety...' in the title",
@@ -115,7 +115,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist2_1d",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "_comment": "Note that this can result in some noise from biological works (e.g. food supply in a certain habitat), but it mostly gets relevant results in our dataset",
@@ -136,7 +136,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist2_2a",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["malnutrition", "malnourish", "kwashiorkor", "marasmus", "anaemia", "anemia", 
@@ -151,7 +151,7 @@
                         },
                         {
                             "termlist_name": "termlist2_2b",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["stunting", "stunted", "wasting", "underweight"],
@@ -159,7 +159,7 @@
                         },
                         {
                             "termlist_name": "termlist2_2c",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["child", "infant", "under five", "under-five", "babies", "baby", "toddler", "girl", "boy"],
@@ -167,7 +167,7 @@
                         },
                         {
                             "termlist_name": "termlist2_2not",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "_comment": "Norwegian specific term list for a NOT search - removed as much Norwegian research on these topics, that is not relevant to human health",
@@ -183,7 +183,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist2_2d",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["nutrition security", "nutritional security", "nutritional quality", "nutrition sensitive agriculture", 
@@ -193,7 +193,7 @@
                         },
                         {
                             "termlist_name": "termlist2_2e",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["nutrition", "folate", "micronutrient"],
@@ -201,7 +201,7 @@
                         },
                         {
                             "termlist_name": "termlist2_2f",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "_comment":"We use 'eldre' (NO) but not 'gamle' (NO) alone because the latter is more likely to be used for non-humans (buildings etc.)",
@@ -216,7 +216,7 @@
                         },
                         {
                             "termlist_name": "termlist2_2g",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "_comment": "This term is an issue for Norwegian where 'næring' (NO) is nutrients and 'næringsliv' (NO) is business so the latter is removed with a NOT search",
@@ -232,7 +232,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist2_2h",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["undernutrition", "under-nutrition", "undernourish", "under-nourish", "protein deficien", 
@@ -254,7 +254,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist2_3a",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "_comment": "I have added ownership and production resources here. 'tilgang/access' (NO) will cover access to land, knowledge, financial services etc.",
@@ -275,7 +275,7 @@
                         },
                         {
                             "termlist_name": "termlist2_3b",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "_comment": "'reindrift' (NO, reindeer herding) added, often small-scale",
@@ -285,7 +285,7 @@
                         },
                         {
                             "termlist_name": "termlist2_3c",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["small-scale", "indigenous", "homestead", "subsistence"],
@@ -305,7 +305,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist2_4b",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["intensif", "productivity", "efficiency", "yield", "agricultural output", "farm output"],
@@ -313,7 +313,7 @@
                         }, 
                         {
                             "termlist_name": "termlist2_4c",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["production"],
@@ -321,7 +321,7 @@
                         }, 
                         {
                             "termlist_name": "termlist2_4c",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "_comment": "'production' is combined with 'increasing' because a lot of the results were too irrelevant when alone", 
@@ -337,7 +337,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist2_4e",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "_comment": "It was necessary to have disasters and plans in phrases in english because there are a lot of results about e.g. risks to local habitats from agriculture, rather than risks to agriculture",
@@ -356,7 +356,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist2_4f",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["adapt", "mitigat", "protect", "avoid", "limit", "prevent", "manag", 
@@ -369,7 +369,7 @@
                         }, 
                         {
                             "termlist_name": "termlist2_4g",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["climate change", "changing climate", "global warming",
@@ -404,7 +404,7 @@
                         }, 
                         {
                             "termlist_name": "termlist2_4h",
-                            "formatting_rule": "specific_trunc",
+                            "formatting_rule": "no_trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["war", "wars"],
@@ -419,7 +419,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist2_4i",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "_comment": "'organic' is not used alone, but is instead combined in phrases to avoid e.g. organic acids, organic matter. Moved to this part rather than 4j as it can stand alone. 'bærekraftig fôr' (NO) is added specifically due to it's inclusion as a priority area ('samfunnsoppdrag') in the governments long-term plan.",
@@ -430,7 +430,7 @@
                         },
                         {
                             "termlist_name": "termlist2_4j",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "_comment": "The following report from NIBIO was used to help with Norwegian sustainable agriculture terms: Bøe et al. (2020) Fangvekster som klimatiltak i Norge. Egnet dyrkingsareal, potensiale for klimagassbesparelse, kostnader, barrierer og virkemiddel. NIBIO Report. http://hdl.handle.net/11250/2638984",
@@ -455,7 +455,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist2_4k",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "_comment": "The following NIBIO report was used to help with relevant Norwegian terms around soil management: Bardalen et al. (2021). Jordvernets begrunnelser Kunnskapsgrunnlag for revidert jordvernstrategi. NIBIO Report. https://hdl.handle.net/11250/2738064", 
@@ -476,7 +476,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist2_4l",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["desertification", "land degradation", "environmental impact", "environmental footprint"],
@@ -484,7 +484,7 @@
                         },
                         {
                             "termlist_name": "termlist2_4m",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "_comment": "'land' had some noise if used alone, for example Greenland",
@@ -493,7 +493,7 @@
                         },
                         {
                             "termlist_name": "termlist2_4n",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["loss", "degradation", "depletion", "erosion", "compaction", "waterlogging", "salinization", "salinisation", "acidifi", "pollut", "contaminat", "vulnerab"],
@@ -514,7 +514,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist2_5a",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "_comment": "Apples are added in Norwegian as this seems to be a specific focus area.",
@@ -538,7 +538,7 @@
                         },
                         {
                             "termlist_name": "termlist2_5b",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["heirloom", "wild relative", "genetic resource", "genetic diversity"],
@@ -554,7 +554,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist2_5d",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "_comment": "Here we have simplified (to adapt from abstract to title search) - drop the terms starting 'diversity OR genetic resources'... so it is enough for the title to mention cryoconservation / genebanks. In the abstract the more detialed approach was necessary becaue many works mention that they used a gene bank in the methods, but are not about gene banks.",
@@ -563,7 +563,7 @@
                         },
                         {
                             "termlist_name": "termlist2_5e",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["plant bank", "seed bank", "genebank", "germplasm bank", "cryobank", "ex-situ", "cryopreserv"],
@@ -579,7 +579,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist2_5f",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["genetic resource", "agrobiodiversity",
@@ -595,7 +595,7 @@
                         },
                         {
                             "termlist_name": "termlist2_5g",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["governance", "justice", "ownership",
@@ -608,7 +608,7 @@
                         },
                         {
                             "termlist_name": "termlist2_5h",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["International Seed Treaty", "Global Plan of Action for Animal Genetic Resources", "Plant Genetic Resources for Food and Agriculture", "PGRFA"],
@@ -628,7 +628,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist2_aa",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["Agriculture Orientation Index for Government Expenditure"],
@@ -636,7 +636,7 @@
                         },
                         {
                             "termlist_name": "termlist2_ab",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["government expenditure", "government spending", "public expenditure", "public spending",
@@ -652,7 +652,7 @@
                         },
                         {
                             "termlist_name": "termlist2_ab_norighttrunc",
-                            "formatting_rule": "specific",
+                            "formatting_rule": "no_right_trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["invest"],
@@ -660,7 +660,7 @@
                         },
                         {
                             "termlist_name": "termlist2_ab_trunc",
-                            "formatting_rule": "specific_trunc",
+                            "formatting_rule": "no_trunc",
                             "na": false,
                             "case": true,
                             "wordlist_en": ["ODA"],
@@ -668,7 +668,7 @@
                         },
                         {
                             "termlist_name": "termlist2_ac",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["rural infrastructure", "rural infrastructure", "rural techn", "rural development",
@@ -694,7 +694,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist2_ba",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["export subsid","export credit","export financ","export competition","export support"],
@@ -702,7 +702,7 @@
                         },
                         {
                             "termlist_name": "termlist2_bb",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["distort", "price-fixing", "dumping", "trade restrict", "sanction", "Doha", 
@@ -712,7 +712,7 @@
                         },
                         {
                             "termlist_name": "termlist2_bc",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "_comment": "'food' will find agrifood etc.",
@@ -732,7 +732,7 @@
                         },
                         {
                             "termlist_name": "termlist2_bc_notrunc",
-                            "formatting_rule": "specific_trunc",
+                            "formatting_rule": "no_trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["rice"],
@@ -752,7 +752,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist2_ca",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "_comment": "'food' will find agrifood etc.",
@@ -773,7 +773,7 @@
                         },
                         {
                             "termlist_name": "termlist2_ca_notrunc",
-                            "formatting_rule": "specific_trunc",
+                            "formatting_rule": "no_trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["rice"],
@@ -781,7 +781,7 @@
                         },
                         {
                             "termlist_name": "termlist2_cb",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["price", "market", "trade", "trading"],
@@ -789,7 +789,7 @@
                         },
                         {
                             "termlist_name": "termlist2_cc",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["volatil","anomalies","price shock","price spike","inflation","stabil","stable","function"],
@@ -797,7 +797,7 @@
                         },
                         {
                             "termlist_name": "termlist2_cd",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["price"],
@@ -805,7 +805,7 @@
                         },
                         {
                             "termlist_name": "termlist2_ce",
-                            "formatting_rule": "default",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["market", "marknad", "trading", "trading"],
@@ -822,7 +822,7 @@
         "termlists": [
             {
                 "termlist_name": "termlist_sdg_a",
-                "formatting_rule": "specific",
+                "formatting_rule": "no_right_trunc",
                 "na": false,
                 "case": false,
                 "wordlist_en": ["SDG 2", "SDGs 2", "SDG2", "sustainable development goal 2"],
@@ -830,7 +830,7 @@
             },
             {
                 "termlist_name": "termlist_sdg_b",
-                "formatting_rule": "default",
+                "formatting_rule": "trunc",
                 "na": false,
                 "case": false,
                 "wordlist_en": ["sustainable development goal"],
@@ -838,7 +838,7 @@
             }, 
             {
                 "termlist_name": "termlist_sdg_c",
-                "formatting_rule": "default",
+                "formatting_rule": "trunc",
                 "na": false,
                 "case": false,
                 "wordlist_en": ["goal 2"],
@@ -846,7 +846,7 @@
             }, 
             {
                 "termlist_name": "termlist_sdg_d",
-                "formatting_rule": "specific",
+                "formatting_rule": "no_right_trunc",
                 "na": false,
                 "case": false,
                 "wordlist_en": ["sustainable development goal.*", "SDG", "goal 2"],
@@ -854,7 +854,7 @@
             }, 
             {
                 "termlist_name": "termlist_sdg_e",
-                "formatting_rule": "default",
+                "formatting_rule": "trunc",
                 "na": false,
                 "case": false,
                 "wordlist_en": ["hunger", "food"],
