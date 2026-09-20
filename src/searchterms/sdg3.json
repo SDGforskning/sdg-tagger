@@ -59,7 +59,7 @@
                 {
                     "number": 1,
                     "logic_rule": "([termlist3_2a] & [termlist3_2b])",
-                    "sentence_split": true,
+                    "sentence_split": false,
                     "termlists": [
                         {
                             "termlist_name": "termlist3_2a",
@@ -90,7 +90,7 @@
                 {
                     "number": 1,
                     "logic_rule": "(([termlist3_3a] & [termlist3_3b]) & not ([termlist3_3c] & not [termlist3_3d]))",
-                    "sentence_split": true,
+                    "sentence_split": false,
                     "termlists": [
                         {
                             "termlist_name": "termlist3_3a",
@@ -139,7 +139,7 @@
                 {
                     "number": 2,
                     "logic_rule": "((([termlist3_3e] & [termlist3_3f]) | [termlist3_3g] | [termlist3_3i]) & [termlist3_3j])",
-                    "sentence_split": true,
+                    "sentence_split": false,
                     "termlists": [
                         {
                             "termlist_name": "termlist3_3e",
@@ -212,8 +212,8 @@
                 },
                 {
                     "number": 3,
-                    "logic_rule": "(((([termlist3_3e] & [termlist3_3f]) | [termlist3_3k] | [termlist3_3k_caps]) & [termlist3_3l]) | (([termlist3_3m] | [termlist3_3m_caps]) & (([termlist3_3j] & [termlist3_3n]) | [termlist3_3o])))",
-                    "sentence_split": true,
+                    "logic_rule": "(((([termlist3_3e] & [termlist3_3f]) | [termlist3_3k] | [termlist3_3k_caps]) & [termlist3_3l]) | (([termlist3_3m] | [termlist3_3m_caps]) & (([termlist3_3j] & [termlist3_3n]) | ([termlist3_3o] | [termlist3_3otrunc]))))",
+                    "sentence_split": false,
                     "_comment": "This search is split into two parts: the first with communicable diseases generally, the second about covid. This is because there is a lot of non-medical research about covid which is outside the target, so it needs to be more specific in search terms" ,
                     "termlists": [
                         {
@@ -331,6 +331,14 @@
                                 "spredning", "spreiing", "smitte", "overføring", "forekomst", "førekomst", "hendelse", "hending", "utbredelse", "utbreiing", "risik",
                                 "medisin", "vaksin", "behandl", "legemiddel", "medikament", "intervensjon", "terap", 
                                 "antimalaria", "antiviral", "antibioti", "antiparasiti", "antihelminti"]
+                        },
+                        {
+                            "termlist_name": "termlist3_3otrunc",
+                            "formatting_rule": "no_left_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["rate"],
+                            "wordlist_no": []
                         }
                     ]
                 }
@@ -342,7 +350,7 @@
                 {
                     "number": 1,
                     "logic_rule": "([termlist3_4h] & (([termlist3_4a] & [termlist3_4b]) | [termlist3_4c] | ([termlist3_4d] & [termlist3_4e]) | ([termlist3_4f] & [termlist3_4g])))",
-                    "sentence_split": true,
+                    "sentence_split": false,
                     "termlists": [
                         {
                             "termlist_name": "termlist3_4a",
@@ -573,7 +581,7 @@
             "phrases": [
                 {
                     "number": 1,
-                    "logic_rule": "(([termlist3_6a] | [termlist3_6a_trunc] | ([termlist3_6b_trunc] & ([termlist3_6c] | [termlist3_6c_case]))) & ([termlist3_6c_case] | [termlist3_6d]) & ([termlist3_6c] | [termlist3_6c_case] | ([termlist3_6d] & [termlist3_6e])))",
+                    "logic_rule": "(([termlist3_6a] | [termlist3_6a_trunc] | (([termlist3_6b_trunc1] | [termlist3_6b_trunc2] | [termlist3_6b_trunc3]) & ([termlist3_6c] | [termlist3_6c_case]))) & ([termlist3_6c_case] | [termlist3_6d]) & ([termlist3_6c] | [termlist3_6c_case] | ([termlist3_6d] & [termlist3_6e])))",
                     "sentence_split": true,
                     "termlists": [
                         {
@@ -597,12 +605,28 @@
                             "wordlist_no": ["vei", "veier", "veg", "veger", "vegar", "gående", "gåande"]
                         },
                         {
-                            "termlist_name": "termlist3_6b_trunc",
+                            "termlist_name": "termlist3_6b_trunc1",
                             "formatting_rule": "no_trunc",
                             "na": false,
                             "case": false,
-                            "wordlist_en": ["vehicle.*", "driver.*", "driving", "car", "cars"],
-                            "wordlist_no": ["kjøretøy.*", "køyretøy.*", ".*fører", ".*førar", ".*sjåfør.*", "kjøring", "køyring", "bil", "biler", "bilar"]
+                            "wordlist_en": ["driving", "car", "cars"],
+                            "wordlist_no": ["kjøring", "køyring", "bil", "biler", "bilar", "sjåfør"]
+                        },
+                        {
+                            "termlist_name": "termlist3_6b_trunc2",
+                            "formatting_rule": "no_left_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": [],
+                            "wordlist_no": ["fører", "førar"]
+                        },
+                        {
+                            "termlist_name": "termlist3_6b_trunc3",
+                            "formatting_rule": "no_right_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["vehicle.*", "driver.*"],
+                            "wordlist_no": ["kjøretøy", "køyretøy"]
                         },
                         {
                             "termlist_name": "termlist3_6c",
@@ -760,7 +784,7 @@
                 {
                     "number": 2,
                     "logic_rule": "(([termlist3_8b] | ([termlist3_8c] & [termlist3_8d])) & [termlist3_8e])",
-                    "sentence_split": true,
+                    "sentence_split": false,
                     "termlists": [
                         {
                             "termlist_name": "termlist3_8b",
@@ -816,7 +840,7 @@
                 {
                     "number": 1,
                     "logic_rule": "(([phrasedefault3_9a] | [phrasedefault3_9b] | ([phrasedefault3_9c] & [phrasedefault3_9d]) | [phrasedefault3_9e] | ([phrasedefault3_9f] & [phrasedefault3_9g]) | [phrasedefault3_9h] | ([phrasedefault3_9i] & [phrasedefault3_9j]) | [phrasedefault3_9k] | ([phrasedefault3_9l] & [phrasedefault3_9m])) & [phrasedefault3_9n])",
-                    "sentence_split": true,
+                    "sentence_split": false,
                     "termlists": [
                         {
                             "termlist_name": "phrasedefault3_9a",
@@ -987,7 +1011,7 @@
                 {
                     "number": 1,
                     "logic_rule": "([termlist3_a1] | [termlist3_a2trunc])",
-                    "sentence_split": false,
+                    "sentence_split": true,
                     "termlists": [
                         {
                             "termlist_name": "termlist3_a1",
@@ -1048,7 +1072,7 @@
                 {
                     "number": 3,
                     "logic_rule": "([termlist3_a7] & [termlist3_a8])",
-                    "sentence_split": false,
+                    "sentence_split": true,
                     "termlists": [
                         {
                             "termlist_name": "termlist3_a7",
@@ -1076,7 +1100,7 @@
                 {
                     "number": 1,
                     "logic_rule": "([termlist3_b2] & ([LMIC] | [termlist3_b3]))",
-                    "sentence_split": true,
+                    "sentence_split": false,
                     "termlists": [
                         {
                             "termlist_name": "termlist3_b1",

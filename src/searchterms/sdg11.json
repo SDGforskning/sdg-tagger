@@ -10,7 +10,7 @@
                 {
                     "number": 1,
                     "logic_rule": "([termlist11_1a] & [termlist11_1b] & [termlist11_1c])",
-                    "sentence_split": false,
+                    "sentence_split": true,
                     "termlists": [
                         {
                             "termlist_name": "termlist11_1a",
@@ -41,7 +41,7 @@
                 {
                     "number": 2,
                     "logic_rule": "([termlist11_1d] & [termlist11_1e] & ([termlist11_1r] | [termlist11_1rtrunc]))",
-                    "sentence_split": false,
+                    "sentence_split": true,
                     "termlists": [
                         {
                             "termlist_name": "termlist11_1d",
@@ -110,7 +110,7 @@
                 {
                     "number": 3,
                     "logic_rule": "([termlist11_1s] | [termlist11_1strunc])",
-                    "sentence_split": false,
+                    "sentence_split": true,
                     "termlists": [
                         {
                             "termlist_name": "termlist11_1s",
@@ -718,11 +718,11 @@
                         },
                         {
                             "termlist_name": "termlist11_6c",
-                            "formatting_rule": "trunc",
+                            "formatting_rule": "no_trunc",
                             "na": false,
                             "case": false,
-                            "wordlist_en": ["city", "urban.*"],
-                            "wordlist_no": []
+                            "wordlist_en": ["city", "urban"],
+                            "wordlist_no": ["urban", "urbane", "urbant"]
                         }
                     ]
                 },
@@ -1010,7 +1010,7 @@
             "phrases": [
                 {
                     "number": 1,
-                    "logic_rule": "(([termlist11_Ba] | ([termlist11_Bb] & [termlist11_Bc])) & ([termlist11_Bd] | [termlist11_Bdtrunc]))",
+                    "logic_rule": "(([termlist11_Ba] | (([termlist11_Bb] | [termlist11_Bbtrunc]) & [termlist11_Bc])) & ([termlist11_Bd] | [termlist11_Bdtrunc]))",
                     "sentence_split": false,
                     "termlists": [
                         {
@@ -1029,6 +1029,14 @@
                             "_comment": "space after 'plan' to prevent 'plant'",
                             "wordlist_en": ["plan ", "plans", "planning", "strateg", "program", "policy", "policies", "governance", "framework", "preparedness"],
                             "wordlist_no": ["plan ", "planer", "planar", "planleg", "strateg", "program", "rammeverk", "policy", "politikk", "politisk", "forvalt", "styring", "ledelse", "leiing", "retningslin", "forebygg", "beredskap"]
+                        },
+                        {
+                            "termlist_name": "termlist11_Bbtrunc",
+                            "formatting_rule": "no_right_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["plan"],
+                            "wordlist_no": ["plan"]
                         },
                         {
                             "termlist_name": "termlist11_Bc",
