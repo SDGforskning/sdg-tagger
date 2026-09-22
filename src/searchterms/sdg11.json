@@ -10,7 +10,7 @@
                 {
                     "number": 1,
                     "logic_rule": "([termlist11_1a] & [termlist11_1b] & [termlist11_1c])",
-                    "sentence_split": true,
+                    "sentence_split": false,
                     "termlists": [
                         {
                             "termlist_name": "termlist11_1a",
@@ -41,7 +41,7 @@
                 {
                     "number": 2,
                     "logic_rule": "([termlist11_1d] & [termlist11_1e] & ([termlist11_1r] | [termlist11_1rtrunc]))",
-                    "sentence_split": true,
+                    "sentence_split": false,
                     "termlists": [
                         {
                             "termlist_name": "termlist11_1d",
@@ -110,7 +110,7 @@
                 {
                     "number": 3,
                     "logic_rule": "([termlist11_1s] | [termlist11_1strunc])",
-                    "sentence_split": true,
+                    "sentence_split": false,
                     "termlists": [
                         {
                             "termlist_name": "termlist11_1s",
@@ -139,7 +139,7 @@
                 {
                     "number": 1,
                     "logic_rule": "(([termlist11_2a] | [termlist11_2a_trunc]) & ([termlist11_2b] | [termlist11_2c] | ([termlist11_2b2] & [termlist11_2d])))",
-                    "sentence_split": false,
+                    "sentence_split": true,
                     "termlists": [
                         {
                             "termlist_name": "termlist11_2a",
@@ -187,8 +187,8 @@
                             "na": false,
                             "case": false,
                             "_comment": "terms where truncation is prevented: 'vei' and 'veg', although relevant terms (= way, road) seem to be used nearly always metaphorically ('way to safer workplaces') so suggest removal for practical reasons",
-                            "wordlist_en": ["road", "roads", "car", "cars", "bus", "train", "tube", "journey"],
-                            "wordlist_no": ["veier", "veger", "vegar", "gate", "gater", "buss", "train", "tube", "metro", "tog", "fører", "førere"]
+                            "wordlist_en": ["road", "roads", "car", "cars", "bus", "train", "journey"],
+                            "wordlist_no": ["veier", "veger", "vegar", "gate", "gater", "buss", "train", "metro", "tog", "fører", "førere"]
                         },
                         {
                             "termlist_name": "termlist11_2d",
@@ -246,7 +246,7 @@
                 {
                     "number": 1,
                     "logic_rule": "([termlist11_3a] & [termlist11_3b])",
-                    "sentence_split": false,
+                    "sentence_split": true,
                     "termlists": [
                         {
                             "termlist_name": "termlist11_3a",
@@ -268,7 +268,7 @@
                 {
                     "number": 2,
                     "logic_rule": "(([termlist11_3c] | [termlist11_3c_trunc]) & ([termlist11_3c] | [termlist11_3c_trunc]) & [termlist11_3e])",
-                    "sentence_split": false,
+                    "sentence_split": true,
                     "termlists": [
                         {
                             "termlist_name": "termlist11_3c",
@@ -908,7 +908,7 @@
                 {
                     "number": 2,
                     "logic_rule": "([termlist11_7e] & ([termlist11_7b] | [termlist11_7c]))",
-                    "sentence_split": false,
+                    "sentence_split": true,
                     "termlists": [
                         {
                             "termlist_name": "termlist11_7b",
@@ -1085,7 +1085,7 @@
                 {
                     "number": 1,
                     "logic_rule": "([termlist11_Ca] | ([termlist11_Cb] & [termlist11_Cc]) | [termlist11_Cd_case])",
-                    "sentence_split": false,
+                    "sentence_split": true,
                     "termlists": [
                         {
                             "termlist_name": "termlist11_Ca",
