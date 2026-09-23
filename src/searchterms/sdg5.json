@@ -9,42 +9,339 @@
             "phrases": [
                 {
                     "number": 1,
-                    "logic_rule": "()",
-                    "sentence_split": false,
+                    "logic_rule": "([termlist5_1a_trunc] | [termlist5_1a_no_trunc] | [termlist5_1a_case_true] | (([termlist5_1b] | ([termlist5_1c] & [termlist5_1d]) | ([termlist5_1e] & ([termlist5_1f] | ([termlist5_1f_combo1] & [termlist5_1f_combo2]))) | ([termlist5_1g] & [termlist5_1g_2]) | ([termlist5_1h] & [termlist5_1h_2])) & ([termlist5_1j] | (([termlist5_1j_combo1] & [termlist5_1j_combo2]) | [termlist5_1j_norwcombined]))))",
+                    "sentence_split": true,
                     "termlists": [
                         {
-                            "termlist_name": "",
-                            "formatting_rule": "",
+                            "termlist_name": "termlist5_1a_trunc",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
-                            "wordlist_en": [],
-                            "wordlist_no": []
+                            "wordlist_en": ["misogyn"],
+                            "wordlist_no": ["misogyn", "kvinnehat"]
+                        },
+                        {
+                            "termlist_name": "termlist5_1a_no_trunc",
+                            "formatting_rule": "no_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["sexism", "sexist"],
+                            "wordlist_no": ["sexisme", "sexistisk"]
+                        },
+                        {
+                            "termlist_name": "termlist5_1a_case_true",
+                            "formatting_rule": "no_trunc",
+                            "na": false,
+                            "case": true,
+                            "wordlist_en": ["CEDAW"],
+                            "wordlist_no": ["CEDAW"]
+                        },
+                        {
+                            "termlist_name": "termlist5_1b",
+                            "formatting_rule": "trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["discriminat", "dispar", "prejudic", "gender inequalit", "gender inequit", "gender bias"],
+                            "wordlist_no": ["diskriminer", "forskjell", "skilnad", "ulikhet", "ulikskap", "fordom", "forutinnt", "ulempe", "kjønnsforskjell", "kjønnsulik" ]
+                        },
+                        {
+                            "termlist_name": "termlist5_1c",
+                            "formatting_rule": "trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["bias", "exclusion"],
+                            "wordlist_no": ["bias", "eksluder"]
+                        },
+                        {
+                            "termlist_name": "termlist5_1d",
+                            "formatting_rule": "trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["systematic", "unconscious"],
+                            "wordlist_no": ["systematisk", "ubevisst", "umedvit"]
+                        },
+                        {
+                            "termlist_name": "termlist5_1e",
+                            "formatting_rule": "no_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["exludes", "exclude", "exclusion"],
+                            "wordlist_no": ["ekskluderer", "ekskludere", "ekskludera", "ekskludering" ]
+                        },
+                        {
+                            "termlist_name": "termlist5_1f",
+                            "formatting_rule": "trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["women", "woman", "girl", "female", "sister", "mother", "aunt", "grandmother", "grandma", "niece", "daughter", "wife", "wives", "lesbian", "gender", "transperson", "non-binary"],
+                            "wordlist_no": ["kvinne", "dame", "jente", "pike", "søster", "syster", "mor", "mødre", "bestemor", "mormor", "farmor", "niese", "datter", "dotter", "kone", "lesbisk", "lesbe", "transperson", "ikke-binær", "ikkje-binær"]
+                        },
+                        {
+                            "termlist_name": "termlist5_1f_combo1",
+                            "formatting_rule": "no_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["sexual"],
+                            "wordlist_no": ["seksuell", "seksuelt", "seksuelle"]
+                        },
+                        {
+                            "termlist_name": "termlist5_1f_combo2",
+                            "formatting_rule": "no_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["gender"],
+                            "wordlist_no": ["kjønn"]
+                        },
+                        {
+                            "termlist_name": "termlist5_1g",
+                            "formatting_rule": "no_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["exclusion"],
+                            "wordlist_no": ["ekskludering"]
+                        },
+                        {
+                            "termlist_name": "termlist5_1g_2",
+                            "formatting_rule": "trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["financ", "econom", "social", "digit", "cultur", "politic"],
+                            "wordlist_no": ["finans", "økonomi", "sosial", "digital", "kultur", "politisk"]
+                        },
+                        {
+                            "termlist_name": "termlist5_1h",
+                            "formatting_rule": "trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["impair", "nullif", "violat", "reduc", "limit", "undermin", "ignor"],
+                            "wordlist_no": ["svekke", "annuller", "bryte", "bryta", "brudd", "brot", "reduser", "begrens", "avgrens", "underminer", "undergrav", "ignor"]
+                        },
+                        {
+                            "termlist_name": "termlist5_1h_2",
+                            "formatting_rule": "trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["human right", "women's right", "freedom", "right to", "rights"],
+                            "wordlist_no": ["menneskerett", "kvinnerett", "frihet", "fridom", "rett til", "rettighet"]
+                        },
+                        {
+                            "termlist_name": "termlist5_1i",
+                            "formatting_rule": "trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["women", "woman", "girl", "female", "sister", "mother", "aunt", "grandmother", "grandma", "niece", "daughter", "wife", "wives", "pregnan", "maternity", "maternal", "lesbian", "gender", "transperson", "non-binary"],
+                            "wordlist_no": ["kvinne", "dame", "jente", "pike", "søster", "syster", "mor", "mødre", "bestemor", "mormor", "farmor", "niese", "datter", "dotter", "kone", "gravid",  "maternitet", "maternal", "moderskap", "lesbisk", "lesbe", "transperson", "ikke-binær", "ikkje-binær"]
+                        },
+                        {
+                            "termlist_name": "termlist5_1j_combo1",
+                            "formatting_rule": "no_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["sex"],
+                            "wordlist_no": ["kjønn"]
+                        },
+                        {
+                            "termlist_name": "termlist5_1j_combo2",
+                            "formatting_rule": "trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["based", "factor", "distribution", "characteristic", "discriminat", "violence"],
+                            "wordlist_no": ["basert", "faktor", "fordel", "karakteristi", "kjennetegn", "kjenneteikn", "diskriminer", "vold", "vald"]
+                        },
+                        {
+                            "termlist_name": "termlist5_1j_norwcombined",
+                            "formatting_rule": "trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["sex"],
+                            "wordlist_no": ["kjønnsbasert", "kjønnsfaktor", "kjønnsfordel", "kjønnsdiskriminer"]
                         }
+                        
                     ]
                 },
                 {
                     "number": 2,
-                    "logic_rule": "()",
-                    "sentence_split": false,
+                    "logic_rule": "(([termlist5_1k] | ([termlist5_1k_combo1] & [termlist5_1k_combo2])) | (([termlist5_1l | ([termlist5_1l_combo1] & [termlist5_1l_combo2])) & ([termlist5_1m] | (([termlist5_1m_combo1] & [termlist5_1m_combo2]) | [termlist5_1m_norwcombined]))))",
+                    "sentence_split": true,
                     "termlists": [
                         {
-                            "termlist_name": "",
-                            "formatting_rule": "",
+                            "termlist_name": "[termlist5_1k]",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
-                            "wordlist_en": [],
-                            "wordlist_no": []
+                            "wordlist_en": ["women's right", "rights of women", "women's freedom", "women's inclusion", "gender equal", "gender equit", "equal pay"],
+                            "wordlist_no": ["kvinnerett", "kvinners rett", "kvinnefrigjøring", "inkludering av kvinner", "likestil", "jamstil", "likeløn"]
+                        },
+                        {
+                            "termlist_name": "[termlist5_1k_combo1]",
+                            "formatting_rule": "no_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["inclusion"],
+                            "wordlist_no": ["inkludering"]
+                        },
+                        {
+                            "termlist_name": "[termlist5_1k_combo2]",
+                            "formatting_rule": "no_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["gender"],
+                            "wordlist_no": ["kjønn"]
+                        },
+                        {
+                            "termlist_name": "[termlist5_1l]",
+                            "formatting_rule": "trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["human right", "right to", "rights", "anti-discriminat", "non-discriminat", "equalit", "equal rights"],
+                            "wordlist_no": ["menneskerett", "rett til", "rettighet", "diskriminer", "likestil", "jamstil", "like rett"]
+                        },
+                        {
+                            "termlist_name": "[termlist5_1l_combo1]",
+                            "formatting_rule": "trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["inclusion"],
+                            "wordlist_no": ["inkludering"]
+                        },
+                        {
+                            "termlist_name": "termlist5_1l_combo2",
+                            "formatting_rule": "trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["financ", "econom", "social", "digit", "cultur", "politic"],
+                            "wordlist_no": ["finans", "økonomi", "sosial", "digital", "kultur", "politisk"]
+                        },
+                        {
+                            "termlist_name": "termlist5_1m",
+                            "formatting_rule": "trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["women", "woman", "girl", "female", "sister", "mother", "aunt", "grandmother", "grandma", "niece", "daughter", "wife", "wives", "girlfriend", "pregnan", "maternity", "maternal", "lesbian", "gender", "transperson", "non-binary"],
+                            "wordlist_no": ["kvinne", "dame", "jente", "pike", "søster", "syster", "mor", "mødre", "bestemor", "mormor", "farmor", "niese", "datter", "dotter", "kone", "gravid",  "maternitet", "maternal", "moderskap", "lesbisk", "lesbe", "transperson", "ikke-binær", "ikkje-binær"]
+                        },
+                        {
+                            "termlist_name": "termlist5_1m_combo1",
+                            "formatting_rule": "no_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["sex"],
+                            "wordlist_no": ["kjønn"]
+                        },
+                        {
+                            "termlist_name": "termlist5_1m_combo2",
+                            "formatting_rule": "trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["based", "factor", "distribution", "characteristic", "discriminat", "violence"],
+                            "wordlist_no": ["basert", "faktor", "fordel", "karakteristi", "kjennetegn", "kjenneteikn", "diskriminer", "vold", "vald"]
+                        },
+                        {
+                            "termlist_name": "termlist5_1m_norwcombined",
+                            "formatting_rule": "trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["sex"],
+                            "wordlist_no": ["kjønnsbasert", "kjønnsfaktor", "kjønnsfordel", "kjønnsdiskriminer"]
+                        }
+                    ]
+                },
+                {
+                    "number": 3,
+                    "logic_rule": "([termlist5_1n] & ([termlist5_1o] | ([termlist5_1o_combo1] & [termlist5_1o_combo2])) | (([termlist5_1p] | ([termlist5_1o_combo1] & [termlist5_1q])) & ([termlist5_1r] | ([termlist5_1s_combo1] & [termlist5_1s_combo2]) | [termlist5_1s_nor])))",
+                    "sentence_split": true,
+                    "termlists": [
+                        {
+                            "termlist_name": "termlist5_1n",
+                            "formatting_rule": "trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["law", "policy", "policies", "regulat", "legal", "legislat", "agreement", "treaty", "treaties", "strateg", "framework", "instrument", "governance"],
+                            "wordlist_no": ["lov", "politikk", "retningslin", "regulering", "regel", "reglement", "forordning", "bestemm", "lovgi", "lovgje", "enighet", "einigheit", "semje", "strategi", "rammeverk", "instrument", "styring", "ledelse", "leiing"]
+                        },
+                        {
+                            "termlist_name": "termlist5_1o",
+                            "formatting_rule": "trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["misogyn", "sexis"],
+                            "wordlist_no": ["misogyn", "kvinnehat", "sexis"]
+                        },
+                        {
+                            "termlist_name": "termlist5_1o_combo1",
+                            "formatting_rule": "no_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["exclusion", "inclusion"],
+                            "wordlist_no": ["ekskludering", "inkludering"]
+                        },
+                        {
+                            "termlist_name": "termlist5_1o_combo2",
+                            "formatting_rule": "trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["gender"],
+                            "wordlist_no": ["kjønn"]
+                        },
+                        {
+                            "termlist_name": "termlist5_1p",
+                            "formatting_rule": "trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["equality", "discriminat", "rights", "dispar", "bias", "opportunit", "empower", "equal pay", "women's inclusion"],
+                            "wordlist_no": ["likestil", "jamstil", "likhet", "likskap", "diskriminer", "forskjell", "skilnad", "rett til", "rettighet", "bias", "mulig", "mogeleg", "mogleg", "likeløn", "inkludering av kvinner"]
+                        },
+                        {
+                            "termlist_name": "termlist5_1q",
+                            "formatting_rule": "trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["financ", "econom", "social", "digital", "cultur", "politic"],
+                            "wordlist_no": ["finans", "økonomi", "sosial", "digital", "kultur", "politisk"]
+                        },
+                        {
+                            "termlist_name": "termlist5_1r",
+                            "formatting_rule": "trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["women", "woman", "girl", "female", "sister", "mother", "aunt", "grandmother", "grandma", "niece", "daughter", "wife", "wives", "girlfriend", "pregnan", "maternity", "maternal", "lesbian", "gender", "transperson", "non-binary"],
+                            "wordlist_no": ["kvinne", "dame", "jente", "pike", "søster", "syster", "mor", "mødre", "bestemor", "mormor", "farmor", "niese", "datter", "dotter", "kone", "gravid",  "maternitet", "maternal", "moderskap", "lesbisk", "lesbe", "transperson", "ikke-binær", "ikkje-binær"]
+                        },
+                        {
+                            "termlist_name": "termlist5_1s_combo1",
+                            "formatting_rule": "no_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["sex"],
+                            "wordlist_no": ["kjønn"]
+                        },
+                        {
+                            "termlist_name": "termlist5_1s_combo2",
+                            "formatting_rule": "trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["based", "factor", "distribution", "characteristic", "disparity", "difference", "bias", "discriminat"],
+                            "wordlist_no": ["basert", "faktor", "fordel", "karakteristi", "kjennetegn", "kjenneteikn", "ulikhet", "ulikskap", "forskjell", "skilnad", "bias", "diskriminer"]
+                        },
+                        {
+                            "termlist_name": "termlist5_1s_norwcombined",
+                            "formatting_rule": "trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["sex"],
+                            "wordlist_no": ["kjønnsbasert", "kjønnsfaktor", "kjønnsfordel", "kjønnsdiskriminer"]
                         }
                     ]
                 }
             ]
         },
+        
         {
             "name": "2",
             "phrases": [
                 {
                     "number": 1,
-                    "logic_rule": "()",
+                    "logic_rule": "([termlist])",
                     "sentence_split": false,
                     "termlists": [
                         {
