@@ -1393,7 +1393,7 @@
             "phrases": [
                 {
                     "number": 1,
-                    "logic_rule": "([termlist15_9d] | [termlist15_9dcase] | ((([termlist15_9a] | [termlist15_9atrunc] | ([diversity_ecosystems1] & ([diversity_ecosystems2] |[termlistanimalsplants1] | [termlistanimalsplants2] | [termlist15_terr1] | [termlist15_terr2]))) & ([termlist15_9e] & ([termlist15_9f] | [termlist15_9ftrunc]))) & not [terrestrial_double_NOT]))",
+                    "logic_rule": "([termlist15_9d] | [termlist15_9dcase] | ((([termlist15_9a] | [termlist15_9atrunc] | ([diversity_ecosystems1] & ([diversity_ecosystems2] | [termlistanimalsplants1] | [termlistanimalsplants2] | [termlist15_terr1] | [termlist15_terr2]))) & ([termlist15_9e] & ([termlist15_9f] | [termlist15_9ftrunc]))) & not [terrestrial_double_NOT]))",
                     "sentence_split": true,
                     "_comment": "Repetition of diversityecosystems, animalsplants and terrestrial terms because need these within the same sentence as the other terms - they are also used in 15.1 phrase 3 and 4 and 15.a",
                     "termlists": [
