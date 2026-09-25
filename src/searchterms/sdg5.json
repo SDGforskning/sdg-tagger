@@ -295,19 +295,85 @@
         },
         {
             "name": "a",
+            "_comment": "Term lists partially copied from SDG 1.4",
             "phrases": [
                 {
                     "number": 1,
-                    "logic_rule": "()",
-                    "sentence_split": false,
+                    "logic_rule": "(([termlist5_a1] | ([termlist5_a2] & ([termlist5_a3] | [termlist5_a3trunc])) & ([termlist5_women1] | [termlist5_women2])))",
+                    "sentence_split": true,
                     "termlists": [
                         {
-                            "termlist_name": "",
-                            "formatting_rule": "",
+                            "termlist_name": "termlist5_a1",
+                            "_comment": "Same as termlist1_4a",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
-                            "wordlist_en": [],
-                            "wordlist_no": []
+                            "wordlist_en": ["financial inclusion", "unbanked",
+                                "microfinanc", "micro-financ", "microinsurance", "micro-insurance", "microcredit", "micro-credit", "microloan", "micro-loan"],
+                            "wordlist_no": ["finansiell inkludering", "mikrofinans", "mikrokreditt", "mikroinnskudd", "mikroforsikring"]
+                        },
+                        {
+                            "termlist_name": "termlist5_a2",
+                            "_comment": "Same as termlist1_4b. 'equity' etc. will cover 'inequity' due to automatic truncation",
+                            "formatting_rule": "trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["access" , "equitab" , "equity" , "equality" , "equal", 
+                                "ownership" , "control" , "right" , "empower" , "inclusion",
+                                "affordab" , "pro poor" , "pro-poor", "inexpensive" , "free of charge" , "free service",
+                                "inaccessib" , "barrier" , "obstacle" , "hinderance", "unequal" , "inequalit" , "inequitab" , "exclusion", 
+                                "unaffordab" , "expensive"],
+                            "wordlist_no": ["tilgang", "tilgjenge", "likestilling", "likhet", "likheit", "rettferd", "rettvis",
+                                "eierskap", "kontroll", "rettighet", "rettigheit", "inkludering", "inkluderende", "inkluderande", "ekskludering", 
+                                "barrier", "marginalis", "myndiggjør", "myndiggjer",
+                                "dyre", "ikke råd", "ikkje råd"]
+                        },
+                        {
+                            "termlist_name": "termlist5_a3",
+                            "_comment": "Same as termlist1_4c. 'Saving' (='sparing' NO) are not used here as they mostly add noise from 'energy saving', 'cost saving' or 'nerve-sparing' (medical). 'seed banks' are also an issue", 
+                            "formatting_rule": "trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["a bank" , "bank account" , "banking" , "bank services", 
+                                "digital finance", "mobile money", "mobile bank", "electronic payment", "digital payment", "fintech",
+                                "credit", "loans", "mortgage", "entrepreneurial finance", "savings account", "insurance", "payment service", "transfer service", "transfer fund",
+                                "financial resource", "monetary resource", "economic resource", "financial asset", "economic asset", "financial opportunit", "financial service", "monetary service", "economic service"],
+                            "wordlist_no": ["bankkont", "bankkunde", "sparebank", "banktjenester", "banktenester",
+                                "kreditt", "sparekont", "forsikring", "betalingsløsning", "betalingsløysing", "betalingstjeneste", "betalingsteneste", "digitale penger", "digitale pengar", "nettbank", "mobilbank",
+                                "finansielle ressurs", "økonomiske ressurs", "finansielle tjenester", "finansielle tenester"]
+                        },
+                        {
+                            "termlist_name": "termlist5_a3trunc",
+                            "_comment": "Same as termlist ????????", 
+                            "formatting_rule": "no_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["loan"],
+                            "wordlist_no": ["lån", "huslån"]
+                        },
+                        {
+                            "termlist_name": "termlist5_women1",
+                            "_comment": "Same as termlist ????????", 
+                            "formatting_rule": "trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["women", "woman", "girl", "female", 
+                                "sister", "mother", "grandmother", "grandma", "niece", "daughter", "wife", "wives", 
+                                "pregnan", "maternity", "maternal", 
+                                "lesbian", "gender", "transperson", "non-binary"],
+                            "wordlist_no": ["kvinne", 
+                                "søster", "syster", "mødre", "bestemor", "mormor", "farmor", "niese", "datter", "dotter", 
+                                "gravid", "svangerskap",
+                                "lesbisk", "lesbe", "transperson", "transkjønn", "ikke-binær", "ikkje-binær"]
+                        }
+                        ,{
+                            "termlist_name": "termlist5_women2",
+                            "_comment": "Same as termlist ????????", 
+                            "formatting_rule": "no_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["aunt", "aunts", "sex", "sexes"],
+                            "wordlist_no": ["dame", "damer", "pike", "piker", "jente", "jenter", "mor", "mora", "moren", "kone", "kona", "kjønn.*"]
                         }
                     ]
                 },
