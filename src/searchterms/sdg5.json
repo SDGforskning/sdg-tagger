@@ -114,7 +114,7 @@
             "phrases": [
                 {
                     "number": 1,
-                    "logic_rule": "( [termlist5_4a] | ([termlist5_4b] & [termlist5_4c]) | (([termlist5_4b] | [termlist5_4d]) & ([termlist5_4e] | ([termlist5_4c] & [termlist5_4f]))) )",
+                    "logic_rule": "( [termlist5_4a] | ([termlist5_4b] & [termlist5_4c]) | (([termlist5_4b] | [termlist5_4d]) & ([termlist5_4e] | ([termlist5_4c] & [termlist5_4f]) | ([termlist5_4g] & ([termlist5_4h] | [termlist5_4i])))) | (([termlist5_4b] | [termlist5_4d] | [termlist5_4i]) & ([termlist5_4j] | ([termlist5_4k] & [termlist5_4l]))) )",
                     "sentence_split": true,
                     "termlists": [
                         {
@@ -123,8 +123,8 @@
                             "na": false,
                             "case": false,
                             "wordlist_en": ["family caregiv", "reproductive labo", "reproductive work", "kin work", "kinwork", "motherwork", 
-                            "household management", "household administration", "housework", "household work", "household labo", "household task", "household chore", "household duties", 
-                            "domestic task", "domestic chore", "domestic duties", "domestic responsibilit", "domestic division of labo"],
+                                    "household management", "household administration", "housework", "household work", "household labo", "household task", "household chore", "household duties", 
+                                    "domestic task", "domestic chore", "domestic duties", "domestic responsibilit", "domestic division of labo"],
                             "wordlist_no": []
                         },
                         {
@@ -133,8 +133,8 @@
                             "na": false,
                             "case": false,
                             "wordlist_en": ["informal", "unpaid", "without pay", "with no pay", 
-                            "time use survey", "time use statistic", "time use data", "time-use survey", "time-use statistic", "time-use data",
-                            "gender"],
+                                    "time use survey", "time use statistic", "time use data", "time-use survey", "time-use statistic", "time-use data",
+                                    "gender"],
                             "wordlist_no": []
                         },
                         {
@@ -159,7 +159,7 @@
                             "na": false,
                             "case": false,
                             "wordlist_en": ["household responsibilit", "domestic work", "domestic labo", "domestic management", "manage the home", 
-                            "childcare", "caregiv", "eldercare", "parenting"],
+                                    "childcare", "caregiv", "eldercare", "parenting"],
                             "wordlist_no": []
                         },
                         {
@@ -172,10 +172,51 @@
                         }, 
                         {
                             "termlist_name": "termlist5_4g",
-                            "formatting_rule": "no_left_trunc",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
-                            "wordlist_en": [],
+                            "wordlist_en": ["cooking", "meal preparation", "food preparation", "cleaning", "washing", "repair", "maintenance", 
+                                    "pay bills", "pet care", "shopping", "domestic management", "home management", "manage the home"],
+                            "wordlist_no": []
+                        }, 
+                        {
+                            "termlist_name": "termlist5_4h",
+                            "formatting_rule": "trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["household", "domestic", "home", "family", "families"],
+                            "wordlist_no": []
+                        }, 
+                        {
+                            "termlist_name": "termlist5_4i",
+                            "formatting_rule": "trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["women", "woman", "girl", "mother", "gender"],
+                            "wordlist_no": []
+                        }, 
+                        {
+                            "termlist_name": "termlist5_4j",
+                            "formatting_rule": "trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["household responsibil", "domestic work", "domestic labo", "domestic management", "home management", "manage the home"],
+                            "wordlist_no": []
+                        }, 
+                        {
+                            "termlist_name": "termlist5_4k",
+                            "formatting_rule": "trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["collecting", "collection", "fetch"],
+                            "wordlist_no": []
+                        }, 
+                        {
+                            "termlist_name": "termlist5_4l",
+                            "formatting_rule": "trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["fuel", "firewood", "drinking water", "well water", "clean water", "fetching water"],
                             "wordlist_no": []
                         }
                     ]
