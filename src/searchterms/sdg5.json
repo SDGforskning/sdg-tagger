@@ -158,8 +158,8 @@
             "phrases": [
                 {
                     "number": 1,
-                    "logic_rule": "()",
-                    "sentence_split": false,
+                    "logic_rule": "((([termlist5_ba] | [termlist5_bb]) & ([termlist5_bc] | [termlist5_bd])) & (([termlist5_be] | (([termlist5_bf] | [termlist5_b6]) & [termlist5_bh]))))",
+                    "sentence_split": true,
                     "termlists": [
                         {
                             "termlist_name": "termlist5_ba",
@@ -190,19 +190,19 @@
                             "formatting_rule": "no_trunc",
                             "na": false,
                             "case": false,
-                            "wordlist_en": ["apps"],
+                            "wordlist_en": [""],
                             "wordlist_no": ["apper", "appar"]
                         },
                         {
-                            "termlist_name": "",
-                            "formatting_rule": "",
+                            "termlist_name": "termlist5_be",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["GEWE"],
                             "wordlist_no": []
                         },
                         {
-                            "termlist_name": "termlist5_bk",
+                            "termlist_name": "termlist5_bf",
                             "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
@@ -216,7 +216,7 @@
                                 "lesbisk", "lesbe", "transperson", "transkjønn", "ikke-binær", "ikkje-binær"]
                         },
                         {
-                            "termlist_name": "termlist5_bl",
+                            "termlist_name": "termlist5_bg",
                             "formatting_rule": "no_trunc",
                             "na": false,
                             "case": false,
@@ -224,28 +224,12 @@
                             "wordlist_no": ["dame", "damer", "pike", "piker", "jente", "jenter", "mor", "mora", "moren", "kone", "kona", "kjønn.*"]
                         },
                         {
-                            "termlist_name": "",
-                            "formatting_rule": "",
+                            "termlist_name": "termlist5_bh",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
                             "wordlist_en": ["autonomy", "control", "decision-making", "economic strength", "enabl", "emancipat", "empower", "freedom", "independence", "opportunit", "personal priorit", "personal strength", "personal development", "political strength", "power", "self concept", "self confidence", "self efficacy", "rights", "equity", "equality"],
-                            "wordlist_no": []
-                        },
-                        {
-                            "termlist_name": "",
-                            "formatting_rule": "",
-                            "na": false,
-                            "case": false,
-                            "wordlist_en": ["use", "usage", "utili", "access", "adoption", "diffusion", "skills", "competenc", "confidence", "aquisition", "capab"],
-                            "wordlist_no": []
-                        },
-                        {
-                            "termlist_name": "",
-                            "formatting_rule": "",
-                            "na": false,
-                            "case": false,
-                            "wordlist_en": ["use", "usage", "utili", "access", "adoption", "diffusion", "skills", "competenc", "confidence", "aquisition", "capab"],
-                            "wordlist_no": []
+                            "wordlist_no": ["autonomi", "kontroll", "empowerment", "muliggjøre", "mogeleggjer", "gjere mogeleg", "gjøre mulig", "frigjør", "frigjer", "emansiper", "frihet", "fridom", "mogeleghei", "mulighet", "personlig utvikling", "personleg utvikling", "politisk styrke", "makt", "selvbilde", "sjølvbilet", "selvtillit", "sjølvtillit", "meistring", "mestring", "rettighe", "rettferd", "likestilling" ]
                         }
                     ]
                 }
@@ -256,31 +240,131 @@
             "phrases": [
                 {
                     "number": 1,
-                    "logic_rule": "()",
-                    "sentence_split": false,
+                    "logic_rule": "([termlist5_ca] & [termlist5_cb] & (([termlist5_cc] | [termlist5_cd]) & [termlist5_ce]))",
+                    "sentence_split": true,
                     "termlists": [
                         {
-                            "termlist_name": "",
-                            "formatting_rule": "",
+                            "termlist_name": "termlist5_ca",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
-                            "wordlist_en": [],
-                            "wordlist_no": []
+                            "wordlist_en": ["agreement", "convention", "directive", "framework", "governance", "judicial", "judiciary", "law$", "legal", "legislat", "policy", "policies", "regulation", "rule", "rules", "statute", "treaty", "treaties"],
+                            "wordlist_no": ["avtal", "overenskomst", "overeinskomst", "konvensjon", "direktiv", "rammeverk", "rettslig", "rettsleg", "juridisk", "lovgjev", "lovgiv", "lovfest", "politikk", "retningsli", "handlingsplan", "strategi", "regulering", "forskrift", "føresegn", "vedtekt", "regel", "reglar", "lov", "traktat"]
+                        },
+                        {
+                            "termlist_name": "termlist5_cb",
+                            "formatting_rule": "trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["GEWE"],
+                            "wordlist_no": [""]
+                        },
+                        {
+                            "termlist_name": "termlist5_cc",
+                            "formatting_rule": "trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["women", "woman", "girl", "female", 
+                                "sister", "mother", "grandmother", "grandma", "niece", "daughter", "wife", "wives", 
+                                "pregnan", "maternity", "maternal", 
+                                "lesbian", "gender", "transperson", "non-binary"],
+                            "wordlist_no": ["kvinne", 
+                                "søster", "syster", "systre", "mødre", "bestemor", "mormor", "farmor", "niese", "datter", "dotter", 
+                                "gravid", "svangerskap",
+                                "lesbisk", "lesbe", "transperson", "transkjønn", "ikke-binær", "ikkje-binær"]
+                        },
+                        {
+                            "termlist_name": "termlist5_cd",
+                            "formatting_rule": "no_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["aunt", "aunts", "sex", "sexes"],
+                            "wordlist_no": ["dame", "damer", "pike", "piker", "jente", "jenter", "mor", "mora", "moren", "kone", "kona", "kjønn.*"]
+                        },
+                        {
+                            "termlist_name": "termlist5_ce",
+                            "formatting_rule": "trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["autonomy", "balanc", "bias", "based", "capasity", "decision-making", "discriminat", "divide", "diversit", "economic strength", "emancipat", "empower", "equal", "equit", "exclusion", "freedom", "gap", "impair", "inclusion", "independence", "liberation", "parit", "personal priorit", "personal strength", "personal development", "political strength", "power", "rights", "self concept", "self confidence", "self efficacy", "violence"],
+                            "wordlist_no": ["autonomi", "balanse", "bias", "empowerment", "muliggjøre", "mogeleggjer", "gjere mogeleg", "gjøre mulig", "frigjør", "frigjer", "emansiper", "frihet", "fridom", "mogeleghei", "mulighet", "personlig utvikling", "personleg utvikling", "politisk styrke", "makt", "selvbilde", "sjølvbilet", "selvtillit", "sjølvtillit", "meistring", "mestring", "rettighe", "rettferd", "likestilling"]
                         }
                     ]
                 },
                 {
                     "number": 2,
-                    "logic_rule": "()",
-                    "sentence_split": false,
+                    "logic_rule": "(([termlist5_c2a] | ([termlist5_c2b] & [termlist5_c2c]) & ([termlist5_c2d] | (([termlist5_c2e] | [termlist5_c2f]) & [termlist5_c2g]))) & not [termlist5_c2h])",
+                    "sentence_split": true,
                     "termlists": [
                         {
-                            "termlist_name": "",
-                            "formatting_rule": "",
+                            "termlist_name": "termlist5_c2a",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
-                            "wordlist_en": [],
+                            "wordlist_en": ["gender budget"],
                             "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist5_c2b",
+                            "formatting_rule": "trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["disclos", "framework", "law", "legislation", "make public", "mechanism", "monitor", "policy", "policies", "principle", "procedure", "provision", "regulation", "track", "transparen"],
+                            "wordlist_no": ["åpenhet", "openheit", "offentliggjør", "offentliggjer", "tilgjengeliggjør", "gjere tilgjengeleg", "innsyn", "rapportering", "rammeverk", "lov", "system", "virkemiddel", "verkemiddel", "monitor", "overvake", "overvåke", "kontrollere", "politikk", "retningslinje", "strategi", "prinsipp", "prosedyre", "rutine", "forskrift", "regulering", "regelverk", "kartlegg", "transparen"]
+                        },
+                        {
+                            "termlist_name": "termlist5_c2c",
+                            "formatting_rule": "trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["allocation", "allotment", "appropriation", "apportionment", "budget", "disbursement", "expenditur", "public financ", "taxation"],
+                            "wordlist_no": ["tildeling", "allokering", "fordeling", "bevilgning", "løyving", "budsjett", "utbetaling", "utgiftsfør", "forbruk", "ressursbruk", "offentlige einanser", "offentlege finans", "offentlig økonomi", "offentleg økonomi", "statsfinans", "beskatning", "skattelegg", "skattesystem"]
+                        },
+                        {
+                            "termlist_name": "termlist5_c2d",
+                            "formatting_rule": "trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["GEWE"],
+                            "wordlist_no": [""]
+                        },
+                        {
+                            "termlist_name": "termlist5_c2e",
+                            "formatting_rule": "trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["women", "woman", "girl", "female", 
+                                "sister", "mother", "grandmother", "grandma", "niece", "daughter", "wife", "wives", 
+                                "pregnan", "maternity", "maternal", 
+                                "lesbian", "gender", "transperson", "non-binary"],
+                            "wordlist_no": ["kvinne", 
+                                "søster", "syster", "systre", "mødre", "bestemor", "mormor", "farmor", "niese", "datter", "dotter", 
+                                "gravid", "svangerskap",
+                                "lesbisk", "lesbe", "transperson", "transkjønn", "ikke-binær", "ikkje-binær"]
+                        },
+                        {
+                            "termlist_name": "termlist5_c2f",
+                            "formatting_rule": "no_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["aunt", "aunts", "sex", "sexes"],
+                            "wordlist_no": ["dame", "damer", "pike", "piker", "jente", "jenter", "mor", "mora", "moren", "kone", "kona", "kjønn.*"]
+                        },
+                        {
+                            "termlist_name": "termlist5_c2g",
+                            "formatting_rule": "trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["autonomy", "balanc", "bias", "based", "capasity", "decision-making", "discriminat", "divide", "diversit", "economic strength", "emancipat", "empower", "equal", "equit", "exclusion", "freedom", "gap", "impair", "inclusion", "independence", "liberation", "parit", "personal priorit", "personal strength", "personal development", "political strength", "power", "rights", "self concept", "self confidence", "self efficacy", "violence"],
+                            "wordlist_no": ["autonomi", "balanse", "bias", "empowerment", "muliggjøre", "mogeleggjer", "gjere mogeleg", "gjøre mulig", "frigjør", "frigjer", "emansiper", "frihet", "fridom", "mogeleghei", "mulighet", "personlig utvikling", "personleg utvikling", "politisk styrke", "makt", "selvbilde", "sjølvbilet", "selvtillit", "sjølvtillit", "meistring", "mestring", "rettighe", "rettferd", "likestilling" ]
+                        },
+                        {
+                            "termlist_name": "termlist5_c2h",
+                            "formatting_rule": "trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["transplant"],
+                            "wordlist_no": [""]
                         }
                     ]
                 }
