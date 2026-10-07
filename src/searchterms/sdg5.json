@@ -123,31 +123,195 @@
             "phrases": [
                 {
                     "number": 1,
-                    "logic_rule": "()",
-                    "sentence_split": false,
+                    "logic_rule": "((([termlist5_51a] | [termlist5_51b]) | ([termlist5_51c] & ([termlist5_51d] | [termlist_51e]))) & ([termlist5_51f] | ([termlist5_51g] & [termlist5_51h]) | ([termlist5_51i] & [termlist5_51j])))",
+                    "sentence_split": true,
                     "termlists": [
                         {
-                            "termlist_name": "",
-                            "formatting_rule": "",
+                            "termlist_name": "termlist5_51a",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
-                            "wordlist_en": [],
+                            "wordlist_en": ["women", "woman", "girl", "female", 
+                                "sister", "mother", "grandmother", "grandma", "niece", "daughter", "wife", "wives", 
+                                "pregnan", "maternity", "maternal", 
+                                "lesbian", "glass ceiling", "sexual and gender"],
+                            "wordlist_no": ["kvinne", 
+                                "søster", "syster", "systre", "mødre", "bestemor", "mormor", "farmor", "niese", "datter", "dotter", 
+                                "gravid", "svangerskap",
+                                "lesbisk", "lesbe", "transkjønn", "ikke-binær", "ikkje-binær", "glasstak", "glastak"]
+                        },
+                        {
+                            "termlist_name": "termlist5_51b",
+                            "formatting_rule": "no_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["aunt", "aunts"],
+                            "wordlist_no": ["dame", "damer", "pike", "piker", "jente", "jenter", "mor", "mora", "moren", "kone", "kona", "kjønn.*"]
+                        },
+                        {
+                            "termlist_name": "termlist5_51c",
+                            "formatting_rule": "trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["gender", "transperson", "non-binary", "sex", "sexes"],
+                            "wordlist_no": ["transperson", "kjønn.*"]
+                        },
+                        {
+                            "termlist_name": "termlist5_51d",
+                            "formatting_rule": "trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["parit", "equal", "equit", "balanc", "divide", "based", "bias", "factor", "distribution", "characteristic", "difference", "discriminat"],
+                            "wordlist_no": ["likeverd", "likhe", "rettferd", "balanse", "skille", "basert", "bias", "faktor", "distribusjon", "karakteristik", "forskjell", "diskrimin"]
+                        },
+                        {
+                            "termlist_name": "termlist5_51e",
+                            "formatting_rule": "no_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["gap"],
+                            "wordlist_no": ["gap"]
+                        },
+                        {
+                            "termlist_name": "termlist5_51f",
+                            "formatting_rule": "trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["vote", "voting", "leader", "manager", "dean", "ceo", "politician", "management role", "management position", "upper management", "legislator", "judge", "member of congress", "head of state", "member of parliament", "presiden", "government", "cabinet", "mayor", "career", "advancement"],
+                            "wordlist_no": ["stemme", "valgdelta", "leder", "leiing", "dekan", "rektor", "ceo", "direktør", "sjef", "politiker", "politikar", "folkeval", "stortingsrepresentant", "parlamentsmedlem", "lovgiv", "kongressmedlem", "statsoverho", "president", "statsminister", "regjering", "statsråd", "ordfører", "ordførar", "dommer", "dommar", "karriere", "opprykk", "forfremm", "avansement"]
+                        },
+                        {
+                            "termlist_name": "termlist5_51g",
+                            "formatting_rule": "trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["chief", "senior", "top", "managing", "enterprise", "board", "head", "council", "artistic"],
+                            "wordlist_no": ["senior", "styre"]
+                        },
+                        {
+                            "termlist_name": "termlist5_51h",
+                            "formatting_rule": "trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["director", "executive", "officer", "official", "position", "member", "traditional"],
                             "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist5_51i",
+                            "formatting_rule": "trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["participat", "involv", "represent", "engag", "position", "voice", "quota", "promotion"],
+                            "wordlist_no": ["delta", "medvirk", "medverk", "involver", "represent", "engasje", "posisjon", "stemme", "kvote", "opprykk", "forfremm", "karriere", "avansement", "innflyt", "påvirkning", "påverknad"]
+                        },
+                        {
+                            "termlist_name": "termlist5_51j",
+                            "formatting_rule": "trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["authorit", "business", "civil", "communit", "corporate", "decid", "decision", "economic", "politics", "policymak", "policy-mak", "power", "public", "society"],
+                            "wordlist_no": ["myndighe", "næringsliv", "bedrift", "borger", "samfunn", "konsern", "virksomhets", "verksemds", "beslutning", "vedtak", "avgjør", "avgjer", "politikk", "politisk", "makt", "innflytelse"]
                         }
                     ]
                 },
                 {
                     "number": 2,
-                    "logic_rule": "()",
-                    "sentence_split": false,
+                    "logic_rule": "(([termlist5_52a] | ([termlist5_52b] & ([termlist5_52c] | [termlist5_52d] | ([termlist5_52e] & [termlist5_52f])))) & ([termlist5_52g] | ([termlist5_52h] & [termlist5_52i]) | ([termlist5_52j] & [termlist5_52k])))",
+                    "sentence_split": true,
                     "termlists": [
                         {
-                            "termlist_name": "",
-                            "formatting_rule": "",
+                            "termlist_name": "termlist5_52a",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
-                            "wordlist_en": [],
+                            "wordlist_en": ["glass ceiling", "gender divide", "gender gap", "gender disparit", "gender inequalit", "gender imbalanc", "gender inequit"],
+                            "wordlist_no": ["glasstak", "glastak", "kjønnsforskjell", "kjønnsskilnad", "kjønnsubalanse"]
+                        },
+                        {
+                            "termlist_name": "termlist5_52b",
+                            "formatting_rule": "trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["barrier", "bias", "discriminat", "divide", "exclusion", "hindrance", "hinder", "inequal", "unequal", "inequit", "unequit", "obstacle",  "unbalanc", "imbalanc", "disparit", "underrepresentation"],
                             "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist5_52c",
+                            "formatting_rule": "trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["women", "woman", "girl", "female", 
+                                "sister", "mother", "grandmother", "grandma", "niece", "daughter", "wife", "wives", 
+                                "pregnan", "maternity", "maternal", 
+                                "lesbian", "sexual and gender"],
+                            "wordlist_no": ["kvinne", 
+                                "søster", "syster", "systre", "mødre", "bestemor", "mormor", "farmor", "niese", "datter", "dotter", 
+                                "gravid", "svangerskap",
+                                "lesbisk", "lesbe", "transkjønn", "ikke-binær", "ikkje-binær"]
+                        },
+                        {
+                            "termlist_name": "termlist5_52d",
+                            "formatting_rule": "no_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["aunt", "aunts"],
+                            "wordlist_no": ["dame", "damer", "pike", "piker", "jente", "jenter", "mor", "mora", "moren", "kone", "kona", "kjønn.*"]
+                        },
+                        {
+                            "termlist_name": "termlist5_52e",
+                            "formatting_rule": "trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["gender", "transperson", "non-binary", "sex", "sexes"],
+                            "wordlist_no": ["transperson", "kjønn.*"]
+                        },
+                        {
+                            "termlist_name": "termlist5_52f",
+                            "formatting_rule": "trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["parit", "equal", "equi", "balanc"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist5_52g",
+                            "formatting_rule": "trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["vote", "voting", "leader", "manager", "dean", "ceo", "politician", "management role", "management position", "upper management", "legislator", "judge", "member of congress", "head of state", "member of parliament", "presiden", "government", "cabinet", "mayor", "career", "advancement"],
+                            "wordlist_no": ["stemme", "valgdelta", "leder", "leiing", "dekan", "rektor", "ceo", "direktør", "sjef", "politiker", "politikar", "folkeval", "stortingsrepresentant", "parlamentsmedlem", "lovgiv", "kongressmedlem", "statsoverho", "president", "statsminister", "regjering", "statsråd", "ordfører", "ordførar", "dommer", "dommar", "karriere", "opprykk", "forfremm", "avansement"]
+                        },
+                        {
+                            "termlist_name": "termlist5_52h",
+                            "formatting_rule": "trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["chief", "senior", "top", "managing", "enterprise", "board", "head", "council", "artistic"],
+                            "wordlist_no": ["senior", "styre"]
+                        },
+                        {
+                            "termlist_name": "termlist5_52i",
+                            "formatting_rule": "trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["director", "executive", "officer", "official", "position", "member", "traditional"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist5_52j",
+                            "formatting_rule": "trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["participat", "involv", "represent", "engag", "position", "voice", "quota", "promotion"],
+                            "wordlist_no": ["delta", "medvirk", "medverk", "involver", "represent", "engasje", "posisjon", "stemme", "kvote", "opprykk", "forfremm", "karriere", "avansement", "innflyt", "påvirkning", "påverknad"]
+                        },
+                        {
+                            "termlist_name": "termlist5_52k",
+                            "formatting_rule": "trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["authorit", "business", "civil", "communit", "corporate", "decid", "decision", "economic", "politics", "policymak", "policy-mak", "power", "public", "society"],
+                            "wordlist_no": ["myndighe", "næringsliv", "bedrift", "borger", "samfunn", "konsern", "virksomhets", "verksemds", "beslutning", "vedtak", "avgjør", "avgjer", "politikk", "politisk", "makt", "innflytelse"]
                         }
                     ]
                 }
