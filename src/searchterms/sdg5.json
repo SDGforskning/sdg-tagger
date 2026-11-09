@@ -131,7 +131,7 @@
             "phrases": [
                 {
                     "number": 1,
-                    "logic_rule": "((([termlist5_51a] | [termlist5_51b]) | ([termlist5_51c] & ([termlist5_51d] | [termlist5_51e]))) & ([termlist5_51f] | ([termlist5_51g] & [termlist5_51h]) | ([termlist5_51i] & [termlist5_51j])))",
+                    "logic_rule": "((([termlist5_51a] | [termlist5_51b]) | ([termlist5_51c] & ([termlist5_51d] | [termlist5_51e]))) & ([termlist5_51f] | [termlist5_51f2] | ([termlist5_51g] & [termlist5_51h]) | ([termlist5_51i] & [termlist5_51j])))",
                     "sentence_split": true,
                     "termlists": [
                         {
@@ -140,7 +140,7 @@
                             "na": false,
                             "case": false,
                             "wordlist_en": ["women", "woman", "girl", "female", 
-                                "sister", "mother", "grandmother", "grandma", "niece", "daughter", "wife", "wives", 
+                                "sister", "mother", "grandmother", "grandma", "niece", "daughter", 
                                 "pregnan", "maternity", "maternal", 
                                 "lesbian", "glass ceiling", "sexual and gender"],
                             "wordlist_no": ["kvinne", 
@@ -153,7 +153,7 @@
                             "formatting_rule": "no_trunc",
                             "na": false,
                             "case": false,
-                            "wordlist_en": ["aunt", "aunts"],
+                            "wordlist_en": ["aunt", "aunts", "wife", "wives"],
                             "wordlist_no": ["dame", "damer", "pike", "piker", "jente", "jenter", "mor", "mora", "moren", "kone", "kona", "kjønn.*"]
                         },
                         {
@@ -180,21 +180,30 @@
                             "wordlist_en": ["gap"],
                             "wordlist_no": ["gap"]
                         },
+                        
                         {
                             "termlist_name": "termlist5_51f",
                             "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
-                            "wordlist_en": ["vote", "voting", "leader", "manager", "dean", "ceo", "politician", "management role", "management position", "upper management", "legislator", "judge", "member of congress", "head of state", "member of parliament", "presiden", "government", "cabinet", "mayor", "career", "advancement"],
-                            "wordlist_no": ["stemme", "valgdelta", "leder", "leiing", "dekan", "rektor", "ceo", "direktør", "sjef", "politiker", "politikar", "folkeval", "stortingsrepresentant", "parlamentsmedlem", "lovgiv", "kongressmedlem", "statsoverho", "president", "statsminister", "regjering", "statsråd", "ordfører", "ordførar", "dommer", "dommar", "karriere", "opprykk", "forfremm", "avansement"]
+                            "wordlist_en": ["vote", "voting", "leader", "manager", "dean", "ceo", "politician", "management role", "management position", "upper management", "legislator", "member of congress", "head of state", "member of parliament", "presiden", "mayor", "career", "advancement"],
+                            "wordlist_no": ["stemme", "valgdelta", "valdeltak", "leder", "leiing", "dekan", "rektor", "ceo", "direktør", "sjef", "politiker", "politikar", "folkeval", "stortingsrepresentant", "stortingsmedlem", "parlamentsmedlem", "lovgiv", "kongressmedlem", "statsoverho", "president", "statsminister", "regjeringsmedlem", "statsråd", "ordfører", "ordførar", "dommer", "dommar", "karriere", "opprykk", "forfremm", "avansement"]
+                        },
+                        {
+                            "termlist_name": "termlist5_51f2",
+                            "formatting_rule": "no_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["judge"],
+                            "wordlist_no": []
                         },
                         {
                             "termlist_name": "termlist5_51g",
                             "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
-                            "wordlist_en": ["chief", "senior", "top", "managing", "enterprise", "board", "head", "council", "artistic"],
-                            "wordlist_no": ["senior", "styre"]
+                            "wordlist_en": ["government", "cabinet", "chief", "senior", "top", "managing", "enterprise", "board", "head", "council", "artistic"],
+                            "wordlist_no": ["styre", "regjering"]
                         },
                         {
                             "termlist_name": "termlist5_51h",
@@ -338,7 +347,7 @@
                             "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
-                            "wordlist_en": ["use", "usage", "utili", "access", "adoption", "diffusion", "skills", "competenc", "confidence", "aquisition", "capab"],
+                            "wordlist_en": ["usage", "utili", "access", "adoption", "diffusion", "skills", "competenc", "confidence", "aquisition", "capab"],
                             "wordlist_no": ["tilgang til", "tilgang på", "tilgjenge til", "spredning", "spreiing", "utbredelse", "utbreiing", "mestring", "meistring", "kompetanse", "ferdighe"]
                         },
                         {
@@ -346,7 +355,7 @@
                             "formatting_rule": "no_trunc",
                             "na": false,
                             "case": false,
-                            "wordlist_en": [],
+                            "wordlist_en": ["use"],
                             "wordlist_no": ["bruk"]
                         },
                         {
@@ -380,11 +389,10 @@
                             "case": false,
                             "wordlist_en": ["women", "woman", "girl", "female", 
                                 "sister", "mother", "grandmother", "grandma", "niece", "daughter", "wife", "wives", 
-                                "pregnan", "maternity", "maternal", 
-                                "lesbian", "gender", "transperson", "non-binary"],
+                                "pregnan", "maternity", "maternal", "lesbian", "gender", "transperson", "non-binary"],
                             "wordlist_no": ["kvinne", 
                                 "søster", "syster", "systre", "mødre", "bestemor", "mormor", "farmor", "niese", "datter", "dotter", 
-                                "gravid", "svangerskap",
+                                "gravid", "svangerskap", 
                                 "lesbisk", "lesbe", "transperson", "transkjønn", "ikke-binær", "ikkje-binær"]
                         },
                         {
