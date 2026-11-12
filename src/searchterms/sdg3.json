@@ -670,6 +670,7 @@
             "phrases": [
                 {
                     "number": 1,
+                    "_comment": "This target is standardised with SDG 5.6",
                     "logic_rule": "(([termlist3_7a] | (([termlist3_7b] | [termlist3_7bcase]) & [termlist3_7c])) & [termlist3_7d])",
                     "sentence_split": true,
                     "termlists": [
@@ -678,17 +679,23 @@
                             "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
-                            "wordlist_en": ["reproductive health", "sexual health", "family planning", "planned pregnanc", "contracept", "abortion"],
-                            "wordlist_no": ["reproduksjonshelse", "reproduktiv helse", "seksuell helse", "familieplanlegging", "planlagt graviditet", "prevensjon", "abort"]
+                            "wordlist_en": ["reproductive health", "sexual health", "family planning",
+                                "planned pregnanc", "contracept", "abortion", "infertil",
+                                "midwifery service", "obstetric care", "safe pregan", "safe childbirth", "safe child birth", "prenatal care", "antenatal care", "pregnancy care", "postpartum care",
+                                "menstrual health"],
+                            "wordlist_no": ["reproduksjonshelse", "reproduktiv helse", "seksuell helse", "familieplanlegging",
+                                "svangerskapsplanlegging", "planlagt graviditet", "prevensjon", "abort", "infertil",
+                                "jordmortjeneste", "obstetrisk", "trygt svangerskap", "svangerskapskontroll", "trygg fødsel", "svangerskapsomsorg", "oppfølging i svangerskapet", "barselomsorg",
+                                "menstruasjonshelse", "menstruell helse"]
                         },
                         {
                             "termlist_name": "termlist3_7b",
                             "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
-                            "wordlist_en": ["reproduct", "sex", 
+                            "wordlist_en": ["reproduct", "sexual", "menopaus",
                                 "trichomona", "chlamydia", "gonorrhoea", "syphilis", "human immunodeficiency", "human papilloma", "genital herpes", "HTLV-1", "hepatitis B"],
-                            "wordlist_no": ["reproduk", "sex", "seksuel", 
+                            "wordlist_no": ["reproduk", "seksuel", "overgangsalder", "menopause", "klimakteriet",
                                 "trikomonas", "klamydia", "gonoré", "syfilis", "humant immunsviktvirus", "humant papillomavirus", "genital herpes", "HTLV-1", "hepatitt B"]
                         },
                         {
@@ -696,27 +703,34 @@
                             "formatting_rule": "no_trunc",
                             "na": false,
                             "case": true,
-                            "wordlist_en": ["STI", "STD", "STIs", "STDs", "HIV", "HPV"],
-                            "wordlist_no": ["SOI", "HIV", "HPV"]
+                            "wordlist_en": ["sex", "Sex", "STI", "STD", "STIs", "STDs", "HIV", "HPV"],
+                            "wordlist_no": ["sex", "Sex", "SOI", "HIV", "HPV"]
                         },
                         {
                             "termlist_name": "termlist3_7c",
                             "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
-                            "wordlist_en": ["education", "inform", "health literacy"],
-                            "wordlist_no": ["utdann", "opplær", "opplys", "kompetanse"]
+                            "wordlist_en": ["education", "inform", "health literacy", "counsel", 
+                                "healthcare", "health care", "health service", "medical care", "primary care"],
+                            "wordlist_no": ["utdann", "opplær", "inform", "opplys", "kompetanse", "rådfør",
+                                "helsetjenester", "helsehjelp", "helseomsorg", "helsetilbud", "omsorgstjeneste", "medisinske tjeneste", "behandlingstilbud", "helsehjelp"]
                         },
                         {
                             "termlist_name": "termlist3_7d",
                             "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
-                            "wordlist_en": ["health equity", "equality in health", "health for all", "health promotion",
-                                "access", "right", "coverage", "afford", "low cost", "free of charge", "free service", "subsidi",
-                                "barrier", "obstacle", "impediment", "unaffordab", "expensive"],
-                            "wordlist_no": ["rettferdig helse", "helsefrem",
-                                "tilgang", "adgang", "åtgang", "rett", "dekning", "rimelig", "rimeleg", "billig", "billeg", "gratis", "hindr", "hinder", "dyr", "kostbar"]
+                            "wordlist_en": ["health equity", "equality in health", "health for all", "health promotion", "health inequalit",
+                                "access", "right", "coverage", 
+                                "afford", "low cost", "low-cost", "free of charge", "free service", "subsidi",
+                                "barrier", "obstacle", "impediment", "hinderance", "restrictions", "restricted", "illegal", "unaffordab", "expensive",
+                                "informed decision", "informed choice"],
+                            "wordlist_no": ["rettferdig helse", "helserettferd", "helsefrem", "helse for alle", "helseulikhet",
+                                "tilgang", "adgang", "åtgang", "rett", "dekning", 
+                                "rimelig", "rimeleg", "billig", "billeg", "gratis", "lav kostnad", "subsidie",
+                                "barrier", "hindr", "hinder", "restriksjon", "begrens", "ulovlig", "ulovleg", "dyrt", "kostbar",
+                                "informert beslutning", "informert valg"]
                         }
                     ]
                 },
