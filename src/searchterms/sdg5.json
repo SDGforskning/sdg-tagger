@@ -299,12 +299,12 @@
             "phrases": [
                 {
                     "number": 1,
-                    "logic_rule": "(([termlist5_a1] | ([termlist5_a2] & ([termlist5_a3] | [termlist5_a3trunc])) & ([termlist5_women1] | [termlist5_women2])))",
+                    "logic_rule": "(([termlist5_a1] | ([termlist5_a2] & ([termlist5_a3] | [termlist5_a3trunc]))) & ([termlist5_women1] | [termlist5_women2]))",
                     "sentence_split": true,
                     "termlists": [
                         {
                             "termlist_name": "termlist5_a1",
-                            "_comment": "Same as termlist1_4a",
+                            "_comment": "Same as termlist1_4a (SDG4)",
                             "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
@@ -314,7 +314,7 @@
                         },
                         {
                             "termlist_name": "termlist5_a2",
-                            "_comment": "Same as termlist1_4b. 'equity' etc. will cover 'inequity' due to automatic truncation",
+                            "_comment": "Same as termlist1_4b (SDG4). 'equity' etc. will cover 'inequity' due to automatic truncation",
                             "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
@@ -324,13 +324,14 @@
                                 "inaccessib" , "barrier" , "obstacle" , "hinderance", "unequal" , "inequalit" , "inequitab" , "exclusion", 
                                 "unaffordab" , "expensive"],
                             "wordlist_no": ["tilgang", "tilgjenge", "likestilling", "likhet", "likheit", "rettferd", "rettvis",
-                                "eierskap", "kontroll", "rettighet", "rettigheit", "inkludering", "inkluderende", "inkluderande", "ekskludering", 
-                                "barrier", "marginalis", "myndiggjør", "myndiggjer",
+                                "eierskap", "kontroll", "råderett", "bestemmelsesrett", "rettighet", "rettigheit", 
+                                "myndiggjør", "myndiggjer", "inkludering", "inkluderende", "inkluderande", 
+                                "barrier", "marginalis", "ekskludering", 
                                 "dyre", "ikke råd", "ikkje råd"]
                         },
                         {
                             "termlist_name": "termlist5_a3",
-                            "_comment": "Same as termlist1_4c. 'Saving' (='sparing' NO) are not used here as they mostly add noise from 'energy saving', 'cost saving' or 'nerve-sparing' (medical). 'seed banks' are also an issue", 
+                            "_comment": "Same as termlist1_4c (SDG4). 'Saving' (='sparing' NO) are not used here as they mostly add noise from 'energy saving', 'cost saving' or 'nerve-sparing' (medical). 'seed banks' are also an issue", 
                             "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
@@ -344,7 +345,7 @@
                         },
                         {
                             "termlist_name": "termlist5_a3trunc",
-                            "_comment": "Same as termlist ????????", 
+                            "_comment": "Same as termlist1_4ctrunc (SDG4)", 
                             "formatting_rule": "no_trunc",
                             "na": false,
                             "case": false,
@@ -379,16 +380,92 @@
                 },
                 {
                     "number": 2,
-                    "logic_rule": "()",
-                    "sentence_split": false,
+                    "logic_rule": "(([termlist5_a6] | ([termlist5_a4] & [termlist5_a5])) & ([termlist5_women1] | [termlist5_women2]) & not [termlist5_a7])",
+                    "sentence_split": true,
                     "termlists": [
                         {
-                            "termlist_name": "",
-                            "formatting_rule": "",
+                            "termlist_name": "termlist5_a4",
+                            "_comment": "Similar to termlist1_4d (SDG1). Similar to termlist5_a2, used above (but with 'land rental, income security, secure livelihood' and 'sharing'; and 'control' in phrases to avoid noise, 'control groups' or 'asthma control' etc.). Compared to WOS, some land tenure terms are moved to 5_a6", 
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
-                            "wordlist_en": [],
+                            "wordlist_en": ["access" , "equitab" , "equity" , "equality" , "equal", 
+                                "ownership" , "right", 
+                                "control over", "control of", "control and use", "access and control", "individual control", "collective control", 
+                                "empower" , "inclusion", "sharing",
+                                "affordab" , "pro poor" , "pro-poor", 
+                                "inaccessib" , "barrier" , "hinderance" , "obstacle" , "unequal" , "inequalit" , "inequitab" , "exclusion",
+                                "unaffordab" , "expensive", "insecurity",
+                                "land rental", "income security", "secure livelihood"],
+                            "wordlist_no": ["tilgang", "tilgjenge", "likestilling", "likhet", "likheit", "rettferd", "rettvis",
+                                "eierskap", "rettighet", "rettigheit", 
+                                "kontroll over", "kontroll av", "kontroll og bruk", "tilgang og kontroll", "individuell kontroll", "kollektiv kontroll", "råderett", "bestemmelsesrett",
+                                "myndiggjør", "myndiggjer", "inkludering", "inkluderende", "inkluderande",
+                                "barrier", "marginalis", "ekskludering", 
+                                "dyre", "ikke råd", "ikkje råd",
+                                "eiendomsrett", "eigedomsrett", "landrett", "landfattig", "jobbtrygghe", "arvesystem"]
+                        },
+                        {
+                            "termlist_name": "termlist5_a5",
+                            "_comment": "Similar to termlist1_4e (SDG1) but with some additions. We also had to remove the term 'land' and 'income' and specify them in phrases here or in 5_a6. This was because there were many results about e.g. health outcomes of a disease in a low-income country",
+                            "formatting_rule": "no_trunc",
+                            "na": false,
+                            "case": false, 
+                            "wordlist_en": ["economic resource.*", "natural resource.*",
+                                "employment", "decent work", "paid work", "labour market", "labor market", "labour force", "labor force", 
+                                "incomes", "livelihood", "livelihoods", "wage", "wages",
+                                "wealth", "inheritance", "of assets",
+                                "farmland.*", "landowner.*", "land resources", "farm", "farms", "farmland", "livestock owner.*", "livestock asset.*",
+                                "tenure", "property", "home owner.*", "homeowner"],
+                            "wordlist_no": ["finansielle ressurs.*", "økonomiske ressurs.*", "naturressurs.*",
+                                "lønnet arbeid", "løna arbeid", "anstendig arbeid.*", "arbeidsmark.*", "inntekt", "lønn", "levebrød", "underhold", "underhald", 
+                                "rikdom", "arv", "arving", "utkomme", "utkome", 
+                                "gård", "småbruk", "familiegård", "gårdsbruk", "gardsbruk", "dyrket mark", "dyrka mark", "dyrkamark", "kultivert mark", "landsressurs.*", 
+                                "eiendom.*", "eigedom.*", "forpakting"]
+                        },
+                        {
+                            "termlist_name": "termlist5_a6",
+                            "_comment": "Same as termlist1_4f (SDG1)",
+                            "formatting_rule": "trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["land rights", "rights to land", "right to land", "access to land", 
+                                "land grab", "land-grab", "tenure security", "secure tenure", "appropriation of land",
+                                "income inequality"],
+                            "wordlist_no": ["rettigheter til land", "rettigheiter til land", "rett til land", 
+                                "jordleie", "jordleige", "leie av jord", "leige av jord", "tomtefeste", "bygsling", "tomterett", "servitutt"]
+                        },
+                        {
+                            "termlist_name": "termlist5_a7",
+                            "formatting_rule": "trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["intellectual property right", "wind farm", "quality control", "parasite control", "worm control", "pest control"],
                             "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist5_women1",
+                            "_comment": "Same as termlist ????????", 
+                            "formatting_rule": "trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["women", "woman", "girl", "female", 
+                                "sister", "mother", "grandmother", "grandma", "niece", "daughter", "wife", "wives", 
+                                "pregnan", "maternity", "maternal", 
+                                "lesbian", "gender", "transperson", "non-binary"],
+                            "wordlist_no": ["kvinne", 
+                                "søster", "syster", "mødre", "bestemor", "mormor", "farmor", "niese", "datter", "dotter", 
+                                "gravid", "svangerskap",
+                                "lesbisk", "lesbe", "transperson", "transkjønn", "ikke-binær", "ikkje-binær"]
+                        }
+                        ,{
+                            "termlist_name": "termlist5_women2",
+                            "_comment": "Same as termlist ????????", 
+                            "formatting_rule": "no_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["aunt", "aunts", "sex", "sexes"],
+                            "wordlist_no": ["dame", "damer", "pike", "piker", "jente", "jenter", "mor", "mora", "moren", "kone", "kona", "kjønn.*"]
                         }
                     ]
                 }
@@ -466,23 +543,67 @@
         }
     ],
     "mentions": {
-        "logic_rule": "",
+        "logic_rule": "([termlist_sdg4_a] | ([termlist_sdg4_b] & [termlist_sdg4_c]) | ([termlist_sdg4_d] & [termlist_sdg4_e]) | ([termlist_sdg4_e] & [termlist_sdg4_f]) | [termlist_sdg4_g])",
         "termlists": [
             {
-                "termlist_name": "",
-                "formatting_rule": "",
+                "termlist_name": "termlist_sdg4_a",
+                "formatting_rule": "trunc",
                 "na": false,
                 "case": false,
-                "wordlist_en": [],
-                "wordlist_no": []
+                "wordlist_en": ["SDG 4", "SDGs 4", "SDG4", "sustainable development goal 4"],
+                "wordlist_no": ["bærekraftsmål 4", "berekraftsmål 4", "berekraftmål 4"]
             },
             {
-                "termlist_name": "",
-                "formatting_rule": "",
+                "termlist_name": "termlist_sdg4_b",
+                "formatting_rule": "trunc",
                 "na": false,
                 "case": false,
-                "wordlist_en": [],
-                "wordlist_no": []
+                "wordlist_en": ["sustainable development goal"],
+                "wordlist_no": ["bærekraftsmål", "berekraftsmål", "berekraftmål"]
+            },
+            {
+                "termlist_name": "termlist_sdg4_c",
+                "formatting_rule": "trunc",
+                "na": false,
+                "case": false,
+                "wordlist_en": ["goal 4"],
+                "wordlist_no": ["mål 4"]
+            },
+            {
+                "termlist_name": "termlist_sdg4_d",
+                "formatting_rule": "trunc",
+                "na": false,
+                "case": false,
+                "wordlist_en": ["education"],
+                "wordlist_no": ["utdann", "opplæring", "undervisning", "undervising"]
+            },
+            {
+                "termlist_name": "termlist_sdg4_e",
+                "formatting_rule": "trunc",
+                "na": false,
+                "case": false,
+                "wordlist_en": ["sustainable development goal", "SDG", "goal 4"],
+                "wordlist_no": ["bærekraftsmål", "berekraftsmål", "berekraftmål", "mål 4"]
+            },
+            {
+                "termlist_name": "termlist_sdg4_f",
+                "formatting_rule": "trunc",
+                "na": false,
+                "case": false,
+                "wordlist_en": ["learning", "teaching", "teacher", "early childhood", "child development", 
+                 "education for sustainable", "global citizenship education", "transdisciplinary education", 
+                 "inclusive education", "formal education", "primary education", "secondary education", "tertiary education", 
+                 "higher education", "right to education", "access to education",  "education for all",  "education sector"],
+                "wordlist_no": ["utdann", "opplæring", "skolegang", "skulegang", "tidleg barndom", "tidlig barndom", 
+                 "barns utvikling", "borns utvikling"]
+            },
+            {
+                "termlist_name": "termlist_sdg4_g",
+                "formatting_rule": "trunc",
+                "na": false,
+                "case": false,
+                "wordlist_en": ["quality education"],
+                "wordlist_no": ["god utdanning"]
             }
         ]
     }
