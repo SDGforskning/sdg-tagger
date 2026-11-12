@@ -295,7 +295,7 @@
         },
         {
             "name": "a",
-            "_comment": "Term lists partially copied from SDG 1.4",
+            "_comment": "Term lists standardised with SDG 1.4",
             "phrases": [
                 {
                     "number": 1,
@@ -385,7 +385,7 @@
                     "termlists": [
                         {
                             "termlist_name": "termlist5_a4",
-                            "_comment": "Similar to termlist1_4d (SDG1). Similar to termlist5_a2, used above (but with 'land rental, income security, secure livelihood' and 'sharing'; and 'control' in phrases to avoid noise, 'control groups' or 'asthma control' etc.). Compared to WOS, some land tenure terms are moved to 5_a6", 
+                            "_comment": "Same as termlist1_4d (SDG1). Similar to termlist5_a2, used above (but with 'land rental, income security, secure livelihood' and 'sharing'; and 'control' in phrases to avoid noise, 'control groups' or 'asthma control' etc.). Compared to WOS, some land tenure terms are moved to 5_a6", 
                             "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
@@ -407,7 +407,7 @@
                         },
                         {
                             "termlist_name": "termlist5_a5",
-                            "_comment": "Similar to termlist1_4e (SDG1) but with some additions. We also had to remove the term 'land' and 'income' and specify them in phrases here or in 5_a6. This was because there were many results about e.g. health outcomes of a disease in a low-income country",
+                            "_comment": "Same as termlist1_4e (SDG1) but with some additions. We also had to remove the term 'land' and 'income' and specify them in phrases here or in 5_a6. This was because there were many results about e.g. health outcomes of a disease in a low-income country",
                             "formatting_rule": "no_trunc",
                             "na": false,
                             "case": false, 
@@ -543,67 +543,48 @@
         }
     ],
     "mentions": {
-        "logic_rule": "([termlist_sdg4_a] | ([termlist_sdg4_b] & [termlist_sdg4_c]) | ([termlist_sdg4_d] & [termlist_sdg4_e]) | ([termlist_sdg4_e] & [termlist_sdg4_f]) | [termlist_sdg4_g])",
-        "termlists": [
+        "logic_rule": "([termlist_sdg_a] | ([termlist_sdg_b] & [termlist_sdg_c]) | ([termlist_sdg_d] & [termlist_sdg_e]))",
+        "sentence_split": true,
+        "termlists" :[
             {
-                "termlist_name": "termlist_sdg4_a",
-                "formatting_rule": "trunc",
+                "termlist_name": "termlist_sdg_a",
+                "formatting_rule": "no_right_trunc", 
                 "na": false,
                 "case": false,
-                "wordlist_en": ["SDG 4", "SDGs 4", "SDG4", "sustainable development goal 4"],
-                "wordlist_no": ["bærekraftsmål 4", "berekraftsmål 4", "berekraftmål 4"]
+                "wordlist_en": ["SDG 5", "SDGs 5", "SDG5", "sustainable development goal 5"],
+                "wordlist_no": ["SDG 5", "SDG5","bærekraftsmål 5", "berekraftsmål 5"]
             },
             {
-                "termlist_name": "termlist_sdg4_b",
-                "formatting_rule": "trunc",
+                "termlist_name": "termlist_sdg_b",
+                "formatting_rule": "trunc", 
                 "na": false,
                 "case": false,
                 "wordlist_en": ["sustainable development goal"],
-                "wordlist_no": ["bærekraftsmål", "berekraftsmål", "berekraftmål"]
+                "wordlist_no": ["bærekraftsmål", "berekraftsmål"]
             },
             {
-                "termlist_name": "termlist_sdg4_c",
-                "formatting_rule": "trunc",
+                "termlist_name": "termlist_sdg_c",
+                "formatting_rule": "no_right_trunc", 
                 "na": false,
                 "case": false,
-                "wordlist_en": ["goal 4"],
-                "wordlist_no": ["mål 4"]
+                "wordlist_en": ["goal 5"],
+                "wordlist_no": ["mål 5"]
             },
             {
-                "termlist_name": "termlist_sdg4_d",
-                "formatting_rule": "trunc",
+                "termlist_name": "termlist_sdg_d",
+                "formatting_rule": "no_right_trunc", 
                 "na": false,
                 "case": false,
-                "wordlist_en": ["education"],
-                "wordlist_no": ["utdann", "opplæring", "undervisning", "undervising"]
+                "wordlist_en": ["sustainable development goal.*", "SDG", "goal 5"],
+                "wordlist_no": ["SDG", "bærekraftsmål", "berekraftsmål", "mål 5"]
             },
             {
-                "termlist_name": "termlist_sdg4_e",
-                "formatting_rule": "trunc",
+                "termlist_name": "termlist_sdg_e",
+                "formatting_rule": "trunc", 
                 "na": false,
                 "case": false,
-                "wordlist_en": ["sustainable development goal", "SDG", "goal 4"],
-                "wordlist_no": ["bærekraftsmål", "berekraftsmål", "berekraftmål", "mål 4"]
-            },
-            {
-                "termlist_name": "termlist_sdg4_f",
-                "formatting_rule": "trunc",
-                "na": false,
-                "case": false,
-                "wordlist_en": ["learning", "teaching", "teacher", "early childhood", "child development", 
-                 "education for sustainable", "global citizenship education", "transdisciplinary education", 
-                 "inclusive education", "formal education", "primary education", "secondary education", "tertiary education", 
-                 "higher education", "right to education", "access to education",  "education for all",  "education sector"],
-                "wordlist_no": ["utdann", "opplæring", "skolegang", "skulegang", "tidleg barndom", "tidlig barndom", 
-                 "barns utvikling", "borns utvikling"]
-            },
-            {
-                "termlist_name": "termlist_sdg4_g",
-                "formatting_rule": "trunc",
-                "na": false,
-                "case": false,
-                "wordlist_en": ["quality education"],
-                "wordlist_no": ["god utdanning"]
+                "wordlist_en": ["women and girls", "gender equality"],
+                "wordlist_no": ["jenter og kvinner", "likestilling"]
             }
         ]
     }
