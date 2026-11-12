@@ -5,111 +5,6 @@
     "pre-search": [],
     "targets": [
         {
-            "name": "1",
-            "phrases": [
-                {
-                    "number": 1,
-                    "logic_rule": "()",
-                    "sentence_split": false,
-                    "termlists": [
-                        {
-                            "termlist_name": "",
-                            "formatting_rule": "",
-                            "na": false,
-                            "case": false,
-                            "wordlist_en": [],
-                            "wordlist_no": []
-                        }
-                    ]
-                },
-                {
-                    "number": 2,
-                    "logic_rule": "()",
-                    "sentence_split": false,
-                    "termlists": [
-                        {
-                            "termlist_name": "",
-                            "formatting_rule": "",
-                            "na": false,
-                            "case": false,
-                            "wordlist_en": [],
-                            "wordlist_no": []
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "2",
-            "phrases": [
-                {
-                    "number": 1,
-                    "logic_rule": "()",
-                    "sentence_split": false,
-                    "termlists": [
-                        {
-                            "termlist_name": "",
-                            "formatting_rule": "",
-                            "na": false,
-                            "case": false,
-                            "wordlist_en": [],
-                            "wordlist_no": []
-                        }
-                    ]
-                },
-                {
-                    "number": 2,
-                    "logic_rule": "()",
-                    "sentence_split": false,
-                    "termlists": [
-                        {
-                            "termlist_name": "",
-                            "formatting_rule": "",
-                            "na": false,
-                            "case": false,
-                            "wordlist_en": [],
-                            "wordlist_no": []
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "3",
-            "phrases": [
-                {
-                    "number": 1,
-                    "logic_rule": "()",
-                    "sentence_split": false,
-                    "termlists": [
-                        {
-                            "termlist_name": "",
-                            "formatting_rule": "",
-                            "na": false,
-                            "case": false,
-                            "wordlist_en": [],
-                            "wordlist_no": []
-                        }
-                    ]
-                },
-                {
-                    "number": 2,
-                    "logic_rule": "()",
-                    "sentence_split": false,
-                    "termlists": [
-                        {
-                            "termlist_name": "",
-                            "formatting_rule": "",
-                            "na": false,
-                            "case": false,
-                            "wordlist_en": [],
-                            "wordlist_no": []
-                        }
-                    ]
-                }
-            ]
-        },
-        {
             "name": "4",
             "phrases": [
                 {
@@ -224,70 +119,123 @@
             ]
         },
         {
-            "name": "5",
-            "phrases": [
-                {
-                    "number": 1,
-                    "logic_rule": "()",
-                    "sentence_split": false,
-                    "termlists": [
-                        {
-                            "termlist_name": "",
-                            "formatting_rule": "",
-                            "na": false,
-                            "case": false,
-                            "wordlist_en": [],
-                            "wordlist_no": []
-                        }
-                    ]
-                },
-                {
-                    "number": 2,
-                    "logic_rule": "()",
-                    "sentence_split": false,
-                    "termlists": [
-                        {
-                            "termlist_name": "",
-                            "formatting_rule": "",
-                            "na": false,
-                            "case": false,
-                            "wordlist_en": [],
-                            "wordlist_no": []
-                        }
-                    ]
-                }
-            ]
-        },
-        {
             "name": "6",
             "phrases": [
                 {
                     "number": 1,
-                    "logic_rule": "()",
-                    "sentence_split": false,
+                    "_comment": "Standardised with SDG 3.7",
+                    "logic_rule": "(([termlist5_6a] | (([termlist5_6b] | [termlist5_6bcase]) & [termlist5_6c])) & [termlist5_6d])",
+                    "sentence_split": true,
                     "termlists": [
                         {
-                            "termlist_name": "",
-                            "formatting_rule": "",
+                            "termlist_name": "termlist5_6a",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
-                            "wordlist_en": [],
-                            "wordlist_no": []
+                            "wordlist_en": ["reproductive health", "sexual health", "family planning",
+                                "planned pregnanc", "contracept", "abortion", "infertil",
+                                "midwifery service", "obstetric care", "safe pregan", "safe childbirth", "safe child birth", "prenatal care", "antenatal care", "pregnancy care", "postpartum care",
+                                "menstrual health"],
+                            "wordlist_no": ["reproduksjonshelse", "reproduktiv helse", "seksuell helse", "familieplanlegging",
+                                "svangerskapsplanlegging", "planlagt graviditet", "prevensjon", "abort", "infertil",
+                                "jordmortjeneste", "obstetrisk", "trygt svangerskap", "svangerskapskontroll", "trygg fødsel", "svangerskapsomsorg", "oppfølging i svangerskapet", "barselomsorg",
+                                "menstruasjonshelse", "menstruell helse"]
+                        },
+                        {
+                            "termlist_name": "termlist5_6b",
+                            "formatting_rule": "trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["reproduct", "sexual", "menopaus",
+                                "trichomona", "chlamydia", "gonorrhoea", "syphilis", "human immunodeficiency", "human papilloma", "genital herpes", "HTLV-1", "hepatitis B"],
+                            "wordlist_no": ["reproduk", "seksuel", "overgangsalder", "menopause", "klimakteriet",
+                                "trikomonas", "klamydia", "gonoré", "syfilis", "humant immunsviktvirus", "humant papillomavirus", "genital herpes", "HTLV-1", "hepatitt B"]
+                        },
+                        {
+                            "termlist_name": "termlist5_6bcase",
+                            "formatting_rule": "no_trunc",
+                            "na": false,
+                            "case": true,
+                            "wordlist_en": ["sex", "Sex", 
+                                "STI", "STD", "STIs", "STDs", "HIV", "HPV"],
+                            "wordlist_no": ["sex", "Sex", 
+                                "SOI", "HIV", "HPV"]
+                        },
+                        {
+                            "termlist_name": "termlist5_6c",
+                            "formatting_rule": "trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["education", "inform", "health literacy", "counsel", 
+                                "healthcare", "health care", "health service", "medical care", "primary care"],
+                            "wordlist_no": ["utdann", "opplær", "inform", "opplys", "kompetanse", "rådfør",
+                                "helsetjenester", "helsehjelp", "helseomsorg", "helsetilbud", "omsorgstjeneste", "medisinske tjeneste", "behandlingstilbud", "helsehjelp"]
+                        },
+                        {
+                            "termlist_name": "termlist5_6d",
+                            "formatting_rule": "no_left_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["health equity", "equality in health", "health for all", "health promotion", "health inequalit",
+                                "access", "right", "coverage", 
+                                "afford", "low cost", "low-cost", "free of charge", "free service", "subsidi",
+                                "barrier", "obstacle", "impediment", "hinderance", "restrictions", "restricted", "illegal", "unaffordab", "expensive",
+                                "informed decision", "informed choice"],
+                            "wordlist_no": ["rettferdig helse", "helserettferd", "helsefrem", "helse for alle", "helseulikhet",
+                                "tilgang", "adgang", "åtgang", "rett", "dekning", 
+                                "rimelig", "rimeleg", "billig", "billeg", "gratis", "lav kostnad", "subsidie",
+                                "barrier", "hindr", "hinder", "restriksjon", "begrens", "ulovlig", "ulovleg", "dyrt", "kostbar",
+                                "informert beslutning", "informert valg"
+                                ]
                         }
                     ]
                 },
                 {
                     "number": 2,
-                    "logic_rule": "()",
-                    "sentence_split": false,
+                    "logic_rule": "([termlist5_6e] | ([termlist5_6f] & [termlist5_6g]) | ([termlist5_6h] & [termlist5_6i]))",
+                    "sentence_split": true,
                     "termlists": [
                         {
-                            "termlist_name": "",
-                            "formatting_rule": "",
+                            "termlist_name": "termlist5_6e",
+                            "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
-                            "wordlist_en": [],
-                            "wordlist_no": []
+                            "wordlist_en": ["reproductive choice", "family planning"],
+                            "wordlist_no": ["reproduktivt valg", "familieplanlegging", "svangerskapsplanlegging"]
+                        },
+                        {
+                            "termlist_name": "termlist5_6f",
+                            "formatting_rule": "trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["reproduct", "abortion", "contracepti", "fertility", "inferfi"],
+                            "wordlist_no": ["reproduk", "abort", "prevensjon", "fertilitet",  "infertil"]
+                        },
+                        {
+                            "termlist_name": "termlist5_6g",
+                            "formatting_rule": "no_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["right", "rights"],
+                            "wordlist_no": ["rett", "rettighet.*"]
+                        },
+                        {
+                            "termlist_name": "termlist5_6h",
+                            "formatting_rule": "trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["autonomy", "consent", "coerc", "discriminat", 
+                                "violence", "equit", "inequit"],
+                            "wordlist_no": ["autonomi", "selvbestemmelse", "samtykke", "tvang", "diskriminering", "forskjellsbehandling",
+                                "vold", "overgrep", "mishandling", "likeverd", "likestilling", "ulikhet", "urettferdighet"]
+                        },
+                        {
+                            "termlist_name": "termlist5_6i",
+                            "formatting_rule": "trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["reproductive"],
+                            "wordlist_no": ["reproductiv"]
                         }
                     ]
                 }
@@ -466,76 +414,6 @@
                             "case": false,
                             "wordlist_en": ["aunt", "aunts", "sex", "sexes"],
                             "wordlist_no": ["dame", "damer", "pike", "piker", "jente", "jenter", "mor", "mora", "moren", "kone", "kona", "kjønn.*"]
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "b",
-            "phrases": [
-                {
-                    "number": 1,
-                    "logic_rule": "()",
-                    "sentence_split": false,
-                    "termlists": [
-                        {
-                            "termlist_name": "",
-                            "formatting_rule": "",
-                            "na": false,
-                            "case": false,
-                            "wordlist_en": [],
-                            "wordlist_no": []
-                        }
-                    ]
-                },
-                {
-                    "number": 2,
-                    "logic_rule": "()",
-                    "sentence_split": false,
-                    "termlists": [
-                        {
-                            "termlist_name": "",
-                            "formatting_rule": "",
-                            "na": false,
-                            "case": false,
-                            "wordlist_en": [],
-                            "wordlist_no": []
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "c",
-            "phrases": [
-                {
-                    "number": 1,
-                    "logic_rule": "()",
-                    "sentence_split": false,
-                    "termlists": [
-                        {
-                            "termlist_name": "",
-                            "formatting_rule": "",
-                            "na": false,
-                            "case": false,
-                            "wordlist_en": [],
-                            "wordlist_no": []
-                        }
-                    ]
-                },
-                {
-                    "number": 2,
-                    "logic_rule": "()",
-                    "sentence_split": false,
-                    "termlists": [
-                        {
-                            "termlist_name": "",
-                            "formatting_rule": "",
-                            "na": false,
-                            "case": false,
-                            "wordlist_en": [],
-                            "wordlist_no": []
                         }
                     ]
                 }
