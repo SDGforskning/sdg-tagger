@@ -1359,7 +1359,7 @@
             "phrases": [
                 {
                     "number": 1,
-                    "logic_rule": "(([termlist4_ba] | (([termlist4_bbuntrunc] | [termlist4_bc]) & [termlist4_bd])) & [LMIC])",
+                    "logic_rule": "((([termlist4_ba] | [termlist4_baa]) | (([termlist4_bbuntrunc] | [termlist4_bc]) & [termlist4_bd])) & [LMIC])",
                     "sentence_split": true,
                     "termlists": [
                         {
@@ -1369,7 +1369,15 @@
                             "case": false,
                             "wordlist_en": ["scholarships", "scholarship program", "fellowship", "exchange program", 
                             "student exchange", "student mobility", "study abroad", "overseas stud"],
-                            "wordlist_no": ["stipend", "økonomisk støtte", "utveksling", "legat"]
+                            "wordlist_no": ["stipend", "økonomisk støtte", "utveksling", "legater", "studielegat"]
+                        },
+                        {
+                            "termlist_name": "termlist4_baa",
+                            "formatting_rule": "no_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": [],
+                            "wordlist_no": ["legat"]
                         },
                         {
                             "termlist_name": "termlist4_bbuntrunc",
@@ -1453,7 +1461,7 @@
                             "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
-                            "wordlist_en": ["teacher training", "teacher education", "education of teacher", "teacher qualification", "qualified teacher", "teacher student"],
+                            "wordlist_en": ["teacher training", "training of teacher", "teacher education", "education of teacher", "teacher qualification", "qualified teacher", "teacher student"],
                             "wordlist_no": ["lærarutdann", "lærerutdann", "utdanning av lærarar", "utdanning av lærere", "lærarstudent", "lærerstudent", 
                             "kvalifiserte lær", "lærarkompetanse", "lærerkompetanse", "lærerkvalifikasjon", "lærarkvalifikasjon"]
                         },
@@ -1470,7 +1478,7 @@
                             "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
-                            "wordlist_en": ["qualification", "qualified", "training"],
+                            "wordlist_en": ["qualification", "qualified"],
                             "wordlist_no": ["kvalifikasjon", "kvalifiser", "kompetanse"]
                         }
                     ]
