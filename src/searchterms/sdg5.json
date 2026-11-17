@@ -9,7 +9,7 @@
             "phrases": [
                 {
                     "number": 1,
-                    "logic_rule": "([termlist5_3a] | ([termlist5_3b] & [termlist5_3c]) | ([termlist5_3d] & [termlist5_3e]) | (([termlist5_3f] | [termlist5_3g]) & [termlist5_3h]) | ([termlist5_3i] & [termlist5_3j]) | ([termlist5_3k] & ([termlist5_3l] | [termlist5_3m])))",
+                    "logic_rule": "([termlist5_3a] | ([termlist5_3b] & [termlist5_3c]) | ([termlist5_3d] & [termlist5_3e]) | (([termlist5_3f] | [termlist5_3g]) & ([termlist5_3h] | [termlist5_3h2])) | ([termlist5_3i] & [termlist5_3j]) | ([termlist5_3k] & ([termlist5_3l] | [termlist5_3m] | ([termlist5_3n] & [termlist5_3o]))))",
                     "sentence_split": true,
                     "termlists": [
                         {
@@ -18,7 +18,7 @@
                             "na": false,
                             "case": false,
                             "wordlist_en": ["femicid", "feminicid", "grannicid", "infibulat", "virginity test", "child marriage", "early marriage", "forced marriage", "underage marriage", "bride kidnap"],
-                            "wordlist_no": ["infibula", "jomfrusjekk", "møydomssjekk", "barneekteskap", "borneekteskap", "tidlig ekteskap", "tidleg ekteskap", "tvangsekteskap", "bruderov", "brurerov", "brudekidnap", "hekseanklag", "hekseskuld"]
+                            "wordlist_no": ["infibul", "jomfrusjekk", "møydomssjekk", "barneekteskap", "borneekteskap", "tidlig ekteskap", "tidleg ekteskap", "tvangsekteskap", "bruderov", "brurerov", "brudekidnap", "hekseanklag", "hekseskuld"]
                         },
                         {
                             "termlist_name": "termlist5_3b",
@@ -73,8 +73,16 @@
                             "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
-                            "wordlist_en": ["test", "examin"],
-                            "wordlist_no": ["test", "sjekk", "undersøk", "kontrol"]
+                            "wordlist_en": ["examin"],
+                            "wordlist_no": ["sjekk", "undersøk", "kontrol"]
+                        },
+                        {
+                            "termlist_name": "termlist5_3h2",
+                            "formatting_rule": "no_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["test"],
+                            "wordlist_no": ["test"]
                         },
                         {
                             "termlist_name": "termlist5_3i",
@@ -82,7 +90,7 @@
                             "na": false,
                             "case": false,
                             "wordlist_en": ["accus"],
-                            "wordlist_no": ["anklag", "skuld"]
+                            "wordlist_no": ["anklag", "skuld", "beskyld"]
                         },
                         {
                             "termlist_name": "termlist5_3j",
@@ -97,7 +105,7 @@
                             "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
-                            "wordlist_en": ["harmful practice", "harmful traditional practice", "genital mutilation", "FGM", "genital cutting", "circumcision", "CEFM", "physical punish", "corporal punish", "stoning", "honor killing",  "honour killing"],
+                            "wordlist_en": ["harmful practice", "harmful traditional practice", "genital mutilation", "FGM", "genital cutting", "circumcision", "CEFM", "physical punish", "corporal punish", "stoning", "honor killing", "honour killing"],
                             "wordlist_no": ["kjønnslemlest", "omskjæring", "fysisk avstraf", "steining", "æresdrap", "partnerdrap", "partnardrap"]
                         },
                         {
@@ -121,6 +129,22 @@
                             "case": false,
                             "wordlist_en": ["aunt", "aunts", "sex", "sexes"],
                             "wordlist_no": ["dame", "damer", "pike", "piker", "jente", "jenter", "mor", "mora", "moren", "kone", "kona", "kjønn.*"]
+                        },
+                        {
+                            "termlist_name": "termlist5_3n",
+                            "formatting_rule": "no_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["sex", "sexes"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist5_3o",
+                            "formatting_rule": "trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["based", "factor", "distribution", "characteristic", "dispar", "difference", "bias", "discriminat", "violence"],
+                            "wordlist_no": []
                         }
                     ]
                 }
@@ -131,7 +155,7 @@
             "phrases": [
                 {
                     "number": 1,
-                    "logic_rule": "((([termlist5_51a] | [termlist5_51b]) | ([termlist5_51c] & ([termlist5_51d] | [termlist5_51e]))) & ([termlist5_51f] | [termlist5_51f2] | ([termlist5_51g] & [termlist5_51h]) | ([termlist5_51i] & [termlist5_51j])))",
+                    "logic_rule": "((([termlist5_51a] | [termlist5_51b]) | ([termlist5_51c] & ([termlist5_51d] | [termlist5_51e]))) & ([termlist5_51f] | [termlist5_51f2] | ([termlist5_51g] & ([termlist5_51h] | [termlist5_51h2])) | (([termlist5_51i] | [termlist5_51h2])  & ([termlist5_51j] | [termlist5_51k]))))",
                     "sentence_split": true,
                     "termlists": [
                         {
@@ -140,7 +164,7 @@
                             "na": false,
                             "case": false,
                             "wordlist_en": ["women", "woman", "girl", "female", 
-                                "sister", "mother", "grandmother", "grandma", "niece", "daughter", 
+                                "sister", "mother", "grandmother", "grandma", "niece", "daughter", "wife", "wives",
                                 "pregnan", "maternity", "maternal", 
                                 "lesbian", "glass ceiling", "sexual and gender"],
                             "wordlist_no": ["kvinne", 
@@ -153,7 +177,7 @@
                             "formatting_rule": "no_trunc",
                             "na": false,
                             "case": false,
-                            "wordlist_en": ["aunt", "aunts", "wife", "wives"],
+                            "wordlist_en": ["aunt", "aunts"],
                             "wordlist_no": ["dame", "damer", "pike", "piker", "jente", "jenter", "mor", "mora", "moren", "kone", "kona", "kjønn.*"]
                         },
                         {
@@ -162,7 +186,7 @@
                             "na": false,
                             "case": false,
                             "wordlist_en": ["gender", "transperson", "non-binary", "sex", "sexes"],
-                            "wordlist_no": ["transperson", "kjønn.*"]
+                            "wordlist_no": ["transperson", "kjønn"]
                         },
                         {
                             "termlist_name": "termlist5_51d",
@@ -170,7 +194,7 @@
                             "na": false,
                             "case": false,
                             "wordlist_en": ["parit", "equal", "equit", "balanc", "divide", "based", "bias", "factor", "distribution", "characteristic", "difference", "discriminat"],
-                            "wordlist_no": ["likeverd", "likhe", "rettferd", "balanse", "skille", "basert", "bias", "faktor", "distribusjon", "karakteristik", "forskjell", "diskrimin"]
+                            "wordlist_no": ["likeverd", "likhe", "rettferd", "balanse", "skille", "basert", "bias", "faktor", "distribusjon", "karakteristik", "forskjell", "skilnad", "ulikskap", "diskrimin"]
                         },
                         {
                             "termlist_name": "termlist5_51e",
@@ -186,16 +210,16 @@
                             "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
-                            "wordlist_en": ["vote", "voting", "leader", "manager", "dean", "ceo", "politician", "management role", "management position", "upper management", "legislator", "member of congress", "head of state", "member of parliament", "presiden", "mayor", "career", "advancement"],
-                            "wordlist_no": ["stemme", "valgdelta", "valdeltak", "leder", "leiing", "dekan", "rektor", "ceo", "direktør", "sjef", "politiker", "politikar", "folkeval", "stortingsrepresentant", "stortingsmedlem", "parlamentsmedlem", "lovgiv", "kongressmedlem", "statsoverho", "president", "statsminister", "regjeringsmedlem", "statsråd", "ordfører", "ordførar", "dommer", "dommar", "karriere", "opprykk", "forfremm", "avansement"]
+                            "wordlist_en": ["vote", "voting", "manager", "dean", "ceo", "politician", "management role", "management position", "upper management", "legislator", "member of congress", "head of state", "member of parliament", "presiden", "mayor", "career", "advancement"],
+                            "wordlist_no": ["valgdelta", "valdeltak", "ledelse", "leiing", "dekan", "rektor", "ceo", "direktør", "sjef", "politiker", "politikar", "folkeval", "stortingsrepresentant", "stortingsmedlem", "parlamentsmedlem", "lovgiv", "kongressmedlem", "statsoverho", "president", "statsminister", "regjeringsmedlem", "statsråd", "ordfører", "ordførar", "karriere", "opprykk", "forfremm", "avansement"]
                         },
                         {
                             "termlist_name": "termlist5_51f2",
                             "formatting_rule": "no_trunc",
                             "na": false,
                             "case": false,
-                            "wordlist_en": ["judge"],
-                            "wordlist_no": []
+                            "wordlist_en": ["judge", "judges", "leader", "leaders", "leadership"],
+                            "wordlist_no": ["dommer", "dommar", "stemme", "leder", "ledere", "leiar", "leiarar", "leiarskap"]
                         },
                         {
                             "termlist_name": "termlist5_51g",
@@ -203,14 +227,22 @@
                             "na": false,
                             "case": false,
                             "wordlist_en": ["government", "cabinet", "chief", "senior", "top", "managing", "enterprise", "board", "head", "council", "artistic"],
-                            "wordlist_no": ["styre", "regjering"]
+                            "wordlist_no": []
                         },
                         {
                             "termlist_name": "termlist5_51h",
                             "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
-                            "wordlist_en": ["director", "executive", "officer", "official", "position", "member", "traditional"],
+                            "wordlist_en": ["director", "executive", "officer", "official", "member", "traditional"],
+                            "wordlist_no": []
+                        },
+                        {
+                            "termlist_name": "termlist5_51h2",
+                            "formatting_rule": "no_left_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["position"],
                             "wordlist_no": []
                         },
                         {
@@ -218,7 +250,7 @@
                             "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
-                            "wordlist_en": ["participat", "involv", "represent", "engag", "position", "voice", "quota", "promotion"],
+                            "wordlist_en": ["participat", "involv", "represent", "engag", "voice", "quota", "promotion"],
                             "wordlist_no": ["delta", "medvirk", "medverk", "involver", "represent", "engasje", "posisjon", "stemme", "kvote", "opprykk", "forfremm", "karriere", "avansement", "innflyt", "påvirkning", "påverknad"]
                         },
                         {
@@ -226,8 +258,16 @@
                             "formatting_rule": "trunc",
                             "na": false,
                             "case": false,
-                            "wordlist_en": ["authorit", "business", "civil", "communit", "corporate", "decid", "decision", "economic", "politics", "policymak", "policy-mak", "power", "public", "society"],
+                            "wordlist_en": ["authorit", "business", "corporate", "decision", "economic", "politic", "policymak", "policy-mak", "power", "public", "society"],
                             "wordlist_no": ["myndighe", "næringsliv", "styre", "bedrift", "borger", "samfunn", "konsern", "virksomhets", "verksemds", "beslutning", "vedtak", "avgjør", "avgjer", "politikk", "politisk", "makt", "innflytelse"]
+                        },
+                        {
+                            "termlist_name": "termlist5_51k",
+                            "formatting_rule": "no_trunc",
+                            "na": false,
+                            "case": false,
+                            "wordlist_en": ["civil", "community", "communities"],
+                            "wordlist_no": []
                         }
                     ]
                 },
